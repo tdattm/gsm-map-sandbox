@@ -121,9 +121,9 @@ describe('Studio lifecycle, navigation and on-demand analytics', () => {
   it('sensible defaults and separated advanced config with disabled readiness', () => {
     const { result } = renderHook(() => useVoucher(true,false))
     render(<VoucherPanel session={result.current} ready={false} onFocus={vi.fn()}/>)
-    expect(screen.getByRole('button',{ name:'Prepare Experiment' })).toBeDisabled()
-    expect(screen.getByRole('combobox',{ name:'Potential trip count' })).toHaveValue('30')
-    expect(screen.getByRole('spinbutton',{ name:'Campaign budget (VND)' })).toHaveValue(200000)
+    expect(screen.getByRole('button',{ name:"Chuẩn bị thí nghiệm" })).toBeDisabled()
+    expect(screen.getByRole('combobox',{ name:"Số hành trình tiềm năng" })).toHaveValue('30')
+    expect(screen.getByRole('spinbutton',{ name:"Ngân sách voucher (VND)" })).toHaveValue(200000)
   })
   it('fractional completed timestamp includes the final lifecycle events in observed KPIs', async () => {
     vi.stubGlobal('fetch',vi.fn().mockResolvedValue({ ok:true,json:async () => plan() }))

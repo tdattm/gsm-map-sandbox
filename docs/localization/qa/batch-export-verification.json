@@ -1,0 +1,10 @@
+{
+  "schema": "PASS",
+  "originalDefinitions": "PASS",
+  "runsCsv": "PASS: byte-exact",
+  "summaryCsv": "PASS: byte-exact",
+  "requested": 10,
+  "successful": 7,
+  "failed": 3,
+  "rawExportStatus": "Complete — tất cả jobs đã có kết quả"
+}

@@ -1,0 +1,3817 @@
+[
+  {
+    "file": "src/App.tsx",
+    "line": 103,
+    "value": ""
+  },
+  {
+    "file": "src/App.tsx",
+    "line": 104,
+    "value": ""
+  },
+  {
+    "file": "src/App.tsx",
+    "line": 105,
+    "value": ""
+  },
+  {
+    "file": "src/App.tsx",
+    "line": 105,
+    "value": "Open main menu"
+  },
+  {
+    "file": "src/App.tsx",
+    "line": 106,
+    "value": ""
+  },
+  {
+    "file": "src/App.tsx",
+    "line": 106,
+    "value": "GSM Map Sandbox"
+  },
+  {
+    "file": "src/App.tsx",
+    "line": 107,
+    "value": ""
+  },
+  {
+    "file": "src/App.tsx",
+    "line": 107,
+    "value": "Toggle inspector"
+  },
+  {
+    "file": "src/App.tsx",
+    "line": 107,
+    "value": "Inspector"
+  },
+  {
+    "file": "src/App.tsx",
+    "line": 108,
+    "value": ""
+  },
+  {
+    "file": "src/App.tsx",
+    "line": 108,
+    "value": "Workspace view"
+  },
+  {
+    "file": "src/App.tsx",
+    "line": 108,
+    "value": "Map"
+  },
+  {
+    "file": "src/App.tsx",
+    "line": 108,
+    "value": "Analytics"
+  },
+  {
+    "file": "src/App.tsx",
+    "line": 109,
+    "value": ""
+  },
+  {
+    "file": "src/App.tsx",
+    "line": 109,
+    "value": "Local Simulation"
+  },
+  {
+    "file": "src/App.tsx",
+    "line": 110,
+    "value": ""
+  },
+  {
+    "file": "src/App.tsx",
+    "line": 110,
+    "value": ""
+  },
+  {
+    "file": "src/App.tsx",
+    "line": 111,
+    "value": ""
+  },
+  {
+    "file": "src/App.tsx",
+    "line": 112,
+    "value": ""
+  },
+  {
+    "file": "src/App.tsx",
+    "line": 113,
+    "value": ""
+  },
+  {
+    "file": "src/App.tsx",
+    "line": 114,
+    "value": ""
+  },
+  {
+    "file": "src/App.tsx",
+    "line": 114,
+    "value": "Cấu hình mô phỏng"
+  },
+  {
+    "file": "src/App.tsx",
+    "line": 114,
+    "value": "Contextual Inspector"
+  },
+  {
+    "file": "src/App.tsx",
+    "line": 114,
+    "value": "Close inspector"
+  },
+  {
+    "file": "src/App.tsx",
+    "line": 114,
+    "value": "×"
+  },
+  {
+    "file": "src/App.tsx",
+    "line": 115,
+    "value": ""
+  },
+  {
+    "file": "src/App.tsx",
+    "line": 115,
+    "value": "Map Data"
+  },
+  {
+    "file": "src/App.tsx",
+    "line": 115,
+    "value": "Static Replay Package"
+  },
+  {
+    "file": "src/App.tsx",
+    "line": 115,
+    "value": "© OpenStreetMap contributors · ODbL 1.0"
+  },
+  {
+    "file": "src/App.tsx",
+    "line": 115,
+    "value": "Dữ liệu bản đồ"
+  },
+  {
+    "file": "src/App.tsx",
+    "line": 116,
+    "value": ""
+  },
+  {
+    "file": "src/App.tsx",
+    "line": 116,
+    "value": "Geofabrik Vietnam"
+  },
+  {
+    "file": "src/App.tsx",
+    "line": 116,
+    "value": "OpenStreetMap · nguồn PBF local"
+  },
+  {
+    "file": "src/App.tsx",
+    "line": 116,
+    "value": "Thông tin nguồn Geofabrik"
+  },
+  {
+    "file": "src/App.tsx",
+    "line": 117,
+    "value": ""
+  },
+  {
+    "file": "src/App.tsx",
+    "line": 118,
+    "value": ""
+  },
+  {
+    "file": "src/App.tsx",
+    "line": 119,
+    "value": ""
+  },
+  {
+    "file": "src/App.tsx",
+    "line": 119,
+    "value": "Bến Thành · Bưu điện Trung tâm và lân cận"
+  },
+  {
+    "file": "src/App.tsx",
+    "line": 120,
+    "value": ""
+  },
+  {
+    "file": "src/App.tsx",
+    "line": 121,
+    "value": ""
+  },
+  {
+    "file": "src/App.tsx",
+    "line": 121,
+    "value": "Vùng kỹ thuật thử nghiệm, không phải ranh giới hành chính."
+  },
+  {
+    "file": "src/App.tsx",
+    "line": 122,
+    "value": ""
+  },
+  {
+    "file": "src/App.tsx",
+    "line": 123,
+    "value": ""
+  },
+  {
+    "file": "src/App.tsx",
+    "line": 123,
+    "value": "Trip Configuration"
+  },
+  {
+    "file": "src/App.tsx",
+    "line": 123,
+    "value": "Thiết lập hành trình"
+  },
+  {
+    "file": "src/App.tsx",
+    "line": 123,
+    "value": "01"
+  },
+  {
+    "file": "src/App.tsx",
+    "line": 124,
+    "value": ""
+  },
+  {
+    "file": "src/App.tsx",
+    "line": 124,
+    "value": "Nhấp trên bản đồ để chọn A, sau đó chọn B."
+  },
+  {
+    "file": "src/App.tsx",
+    "line": 125,
+    "value": ""
+  },
+  {
+    "file": "src/App.tsx",
+    "line": 125,
+    "value": "A"
+  },
+  {
+    "file": "src/App.tsx",
+    "line": 125,
+    "value": "Điểm xuất phát"
+  },
+  {
+    "file": "src/App.tsx",
+    "line": 126,
+    "value": ""
+  },
+  {
+    "file": "src/App.tsx",
+    "line": 126,
+    "value": "B"
+  },
+  {
+    "file": "src/App.tsx",
+    "line": 126,
+    "value": "Điểm đến"
+  },
+  {
+    "file": "src/App.tsx",
+    "line": 127,
+    "value": ""
+  },
+  {
+    "file": "src/App.tsx",
+    "line": 127,
+    "value": "Khoảng cách"
+  },
+  {
+    "file": "src/App.tsx",
+    "line": 127,
+    "value": "Thời gian OSRM"
+  },
+  {
+    "file": "src/App.tsx",
+    "line": 128,
+    "value": ""
+  },
+  {
+    "file": "src/App.tsx",
+    "line": 128,
+    "value": "Ước tính từ profile ô tô, không phải giao thông thời gian thực."
+  },
+  {
+    "file": "src/App.tsx",
+    "line": 129,
+    "value": ""
+  },
+  {
+    "file": "src/App.tsx",
+    "line": 129,
+    "value": "Đang yêu cầu tuyến từ OSRM local…"
+  },
+  {
+    "file": "src/App.tsx",
+    "line": 130,
+    "value": ""
+  },
+  {
+    "file": "src/App.tsx",
+    "line": 131,
+    "value": ""
+  },
+  {
+    "file": "src/App.tsx",
+    "line": 131,
+    "value": "Snap A/B:"
+  },
+  {
+    "file": "src/App.tsx",
+    "line": 132,
+    "value": ""
+  },
+  {
+    "file": "src/App.tsx",
+    "line": 132,
+    "value": "Điểm trên đường đã snap"
+  },
+  {
+    "file": "src/App.tsx",
+    "line": 132,
+    "value": "·"
+  },
+  {
+    "file": "src/App.tsx",
+    "line": 133,
+    "value": ""
+  },
+  {
+    "file": "src/App.tsx",
+    "line": 133,
+    "value": "Xóa điểm A/B và chọn lại"
+  },
+  {
+    "file": "src/App.tsx",
+    "line": 134,
+    "value": ""
+  },
+  {
+    "file": "src/App.tsx",
+    "line": 135,
+    "value": ""
+  },
+  {
+    "file": "src/App.tsx",
+    "line": 136,
+    "value": ""
+  },
+  {
+    "file": "src/App.tsx",
+    "line": 136,
+    "value": "Local only"
+  },
+  {
+    "file": "src/App.tsx",
+    "line": 136,
+    "value": "WGS84 · [lon, lat]"
+  },
+  {
+    "file": "src/App.tsx",
+    "line": 137,
+    "value": ""
+  },
+  {
+    "file": "src/App.tsx",
+    "line": 138,
+    "value": ""
+  },
+  {
+    "file": "src/App.tsx",
+    "line": 139,
+    "value": ""
+  },
+  {
+    "file": "src/App.tsx",
+    "line": 139,
+    "value": "Bản đồ TP.HCM"
+  },
+  {
+    "file": "src/App.tsx",
+    "line": 140,
+    "value": ""
+  },
+  {
+    "file": "src/App.tsx",
+    "line": 140,
+    "value": "KHU VỰC NGHIÊN CỨU"
+  },
+  {
+    "file": "src/App.tsx",
+    "line": 140,
+    "value": "Trung tâm TP. Hồ Chí Minh"
+  },
+  {
+    "file": "src/App.tsx",
+    "line": 140,
+    "value": "Kiểm tra lại"
+  },
+  {
+    "file": "src/App.tsx",
+    "line": 141,
+    "value": ""
+  },
+  {
+    "file": "src/App.tsx",
+    "line": 142,
+    "value": ""
+  },
+  {
+    "file": "src/App.tsx",
+    "line": 143,
+    "value": ""
+  },
+  {
+    "file": "src/App.tsx",
+    "line": 144,
+    "value": ""
+  },
+  {
+    "file": "src/App.tsx",
+    "line": 144,
+    "value": "File PBF local"
+  },
+  {
+    "file": "src/App.tsx",
+    "line": 144,
+    "value": "2"
+  },
+  {
+    "file": "src/App.tsx",
+    "line": 144,
+    "value": "GeoJSON bản đồ"
+  },
+  {
+    "file": "src/App.tsx",
+    "line": 144,
+    "value": "3"
+  },
+  {
+    "file": "src/App.tsx",
+    "line": 144,
+    "value": "OSRM MLD"
+  },
+  {
+    "file": "src/App.tsx",
+    "line": 144,
+    "value": "Kiểm tra dữ liệu"
+  },
+  {
+    "file": "src/App.tsx",
+    "line": 144,
+    "value": "Chỉ hiển thị đường phố sau khi xử lý dữ liệu OSM thật."
+  },
+  {
+    "file": "src/App.tsx",
+    "line": 145,
+    "value": ""
+  },
+  {
+    "file": "src/App.tsx",
+    "line": 146,
+    "value": ""
+  },
+  {
+    "file": "src/App.tsx",
+    "line": 147,
+    "value": ""
+  },
+  {
+    "file": "src/App.tsx",
+    "line": 147,
+    "value": "© OpenStreetMap contributors · Geofabrik"
+  },
+  {
+    "file": "src/App.tsx",
+    "line": 147,
+    "value": "Sandbox nghiên cứu ·"
+  },
+  {
+    "file": "src/App.tsx",
+    "line": 148,
+    "value": ""
+  },
+  {
+    "file": "src/App.tsx",
+    "line": 149,
+    "value": ""
+  },
+  {
+    "file": "src/App.tsx",
+    "line": 149,
+    "value": "Business Analytics"
+  },
+  {
+    "file": "src/App.tsx",
+    "line": 149,
+    "value": "Đang tải Studio local…"
+  },
+  {
+    "file": "src/App.tsx",
+    "line": 150,
+    "value": ""
+  },
+  {
+    "file": "src/App.tsx",
+    "line": 151,
+    "value": ""
+  },
+  {
+    "file": "src/App.tsx",
+    "line": 152,
+    "value": ""
+  },
+  {
+    "file": "src/App.tsx",
+    "line": 152,
+    "value": "Single Trip"
+  },
+  {
+    "file": "src/App.tsx",
+    "line": 153,
+    "value": ""
+  },
+  {
+    "file": "src/components/batch-analysis.tsx",
+    "line": 30,
+    "value": "Batch Experiment Analysis"
+  },
+  {
+    "file": "src/components/batch-analysis.tsx",
+    "line": 31,
+    "value": ""
+  },
+  {
+    "file": "src/components/batch-analysis.tsx",
+    "line": 31,
+    "value": "Batch Experiment Analysis"
+  },
+  {
+    "file": "src/components/batch-analysis.tsx",
+    "line": 31,
+    "value": "Paired simulation · OFAT · tối đa 90 jobs · chỉ bắt đầu khi bấm Run. Cùng seed list cho mọi giá trị của factor."
+  },
+  {
+    "file": "src/components/batch-analysis.tsx",
+    "line": 32,
+    "value": ""
+  },
+  {
+    "file": "src/components/batch-analysis.tsx",
+    "line": 33,
+    "value": ""
+  },
+  {
+    "file": "src/components/batch-analysis.tsx",
+    "line": 33,
+    "value": "Base seed"
+  },
+  {
+    "file": "src/components/batch-analysis.tsx",
+    "line": 33,
+    "value": "Batch base seed"
+  },
+  {
+    "file": "src/components/batch-analysis.tsx",
+    "line": 34,
+    "value": ""
+  },
+  {
+    "file": "src/components/batch-analysis.tsx",
+    "line": 34,
+    "value": "Seeds"
+  },
+  {
+    "file": "src/components/batch-analysis.tsx",
+    "line": 34,
+    "value": "Batch seeds"
+  },
+  {
+    "file": "src/components/batch-analysis.tsx",
+    "line": 34,
+    "value": "10"
+  },
+  {
+    "file": "src/components/batch-analysis.tsx",
+    "line": 34,
+    "value": "30"
+  },
+  {
+    "file": "src/components/batch-analysis.tsx",
+    "line": 35,
+    "value": ""
+  },
+  {
+    "file": "src/components/batch-analysis.tsx",
+    "line": 35,
+    "value": "One factor"
+  },
+  {
+    "file": "src/components/batch-analysis.tsx",
+    "line": 35,
+    "value": "Sensitivity factor"
+  },
+  {
+    "file": "src/components/batch-analysis.tsx",
+    "line": 36,
+    "value": ""
+  },
+  {
+    "file": "src/components/batch-analysis.tsx",
+    "line": 37,
+    "value": ""
+  },
+  {
+    "file": "src/components/batch-analysis.tsx",
+    "line": 37,
+    "value": ":"
+  },
+  {
+    "file": "src/components/batch-analysis.tsx",
+    "line": 37,
+    "value": "·"
+  },
+  {
+    "file": "src/components/batch-analysis.tsx",
+    "line": 37,
+    "value": "jobs trong cấu hình kế tiếp. Discount preset = fixed VND policy; các factor khác giữ voucher policy đang cấu hình."
+  },
+  {
+    "file": "src/components/batch-analysis.tsx",
+    "line": 38,
+    "value": ""
+  },
+  {
+    "file": "src/components/batch-analysis.tsx",
+    "line": 38,
+    "value": "Saved Replay: xem/export replay; chạy batch mới cần Live Local backend + OSRM."
+  },
+  {
+    "file": "src/components/batch-analysis.tsx",
+    "line": 39,
+    "value": ""
+  },
+  {
+    "file": "src/components/batch-analysis.tsx",
+    "line": 39,
+    "value": "Run Batch"
+  },
+  {
+    "file": "src/components/batch-analysis.tsx",
+    "line": 39,
+    "value": ""
+  },
+  {
+    "file": "src/components/batch-analysis.tsx",
+    "line": 39,
+    "value": "Cancel Batch"
+  },
+  {
+    "file": "src/components/batch-analysis.tsx",
+    "line": 40,
+    "value": ""
+  },
+  {
+    "file": "src/components/batch-analysis.tsx",
+    "line": 40,
+    "value": "·"
+  },
+  {
+    "file": "src/components/batch-analysis.tsx",
+    "line": 40,
+    "value": "/"
+  },
+  {
+    "file": "src/components/batch-analysis.tsx",
+    "line": 40,
+    "value": "records ·"
+  },
+  {
+    "file": "src/components/batch-analysis.tsx",
+    "line": 40,
+    "value": "successful ·"
+  },
+  {
+    "file": "src/components/batch-analysis.tsx",
+    "line": 40,
+    "value": "errors ·"
+  },
+  {
+    "file": "src/components/batch-analysis.tsx",
+    "line": 40,
+    "value": "cancelled"
+  },
+  {
+    "file": "src/components/batch-analysis.tsx",
+    "line": 41,
+    "value": ""
+  },
+  {
+    "file": "src/components/batch-analysis.tsx",
+    "line": 42,
+    "value": ""
+  },
+  {
+    "file": "src/components/batch-analysis.tsx",
+    "line": 43,
+    "value": ""
+  },
+  {
+    "file": "src/components/batch-analysis.tsx",
+    "line": 43,
+    "value": "Summary chung cộng các nhóm tham số. Dùng Parameter Sensitivity và JSON groups để so sánh theo nhóm; các seed lặp giữa nhóm không phải mẫu độc lập."
+  },
+  {
+    "file": "src/components/batch-analysis.tsx",
+    "line": 44,
+    "value": ""
+  },
+  {
+    "file": "src/components/batch-analysis.tsx",
+    "line": 44,
+    "value": "Mean Δ"
+  },
+  {
+    "file": "src/components/batch-analysis.tsx",
+    "line": 44,
+    "value": "· median"
+  },
+  {
+    "file": "src/components/batch-analysis.tsx",
+    "line": 44,
+    "value": "· sample SD"
+  },
+  {
+    "file": "src/components/batch-analysis.tsx",
+    "line": 44,
+    "value": "· min/max"
+  },
+  {
+    "file": "src/components/batch-analysis.tsx",
+    "line": 44,
+    "value": "/"
+  },
+  {
+    "file": "src/components/batch-analysis.tsx",
+    "line": 44,
+    "value": "Improvement"
+  },
+  {
+    "file": "src/components/batch-analysis.tsx",
+    "line": 44,
+    "value": "(n="
+  },
+  {
+    "file": "src/components/batch-analysis.tsx",
+    "line": 44,
+    "value": ") · mean spend"
+  },
+  {
+    "file": "src/components/batch-analysis.tsx",
+    "line": 44,
+    "value": "· pooled CPIC"
+  },
+  {
+    "file": "src/components/batch-analysis.tsx",
+    "line": 45,
+    "value": ""
+  },
+  {
+    "file": "src/components/batch-analysis.tsx",
+    "line": 45,
+    "value": "Budget utilization"
+  },
+  {
+    "file": "src/components/batch-analysis.tsx",
+    "line": 45,
+    "value": "(n="
+  },
+  {
+    "file": "src/components/batch-analysis.tsx",
+    "line": 45,
+    "value": ") · wait Δ"
+  },
+  {
+    "file": "src/components/batch-analysis.tsx",
+    "line": 45,
+    "value": "s (n="
+  },
+  {
+    "file": "src/components/batch-analysis.tsx",
+    "line": 45,
+    "value": ") · utilization Δ"
+  },
+  {
+    "file": "src/components/batch-analysis.tsx",
+    "line": 45,
+    "value": "(n="
+  },
+  {
+    "file": "src/components/batch-analysis.tsx",
+    "line": 45,
+    "value": ")"
+  },
+  {
+    "file": "src/components/batch-analysis.tsx",
+    "line": 46,
+    "value": ""
+  },
+  {
+    "file": "src/components/batch-analysis.tsx",
+    "line": 46,
+    "value": "Paired Increment Distribution"
+  },
+  {
+    "file": "src/components/batch-analysis.tsx",
+    "line": 46,
+    "value": "Paired Increment Distribution"
+  },
+  {
+    "file": "src/components/batch-analysis.tsx",
+    "line": 47,
+    "value": ""
+  },
+  {
+    "file": "src/components/batch-analysis.tsx",
+    "line": 47,
+    "value": "Voucher Spend vs Incremental Completions"
+  },
+  {
+    "file": "src/components/batch-analysis.tsx",
+    "line": 47,
+    "value": "Voucher Spend vs Incremental Completions"
+  },
+  {
+    "file": "src/components/batch-analysis.tsx",
+    "line": 48,
+    "value": ""
+  },
+  {
+    "file": "src/components/batch-analysis.tsx",
+    "line": 48,
+    "value": "Parameter Sensitivity"
+  },
+  {
+    "file": "src/components/batch-analysis.tsx",
+    "line": 48,
+    "value": "Parameter Sensitivity · mean completed Δ"
+  },
+  {
+    "file": "src/components/batch-analysis.tsx",
+    "line": 49,
+    "value": ""
+  },
+  {
+    "file": "src/components/batch-analysis.tsx",
+    "line": 49,
+    "value": "Export Batch JSON"
+  },
+  {
+    "file": "src/components/batch-analysis.tsx",
+    "line": 49,
+    "value": ""
+  },
+  {
+    "file": "src/components/batch-analysis.tsx",
+    "line": 49,
+    "value": "Export Batch CSV"
+  },
+  {
+    "file": "src/components/batch-analysis.tsx",
+    "line": 50,
+    "value": ""
+  },
+  {
+    "file": "src/components/batch-analysis.tsx",
+    "line": 50,
+    "value": "Export Batch Summary CSV"
+  },
+  {
+    "file": "src/components/batch-analysis.tsx",
+    "line": 51,
+    "value": ""
+  },
+  {
+    "file": "src/components/batch-analysis.tsx",
+    "line": 51,
+    "value": "Run records và statistical definitions"
+  },
+  {
+    "file": "src/components/batch-analysis.tsx",
+    "line": 51,
+    "value": "Seed / factor"
+  },
+  {
+    "file": "src/components/batch-analysis.tsx",
+    "line": 51,
+    "value": "Status"
+  },
+  {
+    "file": "src/components/batch-analysis.tsx",
+    "line": 51,
+    "value": "Δ"
+  },
+  {
+    "file": "src/components/batch-analysis.tsx",
+    "line": 51,
+    "value": "Reason"
+  },
+  {
+    "file": "src/components/batch-analysis.tsx",
+    "line": 51,
+    "value": "/"
+  },
+  {
+    "file": "src/components/batch-analysis.tsx",
+    "line": 52,
+    "value": ""
+  },
+  {
+    "file": "src/components/batch-analysis.tsx",
+    "line": 53,
+    "value": ""
+  },
+  {
+    "file": "src/components/booking-map.tsx",
+    "line": 39,
+    "value": ""
+  },
+  {
+    "file": "src/components/booking-map.tsx",
+    "line": 40,
+    "value": ""
+  },
+  {
+    "file": "src/components/booking-map.tsx",
+    "line": 41,
+    "value": ""
+  },
+  {
+    "file": "src/components/booking-map.tsx",
+    "line": 42,
+    "value": ""
+  },
+  {
+    "file": "src/components/booking-map.tsx",
+    "line": 43,
+    "value": ""
+  },
+  {
+    "file": "src/components/booking-map.tsx",
+    "line": 47,
+    "value": ""
+  },
+  {
+    "file": "src/components/booking-map.tsx",
+    "line": 47,
+    "value": "B"
+  },
+  {
+    "file": "src/components/booking-map.tsx",
+    "line": 48,
+    "value": ""
+  },
+  {
+    "file": "src/components/booking-panel.tsx",
+    "line": 27,
+    "value": ""
+  },
+  {
+    "file": "src/components/booking-panel.tsx",
+    "line": 27,
+    "value": "Booking Configuration"
+  },
+  {
+    "file": "src/components/booking-panel.tsx",
+    "line": 27,
+    "value": "Booking & Dispatch"
+  },
+  {
+    "file": "src/components/booking-panel.tsx",
+    "line": 27,
+    "value": "Mô phỏng nhu cầu · không phải hành khách/GPS GSM thực tế"
+  },
+  {
+    "file": "src/components/booking-panel.tsx",
+    "line": 28,
+    "value": ""
+  },
+  {
+    "file": "src/components/booking-panel.tsx",
+    "line": 29,
+    "value": ""
+  },
+  {
+    "file": "src/components/booking-panel.tsx",
+    "line": 29,
+    "value": "Số xe"
+  },
+  {
+    "file": "src/components/booking-panel.tsx",
+    "line": 29,
+    "value": "Booking fleet size"
+  },
+  {
+    "file": "src/components/booking-panel.tsx",
+    "line": 30,
+    "value": ""
+  },
+  {
+    "file": "src/components/booking-panel.tsx",
+    "line": 30,
+    "value": "Bookings"
+  },
+  {
+    "file": "src/components/booking-panel.tsx",
+    "line": 30,
+    "value": "Booking count"
+  },
+  {
+    "file": "src/components/booking-panel.tsx",
+    "line": 31,
+    "value": ""
+  },
+  {
+    "file": "src/components/booking-panel.tsx",
+    "line": 31,
+    "value": "Seed"
+  },
+  {
+    "file": "src/components/booking-panel.tsx",
+    "line": 31,
+    "value": "Booking seed"
+  },
+  {
+    "file": "src/components/booking-panel.tsx",
+    "line": 32,
+    "value": ""
+  },
+  {
+    "file": "src/components/booking-panel.tsx",
+    "line": 32,
+    "value": "Demand"
+  },
+  {
+    "file": "src/components/booking-panel.tsx",
+    "line": 32,
+    "value": "Demand preset"
+  },
+  {
+    "file": "src/components/booking-panel.tsx",
+    "line": 33,
+    "value": ""
+  },
+  {
+    "file": "src/components/booking-panel.tsx",
+    "line": 33,
+    "value": "Horizon (s)"
+  },
+  {
+    "file": "src/components/booking-panel.tsx",
+    "line": 33,
+    "value": "Demand horizon seconds"
+  },
+  {
+    "file": "src/components/booking-panel.tsx",
+    "line": 34,
+    "value": ""
+  },
+  {
+    "file": "src/components/booking-panel.tsx",
+    "line": 34,
+    "value": "Giới hạn chờ đến lúc đón (s)"
+  },
+  {
+    "file": "src/components/booking-panel.tsx",
+    "line": 34,
+    "value": "Maximum pickup wait seconds"
+  },
+  {
+    "file": "src/components/booking-panel.tsx",
+    "line": 35,
+    "value": ""
+  },
+  {
+    "file": "src/components/booking-panel.tsx",
+    "line": 36,
+    "value": ""
+  },
+  {
+    "file": "src/components/booking-panel.tsx",
+    "line": 36,
+    "value": "Low: trải đều có jitter. Medium: thời điểm đều ngẫu nhiên theo seed. High: dồn vào ¼ đầu horizon. Preset giữ nguyên số booking."
+  },
+  {
+    "file": "src/components/booking-panel.tsx",
+    "line": 37,
+    "value": ""
+  },
+  {
+    "file": "src/components/booking-panel.tsx",
+    "line": 37,
+    "value": "Generate Booking Scenario"
+  },
+  {
+    "file": "src/components/booking-panel.tsx",
+    "line": 38,
+    "value": ""
+  },
+  {
+    "file": "src/components/booking-panel.tsx",
+    "line": 38,
+    "value": "Đang chuẩn bị dispatch plan bằng OSRM local… Có thể mất vài chục giây; playback chưa mở."
+  },
+  {
+    "file": "src/components/booking-panel.tsx",
+    "line": 39,
+    "value": ""
+  },
+  {
+    "file": "src/components/booking-panel.tsx",
+    "line": 40,
+    "value": ""
+  },
+  {
+    "file": "src/components/booking-panel.tsx",
+    "line": 40,
+    "value": "Plan đã xác minh ·"
+  },
+  {
+    "file": "src/components/booking-panel.tsx",
+    "line": 40,
+    "value": "s"
+  },
+  {
+    "file": "src/components/booking-panel.tsx",
+    "line": 40,
+    "value": "Seed:"
+  },
+  {
+    "file": "src/components/booking-panel.tsx",
+    "line": 40,
+    "value": "Fingerprint:"
+  },
+  {
+    "file": "src/components/booking-panel.tsx",
+    "line": 40,
+    "value": "Table ·"
+  },
+  {
+    "file": "src/components/booking-panel.tsx",
+    "line": 40,
+    "value": "routes ·"
+  },
+  {
+    "file": "src/components/booking-panel.tsx",
+    "line": 40,
+    "value": "cache hits ·"
+  },
+  {
+    "file": "src/components/booking-panel.tsx",
+    "line": 40,
+    "value": "Demand v1 · FIFO / ETA v1 · không routing trong playback"
+  },
+  {
+    "file": "src/components/booking-panel.tsx",
+    "line": 41,
+    "value": ""
+  },
+  {
+    "file": "src/components/booking-panel.tsx",
+    "line": 42,
+    "value": ""
+  },
+  {
+    "file": "src/components/booking-panel.tsx",
+    "line": 42,
+    "value": "Scenario View"
+  },
+  {
+    "file": "src/components/booking-panel.tsx",
+    "line": 42,
+    "value": "Scenario view"
+  },
+  {
+    "file": "src/components/booking-panel.tsx",
+    "line": 43,
+    "value": ""
+  },
+  {
+    "file": "src/components/booking-panel.tsx",
+    "line": 44,
+    "value": ""
+  },
+  {
+    "file": "src/components/booking-panel.tsx",
+    "line": 44,
+    "value": "Pause"
+  },
+  {
+    "file": "src/components/booking-panel.tsx",
+    "line": 44,
+    "value": "Reset booking simulation"
+  },
+  {
+    "file": "src/components/booking-panel.tsx",
+    "line": 45,
+    "value": ""
+  },
+  {
+    "file": "src/components/booking-panel.tsx",
+    "line": 45,
+    "value": "Booking Timeline"
+  },
+  {
+    "file": "src/components/booking-panel.tsx",
+    "line": 45,
+    "value": "%"
+  },
+  {
+    "file": "src/components/booking-panel.tsx",
+    "line": 46,
+    "value": ""
+  },
+  {
+    "file": "src/components/booking-panel.tsx",
+    "line": 47,
+    "value": ""
+  },
+  {
+    "file": "src/components/booking-panel.tsx",
+    "line": 47,
+    "value": "Seek simulation seconds"
+  },
+  {
+    "file": "src/components/booking-panel.tsx",
+    "line": 47,
+    "value": "Seek (s)"
+  },
+  {
+    "file": "src/components/booking-panel.tsx",
+    "line": 48,
+    "value": ""
+  },
+  {
+    "file": "src/components/booking-panel.tsx",
+    "line": 48,
+    "value": "/"
+  },
+  {
+    "file": "src/components/booking-panel.tsx",
+    "line": 48,
+    "value": "·"
+  },
+  {
+    "file": "src/components/booking-panel.tsx",
+    "line": 49,
+    "value": ""
+  },
+  {
+    "file": "src/components/booking-panel.tsx",
+    "line": 49,
+    "value": "Hiệu năng clock"
+  },
+  {
+    "file": "src/components/booking-panel.tsx",
+    "line": 49,
+    "value": "RAF samples · mean"
+  },
+  {
+    "file": "src/components/booking-panel.tsx",
+    "line": 49,
+    "value": "ms · max gap"
+  },
+  {
+    "file": "src/components/booking-panel.tsx",
+    "line": 49,
+    "value": "ms. Không phải chứng nhận FPS."
+  },
+  {
+    "file": "src/components/booking-panel.tsx",
+    "line": 50,
+    "value": ""
+  },
+  {
+    "file": "src/components/booking-panel.tsx",
+    "line": 50,
+    "value": "Tốc độ mô phỏng"
+  },
+  {
+    "file": "src/components/booking-panel.tsx",
+    "line": 50,
+    "value": "x"
+  },
+  {
+    "file": "src/components/booking-panel.tsx",
+    "line": 51,
+    "value": ""
+  },
+  {
+    "file": "src/components/booking-panel.tsx",
+    "line": 52,
+    "value": ""
+  },
+  {
+    "file": "src/components/booking-panel.tsx",
+    "line": 52,
+    "value": "Fit vùng scenario"
+  },
+  {
+    "file": "src/components/booking-panel.tsx",
+    "line": 53,
+    "value": ""
+  },
+  {
+    "file": "src/components/booking-panel.tsx",
+    "line": 54,
+    "value": ""
+  },
+  {
+    "file": "src/components/booking-panel.tsx",
+    "line": 54,
+    "value": "Observed Metrics"
+  },
+  {
+    "file": "src/components/booking-panel.tsx",
+    "line": 54,
+    "value": "Observed · tới thời điểm hiện tại"
+  },
+  {
+    "file": "src/components/booking-panel.tsx",
+    "line": 55,
+    "value": ""
+  },
+  {
+    "file": "src/components/booking-panel.tsx",
+    "line": 55,
+    "value": "Đã đón / đã yêu cầu"
+  },
+  {
+    "file": "src/components/booking-panel.tsx",
+    "line": 55,
+    "value": "Hoàn tất / đã yêu cầu"
+  },
+  {
+    "file": "src/components/booking-panel.tsx",
+    "line": 55,
+    "value": "Chờ TB · đã đón"
+  },
+  {
+    "file": "src/components/booking-panel.tsx",
+    "line": 55,
+    "value": "Chuyến TB · hoàn tất"
+  },
+  {
+    "file": "src/components/booking-panel.tsx",
+    "line": 55,
+    "value": "ETA đón TB · đã gán"
+  },
+  {
+    "file": "src/components/booking-panel.tsx",
+    "line": 55,
+    "value": "Quãng đường rỗng"
+  },
+  {
+    "file": "src/components/booking-panel.tsx",
+    "line": 55,
+    "value": "Quãng đường chở khách"
+  },
+  {
+    "file": "src/components/booking-panel.tsx",
+    "line": 55,
+    "value": "Utilization · busy / fleet-time"
+  },
+  {
+    "file": "src/components/booking-panel.tsx",
+    "line": 56,
+    "value": ""
+  },
+  {
+    "file": "src/components/booking-panel.tsx",
+    "line": 56,
+    "value": "Waiting/utilization là mô phỏng; duration/distance theo profile OSRM, không live traffic. Assigned là số booking đã từng được gán."
+  },
+  {
+    "file": "src/components/booking-panel.tsx",
+    "line": 57,
+    "value": ""
+  },
+  {
+    "file": "src/components/booking-panel.tsx",
+    "line": 57,
+    "value": "Planned · toàn bộ scenario"
+  },
+  {
+    "file": "src/components/booking-panel.tsx",
+    "line": 57,
+    "value": "/"
+  },
+  {
+    "file": "src/components/booking-panel.tsx",
+    "line": 57,
+    "value": "hoàn tất ·"
+  },
+  {
+    "file": "src/components/booking-panel.tsx",
+    "line": 57,
+    "value": "unserved"
+  },
+  {
+    "file": "src/components/booking-panel.tsx",
+    "line": 57,
+    "value": "Rỗng"
+  },
+  {
+    "file": "src/components/booking-panel.tsx",
+    "line": 57,
+    "value": "· chở khách"
+  },
+  {
+    "file": "src/components/booking-panel.tsx",
+    "line": 58,
+    "value": ""
+  },
+  {
+    "file": "src/components/booking-panel.tsx",
+    "line": 59,
+    "value": ""
+  },
+  {
+    "file": "src/components/booking-panel.tsx",
+    "line": 59,
+    "value": "Bookings"
+  },
+  {
+    "file": "src/components/booking-panel.tsx",
+    "line": 59,
+    "value": "Bookings"
+  },
+  {
+    "file": "src/components/booking-panel.tsx",
+    "line": 59,
+    "value": "Lọc trạng thái"
+  },
+  {
+    "file": "src/components/booking-panel.tsx",
+    "line": 59,
+    "value": "Booking status filter"
+  },
+  {
+    "file": "src/components/booking-panel.tsx",
+    "line": 60,
+    "value": ""
+  },
+  {
+    "file": "src/components/booking-panel.tsx",
+    "line": 60,
+    "value": "Không có booking trong bộ lọc ở thời điểm này."
+  },
+  {
+    "file": "src/components/booking-panel.tsx",
+    "line": 61,
+    "value": ""
+  },
+  {
+    "file": "src/components/booking-panel.tsx",
+    "line": 61,
+    "value": "Yêu cầu +"
+  },
+  {
+    "file": "src/components/booking-panel.tsx",
+    "line": 61,
+    "value": "·"
+  },
+  {
+    "file": "src/components/booking-panel.tsx",
+    "line": 61,
+    "value": "· chờ"
+  },
+  {
+    "file": "src/components/booking-panel.tsx",
+    "line": 62,
+    "value": ""
+  },
+  {
+    "file": "src/components/booking-panel.tsx",
+    "line": 63,
+    "value": ""
+  },
+  {
+    "file": "src/components/booking-panel.tsx",
+    "line": 63,
+    "value": "Booking Details"
+  },
+  {
+    "file": "src/components/booking-panel.tsx",
+    "line": 63,
+    "value": "·"
+  },
+  {
+    "file": "src/components/booking-panel.tsx",
+    "line": 63,
+    "value": "Pickup:"
+  },
+  {
+    "file": "src/components/booking-panel.tsx",
+    "line": 63,
+    "value": "Dropoff:"
+  },
+  {
+    "file": "src/components/booking-panel.tsx",
+    "line": 63,
+    "value": "Xe:"
+  },
+  {
+    "file": "src/components/booking-panel.tsx",
+    "line": 63,
+    "value": "· ETA đón"
+  },
+  {
+    "file": "src/components/booking-panel.tsx",
+    "line": 63,
+    "value": "Chờ mô phỏng:"
+  },
+  {
+    "file": "src/components/booking-panel.tsx",
+    "line": 63,
+    "value": "· chuyến OSRM:"
+  },
+  {
+    "file": "src/components/booking-panel.tsx",
+    "line": 63,
+    "value": "Fit booking"
+  },
+  {
+    "file": "src/components/booking-panel.tsx",
+    "line": 64,
+    "value": ""
+  },
+  {
+    "file": "src/components/booking-panel.tsx",
+    "line": 64,
+    "value": "Dispatch Fleet"
+  },
+  {
+    "file": "src/components/booking-panel.tsx",
+    "line": 64,
+    "value": "Dispatch fleet"
+  },
+  {
+    "file": "src/components/booking-panel.tsx",
+    "line": 64,
+    "value": "·"
+  },
+  {
+    "file": "src/components/booking-panel.tsx",
+    "line": 64,
+    "value": "chuyến hoàn tất"
+  },
+  {
+    "file": "src/components/booking-panel.tsx",
+    "line": 64,
+    "value": "Rỗng"
+  },
+  {
+    "file": "src/components/booking-panel.tsx",
+    "line": 64,
+    "value": "· chở khách"
+  },
+  {
+    "file": "src/components/booking-panel.tsx",
+    "line": 65,
+    "value": ""
+  },
+  {
+    "file": "src/components/booking-panel.tsx",
+    "line": 65,
+    "value": "Event Timeline"
+  },
+  {
+    "file": "src/components/booking-panel.tsx",
+    "line": 65,
+    "value": "Timeline sự kiện ·"
+  },
+  {
+    "file": "src/components/booking-panel.tsx",
+    "line": 65,
+    "value": "16 sự kiện gần nhất tới simulation time; Seek ngược loại bỏ sự kiện tương lai."
+  },
+  {
+    "file": "src/components/booking-panel.tsx",
+    "line": 66,
+    "value": ""
+  },
+  {
+    "file": "src/components/chart-viewport.tsx",
+    "line": 16,
+    "value": ""
+  },
+  {
+    "file": "src/components/chart-viewport.tsx",
+    "line": 16,
+    "value": "Biểu đồ hiển thị khi cuộn tới vùng này."
+  },
+  {
+    "file": "src/components/chart-viewport.tsx",
+    "line": 17,
+    "value": ""
+  },
+  {
+    "file": "src/components/financial-comparison.tsx",
+    "line": 11,
+    "value": "Financial &amp; Operational Comparison"
+  },
+  {
+    "file": "src/components/financial-comparison.tsx",
+    "line": 11,
+    "value": "Difference = Treatment − Baseline · GFV = rider payments + settled voucher · simulated metrics"
+  },
+  {
+    "file": "src/components/fleet-panel.tsx",
+    "line": 21,
+    "value": ""
+  },
+  {
+    "file": "src/components/fleet-panel.tsx",
+    "line": 21,
+    "value": "Fleet Configuration"
+  },
+  {
+    "file": "src/components/fleet-panel.tsx",
+    "line": 22,
+    "value": ""
+  },
+  {
+    "file": "src/components/fleet-panel.tsx",
+    "line": 22,
+    "value": "Fleet Simulation"
+  },
+  {
+    "file": "src/components/fleet-panel.tsx",
+    "line": 23,
+    "value": ""
+  },
+  {
+    "file": "src/components/fleet-panel.tsx",
+    "line": 23,
+    "value": "Simulated fleet — not live GPS"
+  },
+  {
+    "file": "src/components/fleet-panel.tsx",
+    "line": 24,
+    "value": ""
+  },
+  {
+    "file": "src/components/fleet-panel.tsx",
+    "line": 24,
+    "value": "Số xe"
+  },
+  {
+    "file": "src/components/fleet-panel.tsx",
+    "line": 24,
+    "value": "Số xe"
+  },
+  {
+    "file": "src/components/fleet-panel.tsx",
+    "line": 24,
+    "value": "Seed"
+  },
+  {
+    "file": "src/components/fleet-panel.tsx",
+    "line": 24,
+    "value": "Scenario seed"
+  },
+  {
+    "file": "src/components/fleet-panel.tsx",
+    "line": 25,
+    "value": ""
+  },
+  {
+    "file": "src/components/fleet-panel.tsx",
+    "line": 25,
+    "value": "Generate Scenario"
+  },
+  {
+    "file": "src/components/fleet-panel.tsx",
+    "line": 25,
+    "value": "Seed mới"
+  },
+  {
+    "file": "src/components/fleet-panel.tsx",
+    "line": 26,
+    "value": ""
+  },
+  {
+    "file": "src/components/fleet-panel.tsx",
+    "line": 26,
+    "value": "Cần bản đồ và OSRM local sẵn sàng."
+  },
+  {
+    "file": "src/components/fleet-panel.tsx",
+    "line": 27,
+    "value": ""
+  },
+  {
+    "file": "src/components/fleet-panel.tsx",
+    "line": 27,
+    "value": "Đang chuẩn bị routes ·"
+  },
+  {
+    "file": "src/components/fleet-panel.tsx",
+    "line": 27,
+    "value": "/"
+  },
+  {
+    "file": "src/components/fleet-panel.tsx",
+    "line": 27,
+    "value": "· tối đa 2 request đồng thời"
+  },
+  {
+    "file": "src/components/fleet-panel.tsx",
+    "line": 28,
+    "value": ""
+  },
+  {
+    "file": "src/components/fleet-panel.tsx",
+    "line": 29,
+    "value": ""
+  },
+  {
+    "file": "src/components/fleet-panel.tsx",
+    "line": 29,
+    "value": "Đã tạo"
+  },
+  {
+    "file": "src/components/fleet-panel.tsx",
+    "line": 29,
+    "value": "/"
+  },
+  {
+    "file": "src/components/fleet-panel.tsx",
+    "line": 29,
+    "value": "xe ·"
+  },
+  {
+    "file": "src/components/fleet-panel.tsx",
+    "line": 29,
+    "value": "s"
+  },
+  {
+    "file": "src/components/fleet-panel.tsx",
+    "line": 29,
+    "value": "route requests ·"
+  },
+  {
+    "file": "src/components/fleet-panel.tsx",
+    "line": 29,
+    "value": "cache hits"
+  },
+  {
+    "file": "src/components/fleet-panel.tsx",
+    "line": 29,
+    "value": "Seed:"
+  },
+  {
+    "file": "src/components/fleet-panel.tsx",
+    "line": 29,
+    "value": "Provenance scenario"
+  },
+  {
+    "file": "src/components/fleet-panel.tsx",
+    "line": 29,
+    "value": "Fingerprint:"
+  },
+  {
+    "file": "src/components/fleet-panel.tsx",
+    "line": 29,
+    "value": "·"
+  },
+  {
+    "file": "src/components/fleet-panel.tsx",
+    "line": 29,
+    "value": "· snap ≤"
+  },
+  {
+    "file": "src/components/fleet-panel.tsx",
+    "line": 29,
+    "value": "m"
+  },
+  {
+    "file": "src/components/fleet-panel.tsx",
+    "line": 30,
+    "value": ""
+  },
+  {
+    "file": "src/components/fleet-panel.tsx",
+    "line": 30,
+    "value": "xe không được tạo"
+  },
+  {
+    "file": "src/components/fleet-panel.tsx",
+    "line": 30,
+    "value": ":"
+  },
+  {
+    "file": "src/components/fleet-panel.tsx",
+    "line": 31,
+    "value": ""
+  },
+  {
+    "file": "src/components/fleet-panel.tsx",
+    "line": 31,
+    "value": "Tạo kịch bản từ các node đường OSM local. Chỉ nhận xe sau khi OSRM xác nhận tuyến và snapping."
+  },
+  {
+    "file": "src/components/fleet-panel.tsx",
+    "line": 32,
+    "value": ""
+  },
+  {
+    "file": "src/components/fleet-panel.tsx",
+    "line": 33,
+    "value": ""
+  },
+  {
+    "file": "src/components/fleet-panel.tsx",
+    "line": 33,
+    "value": "Fleet Overview"
+  },
+  {
+    "file": "src/components/fleet-panel.tsx",
+    "line": 34,
+    "value": ""
+  },
+  {
+    "file": "src/components/fleet-panel.tsx",
+    "line": 34,
+    "value": "Fleet overview"
+  },
+  {
+    "file": "src/components/fleet-panel.tsx",
+    "line": 35,
+    "value": ""
+  },
+  {
+    "file": "src/components/fleet-panel.tsx",
+    "line": 36,
+    "value": ""
+  },
+  {
+    "file": "src/components/fleet-panel.tsx",
+    "line": 36,
+    "value": "Pause"
+  },
+  {
+    "file": "src/components/fleet-panel.tsx",
+    "line": 36,
+    "value": "Reset fleet"
+  },
+  {
+    "file": "src/components/fleet-panel.tsx",
+    "line": 37,
+    "value": ""
+  },
+  {
+    "file": "src/components/fleet-panel.tsx",
+    "line": 37,
+    "value": "Fleet Timeline"
+  },
+  {
+    "file": "src/components/fleet-panel.tsx",
+    "line": 37,
+    "value": "%"
+  },
+  {
+    "file": "src/components/fleet-panel.tsx",
+    "line": 38,
+    "value": ""
+  },
+  {
+    "file": "src/components/fleet-panel.tsx",
+    "line": 39,
+    "value": ""
+  },
+  {
+    "file": "src/components/fleet-panel.tsx",
+    "line": 39,
+    "value": "Tốc độ toàn đội xe"
+  },
+  {
+    "file": "src/components/fleet-panel.tsx",
+    "line": 39,
+    "value": "x"
+  },
+  {
+    "file": "src/components/fleet-panel.tsx",
+    "line": 40,
+    "value": ""
+  },
+  {
+    "file": "src/components/fleet-panel.tsx",
+    "line": 40,
+    "value": "/"
+  },
+  {
+    "file": "src/components/fleet-panel.tsx",
+    "line": 40,
+    "value": "s ·"
+  },
+  {
+    "file": "src/components/fleet-panel.tsx",
+    "line": 41,
+    "value": ""
+  },
+  {
+    "file": "src/components/fleet-panel.tsx",
+    "line": 42,
+    "value": ""
+  },
+  {
+    "file": "src/components/fleet-panel.tsx",
+    "line": 42,
+    "value": "Fleet overview"
+  },
+  {
+    "file": "src/components/fleet-panel.tsx",
+    "line": 43,
+    "value": ""
+  },
+  {
+    "file": "src/components/fleet-panel.tsx",
+    "line": 43,
+    "value": "Kế hoạch:"
+  },
+  {
+    "file": "src/components/fleet-panel.tsx",
+    "line": 43,
+    "value": "· Đã đi mô phỏng:"
+  },
+  {
+    "file": "src/components/fleet-panel.tsx",
+    "line": 44,
+    "value": ""
+  },
+  {
+    "file": "src/components/fleet-panel.tsx",
+    "line": 44,
+    "value": "Hiệu năng phiên playback"
+  },
+  {
+    "file": "src/components/fleet-panel.tsx",
+    "line": 44,
+    "value": "RAF samples · mean"
+  },
+  {
+    "file": "src/components/fleet-panel.tsx",
+    "line": 44,
+    "value": "ms · max gap"
+  },
+  {
+    "file": "src/components/fleet-panel.tsx",
+    "line": 44,
+    "value": "ms"
+  },
+  {
+    "file": "src/components/fleet-panel.tsx",
+    "line": 44,
+    "value": "Clock phát state tối đa 30 Hz; RAF gap gồm cả ảnh hưởng browser/GPU. Không phải chứng nhận FPS."
+  },
+  {
+    "file": "src/components/fleet-panel.tsx",
+    "line": 45,
+    "value": ""
+  },
+  {
+    "file": "src/components/fleet-panel.tsx",
+    "line": 46,
+    "value": ""
+  },
+  {
+    "file": "src/components/fleet-panel.tsx",
+    "line": 46,
+    "value": "Vehicles"
+  },
+  {
+    "file": "src/components/fleet-panel.tsx",
+    "line": 46,
+    "value": "Danh sách xe"
+  },
+  {
+    "file": "src/components/fleet-panel.tsx",
+    "line": 47,
+    "value": ""
+  },
+  {
+    "file": "src/components/fleet-panel.tsx",
+    "line": 48,
+    "value": ""
+  },
+  {
+    "file": "src/components/fleet-panel.tsx",
+    "line": 49,
+    "value": ""
+  },
+  {
+    "file": "src/components/fleet-panel.tsx",
+    "line": 49,
+    "value": "Vehicle Details"
+  },
+  {
+    "file": "src/components/fleet-panel.tsx",
+    "line": 49,
+    "value": "·"
+  },
+  {
+    "file": "src/components/fleet-panel.tsx",
+    "line": 49,
+    "value": "Tiến độ"
+  },
+  {
+    "file": "src/components/fleet-panel.tsx",
+    "line": 49,
+    "value": "% · còn"
+  },
+  {
+    "file": "src/components/fleet-panel.tsx",
+    "line": 49,
+    "value": "s"
+  },
+  {
+    "file": "src/components/fleet-panel.tsx",
+    "line": 49,
+    "value": "Snap A/B:"
+  },
+  {
+    "file": "src/components/fleet-panel.tsx",
+    "line": 49,
+    "value": "Focus xe"
+  },
+  {
+    "file": "src/components/fleet-panel.tsx",
+    "line": 49,
+    "value": "Fit tuyến"
+  },
+  {
+    "file": "src/components/fleet-panel.tsx",
+    "line": 50,
+    "value": ""
+  },
+  {
+    "file": "src/components/fleet-panel.tsx",
+    "line": 54,
+    "value": ""
+  },
+  {
+    "file": "src/components/fleet-panel.tsx",
+    "line": 54,
+    "value": "·"
+  },
+  {
+    "file": "src/components/fleet-panel.tsx",
+    "line": 54,
+    "value": "s · xuất phát +"
+  },
+  {
+    "file": "src/components/fleet-panel.tsx",
+    "line": 54,
+    "value": "s"
+  },
+  {
+    "file": "src/components/fleet-panel.tsx",
+    "line": 54,
+    "value": "%"
+  },
+  {
+    "file": "src/components/fleet-panel.tsx",
+    "line": 55,
+    "value": ""
+  },
+  {
+    "file": "src/components/fleet-panel.tsx",
+    "line": 56,
+    "value": ""
+  },
+  {
+    "file": "src/components/inspector-section.tsx",
+    "line": 13,
+    "value": ""
+  },
+  {
+    "file": "src/components/inspector-section.tsx",
+    "line": 14,
+    "value": ""
+  },
+  {
+    "file": "src/components/inspector-section.tsx",
+    "line": 15,
+    "value": ""
+  },
+  {
+    "file": "src/components/playback-dock.tsx",
+    "line": 28,
+    "value": ""
+  },
+  {
+    "file": "src/components/playback-dock.tsx",
+    "line": 28,
+    "value": "Pause"
+  },
+  {
+    "file": "src/components/playback-dock.tsx",
+    "line": 28,
+    "value": "Reset"
+  },
+  {
+    "file": "src/components/playback-dock.tsx",
+    "line": 29,
+    "value": ""
+  },
+  {
+    "file": "src/components/playback-dock.tsx",
+    "line": 29,
+    "value": "/"
+  },
+  {
+    "file": "src/components/playback-dock.tsx",
+    "line": 29,
+    "value": "s ·"
+  },
+  {
+    "file": "src/components/playback-dock.tsx",
+    "line": 29,
+    "value": "%"
+  },
+  {
+    "file": "src/components/playback-dock.tsx",
+    "line": 29,
+    "value": "Simulation timeline"
+  },
+  {
+    "file": "src/components/playback-dock.tsx",
+    "line": 30,
+    "value": ""
+  },
+  {
+    "file": "src/components/playback-dock.tsx",
+    "line": 30,
+    "value": "Seek seconds"
+  },
+  {
+    "file": "src/components/playback-dock.tsx",
+    "line": 30,
+    "value": "Seek"
+  },
+  {
+    "file": "src/components/playback-dock.tsx",
+    "line": 31,
+    "value": ""
+  },
+  {
+    "file": "src/components/playback-dock.tsx",
+    "line": 31,
+    "value": "x"
+  },
+  {
+    "file": "src/components/playback-dock.tsx",
+    "line": 31,
+    "value": "Custom Speed"
+  },
+  {
+    "file": "src/components/playback-dock.tsx",
+    "line": 31,
+    "value": "Custom Speed"
+  },
+  {
+    "file": "src/components/playback-dock.tsx",
+    "line": 31,
+    "value": "Set"
+  },
+  {
+    "file": "src/components/playback-dock.tsx",
+    "line": 31,
+    "value": "Applied speed"
+  },
+  {
+    "file": "src/components/playback-dock.tsx",
+    "line": 31,
+    "value": "x"
+  },
+  {
+    "file": "src/components/playback-dock.tsx",
+    "line": 32,
+    "value": ""
+  },
+  {
+    "file": "src/components/playback-dock.tsx",
+    "line": 33,
+    "value": ""
+  },
+  {
+    "file": "src/components/primary-navigation.tsx",
+    "line": 20,
+    "value": ""
+  },
+  {
+    "file": "src/components/primary-navigation.tsx",
+    "line": 20,
+    "value": "Primary navigation"
+  },
+  {
+    "file": "src/components/primary-navigation.tsx",
+    "line": 21,
+    "value": ""
+  },
+  {
+    "file": "src/components/primary-navigation.tsx",
+    "line": 21,
+    "value": "SIMULATION MODES"
+  },
+  {
+    "file": "src/components/primary-navigation.tsx",
+    "line": 22,
+    "value": ""
+  },
+  {
+    "file": "src/components/primary-navigation.tsx",
+    "line": 22,
+    "value": "Hide navigation"
+  },
+  {
+    "file": "src/components/primary-navigation.tsx",
+    "line": 23,
+    "value": ""
+  },
+  {
+    "file": "src/components/primary-navigation.tsx",
+    "line": 23,
+    "value": "Local simulation"
+  },
+  {
+    "file": "src/components/primary-navigation.tsx",
+    "line": 23,
+    "value": "OSM · OSRM"
+  },
+  {
+    "file": "src/components/primary-navigation.tsx",
+    "line": 24,
+    "value": ""
+  },
+  {
+    "file": "src/components/primary-navigation.tsx",
+    "line": 25,
+    "value": ""
+  },
+  {
+    "file": "src/components/primary-navigation.tsx",
+    "line": 26,
+    "value": ""
+  },
+  {
+    "file": "src/components/primary-navigation.tsx",
+    "line": 26,
+    "value": "Main menu"
+  },
+  {
+    "file": "src/components/primary-navigation.tsx",
+    "line": 26,
+    "value": "Chọn chế độ mô phỏng"
+  },
+  {
+    "file": "src/components/primary-navigation.tsx",
+    "line": 26,
+    "value": "Close menu"
+  },
+  {
+    "file": "src/components/primary-navigation.tsx",
+    "line": 27,
+    "value": ""
+  },
+  {
+    "file": "src/components/primary-navigation.tsx",
+    "line": 28,
+    "value": ""
+  },
+  {
+    "file": "src/components/sandbox-map.tsx",
+    "line": 58,
+    "value": ""
+  },
+  {
+    "file": "src/components/sandbox-map.tsx",
+    "line": 59,
+    "value": ""
+  },
+  {
+    "file": "src/components/sandbox-map.tsx",
+    "line": 60,
+    "value": ""
+  },
+  {
+    "file": "src/components/sandbox-map.tsx",
+    "line": 61,
+    "value": ""
+  },
+  {
+    "file": "src/components/sandbox-map.tsx",
+    "line": 62,
+    "value": ""
+  },
+  {
+    "file": "src/components/sandbox-map.tsx",
+    "line": 63,
+    "value": ""
+  },
+  {
+    "file": "src/components/sandbox-map.tsx",
+    "line": 64,
+    "value": ""
+  },
+  {
+    "file": "src/components/sandbox-map.tsx",
+    "line": 65,
+    "value": ""
+  },
+  {
+    "file": "src/components/sandbox-map.tsx",
+    "line": 66,
+    "value": ""
+  },
+  {
+    "file": "src/components/sandbox-map.tsx",
+    "line": 67,
+    "value": ""
+  },
+  {
+    "file": "src/components/sandbox-map.tsx",
+    "line": 67,
+    "value": "Một xe GSM mô phỏng trên tuyến OSRM"
+  },
+  {
+    "file": "src/components/sandbox-map.tsx",
+    "line": 68,
+    "value": ""
+  },
+  {
+    "file": "src/components/sandbox-map.tsx",
+    "line": 69,
+    "value": ""
+  },
+  {
+    "file": "src/components/voucher-analytics.tsx",
+    "line": 10,
+    "value": "Advanced Business Analytics"
+  },
+  {
+    "file": "src/components/voucher-analytics.tsx",
+    "line": 10,
+    "value": "Phân tích kinh doanh nâng cao"
+  },
+  {
+    "file": "src/components/voucher-analytics.tsx",
+    "line": 11,
+    "value": ""
+  },
+  {
+    "file": "src/components/voucher-analytics.tsx",
+    "line": 11,
+    "value": "Cumulative Accepted Bookings"
+  },
+  {
+    "file": "src/components/voucher-analytics.tsx",
+    "line": 11,
+    "value": "Cumulative Accepted Bookings"
+  },
+  {
+    "file": "src/components/voucher-analytics.tsx",
+    "line": 12,
+    "value": ""
+  },
+  {
+    "file": "src/components/voucher-analytics.tsx",
+    "line": 12,
+    "value": "Gross Fare Value (VND)"
+  },
+  {
+    "file": "src/components/voucher-analytics.tsx",
+    "line": 12,
+    "value": "Gross Fare Value (VND)"
+  },
+  {
+    "file": "src/components/voucher-analytics.tsx",
+    "line": 13,
+    "value": ""
+  },
+  {
+    "file": "src/components/voucher-analytics.tsx",
+    "line": 13,
+    "value": "Rider Payments vs Voucher Subsidy"
+  },
+  {
+    "file": "src/components/voucher-analytics.tsx",
+    "line": 13,
+    "value": "Rider Payments vs Voucher Subsidy · VND"
+  },
+  {
+    "file": "src/components/voucher-analytics.tsx",
+    "line": 13,
+    "value": ":"
+  },
+  {
+    "file": "src/components/voucher-analytics.tsx",
+    "line": 14,
+    "value": ""
+  },
+  {
+    "file": "src/components/voucher-analytics.tsx",
+    "line": 14,
+    "value": "Voucher Budget Allocation"
+  },
+  {
+    "file": "src/components/voucher-analytics.tsx",
+    "line": 14,
+    "value": "Voucher Budget Allocation · VND"
+  },
+  {
+    "file": "src/components/voucher-analytics.tsx",
+    "line": 14,
+    "value": ":"
+  },
+  {
+    "file": "src/components/voucher-analytics.tsx",
+    "line": 15,
+    "value": ""
+  },
+  {
+    "file": "src/components/voucher-analytics.tsx",
+    "line": 15,
+    "value": "Cumulative Voucher Spend (VND)"
+  },
+  {
+    "file": "src/components/voucher-analytics.tsx",
+    "line": 15,
+    "value": "Cumulative Voucher Spend (VND)"
+  },
+  {
+    "file": "src/components/voucher-analytics.tsx",
+    "line": 16,
+    "value": ""
+  },
+  {
+    "file": "src/components/voucher-analytics.tsx",
+    "line": 16,
+    "value": "Fleet Utilization (%)"
+  },
+  {
+    "file": "src/components/voucher-analytics.tsx",
+    "line": 16,
+    "value": "Fleet Utilization (%)"
+  },
+  {
+    "file": "src/components/voucher-analytics.tsx",
+    "line": 17,
+    "value": ""
+  },
+  {
+    "file": "src/components/voucher-analytics.tsx",
+    "line": 17,
+    "value": "Average Pickup Wait (s)"
+  },
+  {
+    "file": "src/components/voucher-analytics.tsx",
+    "line": 17,
+    "value": "Average Pickup Wait (s)"
+  },
+  {
+    "file": "src/components/voucher-analytics.tsx",
+    "line": 18,
+    "value": ""
+  },
+  {
+    "file": "src/components/voucher-analytics.tsx",
+    "line": 18,
+    "value": "Incremental Business Efficiency"
+  },
+  {
+    "file": "src/components/voucher-analytics.tsx",
+    "line": 18,
+    "value": "Incremental Business Efficiency"
+  },
+  {
+    "file": "src/components/voucher-analytics.tsx",
+    "line": 18,
+    "value": "Booking uplift"
+  },
+  {
+    "file": "src/components/voucher-analytics.tsx",
+    "line": 18,
+    "value": "Incremental completed"
+  },
+  {
+    "file": "src/components/voucher-analytics.tsx",
+    "line": 18,
+    "value": "Settled voucher spend"
+  },
+  {
+    "file": "src/components/voucher-analytics.tsx",
+    "line": 18,
+    "value": "Cost / incremental completed"
+  },
+  {
+    "file": "src/components/voucher-analytics.tsx",
+    "line": 18,
+    "value": "Các đơn vị riêng; chưa có mô hình chi phí để suy ra profit/ROI."
+  },
+  {
+    "file": "src/components/voucher-analytics.tsx",
+    "line": 19,
+    "value": ""
+  },
+  {
+    "file": "src/components/voucher-charts.tsx",
+    "line": 11,
+    "value": ""
+  },
+  {
+    "file": "src/components/voucher-charts.tsx",
+    "line": 11,
+    "value": ":"
+  },
+  {
+    "file": "src/components/voucher-charts.tsx",
+    "line": 12,
+    "value": ""
+  },
+  {
+    "file": "src/components/voucher-charts.tsx",
+    "line": 16,
+    "value": ""
+  },
+  {
+    "file": "src/components/voucher-charts.tsx",
+    "line": 16,
+    "value": ":"
+  },
+  {
+    "file": "src/components/voucher-charts.tsx",
+    "line": 17,
+    "value": ""
+  },
+  {
+    "file": "src/components/voucher-charts.tsx",
+    "line": 26,
+    "value": "Booking Conversion Funnel"
+  },
+  {
+    "file": "src/components/voucher-charts.tsx",
+    "line": 26,
+    "value": "Booking Conversion Funnel"
+  },
+  {
+    "file": "src/components/voucher-charts.tsx",
+    "line": 26,
+    "value": "Cumulative Completed Trips"
+  },
+  {
+    "file": "src/components/voucher-charts.tsx",
+    "line": 26,
+    "value": "Cumulative Completed Trips"
+  },
+  {
+    "file": "src/components/voucher-dashboard.tsx",
+    "line": 26,
+    "value": "Voucher Experiment Studio"
+  },
+  {
+    "file": "src/components/voucher-dashboard.tsx",
+    "line": 26,
+    "value": "Chuẩn bị paired experiment để xem conversion, dispatch và budget. Mô hình sigmoid/giá là giả định nghiên cứu."
+  },
+  {
+    "file": "src/components/voucher-dashboard.tsx",
+    "line": 30,
+    "value": ""
+  },
+  {
+    "file": "src/components/voucher-dashboard.tsx",
+    "line": 30,
+    "value": "Voucher Experiment Studio"
+  },
+  {
+    "file": "src/components/voucher-dashboard.tsx",
+    "line": 30,
+    "value": "· giả định PoC"
+  },
+  {
+    "file": "src/components/voucher-dashboard.tsx",
+    "line": 30,
+    "value": "Observed"
+  },
+  {
+    "file": "src/components/voucher-dashboard.tsx",
+    "line": 30,
+    "value": "Planned / Final"
+  },
+  {
+    "file": "src/components/voucher-dashboard.tsx",
+    "line": 31,
+    "value": ""
+  },
+  {
+    "file": "src/components/voucher-dashboard.tsx",
+    "line": 32,
+    "value": ""
+  },
+  {
+    "file": "src/components/voucher-dashboard.tsx",
+    "line": 32,
+    "value": "completed /"
+  },
+  {
+    "file": "src/components/voucher-dashboard.tsx",
+    "line": 32,
+    "value": "accepted"
+  },
+  {
+    "file": "src/components/voucher-dashboard.tsx",
+    "line": 32,
+    "value": "Conversion"
+  },
+  {
+    "file": "src/components/voucher-dashboard.tsx",
+    "line": 32,
+    "value": "· completion"
+  },
+  {
+    "file": "src/components/voucher-dashboard.tsx",
+    "line": 32,
+    "value": "GFV"
+  },
+  {
+    "file": "src/components/voucher-dashboard.tsx",
+    "line": 32,
+    "value": "Rider payments"
+  },
+  {
+    "file": "src/components/voucher-dashboard.tsx",
+    "line": 32,
+    "value": "Settled voucher"
+  },
+  {
+    "file": "src/components/voucher-dashboard.tsx",
+    "line": 32,
+    "value": "Treatment − Baseline"
+  },
+  {
+    "file": "src/components/voucher-dashboard.tsx",
+    "line": 32,
+    "value": "accepted"
+  },
+  {
+    "file": "src/components/voucher-dashboard.tsx",
+    "line": 32,
+    "value": "completed"
+  },
+  {
+    "file": "src/components/voucher-dashboard.tsx",
+    "line": 32,
+    "value": "Cost / incremental completed:"
+  },
+  {
+    "file": "src/components/voucher-dashboard.tsx",
+    "line": 33,
+    "value": ""
+  },
+  {
+    "file": "src/components/voucher-dashboard.tsx",
+    "line": 34,
+    "value": ""
+  },
+  {
+    "file": "src/components/voucher-dashboard.tsx",
+    "line": 34,
+    "value": "Conversion = accepted / valid potential; completion = completed / accepted. GFV = rider payments + settled voucher. Offered/reserved chưa phải spend. Các KPI hiện tại cập nhật mỗi giây; vị trí xe dùng clock chung."
+  },
+  {
+    "file": "src/components/voucher-dashboard.tsx",
+    "line": 35,
+    "value": ""
+  },
+  {
+    "file": "src/components/voucher-dashboard.tsx",
+    "line": 36,
+    "value": ""
+  },
+  {
+    "file": "src/components/voucher-dashboard.tsx",
+    "line": 36,
+    "value": "Biểu đồ tới"
+  },
+  {
+    "file": "src/components/voucher-dashboard.tsx",
+    "line": 36,
+    "value": "s · tối đa"
+  },
+  {
+    "file": "src/components/voucher-dashboard.tsx",
+    "line": 36,
+    "value": "lần cập nhật/giây khi tăng tốc. KPI và bảng theo thời điểm Observed ở trên."
+  },
+  {
+    "file": "src/components/voucher-dashboard.tsx",
+    "line": 37,
+    "value": ""
+  },
+  {
+    "file": "src/components/voucher-dashboard.tsx",
+    "line": 37,
+    "value": "Export Portable v1"
+  },
+  {
+    "file": "src/components/voucher-dashboard.tsx",
+    "line": 37,
+    "value": "Export JSON · full plan"
+  },
+  {
+    "file": "src/components/voucher-dashboard.tsx",
+    "line": 38,
+    "value": ""
+  },
+  {
+    "file": "src/components/voucher-dashboard.tsx",
+    "line": 38,
+    "value": "Export CSV · final / full history"
+  },
+  {
+    "file": "src/components/voucher-dashboard.tsx",
+    "line": 38,
+    "value": "CSV"
+  },
+  {
+    "file": "src/components/voucher-dashboard.tsx",
+    "line": 39,
+    "value": ""
+  },
+  {
+    "file": "src/components/voucher-dashboard.tsx",
+    "line": 39,
+    "value": "Đang tải analytics local…"
+  },
+  {
+    "file": "src/components/voucher-dashboard.tsx",
+    "line": 40,
+    "value": ""
+  },
+  {
+    "file": "src/components/voucher-dashboard.tsx",
+    "line": 40,
+    "value": "Batch Experiment Analysis"
+  },
+  {
+    "file": "src/components/voucher-dashboard.tsx",
+    "line": 40,
+    "value": "Đang tải batch analysis…"
+  },
+  {
+    "file": "src/components/voucher-dashboard.tsx",
+    "line": 41,
+    "value": ""
+  },
+  {
+    "file": "src/components/voucher-dashboard.tsx",
+    "line": 42,
+    "value": ""
+  },
+  {
+    "file": "src/components/voucher-panel.tsx",
+    "line": 24,
+    "value": ""
+  },
+  {
+    "file": "src/components/voucher-panel.tsx",
+    "line": 24,
+    "value": "Experiment Runtime"
+  },
+  {
+    "file": "src/components/voucher-panel.tsx",
+    "line": 24,
+    "value": "Experiment runtime"
+  },
+  {
+    "file": "src/components/voucher-panel.tsx",
+    "line": 24,
+    "value": "Live Local"
+  },
+  {
+    "file": "src/components/voucher-panel.tsx",
+    "line": 24,
+    "value": "Saved Replay"
+  },
+  {
+    "file": "src/components/voucher-panel.tsx",
+    "line": 25,
+    "value": ""
+  },
+  {
+    "file": "src/components/voucher-panel.tsx",
+    "line": 25,
+    "value": "Saved Replay — no live routing required"
+  },
+  {
+    "file": "src/components/voucher-panel.tsx",
+    "line": 25,
+    "value": "Import Saved Experiment"
+  },
+  {
+    "file": "src/components/voucher-panel.tsx",
+    "line": 25,
+    "value": "Import Saved Experiment"
+  },
+  {
+    "file": "src/components/voucher-panel.tsx",
+    "line": 25,
+    "value": "Load Saved Demo"
+  },
+  {
+    "file": "src/components/voucher-panel.tsx",
+    "line": 25,
+    "value": "Đang kiểm chứng artifact và static map package…"
+  },
+  {
+    "file": "src/components/voucher-panel.tsx",
+    "line": 26,
+    "value": ""
+  },
+  {
+    "file": "src/components/voucher-panel.tsx",
+    "line": 26,
+    "value": "Seed:"
+  },
+  {
+    "file": "src/components/voucher-panel.tsx",
+    "line": 26,
+    "value": "Dataset:"
+  },
+  {
+    "file": "src/components/voucher-panel.tsx",
+    "line": 26,
+    "value": "Models:"
+  },
+  {
+    "file": "src/components/voucher-panel.tsx",
+    "line": 26,
+    "value": "Checksum verified · dữ liệu mô phỏng, không GPS thực tế"
+  },
+  {
+    "file": "src/components/voucher-panel.tsx",
+    "line": 27,
+    "value": ""
+  },
+  {
+    "file": "src/components/voucher-panel.tsx",
+    "line": 28,
+    "value": ""
+  },
+  {
+    "file": "src/components/voucher-panel.tsx",
+    "line": 28,
+    "value": "Experiment Configuration"
+  },
+  {
+    "file": "src/components/voucher-panel.tsx",
+    "line": 28,
+    "value": "Voucher Experiment"
+  },
+  {
+    "file": "src/components/voucher-panel.tsx",
+    "line": 28,
+    "value": "Giá và hành vi giả định · chưa hiệu chỉnh từ khách hàng GSM"
+  },
+  {
+    "file": "src/components/voucher-panel.tsx",
+    "line": 29,
+    "value": ""
+  },
+  {
+    "file": "src/components/voucher-panel.tsx",
+    "line": 29,
+    "value": "Seed"
+  },
+  {
+    "file": "src/components/voucher-panel.tsx",
+    "line": 29,
+    "value": "Experiment seed"
+  },
+  {
+    "file": "src/components/voucher-panel.tsx",
+    "line": 30,
+    "value": ""
+  },
+  {
+    "file": "src/components/voucher-panel.tsx",
+    "line": 30,
+    "value": "Fleet"
+  },
+  {
+    "file": "src/components/voucher-panel.tsx",
+    "line": 30,
+    "value": "Experiment fleet size"
+  },
+  {
+    "file": "src/components/voucher-panel.tsx",
+    "line": 31,
+    "value": ""
+  },
+  {
+    "file": "src/components/voucher-panel.tsx",
+    "line": 31,
+    "value": "Potential trips"
+  },
+  {
+    "file": "src/components/voucher-panel.tsx",
+    "line": 31,
+    "value": "Potential trip count"
+  },
+  {
+    "file": "src/components/voucher-panel.tsx",
+    "line": 32,
+    "value": ""
+  },
+  {
+    "file": "src/components/voucher-panel.tsx",
+    "line": 32,
+    "value": "Demand"
+  },
+  {
+    "file": "src/components/voucher-panel.tsx",
+    "line": 32,
+    "value": "Experiment demand preset"
+  },
+  {
+    "file": "src/components/voucher-panel.tsx",
+    "line": 33,
+    "value": ""
+  },
+  {
+    "file": "src/components/voucher-panel.tsx",
+    "line": 34,
+    "value": ""
+  },
+  {
+    "file": "src/components/voucher-panel.tsx",
+    "line": 35,
+    "value": ""
+  },
+  {
+    "file": "src/components/voucher-panel.tsx",
+    "line": 35,
+    "value": "Voucher Policy"
+  },
+  {
+    "file": "src/components/voucher-panel.tsx",
+    "line": 35,
+    "value": "Voucher"
+  },
+  {
+    "file": "src/components/voucher-panel.tsx",
+    "line": 35,
+    "value": "Voucher type"
+  },
+  {
+    "file": "src/components/voucher-panel.tsx",
+    "line": 35,
+    "value": "Fixed VND"
+  },
+  {
+    "file": "src/components/voucher-panel.tsx",
+    "line": 35,
+    "value": "Percentage"
+  },
+  {
+    "file": "src/components/voucher-panel.tsx",
+    "line": 36,
+    "value": ""
+  },
+  {
+    "file": "src/components/voucher-panel.tsx",
+    "line": 37,
+    "value": ""
+  },
+  {
+    "file": "src/components/voucher-panel.tsx",
+    "line": 38,
+    "value": ""
+  },
+  {
+    "file": "src/components/voucher-panel.tsx",
+    "line": 39,
+    "value": ""
+  },
+  {
+    "file": "src/components/voucher-panel.tsx",
+    "line": 39,
+    "value": "Passenger Behavior & Fare Assumptions"
+  },
+  {
+    "file": "src/components/voucher-panel.tsx",
+    "line": 40,
+    "value": ""
+  },
+  {
+    "file": "src/components/voucher-panel.tsx",
+    "line": 41,
+    "value": ""
+  },
+  {
+    "file": "src/components/voucher-panel.tsx",
+    "line": 42,
+    "value": ""
+  },
+  {
+    "file": "src/components/voucher-panel.tsx",
+    "line": 43,
+    "value": ""
+  },
+  {
+    "file": "src/components/voucher-panel.tsx",
+    "line": 44,
+    "value": ""
+  },
+  {
+    "file": "src/components/voucher-panel.tsx",
+    "line": 45,
+    "value": ""
+  },
+  {
+    "file": "src/components/voucher-panel.tsx",
+    "line": 46,
+    "value": ""
+  },
+  {
+    "file": "src/components/voucher-panel.tsx",
+    "line": 47,
+    "value": ""
+  },
+  {
+    "file": "src/components/voucher-panel.tsx",
+    "line": 48,
+    "value": ""
+  },
+  {
+    "file": "src/components/voucher-panel.tsx",
+    "line": 48,
+    "value": "Fare = base + rate × OSRM km. Sigmoid(alpha − beta × effective fare / reference fare). Cùng random draw cho hai arms. Không đủ budget: giá gốc, không partial voucher."
+  },
+  {
+    "file": "src/components/voucher-panel.tsx",
+    "line": 49,
+    "value": ""
+  },
+  {
+    "file": "src/components/voucher-panel.tsx",
+    "line": 49,
+    "value": "Prepare Experiment"
+  },
+  {
+    "file": "src/components/voucher-panel.tsx",
+    "line": 50,
+    "value": ""
+  },
+  {
+    "file": "src/components/voucher-panel.tsx",
+    "line": 50,
+    "value": "Đang quote và chuẩn bị hai arms bằng OSRM local…"
+  },
+  {
+    "file": "src/components/voucher-panel.tsx",
+    "line": 51,
+    "value": ""
+  },
+  {
+    "file": "src/components/voucher-panel.tsx",
+    "line": 51,
+    "value": "Experiment ready ·"
+  },
+  {
+    "file": "src/components/voucher-panel.tsx",
+    "line": 51,
+    "value": "s"
+  },
+  {
+    "file": "src/components/voucher-panel.tsx",
+    "line": 51,
+    "value": "Seed:"
+  },
+  {
+    "file": "src/components/voucher-panel.tsx",
+    "line": 51,
+    "value": "Fingerprint:"
+  },
+  {
+    "file": "src/components/voucher-panel.tsx",
+    "line": 51,
+    "value": "Table ·"
+  },
+  {
+    "file": "src/components/voucher-panel.tsx",
+    "line": 51,
+    "value": "routes ·"
+  },
+  {
+    "file": "src/components/voucher-panel.tsx",
+    "line": 51,
+    "value": "cache hits"
+  },
+  {
+    "file": "src/components/voucher-panel.tsx",
+    "line": 51,
+    "value": "invalid quote(s), loại khỏi conversion denominator."
+  },
+  {
+    "file": "src/components/voucher-panel.tsx",
+    "line": 52,
+    "value": ""
+  },
+  {
+    "file": "src/components/voucher-panel.tsx",
+    "line": 53,
+    "value": ""
+  },
+  {
+    "file": "src/components/voucher-panel.tsx",
+    "line": 53,
+    "value": "Arm & Budget"
+  },
+  {
+    "file": "src/components/voucher-panel.tsx",
+    "line": 53,
+    "value": "Experiment arm"
+  },
+  {
+    "file": "src/components/voucher-panel.tsx",
+    "line": 53,
+    "value": "Experiment arm"
+  },
+  {
+    "file": "src/components/voucher-panel.tsx",
+    "line": 54,
+    "value": ""
+  },
+  {
+    "file": "src/components/voucher-panel.tsx",
+    "line": 55,
+    "value": ""
+  },
+  {
+    "file": "src/components/voucher-panel.tsx",
+    "line": 55,
+    "value": "Pause"
+  },
+  {
+    "file": "src/components/voucher-panel.tsx",
+    "line": 55,
+    "value": "Reset experiment"
+  },
+  {
+    "file": "src/components/voucher-panel.tsx",
+    "line": 56,
+    "value": ""
+  },
+  {
+    "file": "src/components/voucher-panel.tsx",
+    "line": 56,
+    "value": "Experiment Timeline"
+  },
+  {
+    "file": "src/components/voucher-panel.tsx",
+    "line": 57,
+    "value": ""
+  },
+  {
+    "file": "src/components/voucher-panel.tsx",
+    "line": 57,
+    "value": "Experiment seek seconds"
+  },
+  {
+    "file": "src/components/voucher-panel.tsx",
+    "line": 57,
+    "value": "Seek experiment"
+  },
+  {
+    "file": "src/components/voucher-panel.tsx",
+    "line": 58,
+    "value": ""
+  },
+  {
+    "file": "src/components/voucher-panel.tsx",
+    "line": 58,
+    "value": "/"
+  },
+  {
+    "file": "src/components/voucher-panel.tsx",
+    "line": 58,
+    "value": "s ·"
+  },
+  {
+    "file": "src/components/voucher-panel.tsx",
+    "line": 58,
+    "value": "x"
+  },
+  {
+    "file": "src/components/voucher-panel.tsx",
+    "line": 59,
+    "value": ""
+  },
+  {
+    "file": "src/components/voucher-panel.tsx",
+    "line": 60,
+    "value": ""
+  },
+  {
+    "file": "src/components/voucher-panel.tsx",
+    "line": 60,
+    "value": "Fit vùng experiment"
+  },
+  {
+    "file": "src/components/voucher-panel.tsx",
+    "line": 61,
+    "value": ""
+  },
+  {
+    "file": "src/components/voucher-panel.tsx",
+    "line": 61,
+    "value": "Budget ·"
+  },
+  {
+    "file": "src/components/voucher-panel.tsx",
+    "line": 61,
+    "value": "· tới t hiện tại"
+  },
+  {
+    "file": "src/components/voucher-panel.tsx",
+    "line": 61,
+    "value": "Reserved"
+  },
+  {
+    "file": "src/components/voucher-panel.tsx",
+    "line": 61,
+    "value": "Settled"
+  },
+  {
+    "file": "src/components/voucher-panel.tsx",
+    "line": 61,
+    "value": "Available"
+  },
+  {
+    "file": "src/components/voucher-panel.tsx",
+    "line": 61,
+    "value": "Offered"
+  },
+  {
+    "file": "src/components/voucher-panel.tsx",
+    "line": 61,
+    "value": "· reserved"
+  },
+  {
+    "file": "src/components/voucher-panel.tsx",
+    "line": 61,
+    "value": "· redeemed"
+  },
+  {
+    "file": "src/components/voucher-panel.tsx",
+    "line": 61,
+    "value": "· released"
+  },
+  {
+    "file": "src/components/voucher-panel.tsx",
+    "line": 62,
+    "value": ""
+  },
+  {
+    "file": "src/components/voucher-panel.tsx",
+    "line": 63,
+    "value": ""
+  },
+  {
+    "file": "src/components/voucher-panel.tsx",
+    "line": 63,
+    "value": "Vehicle / Booking Details"
+  },
+  {
+    "file": "src/components/voucher-panel.tsx",
+    "line": 63,
+    "value": "Xe / booking ·"
+  },
+  {
+    "file": "src/components/voucher-panel.tsx",
+    "line": 63,
+    "value": "Vàng: đến đón · xanh: chở khách · xám: idle"
+  },
+  {
+    "file": "src/components/voucher-panel.tsx",
+    "line": 63,
+    "value": "·"
+  },
+  {
+    "file": "src/components/voucher-panel.tsx",
+    "line": 63,
+    "value": "trips"
+  },
+  {
+    "file": "src/components/voucher-panel.tsx",
+    "line": 64,
+    "value": ""
+  },
+  {
+    "file": "src/components/voucher-panel.tsx",
+    "line": 65,
+    "value": ""
+  },
+  {
+    "file": "src/components/voucher-panel.tsx",
+    "line": 65,
+    "value": "·"
+  },
+  {
+    "file": "src/components/voucher-panel.tsx",
+    "line": 65,
+    "value": "Pickup"
+  },
+  {
+    "file": "src/components/voucher-panel.tsx",
+    "line": 65,
+    "value": "Dropoff"
+  },
+  {
+    "file": "src/components/voucher-panel.tsx",
+    "line": 65,
+    "value": "Chờ"
+  },
+  {
+    "file": "src/components/voucher-panel.tsx",
+    "line": 65,
+    "value": "s · ETA"
+  },
+  {
+    "file": "src/components/voucher-panel.tsx",
+    "line": 65,
+    "value": "s"
+  },
+  {
+    "file": "src/components/voucher-panel.tsx",
+    "line": 66,
+    "value": ""
+  },
+  {
+    "file": "src/components/voucher-panel.tsx",
+    "line": 67,
+    "value": ""
+  },
+  {
+    "file": "src/components/ui/map.tsx",
+    "line": 217,
+    "value": ""
+  },
+  {
+    "file": "src/components/ui/map.tsx",
+    "line": 218,
+    "value": ""
+  },
+  {
+    "file": "src/components/ui/map.tsx",
+    "line": 219,
+    "value": ""
+  },
+  {
+    "file": "src/components/ui/map.tsx",
+    "line": 220,
+    "value": ""
+  },
+  {
+    "file": "src/components/ui/map.tsx",
+    "line": 221,
+    "value": ""
+  },
+  {
+    "file": "src/components/ui/map.tsx",
+    "line": 222,
+    "value": ""
+  },
+  {
+    "file": "src/components/ui/map.tsx",
+    "line": 405,
+    "value": ""
+  },
+  {
+    "file": "src/components/ui/map.tsx",
+    "line": 409,
+    "value": ""
+  },
+  {
+    "file": "src/components/ui/map.tsx",
+    "line": 410,
+    "value": ""
+  },
+  {
+    "file": "src/components/ui/map.tsx",
+    "line": 411,
+    "value": ""
+  },
+  {
+    "file": "src/components/ui/map.tsx",
+    "line": 412,
+    "value": ""
+  },
+  {
+    "file": "src/components/ui/map.tsx",
+    "line": 413,
+    "value": ""
+  },
+  {
+    "file": "src/components/ui/map.tsx",
+    "line": 583,
+    "value": ""
+  },
+  {
+    "file": "src/components/ui/map.tsx",
+    "line": 584,
+    "value": ""
+  },
+  {
+    "file": "src/components/ui/map.tsx",
+    "line": 600,
+    "value": ""
+  },
+  {
+    "file": "src/components/ui/map.tsx",
+    "line": 601,
+    "value": ""
+  },
+  {
+    "file": "src/components/ui/map.tsx",
+    "line": 617,
+    "value": "Close popup"
+  },
+  {
+    "file": "src/components/ui/map.tsx",
+    "line": 620,
+    "value": ""
+  },
+  {
+    "file": "src/components/ui/map.tsx",
+    "line": 621,
+    "value": ""
+  },
+  {
+    "file": "src/components/ui/map.tsx",
+    "line": 687,
+    "value": ""
+  },
+  {
+    "file": "src/components/ui/map.tsx",
+    "line": 688,
+    "value": ""
+  },
+  {
+    "file": "src/components/ui/map.tsx",
+    "line": 689,
+    "value": ""
+  },
+  {
+    "file": "src/components/ui/map.tsx",
+    "line": 759,
+    "value": ""
+  },
+  {
+    "file": "src/components/ui/map.tsx",
+    "line": 760,
+    "value": ""
+  },
+  {
+    "file": "src/components/ui/map.tsx",
+    "line": 793,
+    "value": ""
+  },
+  {
+    "file": "src/components/ui/map.tsx",
+    "line": 794,
+    "value": ""
+  },
+  {
+    "file": "src/components/ui/map.tsx",
+    "line": 825,
+    "value": ""
+  },
+  {
+    "file": "src/components/ui/map.tsx",
+    "line": 826,
+    "value": ""
+  },
+  {
+    "file": "src/components/ui/map.tsx",
+    "line": 855,
+    "value": ""
+  },
+  {
+    "file": "src/components/ui/map.tsx",
+    "line": 856,
+    "value": ""
+  },
+  {
+    "file": "src/components/ui/map.tsx",
+    "line": 929,
+    "value": ""
+  },
+  {
+    "file": "src/components/ui/map.tsx",
+    "line": 931,
+    "value": ""
+  },
+  {
+    "file": "src/components/ui/map.tsx",
+    "line": 931,
+    "value": "Zoom in"
+  },
+  {
+    "file": "src/components/ui/map.tsx",
+    "line": 932,
+    "value": ""
+  },
+  {
+    "file": "src/components/ui/map.tsx",
+    "line": 933,
+    "value": ""
+  },
+  {
+    "file": "src/components/ui/map.tsx",
+    "line": 934,
+    "value": ""
+  },
+  {
+    "file": "src/components/ui/map.tsx",
+    "line": 934,
+    "value": "Zoom out"
+  },
+  {
+    "file": "src/components/ui/map.tsx",
+    "line": 935,
+    "value": ""
+  },
+  {
+    "file": "src/components/ui/map.tsx",
+    "line": 936,
+    "value": ""
+  },
+  {
+    "file": "src/components/ui/map.tsx",
+    "line": 937,
+    "value": ""
+  },
+  {
+    "file": "src/components/ui/map.tsx",
+    "line": 939,
+    "value": ""
+  },
+  {
+    "file": "src/components/ui/map.tsx",
+    "line": 941,
+    "value": ""
+  },
+  {
+    "file": "src/components/ui/map.tsx",
+    "line": 942,
+    "value": ""
+  },
+  {
+    "file": "src/components/ui/map.tsx",
+    "line": 944,
+    "value": ""
+  },
+  {
+    "file": "src/components/ui/map.tsx",
+    "line": 946,
+    "value": ""
+  },
+  {
+    "file": "src/components/ui/map.tsx",
+    "line": 948,
+    "value": "Find my location"
+  },
+  {
+    "file": "src/components/ui/map.tsx",
+    "line": 951,
+    "value": ""
+  },
+  {
+    "file": "src/components/ui/map.tsx",
+    "line": 956,
+    "value": ""
+  },
+  {
+    "file": "src/components/ui/map.tsx",
+    "line": 957,
+    "value": ""
+  },
+  {
+    "file": "src/components/ui/map.tsx",
+    "line": 959,
+    "value": ""
+  },
+  {
+    "file": "src/components/ui/map.tsx",
+    "line": 961,
+    "value": ""
+  },
+  {
+    "file": "src/components/ui/map.tsx",
+    "line": 961,
+    "value": "Toggle fullscreen"
+  },
+  {
+    "file": "src/components/ui/map.tsx",
+    "line": 962,
+    "value": ""
+  },
+  {
+    "file": "src/components/ui/map.tsx",
+    "line": 963,
+    "value": ""
+  },
+  {
+    "file": "src/components/ui/map.tsx",
+    "line": 964,
+    "value": ""
+  },
+  {
+    "file": "src/components/ui/map.tsx",
+    "line": 966,
+    "value": ""
+  },
+  {
+    "file": "src/components/ui/map.tsx",
+    "line": 996,
+    "value": "Reset bearing to north"
+  },
+  {
+    "file": "src/components/ui/map.tsx",
+    "line": 997,
+    "value": ""
+  },
+  {
+    "file": "src/components/ui/map.tsx",
+    "line": 1003,
+    "value": ""
+  },
+  {
+    "file": "src/components/ui/map.tsx",
+    "line": 1004,
+    "value": ""
+  },
+  {
+    "file": "src/components/ui/map.tsx",
+    "line": 1005,
+    "value": ""
+  },
+  {
+    "file": "src/components/ui/map.tsx",
+    "line": 1006,
+    "value": ""
+  },
+  {
+    "file": "src/components/ui/map.tsx",
+    "line": 1007,
+    "value": ""
+  },
+  {
+    "file": "src/components/ui/map.tsx",
+    "line": 1008,
+    "value": ""
+  },
+  {
+    "file": "src/components/ui/map.tsx",
+    "line": 1098,
+    "value": ""
+  },
+  {
+    "file": "src/components/ui/map.tsx",
+    "line": 1099,
+    "value": ""
+  },
+  {
+    "file": "src/components/ui/map.tsx",
+    "line": 1100,
+    "value": ""
+  },
+  {
+    "file": "src/components/ui/map.tsx",
+    "line": 1558,
+    "value": ""
+  },
+  {
+    "file": "src/components/ui/map.tsx",
+    "line": 1559,
+    "value": ""
+  },
+  {
+    "file": "src/components/ui/map.tsx",
+    "line": 1698,
+    "value": ""
+  },
+  {
+    "file": "src/components/ui/map.tsx",
+    "line": 1699,
+    "value": ""
+  },
+  {
+    "file": "tests/dashboard.test.tsx",
+    "line": 7,
+    "value": ""
+  },
+  {
+    "file": "tests/dashboard.test.tsx",
+    "line": 7,
+    "value": "Fixture A"
+  },
+  {
+    "file": "tests/dashboard.test.tsx",
+    "line": 8,
+    "value": ""
+  },
+  {
+    "file": "tests/dashboard.test.tsx",
+    "line": 8,
+    "value": "Fixture B"
+  },
+  {
+    "file": "tests/dashboard.test.tsx",
+    "line": 9,
+    "value": ""
+  },
+  {
+    "file": "tests/dashboard.test.tsx",
+    "line": 9,
+    "value": "Fixture new A"
+  },
+  {
+    "file": "tests/dashboard.test.tsx",
+    "line": 10,
+    "value": ""
+  },
+  {
+    "file": "tests/voucher.test.tsx",
+    "line": 14,
+    "value": "Two default charts"
+  },
+  {
+    "file": "tests/voucher.test.tsx",
+    "line": 15,
+    "value": "Advanced charts only on demand"
+  },
+  {
+    "file": "tests/workspace.test.tsx",
+    "line": 41,
+    "value": "Visible chart"
+  },
+  {
+    "file": "tests/workspace.test.tsx",
+    "line": 41,
+    "value": "Heavy chart content"
+  },
+  {
+    "file": "tests/workspace.test.tsx",
+    "line": 47,
+    "value": "Configuration"
+  },
+  {
+    "file": "tests/workspace.test.tsx",
+    "line": 47,
+    "value": "Retained seed"
+  },
+  {
+    "file": "tests/workspace.test.tsx",
+    "line": 49,
+    "value": "Configuration"
+  },
+  {
+    "file": "tests/workspace.test.tsx",
+    "line": 49,
+    "value": "Retained seed"
+  },
+  {
+    "file": "tests/workspace.test.tsx",
+    "line": 50,
+    "value": "Configuration"
+  },
+  {
+    "file": "tests/workspace.test.tsx",
+    "line": 50,
+    "value": "Retained seed"
+  },
+  {
+    "file": "tests/workspace.test.tsx",
+    "line": 59,
+    "value": "Test"
+  }
+]

@@ -1,6 +1,6 @@
 # Frontend
 
-React/Vite/TypeScript dashboard của GSM Map Sandbox. Xem [README của dự án](../README.md) để thiết lập backend, dữ liệu và điểm dừng A0.
+Giao diện React/Vite/TypeScript của GSM Map Sandbox. Xem [README của dự án](../README.md) để thiết lập backend, dữ liệu, chạy A1–A4 và dùng Saved Replay/Phân tích nhiều lượt chạy của A5. Các nhãn sử dụng tiếng Việt; Baseline, Treatment, Seed và các tên công nghệ được giữ theo [bảng thuật ngữ](../docs/localization/terminology-vi.md).
 
 ```powershell
 npm.cmd install

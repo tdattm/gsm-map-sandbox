@@ -51,20 +51,20 @@ describe('workspace presentation preserves mounted state', () => {
   })
   it('all four navigation items share one menu; expanded/collapsed/hidden are layout callbacks', () => {
     const mode=vi.fn(),size=vi.fn(); const {rerender}=render(<PrimaryNavigation mode="voucher" size="expanded" onMode={mode} onSize={size} mobileOpen={false} onMobileOpen={vi.fn()}/>)
-    expect(screen.getByRole('navigation',{name:'Main menu'}).querySelectorAll('button')).toHaveLength(4); expect(screen.getByRole('button',{name:'Voucher Experiment Studio'})).toHaveAttribute('aria-current','page')
-    fireEvent.click(screen.getByRole('button',{name:'Collapse navigation'})); expect(size).toHaveBeenCalledWith('collapsed'); fireEvent.click(screen.getByRole('button',{name:'Hide navigation'})); expect(size).toHaveBeenCalledWith('hidden'); fireEvent.click(screen.getByRole('button',{name:'Booking & Dispatch'})); expect(mode).toHaveBeenCalledWith('booking')
-    rerender(<PrimaryNavigation mode="voucher" size="hidden" onMode={mode} onSize={size} mobileOpen={false} onMobileOpen={vi.fn()}/>); expect(screen.queryByRole('navigation',{name:'Main menu'})).toBeNull()
+    expect(screen.getByRole('navigation',{name:"Menu chính"}).querySelectorAll('button')).toHaveLength(4); expect(screen.getByRole('button',{name:"Phòng thí nghiệm voucher"})).toHaveAttribute('aria-current','page')
+    fireEvent.click(screen.getByRole('button',{name:"Thu gọn menu"})); expect(size).toHaveBeenCalledWith('collapsed'); fireEvent.click(screen.getByRole('button',{name:"Ẩn menu"})); expect(size).toHaveBeenCalledWith('hidden'); fireEvent.click(screen.getByRole('button',{name:"Đặt xe và điều phối"})); expect(mode).toHaveBeenCalledWith('booking')
+    rerender(<PrimaryNavigation mode="voucher" size="hidden" onMode={mode} onSize={size} mobileOpen={false} onMobileOpen={vi.fn()}/>); expect(screen.queryByRole('navigation',{name:"Menu chính"})).toBeNull()
   })
   it('custom input 17 applies 32 and negative/empty/Infinity input preserves clock', () => {
     const setSpeed=vi.fn(); render(<PlaybackDock time={500} duration={2000} speed={4} status="paused" enabled label="Test" play={vi.fn()} pause={vi.fn()} reset={vi.fn()} seek={vi.fn()} setSpeed={setSpeed}/>)
-    fireEvent.change(screen.getByLabelText('Custom Speed'),{target:{value:'17'}}); fireEvent.blur(screen.getByLabelText('Custom Speed')); expect(setSpeed).toHaveBeenLastCalledWith(32)
-    for(const value of ['-2','','Infinity','abc']) {setSpeed.mockClear(); fireEvent.change(screen.getByLabelText('Custom Speed'),{target:{value}}); fireEvent.blur(screen.getByLabelText('Custom Speed')); expect(setSpeed).not.toHaveBeenCalled(); expect(screen.getByLabelText('Custom Speed')).toHaveValue('4'); expect(screen.getByRole('alert')).toBeInTheDocument()}
+    fireEvent.change(screen.getByLabelText("Tốc độ tùy chỉnh"),{target:{value:'17'}}); fireEvent.blur(screen.getByLabelText("Tốc độ tùy chỉnh")); expect(setSpeed).toHaveBeenLastCalledWith(32)
+    for(const value of ['-2','','Infinity','abc']) {setSpeed.mockClear(); fireEvent.change(screen.getByLabelText("Tốc độ tùy chỉnh"),{target:{value}}); fireEvent.blur(screen.getByLabelText("Tốc độ tùy chỉnh")); expect(setSpeed).not.toHaveBeenCalled(); expect(screen.getByLabelText("Tốc độ tùy chỉnh")).toHaveValue('4'); expect(screen.getByRole('alert')).toBeInTheDocument()}
   })
   it('financial table uses observed selectors and refreshes for final/zero-budget results', () => {
     const experiment=captured as unknown as Experiment
     const table=(time:number,e=experiment) => <FinancialComparison baseline={experimentMetrics(e,'baseline',time)} treatment={experimentMetrics(e,'treatment',time)}/>
-    const {rerender}=render(table(0)); expect(screen.getByRole('row',{name:/Completed Trips/})).toHaveTextContent('Completed Trips000')
-    rerender(table(experiment.simulationDurationSeconds)); expect(screen.getByRole('row',{name:/Completed Trips/})).toHaveTextContent('Completed Trips1316+3'); expect(screen.getByRole('row',{name:/Voucher Spend/})).toHaveTextContent('+200.000'); expect(screen.getByRole('row',{name:/Rider Payments/})).toHaveTextContent('−31.870'); expect(screen.getAllByRole('row')).toHaveLength(5)
+    const {rerender}=render(table(0)); expect(screen.getByRole('row',{name:/Số chuyến hoàn tất/})).toHaveTextContent('Số chuyến hoàn tất000')
+    rerender(table(experiment.simulationDurationSeconds)); expect(screen.getByRole('row',{name:/Số chuyến hoàn tất/})).toHaveTextContent('Số chuyến hoàn tất1316+3'); expect(screen.getByRole('row',{name:/Chi phí voucher đã sử dụng/})).toHaveTextContent('+200.000'); expect(screen.getByRole('row',{name:/Tổng tiền hành khách thanh toán/})).toHaveTextContent('−31.870'); expect(screen.getAllByRole('row')).toHaveLength(5)
   })
   it('64x frame jumps and reverse seek reproduce ledger/lifecycle metrics without processing each frame', () => {
     const experiment=captured as unknown as Experiment
@@ -76,8 +76,8 @@ describe('workspace presentation preserves mounted state', () => {
   it.each([zero,capacity])('comparison refreshes with a recorded zero-spend or no-increment scenario', recorded => {
     const experiment=recorded as unknown as Experiment, time=experiment.simulationDurationSeconds
     render(<FinancialComparison baseline={experimentMetrics(experiment,'baseline',time)} treatment={experimentMetrics(experiment,'treatment',time)}/>)
-    expect(screen.getByRole('row',{name:/Completed Trips/}).lastElementChild).toHaveTextContent('0')
+    expect(screen.getByRole('row',{name:/Số chuyến hoàn tất/}).lastElementChild).toHaveTextContent('0')
     const difference=experiment.final.treatment.voucherSpendVnd-experiment.final.baseline.voucherSpendVnd
-    expect(screen.getByRole('row',{name:/Voucher Spend/}).lastElementChild).toHaveTextContent(difference ? '+20.000' : '0')
+    expect(screen.getByRole('row',{name:/Chi phí voucher đã sử dụng/}).lastElementChild).toHaveTextContent(difference ? '+20.000' : '0')
   })
 })

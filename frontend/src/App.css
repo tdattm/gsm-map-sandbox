@@ -34,6 +34,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .bbox-row { font-size: 10px; color: #76877b; background: #f7f9f7; border-radius: 5px; padding: 8px; margin-top: 11px; font-variant-numeric: tabular-nums; letter-spacing: .2px; }
 .small-note { font-size: 9px; color: #929d95; margin-top: 8px; line-height: 1.6; }
 .voucher-panel input[type="file"] { width:100%; max-width:100%; min-width:0; font-size:11px; }
+.voucher-panel input[type="file"].sr-only { width: 1px; max-width: 1px; }
 .voucher-panel .small-note { overflow-wrap:anywhere; }
 .batch-analysis { margin-top:16px; padding:12px; border:1px solid #dce6df; border-radius:10px; font-size:12px; overflow-wrap:anywhere; }
 .batch-analysis table { width:100%; font-size:10px; }
@@ -271,6 +272,14 @@ body { min-width: 320px; overflow: hidden; }
 .chart-placeholder { min-height: 305px; background: white; border: 1px solid #e0e7e2; border-radius: 13px; padding: 20px; }
 .chart-placeholder h3 { font-size: 13px; }
 .chart-placeholder p { margin-top: 14px; font-size: 11px; color: #76887b; }
+
+/* Vietnamese labels wrap within existing panels instead of clipping controls. */
+.inspector-content, .small-note, .scenario-summary, .budget-summary { overflow-wrap: anywhere; }
+.inspector-content button, .analytics-panel button { white-space: normal; height: auto; min-height: 28px; }
+.inspector-heading svg { flex-shrink: 0; }
+.dock-timeline > div { flex-wrap: wrap; }
+.batch-analysis table { width: 100%; font-size: 11px; table-layout: fixed; }
+.batch-analysis td, .batch-analysis th { overflow-wrap: anywhere; padding: 5px; text-align: left; }
 .sheet-backdrop { position: fixed; inset: 0; z-index: 50; background: #142a2377; }
 .navigation-sheet { position: fixed; inset: 0 auto 0 0; width: min(300px,90vw); background: white; padding: 24px 16px; z-index: 51; overflow: auto; }
 .navigation-sheet h2 { font-size: 17px; }
@@ -297,10 +306,10 @@ button:focus-visible, input:focus-visible, select:focus-visible, summary:focus-v
   .app-header { padding: 6px 8px; gap: 6px; flex-wrap: nowrap; }
   .app-header > button { padding: 6px; font-size: 10px; }
   .workspace-view button { font-size: 10px; padding: 6px; }
-  .playback-dock { display: grid; grid-template-columns: 1fr auto; gap: 8px 10px; padding: 10px 12px max(10px,env(safe-area-inset-bottom)); }
+  .playback-dock { display: grid; grid-template-columns: minmax(0,1fr); gap: 8px 10px; padding: 10px 12px max(10px,env(safe-area-inset-bottom)); }
   .dock-buttons { grid-row: 2; gap: 4px; }
   .dock-timeline { grid-column: 1 / -1; }
-  .dock-seek { grid-row: 2; justify-content: flex-end; }
+  .dock-seek { grid-row: 3; justify-content: flex-start; }
   .dock-seek input { width: 65px; }
   .dock-speed { grid-column: 1 / -1; flex-wrap: nowrap; max-width: none; justify-content: space-between; }
   .dock-speed > div button { padding: 5px 8px; }
