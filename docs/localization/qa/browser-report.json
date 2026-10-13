@@ -1,0 +1,1552 @@
+{
+  "checks": [
+    {
+      "name": "saved actual artifact",
+      "status": "PASS"
+    },
+    {
+      "name": "layout saved-1440-analytics",
+      "status": "PASS",
+      "clippedButtons": []
+    },
+    {
+      "name": "layout saved-1366-analytics",
+      "status": "PASS",
+      "clippedButtons": []
+    },
+    {
+      "name": "layout saved-390-analytics",
+      "status": "PASS",
+      "clippedButtons": []
+    },
+    {
+      "name": "layout saved-390-map",
+      "status": "PASS",
+      "clippedButtons": []
+    },
+    {
+      "name": "navigation collapse expand hide restore",
+      "status": "PASS"
+    },
+    {
+      "name": "saved final KPI equals artifact",
+      "status": "PASS"
+    },
+    {
+      "name": "chart Các bước chuyển đổi đặt xe",
+      "status": "PASS",
+      "legend": 1,
+      "expected": [
+        "Baseline",
+        "Treatment"
+      ]
+    },
+    {
+      "name": "portable roundtrip digest",
+      "status": "PASS",
+      "digest": "b4a87ee371f976f12f4da28791dffc66ebeb24352c1d664bf71851eb89c27433"
+    },
+    {
+      "name": "legacy JSON and five byte-exact CSV exports",
+      "status": "PASS"
+    },
+    {
+      "name": "browser reimport portable",
+      "status": "PASS"
+    },
+    {
+      "name": "invalid JSON schema hash preserve verified replay",
+      "status": "PASS"
+    },
+    {
+      "name": "batch saved guard",
+      "status": "PASS"
+    },
+    {
+      "name": "chart Phân bổ ngân sách voucher",
+      "status": "PASS",
+      "legend": 1,
+      "expected": [
+        "Ngân sách",
+        "Chi phí"
+      ]
+    },
+    {
+      "name": "keyboard timeline",
+      "status": "PASS"
+    },
+    {
+      "name": "static no API OSRM external requests",
+      "status": "PASS"
+    },
+    {
+      "name": "layout live-a1-desktop",
+      "status": "PASS",
+      "clippedButtons": []
+    },
+    {
+      "name": "A1 actual route",
+      "status": "PASS"
+    },
+    {
+      "name": "layout live-a1-1366-inspector",
+      "status": "PASS",
+      "clippedButtons": []
+    },
+    {
+      "name": "layout live-a1-390-inspector",
+      "status": "PASS",
+      "clippedButtons": []
+    },
+    {
+      "name": "layout live-a1-390-map",
+      "status": "PASS",
+      "clippedButtons": []
+    },
+    {
+      "name": "layout live-a2-desktop",
+      "status": "PASS",
+      "clippedButtons": []
+    },
+    {
+      "name": "A2 actual fleet routes",
+      "status": "PASS"
+    },
+    {
+      "name": "layout live-a2-1366-inspector",
+      "status": "PASS",
+      "clippedButtons": []
+    },
+    {
+      "name": "layout live-a2-390-inspector",
+      "status": "PASS",
+      "clippedButtons": []
+    },
+    {
+      "name": "layout live-a2-390-map",
+      "status": "PASS",
+      "clippedButtons": []
+    },
+    {
+      "name": "layout live-a3-desktop",
+      "status": "PASS",
+      "clippedButtons": []
+    },
+    {
+      "name": "A3 actual dispatch",
+      "status": "PASS"
+    },
+    {
+      "name": "layout live-a3-1366-inspector",
+      "status": "PASS",
+      "clippedButtons": []
+    },
+    {
+      "name": "layout live-a3-390-inspector",
+      "status": "PASS",
+      "clippedButtons": []
+    },
+    {
+      "name": "layout live-a3-390-map",
+      "status": "PASS",
+      "clippedButtons": []
+    },
+    {
+      "name": "A4 actual paired preparation",
+      "status": "PASS"
+    },
+    {
+      "name": "speeds 1x to 64x",
+      "status": "PASS"
+    },
+    {
+      "name": "A4 play pause seek reset arm preserve time",
+      "status": "PASS"
+    },
+    {
+      "name": "layout live-a4-desktop",
+      "status": "PASS",
+      "clippedButtons": []
+    },
+    {
+      "name": "batch real completion",
+      "status": "PASS",
+      "summary": {
+        "successful": 7,
+        "errors": 3,
+        "cancelled": 0,
+        "mean": 3.142857142857143,
+        "median": 3,
+        "sampleSd": 1.0690449676496976,
+        "min": 2,
+        "max": 5,
+        "empiricalDistribution": [
+          2,
+          2,
+          3,
+          3,
+          3,
+          4,
+          5
+        ],
+        "improvementRate": 1,
+        "totalIncrement": 22,
+        "totalSpend": 1392615,
+        "meanSpend": 198945,
+        "pooledCpic": 63300.681818181816,
+        "budgetUtilization": {
+          "mean": 0.994725,
+          "validCount": 7
+        },
+        "waitingDifference": {
+          "mean": 21.928023085950127,
+          "validCount": 7
+        },
+        "utilizationDifference": {
+          "mean": 0.12721791972618507,
+          "validCount": 7
+        }
+      }
+    },
+    {
+      "name": "layout live-batch-desktop",
+      "status": "PASS",
+      "clippedButtons": []
+    },
+    {
+      "name": "batch CSV retains exact field/value semantics",
+      "status": "PASS"
+    },
+    {
+      "name": "actual beta OFAT",
+      "status": "PASS"
+    },
+    {
+      "name": "batch matches historical A5 numerical results",
+      "status": "PASS",
+      "successful": 7,
+      "failed": 3
+    },
+    {
+      "name": "sensitivity matches historical A5 numerical results",
+      "status": "PASS",
+      "successful": 21,
+      "failed": 9
+    },
+    {
+      "name": "batch cancellation",
+      "status": "PASS"
+    },
+    {
+      "name": "layout live-a4-1366",
+      "status": "PASS",
+      "clippedButtons": []
+    },
+    {
+      "name": "layout live-a4-390",
+      "status": "PASS",
+      "clippedButtons": []
+    },
+    {
+      "name": "layout live-a4-mobile-map",
+      "status": "PASS",
+      "clippedButtons": []
+    },
+    {
+      "name": "browser no uncaught exceptions",
+      "status": "PASS",
+      "count": 0
+    }
+  ],
+  "layouts": [
+    {
+      "name": "saved-1440-analytics",
+      "width": 1440,
+      "height": 900,
+      "scrollWidth": 1440,
+      "canvasCount": 1,
+      "overflowElements": [],
+      "visiblePanels": [
+        "map-workspace",
+        "analytics-panel",
+        "playback-dock"
+      ],
+      "clippedButtons": [],
+      "bodyText": "GSM Map Sandbox\nPhòng thí nghiệm voucher\nChi tiết\nMô phỏng cục bộ\nBản đồ cục bộ\nPhát lại đã lưu · không cần tính tuyến trực tiếp\n\nCHẾ ĐỘ MÔ PHỎNG\n\nMột hành trình\nMô phỏng đội xe\nĐặt xe và điều phối\nPhòng thí nghiệm voucher\nMô phỏng cục bộ\nOSM · OSRM\nCấu hình và chi tiết\n×\nDữ liệu bản đồ\nChế độ thí nghiệm\nThí nghiệm trực tiếp (Live)\nPhát lại đã lưu (Saved Replay)\n\nPhát lại đã lưu · không cần tính tuyến trực tiếp\n\nNhập thí nghiệm đã lưu\nChọn file JSON\n\nChưa chọn file\n\nTải kịch bản mẫu\n\nSeed: hcm-voucher-2026\nThời điểm chuẩn bị: 11:47:47 12/10/26 (giờ Việt Nam)\nBộ dữ liệu: 9193a3a34bd10f14a21da7121552503971f85419d7241aeb71bc7193eaac3341\nPhiên bản mô hình: {\"fare\":\"fare-v1\",\"behavior\":\"price-response-v1\",\"voucher\":\"ledger-v1\",\"orchestrator\":\"paired-v1\",\"dispatch\":\"dispatch-v1\"}\nSHA-256 đã kiểm chứng · dữ liệu mô phỏng, không GPS thực tế\n\nKịch bản và ngân sách\nKịch bản thí nghiệm\n\nBaseline: kịch bản không voucher. Treatment: kịch bản áp dụng voucher.\n\nBaseline\nTreatment\nXem toàn vùng thí nghiệm\nNgân sách · Treatment · tới thời điểm hiện tại\n\nNgân sách đang giữ trước 0 ₫\nChi phí voucher đã sử dụng 0 ₫\nNgân sách còn khả dụng 200.000 ₫\n\nĐã đề xuất 1 · đang giữ trước 0 · đã sử dụng 0 · đã giải phóng 0\nChi tiết xe và yêu cầu đặt xe\nChỉ chạy cục bộ\nWGS84 · [lon, lat]\nKHU VỰC NGHIÊN CỨU\nTrung tâm TP. Hồ Chí Minh\nKiểm tra lại\n01\n02\n03\n04\n05\n© OpenStreetMap contributors\nGeoJSON cục bộ · OSMDữ liệu đường phố\nThí nghiệm voucher · Treatment · giả định PoC\n© OpenStreetMap contributors · Geofabrik\nPhòng thí nghiệm voucher\n\nTại thời điểm 0,0 giây · giả định PoC\n\nTại thời điểm hiện tại\nKết quả cuối kịch bản\nPhân tích kinh doanh nâng cao\nBaseline\n0 hoàn tất / 0 chấp nhận\n\nTỷ lệ đặt xe 0,0% · hoàn tất Không áp dụng\nGFV 0 ₫\nTiền hành khách thanh toán 0 ₫\nChi phí voucher đã sử dụng 0 ₫\n\nTreatment\n0 hoàn tất / 0 chấp nhận\n\nTỷ lệ đặt xe 0,0% · hoàn tất Không áp dụng\nGFV 0 ₫\nTiền hành khách thanh toán 0 ₫\nChi phí voucher đã sử dụng 0 ₫\n\nTreatment − Baseline\n+0 chấp nhận\n\n+0 hoàn tất\nChi phí voucher mỗi chuyến hoàn tất tăng thêm (CPIC):\nKhông áp dụng — không có số chuyến hoàn tất tăng thêm\n\nSo sánh tài chính và vận hành\nChỉ số mô phỏng\tBaseline\tTreatment\tChênh lệch\nTổng giá trị cước trước ưu đãi (GFV)\t0 ₫\t0 ₫\t0 ₫\nTổng tiền hành khách thanh toán\t0 ₫\t0 ₫\t0 ₫\nChi phí voucher đã sử dụng\t0 ₫\t0 ₫\t0 ₫\nSố chuyến hoàn tất\t0\t0\t0\n\nChênh lệch = Treatment − Baseline · GFV = tiền hành khách thanh toán + chi phí voucher đã sử dụng · chỉ số mô phỏng\n\nTỷ lệ đặt xe = số chấp nhận / số tiềm năng hợp lệ; tỷ lệ hoàn tất = số hoàn tất / số chấp nhận. GFV = tiền hành khách thanh toán + chi phí voucher đã sử dụng. Voucher đã đề xuất và ngân sách đang giữ trước chưa phải chi phí đã sử dụng. KPI cập nhật mỗi giây; vị trí xe dùng đồng hồ mô phỏng chung.\n\nCác bước chuyển đổi đặt xe\nBaseline\nTreatment\n0\n0\n1\n1\n1\nTiềm nănghợp lệ\nĐã chấpnhận\nĐã phâncông xe\nĐã đónkhách\nHoàn tất\nSố chuyến hoàn tất lũy kế\n\nBiểu đồ hiển thị khi cuộn tới vùng này.\n\nXuất thí nghiệm Portable v1\nXuất JSON · toàn bộ kế hoạch\nXuất CSV · kết quả cuối và toàn bộ lịch sử\nPhát\nTạm dừng\nThí nghiệm voucher\n0,0 / 2.115,2 giây · 0%\nĐến thời điểm\n1x\n2x\n4x\nTốc độ tùy chỉnh\nÁp dụng\n1x\nTiềm năng hợp lệ"
+    },
+    {
+      "name": "saved-1366-analytics",
+      "width": 1366,
+      "height": 768,
+      "scrollWidth": 1366,
+      "canvasCount": 1,
+      "overflowElements": [],
+      "visiblePanels": [
+        "map-workspace",
+        "analytics-panel",
+        "playback-dock"
+      ],
+      "clippedButtons": [],
+      "bodyText": "GSM Map Sandbox\nPhòng thí nghiệm voucher\nChi tiết\nMô phỏng cục bộ\nBản đồ cục bộ\nPhát lại đã lưu · không cần tính tuyến trực tiếp\n\nCHẾ ĐỘ MÔ PHỎNG\n\nMột hành trình\nMô phỏng đội xe\nĐặt xe và điều phối\nPhòng thí nghiệm voucher\nMô phỏng cục bộ\nOSM · OSRM\nCấu hình và chi tiết\n×\nDữ liệu bản đồ\nChế độ thí nghiệm\nThí nghiệm trực tiếp (Live)\nPhát lại đã lưu (Saved Replay)\n\nPhát lại đã lưu · không cần tính tuyến trực tiếp\n\nNhập thí nghiệm đã lưu\nChọn file JSON\n\nChưa chọn file\n\nTải kịch bản mẫu\n\nSeed: hcm-voucher-2026\nThời điểm chuẩn bị: 11:47:47 12/10/26 (giờ Việt Nam)\nBộ dữ liệu: 9193a3a34bd10f14a21da7121552503971f85419d7241aeb71bc7193eaac3341\nPhiên bản mô hình: {\"fare\":\"fare-v1\",\"behavior\":\"price-response-v1\",\"voucher\":\"ledger-v1\",\"orchestrator\":\"paired-v1\",\"dispatch\":\"dispatch-v1\"}\nSHA-256 đã kiểm chứng · dữ liệu mô phỏng, không GPS thực tế\n\nKịch bản và ngân sách\nKịch bản thí nghiệm\n\nBaseline: kịch bản không voucher. Treatment: kịch bản áp dụng voucher.\n\nBaseline\nTreatment\nXem toàn vùng thí nghiệm\nNgân sách · Treatment · tới thời điểm hiện tại\n\nNgân sách đang giữ trước 0 ₫\nChi phí voucher đã sử dụng 0 ₫\nNgân sách còn khả dụng 200.000 ₫\n\nĐã đề xuất 1 · đang giữ trước 0 · đã sử dụng 0 · đã giải phóng 0\nChi tiết xe và yêu cầu đặt xe\nChỉ chạy cục bộ\nWGS84 · [lon, lat]\nKHU VỰC NGHIÊN CỨU\nTrung tâm TP. Hồ Chí Minh\nKiểm tra lại\n01\n02\n03\n04\n05\n© OpenStreetMap contributors\nGeoJSON cục bộ · OSMDữ liệu đường phố\nThí nghiệm voucher · Treatment · giả định PoC\n© OpenStreetMap contributors · Geofabrik\nPhòng thí nghiệm voucher\n\nTại thời điểm 0,0 giây · giả định PoC\n\nTại thời điểm hiện tại\nKết quả cuối kịch bản\nPhân tích kinh doanh nâng cao\nBaseline\n0 hoàn tất / 0 chấp nhận\n\nTỷ lệ đặt xe 0,0% · hoàn tất Không áp dụng\nGFV 0 ₫\nTiền hành khách thanh toán 0 ₫\nChi phí voucher đã sử dụng 0 ₫\n\nTreatment\n0 hoàn tất / 0 chấp nhận\n\nTỷ lệ đặt xe 0,0% · hoàn tất Không áp dụng\nGFV 0 ₫\nTiền hành khách thanh toán 0 ₫\nChi phí voucher đã sử dụng 0 ₫\n\nTreatment − Baseline\n+0 chấp nhận\n\n+0 hoàn tất\nChi phí voucher mỗi chuyến hoàn tất tăng thêm (CPIC):\nKhông áp dụng — không có số chuyến hoàn tất tăng thêm\n\nSo sánh tài chính và vận hành\nChỉ số mô phỏng\tBaseline\tTreatment\tChênh lệch\nTổng giá trị cước trước ưu đãi (GFV)\t0 ₫\t0 ₫\t0 ₫\nTổng tiền hành khách thanh toán\t0 ₫\t0 ₫\t0 ₫\nChi phí voucher đã sử dụng\t0 ₫\t0 ₫\t0 ₫\nSố chuyến hoàn tất\t0\t0\t0\n\nChênh lệch = Treatment − Baseline · GFV = tiền hành khách thanh toán + chi phí voucher đã sử dụng · chỉ số mô phỏng\n\nTỷ lệ đặt xe = số chấp nhận / số tiềm năng hợp lệ; tỷ lệ hoàn tất = số hoàn tất / số chấp nhận. GFV = tiền hành khách thanh toán + chi phí voucher đã sử dụng. Voucher đã đề xuất và ngân sách đang giữ trước chưa phải chi phí đã sử dụng. KPI cập nhật mỗi giây; vị trí xe dùng đồng hồ mô phỏng chung.\n\nCác bước chuyển đổi đặt xe\n\nBiểu đồ hiển thị khi cuộn tới vùng này.\n\nSố chuyến hoàn tất lũy kế\n\nBiểu đồ hiển thị khi cuộn tới vùng này.\n\nXuất thí nghiệm Portable v1\nXuất JSON · toàn bộ kế hoạch\nXuất CSV · kết quả cuối và toàn bộ lịch sử\nPhát\nTạm dừng\nThí nghiệm voucher\n0,0 / 2.115,2 giây · 0%\nĐến thời điểm\n1x\n2x\n4x\nTốc độ tùy chỉnh\nÁp dụng\n1x\nTiềm năng hợp lệ"
+    },
+    {
+      "name": "saved-390-analytics",
+      "width": 390,
+      "height": 844,
+      "scrollWidth": 390,
+      "canvasCount": 1,
+      "overflowElements": [],
+      "visiblePanels": [
+        "analytics-panel",
+        "playback-dock"
+      ],
+      "clippedButtons": [],
+      "bodyText": "GSM Map Sandbox\nChi tiết\nBản đồ\nPhân tích\nPhòng thí nghiệm voucher\n\nTại thời điểm 0,0 giây · giả định PoC\n\nTại thời điểm hiện tại\nKết quả cuối kịch bản\nPhân tích kinh doanh nâng cao\nBaseline\n0 hoàn tất / 0 chấp nhận\n\nTỷ lệ đặt xe 0,0% · hoàn tất Không áp dụng\nGFV 0 ₫\nTiền hành khách thanh toán 0 ₫\nChi phí voucher đã sử dụng 0 ₫\n\nTreatment\n0 hoàn tất / 0 chấp nhận\n\nTỷ lệ đặt xe 0,0% · hoàn tất Không áp dụng\nGFV 0 ₫\nTiền hành khách thanh toán 0 ₫\nChi phí voucher đã sử dụng 0 ₫\n\nTreatment − Baseline\n+0 chấp nhận\n\n+0 hoàn tất\nChi phí voucher mỗi chuyến hoàn tất tăng thêm (CPIC):\nKhông áp dụng — không có số chuyến hoàn tất tăng thêm\n\nSo sánh tài chính và vận hành\nChỉ số mô phỏng\tBaseline\tTreatment\tChênh lệch\nTổng giá trị cước trước ưu đãi (GFV)\t0 ₫\t0 ₫\t0 ₫\nTổng tiền hành khách thanh toán\t0 ₫\t0 ₫\t0 ₫\nChi phí voucher đã sử dụng\t0 ₫\t0 ₫\t0 ₫\nSố chuyến hoàn tất\t0\t0\t0\n\nChênh lệch = Treatment − Baseline · GFV = tiền hành khách thanh toán + chi phí voucher đã sử dụng · chỉ số mô phỏng\n\nTỷ lệ đặt xe = số chấp nhận / số tiềm năng hợp lệ; tỷ lệ hoàn tất = số hoàn tất / số chấp nhận. GFV = tiền hành khách thanh toán + chi phí voucher đã sử dụng. Voucher đã đề xuất và ngân sách đang giữ trước chưa phải chi phí đã sử dụng. KPI cập nhật mỗi giây; vị trí xe dùng đồng hồ mô phỏng chung.\n\nCác bước chuyển đổi đặt xe\n\nBiểu đồ hiển thị khi cuộn tới vùng này.\n\nSố chuyến hoàn tất lũy kế\n\nBiểu đồ hiển thị khi cuộn tới vùng này.\n\nXuất thí nghiệm Portable v1\nXuất JSON · toàn bộ kế hoạch\nXuất CSV · kết quả cuối và toàn bộ lịch sử\nPhát\nTạm dừng\nThí nghiệm voucher\n0,0 / 2.115,2 giây · 0%\nĐến thời điểm\n1x\n2x\n4x\nTốc độ tùy chỉnh\nÁp dụng\n1x\nTiềm năng hợp lệ"
+    },
+    {
+      "name": "saved-390-map",
+      "width": 390,
+      "height": 844,
+      "scrollWidth": 390,
+      "canvasCount": 1,
+      "overflowElements": [
+        {
+          "tag": "DIV",
+          "cls": "maplibregl-marker maplibregl-marker-anchor-center",
+          "right": 414.5625
+        },
+        {
+          "tag": "DIV",
+          "cls": "relative cursor-pointer",
+          "right": 414.5625
+        },
+        {
+          "tag": "BUTTON",
+          "cls": "fleet-marker dispatch-marker idle ",
+          "right": 414.5625
+        },
+        {
+          "tag": "DIV",
+          "cls": "maplibregl-marker maplibregl-marker-anchor-center",
+          "right": 432.5625
+        },
+        {
+          "tag": "DIV",
+          "cls": "relative cursor-pointer",
+          "right": 432.5625
+        },
+        {
+          "tag": "BUTTON",
+          "cls": "fleet-marker dispatch-marker idle ",
+          "right": 432.5625
+        },
+        {
+          "tag": "svg",
+          "cls": {},
+          "right": 409.4375
+        },
+        {
+          "tag": "path",
+          "cls": {},
+          "right": 408.0208435058594
+        },
+        {
+          "tag": "circle",
+          "cls": {},
+          "right": 398.8125
+        },
+        {
+          "tag": "path",
+          "cls": {},
+          "right": 403.0625
+        },
+        {
+          "tag": "circle",
+          "cls": {},
+          "right": 405.8958435058594
+        }
+      ],
+      "visiblePanels": [
+        "map-workspace",
+        "playback-dock"
+      ],
+      "clippedButtons": [],
+      "bodyText": "GSM Map Sandbox\nChi tiết\nBản đồ\nPhân tích\nKHU VỰC NGHIÊN CỨU\nTrung tâm TP. Hồ Chí Minh\nKiểm tra lại\n01\n02\n03\n04\n05\n© OpenStreetMap contributors\nGeoJSON cục bộ · OSMDữ liệu đường phố\nThí nghiệm voucher · Treatment · giả định PoC\n© OpenStreetMap contributors · Geofabrik\nPhát\nTạm dừng\nThí nghiệm voucher\n0,0 / 2.115,2 giây · 0%\nĐến thời điểm\n1x\n2x\n4x\nTốc độ tùy chỉnh\nÁp dụng\n1x\nTiềm năng hợp lệ"
+    },
+    {
+      "name": "live-a1-desktop",
+      "width": 1440,
+      "height": 900,
+      "scrollWidth": 1440,
+      "canvasCount": 1,
+      "overflowElements": [],
+      "visiblePanels": [
+        "map-workspace",
+        "playback-dock"
+      ],
+      "clippedButtons": [],
+      "bodyText": "GSM Map Sandbox\nMột hành trình\nChi tiết\nMô phỏng cục bộ\nBản đồ cục bộ\nOSRM kết nối\n\nCHẾ ĐỘ MÔ PHỎNG\n\nMột hành trình\nMô phỏng đội xe\nĐặt xe và điều phối\nPhòng thí nghiệm voucher\nMô phỏng cục bộ\nOSM · OSRM\nCấu hình và chi tiết\n×\nDữ liệu bản đồ\nThiết lập hành trình\nThiết lập hành trình\n01\n\nNhấp trên bản đồ để chọn A, sau đó chọn B.\n\nA\nĐiểm xuất phát\n\n106.698207, 10.773730\n\nB\nĐiểm đến\n\n106.701793, 10.771307\n\nQuãng đường\n0,90 km\nThời gian di chuyển dự kiến\n1,8 phút\n\nƯớc tính từ cấu hình ô tô, không phải giao thông thời gian thực.\n\nĐộ lệch điểm A/B trên đường: 7,1 m / 22,0 m\n\nĐiểm đã khớp với đường\nXóa điểm A/B và chọn lại\nChỉ chạy cục bộ\nWGS84 · [lon, lat]\nKHU VỰC NGHIÊN CỨU\nTrung tâm TP. Hồ Chí Minh\nKiểm tra lại\nA\nB\n© OpenStreetMap contributors\nGeoJSON cục bộ · OSMDữ liệu đường phố\nNhấp để bắt đầu hành trình mới\n© OpenStreetMap contributors · Geofabrik\nPhát\nTạm dừng\nMột hành trình\n0,0 / 110,6 giây · 0%\nĐến thời điểm\n1x\n2x\n4x\nTốc độ tùy chỉnh\nÁp dụng\n1x"
+    },
+    {
+      "name": "live-a1-1366-inspector",
+      "width": 1366,
+      "height": 768,
+      "scrollWidth": 1366,
+      "canvasCount": 1,
+      "overflowElements": [],
+      "visiblePanels": [
+        "map-workspace",
+        "playback-dock"
+      ],
+      "clippedButtons": [],
+      "bodyText": "GSM Map Sandbox\nMột hành trình\nChi tiết\nMô phỏng cục bộ\nBản đồ cục bộ\nOSRM kết nối\n\nCHẾ ĐỘ MÔ PHỎNG\n\nMột hành trình\nMô phỏng đội xe\nĐặt xe và điều phối\nPhòng thí nghiệm voucher\nMô phỏng cục bộ\nOSM · OSRM\nCấu hình và chi tiết\n×\nDữ liệu bản đồ\nThiết lập hành trình\nThiết lập hành trình\n01\n\nNhấp trên bản đồ để chọn A, sau đó chọn B.\n\nA\nĐiểm xuất phát\n\n106.698207, 10.773730\n\nB\nĐiểm đến\n\n106.701793, 10.771307\n\nQuãng đường\n0,90 km\nThời gian di chuyển dự kiến\n1,8 phút\n\nƯớc tính từ cấu hình ô tô, không phải giao thông thời gian thực.\n\nĐộ lệch điểm A/B trên đường: 7,1 m / 22,0 m\n\nĐiểm đã khớp với đường\nXóa điểm A/B và chọn lại\nChỉ chạy cục bộ\nWGS84 · [lon, lat]\nKHU VỰC NGHIÊN CỨU\nTrung tâm TP. Hồ Chí Minh\nKiểm tra lại\nA\nB\n© OpenStreetMap contributors\nGeoJSON cục bộ · OSMDữ liệu đường phố\nNhấp để bắt đầu hành trình mới\n© OpenStreetMap contributors · Geofabrik\nPhát\nTạm dừng\nMột hành trình\n0,0 / 110,6 giây · 0%\nĐến thời điểm\n1x\n2x\n4x\nTốc độ tùy chỉnh\nÁp dụng\n1x"
+    },
+    {
+      "name": "live-a1-390-inspector",
+      "width": 390,
+      "height": 844,
+      "scrollWidth": 390,
+      "canvasCount": 1,
+      "overflowElements": [],
+      "visiblePanels": [
+        "map-workspace",
+        "playback-dock"
+      ],
+      "clippedButtons": [],
+      "bodyText": "GSM Map Sandbox\nChi tiết\nCấu hình và chi tiết\n×\nDữ liệu bản đồ\nThiết lập hành trình\nThiết lập hành trình\n01\n\nNhấp trên bản đồ để chọn A, sau đó chọn B.\n\nA\nĐiểm xuất phát\n\n106.698207, 10.773730\n\nB\nĐiểm đến\n\n106.701793, 10.771307\n\nQuãng đường\n0,90 km\nThời gian di chuyển dự kiến\n1,8 phút\n\nƯớc tính từ cấu hình ô tô, không phải giao thông thời gian thực.\n\nĐộ lệch điểm A/B trên đường: 7,1 m / 22,0 m\n\nĐiểm đã khớp với đường\nXóa điểm A/B và chọn lại\nChỉ chạy cục bộ\nWGS84 · [lon, lat]\nKHU VỰC NGHIÊN CỨU\nTrung tâm TP. Hồ Chí Minh\nKiểm tra lại\nA\nB\n© OpenStreetMap contributors\nGeoJSON cục bộ · OSMDữ liệu đường phố\nNhấp để bắt đầu hành trình mới\n© OpenStreetMap contributors · Geofabrik\nPhát\nTạm dừng\nMột hành trình\n0,0 / 110,6 giây · 0%\nĐến thời điểm\n1x\n2x\n4x\nTốc độ tùy chỉnh\nÁp dụng\n1x"
+    },
+    {
+      "name": "live-a1-390-map",
+      "width": 390,
+      "height": 844,
+      "scrollWidth": 390,
+      "canvasCount": 1,
+      "overflowElements": [],
+      "visiblePanels": [
+        "map-workspace",
+        "playback-dock"
+      ],
+      "clippedButtons": [],
+      "bodyText": "GSM Map Sandbox\nChi tiết\nKHU VỰC NGHIÊN CỨU\nTrung tâm TP. Hồ Chí Minh\nKiểm tra lại\nA\nB\n© OpenStreetMap contributors\nGeoJSON cục bộ · OSMDữ liệu đường phố\nNhấp để bắt đầu hành trình mới\n© OpenStreetMap contributors · Geofabrik\nPhát\nTạm dừng\nMột hành trình\n0,0 / 110,6 giây · 0%\nĐến thời điểm\n1x\n2x\n4x\nTốc độ tùy chỉnh\nÁp dụng\n1x"
+    },
+    {
+      "name": "live-a2-desktop",
+      "width": 1440,
+      "height": 900,
+      "scrollWidth": 1440,
+      "canvasCount": 1,
+      "overflowElements": [],
+      "visiblePanels": [
+        "map-workspace",
+        "playback-dock"
+      ],
+      "clippedButtons": [],
+      "bodyText": "GSM Map Sandbox\nMô phỏng đội xe\nChi tiết\nMô phỏng cục bộ\nBản đồ cục bộ\nOSRM kết nối\n\nCHẾ ĐỘ MÔ PHỎNG\n\nMột hành trình\nMô phỏng đội xe\nĐặt xe và điều phối\nPhòng thí nghiệm voucher\nMô phỏng cục bộ\nOSM · OSRM\nCấu hình và chi tiết\n×\nDữ liệu bản đồ\nCấu hình đội xe\nTổng quan đội xe\nTổng quan đội xe\nTổng số\n5\nChưa bắt đầu\n4\nĐang di chuyển\n1\nHoàn tất\n0\n\nKế hoạch: 13,59 km · Đã đi mô phỏng: 0,00 km\n\nHiệu năng phiên phát lại\nDanh sách xe\nDanh sách xe\nGSM-01\nĐang di chuyển\n1,33 km · 129,1 giây · xuất phát +0 giây\n0%\nGSM-02\nChưa bắt đầu\n3,12 km · 275,4 giây · xuất phát +32 giây\n0%\nGSM-03\nChưa bắt đầu\n0,96 km · 67,8 giây · xuất phát +38 giây\n0%\nGSM-04\nChưa bắt đầu\n3,35 km · 283,7 giây · xuất phát +14 giây\n0%\nGSM-05\nChưa bắt đầu\n4,82 km · 384,1 giây · xuất phát +32 giây\n0%\nChi tiết phương tiện\nGSM-01 · Đang di chuyển\n\n106.695208, 10.767980\n\nTiến độ 0,0% · còn 129,1 giây\n\nĐộ lệch điểm A/B trên đường: 0,0 m / 0,0 m\n\nQuan sát xe\nXem toàn tuyến\nChỉ chạy cục bộ\nWGS84 · [lon, lat]\nKHU VỰC NGHIÊN CỨU\nTrung tâm TP. Hồ Chí Minh\nKiểm tra lại\n01\n02\n03\n04\n05\n© OpenStreetMap contributors\nGeoJSON cục bộ · OSMDữ liệu đường phố\nĐội xe mô phỏng · không phải GPS thực tế · chọn xe để quan sát\n© OpenStreetMap contributors · Geofabrik\nPhát\nTạm dừng\nMô phỏng đội xe\n0,0 / 416,1 giây · 0%\nĐến thời điểm\n1x\n2x\n4x\nTốc độ tùy chỉnh\nÁp dụng\n1x"
+    },
+    {
+      "name": "live-a2-1366-inspector",
+      "width": 1366,
+      "height": 768,
+      "scrollWidth": 1366,
+      "canvasCount": 1,
+      "overflowElements": [],
+      "visiblePanels": [
+        "map-workspace",
+        "playback-dock"
+      ],
+      "clippedButtons": [],
+      "bodyText": "GSM Map Sandbox\nMô phỏng đội xe\nChi tiết\nMô phỏng cục bộ\nBản đồ cục bộ\nOSRM kết nối\n\nCHẾ ĐỘ MÔ PHỎNG\n\nMột hành trình\nMô phỏng đội xe\nĐặt xe và điều phối\nPhòng thí nghiệm voucher\nMô phỏng cục bộ\nOSM · OSRM\nCấu hình và chi tiết\n×\nDữ liệu bản đồ\nCấu hình đội xe\nTổng quan đội xe\nTổng quan đội xe\nTổng số\n5\nChưa bắt đầu\n4\nĐang di chuyển\n1\nHoàn tất\n0\n\nKế hoạch: 13,59 km · Đã đi mô phỏng: 0,00 km\n\nHiệu năng phiên phát lại\nDanh sách xe\nDanh sách xe\nGSM-01\nĐang di chuyển\n1,33 km · 129,1 giây · xuất phát +0 giây\n0%\nGSM-02\nChưa bắt đầu\n3,12 km · 275,4 giây · xuất phát +32 giây\n0%\nGSM-03\nChưa bắt đầu\n0,96 km · 67,8 giây · xuất phát +38 giây\n0%\nGSM-04\nChưa bắt đầu\n3,35 km · 283,7 giây · xuất phát +14 giây\n0%\nGSM-05\nChưa bắt đầu\n4,82 km · 384,1 giây · xuất phát +32 giây\n0%\nChi tiết phương tiện\nGSM-01 · Đang di chuyển\n\n106.695208, 10.767980\n\nTiến độ 0,0% · còn 129,1 giây\n\nĐộ lệch điểm A/B trên đường: 0,0 m / 0,0 m\n\nQuan sát xe\nXem toàn tuyến\nChỉ chạy cục bộ\nWGS84 · [lon, lat]\nKHU VỰC NGHIÊN CỨU\nTrung tâm TP. Hồ Chí Minh\nKiểm tra lại\n01\n02\n03\n04\n05\n© OpenStreetMap contributors\nGeoJSON cục bộ · OSMDữ liệu đường phố\nĐội xe mô phỏng · không phải GPS thực tế · chọn xe để quan sát\n© OpenStreetMap contributors · Geofabrik\nPhát\nTạm dừng\nMô phỏng đội xe\n0,0 / 416,1 giây · 0%\nĐến thời điểm\n1x\n2x\n4x\nTốc độ tùy chỉnh\nÁp dụng\n1x"
+    },
+    {
+      "name": "live-a2-390-inspector",
+      "width": 390,
+      "height": 844,
+      "scrollWidth": 390,
+      "canvasCount": 1,
+      "overflowElements": [
+        {
+          "tag": "DIV",
+          "cls": "maplibregl-marker maplibregl-marker-anchor-center",
+          "right": 523.0625
+        },
+        {
+          "tag": "DIV",
+          "cls": "relative cursor-pointer",
+          "right": 523.0625
+        },
+        {
+          "tag": "BUTTON",
+          "cls": "fleet-marker  scheduled",
+          "right": 523.0625
+        },
+        {
+          "tag": "svg",
+          "cls": {},
+          "right": 499.9375
+        },
+        {
+          "tag": "path",
+          "cls": {},
+          "right": 498.6041564941406
+        },
+        {
+          "tag": "circle",
+          "cls": {},
+          "right": 489.9375
+        },
+        {
+          "tag": "path",
+          "cls": {},
+          "right": 493.9375
+        },
+        {
+          "tag": "circle",
+          "cls": {},
+          "right": 496.6041564941406
+        },
+        {
+          "tag": "SPAN",
+          "cls": "",
+          "right": 514.0625
+        },
+        {
+          "tag": "DIV",
+          "cls": "maplibregl-marker maplibregl-marker-anchor-center",
+          "right": 503.0625
+        },
+        {
+          "tag": "DIV",
+          "cls": "relative cursor-pointer",
+          "right": 503.0625
+        },
+        {
+          "tag": "BUTTON",
+          "cls": "fleet-marker  scheduled",
+          "right": 503.0625
+        },
+        {
+          "tag": "svg",
+          "cls": {},
+          "right": 479.9375
+        },
+        {
+          "tag": "path",
+          "cls": {},
+          "right": 478.6041564941406
+        },
+        {
+          "tag": "circle",
+          "cls": {},
+          "right": 469.9375
+        },
+        {
+          "tag": "path",
+          "cls": {},
+          "right": 473.9375
+        },
+        {
+          "tag": "circle",
+          "cls": {},
+          "right": 476.6041564941406
+        },
+        {
+          "tag": "SPAN",
+          "cls": "",
+          "right": 494.0625
+        }
+      ],
+      "visiblePanels": [
+        "map-workspace",
+        "playback-dock"
+      ],
+      "clippedButtons": [],
+      "bodyText": "GSM Map Sandbox\nChi tiết\nCấu hình và chi tiết\n×\nDữ liệu bản đồ\nCấu hình đội xe\nTổng quan đội xe\nTổng quan đội xe\nTổng số\n5\nChưa bắt đầu\n4\nĐang di chuyển\n1\nHoàn tất\n0\n\nKế hoạch: 13,59 km · Đã đi mô phỏng: 0,00 km\n\nHiệu năng phiên phát lại\nDanh sách xe\nDanh sách xe\nGSM-01\nĐang di chuyển\n1,33 km · 129,1 giây · xuất phát +0 giây\n0%\nGSM-02\nChưa bắt đầu\n3,12 km · 275,4 giây · xuất phát +32 giây\n0%\nGSM-03\nChưa bắt đầu\n0,96 km · 67,8 giây · xuất phát +38 giây\n0%\nGSM-04\nChưa bắt đầu\n3,35 km · 283,7 giây · xuất phát +14 giây\n0%\nGSM-05\nChưa bắt đầu\n4,82 km · 384,1 giây · xuất phát +32 giây\n0%\nChi tiết phương tiện\nGSM-01 · Đang di chuyển\n\n106.695208, 10.767980\n\nTiến độ 0,0% · còn 129,1 giây\n\nĐộ lệch điểm A/B trên đường: 0,0 m / 0,0 m\n\nQuan sát xe\nXem toàn tuyến\nChỉ chạy cục bộ\nWGS84 · [lon, lat]\nKHU VỰC NGHIÊN CỨU\nTrung tâm TP. Hồ Chí Minh\nKiểm tra lại\n01\n02\n03\n04\n05\n© OpenStreetMap contributors\nGeoJSON cục bộ · OSMDữ liệu đường phố\nĐội xe mô phỏng · không phải GPS thực tế · chọn xe để quan sát\n© OpenStreetMap contributors · Geofabrik\nPhát\nTạm dừng\nMô phỏng đội xe\n0,0 / 416,1 giây · 0%\nĐến thời điểm\n1x\n2x\n4x\nTốc độ tùy chỉnh\nÁp dụng\n1x"
+    },
+    {
+      "name": "live-a2-390-map",
+      "width": 390,
+      "height": 844,
+      "scrollWidth": 390,
+      "canvasCount": 1,
+      "overflowElements": [
+        {
+          "tag": "DIV",
+          "cls": "maplibregl-marker maplibregl-marker-anchor-center",
+          "right": 523.0625
+        },
+        {
+          "tag": "DIV",
+          "cls": "relative cursor-pointer",
+          "right": 523.0625
+        },
+        {
+          "tag": "BUTTON",
+          "cls": "fleet-marker  scheduled",
+          "right": 523.0625
+        },
+        {
+          "tag": "svg",
+          "cls": {},
+          "right": 499.9375
+        },
+        {
+          "tag": "path",
+          "cls": {},
+          "right": 498.6041564941406
+        },
+        {
+          "tag": "circle",
+          "cls": {},
+          "right": 489.9375
+        },
+        {
+          "tag": "path",
+          "cls": {},
+          "right": 493.9375
+        },
+        {
+          "tag": "circle",
+          "cls": {},
+          "right": 496.6041564941406
+        },
+        {
+          "tag": "SPAN",
+          "cls": "",
+          "right": 514.0625
+        },
+        {
+          "tag": "DIV",
+          "cls": "maplibregl-marker maplibregl-marker-anchor-center",
+          "right": 503.0625
+        },
+        {
+          "tag": "DIV",
+          "cls": "relative cursor-pointer",
+          "right": 503.0625
+        },
+        {
+          "tag": "BUTTON",
+          "cls": "fleet-marker  scheduled",
+          "right": 503.0625
+        },
+        {
+          "tag": "svg",
+          "cls": {},
+          "right": 479.9375
+        },
+        {
+          "tag": "path",
+          "cls": {},
+          "right": 478.6041564941406
+        },
+        {
+          "tag": "circle",
+          "cls": {},
+          "right": 469.9375
+        },
+        {
+          "tag": "path",
+          "cls": {},
+          "right": 473.9375
+        },
+        {
+          "tag": "circle",
+          "cls": {},
+          "right": 476.6041564941406
+        },
+        {
+          "tag": "SPAN",
+          "cls": "",
+          "right": 494.0625
+        }
+      ],
+      "visiblePanels": [
+        "map-workspace",
+        "playback-dock"
+      ],
+      "clippedButtons": [],
+      "bodyText": "GSM Map Sandbox\nChi tiết\nKHU VỰC NGHIÊN CỨU\nTrung tâm TP. Hồ Chí Minh\nKiểm tra lại\n01\n02\n03\n04\n05\n© OpenStreetMap contributors\nGeoJSON cục bộ · OSMDữ liệu đường phố\nĐội xe mô phỏng · không phải GPS thực tế · chọn xe để quan sát\n© OpenStreetMap contributors · Geofabrik\nPhát\nTạm dừng\nMô phỏng đội xe\n0,0 / 416,1 giây · 0%\nĐến thời điểm\n1x\n2x\n4x\nTốc độ tùy chỉnh\nÁp dụng\n1x"
+    },
+    {
+      "name": "live-a3-desktop",
+      "width": 1440,
+      "height": 900,
+      "scrollWidth": 1440,
+      "canvasCount": 1,
+      "overflowElements": [],
+      "visiblePanels": [
+        "map-workspace",
+        "playback-dock"
+      ],
+      "clippedButtons": [],
+      "bodyText": "GSM Map Sandbox\nĐặt xe và điều phối\nChi tiết\nMô phỏng cục bộ\nBản đồ cục bộ\nOSRM kết nối\n\nCHẾ ĐỘ MÔ PHỎNG\n\nMột hành trình\nMô phỏng đội xe\nĐặt xe và điều phối\nPhòng thí nghiệm voucher\nMô phỏng cục bộ\nOSM · OSRM\nCấu hình và chi tiết\n×\nDữ liệu bản đồ\nCấu hình đặt xe\nDiễn biến kịch bản\nDiễn biến kịch bản\nXem toàn vùng kịch bản\nChỉ số tại thời điểm hiện tại\nChỉ số tới thời điểm hiện tại\nĐã yêu cầu\n1\nĐã phân công xe\n1\nHoàn tất\n0\nKhông được phục vụ\n0\nĐã đón / đã yêu cầu\n0,0%\nHoàn tất / đã yêu cầu\n0,0%\nChờ TB · đã đón\n—\nChuyến TB · hoàn tất\n—\nETA đón TB · đã gán\n267,4 giây\nQuãng đường rỗng\n0,0 km\nQuãng đường chở khách\n0,0 km\nMức sử dụng đội xe · thời gian bận / tổng thời gian xe\nKhông áp dụng\n\nThời gian chờ và mức sử dụng đội xe là chỉ số mô phỏng; thời gian và quãng đường theo cấu hình OSRM, không phản ánh giao thông trực tiếp. Số đã phân công gồm mọi yêu cầu từng được gán xe.\n\nKết quả cuối kịch bản\nYêu cầu đặt xe\nYêu cầu đặt xe\nLọc trạng thái\nĐang hoạt động\nTất cả (gồm tương lai)\nKhông được phục vụ\nHoàn tất\nBK-001\nĐã phân công xe\nYêu cầu +0,0 giây · GSM-02 · chờ 0,0 giây\nĐội xe điều phối\nĐội xe điều phối\nGSM-01\nĐang rảnh\nKhông có yêu cầu đặt xe · 0 chuyến hoàn tất\nRỗng 0,0 km · chở khách 0,0 km\nGSM-02\nĐang đến đón khách\nBK-001 · 0 chuyến hoàn tất\nRỗng 0,0 km · chở khách 0,0 km\nGSM-03\nĐang rảnh\nKhông có yêu cầu đặt xe · 0 chuyến hoàn tất\nRỗng 0,0 km · chở khách 0,0 km\nGSM-04\nĐang rảnh\nKhông có yêu cầu đặt xe · 0 chuyến hoàn tất\nRỗng 0,0 km · chở khách 0,0 km\nGSM-05\nĐang rảnh\nKhông có yêu cầu đặt xe · 0 chuyến hoàn tất\nRỗng 0,0 km · chở khách 0,0 km\nDòng thời gian sự kiện\nChỉ chạy cục bộ\nWGS84 · [lon, lat]\nKHU VỰC NGHIÊN CỨU\nTrung tâm TP. Hồ Chí Minh\nKiểm tra lại\n01\n02\n03\n04\n05\n001\n© OpenStreetMap contributors\nGeoJSON cục bộ · OSMDữ liệu đường phố\nĐặt xe mô phỏng · màu vàng: đến đón · xanh: chở khách · xám: rảnh\n© OpenStreetMap contributors · Geofabrik\nPhát\nTạm dừng\nĐặt xe và điều phối\n0,0 / 2.092,4 giây · 0%\nĐến thời điểm\n1x\n2x\n4x\nTốc độ tùy chỉnh\nÁp dụng\n1x"
+    },
+    {
+      "name": "live-a3-1366-inspector",
+      "width": 1366,
+      "height": 768,
+      "scrollWidth": 1366,
+      "canvasCount": 1,
+      "overflowElements": [],
+      "visiblePanels": [
+        "map-workspace",
+        "playback-dock"
+      ],
+      "clippedButtons": [],
+      "bodyText": "GSM Map Sandbox\nĐặt xe và điều phối\nChi tiết\nMô phỏng cục bộ\nBản đồ cục bộ\nOSRM kết nối\n\nCHẾ ĐỘ MÔ PHỎNG\n\nMột hành trình\nMô phỏng đội xe\nĐặt xe và điều phối\nPhòng thí nghiệm voucher\nMô phỏng cục bộ\nOSM · OSRM\nCấu hình và chi tiết\n×\nDữ liệu bản đồ\nCấu hình đặt xe\nDiễn biến kịch bản\nDiễn biến kịch bản\nXem toàn vùng kịch bản\nChỉ số tại thời điểm hiện tại\nChỉ số tới thời điểm hiện tại\nĐã yêu cầu\n1\nĐã phân công xe\n1\nHoàn tất\n0\nKhông được phục vụ\n0\nĐã đón / đã yêu cầu\n0,0%\nHoàn tất / đã yêu cầu\n0,0%\nChờ TB · đã đón\n—\nChuyến TB · hoàn tất\n—\nETA đón TB · đã gán\n267,4 giây\nQuãng đường rỗng\n0,0 km\nQuãng đường chở khách\n0,0 km\nMức sử dụng đội xe · thời gian bận / tổng thời gian xe\nKhông áp dụng\n\nThời gian chờ và mức sử dụng đội xe là chỉ số mô phỏng; thời gian và quãng đường theo cấu hình OSRM, không phản ánh giao thông trực tiếp. Số đã phân công gồm mọi yêu cầu từng được gán xe.\n\nKết quả cuối kịch bản\nYêu cầu đặt xe\nYêu cầu đặt xe\nLọc trạng thái\nĐang hoạt động\nTất cả (gồm tương lai)\nKhông được phục vụ\nHoàn tất\nBK-001\nĐã phân công xe\nYêu cầu +0,0 giây · GSM-02 · chờ 0,0 giây\nĐội xe điều phối\nĐội xe điều phối\nGSM-01\nĐang rảnh\nKhông có yêu cầu đặt xe · 0 chuyến hoàn tất\nRỗng 0,0 km · chở khách 0,0 km\nGSM-02\nĐang đến đón khách\nBK-001 · 0 chuyến hoàn tất\nRỗng 0,0 km · chở khách 0,0 km\nGSM-03\nĐang rảnh\nKhông có yêu cầu đặt xe · 0 chuyến hoàn tất\nRỗng 0,0 km · chở khách 0,0 km\nGSM-04\nĐang rảnh\nKhông có yêu cầu đặt xe · 0 chuyến hoàn tất\nRỗng 0,0 km · chở khách 0,0 km\nGSM-05\nĐang rảnh\nKhông có yêu cầu đặt xe · 0 chuyến hoàn tất\nRỗng 0,0 km · chở khách 0,0 km\nDòng thời gian sự kiện\nChỉ chạy cục bộ\nWGS84 · [lon, lat]\nKHU VỰC NGHIÊN CỨU\nTrung tâm TP. Hồ Chí Minh\nKiểm tra lại\n01\n02\n03\n04\n05\n001\n© OpenStreetMap contributors\nGeoJSON cục bộ · OSMDữ liệu đường phố\nĐặt xe mô phỏng · màu vàng: đến đón · xanh: chở khách · xám: rảnh\n© OpenStreetMap contributors · Geofabrik\nPhát\nTạm dừng\nĐặt xe và điều phối\n0,0 / 2.092,4 giây · 0%\nĐến thời điểm\n1x\n2x\n4x\nTốc độ tùy chỉnh\nÁp dụng\n1x"
+    },
+    {
+      "name": "live-a3-390-inspector",
+      "width": 390,
+      "height": 844,
+      "scrollWidth": 390,
+      "canvasCount": 1,
+      "overflowElements": [
+        {
+          "tag": "DIV",
+          "cls": "maplibregl-marker maplibregl-marker-anchor-center",
+          "right": 520.515625
+        },
+        {
+          "tag": "DIV",
+          "cls": "relative cursor-pointer",
+          "right": 520.515625
+        },
+        {
+          "tag": "BUTTON",
+          "cls": "booking-marker assigned",
+          "right": 520.515625
+        },
+        {
+          "tag": "svg",
+          "cls": {},
+          "right": 497.484375
+        },
+        {
+          "tag": "circle",
+          "cls": {},
+          "right": 493.4010314941406
+        },
+        {
+          "tag": "path",
+          "cls": {},
+          "right": 495.1510314941406
+        }
+      ],
+      "visiblePanels": [
+        "map-workspace",
+        "playback-dock"
+      ],
+      "clippedButtons": [],
+      "bodyText": "GSM Map Sandbox\nChi tiết\nCấu hình và chi tiết\n×\nDữ liệu bản đồ\nCấu hình đặt xe\nDiễn biến kịch bản\nDiễn biến kịch bản\nXem toàn vùng kịch bản\nChỉ số tại thời điểm hiện tại\nChỉ số tới thời điểm hiện tại\nĐã yêu cầu\n1\nĐã phân công xe\n1\nHoàn tất\n0\nKhông được phục vụ\n0\nĐã đón / đã yêu cầu\n0,0%\nHoàn tất / đã yêu cầu\n0,0%\nChờ TB · đã đón\n—\nChuyến TB · hoàn tất\n—\nETA đón TB · đã gán\n267,4 giây\nQuãng đường rỗng\n0,0 km\nQuãng đường chở khách\n0,0 km\nMức sử dụng đội xe · thời gian bận / tổng thời gian xe\nKhông áp dụng\n\nThời gian chờ và mức sử dụng đội xe là chỉ số mô phỏng; thời gian và quãng đường theo cấu hình OSRM, không phản ánh giao thông trực tiếp. Số đã phân công gồm mọi yêu cầu từng được gán xe.\n\nKết quả cuối kịch bản\nYêu cầu đặt xe\nYêu cầu đặt xe\nLọc trạng thái\nĐang hoạt động\nTất cả (gồm tương lai)\nKhông được phục vụ\nHoàn tất\nBK-001\nĐã phân công xe\nYêu cầu +0,0 giây · GSM-02 · chờ 0,0 giây\nĐội xe điều phối\nĐội xe điều phối\nGSM-01\nĐang rảnh\nKhông có yêu cầu đặt xe · 0 chuyến hoàn tất\nRỗng 0,0 km · chở khách 0,0 km\nGSM-02\nĐang đến đón khách\nBK-001 · 0 chuyến hoàn tất\nRỗng 0,0 km · chở khách 0,0 km\nGSM-03\nĐang rảnh\nKhông có yêu cầu đặt xe · 0 chuyến hoàn tất\nRỗng 0,0 km · chở khách 0,0 km\nGSM-04\nĐang rảnh\nKhông có yêu cầu đặt xe · 0 chuyến hoàn tất\nRỗng 0,0 km · chở khách 0,0 km\nGSM-05\nĐang rảnh\nKhông có yêu cầu đặt xe · 0 chuyến hoàn tất\nRỗng 0,0 km · chở khách 0,0 km\nDòng thời gian sự kiện\nChỉ chạy cục bộ\nWGS84 · [lon, lat]\nKHU VỰC NGHIÊN CỨU\nTrung tâm TP. Hồ Chí Minh\nKiểm tra lại\n01\n02\n03\n04\n05\n001\n© OpenStreetMap contributors\nGeoJSON cục bộ · OSMDữ liệu đường phố\nĐặt xe mô phỏng · màu vàng: đến đón · xanh: chở khách · xám: rảnh\n© OpenStreetMap contributors · Geofabrik\nPhát\nTạm dừng\nĐặt xe và điều phối\n0,0 / 2.092,4 giây · 0%\nĐến thời điểm\n1x\n2x\n4x\nTốc độ tùy chỉnh\nÁp dụng\n1x"
+    },
+    {
+      "name": "live-a3-390-map",
+      "width": 390,
+      "height": 844,
+      "scrollWidth": 390,
+      "canvasCount": 1,
+      "overflowElements": [
+        {
+          "tag": "DIV",
+          "cls": "maplibregl-marker maplibregl-marker-anchor-center",
+          "right": 520.515625
+        },
+        {
+          "tag": "DIV",
+          "cls": "relative cursor-pointer",
+          "right": 520.515625
+        },
+        {
+          "tag": "BUTTON",
+          "cls": "booking-marker assigned",
+          "right": 520.515625
+        },
+        {
+          "tag": "svg",
+          "cls": {},
+          "right": 497.484375
+        },
+        {
+          "tag": "circle",
+          "cls": {},
+          "right": 493.4010314941406
+        },
+        {
+          "tag": "path",
+          "cls": {},
+          "right": 495.1510314941406
+        }
+      ],
+      "visiblePanels": [
+        "map-workspace",
+        "playback-dock"
+      ],
+      "clippedButtons": [],
+      "bodyText": "GSM Map Sandbox\nChi tiết\nKHU VỰC NGHIÊN CỨU\nTrung tâm TP. Hồ Chí Minh\nKiểm tra lại\n01\n02\n03\n04\n05\n001\n© OpenStreetMap contributors\nGeoJSON cục bộ · OSMDữ liệu đường phố\nĐặt xe mô phỏng · màu vàng: đến đón · xanh: chở khách · xám: rảnh\n© OpenStreetMap contributors · Geofabrik\nPhát\nTạm dừng\nĐặt xe và điều phối\n0,0 / 2.092,4 giây · 0%\nĐến thời điểm\n1x\n2x\n4x\nTốc độ tùy chỉnh\nÁp dụng\n1x"
+    },
+    {
+      "name": "live-a4-desktop",
+      "width": 1440,
+      "height": 900,
+      "scrollWidth": 1440,
+      "canvasCount": 1,
+      "overflowElements": [],
+      "visiblePanels": [
+        "map-workspace",
+        "analytics-panel",
+        "playback-dock"
+      ],
+      "clippedButtons": [],
+      "bodyText": "GSM Map Sandbox\nPhòng thí nghiệm voucher\nChi tiết\nMô phỏng cục bộ\nBản đồ cục bộ\nOSRM kết nối\n\nCHẾ ĐỘ MÔ PHỎNG\n\nMột hành trình\nMô phỏng đội xe\nĐặt xe và điều phối\nPhòng thí nghiệm voucher\nMô phỏng cục bộ\nOSM · OSRM\nCấu hình và chi tiết\n×\nDữ liệu bản đồ\nChế độ thí nghiệm\nThí nghiệm trực tiếp (Live)\nPhát lại đã lưu (Saved Replay)\nCấu hình thí nghiệm\nKịch bản và ngân sách\nKịch bản thí nghiệm\n\nBaseline: kịch bản không voucher. Treatment: kịch bản áp dụng voucher.\n\nBaseline\nTreatment\nXem toàn vùng thí nghiệm\nNgân sách · Treatment · tới thời điểm hiện tại\n\nNgân sách đang giữ trước 0 ₫\nChi phí voucher đã sử dụng 0 ₫\nNgân sách còn khả dụng 200.000 ₫\n\nĐã đề xuất 1 · đang giữ trước 0 · đã sử dụng 0 · đã giải phóng 0\nChi tiết xe và yêu cầu đặt xe\nChỉ chạy cục bộ\nWGS84 · [lon, lat]\nKHU VỰC NGHIÊN CỨU\nTrung tâm TP. Hồ Chí Minh\nKiểm tra lại\n01\n02\n03\n04\n05\n© OpenStreetMap contributors\nGeoJSON cục bộ · OSMDữ liệu đường phố\nThí nghiệm voucher · Treatment · giả định PoC\n© OpenStreetMap contributors · Geofabrik\nPhòng thí nghiệm voucher\n\nKết quả cuối · thời lượng chung 2.115,2 giây · giả định PoC\n\nTại thời điểm hiện tại\nKết quả cuối kịch bản\nPhân tích kinh doanh nâng cao\nBaseline\n13 hoàn tất / 13 chấp nhận\n\nTỷ lệ đặt xe 43,3% · hoàn tất 100,0%\nGFV 464.928 ₫\nTiền hành khách thanh toán 464.928 ₫\nChi phí voucher đã sử dụng 0 ₫\n\nTreatment\n16 hoàn tất / 16 chấp nhận\n\nTỷ lệ đặt xe 53,3% · hoàn tất 100,0%\nGFV 633.058 ₫\nTiền hành khách thanh toán 433.058 ₫\nChi phí voucher đã sử dụng 200.000 ₫\n\nTreatment − Baseline\n+3 chấp nhận\n\n+3 hoàn tất\nChi phí voucher mỗi chuyến hoàn tất tăng thêm (CPIC):\n66.667 ₫\n\nSo sánh tài chính và vận hành\nChỉ số mô phỏng\tBaseline\tTreatment\tChênh lệch\nTổng giá trị cước trước ưu đãi (GFV)\t464.928 ₫\t633.058 ₫\t+168.130 ₫\nTổng tiền hành khách thanh toán\t464.928 ₫\t433.058 ₫\t−31.870 ₫\nChi phí voucher đã sử dụng\t0 ₫\t200.000 ₫\t+200.000 ₫\nSố chuyến hoàn tất\t13\t16\t+3\n\nChênh lệch = Treatment − Baseline · GFV = tiền hành khách thanh toán + chi phí voucher đã sử dụng · chỉ số mô phỏng\n\nTỷ lệ đặt xe = số chấp nhận / số tiềm năng hợp lệ; tỷ lệ hoàn tất = số hoàn tất / số chấp nhận. GFV = tiền hành khách thanh toán + chi phí voucher đã sử dụng. Voucher đã đề xuất và ngân sách đang giữ trước chưa phải chi phí đã sử dụng. KPI cập nhật mỗi giây; vị trí xe dùng đồng hồ mô phỏng chung.\n\nCác bước chuyển đổi đặt xe\nBaseline\nTreatment\n0\n8\n16\n24\n32\nTiềm nănghợp lệ\nĐã chấpnhận\nĐã phâncông xe\nĐã đónkhách\nHoàn tất\nSố chuyến hoàn tất lũy kế\n\nBiểu đồ hiển thị khi cuộn tới vùng này.\n\nXuất thí nghiệm Portable v1\nXuất JSON · toàn bộ kế hoạch\nXuất CSV · kết quả cuối và toàn bộ lịch sử\nPhát\nTạm dừng\nThí nghiệm voucher\n0,0 / 2.115,2 giây · 0%\nĐến thời điểm\n1x\n2x\n4x\nTốc độ tùy chỉnh\nÁp dụng\n64x\n8"
+    },
+    {
+      "name": "live-batch-desktop",
+      "width": 1440,
+      "height": 900,
+      "scrollWidth": 1440,
+      "canvasCount": 1,
+      "overflowElements": [],
+      "visiblePanels": [
+        "map-workspace",
+        "analytics-panel",
+        "playback-dock"
+      ],
+      "clippedButtons": [],
+      "bodyText": "GSM Map Sandbox\nPhòng thí nghiệm voucher\nChi tiết\nMô phỏng cục bộ\nBản đồ cục bộ\nOSRM kết nối\n\nCHẾ ĐỘ MÔ PHỎNG\n\nMột hành trình\nMô phỏng đội xe\nĐặt xe và điều phối\nPhòng thí nghiệm voucher\nMô phỏng cục bộ\nOSM · OSRM\nCấu hình và chi tiết\n×\nDữ liệu bản đồ\nChế độ thí nghiệm\nThí nghiệm trực tiếp (Live)\nPhát lại đã lưu (Saved Replay)\nCấu hình thí nghiệm\nKịch bản và ngân sách\nKịch bản thí nghiệm\n\nBaseline: kịch bản không voucher. Treatment: kịch bản áp dụng voucher.\n\nBaseline\nTreatment\nXem toàn vùng thí nghiệm\nNgân sách · Treatment · tới thời điểm hiện tại\n\nNgân sách đang giữ trước 0 ₫\nChi phí voucher đã sử dụng 0 ₫\nNgân sách còn khả dụng 200.000 ₫\n\nĐã đề xuất 1 · đang giữ trước 0 · đã sử dụng 0 · đã giải phóng 0\nChi tiết xe và yêu cầu đặt xe\nChỉ chạy cục bộ\nWGS84 · [lon, lat]\nKHU VỰC NGHIÊN CỨU\nTrung tâm TP. Hồ Chí Minh\nKiểm tra lại\n01\n02\n03\n04\n05\n© OpenStreetMap contributors\nGeoJSON cục bộ · OSMDữ liệu đường phố\nThí nghiệm voucher · Treatment · giả định PoC\n© OpenStreetMap contributors · Geofabrik\nPhòng thí nghiệm voucher\n\nKết quả cuối · thời lượng chung 2.115,2 giây · giả định PoC\n\nTại thời điểm hiện tại\nKết quả cuối kịch bản\nĐóng phân tích kinh doanh\nBaseline\n13 hoàn tất / 13 chấp nhận\n\nTỷ lệ đặt xe 43,3% · hoàn tất 100,0%\nGFV 464.928 ₫\nTiền hành khách thanh toán 464.928 ₫\nChi phí voucher đã sử dụng 0 ₫\n\nTreatment\n16 hoàn tất / 16 chấp nhận\n\nTỷ lệ đặt xe 53,3% · hoàn tất 100,0%\nGFV 633.058 ₫\nTiền hành khách thanh toán 433.058 ₫\nChi phí voucher đã sử dụng 200.000 ₫\n\nTreatment − Baseline\n+3 chấp nhận\n\n+3 hoàn tất\nChi phí voucher mỗi chuyến hoàn tất tăng thêm (CPIC):\n66.667 ₫\n\nSo sánh tài chính và vận hành\nChỉ số mô phỏng\tBaseline\tTreatment\tChênh lệch\nTổng giá trị cước trước ưu đãi (GFV)\t464.928 ₫\t633.058 ₫\t+168.130 ₫\nTổng tiền hành khách thanh toán\t464.928 ₫\t433.058 ₫\t−31.870 ₫\nChi phí voucher đã sử dụng\t0 ₫\t200.000 ₫\t+200.000 ₫\nSố chuyến hoàn tất\t13\t16\t+3\n\nChênh lệch = Treatment − Baseline · GFV = tiền hành khách thanh toán + chi phí voucher đã sử dụng · chỉ số mô phỏng\n\nTỷ lệ đặt xe = số chấp nhận / số tiềm năng hợp lệ; tỷ lệ hoàn tất = số hoàn tất / số chấp nhận. GFV = tiền hành khách thanh toán + chi phí voucher đã sử dụng. Voucher đã đề xuất và ngân sách đang giữ trước chưa phải chi phí đã sử dụng. KPI cập nhật mỗi giây; vị trí xe dùng đồng hồ mô phỏng chung.\n\nXuất thí nghiệm Portable v1\nXuất JSON · toàn bộ kế hoạch\nXuất CSV · kết quả cuối và toàn bộ lịch sử\nPhân tích kinh doanh nâng cao\nSố yêu cầu chấp nhận lũy kế\n\nBiểu đồ hiển thị khi cuộn tới vùng này.\n\nGiá trị cước trước ưu đãi (VND)\n\nBiểu đồ hiển thị khi cuộn tới vùng này.\n\nTiền hành khách và hỗ trợ voucher\n\nBiểu đồ hiển thị khi cuộn tới vùng này.\n\nPhân bổ ngân sách voucher\n\nBiểu đồ hiển thị khi cuộn tới vùng này.\n\nChi phí voucher đã sử dụng lũy kế (VND)\n\nBiểu đồ hiển thị khi cuộn tới vùng này.\n\nMức sử dụng đội xe (%)\n\nBiểu đồ hiển thị khi cuộn tới vùng này.\n\nThời gian chờ trung bình (giây)\nBaseline\nTreatment\n0\n40\n80\n120\n160\nChỉ tính kháchđã đón\nHiệu quả trên số chuyến tăng thêm\nSố yêu cầu chấp nhận tăng thêm\n3\nSố chuyến hoàn tất tăng thêm\n3\nChi phí voucher đã sử dụng\n200.000 ₫\nChi phí voucher mỗi chuyến hoàn tất tăng thêm (CPIC)\n66.667 ₫\n\nCác chỉ số có đơn vị riêng; chưa có mô hình chi phí để suy ra lợi nhuận hoặc ROI.\n\nPhân tích nhiều lượt chạy\nPhân tích nhiều lượt chạy\n\nMô phỏng ghép cặp · phân tích từng yếu tố (OFAT) · tối đa 90 lượt · chỉ bắt đầu khi bấm Chạy. Mọi giá trị của yếu tố dùng cùng danh sách Seed.\n\nSeed gốc\nSố Seed\n10\n30\nYếu tố phân tích độ nhạy\nKhông thay đổi\nAlpha (log-odds)\nBeta (độ nhạy giá)\nMức giảm giá\nNgân sách voucher\nSố xe\nPhân bố nhu cầu\n\nKhông thay đổi: Cấu hình gốc · 10 lượt trong cấu hình kế tiếp. Yếu tố mức giảm dùng số tiền cố định (VND); các yếu tố khác giữ chính sách voucher đang cấu hình.\n\nChạy nhiều lượt Hủy các lượt chạy\n\nĐã kết thúc · mọi lượt chạy đã có kết quả · 10/10 bản ghi · 7 thành công · 3 thất bại · 0 bị hủy\n\nMức tăng trung bình 3,14 · trung vị 3,00 · độ lệch chuẩn mẫu 1,07 · nhỏ nhất/lớn nhất 2/5\nTỷ lệ lượt có cải thiện 100,0% (n=7) · chi phí voucher trung bình 198.945 ₫ · CPIC gộp 63.301 ₫\n\nMức sử dụng ngân sách 0,995 (n=7) · chênh lệch thời gian chờ 21,93 giây (n=7) · chênh lệch mức sử dụng đội xe 0,127 (n=7)\n\nPhân bố mức tăng theo cặp\n\nBiểu đồ hiển thị khi cuộn tới vùng này.\n\nChi phí voucher và chuyến hoàn tất tăng thêm\n\nBiểu đồ hiển thị khi cuộn tới vùng này.\n\nXuất JSON nhiều lượt chạy Xuất CSV từng lượt chạyXuất CSV tổng hợp\nDanh sách lượt chạy và định nghĩa thống kê\nPhát\nTạm dừng\nThí nghiệm voucher\n0,0 / 2.115,2 giây · 0%\nĐến thời điểm\n1x\n2x\n4x\nTốc độ tùy chỉnh\nÁp dụng\n64x\nChỉ tính khách đã đón"
+    },
+    {
+      "name": "live-a4-1366",
+      "width": 1366,
+      "height": 768,
+      "scrollWidth": 1366,
+      "canvasCount": 1,
+      "overflowElements": [],
+      "visiblePanels": [
+        "map-workspace",
+        "analytics-panel",
+        "playback-dock"
+      ],
+      "clippedButtons": [],
+      "bodyText": "GSM Map Sandbox\nPhòng thí nghiệm voucher\nChi tiết\nMô phỏng cục bộ\nBản đồ cục bộ\nOSRM kết nối\n\nCHẾ ĐỘ MÔ PHỎNG\n\nMột hành trình\nMô phỏng đội xe\nĐặt xe và điều phối\nPhòng thí nghiệm voucher\nMô phỏng cục bộ\nOSM · OSRM\nCấu hình và chi tiết\n×\nDữ liệu bản đồ\nChế độ thí nghiệm\nThí nghiệm trực tiếp (Live)\nPhát lại đã lưu (Saved Replay)\nCấu hình thí nghiệm\nKịch bản và ngân sách\nKịch bản thí nghiệm\n\nBaseline: kịch bản không voucher. Treatment: kịch bản áp dụng voucher.\n\nBaseline\nTreatment\nXem toàn vùng thí nghiệm\nNgân sách · Treatment · tới thời điểm hiện tại\n\nNgân sách đang giữ trước 0 ₫\nChi phí voucher đã sử dụng 0 ₫\nNgân sách còn khả dụng 200.000 ₫\n\nĐã đề xuất 1 · đang giữ trước 0 · đã sử dụng 0 · đã giải phóng 0\nChi tiết xe và yêu cầu đặt xe\nChỉ chạy cục bộ\nWGS84 · [lon, lat]\nKHU VỰC NGHIÊN CỨU\nTrung tâm TP. Hồ Chí Minh\nKiểm tra lại\n01\n02\n03\n04\n05\n© OpenStreetMap contributors\nGeoJSON cục bộ · OSMDữ liệu đường phố\nThí nghiệm voucher · Treatment · giả định PoC\n© OpenStreetMap contributors · Geofabrik\nPhòng thí nghiệm voucher\n\nKết quả cuối · thời lượng chung 2.115,2 giây · giả định PoC\n\nTại thời điểm hiện tại\nKết quả cuối kịch bản\nĐóng phân tích kinh doanh\nBaseline\n13 hoàn tất / 13 chấp nhận\n\nTỷ lệ đặt xe 43,3% · hoàn tất 100,0%\nGFV 464.928 ₫\nTiền hành khách thanh toán 464.928 ₫\nChi phí voucher đã sử dụng 0 ₫\n\nTreatment\n16 hoàn tất / 16 chấp nhận\n\nTỷ lệ đặt xe 53,3% · hoàn tất 100,0%\nGFV 633.058 ₫\nTiền hành khách thanh toán 433.058 ₫\nChi phí voucher đã sử dụng 200.000 ₫\n\nTreatment − Baseline\n+3 chấp nhận\n\n+3 hoàn tất\nChi phí voucher mỗi chuyến hoàn tất tăng thêm (CPIC):\n66.667 ₫\n\nSo sánh tài chính và vận hành\nChỉ số mô phỏng\tBaseline\tTreatment\tChênh lệch\nTổng giá trị cước trước ưu đãi (GFV)\t464.928 ₫\t633.058 ₫\t+168.130 ₫\nTổng tiền hành khách thanh toán\t464.928 ₫\t433.058 ₫\t−31.870 ₫\nChi phí voucher đã sử dụng\t0 ₫\t200.000 ₫\t+200.000 ₫\nSố chuyến hoàn tất\t13\t16\t+3\n\nChênh lệch = Treatment − Baseline · GFV = tiền hành khách thanh toán + chi phí voucher đã sử dụng · chỉ số mô phỏng\n\nTỷ lệ đặt xe = số chấp nhận / số tiềm năng hợp lệ; tỷ lệ hoàn tất = số hoàn tất / số chấp nhận. GFV = tiền hành khách thanh toán + chi phí voucher đã sử dụng. Voucher đã đề xuất và ngân sách đang giữ trước chưa phải chi phí đã sử dụng. KPI cập nhật mỗi giây; vị trí xe dùng đồng hồ mô phỏng chung.\n\nXuất thí nghiệm Portable v1\nXuất JSON · toàn bộ kế hoạch\nXuất CSV · kết quả cuối và toàn bộ lịch sử\nPhân tích kinh doanh nâng cao\nSố yêu cầu chấp nhận lũy kế\n\nBiểu đồ hiển thị khi cuộn tới vùng này.\n\nGiá trị cước trước ưu đãi (VND)\n\nBiểu đồ hiển thị khi cuộn tới vùng này.\n\nTiền hành khách và hỗ trợ voucher\n\nBiểu đồ hiển thị khi cuộn tới vùng này.\n\nPhân bổ ngân sách voucher\n\nBiểu đồ hiển thị khi cuộn tới vùng này.\n\nChi phí voucher đã sử dụng lũy kế (VND)\n\nBiểu đồ hiển thị khi cuộn tới vùng này.\n\nMức sử dụng đội xe (%)\n\nBiểu đồ hiển thị khi cuộn tới vùng này.\n\nThời gian chờ trung bình (giây)\nBaseline\nTreatment\n0\n40\n80\n120\n160\nChỉ tính kháchđã đón\nHiệu quả trên số chuyến tăng thêm\nSố yêu cầu chấp nhận tăng thêm\n3\nSố chuyến hoàn tất tăng thêm\n3\nChi phí voucher đã sử dụng\n200.000 ₫\nChi phí voucher mỗi chuyến hoàn tất tăng thêm (CPIC)\n66.667 ₫\n\nCác chỉ số có đơn vị riêng; chưa có mô hình chi phí để suy ra lợi nhuận hoặc ROI.\n\nPhân tích nhiều lượt chạy\nPhân tích nhiều lượt chạy\n\nMô phỏng ghép cặp · phân tích từng yếu tố (OFAT) · tối đa 90 lượt · chỉ bắt đầu khi bấm Chạy. Mọi giá trị của yếu tố dùng cùng danh sách Seed.\n\nSeed gốc\nSố Seed\n10\n30\nYếu tố phân tích độ nhạy\nKhông thay đổi\nAlpha (log-odds)\nBeta (độ nhạy giá)\nMức giảm giá\nNgân sách voucher\nSố xe\nPhân bố nhu cầu\n\nBeta (độ nhạy giá): 1 / 2 / 3 · 30 lượt trong cấu hình kế tiếp. Yếu tố mức giảm dùng số tiền cố định (VND); các yếu tố khác giữ chính sách voucher đang cấu hình.\n\nChạy nhiều lượt Hủy các lượt chạy\n\nĐã hủy · kết quả chưa đầy đủ · 30/30 bản ghi · 0 thành công · 0 thất bại · 30 bị hủy\n\nTổng hợp chung gộp các nhóm tham số. Dùng Phân tích độ nhạy và trường groups trong JSON để so sánh từng nhóm; Seed lặp giữa các nhóm không phải mẫu độc lập.\n\nMức tăng trung bình Không áp dụng · trung vị Không áp dụng · độ lệch chuẩn mẫu Không áp dụng · nhỏ nhất/lớn nhất Không áp dụng/Không áp dụng\nTỷ lệ lượt có cải thiện Không áp dụng (n=0) · chi phí voucher trung bình Không áp dụng · CPIC gộp Không áp dụng\n\nMức sử dụng ngân sách Không áp dụng (n=0) · chênh lệch thời gian chờ Không áp dụng giây (n=0) · chênh lệch mức sử dụng đội xe Không áp dụng (n=0)\n\nPhân bố mức tăng theo cặp\n\nBiểu đồ hiển thị khi cuộn tới vùng này.\n\nChi phí voucher và chuyến hoàn tất tăng thêm\n\nBiểu đồ hiển thị khi cuộn tới vùng này.\n\nPhân tích độ nhạy\n\nBiểu đồ hiển thị khi cuộn tới vùng này.\n\nXuất JSON nhiều lượt chạy Xuất CSV từng lượt chạyXuất CSV tổng hợp\nDanh sách lượt chạy và định nghĩa thống kê\nPhát\nTạm dừng\nThí nghiệm voucher\n0,0 / 2.115,2 giây · 0%\nĐến thời điểm\n1x\n2x\n4x\nTốc độ tùy chỉnh\nÁp dụng\n64x\na5-4-665be8b2 / 1"
+    },
+    {
+      "name": "live-a4-390",
+      "width": 390,
+      "height": 844,
+      "scrollWidth": 390,
+      "canvasCount": 1,
+      "overflowElements": [],
+      "visiblePanels": [
+        "analytics-panel",
+        "playback-dock"
+      ],
+      "clippedButtons": [],
+      "bodyText": "GSM Map Sandbox\nChi tiết\nBản đồ\nPhân tích\nPhòng thí nghiệm voucher\n\nKết quả cuối · thời lượng chung 2.115,2 giây · giả định PoC\n\nTại thời điểm hiện tại\nKết quả cuối kịch bản\nĐóng phân tích kinh doanh\nBaseline\n13 hoàn tất / 13 chấp nhận\n\nTỷ lệ đặt xe 43,3% · hoàn tất 100,0%\nGFV 464.928 ₫\nTiền hành khách thanh toán 464.928 ₫\nChi phí voucher đã sử dụng 0 ₫\n\nTreatment\n16 hoàn tất / 16 chấp nhận\n\nTỷ lệ đặt xe 53,3% · hoàn tất 100,0%\nGFV 633.058 ₫\nTiền hành khách thanh toán 433.058 ₫\nChi phí voucher đã sử dụng 200.000 ₫\n\nTreatment − Baseline\n+3 chấp nhận\n\n+3 hoàn tất\nChi phí voucher mỗi chuyến hoàn tất tăng thêm (CPIC):\n66.667 ₫\n\nSo sánh tài chính và vận hành\nChỉ số mô phỏng\tBaseline\tTreatment\tChênh lệch\nTổng giá trị cước trước ưu đãi (GFV)\t464.928 ₫\t633.058 ₫\t+168.130 ₫\nTổng tiền hành khách thanh toán\t464.928 ₫\t433.058 ₫\t−31.870 ₫\nChi phí voucher đã sử dụng\t0 ₫\t200.000 ₫\t+200.000 ₫\nSố chuyến hoàn tất\t13\t16\t+3\n\nChênh lệch = Treatment − Baseline · GFV = tiền hành khách thanh toán + chi phí voucher đã sử dụng · chỉ số mô phỏng\n\nTỷ lệ đặt xe = số chấp nhận / số tiềm năng hợp lệ; tỷ lệ hoàn tất = số hoàn tất / số chấp nhận. GFV = tiền hành khách thanh toán + chi phí voucher đã sử dụng. Voucher đã đề xuất và ngân sách đang giữ trước chưa phải chi phí đã sử dụng. KPI cập nhật mỗi giây; vị trí xe dùng đồng hồ mô phỏng chung.\n\nXuất thí nghiệm Portable v1\nXuất JSON · toàn bộ kế hoạch\nXuất CSV · kết quả cuối và toàn bộ lịch sử\nPhân tích kinh doanh nâng cao\nSố yêu cầu chấp nhận lũy kế\n\nBiểu đồ hiển thị khi cuộn tới vùng này.\n\nGiá trị cước trước ưu đãi (VND)\n\nBiểu đồ hiển thị khi cuộn tới vùng này.\n\nTiền hành khách và hỗ trợ voucher\n\nBiểu đồ hiển thị khi cuộn tới vùng này.\n\nPhân bổ ngân sách voucher\n\nBiểu đồ hiển thị khi cuộn tới vùng này.\n\nChi phí voucher đã sử dụng lũy kế (VND)\n\nBiểu đồ hiển thị khi cuộn tới vùng này.\n\nMức sử dụng đội xe (%)\n\nBiểu đồ hiển thị khi cuộn tới vùng này.\n\nThời gian chờ trung bình (giây)\nBaseline\nTreatment\n0\n40\n80\n120\n160\nChỉ tính kháchđã đón\nHiệu quả trên số chuyến tăng thêm\nSố yêu cầu chấp nhận tăng thêm\n3\nSố chuyến hoàn tất tăng thêm\n3\nChi phí voucher đã sử dụng\n200.000 ₫\nChi phí voucher mỗi chuyến hoàn tất tăng thêm (CPIC)\n66.667 ₫\n\nCác chỉ số có đơn vị riêng; chưa có mô hình chi phí để suy ra lợi nhuận hoặc ROI.\n\nPhân tích nhiều lượt chạy\nPhân tích nhiều lượt chạy\n\nMô phỏng ghép cặp · phân tích từng yếu tố (OFAT) · tối đa 90 lượt · chỉ bắt đầu khi bấm Chạy. Mọi giá trị của yếu tố dùng cùng danh sách Seed.\n\nSeed gốc\nSố Seed\n10\n30\nYếu tố phân tích độ nhạy\nKhông thay đổi\nAlpha (log-odds)\nBeta (độ nhạy giá)\nMức giảm giá\nNgân sách voucher\nSố xe\nPhân bố nhu cầu\n\nBeta (độ nhạy giá): 1 / 2 / 3 · 30 lượt trong cấu hình kế tiếp. Yếu tố mức giảm dùng số tiền cố định (VND); các yếu tố khác giữ chính sách voucher đang cấu hình.\n\nChạy nhiều lượt Hủy các lượt chạy\n\nĐã hủy · kết quả chưa đầy đủ · 30/30 bản ghi · 0 thành công · 0 thất bại · 30 bị hủy\n\nTổng hợp chung gộp các nhóm tham số. Dùng Phân tích độ nhạy và trường groups trong JSON để so sánh từng nhóm; Seed lặp giữa các nhóm không phải mẫu độc lập.\n\nMức tăng trung bình Không áp dụng · trung vị Không áp dụng · độ lệch chuẩn mẫu Không áp dụng · nhỏ nhất/lớn nhất Không áp dụng/Không áp dụng\nTỷ lệ lượt có cải thiện Không áp dụng (n=0) · chi phí voucher trung bình Không áp dụng · CPIC gộp Không áp dụng\n\nMức sử dụng ngân sách Không áp dụng (n=0) · chênh lệch thời gian chờ Không áp dụng giây (n=0) · chênh lệch mức sử dụng đội xe Không áp dụng (n=0)\n\nPhân bố mức tăng theo cặp\n\nBiểu đồ hiển thị khi cuộn tới vùng này.\n\nChi phí voucher và chuyến hoàn tất tăng thêm\n\nBiểu đồ hiển thị khi cuộn tới vùng này.\n\nPhân tích độ nhạy\n\nBiểu đồ hiển thị khi cuộn tới vùng này.\n\nXuất JSON nhiều lượt chạy Xuất CSV từng lượt chạyXuất CSV tổng hợp\nDanh sách lượt chạy và định nghĩa thống kê\nPhát\nTạm dừng\nThí nghiệm voucher\n0,0 / 2.115,2 giây · 0%\nĐến thời điểm\n1x\n2x\n4x\nTốc độ tùy chỉnh\nÁp dụng\n64x\na5-4-665be8b2 / 1"
+    },
+    {
+      "name": "live-a4-mobile-map",
+      "width": 390,
+      "height": 844,
+      "scrollWidth": 390,
+      "canvasCount": 1,
+      "overflowElements": [
+        {
+          "tag": "DIV",
+          "cls": "maplibregl-marker maplibregl-marker-anchor-center",
+          "right": 399.5625
+        },
+        {
+          "tag": "DIV",
+          "cls": "relative cursor-pointer",
+          "right": 399.5625
+        },
+        {
+          "tag": "BUTTON",
+          "cls": "fleet-marker dispatch-marker idle ",
+          "right": 399.5625
+        }
+      ],
+      "visiblePanels": [
+        "map-workspace",
+        "playback-dock"
+      ],
+      "clippedButtons": [],
+      "bodyText": "GSM Map Sandbox\nChi tiết\nBản đồ\nPhân tích\nKHU VỰC NGHIÊN CỨU\nTrung tâm TP. Hồ Chí Minh\nKiểm tra lại\n01\n02\n03\n04\n05\n© OpenStreetMap contributors\nGeoJSON cục bộ · OSMDữ liệu đường phố\nThí nghiệm voucher · Treatment · giả định PoC\n© OpenStreetMap contributors · Geofabrik\nPhát\nTạm dừng\nThí nghiệm voucher\n0,0 / 2.115,2 giây · 0%\nĐến thời điểm\n1x\n2x\n4x\nTốc độ tùy chỉnh\nÁp dụng\n64x\na5-4-665be8b2 / 1"
+    }
+  ],
+  "console": [
+    {
+      "type": "warning",
+      "message": "[.WebGL-0x5484001c0e00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+      "url": "http://127.0.0.1:4183/?runtime=saved&audit=1"
+    },
+    {
+      "type": "warning",
+      "message": "[.WebGL-0x5484001c0e00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+      "url": "http://127.0.0.1:4183/?runtime=saved&audit=1"
+    },
+    {
+      "type": "warning",
+      "message": "[.WebGL-0x5484001c0e00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+      "url": "http://127.0.0.1:4183/?runtime=saved&audit=1"
+    },
+    {
+      "type": "warning",
+      "message": "[.WebGL-0x5484001c0e00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)",
+      "url": "http://127.0.0.1:4183/?runtime=saved&audit=1"
+    },
+    {
+      "type": "error",
+      "message": "Failed to load resource: the server responded with a status of 502 (Bad Gateway)",
+      "url": "http://127.0.0.1:4174/?audit=1"
+    },
+    {
+      "type": "error",
+      "message": "Failed to load resource: the server responded with a status of 502 (Bad Gateway)",
+      "url": "http://127.0.0.1:4174/?audit=1"
+    },
+    {
+      "type": "error",
+      "message": "Failed to load resource: the server responded with a status of 502 (Bad Gateway)",
+      "url": "http://127.0.0.1:4174/?audit=1"
+    },
+    {
+      "type": "error",
+      "message": "Failed to load resource: the server responded with a status of 502 (Bad Gateway)",
+      "url": "http://127.0.0.1:4174/?audit=1"
+    },
+    {
+      "type": "error",
+      "message": "Failed to load resource: the server responded with a status of 502 (Bad Gateway)",
+      "url": "http://127.0.0.1:4174/?audit=1"
+    },
+    {
+      "type": "error",
+      "message": "Failed to load resource: the server responded with a status of 502 (Bad Gateway)",
+      "url": "http://127.0.0.1:4174/?audit=1"
+    },
+    {
+      "type": "error",
+      "message": "Failed to load resource: the server responded with a status of 502 (Bad Gateway)",
+      "url": "http://127.0.0.1:4174/?audit=1"
+    },
+    {
+      "type": "error",
+      "message": "Failed to load resource: the server responded with a status of 502 (Bad Gateway)",
+      "url": "http://127.0.0.1:4174/?audit=1"
+    },
+    {
+      "type": "error",
+      "message": "Failed to load resource: the server responded with a status of 502 (Bad Gateway)",
+      "url": "http://127.0.0.1:4174/?audit=1"
+    },
+    {
+      "type": "error",
+      "message": "Failed to load resource: the server responded with a status of 502 (Bad Gateway)",
+      "url": "http://127.0.0.1:4174/?audit=1"
+    },
+    {
+      "type": "error",
+      "message": "Failed to load resource: the server responded with a status of 502 (Bad Gateway)",
+      "url": "http://127.0.0.1:4174/?audit=1"
+    },
+    {
+      "type": "error",
+      "message": "Failed to load resource: the server responded with a status of 502 (Bad Gateway)",
+      "url": "http://127.0.0.1:4174/?audit=1"
+    }
+  ],
+  "requests": [
+    {
+      "url": "http://127.0.0.1:4183/?runtime=saved&audit=1",
+      "method": "GET",
+      "runtime": "about:blank"
+    },
+    {
+      "url": "http://127.0.0.1:4183/assets/index-CIhvZVpn.js",
+      "method": "GET",
+      "runtime": "http://127.0.0.1:4183/?runtime=saved&audit=1"
+    },
+    {
+      "url": "http://127.0.0.1:4183/assets/voucher-CcyJa6NC.js",
+      "method": "GET",
+      "runtime": "http://127.0.0.1:4183/?runtime=saved&audit=1"
+    },
+    {
+      "url": "http://127.0.0.1:4183/assets/artifact-Chfys4Bv.js",
+      "method": "GET",
+      "runtime": "http://127.0.0.1:4183/?runtime=saved&audit=1"
+    },
+    {
+      "url": "http://127.0.0.1:4183/assets/index-Dsc_Z7BS.css",
+      "method": "GET",
+      "runtime": "http://127.0.0.1:4183/?runtime=saved&audit=1"
+    },
+    {
+      "url": "http://127.0.0.1:4183/maplibre-gl-worker.mjs",
+      "method": "GET",
+      "runtime": "http://127.0.0.1:4183/?runtime=saved&audit=1"
+    },
+    {
+      "url": "http://127.0.0.1:4183/assets/voucher-dashboard-BbCpMsa-.js",
+      "method": "GET",
+      "runtime": "http://127.0.0.1:4183/?runtime=saved&audit=1"
+    },
+    {
+      "url": "http://127.0.0.1:4183/assets/chart-viewport-BIHUnrjH.js",
+      "method": "GET",
+      "runtime": "http://127.0.0.1:4183/?runtime=saved&audit=1"
+    },
+    {
+      "url": "http://127.0.0.1:4183/assets/geist-latin-wght-normal-BgDaEnEv.woff2",
+      "method": "GET",
+      "runtime": "http://127.0.0.1:4183/?runtime=saved&audit=1"
+    },
+    {
+      "url": "http://127.0.0.1:4183/assets/geist-vietnamese-wght-normal-6IgcOCM7.woff2",
+      "method": "GET",
+      "runtime": "http://127.0.0.1:4183/?runtime=saved&audit=1"
+    },
+    {
+      "url": "http://127.0.0.1:4183/assets/geist-latin-ext-wght-normal-DC-KSUi6.woff2",
+      "method": "GET",
+      "runtime": "http://127.0.0.1:4183/?runtime=saved&audit=1"
+    },
+    {
+      "url": "http://127.0.0.1:4183/replay/demo-experiment.json",
+      "method": "GET",
+      "runtime": "http://127.0.0.1:4183/?runtime=saved&audit=1"
+    },
+    {
+      "url": "http://127.0.0.1:4183/replay/manifest.json",
+      "method": "GET",
+      "runtime": "http://127.0.0.1:4183/?runtime=saved&audit=1"
+    },
+    {
+      "url": "http://127.0.0.1:4183/replay/map/streets.geojson",
+      "method": "GET",
+      "runtime": "http://127.0.0.1:4183/?runtime=saved&audit=1"
+    },
+    {
+      "url": "http://127.0.0.1:4183/replay/map/water.geojson",
+      "method": "GET",
+      "runtime": "http://127.0.0.1:4183/?runtime=saved&audit=1"
+    },
+    {
+      "url": "http://127.0.0.1:4183/replay/map/green.geojson",
+      "method": "GET",
+      "runtime": "http://127.0.0.1:4183/?runtime=saved&audit=1"
+    },
+    {
+      "url": "http://127.0.0.1:4183/replay/map/buildings.geojson",
+      "method": "GET",
+      "runtime": "http://127.0.0.1:4183/?runtime=saved&audit=1"
+    },
+    {
+      "url": "http://127.0.0.1:4183/replay/map/places.geojson",
+      "method": "GET",
+      "runtime": "http://127.0.0.1:4183/?runtime=saved&audit=1"
+    },
+    {
+      "url": "http://127.0.0.1:4183/replay/fonts/geist-latin.woff2",
+      "method": "GET",
+      "runtime": "http://127.0.0.1:4183/?runtime=saved&audit=1"
+    },
+    {
+      "url": "http://127.0.0.1:4183/replay/fonts/geist-vietnamese.woff2",
+      "method": "GET",
+      "runtime": "http://127.0.0.1:4183/?runtime=saved&audit=1"
+    },
+    {
+      "url": "http://127.0.0.1:4183/maplibre-gl-worker.mjs",
+      "method": "GET",
+      "runtime": "http://127.0.0.1:4183/?runtime=saved&audit=1"
+    },
+    {
+      "url": "http://127.0.0.1:4183/maplibre-gl-shared.mjs",
+      "method": "GET",
+      "runtime": "http://127.0.0.1:4183/?runtime=saved&audit=1"
+    },
+    {
+      "url": "http://127.0.0.1:4183/replay/fonts/geist-latin.woff2",
+      "method": "GET",
+      "runtime": "http://127.0.0.1:4183/?runtime=saved&audit=1"
+    },
+    {
+      "url": "http://127.0.0.1:4183/replay/fonts/geist-vietnamese.woff2",
+      "method": "GET",
+      "runtime": "http://127.0.0.1:4183/?runtime=saved&audit=1"
+    },
+    {
+      "url": "http://127.0.0.1:4183/assets/voucher-analytics-DFWV7y7-.js",
+      "method": "GET",
+      "runtime": "http://127.0.0.1:4183/?runtime=saved&audit=1"
+    },
+    {
+      "url": "http://127.0.0.1:4183/assets/batch-analysis-D4I748JJ.js",
+      "method": "GET",
+      "runtime": "http://127.0.0.1:4183/?runtime=saved&audit=1"
+    },
+    {
+      "url": "http://127.0.0.1:4174/?audit=1",
+      "method": "GET",
+      "runtime": "http://127.0.0.1:4183/?runtime=saved&audit=1"
+    },
+    {
+      "url": "http://127.0.0.1:4174/assets/index-CIhvZVpn.js",
+      "method": "GET",
+      "runtime": "http://127.0.0.1:4174/?audit=1"
+    },
+    {
+      "url": "http://127.0.0.1:4174/assets/voucher-CcyJa6NC.js",
+      "method": "GET",
+      "runtime": "http://127.0.0.1:4174/?audit=1"
+    },
+    {
+      "url": "http://127.0.0.1:4174/assets/artifact-Chfys4Bv.js",
+      "method": "GET",
+      "runtime": "http://127.0.0.1:4174/?audit=1"
+    },
+    {
+      "url": "http://127.0.0.1:4174/assets/index-Dsc_Z7BS.css",
+      "method": "GET",
+      "runtime": "http://127.0.0.1:4174/?audit=1"
+    },
+    {
+      "url": "http://127.0.0.1:4174/maplibre-gl-worker.mjs",
+      "method": "GET",
+      "runtime": "http://127.0.0.1:4174/?audit=1"
+    },
+    {
+      "url": "http://127.0.0.1:4174/assets/geist-latin-wght-normal-BgDaEnEv.woff2",
+      "method": "GET",
+      "runtime": "http://127.0.0.1:4174/?audit=1"
+    },
+    {
+      "url": "http://127.0.0.1:4174/assets/geist-vietnamese-wght-normal-6IgcOCM7.woff2",
+      "method": "GET",
+      "runtime": "http://127.0.0.1:4174/?audit=1"
+    },
+    {
+      "url": "http://127.0.0.1:4174/assets/geist-latin-ext-wght-normal-DC-KSUi6.woff2",
+      "method": "GET",
+      "runtime": "http://127.0.0.1:4174/?audit=1"
+    },
+    {
+      "url": "http://127.0.0.1:4174/api/dataset/status",
+      "method": "GET",
+      "runtime": "http://127.0.0.1:4174/?audit=1"
+    },
+    {
+      "url": "http://127.0.0.1:4174/api/map/streets",
+      "method": "GET",
+      "runtime": "http://127.0.0.1:4174/?audit=1"
+    },
+    {
+      "url": "http://127.0.0.1:4174/api/map/water",
+      "method": "GET",
+      "runtime": "http://127.0.0.1:4174/?audit=1"
+    },
+    {
+      "url": "http://127.0.0.1:4174/api/map/green",
+      "method": "GET",
+      "runtime": "http://127.0.0.1:4174/?audit=1"
+    },
+    {
+      "url": "http://127.0.0.1:4174/api/map/buildings",
+      "method": "GET",
+      "runtime": "http://127.0.0.1:4174/?audit=1"
+    },
+    {
+      "url": "http://127.0.0.1:4174/api/map/places",
+      "method": "GET",
+      "runtime": "http://127.0.0.1:4174/?audit=1"
+    },
+    {
+      "url": "http://127.0.0.1:4174/api/route",
+      "method": "POST",
+      "runtime": "http://127.0.0.1:4174/?audit=1"
+    },
+    {
+      "url": "http://127.0.0.1:4174/assets/geist-latin-wght-normal-BgDaEnEv.woff2",
+      "method": "GET",
+      "runtime": "http://127.0.0.1:4174/?audit=1"
+    },
+    {
+      "url": "http://127.0.0.1:4174/assets/geist-vietnamese-wght-normal-6IgcOCM7.woff2",
+      "method": "GET",
+      "runtime": "http://127.0.0.1:4174/?audit=1"
+    },
+    {
+      "url": "http://127.0.0.1:4174/assets/geist-vietnamese-wght-normal-6IgcOCM7.woff2",
+      "method": "GET",
+      "runtime": "http://127.0.0.1:4174/?audit=1"
+    },
+    {
+      "url": "http://127.0.0.1:4174/assets/geist-latin-wght-normal-BgDaEnEv.woff2",
+      "method": "GET",
+      "runtime": "http://127.0.0.1:4174/?audit=1"
+    },
+    {
+      "url": "http://127.0.0.1:4174/api/fleet/candidates",
+      "method": "GET",
+      "runtime": "http://127.0.0.1:4174/?audit=1"
+    },
+    {
+      "url": "http://127.0.0.1:4174/api/route",
+      "method": "POST",
+      "runtime": "http://127.0.0.1:4174/?audit=1"
+    },
+    {
+      "url": "http://127.0.0.1:4174/api/route",
+      "method": "POST",
+      "runtime": "http://127.0.0.1:4174/?audit=1"
+    },
+    {
+      "url": "http://127.0.0.1:4174/api/route",
+      "method": "POST",
+      "runtime": "http://127.0.0.1:4174/?audit=1"
+    },
+    {
+      "url": "http://127.0.0.1:4174/api/route",
+      "method": "POST",
+      "runtime": "http://127.0.0.1:4174/?audit=1"
+    },
+    {
+      "url": "http://127.0.0.1:4174/api/route",
+      "method": "POST",
+      "runtime": "http://127.0.0.1:4174/?audit=1"
+    },
+    {
+      "url": "http://127.0.0.1:4174/api/booking-simulation/prepare",
+      "method": "POST",
+      "runtime": "http://127.0.0.1:4174/?audit=1"
+    },
+    {
+      "url": "http://127.0.0.1:4174/api/dataset/status",
+      "method": "GET",
+      "runtime": "http://127.0.0.1:4174/?audit=1"
+    },
+    {
+      "url": "http://127.0.0.1:4174/assets/voucher-dashboard-BbCpMsa-.js",
+      "method": "GET",
+      "runtime": "http://127.0.0.1:4174/?audit=1"
+    },
+    {
+      "url": "http://127.0.0.1:4174/assets/chart-viewport-BIHUnrjH.js",
+      "method": "GET",
+      "runtime": "http://127.0.0.1:4174/?audit=1"
+    },
+    {
+      "url": "http://127.0.0.1:4174/api/voucher-experiment/prepare",
+      "method": "POST",
+      "runtime": "http://127.0.0.1:4174/?audit=1"
+    },
+    {
+      "url": "http://127.0.0.1:4174/assets/voucher-analytics-DFWV7y7-.js",
+      "method": "GET",
+      "runtime": "http://127.0.0.1:4174/?audit=1"
+    },
+    {
+      "url": "http://127.0.0.1:4174/assets/batch-analysis-D4I748JJ.js",
+      "method": "GET",
+      "runtime": "http://127.0.0.1:4174/?audit=1"
+    },
+    {
+      "url": "http://127.0.0.1:4174/api/voucher-experiment/prepare",
+      "method": "POST",
+      "runtime": "http://127.0.0.1:4174/?audit=1"
+    },
+    {
+      "url": "http://127.0.0.1:4174/api/dataset/status",
+      "method": "GET",
+      "runtime": "http://127.0.0.1:4174/?audit=1"
+    },
+    {
+      "url": "http://127.0.0.1:4174/api/voucher-experiment/prepare",
+      "method": "POST",
+      "runtime": "http://127.0.0.1:4174/?audit=1"
+    },
+    {
+      "url": "http://127.0.0.1:4174/api/voucher-experiment/prepare",
+      "method": "POST",
+      "runtime": "http://127.0.0.1:4174/?audit=1"
+    },
+    {
+      "url": "http://127.0.0.1:4174/api/voucher-experiment/prepare",
+      "method": "POST",
+      "runtime": "http://127.0.0.1:4174/?audit=1"
+    },
+    {
+      "url": "http://127.0.0.1:4174/api/voucher-experiment/prepare",
+      "method": "POST",
+      "runtime": "http://127.0.0.1:4174/?audit=1"
+    },
+    {
+      "url": "http://127.0.0.1:4174/api/voucher-experiment/prepare",
+      "method": "POST",
+      "runtime": "http://127.0.0.1:4174/?audit=1"
+    },
+    {
+      "failedUrl": "http://127.0.0.1:4174/api/voucher-experiment/prepare",
+      "status": 502
+    },
+    {
+      "url": "http://127.0.0.1:4174/api/voucher-experiment/prepare",
+      "method": "POST",
+      "runtime": "http://127.0.0.1:4174/?audit=1"
+    },
+    {
+      "url": "http://127.0.0.1:4174/api/dataset/status",
+      "method": "GET",
+      "runtime": "http://127.0.0.1:4174/?audit=1"
+    },
+    {
+      "failedUrl": "http://127.0.0.1:4174/api/voucher-experiment/prepare",
+      "status": 502
+    },
+    {
+      "url": "http://127.0.0.1:4174/api/voucher-experiment/prepare",
+      "method": "POST",
+      "runtime": "http://127.0.0.1:4174/?audit=1"
+    },
+    {
+      "url": "http://127.0.0.1:4174/api/voucher-experiment/prepare",
+      "method": "POST",
+      "runtime": "http://127.0.0.1:4174/?audit=1"
+    },
+    {
+      "url": "http://127.0.0.1:4174/api/voucher-experiment/prepare",
+      "method": "POST",
+      "runtime": "http://127.0.0.1:4174/?audit=1"
+    },
+    {
+      "failedUrl": "http://127.0.0.1:4174/api/voucher-experiment/prepare",
+      "status": 502
+    },
+    {
+      "url": "http://127.0.0.1:4174/api/voucher-experiment/prepare",
+      "method": "POST",
+      "runtime": "http://127.0.0.1:4174/?audit=1"
+    },
+    {
+      "url": "http://127.0.0.1:4174/api/voucher-experiment/prepare",
+      "method": "POST",
+      "runtime": "http://127.0.0.1:4174/?audit=1"
+    },
+    {
+      "url": "http://127.0.0.1:4174/api/dataset/status",
+      "method": "GET",
+      "runtime": "http://127.0.0.1:4174/?audit=1"
+    },
+    {
+      "url": "http://127.0.0.1:4174/api/voucher-experiment/prepare",
+      "method": "POST",
+      "runtime": "http://127.0.0.1:4174/?audit=1"
+    },
+    {
+      "url": "http://127.0.0.1:4174/api/voucher-experiment/prepare",
+      "method": "POST",
+      "runtime": "http://127.0.0.1:4174/?audit=1"
+    },
+    {
+      "url": "http://127.0.0.1:4174/api/voucher-experiment/prepare",
+      "method": "POST",
+      "runtime": "http://127.0.0.1:4174/?audit=1"
+    },
+    {
+      "url": "http://127.0.0.1:4174/api/voucher-experiment/prepare",
+      "method": "POST",
+      "runtime": "http://127.0.0.1:4174/?audit=1"
+    },
+    {
+      "failedUrl": "http://127.0.0.1:4174/api/voucher-experiment/prepare",
+      "status": 502
+    },
+    {
+      "url": "http://127.0.0.1:4174/api/voucher-experiment/prepare",
+      "method": "POST",
+      "runtime": "http://127.0.0.1:4174/?audit=1"
+    },
+    {
+      "failedUrl": "http://127.0.0.1:4174/api/voucher-experiment/prepare",
+      "status": 502
+    },
+    {
+      "url": "http://127.0.0.1:4174/api/voucher-experiment/prepare",
+      "method": "POST",
+      "runtime": "http://127.0.0.1:4174/?audit=1"
+    },
+    {
+      "url": "http://127.0.0.1:4174/api/dataset/status",
+      "method": "GET",
+      "runtime": "http://127.0.0.1:4174/?audit=1"
+    },
+    {
+      "url": "http://127.0.0.1:4174/api/voucher-experiment/prepare",
+      "method": "POST",
+      "runtime": "http://127.0.0.1:4174/?audit=1"
+    },
+    {
+      "url": "http://127.0.0.1:4174/api/voucher-experiment/prepare",
+      "method": "POST",
+      "runtime": "http://127.0.0.1:4174/?audit=1"
+    },
+    {
+      "failedUrl": "http://127.0.0.1:4174/api/voucher-experiment/prepare",
+      "status": 502
+    },
+    {
+      "url": "http://127.0.0.1:4174/api/voucher-experiment/prepare",
+      "method": "POST",
+      "runtime": "http://127.0.0.1:4174/?audit=1"
+    },
+    {
+      "failedUrl": "http://127.0.0.1:4174/api/voucher-experiment/prepare",
+      "status": 502
+    },
+    {
+      "url": "http://127.0.0.1:4174/api/voucher-experiment/prepare",
+      "method": "POST",
+      "runtime": "http://127.0.0.1:4174/?audit=1"
+    },
+    {
+      "failedUrl": "http://127.0.0.1:4174/api/voucher-experiment/prepare",
+      "status": 502
+    },
+    {
+      "url": "http://127.0.0.1:4174/api/voucher-experiment/prepare",
+      "method": "POST",
+      "runtime": "http://127.0.0.1:4174/?audit=1"
+    },
+    {
+      "failedUrl": "http://127.0.0.1:4174/api/voucher-experiment/prepare",
+      "status": 502
+    },
+    {
+      "url": "http://127.0.0.1:4174/api/voucher-experiment/prepare",
+      "method": "POST",
+      "runtime": "http://127.0.0.1:4174/?audit=1"
+    },
+    {
+      "url": "http://127.0.0.1:4174/api/voucher-experiment/prepare",
+      "method": "POST",
+      "runtime": "http://127.0.0.1:4174/?audit=1"
+    },
+    {
+      "url": "http://127.0.0.1:4174/api/dataset/status",
+      "method": "GET",
+      "runtime": "http://127.0.0.1:4174/?audit=1"
+    },
+    {
+      "url": "http://127.0.0.1:4174/api/voucher-experiment/prepare",
+      "method": "POST",
+      "runtime": "http://127.0.0.1:4174/?audit=1"
+    },
+    {
+      "url": "http://127.0.0.1:4174/api/voucher-experiment/prepare",
+      "method": "POST",
+      "runtime": "http://127.0.0.1:4174/?audit=1"
+    },
+    {
+      "url": "http://127.0.0.1:4174/api/voucher-experiment/prepare",
+      "method": "POST",
+      "runtime": "http://127.0.0.1:4174/?audit=1"
+    },
+    {
+      "url": "http://127.0.0.1:4174/api/voucher-experiment/prepare",
+      "method": "POST",
+      "runtime": "http://127.0.0.1:4174/?audit=1"
+    },
+    {
+      "failedUrl": "http://127.0.0.1:4174/api/voucher-experiment/prepare",
+      "status": 502
+    },
+    {
+      "url": "http://127.0.0.1:4174/api/voucher-experiment/prepare",
+      "method": "POST",
+      "runtime": "http://127.0.0.1:4174/?audit=1"
+    },
+    {
+      "failedUrl": "http://127.0.0.1:4174/api/voucher-experiment/prepare",
+      "status": 502
+    },
+    {
+      "url": "http://127.0.0.1:4174/api/voucher-experiment/prepare",
+      "method": "POST",
+      "runtime": "http://127.0.0.1:4174/?audit=1"
+    },
+    {
+      "url": "http://127.0.0.1:4174/api/dataset/status",
+      "method": "GET",
+      "runtime": "http://127.0.0.1:4174/?audit=1"
+    },
+    {
+      "url": "http://127.0.0.1:4174/api/voucher-experiment/prepare",
+      "method": "POST",
+      "runtime": "http://127.0.0.1:4174/?audit=1"
+    },
+    {
+      "url": "http://127.0.0.1:4174/api/voucher-experiment/prepare",
+      "method": "POST",
+      "runtime": "http://127.0.0.1:4174/?audit=1"
+    },
+    {
+      "failedUrl": "http://127.0.0.1:4174/api/voucher-experiment/prepare",
+      "status": 502
+    },
+    {
+      "url": "http://127.0.0.1:4174/api/voucher-experiment/prepare",
+      "method": "POST",
+      "runtime": "http://127.0.0.1:4174/?audit=1"
+    }
+  ],
+  "downloads": [
+    {
+      "name": "portable.json",
+      "suggestedFilename": "gsm-experiment-v1-da5babf70947.json"
+    },
+    {
+      "name": "legacy.json",
+      "suggestedFilename": "voucher-da5babf70947.json"
+    },
+    {
+      "name": "summary.csv",
+      "suggestedFilename": "voucher-summary-da5babf70947.csv"
+    },
+    {
+      "name": "decisions.csv",
+      "suggestedFilename": "voucher-decisions-da5babf70947.csv"
+    },
+    {
+      "name": "bookings.csv",
+      "suggestedFilename": "voucher-bookings-da5babf70947.csv"
+    },
+    {
+      "name": "ledger.csv",
+      "suggestedFilename": "voucher-ledger-da5babf70947.csv"
+    },
+    {
+      "name": "series.csv",
+      "suggestedFilename": "voucher-series-da5babf70947.csv"
+    },
+    {
+      "name": "batch.json",
+      "suggestedFilename": "gsm-batch-v1.json"
+    },
+    {
+      "name": "batch.csv",
+      "suggestedFilename": "gsm-batch-runs.csv"
+    },
+    {
+      "name": "batch-summary.csv",
+      "suggestedFilename": "gsm-batch-summary.csv"
+    },
+    {
+      "name": "sensitivity.json",
+      "suggestedFilename": "gsm-batch-v1.json"
+    }
+  ],
+  "errors": []
+}

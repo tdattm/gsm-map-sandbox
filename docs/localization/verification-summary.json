@@ -1,0 +1,46 @@
+{
+  "date": "2026-10-13",
+  "conclusion": "CONDITIONAL PASS",
+  "branch": "feature/i18n-vietnamese-ui",
+  "initialUnchangedHead": "03ae48cfc1a87a740aa65c355fae8bdedfa62f78",
+  "localMainAtPreflight": "71dd995adb1947028cd32df38626dd6feceda175",
+  "baseline": {
+    "backendPassed": 122,
+    "backendSkipped": 5,
+    "frontendPassed": 125,
+    "typecheck": "PASS",
+    "build": "PASS"
+  },
+  "final": {
+    "backendRealDataPassed": 127,
+    "frontendPassed": 140,
+    "typecheck": "PASS",
+    "build": "PASS",
+    "browserChecks": 46,
+    "layouts": 21,
+    "screenshots": 23,
+    "overflowLayouts": 0,
+    "clippedButtons": 0,
+    "uncaughtExceptions": 0,
+    "savedAdditionalChecks": 18,
+    "protectedFiles": 2844,
+    "changedProtectedFiles": 0,
+    "batchExportVerification": {
+      "schema": "PASS",
+      "originalDefinitions": "PASS",
+      "runsCsv": "PASS: byte-exact",
+      "summaryCsv": "PASS: byte-exact",
+      "requested": 10,
+      "successful": 7,
+      "failed": 3,
+      "rawExportStatus": "Complete — tất cả jobs đã có kết quả"
+    }
+  },
+  "limitations": [
+    "Local main does not contain A5; no Git mutation performed.",
+    "Batch none has 7 successful / 3 rejected; beta OFAT has 21 successful / 9 rejected, matching historical A5 numerical results.",
+    "Native OS/browser dialogs follow their environment language."
+  ],
+  "noCommitPushMerge": true,
+  "noOtherRepositoryAccess": true
+}

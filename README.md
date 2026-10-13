@@ -37,11 +37,11 @@ Set-Location frontend
 npm.cmd run dev
 ```
 
-Mở <http://127.0.0.1:5173>. Chọn một trong bốn chế độ: **Single Trip**, **Fleet Simulation**, **Booking & Dispatch** hoặc **Voucher Experiment Studio**. API docs ở <http://127.0.0.1:8000/docs>. Nếu OSRM container đang chạy, bỏ qua `docker start`. Nếu graph đã có nhưng container chưa được tạo, chạy `python scripts\pipeline.py serve --detach`. Kiểm tra port 5000, 8000 và 5173 trước nếu ứng dụng đã mở.
+Mở <http://127.0.0.1:5173>. Chọn một trong bốn chế độ: **Một hành trình**, **Mô phỏng đội xe**, **Đặt xe và điều phối** hoặc **Phòng thí nghiệm voucher**. Tài liệu API ở <http://127.0.0.1:8000/docs>. Nếu OSRM container đang chạy, bỏ qua `docker start`. Nếu graph đã có nhưng container chưa được tạo, chạy `python scripts\pipeline.py serve --detach`. Kiểm tra port 5000, 8000 và 5173 trước nếu ứng dụng đã mở.
 
 Nếu chưa có PBF, bản đồ/render GeoJSON hoặc graph OSRM, xem [hướng dẫn dữ liệu A1](docs/A1-report.md). Không có fallback sang dịch vụ bản đồ hay routing công cộng.
 
-## Saved Replay và Batch Analysis
+## Phát lại đã lưu (Saved Replay) và phân tích nhiều lượt chạy
 
 Saved Replay chạy riêng, không cần FastAPI hoặc OSRM. Sau khi có render assets và sample A4 trên máy, trong PowerShell:
 
@@ -55,9 +55,11 @@ Set-Location ..
 py -3 scripts\serve_replay.py
 ```
 
-Mở <http://127.0.0.1:4173/?runtime=saved> rồi chọn **Load Saved Demo** hoặc import file **Export Portable v1**. Server chỉ phục vụ static files và chặn `/api/*`. Khi chia sẻ demo, gửi thư mục `frontend/dist` đã build; không cần gửi PBF hay graph OSRM.
+Mở <http://127.0.0.1:4173/?runtime=saved>, mở **Chi tiết**, rồi chọn **Tải kịch bản mẫu** hoặc **Nhập thí nghiệm đã lưu** với file được tạo bằng **Xuất thí nghiệm Portable v1**. Server chỉ phục vụ tài nguyên cục bộ và chặn `/api/*`. Khi chia sẻ demo, gửi thư mục `frontend/dist` đã build; không cần gửi PBF hay graph OSRM.
 
-Batch cần Live backend và OSRM: trong Voucher Experiment Studio, Prepare Experiment rồi mở **Phân tích kinh doanh nâng cao → Batch Experiment Analysis**. Hướng dẫn batch, định nghĩa chỉ số và giới hạn được ghi trong [báo cáo A5](docs/A5-report.md). Legacy A4 JSON cần đóng gói trước khi import vào Saved Replay; xem README A5 trong báo cáo để biết lệnh.
+Phân tích nhiều lượt cần backend Live và OSRM: trong **Phòng thí nghiệm voucher**, chọn **Thí nghiệm trực tiếp (Live)**, bấm **Chuẩn bị thí nghiệm**, rồi mở **Phân tích kinh doanh nâng cao → Phân tích nhiều lượt chạy**. Chọn Seed gốc, số Seed và yếu tố phân tích độ nhạy; bấm **Chạy nhiều lượt**. **Hủy các lượt chạy** giữ kết quả đã có. Kiểm tra số lượt thành công/thất bại trước khi xuất JSON hoặc CSV. Định nghĩa thống kê và giới hạn được ghi trong [báo cáo A5](docs/A5-report.md). Legacy A4 JSON cần đóng gói trước khi nhập vào Saved Replay; xem README A5 trong báo cáo để biết lệnh.
+
+Thanh phát lại dùng **Phát**, **Tạm dừng**, **Về đầu**, **Đến thời điểm** và **Tốc độ tùy chỉnh** (1x–64x). **Tại thời điểm hiện tại** phản ánh tiến độ mô phỏng; **Kết quả cuối kịch bản** hiển thị kết quả toàn bộ kế hoạch. Baseline là kịch bản không voucher; Treatment là kịch bản áp dụng voucher. Xem [bảng thuật ngữ](docs/localization/terminology-vi.md) và [báo cáo Việt hóa](docs/localization/localization-report.md).
 
 ## Tài liệu theo giai đoạn
 
