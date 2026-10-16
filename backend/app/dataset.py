@@ -3,6 +3,7 @@ import shutil
 
 import httpx
 from .config import Settings
+from .integrity import region_integrity, digest
 
 GRAPH_FILES = ("hcm-center.osrm.partition", "hcm-center.osrm.cells", "hcm-center.osrm.mldgr")
 
@@ -73,6 +74,10 @@ def artifact_status(settings: Settings):
                              for name, entry in map_manifest["layers"].items()))
     except (OSError, ValueError, KeyError, TypeError, AttributeError):
         pass
+    if getattr(settings, "artifact_identity", None):
+        source = pbf_status(settings).get("verification")
+        valid_map, valid_graph = region_integrity(settings, source, map_manifest, manifest)
+        map_ready, graph_files = map_ready and valid_map, graph_files and valid_graph
     return {"map_ready": map_ready, "map_manifest": map_manifest,
             "graph_ready": bool(graph_files), "routing_manifest": manifest,
             "extracted_ready": getattr(settings, "extracted_path", settings.routing_dir.parent / "extracted/hcm-center.osm.pbf").is_file()}
@@ -86,8 +91,24 @@ async def router_status(settings: Settings):
             response.raise_for_status()
             data = response.json()
         valid = (data.get("code") == "Ok" and isinstance(data.get("waypoints"), list) and len(data["waypoints"]) >= 1)
+        if valid and getattr(settings, "artifact_identity", None):
+            # The serve command first validates the container image/command/mount,
+            # then records graph-specific hints. A different graph fails these probes.
+            evidence = json.loads((settings.routing_dir/'router-evidence.json').read_text(encoding='utf-8'))
+            valid = (evidence['identity'] == settings.artifact_identity
+                     and evidence['manifest_sha256'] == digest(settings.routing_dir/'manifest.json')
+                     and len(evidence['probes']) >= 3)
+            async with httpx.AsyncClient(timeout=settings.osrm_timeout_seconds, trust_env=False) as client:
+                for probe in evidence['probes']:
+                    point = probe['point']
+                    response = await client.get(f'{settings.osrm_base_url}/nearest/v1/driving/{point[0]},{point[1]}')
+                    response.raise_for_status()
+                    waypoint = response.json()['waypoints'][0]
+                    valid = valid and waypoint['hint'] == probe['hint'] and waypoint['location'] == probe['location']
+            if not valid:
+                return {"state": "identity_mismatch", "url": settings.osrm_base_url}
         return {"state": "connected" if valid else "no_segment", "url": settings.osrm_base_url}
-    except (httpx.HTTPError, ValueError, AttributeError):
+    except (httpx.HTTPError, OSError, ValueError, KeyError, IndexError, TypeError, AttributeError):
         return {"state": "unavailable", "url": settings.osrm_base_url}
 
 

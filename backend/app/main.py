@@ -172,6 +172,11 @@ def create_app(settings: Settings | None = None, registry: RegionRegistry | None
             return context
         status = await public_region_status(context)
         if not status["ready"]:
+            if artifact_status(context)['graph_ready']:
+                if status['osrm']['state'] == 'unavailable':
+                    api_error('ROUTER_UNAVAILABLE', 'Không kết nối được OSRM CAR của khu vực.')
+                if status['osrm']['state'] == 'identity_mismatch':
+                    api_error('ROUTER_IDENTITY_MISMATCH', 'OSRM không khớp graph đã kiểm chứng của khu vực.')
             api_error("REGION_NOT_READY", status["readinessReason"])
         return context
 

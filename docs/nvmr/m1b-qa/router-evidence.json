@@ -1,0 +1,46 @@
+{
+  "identity": {
+    "region_id": "nvmr-hanoi-core",
+    "config_sha256": "91c114a869a0eebe23d91df77641b9dd2f52afb7b7d09e941f249f78cfc9f05c",
+    "pipeline_version": "hanoi-car-pilot/v1"
+  },
+  "manifest_sha256": "a24d4957a01ceeb04a0de1ad680fe4c5dd51732a7b381d9368e249a65c1b29b5",
+  "container": "gsm-map-osrm-hanoi-car",
+  "image_digest": "ghcr.io/project-osrm/osrm-backend@sha256:855614a38f464b0558a2ad6eaa7cb8c139f39887da9b38b485ce453c6e6e6124",
+  "probes": [
+    {
+      "point": [
+        105.83850000000001,
+        21.0285
+      ],
+      "location": [
+        105.838453,
+        21.028346
+      ],
+      "hint": "RHwBgP___38ZAAAAGgAAAAAAAAB0AAAAto8IQlrl1D0AAAAAfUoZQxkAAAAaAAAAAAAAAHQAAADuAAAAdfdOBvrdQAGk904GlN5AAQAA3xFIiwgY"
+    },
+    {
+      "point": [
+        105.841,
+        21.028
+      ],
+      "location": [
+        105.840802,
+        21.028008
+      ],
+      "hint": "C6gBgFuoAYCnAAAAAAAAAAAAAACNAAAAZRMLQgAAAAAAAAAAianrQVMAAAAAAAAAAAAAAEcAAADuAAAAogBPBqjcQAFoAU8GoNxAAQAAbwBIiwgY"
+    },
+    {
+      "point": [
+        105.832,
+        21.039
+      ],
+      "location": [
+        105.831997,
+        21.038985
+      ],
+      "hint": "b4oBgHCKAYBcAAAAKAAAAAAAAAAAAAAACA0ZQiybhUEAAAAAAAAAAFwAAAAoAAAAAAAAAAAAAADuAAAAPd5OBokHQQFA3k4GmAdBAQAArxFIiwgY"
+    }
+  ],
+  "created_utc": "2026-10-16T03:57:30.407099+00:00"
+}

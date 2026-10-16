@@ -1,0 +1,98 @@
+{
+  "identity": {
+    "region_id": "nvmr-hanoi-core",
+    "config_sha256": "91c114a869a0eebe23d91df77641b9dd2f52afb7b7d09e941f249f78cfc9f05c",
+    "pipeline_version": "hanoi-car-pilot/v1"
+  },
+  "source_sha256": "2fbd2ee6b4dc151eecf04fa6823cddf584b47423e190118b10fce8b6115e9d8a",
+  "extract_sha256": "18fd3892f6d766387f2c3217d5d104e09a9319d3905a9172834b21c0064d6308",
+  "routing_bbox": [
+    105.762,
+    20.962,
+    105.915,
+    21.095
+  ],
+  "strategy": "smart",
+  "relation_types": "multipolygon,restriction",
+  "fileinfo": {
+    "file": {
+      "name": "/input/data/regions/nvmr-hanoi-core/extracted/coverage.osm.pbf",
+      "format": "PBF",
+      "compression": "none",
+      "size": 9670300
+    },
+    "header": {
+      "boxes": [
+        [
+          105.762,
+          20.962,
+          105.915,
+          21.095
+        ]
+      ],
+      "with_history": false,
+      "option": {
+        "generator": "osmium/1.19.0",
+        "pbf_dense_nodes": "true",
+        "pbf_optional_feature_0": "Sort.Type_then_ID",
+        "sorting": "Type_then_ID"
+      }
+    },
+    "data": {
+      "bbox": [
+        105.5870905,
+        20.7032404,
+        106.3021514,
+        21.2043839
+      ],
+      "timestamp": {
+        "first": "2007-10-16T12:57:06Z",
+        "last": "2026-10-09T16:26:15Z"
+      },
+      "objects_ordered": true,
+      "multiple_versions": false,
+      "crc32": "a0ab36a7",
+      "count": {
+        "changesets": 0,
+        "nodes": 880229,
+        "ways": 209749,
+        "relations": 4147
+      },
+      "minid": {
+        "changesets": 0,
+        "nodes": 74126839,
+        "ways": 9566396,
+        "relations": 49915
+      },
+      "maxid": {
+        "changesets": 0,
+        "nodes": 14268463135,
+        "ways": 1566862380,
+        "relations": 21578809
+      },
+      "buffers": {
+        "count": 1553,
+        "size": 99087224,
+        "capacity": 103481344
+      },
+      "metadata": {
+        "all_objects": {
+          "version": true,
+          "timestamp": true,
+          "changeset": false,
+          "user": false,
+          "uid": false
+        },
+        "some_objects": {
+          "version": true,
+          "timestamp": true,
+          "changeset": false,
+          "user": false,
+          "uid": false
+        }
+      }
+    }
+  },
+  "osmium_image": "iboates/osmium@sha256:a67987f7d822d951ae1979de656ab7bd8051605f79d2751ea4800cc6057124be",
+  "created_utc": "2026-10-16T03:44:38.182349+00:00"
+}

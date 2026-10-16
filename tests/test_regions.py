@@ -114,14 +114,18 @@ def test_registry_is_immutable_and_snapshots_settings():
         registry.contexts["other"] = hcm
 
 
-def test_production_hanoi_not_ready_and_public_metadata_redacted():
-    registry = default_registry(Settings())
+def test_unconfigured_hanoi_not_ready_and_public_metadata_redacted():
+    original = default_registry(Settings())
+    # Preserve M1a unavailable-region assertions independently of local M1b data.
+    unavailable = replace(original.resolve('nvmr-hanoi-core'), enabled=False,
+        operating_bbox=None, routing_bbox=None, render_bbox=None, unavailable_reason='M1b data not prepared fixture')
+    registry = RegionRegistry({**original.contexts, unavailable.id: unavailable})
     hanoi = registry.resolve("nvmr-hanoi-core")
     status = asyncio.run(public_region_status(hanoi))
     assert not status["ready"] and not status["artifacts"]["map_ready"]
     assert status["coverage"] == {"operating": None, "routing": None, "render": None}
     assert "M1b" in status["readinessReason"]
-    client = TestClient(create_app())
+    client = TestClient(create_app(registry=registry))
     payload = client.get('/api/regions').json()
     assert payload["defaultRegionId"] == "hcm-center"
     assert [r["id"] for r in payload["regions"]] == ["hcm-center", "nvmr-hanoi-core"]

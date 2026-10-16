@@ -1,5 +1,6 @@
 """Server-owned registry. Contexts are immutable snapshots, never an active region."""
 import json
+import hashlib
 import math
 import re
 from dataclasses import dataclass
@@ -38,6 +39,14 @@ class RegionContext:
     max_snap_meters: float
     enabled: bool = True
     unavailable_reason: str = ""
+    artifact_config_sha256: str = ""
+
+    @property
+    def artifact_identity(self):
+        if not self.artifact_config_sha256:
+            return None  # Legacy HCM and explicit synthetic test contexts.
+        return {"region_id": self.id, "config_sha256": self.artifact_config_sha256,
+                "pipeline_version": "hanoi-car-pilot/v1"}
 
     def __post_init__(self):
         object.__setattr__(self, "region", FrozenRegion.model_validate(self.region.model_dump()))
@@ -89,19 +98,20 @@ def default_registry(settings: Settings) -> RegionRegistry:
         graph_basename="hcm-center", osrm_base_url=settings.osrm_base_url,
         osrm_timeout_seconds=settings.osrm_timeout_seconds, max_snap_meters=settings.max_snap_meters)
     # The file is shipped with the server, not selected by an HTTP parameter.
-    config = json.loads((Path(__file__).resolve().parents[2] / "config/regions/nvmr-hanoi-core.json").read_text(encoding="utf-8"))
+    config_bytes = (Path(__file__).resolve().parents[2] / "config/regions/nvmr-hanoi-core.json").read_bytes()
+    config = json.loads(config_bytes)
     viewport = tuple(config["viewport_bbox"])
     w, s, e, n = viewport
     hanoi_region = FrozenRegion.model_validate({**region.model_dump(), "name": config["label"], "display_bbox": viewport,
-        "routing_buffer_degrees": 0, "boundary_note": config["note"]})
-    # These are reserved namespaces only. No Hanoi artifacts are prepared in M1a.
+        "routing_buffer_degrees": config.get("routing_buffer_degrees", 0), "boundary_note": config["note"]})
     base = settings.resolve("data/regions/nvmr-hanoi-core")
     hanoi = RegionContext(
         id="nvmr-hanoi-core", region=hanoi_region,
         viewport_center=((w+e)/2, (s+n)/2), viewport_zoom=config["viewport_zoom"],
-        operating_bbox=None, routing_bbox=None, render_bbox=None,
-        pbf_path=base / "source.osm.pbf", map_path=base / "render/streets.geojson",
+        operating_bbox=config.get("operating_bbox"), routing_bbox=config.get("routing_bbox"), render_bbox=config.get("render_bbox"),
+        pbf_path=settings.pbf_path, map_path=base / "render/streets.geojson",
         routing_dir=base / "routing/car", extracted_path=base / "extracted/coverage.osm.pbf",
-        graph_basename="hanoi-core", osrm_base_url="", osrm_timeout_seconds=settings.osrm_timeout_seconds,
-        max_snap_meters=settings.max_snap_meters, enabled=False, unavailable_reason=config["note"])
+        graph_basename=config.get("graph_basename", "hanoi-core"), osrm_base_url=config.get("osrm_base_url", ""), osrm_timeout_seconds=settings.osrm_timeout_seconds,
+        max_snap_meters=settings.max_snap_meters, enabled=config.get("enabled", False),
+        artifact_config_sha256=hashlib.sha256(config_bytes).hexdigest())
     return RegionRegistry({hcm.id: hcm, hanoi.id: hanoi})

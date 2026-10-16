@@ -47,6 +47,10 @@ def candidate_catalog(settings):
     if getattr(settings, "id", "hcm-center") != "hcm-center":
         provenance.update(region_id=settings.id, routing_bbox=list(settings.routing_bbox),
                           route_validation_bbox=list(settings.route_validation_bbox))
+        if getattr(settings, 'artifact_identity', None):
+            from .integrity import digest
+            provenance.update(artifact_identity=settings.artifact_identity, source_sha256=manifest['source_sha256'],
+                              graph_manifest_sha256=digest(settings.routing_dir/'manifest.json'))
     fingerprint = hashlib.sha256(json.dumps(provenance, sort_keys=True).encode()).hexdigest()
     return {"candidates": candidates, "datasetFingerprint": fingerprint, "provenance": provenance,
             "routingSource": "OSRM local / car / MLD", "candidateSource": "Local OSM streets vertices; car snapping unverified"}

@@ -1,0 +1,162 @@
+{
+  "kind": "live local CAR; synthetic modeled demand, not GSM observations",
+  "checks": {
+    "bothRegionsReady": "PASS",
+    "directedRoutesAndBoundaries": "PASS",
+    "repeatabilityPairingLedgerLifecycleZeroPolicy": "PASS",
+    "liveConcurrencyWrongGraphOutage": "PASS"
+  },
+  "routes": [
+    {
+      "osm_id": "w408818507",
+      "name": "Phố Bà Triệu",
+      "oneway": "yes",
+      "start": [
+        105.85027198,
+        21.021535059999998
+      ],
+      "end": [
+        105.84966308,
+        21.0197282
+      ],
+      "expected": "reverse detours; OSM oneway=yes",
+      "forwardMeters": 209.8,
+      "reverseMeters": 605.7
+    },
+    {
+      "osm_id": "w684044681",
+      "name": "Phố Tràng Thi",
+      "oneway": "yes",
+      "start": [
+        105.84748596,
+        21.027131920000002
+      ],
+      "end": [
+        105.84633652,
+        21.027452240000002
+      ],
+      "expected": "reverse detours; OSM oneway=yes",
+      "forwardMeters": 124.6,
+      "reverseMeters": 539.8
+    }
+  ],
+  "shortWaitTreatment": {
+    "validPotential": 20,
+    "invalidPotential": 0,
+    "accepted": 13,
+    "assigned": 3,
+    "pickedUp": 3,
+    "completed": 3,
+    "unserved": 10,
+    "conversionRate": 0.65,
+    "completionRate": 0.23076923076923078,
+    "averageWaitSeconds": 0.0,
+    "averagePickupEtaSeconds": 0.0,
+    "averageTripSeconds": 159.6,
+    "emptyMeters": 0,
+    "occupiedMeters": 4985.8,
+    "utilization": 0.05320000000000001,
+    "grossFareVnd": 89830,
+    "riderPaymentsVnd": 29830,
+    "voucherSpendVnd": 60000,
+    "budget": {
+      "total": 200000,
+      "reserved": 0,
+      "spent": 60000,
+      "available": 140000
+    },
+    "voucherCounts": {
+      "OFFERED": 20,
+      "RESERVED": 13,
+      "SETTLED": 3,
+      "RELEASED": 10
+    }
+  },
+  "datasetFingerprint": "eb6e3288f8346294b07fcff49992d82bffe0e830784b02283772302d93810ae3",
+  "candidateCount": 24,
+  "directedTablePairs": 552,
+  "booking": {
+    "assignments": 16,
+    "requests": 20
+  },
+  "final": {
+    "baseline": {
+      "validPotential": 20,
+      "invalidPotential": 0,
+      "accepted": 8,
+      "assigned": 8,
+      "pickedUp": 8,
+      "completed": 8,
+      "unserved": 0,
+      "conversionRate": 0.4,
+      "completionRate": 1.0,
+      "averageWaitSeconds": 79.225,
+      "averagePickupEtaSeconds": 79.225,
+      "averageTripSeconds": 211.35000000000002,
+      "emptyMeters": 6058.3,
+      "occupiedMeters": 17653.7,
+      "utilization": 0.25828888888888885,
+      "grossFareVnd": 291844,
+      "riderPaymentsVnd": 291844,
+      "voucherSpendVnd": 0,
+      "budget": {
+        "total": 0,
+        "reserved": 0,
+        "spent": 0,
+        "available": 0
+      },
+      "voucherCounts": {
+        "OFFERED": 0,
+        "RESERVED": 0,
+        "SETTLED": 0,
+        "RELEASED": 0
+      }
+    },
+    "treatment": {
+      "validPotential": 20,
+      "invalidPotential": 0,
+      "accepted": 10,
+      "assigned": 10,
+      "pickedUp": 10,
+      "completed": 10,
+      "unserved": 0,
+      "conversionRate": 0.5,
+      "completionRate": 1.0,
+      "averageWaitSeconds": 95.7,
+      "averagePickupEtaSeconds": 95.7,
+      "averageTripSeconds": 218.42000000000002,
+      "emptyMeters": 9441.499999999998,
+      "occupiedMeters": 22980.7,
+      "utilization": 0.3490222222222222,
+      "grossFareVnd": 375768,
+      "riderPaymentsVnd": 175768,
+      "voucherSpendVnd": 200000,
+      "budget": {
+        "total": 200000,
+        "reserved": 0,
+        "spent": 200000,
+        "available": 0
+      },
+      "voucherCounts": {
+        "OFFERED": 17,
+        "RESERVED": 10,
+        "SETTLED": 10,
+        "RELEASED": 0
+      }
+    }
+  },
+  "comparison": {
+    "bookingUplift": 2,
+    "incrementalCompleted": 2,
+    "costPerIncrementalCompletionVnd": 100000.0
+  },
+  "manifestHashes": {
+    "render\\manifest.json": "c20afdb03869c9ff44d2f7f97d84cb5ef1747e9089139fd3aff8a5b04df77ad3",
+    "routing\\car\\manifest.json": "a24d4957a01ceeb04a0de1ad680fe4c5dd51732a7b381d9368e249a65c1b29b5"
+  },
+  "notVerified": [
+    "live NoRoute case not deliberately manufactured; fixture coverage exists",
+    "OSM restrictions not compared to current official road signage; no live traffic ETA calibration",
+    "Hanoi portable replay v2 is deferred to M5"
+  ]
+}
