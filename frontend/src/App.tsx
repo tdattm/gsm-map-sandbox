@@ -8,7 +8,7 @@ import { PrimaryNavigation } from '@/components/primary-navigation'
 import { InspectorSection } from '@/components/inspector-section'
 import { PlaybackDock, ClockDock } from '@/components/playback-dock'
 import { SandboxMap } from '@/components/sandbox-map'
-import { api, type Coordinate, type DatasetStatus, type Route } from '@/lib/api'
+import { api, regionApi, type Coordinate, type Route } from '@/lib/api'
 import { usePlayback } from '@/lib/use-playback'
 import './App.css'
 import { useFleet } from '@/lib/use-fleet'
@@ -17,17 +17,16 @@ import { RuntimeAudit } from '@/components/runtime-audit'
 import { useBooking } from '@/lib/use-booking'
 import { BookingPanel, type BookingFocus } from '@/components/booking-panel'
 
+import { useRegion } from '@/lib/use-region'
 import { useVoucher } from '@/lib/use-voucher'
 import { VoucherPanel } from '@/components/voucher-panel'
 import { savedMapStyle } from '@/lib/map-style'
 const VoucherDashboard = lazy(() => import('@/components/voucher-dashboard'))
 
 const coordinateText = (point: Coordinate | null) => point ? point.map(v => v.toFixed(6)).join(', ') : 'Chưa chọn trên bản đồ'
-const pbfLabels: Record<string, string> = { missing_pbf: 'Chưa có file PBF', present_unverified: 'Đã có file · chưa xác minh', invalid_extension: 'Sai phần mở rộng', unreadable_pbf: 'Không đọc được file', empty_pbf: 'File PBF rỗng' }
+const pbfLabels: Record<string, string> = { not_prepared: 'Chưa chuẩn bị dữ liệu khu vực', missing_pbf: 'Chưa có file PBF', present_unverified: 'Đã có file · chưa xác minh', invalid_extension: 'Sai phần mở rộng', unreadable_pbf: 'Không đọc được file', empty_pbf: 'File PBF rỗng' }
 
 export default function App() {
-  const [dataset, setDataset] = useState<DatasetStatus | null>(null)
-  const [connectionError, setConnectionError] = useState('')
   const [mapError, setMapError] = useState('')
   const [routeError, setRouteError] = useState('')
   const [start, setStart] = useState<Coordinate | null>(null)
@@ -38,6 +37,8 @@ export default function App() {
   const [mode, setMode] = useState<'single' | 'fleet' | 'booking' | 'voucher'>(()=>new URLSearchParams(window.location.search).get('runtime')==='saved'?'voucher':'single')
   const [voucherRuntime,setVoucherRuntime]=useState<'live'|'saved'>(()=>new URLSearchParams(window.location.search).get('runtime')==='saved'?'saved':'live')
   const saved=mode==='voucher' && voucherRuntime==='saved'
+  const region = useRegion(saved, refreshKey)
+  const { dataset, connectionError, regionId } = region
   const [navigationSize, setNavigationSize] = useState<'expanded' | 'collapsed' | 'hidden'>('expanded')
   const [mobileMenu, setMobileMenu] = useState(false)
   const [inspectorOpen, setInspectorOpen] = useState(true)
@@ -47,9 +48,9 @@ export default function App() {
   const request = useRef<AbortController | null>(null)
   const playback = usePlayback(route)
   const ready = !!dataset?.ready && !connectionError && !mapError
-  const fleet = useFleet(mode === 'fleet', ready)
-  const booking = useBooking(mode === 'booking', ready)
-  const voucher = useVoucher(mode === 'voucher', ready, voucherRuntime)
+  const fleet = useFleet(mode === 'fleet', ready, regionId)
+  const booking = useBooking(mode === 'booking', ready, regionId)
+  const voucher = useVoucher(mode === 'voucher', ready, voucherRuntime, regionId)
   const replayStyle=useMemo(()=>{if(!saved || !voucher.replayAssets) return undefined; const style=savedMapStyle(voucher.replayAssets); return {light:style,dark:style}},[saved,voucher.replayAssets])
   const voucherReady=saved ? !!voucher.artifact && !!voucher.replayAssets && !mapError : ready
   const focusVehicle = (id: string, kind: FleetFocus['kind']) => { fleet.setSelectedVehicleId(id); setFleetFocus({ id, kind, sequence: performance.now() }) }
@@ -57,30 +58,20 @@ export default function App() {
   const mapReady = saved ? !!replayStyle : !!dataset?.artifacts.map_ready
   const pbfPresent = ['present_unverified', 'present_verified'].includes(dataset?.pbf.state ?? '')
 
-  useEffect(() => {
-    if(saved) return
-    const controller = new AbortController()
-    let timer: ReturnType<typeof setTimeout>
-    async function poll() {
-      try {
-        const data = await api<DatasetStatus>('/api/dataset/status', { signal: controller.signal })
-        if (!controller.signal.aborted) { setDataset(data); setConnectionError('') }
-      } catch {
-        if (!controller.signal.aborted) setConnectionError('Backend chưa kết nối. Khởi động FastAPI trên 127.0.0.1:8000.')
-      } finally { if (!controller.signal.aborted) timer = setTimeout(poll, 10000) }
-    }
-    void poll()
-    return () => { controller.abort(); clearTimeout(timer) }
-  }, [refreshKey,saved])
-
   const clear = useCallback(() => {
     request.current?.abort(); setRouting(false); setStart(null); setEnd(null); setRoute(null); setRouteError('')
   }, [])
   useEffect(() => { if (!ready) clear() }, [ready, clear])
   useEffect(() => () => request.current?.abort(), [])
 
+  const changeRegion = (id: string) => {
+    if (saved || id === regionId) return
+    playback.pause(); clear(); fleet.clear(); booking.clear(); voucher.clear()
+    setMapError(''); setFleetFocus(null); setBookingFocus(null); region.selectRegion(id)
+  }
+
   const select = useCallback((point: Coordinate) => {
-    if (!ready || !dataset) return
+    if (!ready || !dataset?.region.routing_bbox) return
     request.current?.abort(); setRoute(null); setRouteError(''); setRouting(false)
     const [w, s, e, n] = dataset.region.routing_bbox
     if (point[0] < w || point[0] > e || point[1] < s || point[1] > n) { setStart(null); setEnd(null); setRouteError('Chọn điểm trong vùng tính tuyến đã cấu hình.'); return }
@@ -90,16 +81,16 @@ export default function App() {
   useEffect(() => {
     if (!start || !end || !ready) return
     const controller = new AbortController(); request.current = controller; setRouting(true)
-    api<Route>('/api/route', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ start, end }), signal: controller.signal })
+    api<Route>(regionApi(regionId, '/route'), { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ start, end }), signal: controller.signal })
       .then(data => { if (!controller.signal.aborted) setRoute(data) })
       .catch(error => { if (!controller.signal.aborted) setRouteError(error.message) })
       .finally(() => { if (!controller.signal.aborted) setRouting(false) })
     return () => controller.abort()
-  }, [start, end, ready])
+  }, [start, end, ready, regionId])
 
   const refresh = () => { setMapError(''); setRefreshKey(value => value + 1) }
-  const waitTitle = connectionError ? 'Kết nối backend để bắt đầu' : !dataset ? 'Đang kiểm tra dữ liệu cục bộ' : !pbfPresent ? 'Thêm dữ liệu để mở bản đồ' : 'PBF đã có. Chờ chuẩn bị bản đồ.'
-  const waitDescription = connectionError || (!dataset ? 'Đang đọc cấu hình và tình trạng artifact.' : !pbfPresent ? 'Sao chép file Geofabrik đã tải vào đường dẫn bên dưới. Ứng dụng sẽ tự kiểm tra lại.' : 'Chưa có artifact GeoJSON hợp lệ. Chạy pipeline cục bộ theo README rồi kiểm tra lại.')
+  const waitTitle = dataset?.readinessReason ? 'Khu vực chưa sẵn sàng' : connectionError ? 'Kết nối backend để bắt đầu' : !dataset ? 'Đang kiểm tra dữ liệu cục bộ' : !pbfPresent ? 'Thêm dữ liệu để mở bản đồ' : 'PBF đã có. Chờ chuẩn bị bản đồ.'
+  const waitDescription = connectionError || dataset?.readinessReason || (!dataset ? 'Đang đọc cấu hình và tình trạng artifact.' : !pbfPresent ? 'Sao chép file Geofabrik đã tải vào đường dẫn bên dưới. Ứng dụng sẽ tự kiểm tra lại.' : 'Chưa có artifact GeoJSON hợp lệ. Chạy pipeline cục bộ theo README rồi kiểm tra lại.')
 
   return <div className={`app-shell nav-${navigationSize} ${inspectorOpen ? "inspector-open" : "inspector-closed"} mode-${mode} view-${mobileView}`}>
     {(import.meta.env.DEV || new URLSearchParams(window.location.search).get('audit')==='1') && <RuntimeAudit />}
@@ -114,12 +105,16 @@ export default function App() {
     <main className="workspace">
       <PrimaryNavigation mode={mode} size={navigationSize} onMode={changeMode} onSize={setNavigationSize} mobileOpen={mobileMenu} onMobileOpen={setMobileMenu}/>
       <aside className="sidebar inspector" hidden={!inspectorOpen} aria-label="Cấu hình mô phỏng"><div className="inspector-toolbar"><strong>Cấu hình và chi tiết</strong><Button variant="ghost" size="sm" aria-label="Đóng bảng chi tiết" onClick={() => setInspectorOpen(false)}>×</Button></div>
+        <InspectorSection title="Khu vực mô phỏng" defaultOpen>
+          <label className="region-selector">Khu vực mô phỏng<select aria-label="Khu vực mô phỏng" value={saved ? 'hcm-center' : regionId} disabled={saved} onChange={event => changeRegion(event.target.value)}>{region.regions.map(item => <option key={item.id} value={item.id}>{item.label}</option>)}</select></label>
+          <p className="small-note" aria-live="polite">{saved ? 'Khu vực và bản đồ do gói phát lại HCM v1 quyết định; không cần backend.' : dataset?.ready ? 'Khu vực đã sẵn sàng cho mô phỏng trực tiếp.' : dataset?.readinessReason || connectionError || (dataset ? 'Khu vực chưa sẵn sàng. Kiểm tra dữ liệu và kết nối OSRM cục bộ.' : 'Đang kiểm tra dữ liệu khu vực.')}</p>
+        </InspectorSection>
         <InspectorSection title="Dữ liệu bản đồ">{saved ? <div><h2>Gói phát lại cục bộ</h2><p>© OpenStreetMap contributors · ODbL 1.0</p><p className="small-note">{voucher.replayAssets ? `Danh mục đã kiểm chứng ${voucher.replayAssets.manifest.id}` : "Nhập thí nghiệm hoặc tải kịch bản mẫu để kiểm chứng gói phát lại."}</p></div> : <><div className="section-heading"><Database size={17} /><h2>Dữ liệu bản đồ</h2></div>
           <div className="source-card"><div className="source-icon"><FileBox size={22} /></div><div><strong>Geofabrik Vietnam</strong><p>OpenStreetMap · nguồn PBF cục bộ</p></div><a href="https://download.geofabrik.de/asia/vietnam.html" target="_blank" rel="noreferrer" aria-label="Thông tin nguồn Geofabrik"><ArrowUpRight size={17} /></a></div>
           <div className="data-state"><span className={pbfPresent ? 'status-dot green' : 'status-dot amber'} /><span>{dataset?.pbf.format_verified ? 'PBF đã xác minh bằng Osmium' : dataset ? pbfLabels[dataset.pbf.state] ?? dataset.pbf.state : 'Đang kiểm tra file PBF…'}</span></div>
           <div className="data-detail">{dataset?.pbf.size_bytes ? numberText((dataset.pbf.size_bytes / 1024 / 1024), 1) + (dataset.pbf.format_verified ? ' MiB · nguồn Geofabrik cục bộ đã kiểm tra' : ' MiB · định dạng chưa xác minh bằng Osmium') : 'Đọc từ ổ đĩa · không tải lên qua trình duyệt'}</div>
-          <div className="region-row"><MapPin size={17} /><div><strong>{dataset?.region.name ?? 'Trung tâm TP.HCM · Quận 1 cũ'}</strong><p>Bến Thành · Bưu điện Trung tâm và lân cận</p></div></div>
-          <div className="bbox-row">{(dataset?.region.display_bbox ?? [106.675, 10.750, 106.725, 10.795]).map(v => v.toFixed(3)).join(' / ')}</div>
+          <div className="region-row"><MapPin size={17} /><div><strong>{dataset?.region.name ?? region.metadata?.label}</strong><p>{dataset?.region.boundary_note ?? region.metadata?.reason}</p></div></div>
+          <div className="bbox-row">{(dataset?.region.display_bbox ?? region.metadata?.viewport.bounds ?? []).map(v => v.toFixed(3)).join(' / ')}</div>
           <p className="small-note">Vùng kỹ thuật thử nghiệm, không phải ranh giới hành chính.</p></>}
         </InspectorSection>
         {mode === 'voucher' ? <VoucherPanel docked session={voucher} ready={voucherReady} onRuntime={next=>{setMapError('');setVoucherRuntime(next)}} onFocus={setBookingFocus} /> : mode === 'booking' ? <BookingPanel docked session={booking} ready={ready} onFocus={setBookingFocus} /> : mode === 'fleet' ? <FleetPanel docked fleet={fleet} ready={ready} onFocus={focusVehicle} /> : <><InspectorSection title="Thiết lập hành trình" defaultOpen><div className="section-heading"><RouteIcon size={17} /><h2>Thiết lập hành trình</h2><span className="section-number">01</span></div>
@@ -138,12 +133,12 @@ export default function App() {
         <div className="sidebar-footer"><Server size={14} />Chỉ chạy cục bộ<span>WGS84 · [lon, lat]</span></div>
       </aside>
       <div className="workspace-content">
-      <section className="map-workspace" aria-label="Bản đồ TP.HCM">
-        <div className="map-topbar"><div><span className="eyebrow">KHU VỰC NGHIÊN CỨU</span><h2>Trung tâm TP. Hồ Chí Minh</h2></div><Button variant="outline" onClick={refresh}><RefreshCw size={15} />Kiểm tra lại</Button></div>
+      <section className="map-workspace" aria-label={saved ? "Bản đồ HCM phát lại" : `Bản đồ ${region.metadata?.label ?? regionId}`}>
+        <div className="map-topbar"><div><span className="eyebrow">KHU VỰC NGHIÊN CỨU</span><h2>{saved ? "TP.HCM · phát lại đã lưu" : region.metadata?.label ?? regionId}</h2></div><Button variant="outline" onClick={refresh}><RefreshCw size={15} />Kiểm tra lại</Button></div>
         <div className="map-canvas">
-          <SandboxMap replayStyle={replayStyle} dataset={saved ? null : dataset} start={mode === 'single' ? start : null} end={mode === 'single' ? end : null} route={mode === 'single' ? route : null} progress={playback.progress} enabled={ready && mode === 'single'} onSelect={select} onError={setMapError} fleet={mode === 'fleet' ? fleet : undefined} fleetFocus={fleetFocus} booking={mode === 'voucher' ? voucher.mapSession : mode === 'booking' ? booking : undefined} bookingFocus={bookingFocus} />
+          <SandboxMap regionId={saved ? "hcm-center" : regionId} viewport={saved ? undefined : dataset?.viewport ?? region.metadata?.viewport} replayBounds={saved ? voucher.replayAssets?.manifest.displayBbox : undefined} replayStyle={replayStyle} dataset={saved ? null : dataset} start={mode === 'single' ? start : null} end={mode === 'single' ? end : null} route={mode === 'single' ? route : null} progress={playback.progress} enabled={ready && mode === 'single'} onSelect={select} onError={setMapError} fleet={mode === 'fleet' ? fleet : undefined} fleetFocus={fleetFocus} booking={mode === 'voucher' ? voucher.mapSession : mode === 'booking' ? booking : undefined} bookingFocus={bookingFocus} />
           <div className="map-chip"><Layers size={15} />{mapReady ? 'GeoJSON cục bộ · OSM' : "Bản đồ trống cục bộ"}<span className="chip-divider" />{mapReady ? 'Dữ liệu đường phố' : 'Chưa có lớp đường phố'}</div>
-          {(!mapReady || mapError || (!saved && connectionError)) && <div className="waiting-overlay"><div className="waiting-card"><div className="waiting-icon"><FolderOpen size={32} /><span>{pbfPresent ? <Check size={13} /> : <Database size={13} />}</span></div><Badge variant="outline">{pbfPresent ? 'CHỜ TÀI NGUYÊN A1' : 'CHỜ DỮ LIỆU CỤC BỘ'}</Badge><h2>{saved ? "Nhập thí nghiệm đã lưu để phát lại" : waitTitle}</h2><p>{mapError || (saved ? "Phát lại đã lưu dùng tài nguyên cục bộ đã kiểm chứng, không cần FastAPI/OSRM. Mở bảng Chi tiết để nhập thí nghiệm hoặc tải kịch bản mẫu." : waitDescription)}</p><div className="file-path"><FolderOpen size={16} /><code>{saved ? "Gói phát lại cục bộ" : dataset?.pbf.path ?? 'data/raw/vietnam-latest.osm.pbf'}</code></div>{!saved && <div className="readiness-list"><div className={pbfPresent ? 'done' : ''}><span>{pbfPresent ? <Check size={12} /> : '1'}</span>File PBF cục bộ</div><ChevronRight size={13} /><div><span>2</span>GeoJSON bản đồ</div><ChevronRight size={13} /><div><span>3</span>OSRM MLD</div></div>}<Button variant="outline" onClick={refresh}><RefreshCw size={15} />Kiểm tra dữ liệu</Button><p className="waiting-footnote">Chỉ hiển thị đường phố sau khi xử lý dữ liệu OSM thật.</p></div></div>}
+          {(!mapReady || mapError || (!saved && connectionError)) && <div className="waiting-overlay"><div className="waiting-card"><div className="waiting-icon"><FolderOpen size={32} /><span>{pbfPresent ? <Check size={13} /> : <Database size={13} />}</span></div><Badge variant="outline">{pbfPresent ? 'CHỜ TÀI NGUYÊN A1' : 'CHỜ DỮ LIỆU CỤC BỘ'}</Badge><h2>{saved ? "Nhập thí nghiệm đã lưu để phát lại" : waitTitle}</h2><p>{mapError || (saved ? "Phát lại đã lưu dùng tài nguyên cục bộ đã kiểm chứng, không cần FastAPI/OSRM. Mở bảng Chi tiết để nhập thí nghiệm hoặc tải kịch bản mẫu." : waitDescription)}</p><div className="file-path"><FolderOpen size={16} /><code>{saved ? "Gói phát lại cục bộ" : dataset?.pbf.path ?? 'Dữ liệu cục bộ của khu vực'}</code></div>{!saved && <div className="readiness-list"><div className={pbfPresent ? 'done' : ''}><span>{pbfPresent ? <Check size={12} /> : '1'}</span>File PBF cục bộ</div><ChevronRight size={13} /><div><span>2</span>GeoJSON bản đồ</div><ChevronRight size={13} /><div><span>3</span>OSRM MLD</div></div>}<Button variant="outline" onClick={refresh}><RefreshCw size={15} />Kiểm tra dữ liệu</Button><p className="waiting-footnote">Chỉ hiển thị đường phố sau khi xử lý dữ liệu OSM thật.</p></div></div>}
           <div className="map-bottom-note"><span className={ready ? 'status-dot green' : 'status-dot amber'} />{mode === 'voucher' ? `Thí nghiệm voucher · ${voucher.arm === "baseline" ? "Baseline" : "Treatment"} · giả định PoC` : mode === 'booking' ? 'Đặt xe mô phỏng · màu vàng: đến đón · xanh: chở khách · xám: rảnh' : mode === 'fleet' ? "Đội xe mô phỏng · không phải GPS thực tế · chọn xe để quan sát" : ready ? start ? end ? 'Nhấp để bắt đầu hành trình mới' : 'Chọn điểm B trên bản đồ' : 'Chọn điểm A trên bản đồ' : 'Chọn A/B đang khóa · dữ liệu hoặc bộ tính tuyến chưa sẵn sàng'}</div>
         </div>
         <footer className="map-footer"><span>© OpenStreetMap contributors · Geofabrik</span><span>Sandbox nghiên cứu · {mode === 'single' ? 'một xe mô phỏng' : 'đội xe mô phỏng'}</span></footer>

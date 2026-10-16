@@ -1,11 +1,11 @@
-import { useEffect } from 'react'
+import { useEffect, useMemo } from 'react'
 import { mapLocaleVi } from '@/lib/vi'
 import { Car } from 'lucide-react'
 import { Map, MapControls, MapMarker, MarkerContent, MapRoute, RouteProgress, RouteMarker, useMap } from '@/components/ui/map'
-import { emptyStyle, localStyle } from '@/lib/map-style'
+import { emptyStyle, localStyle, regionMapStyle } from '@/lib/map-style'
 import type { StyleSpecification } from 'maplibre-gl'
 import { positionAt } from '@/lib/playback'
-import type { Coordinate, DatasetStatus, Route } from '@/lib/api'
+import type { Bbox, Coordinate, DatasetStatus, RegionViewport, Route } from '@/lib/api'
 import type { FleetSession } from '@/lib/use-fleet'
 import type { FleetFocus } from './fleet-panel'
 import { FleetMap } from './fleet-map'
@@ -47,16 +47,34 @@ function MapEvents({ enabled, onSelect, onError }: { enabled: boolean; onSelect:
   }, [map, isLoaded, enabled, onSelect, onError])
   return null
 }
-export function SandboxMap({ dataset, start, end, route, progress, enabled, onSelect, onError, fleet, fleetFocus, booking, bookingFocus, replayStyle }: {
+function RegionViewportSync({ center, zoom, scope }: { center: Coordinate; zoom: number; scope: string }) {
+  const { map, isLoaded } = useMap()
+  const [lon, lat] = center
+  useEffect(() => {
+    if (map && isLoaded) map.jumpTo({ center: [lon, lat], zoom })
+  }, [map, isLoaded, lon, lat, zoom, scope])
+  return null
+}
+
+export function SandboxMap({ dataset, start, end, route, progress, enabled, onSelect, onError, fleet, fleetFocus, booking, bookingFocus, replayStyle, regionId, viewport, replayBounds }: {
   dataset: DatasetStatus | null; start: Coordinate | null; end: Coordinate | null; route: Route | null;
   progress: number; enabled: boolean; onSelect: (point: Coordinate) => void; onError: (message: string) => void
   fleet?: FleetSession; fleetFocus?: FleetFocus | null
   booking?: BookingMapSession; bookingFocus?: BookingFocus | null
   replayStyle?: { light: StyleSpecification; dark: StyleSpecification }
+  regionId?: string; viewport?: RegionViewport; replayBounds?: Bbox
 }) {
-  const box = dataset?.region.display_bbox ?? [106.675, 10.750, 106.725, 10.795]
-  return <Map locale={mapLocaleVi} theme="light" styles={replayStyle ?? (dataset?.artifacts.map_ready ? readyStyles : blankStyles)} center={[(box[0] + box[2]) / 2, (box[1] + box[3]) / 2]} zoom={14.2} attributionControl={{ customAttribution: '© OpenStreetMap contributors', compact: false }}>
+  const box = replayBounds ?? viewport?.bounds ?? dataset?.region.display_bbox ?? [106.675, 10.750, 106.725, 10.795]
+  const center: Coordinate = viewport?.center ?? [(box[0] + box[2]) / 2, (box[1] + box[3]) / 2]
+  const zoom = viewport?.zoom ?? 14.2
+  const styles = useMemo(() => {
+    if (!regionId) return readyStyles
+    const style = regionMapStyle(regionId)
+    return { light: style, dark: style }
+  }, [regionId])
+  return <Map locale={mapLocaleVi} theme="light" styles={replayStyle ?? (dataset?.artifacts.map_ready ? styles : blankStyles)} center={center} zoom={zoom} attributionControl={{ customAttribution: '© OpenStreetMap contributors', compact: false }}>
     <MapControls position="top-right" showCompass />
+    <RegionViewportSync center={center} zoom={zoom} scope={replayStyle ? 'saved-v1' : regionId ?? 'legacy'} />
     <ResizeMap />
     <MapEvents enabled={enabled} onSelect={onSelect} onError={onError} />
     {fleet && <FleetMap fleet={fleet} focus={fleetFocus ?? null} />}

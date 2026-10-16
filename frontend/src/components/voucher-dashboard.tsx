@@ -39,7 +39,7 @@ export default function VoucherDashboard({ session }: { session: VoucherSession 
     <div className="experiment-actions"><Button variant="outline" disabled={exporting} onClick={()=>void portableExport()}>Xuất thí nghiệm Portable v1</Button><Button variant="outline" onClick={() => download(`voucher-${e.id.slice(0,12)}.json`,JSON.stringify(e,null,2),'application/json')}>Xuất JSON · toàn bộ kế hoạch</Button>
       <details><summary>Xuất CSV · kết quả cuối và toàn bộ lịch sử</summary>{Object.entries(exports!).map(([name,text]) => <Button key={name} variant="ghost" onClick={() => download(`voucher-${name}-${e.id.slice(0,12)}.csv`,text,'text/csv;charset=utf-8')}>CSV · {csvLabels[name] ?? name}</Button>)}</details></div>
     {advanced && <Suspense fallback={<p role="status">Đang tải phân tích cục bộ…</p>}><Analytics experiment={e} time={chartTime} baseline={chartMetrics!.baseline} treatment={chartMetrics!.treatment}/></Suspense>}
-    {advanced && <><Button variant="outline" aria-expanded={batchOpen} onClick={()=>setBatchOpen(!batchOpen)}>Phân tích nhiều lượt chạy</Button>{batchOpen&&<Suspense fallback={<p role="status">Đang tải phân tích nhiều lượt chạy…</p>}><Batch key={e.id} experiment={e} live={session.runtime==='live'}/></Suspense>}</>}
+    {advanced && <><Button variant="outline" aria-expanded={batchOpen} onClick={()=>setBatchOpen(!batchOpen)}>Phân tích nhiều lượt chạy</Button>{batchOpen&&<Suspense fallback={<p role="status">Đang tải phân tích nhiều lượt chạy…</p>}><Batch key={`${session.regionId}:${e.id}`} regionId={session.regionId} experiment={e} live={session.runtime==='live'}/></Suspense>}</>}
     {exportError && <p role="alert">{errorText(exportError)}</p>}
   </section>
 }

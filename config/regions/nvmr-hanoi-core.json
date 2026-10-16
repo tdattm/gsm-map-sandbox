@@ -1,0 +1,6 @@
+{
+  "label": "Hà Nội · vùng lõi NVMR",
+  "viewport_bbox": [105.75, 20.95, 105.95, 21.10],
+  "viewport_zoom": 11.5,
+  "note": "Hà Nội chưa sẵn sàng: khung nhìn chỉ để định hướng. Dữ liệu OSM, vùng hoạt động, coverage bản đồ và graph CAR sẽ được xác minh ở M1b."
+}

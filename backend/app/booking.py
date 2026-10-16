@@ -263,7 +263,7 @@ class LocalTravel:
 
     def snap(self, raw, original):
         point = SnapPoint.model_validate(raw)
-        w, s, e, n = self.settings.region.display_bbox
+        w, s, e, n = getattr(self.settings, "operating_bbox", self.settings.region.display_bbox)
         if (point.distance > self.settings.max_snap_meters or
                 self.distance(original, point.location) > self.settings.max_snap_meters + 1 or
                 not (w <= point.location[0] <= e and s <= point.location[1] <= n)):
@@ -305,9 +305,10 @@ class LocalTravel:
             return self.cache[key]
         self.counts["route"] += 1
         route = await self.fetch_route(RouteRequest(start=start, end=end))
-        w, s, e, n = self.settings.region.display_bbox
+        w, s, e, n = getattr(self.settings, "route_validation_bbox", self.settings.region.display_bbox)
         if any(not (w <= lon <= e and s <= lat <= n) for lon, lat in route.coordinates):
-            raise HTTPException(422, {"code": "ROUTE_OUTSIDE_DISPLAY", "message": "Tuyến vượt render coverage."})
+            legacy = getattr(self.settings, "id", "hcm-center") == "hcm-center"
+            raise HTTPException(422, {"code": "ROUTE_OUTSIDE_DISPLAY" if legacy else "ROUTE_OUTSIDE_REGION", "message": "Tuyến vượt render coverage." if legacy else "Tuyến vượt coverage định tuyến đã xác minh."})
         self.cache[key] = route
         return route
 

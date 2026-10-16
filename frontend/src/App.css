@@ -317,3 +317,5 @@ button:focus-visible, input:focus-visible, select:focus-visible, summary:focus-v
   .experiment-kpis { grid-template-columns: repeat(3,minmax(0,1fr)); }
   .map-bottom-note { bottom: 44px; }
 }
+.region-selector { display: grid; gap: 6px; font-size: 12px; }
+.region-selector select { width: 100%; min-width: 0; padding: 8px; border: 1px solid var(--border, #d8ddd6); border-radius: 6px; background: var(--background, #fff); color: inherit; }

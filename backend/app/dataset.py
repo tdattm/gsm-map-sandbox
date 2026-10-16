@@ -38,14 +38,18 @@ def pbf_status(settings: Settings):
 
 
 def artifact_status(settings: Settings):
-    graph_files = all((settings.routing_dir / name).is_file() for name in GRAPH_FILES)
+    basename = getattr(settings, "graph_basename", "hcm-center")
+    required = tuple(f"{basename}.osrm.{suffix}" for suffix in ("partition", "cells", "mldgr"))
+    routing_bbox = getattr(settings, "routing_bbox", settings.region.routing_bbox)
+    render_bbox = getattr(settings, "render_bbox", settings.region.display_bbox)
+    graph_files = all((settings.routing_dir / name).is_file() for name in required)
     manifest_path = settings.routing_dir / "manifest.json"
     manifest = None
     try:
         manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
         graph_files = graph_files and manifest.get("algorithm") == "mld" and manifest.get("profile") == "car"
-        graph_files = graph_files and manifest.get("routing_bbox") == list(settings.region.routing_bbox)
-        graph_files = graph_files and bool(manifest.get("image_digest")) and set(GRAPH_FILES) <= set(manifest.get("artifact_sizes", {}))
+        graph_files = graph_files and routing_bbox is not None and manifest.get("routing_bbox") == list(routing_bbox)
+        graph_files = graph_files and bool(manifest.get("image_digest")) and set(required) <= set(manifest.get("artifact_sizes", {}))
     except (OSError, ValueError, TypeError, AttributeError):
         graph_files = False
     if (settings.routing_dir / ".incomplete").exists():
@@ -54,7 +58,7 @@ def artifact_status(settings: Settings):
         try:
             sizes = manifest["artifact_sizes"]
             graph_files = isinstance(sizes, dict) and all(
-                name.startswith("hcm-center.osrm.") and "/" not in name and "\\" not in name
+                name.startswith(f"{basename}.osrm.") and "/" not in name and "\\" not in name
                 and isinstance(size, int) and size > 0 and (settings.routing_dir / name).is_file()
                 and (settings.routing_dir / name).stat().st_size == size for name, size in sizes.items())
         except (OSError, ValueError, TypeError, AttributeError, KeyError):
@@ -62,7 +66,7 @@ def artifact_status(settings: Settings):
     map_ready, map_manifest = False, None
     try:
         map_manifest = json.loads((settings.map_path.parent / "manifest.json").read_text(encoding="utf-8"))
-        map_ready = (map_manifest.get("display_bbox") == list(settings.region.display_bbox)
+        map_ready = (render_bbox is not None and map_manifest.get("display_bbox") == list(render_bbox)
                      and map_manifest["layers"]["streets.geojson"]["features"] > 0
                      and all(name in {"streets.geojson", "water.geojson", "green.geojson", "buildings.geojson", "places.geojson"}
                              and (settings.map_path.parent / name).is_file() and (settings.map_path.parent / name).stat().st_size == entry["size_bytes"]
@@ -71,7 +75,7 @@ def artifact_status(settings: Settings):
         pass
     return {"map_ready": map_ready, "map_manifest": map_manifest,
             "graph_ready": bool(graph_files), "routing_manifest": manifest,
-            "extracted_ready": (settings.routing_dir.parent / "extracted/hcm-center.osm.pbf").is_file()}
+            "extracted_ready": getattr(settings, "extracted_path", settings.routing_dir.parent / "extracted/hcm-center.osm.pbf").is_file()}
 
 
 async def router_status(settings: Settings):
@@ -96,3 +100,27 @@ async def dataset_status(settings: Settings):
     state = "ready" if ready else (pbf["state"] if pbf["state"] not in {"present_unverified", "present_verified"} else "artifacts_pending")
     return {"state": state, "ready": ready, "pbf": pbf, "artifacts": artifacts,
             "osrm": router, "region": {**settings.region.model_dump(), "routing_bbox": settings.region.routing_bbox}}
+
+
+async def public_region_status(context):
+    """Only the new API uses this redacted shape. Legacy status stays unchanged."""
+    configured = context.enabled and all((context.operating_bbox, context.routing_bbox, context.render_bbox, context.osrm_base_url))
+    if configured:
+        status = await dataset_status(context)
+        pbf, artifacts, router = status["pbf"], status["artifacts"], status["osrm"]
+        ready = status["ready"]
+    else:
+        pbf = {"state": "not_prepared", "size_bytes": None, "format_verified": False, "osmium_available": False}
+        artifacts = {"map_ready": False, "graph_ready": False, "extracted_ready": False}
+        router, ready = {"state": "not_configured"}, False
+    reason = "" if ready else (context.unavailable_reason or "Dữ liệu bản đồ hoặc bộ định tuyến CAR cục bộ chưa sẵn sàng.")
+    region = context.region
+    return {"regionId": context.id, "state": "ready" if ready else "not_ready", "ready": ready,
+            "readinessReason": reason,
+            "viewport": {"center": context.viewport_center, "zoom": context.viewport_zoom, "bounds": region.display_bbox},
+            "coverage": {"operating": context.operating_bbox, "routing": context.routing_bbox, "render": context.render_bbox},
+            "pbf": {key: pbf[key] for key in ("state", "size_bytes", "format_verified", "osmium_available")},
+            "artifacts": {key: artifacts[key] for key in ("map_ready", "graph_ready", "extracted_ready")},
+            "osrm": {"state": router["state"]},
+            "region": {"name": region.name, "display_bbox": region.display_bbox, "routing_bbox": context.routing_bbox,
+                       "source": region.source, "attribution": region.attribution, "boundary_note": region.boundary_note}}

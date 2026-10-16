@@ -1,0 +1,28 @@
+{
+  "date": "2026-10-16",
+  "environment": "IAB browser, Vite dev, real MapLibre WebGL",
+  "desktop": [
+    1440,
+    900
+  ],
+  "narrow": [
+    716,
+    659
+  ],
+  "hcmHanoiHcmCanvasStable": true,
+  "canvasToken": "836540f9-ce32-4d7f-a4de-57be8f3cd703",
+  "hanoiReady": false,
+  "hanoiVehicles": 0,
+  "backendStoppedBeforeSavedLoad": true,
+  "savedSeekSeconds": 500,
+  "savedProof": {
+    "apiResources": 11,
+    "canvases": 1,
+    "clock": "paused",
+    "time": "500.4878999999999",
+    "token": "836540f9-ce32-4d7f-a4de-57be8f3cd703"
+  },
+  "noNewApi": true,
+  "liveOsrm": "NOT VERIFIED: router not running",
+  "viewport": "metadata/jumpTo covered by unit test; actual center not instrumented in browser"
+}

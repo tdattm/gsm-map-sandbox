@@ -26,6 +26,11 @@ export const localStyle: StyleSpecification = {
   ],
 }
 
+export function regionMapStyle(regionId: string): StyleSpecification {
+  return { ...localStyle, sources: Object.fromEntries(['streets', 'water', 'green', 'buildings', 'places'].map(name =>
+    [name, { type: 'geojson' as const, data: `/api/regions/${encodeURIComponent(regionId)}/map/${name}` }])) }
+}
+
 export function savedMapStyle(assets: ReplayAssets): StyleSpecification {
   const base=import.meta.env.BASE_URL
   const faces=localStyle['font-faces']!.Geist

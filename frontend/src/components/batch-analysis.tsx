@@ -4,14 +4,14 @@ import { Bar, BarChart, CartesianGrid, XAxis, YAxis, ReferenceLine, ScatterChart
 import { Button } from './ui/button'
 import { ChartContainer, ChartTooltip, ChartTooltipContent } from './ui/chart'
 import { ChartViewport } from './chart-viewport'
-import { api } from '@/lib/api'
+import { api, regionApi, assertRegionProvenance } from '@/lib/api'
 import { canonicalJson } from '@/lib/artifact'
 import { batchJobs, batchCsv, batchSummaryCsv, runBatch, summarizeRuns, statisticalDefinitions, factorValues, type BatchSpec, type Factor, type RunResult } from '@/lib/batch'
 import { download, type Experiment } from '@/lib/voucher'
 
 const chartNumber = (value: number) => numberText(value, Number.isInteger(value) ? 0 : 2)
 
-function BatchAnalysis({ experiment,live }: {experiment:Experiment;live:boolean}) {
+function BatchAnalysis({ experiment,live,regionId }: {experiment:Experiment;live:boolean;regionId?:string}) {
   const [baseSeed,setBaseSeed]=useState(experiment.seed),[count,setCount]=useState<10|30>(10),[factor,setFactor]=useState<Factor>('none')
   const [results,setResults]=useState<RunResult[]>([]),[spec,setSpec]=useState<BatchSpec|null>(null),[running,setRunning]=useState(false),[status,setStatus]=useState('Chưa chạy'),[error,setError]=useState('')
   const controller=useRef<AbortController|null>(null),cache=useRef(new Map<string,RunResult>())
@@ -22,7 +22,7 @@ function BatchAnalysis({ experiment,live }: {experiment:Experiment;live:boolean}
     try {batchJobs(next)}catch(e){setError(String(e));return}
     controller.current?.abort();const request=new AbortController();controller.current=request
     setSpec(next);setResults([]);setError('');setRunning(true);setStatus('Đang chạy sequential · local OSRM')
-    try {await runBatch(next,(config,signal)=>api<Experiment>('/api/voucher-experiment/prepare',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(config),signal}),request.signal,result=>{if(controller.current===request)setResults(previous=>[...previous,result])},cache.current)
+    try {await runBatch(next,async(config,signal)=>{const result=await api<Experiment>(regionApi(regionId, '/voucher-experiment/prepare'),{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(config),signal});assertRegionProvenance(regionId,result.provenance);return result},request.signal,result=>{if(controller.current===request)setResults(previous=>[...previous,result])},cache.current)
       if(controller.current===request)setStatus(request.signal.aborted?'Cancelled — partial results':'Complete — tất cả jobs đã có kết quả')
     }catch(e){if(controller.current===request){setError(String(e));setStatus('Failed — partial results')}}
     finally {if(controller.current===request)setRunning(false)}

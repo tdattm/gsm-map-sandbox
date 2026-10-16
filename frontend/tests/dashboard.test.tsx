@@ -2,6 +2,16 @@ import { describe, it, expect, vi } from 'vitest'
 import { render, screen, fireEvent, waitFor, act } from '@testing-library/react'
 import App from '../src/App'
 
+// Existing HCM regression assertions keep measuring legacy requests. The new
+// registry dependency is isolated here; regions.test.tsx covers its HTTP/UI flow.
+vi.mock('../src/lib/api', async importOriginal => {
+  const original = await importOriginal<typeof import('../src/lib/api')>()
+  return { ...original, api: (path: string, options?: RequestInit) => path === '/api/regions'
+    ? Promise.resolve({ regions: [{ id: 'hcm-center', label: 'Trung tâm TP.HCM · Quận 1 cũ',
+        viewport: { center: [106.7,10.7725], zoom: 14.2, bounds: [106.675,10.75,106.725,10.795] } }] })
+    : original.api(path, options) }
+})
+
 // WebGL is intentionally mocked in component unit tests; browser QA is separate.
 vi.mock('../src/components/sandbox-map', () => ({ SandboxMap: ({ enabled, onSelect }: { enabled: boolean; onSelect: (point: [number, number]) => void }) => <div data-testid="map-host">
   <button disabled={!enabled} onClick={() => onSelect([106.69, 10.77])}>Fixture A</button>
