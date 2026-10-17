@@ -13,6 +13,8 @@ from .schemas import RouteRequest, RouteResponse, SnapPoint
 from .fleet import candidate_catalog
 from .booking import PrepareRequest, ScenarioPlan, LocalTravel, build_plan
 from .voucher import ExperimentRequest, prepare_experiment
+from .modes import resolve_mode, routing_identity
+from .multimodal import MixedRequest, mode_catalog, prepare_mixed
 
 
 def api_error(code, message, status=503):
@@ -88,7 +90,8 @@ def create_app(settings: Settings | None = None, registry: RegionRegistry | None
             api_error("OUTSIDE_ROUTING_REGION", "Điểm nằm ngoài vùng routing đã cấu hình.", 422)
         if request.start == request.end:
             api_error("IDENTICAL_POINTS", "Chọn hai điểm khác nhau.", 422)
-        if not pbf_status(selected)["format_verified"] or not artifact_status(selected)["graph_ready"]:
+        inputs_ready = await asyncio.to_thread(lambda: pbf_status(selected)["format_verified"] and artifact_status(selected)["graph_ready"])
+        if not inputs_ready:
             api_error("DATASET_NOT_READY", "Chưa có PBF đọc được và OSRM graph MLD đã chuẩn bị.")
         coords = ";".join(f"{lon},{lat}" for lon, lat in (request.start, request.end))
         try:
@@ -101,7 +104,10 @@ def create_app(settings: Settings | None = None, registry: RegionRegistry | None
                     response = await query(client)
             data = response.json()
             if data.get("code") in {"NoRoute", "NoSegment"}:
-                api_error(data["code"].upper(), "Không tìm thấy tuyến ô tô hoặc điểm snap phù hợp.", 422)
+                message = ('Không tìm thấy tuyến MOTORBIKE hoặc điểm snap phù hợp.'
+                           if getattr(selected,'vehicle_type','CAR')=='MOTORBIKE'
+                           else 'Không tìm thấy tuyến ô tô hoặc điểm snap phù hợp.')
+                api_error(data["code"].upper(), message, 422)
             response.raise_for_status()
             if data.get("code") != "Ok":
                 api_error("ROUTER_BAD_RESPONSE", "OSRM trả về phản hồi không hợp lệ.", 502)
@@ -112,6 +118,8 @@ def create_app(settings: Settings | None = None, registry: RegionRegistry | None
             if any(point.distance > selected.max_snap_meters for point in snaps):
                 api_error("SNAP_TOO_FAR", "Điểm snap quá xa vị trí đã chọn.", 422)
             validated = RouteResponse(coordinates=result["geometry"]["coordinates"], distance=result["distance"], duration=result["duration"], snap_points=snaps)
+            if getattr(selected,'vehicle_type','CAR')=='MOTORBIKE':
+                validated=validated.model_copy(update={'duration_source':'OSRM motorbike profile model estimate; uncalibrated; not live traffic'})
             if len(set(validated.coordinates)) < 2 or any(meters(p, snap.location) > 5 for p, snap in zip([validated.coordinates[0], validated.coordinates[-1]], snaps)):
                 api_error("ROUTER_BAD_RESPONSE", "Geometry không khớp điểm snap hoặc không có độ dài.", 502)
             if any(meters(p, snap.location) > selected.max_snap_meters + 1 for p, snap in zip([request.start, request.end], snaps)):
@@ -188,6 +196,56 @@ def create_app(settings: Settings | None = None, registry: RegionRegistry | None
              "coverage": status["coverage"], "ready": status["ready"], "mapReady": status["artifacts"]["map_ready"],
              "state": status["state"], "reason": status["readinessReason"]}
             for c, status in zip(registry.contexts.values(), statuses)]}
+
+    async def require_mode(region_id, vehicle_type):
+        context = resolve_mode(registry, region_id, vehicle_type)
+        status = await public_region_status(context)
+        if not status['ready']:
+            code = 'MODE_NOT_READY'
+            if artifact_status(context)['graph_ready']:
+                code = 'ROUTER_IDENTITY_MISMATCH' if status['osrm']['state']=='identity_mismatch' else 'ROUTER_UNAVAILABLE'
+            api_error(code, f'{vehicle_type}: dữ liệu/profile/router chưa sẵn sàng.')
+        return context
+
+    @app.get('/api/v2/regions/{region_id}/modes')
+    async def modes(region_id: str):
+        registry.resolve(region_id)
+        result=[]
+        for mode in ('CAR','MOTORBIKE'):
+            try:
+                context=resolve_mode(registry,region_id,mode)
+                status=await public_region_status(context)
+                result.append({'vehicleType':mode,'ready':status['ready'],
+                    'reason':status['readinessReason'] if mode=='CAR' else ('' if status['ready'] else 'MOTORBIKE chưa được kiểm chứng/sẵn sàng.'),
+                    'routingIdentity':routing_identity(context) if status['ready'] else None})
+            except HTTPException as exc:
+                result.append({'vehicleType':mode,'ready':False,'reason':exc.detail['message'],'routingIdentity':None})
+        return {'regionId':region_id,'modes':result}
+
+    @app.post('/api/v2/regions/{region_id}/modes/{vehicle_type}/route')
+    async def mode_route(region_id: str, vehicle_type: str, config: RouteRequest):
+        context=await require_mode(region_id,vehicle_type)
+        identity=routing_identity(context)
+        result=await calculate_route(config,selected=context)
+        if routing_identity(context)!=identity:
+            api_error('ROUTING_IDENTITY_CHANGED','Graph đã đổi trong khi tính tuyến; hãy thử lại.')
+        return {'schemaVersion':'gsm-mode-route/v1','routingIdentity':identity,'route':result}
+
+    @app.get('/api/v2/regions/{region_id}/modes/{vehicle_type}/candidates')
+    async def mode_candidates(region_id: str, vehicle_type: str):
+        context=await require_mode(region_id,vehicle_type)
+        return await asyncio.to_thread(mode_catalog,context)
+
+    @app.post('/api/v2/regions/{region_id}/booking-simulation/prepare')
+    async def mixed_booking(region_id: str, config: MixedRequest, request: Request):
+        modes=sorted(set(config.vehicleTypes+config.serviceTypes))
+        contexts={m:await require_mode(region_id,m) for m in modes}
+        async with preparation_lock:
+            async with httpx.AsyncClient(timeout=settings.osrm_timeout_seconds,trust_env=False) as client:
+                def travel_for(context):
+                    async def fetch(config): return await calculate_route(config,client,context)
+                    return LocalTravel(context,fetch,meters,client)
+                return await prepare_mixed(config,contexts,{m:travel_for(c) for m,c in contexts.items()},request.is_disconnected)
 
     @app.get("/api/regions/{region_id}/dataset/status")
     async def region_status(region_id: str):

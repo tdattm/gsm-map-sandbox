@@ -1,0 +1,43 @@
+{
+  "url": "http://127.0.0.1:5175/",
+  "singleTrips": "PASS CAR and MOTORBIKE with local OSRM",
+  "mixedFleet": {
+    "status": "PASS",
+    "vehicles": 10,
+    "car": 5,
+    "motorbike": 5,
+    "seekSeconds": 120
+  },
+  "mixedBooking": {
+    "status": "PASS",
+    "planId": "6aab000cd01bf9d5390f06236b98662d12eed05518af414b682bcb3b1349d411",
+    "seekSeconds": 500,
+    "typedInspector": "PASS",
+    "rawJSONExportAndIndependentRerun": "PASS"
+  },
+  "hanoiVoucherCar": {
+    "status": "PASS",
+    "baselineCompleted": 8,
+    "treatmentCompleted": 10,
+    "rawJSONAnd5CSV": "PASS",
+    "portableV1": "UNSUPPORTED by design"
+  },
+  "savedHcm": {
+    "offlineSampleValidateSeekPlay": "PASS with own backend stopped and connection failure verified",
+    "seekSeconds": 500,
+    "browserFileChooserImport": "NOT VERIFIED: browser chooser event timed out; import validators and replay tests passed"
+  },
+  "switching": "PASS HCM/Hanoi/modes, stale response guards tested",
+  "mapInstance": {
+    "canvasCount": 1,
+    "lifetimeToken": "fcf9f46b-8c67-4ac4-ac7d-52f7373f0fe2",
+    "stableAcrossFlows": true
+  },
+  "screenshots": [
+    "motorbike-single.png",
+    "mixed-fleet.png",
+    "mixed-booking.png",
+    "hanoi-car-voucher.png",
+    "saved-hcm-backend-off.png"
+  ]
+}

@@ -1,0 +1,675 @@
+{
+  "status": "PASS",
+  "source_sha256": "18fd3892f6d766387f2c3217d5d104e09a9319d3905a9172834b21c0064d6308",
+  "cases": [
+    {
+      "osmWay": "9656730",
+      "tags": {
+        "bicycle": "no",
+        "bridge": "yes",
+        "bus:conditional": "no @ (seatings>=9)",
+        "construction_date": "1983-10",
+        "fixme": "Surface of this road is CONCRETE, not ASPHALT!",
+        "foot": "no",
+        "goods": "no",
+        "highway": "primary",
+        "lanes": "1",
+        "layer": "2",
+        "lit": "yes",
+        "loc_name": "Quốc lộ 1A cũ",
+        "maxspeed": "50",
+        "maxweightrating:hgv": "0.5",
+        "motorcycle": "yes",
+        "name": "Cầu Chương Dương",
+        "name:en": "Chuong Duong Bridge",
+        "name:ko": "쯔엉즈엉교",
+        "name:vi": "Cầu Chương Dương",
+        "name:zh": "章阳桥",
+        "oneway": "yes",
+        "smoothness": "excellent",
+        "start_date": "1985-06",
+        "surface": "concrete",
+        "taxi": "no"
+      },
+      "sourceEdge": [
+        75621001,
+        9580345408
+      ],
+      "mode": "CAR",
+      "expectedAllowed": true,
+      "status": "PASS",
+      "start": [
+        105.86384706,
+        21.0390433
+      ],
+      "end": [
+        105.85846734,
+        21.0369064
+      ],
+      "route": {
+        "code": "Ok",
+        "routes": [
+          {
+            "geometry": {
+              "coordinates": [
+                [
+                  105.863847,
+                  21.039044
+                ],
+                [
+                  105.858467,
+                  21.036906
+                ]
+              ],
+              "type": "LineString"
+            },
+            "legs": [
+              {
+                "steps": [],
+                "summary": "",
+                "weight": 54.6,
+                "duration": 54.6,
+                "annotation": {
+                  "nodes": [
+                    75621001,
+                    9580345408
+                  ]
+                },
+                "distance": 607.3
+              }
+            ],
+            "weight_name": "routability",
+            "weight": 54.6,
+            "duration": 54.6,
+            "distance": 607.3
+          }
+        ],
+        "waypoints": [
+          {
+            "hint": "2ncAgP___3-2AAAAjwMAAAoAAACaAAAAbF9KQxJrSkQqaY5BIJYrQ7YAAACPAwAACgAAAJoAAADuAAAAp1pPBsQHQQGnWk8GwwdBAQEAfw9IiwgY",
+            "distance": 0.110717352,
+            "name": "Cầu Chương Dương",
+            "location": [
+              105.863847,
+              21.039044
+            ]
+          },
+          {
+            "hint": "2ncAgP___3_YAgAAjwMAAAoAAACaAAAAEmtKRGxfSkMqaY5BIJYrQ9gCAACPAwAACgAAAJoAAADuAAAAo0VPBmr_QAGjRU8Gav9AAQEAfw9IiwgY",
+            "distance": 0,
+            "name": "Cầu Chương Dương",
+            "location": [
+              105.858467,
+              21.036906
+            ]
+          }
+        ]
+      },
+      "nearest": {
+        "code": "Ok",
+        "waypoints": [
+          {
+            "hint": "2ncAgP___3-2AAAAjwMAAAoAAACaAAAAbF9KQxJrSkQqaY5BIJYrQ7YAAACPAwAACgAAAJoAAADuAAAAp1pPBsQHQQGnWk8GwwdBAQEAfw9IiwgY",
+            "nodes": [
+              439562200,
+              75621001
+            ],
+            "distance": 0.110717352,
+            "name": "Cầu Chương Dương",
+            "location": [
+              105.863847,
+              21.039044
+            ]
+          }
+        ]
+      },
+      "table": {
+        "code": "Ok",
+        "destinations": [
+          {
+            "hint": "2ncAgP___3_YAgAAjwMAAAoAAACaAAAAEmtKRGxfSkMqaY5BIJYrQ9gCAACPAwAACgAAAJoAAADuAAAAo0VPBmr_QAGjRU8Gav9AAQEAfw9IiwgY",
+            "distance": 0,
+            "name": "Cầu Chương Dương",
+            "location": [
+              105.858467,
+              21.036906
+            ]
+          }
+        ],
+        "durations": [
+          [
+            54.6
+          ]
+        ],
+        "sources": [
+          {
+            "hint": "2ncAgP___3-2AAAAjwMAAAoAAACaAAAAbF9KQxJrSkQqaY5BIJYrQ7YAAACPAwAACgAAAJoAAADuAAAAp1pPBsQHQQGnWk8GwwdBAQEAfw9IiwgY",
+            "distance": 0.110717352,
+            "name": "Cầu Chương Dương",
+            "location": [
+              105.863847,
+              21.039044
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "osmWay": "9656730",
+      "tags": {
+        "bicycle": "no",
+        "bridge": "yes",
+        "bus:conditional": "no @ (seatings>=9)",
+        "construction_date": "1983-10",
+        "fixme": "Surface of this road is CONCRETE, not ASPHALT!",
+        "foot": "no",
+        "goods": "no",
+        "highway": "primary",
+        "lanes": "1",
+        "layer": "2",
+        "lit": "yes",
+        "loc_name": "Quốc lộ 1A cũ",
+        "maxspeed": "50",
+        "maxweightrating:hgv": "0.5",
+        "motorcycle": "yes",
+        "name": "Cầu Chương Dương",
+        "name:en": "Chuong Duong Bridge",
+        "name:ko": "쯔엉즈엉교",
+        "name:vi": "Cầu Chương Dương",
+        "name:zh": "章阳桥",
+        "oneway": "yes",
+        "smoothness": "excellent",
+        "start_date": "1985-06",
+        "surface": "concrete",
+        "taxi": "no"
+      },
+      "sourceEdge": [
+        75621001,
+        9580345408
+      ],
+      "mode": "MOTORBIKE",
+      "expectedAllowed": true,
+      "status": "PASS",
+      "start": [
+        105.86384706,
+        21.0390433
+      ],
+      "end": [
+        105.85846734,
+        21.0369064
+      ],
+      "route": {
+        "code": "Ok",
+        "routes": [
+          {
+            "geometry": {
+              "coordinates": [
+                [
+                  105.863847,
+                  21.039044
+                ],
+                [
+                  105.858467,
+                  21.036906
+                ]
+              ],
+              "type": "LineString"
+            },
+            "legs": [
+              {
+                "steps": [],
+                "summary": "",
+                "weight": 54.6,
+                "duration": 54.6,
+                "annotation": {
+                  "nodes": [
+                    75621001,
+                    9580345408
+                  ]
+                },
+                "distance": 607.3
+              }
+            ],
+            "weight_name": "duration",
+            "weight": 54.6,
+            "duration": 54.6,
+            "distance": 607.3
+          }
+        ],
+        "waypoints": [
+          {
+            "hint": "ZvsAgP___3-2AAAAjwMAABIAAACaAAAAbF9KQxJrSkQqaY5BIJYrQ7YAAACPAwAAEgAAAJoAAAAIAQAAp1pPBsQHQQGnWk8GwwdBAQEAfw_f0CBj",
+            "distance": 0.110717352,
+            "name": "Cầu Chương Dương",
+            "location": [
+              105.863847,
+              21.039044
+            ]
+          },
+          {
+            "hint": "ZvsAgP___3_YAgAAjwMAABIAAACaAAAAEmtKRGxfSkMqaY5BIJYrQ9gCAACPAwAAEgAAAJoAAAAIAQAAo0VPBmr_QAGjRU8Gav9AAQEAfw_f0CBj",
+            "distance": 0,
+            "name": "Cầu Chương Dương",
+            "location": [
+              105.858467,
+              21.036906
+            ]
+          }
+        ]
+      },
+      "nearest": {
+        "code": "Ok",
+        "waypoints": [
+          {
+            "hint": "ZvsAgP___3-2AAAAjwMAABIAAACaAAAAbF9KQxJrSkQqaY5BIJYrQ7YAAACPAwAAEgAAAJoAAAAIAQAAp1pPBsQHQQGnWk8GwwdBAQEAfw_f0CBj",
+            "nodes": [
+              439562200,
+              75621001
+            ],
+            "distance": 0.110717352,
+            "name": "Cầu Chương Dương",
+            "location": [
+              105.863847,
+              21.039044
+            ]
+          }
+        ]
+      },
+      "table": {
+        "code": "Ok",
+        "destinations": [
+          {
+            "hint": "ZvsAgP___3_YAgAAjwMAABIAAACaAAAAEmtKRGxfSkMqaY5BIJYrQ9gCAACPAwAAEgAAAJoAAAAIAQAAo0VPBmr_QAGjRU8Gav9AAQEAfw_f0CBj",
+            "distance": 0,
+            "name": "Cầu Chương Dương",
+            "location": [
+              105.858467,
+              21.036906
+            ]
+          }
+        ],
+        "durations": [
+          [
+            54.6
+          ]
+        ],
+        "sources": [
+          {
+            "hint": "ZvsAgP___3-2AAAAjwMAABIAAACaAAAAbF9KQxJrSkQqaY5BIJYrQ7YAAACPAwAAEgAAAJoAAAAIAQAAp1pPBsQHQQGnWk8GwwdBAQEAfw_f0CBj",
+            "distance": 0.110717352,
+            "name": "Cầu Chương Dương",
+            "location": [
+              105.863847,
+              21.039044
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "osmWay": "28924657",
+      "tags": {
+        "bicycle": "yes",
+        "highway": "service",
+        "motorcar": "no",
+        "motorcycle": "yes",
+        "name": "Phố Đông Thái",
+        "name:en": "Dong Thai Street",
+        "service": "alley",
+        "surface": "asphalt"
+      },
+      "sourceEdge": [
+        317968620,
+        317968632
+      ],
+      "mode": "CAR",
+      "expectedAllowed": false,
+      "status": "PASS",
+      "start": [
+        105.85310216000002,
+        21.036557159999997
+      ],
+      "end": [
+        105.85298624,
+        21.036168240000002
+      ],
+      "route": {
+        "message": "Could not find a matching segment for coordinate 0",
+        "code": "NoSegment"
+      },
+      "nearest": {
+        "message": "Could not find a matching segments for coordinate",
+        "code": "NoSegment"
+      },
+      "table": {
+        "message": "Could not find a matching segment for coordinate 0",
+        "code": "NoSegment"
+      }
+    },
+    {
+      "osmWay": "28924657",
+      "tags": {
+        "bicycle": "yes",
+        "highway": "service",
+        "motorcar": "no",
+        "motorcycle": "yes",
+        "name": "Phố Đông Thái",
+        "name:en": "Dong Thai Street",
+        "service": "alley",
+        "surface": "asphalt"
+      },
+      "sourceEdge": [
+        317968620,
+        317968632
+      ],
+      "mode": "MOTORBIKE",
+      "expectedAllowed": true,
+      "status": "PASS",
+      "start": [
+        105.85310216000002,
+        21.036557159999997
+      ],
+      "end": [
+        105.85298624,
+        21.036168240000002
+      ],
+      "route": {
+        "code": "Ok",
+        "routes": [
+          {
+            "geometry": {
+              "coordinates": [
+                [
+                  105.853102,
+                  21.036557
+                ],
+                [
+                  105.852986,
+                  21.036168
+                ]
+              ],
+              "type": "LineString"
+            },
+            "legs": [
+              {
+                "steps": [],
+                "summary": "",
+                "weight": 10.8,
+                "duration": 10.8,
+                "annotation": {
+                  "nodes": [
+                    317968620,
+                    317968632
+                  ]
+                },
+                "distance": 44.7
+              }
+            ],
+            "weight_name": "duration",
+            "weight": 10.8,
+            "duration": 10.8,
+            "distance": 44.7
+          }
+        ],
+        "waypoints": [
+          {
+            "hint": "1osAgNiLAIAjAAAAkAAAAAAAAAAAAAAA2EBvQQktbkIAAAAAAAAAACMAAACQAAAAAAAAAAAAAAAIAQAArjBPBg3-QAGuME8GDf5AAQAAPwzf0CBj",
+            "distance": 0,
+            "name": "Phố Đông Thái",
+            "location": [
+              105.853102,
+              21.036557
+            ]
+          },
+          {
+            "hint": "1osAgNiLAICPAAAAJAAAAAAAAAAAAAAA5rZuQpEZbUEAAAAAAAAAAI8AAAAkAAAAAAAAAAAAAAAIAQAAOjBPBoj8QAE6ME8GiPxAAQAAPwzf0CBj",
+            "distance": 0,
+            "name": "Phố Đông Thái",
+            "location": [
+              105.852986,
+              21.036168
+            ]
+          }
+        ]
+      },
+      "nearest": {
+        "code": "Ok",
+        "waypoints": [
+          {
+            "hint": "1osAgNiLAIAjAAAAkAAAAAAAAAAAAAAA2EBvQQktbkIAAAAAAAAAACMAAACQAAAAAAAAAAAAAAAIAQAArjBPBg3-QAGuME8GDf5AAQAAPwzf0CBj",
+            "nodes": [
+              317968632,
+              317968620
+            ],
+            "distance": 0,
+            "name": "Phố Đông Thái",
+            "location": [
+              105.853102,
+              21.036557
+            ]
+          }
+        ]
+      },
+      "table": {
+        "code": "Ok",
+        "destinations": [
+          {
+            "hint": "1osAgNiLAICPAAAAJAAAAAAAAAAAAAAA5rZuQpEZbUEAAAAAAAAAAI8AAAAkAAAAAAAAAAAAAAAIAQAAOjBPBoj8QAE6ME8GiPxAAQAAPwzf0CBj",
+            "distance": 0,
+            "name": "Phố Đông Thái",
+            "location": [
+              105.852986,
+              21.036168
+            ]
+          }
+        ],
+        "durations": [
+          [
+            10.8
+          ]
+        ],
+        "sources": [
+          {
+            "hint": "1osAgNiLAIAjAAAAkAAAAAAAAAAAAAAA2EBvQQktbkIAAAAAAAAAACMAAACQAAAAAAAAAAAAAAAIAQAArjBPBg3-QAGuME8GDf5AAQAAPwzf0CBj",
+            "distance": 0,
+            "name": "Phố Đông Thái",
+            "location": [
+              105.853102,
+              21.036557
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "osmWay": "35978226",
+      "tags": {
+        "bridge": "yes",
+        "highway": "motorway",
+        "lanes": "2",
+        "layer": "2",
+        "lit": "yes",
+        "maxspeed": "80",
+        "moped": "no",
+        "motorcycle": "no",
+        "name": "Đường cao tốc Vành đai 3 TP. Hà Nội",
+        "name:en": "Ring Road 3 Expressway (Hanoi)",
+        "oneway": "yes",
+        "ref": "CT.37",
+        "surface": "asphalt"
+      },
+      "sourceEdge": [
+        10943481563,
+        10943481564
+      ],
+      "mode": "CAR",
+      "expectedAllowed": true,
+      "status": "PASS",
+      "start": [
+        105.78069442,
+        21.036833480000002
+      ],
+      "end": [
+        105.78076408000001,
+        21.03748802
+      ],
+      "route": {
+        "code": "Ok",
+        "routes": [
+          {
+            "geometry": {
+              "coordinates": [
+                [
+                  105.780694,
+                  21.036833
+                ],
+                [
+                  105.780764,
+                  21.037488
+                ]
+              ],
+              "type": "LineString"
+            },
+            "legs": [
+              {
+                "steps": [],
+                "summary": "",
+                "weight": 4.1,
+                "duration": 4.1,
+                "annotation": {
+                  "nodes": [
+                    10943481563,
+                    10943481564
+                  ]
+                },
+                "distance": 72.9
+              }
+            ],
+            "weight_name": "routability",
+            "weight": 4.1,
+            "duration": 4.1,
+            "distance": 72.9
+          }
+        ],
+        "waypoints": [
+          {
+            "hint": "wgUAgP___38NAAAARAAAADwBAAC0AAAAPwnCQe1GwkInSwxEI92fQw0AAABEAAAAPAEAALQAAADuAAAA1hVOBiH_QAHWFU4GIf9AAQwAXwBIiwgY",
+            "distance": 0,
+            "name": "Đường cao tốc Vành đai 3 TP. Hà Nội",
+            "location": [
+              105.780694,
+              21.036833
+            ]
+          },
+          {
+            "hint": "wgUAgP___382AAAARAAAADwBAAC0AAAA7UbCQj8JwkEnSwxEI92fQzYAAABEAAAAPAEAALQAAADuAAAAHBZOBrABQQEcFk4GsAFBAQwAXwBIiwgY",
+            "distance": 0,
+            "name": "Đường cao tốc Vành đai 3 TP. Hà Nội",
+            "location": [
+              105.780764,
+              21.037488
+            ]
+          }
+        ]
+      },
+      "nearest": {
+        "code": "Ok",
+        "waypoints": [
+          {
+            "hint": "wgUAgP___38NAAAARAAAADwBAAC0AAAAPwnCQe1GwkInSwxEI92fQw0AAABEAAAAPAEAALQAAADuAAAA1hVOBiH_QAHWFU4GIf9AAQwAXwBIiwgY",
+            "nodes": [
+              12606538045,
+              10943481563
+            ],
+            "distance": 0,
+            "name": "Đường cao tốc Vành đai 3 TP. Hà Nội",
+            "location": [
+              105.780694,
+              21.036833
+            ]
+          }
+        ]
+      },
+      "table": {
+        "code": "Ok",
+        "destinations": [
+          {
+            "hint": "wgUAgP___382AAAARAAAADwBAAC0AAAA7UbCQj8JwkEnSwxEI92fQzYAAABEAAAAPAEAALQAAADuAAAAHBZOBrABQQEcFk4GsAFBAQwAXwBIiwgY",
+            "distance": 0,
+            "name": "Đường cao tốc Vành đai 3 TP. Hà Nội",
+            "location": [
+              105.780764,
+              21.037488
+            ]
+          }
+        ],
+        "durations": [
+          [
+            4.1
+          ]
+        ],
+        "sources": [
+          {
+            "hint": "wgUAgP___38NAAAARAAAADwBAAC0AAAAPwnCQe1GwkInSwxEI92fQw0AAABEAAAAPAEAALQAAADuAAAA1hVOBiH_QAHWFU4GIf9AAQwAXwBIiwgY",
+            "distance": 0,
+            "name": "Đường cao tốc Vành đai 3 TP. Hà Nội",
+            "location": [
+              105.780694,
+              21.036833
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "osmWay": "35978226",
+      "tags": {
+        "bridge": "yes",
+        "highway": "motorway",
+        "lanes": "2",
+        "layer": "2",
+        "lit": "yes",
+        "maxspeed": "80",
+        "moped": "no",
+        "motorcycle": "no",
+        "name": "Đường cao tốc Vành đai 3 TP. Hà Nội",
+        "name:en": "Ring Road 3 Expressway (Hanoi)",
+        "oneway": "yes",
+        "ref": "CT.37",
+        "surface": "asphalt"
+      },
+      "sourceEdge": [
+        10943481563,
+        10943481564
+      ],
+      "mode": "MOTORBIKE",
+      "expectedAllowed": false,
+      "status": "PASS",
+      "start": [
+        105.78069442,
+        21.036833480000002
+      ],
+      "end": [
+        105.78076408000001,
+        21.03748802
+      ],
+      "route": {
+        "message": "Could not find a matching segment for coordinate 0",
+        "code": "NoSegment"
+      },
+      "nearest": {
+        "message": "Could not find a matching segments for coordinate",
+        "code": "NoSegment"
+      },
+      "table": {
+        "message": "Could not find a matching segment for coordinate 0",
+        "code": "NoSegment"
+      }
+    }
+  ],
+  "unknown": [
+    "Current physical signs",
+    "Conditional/via-way restrictions outside fixtures",
+    "Traffic ETA calibration"
+  ]
+}

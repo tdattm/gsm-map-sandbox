@@ -1,0 +1,50 @@
+{
+  "identity": {
+    "region_id": "nvmr-hanoi-core",
+    "config_sha256": "91c114a869a0eebe23d91df77641b9dd2f52afb7b7d09e941f249f78cfc9f05c",
+    "pipeline_version": "hanoi-car-pilot/v1",
+    "vehicle_type": "MOTORBIKE",
+    "mode_config_sha256": "7bf195e08a48083ded012d8cd2ef594ca7dbf5e2cf6ced9ff7a340eff94f07e2",
+    "profile_sha256": "075ecdbc70a3e75c4338d2c6a41597c132a1837ec2d27f1c2fcdd824a788b209",
+    "assumptions_sha256": "fedfbb84ea7292118e92e9fa45bb3d0721511e830a9afb23c99f9b9e52d17af5",
+    "version": "hanoi-electric-motorcycle/v1"
+  },
+  "manifest_sha256": "fb97489d066397b11cb9178238cd56a5f52281bcf5711430bb7cf411496ca455",
+  "container": "gsm-map-osrm-hanoi-motorbike",
+  "image_digest": "ghcr.io/project-osrm/osrm-backend@sha256:855614a38f464b0558a2ad6eaa7cb8c139f39887da9b38b485ce453c6e6e6124",
+  "probes": [
+    {
+      "point": [
+        105.83850000000001,
+        21.0285
+      ],
+      "location": [
+        105.838453,
+        21.028346
+      ],
+      "hint": "3C8CgP___38ZAAAAGgAAAAAAAABYAAAAto8IQlrl1D0AAAAAQqrnQhkAAAAaAAAAAAAAAFgAAAAIAQAAdfdOBvrdQAGk904GlN5AAQAA3xHf0CBj"
+    },
+    {
+      "point": [
+        105.841,
+        21.028
+      ],
+      "location": [
+        105.840802,
+        21.028008
+      ],
+      "hint": "lC8CgP4vAoBTAAAAAAAAAAAAAABHAAAAZRMLQgAAAAAAAAAAianrQVMAAAAAAAAAAAAAAEcAAAAIAQAAogBPBqjcQAFoAU8GoNxAAQAAbwDf0CBj"
+    },
+    {
+      "point": [
+        105.832,
+        21.039
+      ],
+      "location": [
+        105.831997,
+        21.038985
+      ],
+      "hint": "NXUCgDZ1AoBcAAAAKAAAAAAAAAAAAAAACA0ZQiybhUEAAAAAAAAAAFwAAAAoAAAAAAAAAAAAAAAIAQAAPd5OBokHQQFA3k4GmAdBAQAArxHf0CBj"
+    }
+  ]
+}

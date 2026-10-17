@@ -170,7 +170,15 @@ def run(settings, args):
                 if attempt==29: raise
                 time.sleep(.5)
         probes.append({'point':point,'location':waypoint['location'],'hint':waypoint['hint']})
-    write_json(graph_dir/'router-evidence.json',dict(identity=identity,manifest_sha256=sha256(manifest_path),
-        container=name,image_digest=image,probes=probes,created_utc=now))
+    proof=dict(identity=identity,manifest_sha256=sha256(manifest_path),container=name,image_digest=image,probes=probes)
+    evidence_path=graph_dir/'router-evidence.json'
+    if evidence_path.exists():
+        previous=json.loads(evidence_path.read_text(encoding='utf-8'))
+        # Restarting an unchanged graph must preserve its historical proof bytes.
+        if any(previous.get(k)!=json.loads(json.dumps(v)) for k,v in proof.items()):
+            raise RuntimeError('Existing router evidence differs; refusing to overwrite historical CAR evidence')
+        print('REUSE unchanged graph-specific router evidence')
+    else:
+        write_json(evidence_path,{**proof,'created_utc':now})
     print('SERVING verified local CAR graph; backend also checks artifacts and graph-specific probes')
     return 0

@@ -1,5 +1,6 @@
 import json
 import shutil
+import asyncio
 
 import httpx
 from .config import Settings
@@ -39,6 +40,9 @@ def pbf_status(settings: Settings):
 
 
 def artifact_status(settings: Settings):
+    if getattr(settings, 'vehicle_type', 'CAR') == 'MOTORBIKE':
+        from .modes import motor_artifacts
+        return motor_artifacts(settings)
     basename = getattr(settings, "graph_basename", "hcm-center")
     required = tuple(f"{basename}.osrm.{suffix}" for suffix in ("partition", "cells", "mldgr"))
     routing_bbox = getattr(settings, "routing_bbox", settings.region.routing_bbox)
@@ -113,7 +117,8 @@ async def router_status(settings: Settings):
 
 
 async def dataset_status(settings: Settings):
-    pbf, artifacts = pbf_status(settings), artifact_status(settings)
+    # Cold checksum reads must not block other requests' OSRM response timers.
+    pbf, artifacts = await asyncio.to_thread(lambda: (pbf_status(settings), artifact_status(settings)))
     router = await router_status(settings)
     artifacts["graph_built"] = artifacts["graph_ready"]
     artifacts["graph_ready"] = artifacts["graph_built"] and router["state"] == "connected"

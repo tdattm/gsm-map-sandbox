@@ -1,0 +1,21 @@
+{
+  "version": "hanoi-electric-motorcycle/v1",
+  "vehicleClass": "electric motorcycle, two wheels, assumed design 70 km/h and rated 6 kW; not moped",
+  "supportScope": "Hanoi Core synthetic research pilot; static OSM-tag constraints; not navigation/legal certification",
+  "eta": "model-based uncalibrated speed and upstream turn/surface penalties",
+  "access": "motorcycle > motor_vehicle > vehicle > access; yes/designated/permissive; absent allowed on ordinary motor roads; ambiguous/private/destination/conditional denied",
+  "motorroad": "motorway, motorway_link and motorroad=yes excluded even motorcycle=yes",
+  "moped": "not inherited; chosen vehicle is a motorcycle",
+  "oneway": "motorcycle > motor_vehicle > vehicle > generic; implied roundabout; reversible/conditional denied",
+  "restrictions": "upstream restriction parsing with motorcycle,motor_vehicle,vehicle hierarchy and except; conditional/via-way support is UNKNOWN outside tested cases",
+  "barriers": "conservative: only no,entrance,toll_booth,border_control allowed; gates/bollards/unknown denied even with access=yes",
+  "bridgesTunnels": "ordinary highway access and dimensional constraints inherited; no blanket permission, missing signage UNKNOWN",
+  "sources": [
+    "https://soxd.langson.gov.vn/upload/105369/20250108/36_2024_QH15_444251__1__d7609.pdf",
+    "https://congbao.chinhphu.vn/tai-ve-van-ban-so-48-2024-tt-bgtvt-43772-54127?format=pdf",
+    "https://wiki.openstreetmap.org/wiki/Key:motorcycle",
+    "https://wiki.openstreetmap.org/wiki/Key:oneway:motorcycle",
+    "https://wiki.openstreetmap.org/wiki/Relation:restriction",
+    "https://github.com/Project-OSRM/osrm-backend/tree/v5.27.1/profiles"
+  ]
+}

@@ -1,0 +1,95 @@
+{
+  "checkedAt": "2026-10-17T02:44:12.407028+00:00",
+  "commandExits": {
+    "pytest": 0,
+    "vitest": 0,
+    "lint": 0,
+    "typecheck": 0,
+    "build": 0,
+    "replay": 0,
+    "multimodalExport": 0,
+    "voucherExport": 0
+  },
+  "backend": {
+    "command": "RUN_REAL_DATA=1 .venv/Scripts/python.exe -X utf8 -m pytest -q",
+    "status": "PASS",
+    "passed": 164,
+    "skipped": 0,
+    "warnings": [
+      "Starlette TestClient httpx deprecation"
+    ]
+  },
+  "frontend": {
+    "command": "npm.cmd test -- --maxWorkers=2",
+    "status": "PASS",
+    "passed": 159,
+    "files": 15
+  },
+  "lint": {
+    "status": "PASS",
+    "warnings": 13
+  },
+  "typecheck": "PASS",
+  "productionBuild": {
+    "status": "PASS",
+    "warning": "main chunk 1433.42 kB > 500 kB"
+  },
+  "profileValidation": {
+    "status": "PASS",
+    "syntheticCases": 58,
+    "limitations": "static OSM-tag pilot; conditional/via-way rules beyond fixtures, actual signage and calibrated ETA UNKNOWN"
+  },
+  "replay": {
+    "package": "PASS",
+    "assets": 9,
+    "browserPortableReExport": "NOT_RUN"
+  },
+  "exports": {
+    "multimodalBrowserJSON": "PASS",
+    "hanoiCarVoucherJSONAnd5CSV": "PASS"
+  },
+  "resolvedFailure": {
+    "evidence": "parallel-pilot-failure.txt",
+    "cause": "synchronous cold artifact checksum I/O blocked event loop, yielding false CAR ROUTER_UNAVAILABLE under concurrency",
+    "fix": "read-only artifact/catalog validation moved to asyncio.to_thread; deterministic event-loop heartbeat regression added",
+    "finalFullSuite": "PASS; no timeout increases or assertion relaxation"
+  },
+  "logs": {
+    "backend-final.log": {
+      "path": "build/m2/backend-final.log",
+      "sha256": "657f681e2bd029e72eff6a32cfd873c646c19031f28e07843cfdccb769004f9c"
+    },
+    "frontend-final.log": {
+      "path": "build/m2/frontend-final.log",
+      "sha256": "d696852249dbd000040f4d66c8c1bbcf7125595ee97a48e128a975244e5dbc3f"
+    },
+    "lint-final.log": {
+      "path": "build/m2/lint-final.log",
+      "sha256": "b2c91fdb972698113a18a50c56f16798f0b80b33fcbb27e3ee5e04ae77dc25a6"
+    },
+    "typecheck-final.log": {
+      "path": "build/m2/typecheck-final.log",
+      "sha256": "ce47ca57861e4fa3aa21c4ee091eccdf3e660ef66243377ebaaed3616baa0b88"
+    },
+    "build-final.log": {
+      "path": "build/m2/build-final.log",
+      "sha256": "e42f32a4a36a581a32bc6670acf749f2e3e13e9f15e27c141db302c23eeaa2e9"
+    },
+    "replay.log": {
+      "path": "build/m2/replay.log",
+      "sha256": "78262c5d78a7ad66c89c639acf5d520490b5037b324d90889292fef2110051f8"
+    },
+    "browser-export.log": {
+      "path": "build/m2/browser-export.log",
+      "sha256": "b560f2709fcd0d123a69ca2148764842e6b6bc3a1d4a1a8bb11cc61593fe2fc4"
+    },
+    "voucher-export.log": {
+      "path": "build/m2/voucher-export.log",
+      "sha256": "e04fabc82e1201e6f113162a239a855a63b51cbcc5648f478df8dcb57c793a19"
+    },
+    "profile-final.log": {
+      "path": "build/m2/profile-final.log",
+      "sha256": "f3b8f311b87d8d8c26d1bd44da39d592b5eb92ddf0e81115cfc016f669bcd78a"
+    }
+  }
+}

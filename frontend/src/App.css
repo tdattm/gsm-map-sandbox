@@ -319,3 +319,5 @@ button:focus-visible, input:focus-visible, select:focus-visible, summary:focus-v
 }
 .region-selector { display: grid; gap: 6px; font-size: 12px; }
 .region-selector select { width: 100%; min-width: 0; padding: 8px; border: 1px solid var(--border, #d8ddd6); border-radius: 6px; background: var(--background, #fff); color: inherit; }
+
+.fleet-marker[data-vehicle-type="MOTORBIKE"] { border-color: #9156c6; box-shadow: 0 0 0 2px #c4a5e2; }

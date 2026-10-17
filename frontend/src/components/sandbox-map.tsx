@@ -1,6 +1,6 @@
 import { useEffect, useMemo } from 'react'
 import { mapLocaleVi } from '@/lib/vi'
-import { Car } from 'lucide-react'
+import { Motorbike, Car } from 'lucide-react'
 import { Map, MapControls, MapMarker, MarkerContent, MapRoute, RouteProgress, RouteMarker, useMap } from '@/components/ui/map'
 import { emptyStyle, localStyle, regionMapStyle } from '@/lib/map-style'
 import type { StyleSpecification } from 'maplibre-gl'
@@ -56,8 +56,8 @@ function RegionViewportSync({ center, zoom, scope }: { center: Coordinate; zoom:
   return null
 }
 
-export function SandboxMap({ dataset, start, end, route, progress, enabled, onSelect, onError, fleet, fleetFocus, booking, bookingFocus, replayStyle, regionId, viewport, replayBounds }: {
-  dataset: DatasetStatus | null; start: Coordinate | null; end: Coordinate | null; route: Route | null;
+export function SandboxMap({ vehicleType='CAR', dataset, start, end, route, progress, enabled, onSelect, onError, fleet, fleetFocus, booking, bookingFocus, replayStyle, regionId, viewport, replayBounds }: {
+  vehicleType?: 'CAR' | 'MOTORBIKE'; dataset: DatasetStatus | null; start: Coordinate | null; end: Coordinate | null; route: Route | null;
   progress: number; enabled: boolean; onSelect: (point: Coordinate) => void; onError: (message: string) => void
   fleet?: FleetSession; fleetFocus?: FleetFocus | null
   booking?: BookingMapSession; bookingFocus?: BookingFocus | null
@@ -83,7 +83,7 @@ export function SandboxMap({ dataset, start, end, route, progress, enabled, onSe
     {[start, end].map((point, i) => point && <MapMarker key={i} longitude={point[0]} latitude={point[1]}><MarkerContent><div className={`point-marker ${i ? 'destination' : ''}`}>{i ? 'B' : 'A'}</div></MarkerContent></MapMarker>)}
     {route && <MapRoute coordinates={route.coordinates} progress={progress} color="#397f9b" width={6} opacity={1}>
       <RouteProgress color="#078057" width={6} opacity={1} />
-      <RouteMarker at="progress"><MarkerContent><div className="vehicle-marker" data-progress={progress} data-coordinate={JSON.stringify(positionAt(route.coordinates, progress))} title="Một xe GSM mô phỏng trên tuyến OSRM"><Car size={21} /></div></MarkerContent></RouteMarker>
+      <RouteMarker at="progress"><MarkerContent><div className="vehicle-marker" data-progress={progress} data-coordinate={JSON.stringify(positionAt(route.coordinates, progress))} title="Một xe GSM mô phỏng trên tuyến OSRM">{vehicleType==='MOTORBIKE' ? <Motorbike size={21}/> : <Car size={21}/>}</div></MarkerContent></RouteMarker>
     </MapRoute>}
   </Map>
 }

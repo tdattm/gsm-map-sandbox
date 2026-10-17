@@ -87,9 +87,14 @@ def main(argv=None):
     parser.add_argument("--region-config", help="Override REGION_CONFIG_PATH")
     parser.add_argument("--detach", action="store_true", help="Run router in background")
     parser.add_argument("--region", choices=["hcm-center", "nvmr-hanoi-core"], default="hcm-center")
-    parser.add_argument("--profile", choices=["car"], default="car")
+    parser.add_argument("--profile", choices=["car", "motorbike"], default="car")
     args = parser.parse_args(argv)
     settings = Settings(**{k: v for k, v in {"osm_pbf_path": args.pbf, "region_config_path": args.region_config}.items() if v})
+    if args.profile == 'motorbike':
+        if args.region != 'nvmr-hanoi-core' or args.region_config:
+            raise RuntimeError('MOTORBIKE requires allowlisted Hanoi Core configuration')
+        from scripts.motorbike_pipeline import run
+        return run(settings,args)
     if args.region != "hcm-center":
         if args.region_config:
             raise RuntimeError("Region mới sử dụng allowlist config server, không dùng --region-config.")

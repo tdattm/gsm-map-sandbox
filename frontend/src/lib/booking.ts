@@ -4,9 +4,10 @@ import { fleetPosition, validateFleetRoute, type CandidateCatalog } from './flee
 export type BookingStatus = 'scheduled' | 'waiting' | 'assigned' | 'picked_up' | 'completed' | 'unserved'
 export type DispatchStatus = 'idle' | 'en_route_to_pickup' | 'on_trip'
 export interface BookingConfig { seed: string; fleetSize: number; bookingCount: number; horizonSeconds: number; maxWaitSeconds: number; preset: 'Low' | 'Medium' | 'High' }
-export interface BookingInput { id: string; passengerId: string; requestTimeSeconds: number; pickup: Coordinate; dropoff: Coordinate; pickupCandidateId: string; dropoffCandidateId: string }
-export interface InitialVehicle { id: string; candidateId: string; initialPosition: Coordinate }
+export interface BookingInput { id: string; passengerId: string; requestTimeSeconds: number; pickup: Coordinate; dropoff: Coordinate; pickupCandidateId: string; dropoffCandidateId: string; serviceType?: 'CAR' | 'MOTORBIKE' }
+export interface InitialVehicle { id: string; candidateId: string; initialPosition: Coordinate; vehicleType?: 'CAR' | 'MOTORBIKE' }
 export interface Assignment {
+  vehicleType?: 'CAR' | 'MOTORBIKE'; routingIdentity?: import('./multimodal').RoutingIdentity
   bookingId: string; vehicleId: string; assignedAtSeconds: number; pickupAtSeconds: number; dropoffAtSeconds: number
   estimatedPickupEtaSeconds: number; tableEtaSeconds: number; pickupRoute: Route | null; tripRoute: Route
   dispatchCandidates: { vehicleId: string; etaSeconds: number | null }[]

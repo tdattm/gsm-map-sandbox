@@ -2,6 +2,7 @@ import type { Coordinate, Route } from './api'
 
 export type VehicleStatus = 'scheduled' | 'moving' | 'completed'
 export interface Vehicle {
+  vehicleType?: 'CAR' | 'MOTORBIKE'
   id: string; label: string; status: VehicleStatus; start: Coordinate; end: Coordinate; route: Route
   distanceMeters: number; durationSeconds: number; departureOffsetSeconds: number
   progress: number; currentPosition: Coordinate; headingDegrees: number | null
