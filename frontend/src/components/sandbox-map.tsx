@@ -1,6 +1,6 @@
 import { useEffect, useMemo } from 'react'
 import { mapLocaleVi } from '@/lib/vi'
-import { Motorbike, Car } from 'lucide-react'
+import { MobilityIcon } from './mobility-icon'
 import { Map, MapControls, MapMarker, MarkerContent, MapRoute, RouteProgress, RouteMarker, useMap } from '@/components/ui/map'
 import { emptyStyle, localStyle, regionMapStyle } from '@/lib/map-style'
 import type { StyleSpecification } from 'maplibre-gl'
@@ -80,10 +80,10 @@ export function SandboxMap({ vehicleType='CAR', dataset, start, end, route, prog
     {fleet && <FleetMap fleet={fleet} focus={fleetFocus ?? null} />}
     {booking && <BookingMap session={booking} focus={bookingFocus ?? null} />}
     <FitRoute route={route} />
-    {[start, end].map((point, i) => point && <MapMarker key={i} longitude={point[0]} latitude={point[1]}><MarkerContent><div className={`point-marker ${i ? 'destination' : ''}`}>{i ? 'B' : 'A'}</div></MarkerContent></MapMarker>)}
+    {[start, end].map((point, i) => point && <MapMarker key={i} longitude={point[0]} latitude={point[1]}><MarkerContent><div className={`point-marker ${i ? 'destination' : ''}`}><MobilityIcon kind={i?'dropoff':'pickup'}/></div></MarkerContent></MapMarker>)}
     {route && <MapRoute coordinates={route.coordinates} progress={progress} color="#397f9b" width={6} opacity={1}>
       <RouteProgress color="#078057" width={6} opacity={1} />
-      <RouteMarker at="progress"><MarkerContent><div className="vehicle-marker" data-progress={progress} data-coordinate={JSON.stringify(positionAt(route.coordinates, progress))} title="Một xe GSM mô phỏng trên tuyến OSRM">{vehicleType==='MOTORBIKE' ? <Motorbike size={21}/> : <Car size={21}/>}</div></MarkerContent></RouteMarker>
+      <RouteMarker at="progress"><MarkerContent><div className="vehicle-marker" data-progress={progress} data-coordinate={JSON.stringify(positionAt(route.coordinates, progress))} title="Một xe GSM mô phỏng trên tuyến OSRM"><MobilityIcon kind={vehicleType==='MOTORBIKE'?'motorbike':'car'} size={30}/></div></MarkerContent></RouteMarker>
     </MapRoute>}
   </Map>
 }

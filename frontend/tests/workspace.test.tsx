@@ -49,10 +49,10 @@ describe('workspace presentation preserves mounted state', () => {
     rerender(<InspectorSection title="Configuration" prepared selection=""><input aria-label="Retained seed" defaultValue="seed"/></InspectorSection>); expect(screen.getByRole('button',{name:'Configuration'})).toHaveAttribute('aria-expanded','false')
     rerender(<InspectorSection title="Configuration" prepared selection="GSM-01"><input aria-label="Retained seed" defaultValue="seed"/></InspectorSection>); expect(screen.getByRole('button',{name:'Configuration'})).toHaveAttribute('aria-expanded','true'); expect(screen.getByLabelText('Retained seed')).toHaveValue('edited')
   })
-  it('all four navigation items share one menu; expanded/collapsed/hidden are layout callbacks', () => {
+  it('all five navigation items share one menu; expanded/collapsed/hidden are layout callbacks', () => {
     const mode=vi.fn(),size=vi.fn(); const {rerender}=render(<PrimaryNavigation mode="voucher" size="expanded" onMode={mode} onSize={size} mobileOpen={false} onMobileOpen={vi.fn()}/>)
-    expect(screen.getByRole('navigation',{name:"Menu chính"}).querySelectorAll('button')).toHaveLength(4); expect(screen.getByRole('button',{name:"Phòng thí nghiệm voucher"})).toHaveAttribute('aria-current','page')
-    fireEvent.click(screen.getByRole('button',{name:"Thu gọn menu"})); expect(size).toHaveBeenCalledWith('collapsed'); fireEvent.click(screen.getByRole('button',{name:"Ẩn menu"})); expect(size).toHaveBeenCalledWith('hidden'); fireEvent.click(screen.getByRole('button',{name:"Đặt xe và điều phối"})); expect(mode).toHaveBeenCalledWith('booking')
+    expect(screen.getByRole('navigation',{name:"Menu chính"}).querySelectorAll('button')).toHaveLength(5); expect(screen.getByRole('button',{name:"Phòng thí nghiệm voucher"})).toHaveAttribute('aria-current','page')
+    fireEvent.click(screen.getByRole('button',{name:"Thu gọn menu"})); expect(size).toHaveBeenCalledWith('collapsed'); fireEvent.click(screen.getByRole('button',{name:"Ẩn menu"})); expect(size).toHaveBeenCalledWith('hidden'); fireEvent.click(screen.getByRole('button',{name:"Đặt xe và điều phối"})); expect(mode).toHaveBeenCalledWith('booking'); fireEvent.click(screen.getByRole('button',{name:'Mô phỏng quy mô lớn'})); expect(mode).toHaveBeenCalledWith('simulation')
     rerender(<PrimaryNavigation mode="voucher" size="hidden" onMode={mode} onSize={size} mobileOpen={false} onMobileOpen={vi.fn()}/>); expect(screen.queryByRole('navigation',{name:"Menu chính"})).toBeNull()
   })
   it('custom input 17 applies 32 and negative/empty/Infinity input preserves clock', () => {

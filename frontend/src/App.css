@@ -321,3 +321,55 @@ button:focus-visible, input:focus-visible, select:focus-visible, summary:focus-v
 .region-selector select { width: 100%; min-width: 0; padding: 8px; border: 1px solid var(--border, #d8ddd6); border-radius: 6px; background: var(--background, #fff); color: inherit; }
 
 .fleet-marker[data-vehicle-type="MOTORBIKE"] { border-color: #9156c6; box-shadow: 0 0 0 2px #c4a5e2; }
+
+/* Large simulation shares the GSM shell/navigation, while owning one map and clock. */
+.mode-simulation .workspace { grid-template-columns:180px minmax(0,1fr); }
+.mode-simulation.nav-collapsed .workspace { grid-template-columns:60px minmax(0,1fr); }
+.mode-simulation.nav-hidden .workspace { grid-template-columns:minmax(0,1fr); }
+.simulation-shell { height:100%; min-height:0; min-width:0; display:flex; flex-direction:column; background:#f6f8f6; color:#243c31; }
+.simulation-layout { display:grid; grid-template-columns:310px minmax(0,1fr); min-height:0; flex:1; }
+.simulation-panel { overflow:auto; min-width:0; padding:14px; border-right:1px solid #d9e0d9; font-size:12px; background:#fafcf9; }
+.simulation-card { background:#fff; border:1px solid #e0e8e1; border-radius:10px; padding:14px; margin-bottom:12px; }
+.simulation-panel h2 { font-size:15px; font-weight:650; margin:0 0 12px; }.simulation-panel h3 { font-size:12px; font-weight:650; }
+.simulation-panel p { overflow-wrap:anywhere; line-height:1.6; margin:8px 0; }.simulation-panel .small-note { font-size:11px; color:#607568; }
+.simulation-region { font-weight:650; color:#087d55; }.simulation-mix { font-variant-numeric:tabular-nums; color:#536a5d; }
+.simulation-form-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px; }
+.simulation-panel label { display:block; margin:10px 0; font-size:12px; font-weight:500; }.simulation-panel input:not([type=checkbox]),.simulation-panel select { display:block; width:100%; min-width:0; padding:8px; border:1px solid #c9d3ca; background:white; border-radius:6px; margin-top:5px; }
+.simulation-panel button { margin:4px 4px 4px 0; max-width:100%; white-space:normal; height:auto; min-height:32px; }.simulation-submit { width:100%; margin-top:12px!important; }
+.simulation-panel summary { cursor:pointer; font-size:12px; color:#436753; font-weight:600; padding:7px 0; }
+.simulation-panel pre { white-space:pre-wrap; overflow-wrap:anywhere; font-size:10px; background:#edf3ee; padding:8px; }
+.simulation-status { border-radius:6px; padding:9px; background:#f0f4f0; font-size:12px; font-weight:600; }.status-COMPLETED { color:#087d55; background:#e9f6ee; }.status-FAILED,.status-INTERRUPTED { background:#fff0e7; color:#8d3c20; }
+.simulation-panel progress { width:100%; height:7px; accent-color:#087d55; }.simulation-warning { color:#9a5c16; }
+.simulation-kpis { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:8px; }.simulation-kpis>div { background:#f5f8f5; padding:7px; border-radius:6px; }.simulation-kpis dd { margin:0; font-weight:650; font-size:20px; }.simulation-kpis dt { color:#65736b; font-size:11px; }
+.simulation-final { border-top:1px solid #e0e8e1; padding-top:12px; margin-top:12px; }
+.simulation-map-area { display:flex; flex-direction:column; min-width:0; min-height:0; padding:12px; }.simulation-map-heading { display:flex; flex-wrap:wrap; gap:6px 12px; align-items:center; margin-bottom:10px; }.simulation-map-heading h2 { font-size:17px; font-weight:650; }.simulation-map-heading button { margin-left:auto; }.simulation-map-status { font-size:11px; color:#5e7365; max-width:380px; overflow-wrap:anywhere; }.simulation-map-status.map-error { color:#a13420; }
+.simulation-map { position:relative; flex:1; min-height:260px; overflow:hidden; border:1px solid #d9e0d9; border-radius:10px; background:#eaf0e9; }.simulation-map-notice { position:absolute; top:10px; left:10px; right:10px; z-index:3; background:#fffffff2; border:1px solid #e3d6bb; border-radius:6px; padding:10px; font-size:12px; overflow-wrap:anywhere; }
+.simulation-legend { position:absolute; bottom:34px; left:10px; right:45px; pointer-events:none; background:#fffffff0; border-radius:6px; padding:7px; font-size:10px; display:flex; flex-wrap:wrap; gap:4px 12px; }.legend-car { color:#2779a7; font-weight:650; }.legend-bike { color:#8b56a5; font-weight:650; }.simulation-replay-note { font-size:11px; color:#526b5a; margin-top:6px; }
+.simulation-actions { display:flex; flex-wrap:wrap; }.simulation-developer { border-style:dashed; }
+.simulation-shell .playback-dock { flex-wrap:wrap; gap:8px; padding:10px 12px; }.simulation-shell .dock-speed { max-width:none; }
+@media(max-width:1100px) and (min-width:901px){.simulation-layout { grid-template-columns:280px minmax(0,1fr); }.simulation-shell .dock-speed { flex-wrap:wrap; }}
+@media(max-width:900px){
+ .mode-simulation .workspace { display:block; }.simulation-layout { grid-template-columns:280px minmax(0,1fr); }
+}
+@media(max-width:650px){
+ .mode-simulation { height:auto; min-height:100dvh; grid-template-rows:64px auto; }.mode-simulation .workspace { overflow:visible; }
+ .simulation-shell { height:auto; }.simulation-layout { display:flex; flex-direction:column; }.simulation-map-area { order:0; padding:8px; }.simulation-map { flex:none; height:360px; min-height:360px; }.simulation-panel { order:2; overflow:visible; padding:8px; border-right:0; }
+ .simulation-map-heading h2 { font-size:16px; }.simulation-map-heading>div { flex:1; }.simulation-map-status { order:3; flex-basis:100%; }.simulation-map-heading button { font-size:11px; }
+ .simulation-shell .playback-dock { order:-1; padding:8px; }.simulation-shell .dock-speed { flex-wrap:wrap; }.simulation-shell .dock-speed label { white-space:normal; }
+ .simulation-card { padding:12px; }.simulation-legend { font-size:9px; }.simulation-map .maplibregl-ctrl-attrib { font-size:9px; }
+}
+
+/* S0/S1: bounded inspector and shared map silhouettes. */
+.simulation-mode-banner { position:absolute;z-index:3;top:10px;left:10px;right:55px;background:#edf8f1ed;border:1px solid #8dbba0;color:#174c35;border-radius:7px;padding:8px 10px;font-size:12px;font-weight:650;pointer-events:none; }
+.simulation-mode-banner.fixture { background:#fff0d8f5;border-color:#b67a21;color:#754711; }
+.simulation-icon-status { position:absolute;z-index:3;top:58px;left:10px;background:white;padding:5px 10px;font-size:12px; }
+.simulation-legend span,.simulation-vehicle-title { display:inline-flex;align-items:center;gap:5px; }
+.simulation-legend { flex-wrap:wrap; }
+.simulation-vehicle-results { display:grid;gap:4px;max-height:230px;overflow:auto; }
+.simulation-vehicle-results button { display:flex;align-items:center;gap:5px;text-align:left;background:#f7faf7;border:1px solid #d5dfd6;border-radius:5px;font-size:11px;padding:4px;cursor:pointer; }
+.simulation-vehicle-results button[aria-pressed=true] { outline:2px solid #d37539; }
+.simulation-booking-detail { margin-top:12px;border-top:1px solid #d3ddd4;padding-top:8px;overflow-wrap:anywhere; }
+.simulation-booking-detail img { display:inline-block;vertical-align:middle; }
+.simulation-booking-detail progress { width:75%; }
+.simulation-runtime { border-bottom:1px solid #d3ddd4;margin-bottom:10px;padding-bottom:8px;font-size:12px; }
+.simulation-panel pre { white-space:pre-wrap;overflow-wrap:anywhere; }

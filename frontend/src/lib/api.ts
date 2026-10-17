@@ -29,11 +29,16 @@ export interface Route {
   snap_points: { location: Coordinate; distance: number; name: string }[]
   duration_source: string
 }
+export class ApiError extends Error {
+  readonly status:number
+  readonly code:string
+  constructor(message:string,status:number,code:string) {super(message);this.name='ApiError';this.status=status;this.code=code}
+}
 export async function api<T>(path: string, options: RequestInit = {}): Promise<T> {
   const response = await fetch(path, options)
   if (!response.ok) {
     const data = await response.json().catch(() => null)
-    throw new Error(data?.error ? `${data.error.code}: ${data.error.message}` : `API trả về HTTP ${response.status}`)
+    throw new ApiError(data?.error ? `${data.error.code}: ${data.error.message}` : `API trả về HTTP ${response.status}`,response.status,data?.error?.code??'HTTP_ERROR')
   }
   return response.json()
 }

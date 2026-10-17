@@ -31,6 +31,8 @@ def create_app(settings: Settings | None = None, registry: RegionRegistry | None
     settings = settings or Settings()
     settings.region  # Fail early for invalid configuration, never for a missing PBF.
     app = FastAPI(title="GSM Map Sandbox", version="0.1.0")
+    from .simulation_jobs import create_router
+    app.include_router(create_router())
     preparation_lock = asyncio.Semaphore(2)
     registry = registry or default_registry(settings)
     settings = registry.resolve("hcm-center")  # Pin legacy requests to the same immutable HCM snapshot.
@@ -42,6 +44,8 @@ def create_app(settings: Settings | None = None, registry: RegionRegistry | None
 
     @app.exception_handler(RequestValidationError)
     async def validation_error(request, exc):
+        if request.url.path.startswith('/api/v3/simulation/'):
+            return JSONResponse(status_code=422, content={"error": {"code": "INVALID_SIMULATION_CONFIG", "message": "Simulation config hoặc thời điểm snapshot ngoài giới hạn v3."}})
         if request.url.path.endswith("/voucher-experiment/prepare"):
             return JSONResponse(status_code=422, content={"error": {"code": "INVALID_EXPERIMENT_CONFIG", "message": "Config fare, behavior, voucher hoặc scenario ngoài giới hạn PoC."}})
         if request.url.path.endswith("/booking-simulation/prepare"):

@@ -4,6 +4,7 @@ import { lazy, Suspense, useCallback, useEffect, useMemo, useRef, useState } fro
 import { ArrowUpRight, Check, ChevronRight, Database, FileBox, FolderOpen, Layers, MapPin, Navigation, RefreshCw, Route as RouteIcon, Server, Trash2 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
+import { modeFromUrl, modeUrl, type AppMode } from '@/lib/navigation'
 import { PrimaryNavigation } from '@/components/primary-navigation'
 import { InspectorSection } from '@/components/inspector-section'
 import { PlaybackDock, ClockDock } from '@/components/playback-dock'
@@ -23,6 +24,7 @@ import { useVoucher } from '@/lib/use-voucher'
 import { VoucherPanel } from '@/components/voucher-panel'
 import { savedMapStyle } from '@/lib/map-style'
 const VoucherDashboard = lazy(() => import('@/components/voucher-dashboard'))
+const SimulationWorkspace = lazy(() => import('@/components/simulation-workspace'))
 
 const coordinateText = (point: Coordinate | null) => point ? point.map(v => v.toFixed(6)).join(', ') : 'Chưa chọn trên bản đồ'
 const pbfLabels: Record<string, string> = { not_prepared: 'Chưa chuẩn bị dữ liệu khu vực', missing_pbf: 'Chưa có file PBF', present_unverified: 'Đã có file · chưa xác minh', invalid_extension: 'Sai phần mở rộng', unreadable_pbf: 'Không đọc được file', empty_pbf: 'File PBF rỗng' }
@@ -35,7 +37,7 @@ export default function App() {
   const [route, setRoute] = useState<Route | null>(null)
   const [routing, setRouting] = useState(false)
   const [refreshKey, setRefreshKey] = useState(0)
-  const [mode, setMode] = useState<'single' | 'fleet' | 'booking' | 'voucher'>(()=>new URLSearchParams(window.location.search).get('runtime')==='saved'?'voucher':'single')
+  const [mode, setMode] = useState<AppMode>(()=>modeFromUrl(window.location.search))
   const [voucherRuntime,setVoucherRuntime]=useState<'live'|'saved'>(()=>new URLSearchParams(window.location.search).get('runtime')==='saved'?'saved':'live')
   const saved=mode==='voucher' && voucherRuntime==='saved'
   const region = useRegion(saved, refreshKey)
@@ -58,7 +60,8 @@ export default function App() {
   const replayStyle=useMemo(()=>{if(!saved || !voucher.replayAssets) return undefined; const style=savedMapStyle(voucher.replayAssets); return {light:style,dark:style}},[saved,voucher.replayAssets])
   const voucherReady=saved ? !!voucher.artifact && !!voucher.replayAssets && !mapError : ready
   const focusVehicle = (id: string, kind: FleetFocus['kind']) => { fleet.setSelectedVehicleId(id); setFleetFocus({ id, kind, sequence: performance.now() }) }
-  const changeMode = (next: 'single' | 'fleet' | 'booking' | 'voucher') => { if (next === mode) return; playback.pause(); clear(); fleet.clear(); booking.clear(); voucher.clear(); setFleetFocus(null); setBookingFocus(null); if(next==='single' && service==='MIXED')setService('CAR'); setMode(next) }
+  const changeMode = (next: AppMode, fromHistory = false) => { if (next === mode) return; playback.pause(); clear(); fleet.clear(); booking.clear(); voucher.clear(); setFleetFocus(null); setBookingFocus(null); if(next==='single' && service==='MIXED')setService('CAR'); setMapError(''); setMode(next); if(!fromHistory)window.history.pushState(null,'',modeUrl(window.location.href,next,voucherRuntime)) }
+  useEffect(()=>{const pop=()=>{const runtime=new URLSearchParams(window.location.search).get('runtime');setVoucherRuntime(runtime==='saved'?'saved':'live');changeMode(modeFromUrl(window.location.search),true)};window.addEventListener('popstate',pop);return ()=>window.removeEventListener('popstate',pop)},[mode,voucherRuntime,service])
   const mapReady = saved ? !!replayStyle : !!dataset?.artifacts.map_ready
   const pbfPresent = ['present_unverified', 'present_verified'].includes(dataset?.pbf.state ?? '')
 
@@ -100,14 +103,16 @@ export default function App() {
     {(import.meta.env.DEV || new URLSearchParams(window.location.search).get('audit')==='1') && <RuntimeAudit />}
     <header className="app-header">
       <Button variant="outline" aria-label="Mở menu chính" onClick={() => { if (window.matchMedia('(max-width: 900px)').matches) setMobileMenu(true); else setNavigationSize(navigationSize === 'hidden' ? 'expanded' : 'hidden') }}><Navigation size={18}/></Button>
-      <div className="brand"><span className="brand-icon"><Navigation size={24} /></span><div><h1>GSM Map Sandbox</h1><span className="brand-subtitle">{mode === 'voucher' ? "Phòng thí nghiệm voucher" : mode === 'booking' ? "Đặt xe và điều phối" : mode === 'fleet' ? "Mô phỏng đội xe" : "Một hành trình"}</span></div></div>
-      <Button variant="outline" aria-label="Mở hoặc ẩn bảng chi tiết" aria-expanded={inspectorOpen} onClick={() => setInspectorOpen(!inspectorOpen)}>Chi tiết</Button>
+      <div className="brand"><span className="brand-icon"><Navigation size={24} /></span><div><h1>GSM Map Sandbox</h1><span className="brand-subtitle">{mode === 'simulation' ? 'Mô phỏng quy mô lớn' : mode === 'voucher' ? "Phòng thí nghiệm voucher" : mode === 'booking' ? "Đặt xe và điều phối" : mode === 'fleet' ? "Mô phỏng đội xe" : "Một hành trình"}</span></div></div>
+      {mode !== 'simulation' && <Button variant="outline" aria-label="Mở hoặc ẩn bảng chi tiết" aria-expanded={inspectorOpen} onClick={() => setInspectorOpen(!inspectorOpen)}>Chi tiết</Button>}
       {mode === 'voucher' && <div className="workspace-view" role="group" aria-label="Chế độ hiển thị"><Button size="sm" variant={mobileView === 'map' ? 'secondary' : 'outline'} onClick={() => setMobileView('map')}>Bản đồ</Button><Button size="sm" variant={mobileView === 'analytics' ? 'secondary' : 'outline'} onClick={() => setMobileView('analytics')}>Phân tích</Button></div>}
       <Badge variant="outline" className="local-badge"><span className="status-dot green" />Mô phỏng cục bộ</Badge>
-      <div className="header-status"><span><span className={mapReady && (saved || !connectionError) ? 'status-dot green' : 'status-dot amber'} />{mapReady ? 'Bản đồ cục bộ' : 'Chờ dữ liệu bản đồ'}</span><span><span className={dataset?.osrm.state === 'connected' && !connectionError ? 'status-dot green' : 'status-dot'} />{saved ? "Phát lại đã lưu · không cần tính tuyến trực tiếp" : 'OSRM'} {!saved && (dataset?.osrm.state === 'connected' && !connectionError ? 'kết nối' : 'chưa kết nối')}</span></div>
+
+      {mode === 'simulation' ? <div className="header-status">Hanoi Core · CAR + MOTORBIKE · phát lại mô hình</div> : <div className="header-status"><span><span className={mapReady && (saved || !connectionError) ? 'status-dot green' : 'status-dot amber'} />{mapReady ? 'Bản đồ cục bộ' : 'Chờ dữ liệu bản đồ'}</span><span><span className={dataset?.osrm.state === 'connected' && !connectionError ? 'status-dot green' : 'status-dot'} />{saved ? "Phát lại đã lưu · không cần tính tuyến trực tiếp" : 'OSRM'} {!saved && (dataset?.osrm.state === 'connected' && !connectionError ? 'kết nối' : 'chưa kết nối')}</span></div>}
     </header>
     <main className="workspace">
-      <PrimaryNavigation mode={mode} size={navigationSize} onMode={changeMode} onSize={setNavigationSize} mobileOpen={mobileMenu} onMobileOpen={setMobileMenu}/>
+      <PrimaryNavigation mode={mode} size={navigationSize} onMode={next=>changeMode(next)} onSize={setNavigationSize} mobileOpen={mobileMenu} onMobileOpen={setMobileMenu}/>
+      {mode === 'simulation' ? <Suspense fallback={<p role="status">Đang tải mô phỏng quy mô lớn…</p>}><SimulationWorkspace previousRegion={region.metadata?.label ?? regionId}/></Suspense> : <>
       <aside className="sidebar inspector" hidden={!inspectorOpen} aria-label="Cấu hình mô phỏng"><div className="inspector-toolbar"><strong>Cấu hình và chi tiết</strong><Button variant="ghost" size="sm" aria-label="Đóng bảng chi tiết" onClick={() => setInspectorOpen(false)}>×</Button></div>
         <InspectorSection title="Khu vực mô phỏng" defaultOpen>
           <label className="region-selector">Khu vực mô phỏng<select aria-label="Khu vực mô phỏng" value={saved ? 'hcm-center' : regionId} disabled={saved} onChange={event => changeRegion(event.target.value)}>{region.regions.map(item => <option key={item.id} value={item.id}>{item.label}</option>)}</select></label>
@@ -123,7 +128,7 @@ export default function App() {
           <div className="bbox-row">{(dataset?.region.display_bbox ?? region.metadata?.viewport.bounds ?? []).map(v => v.toFixed(3)).join(' / ')}</div>
           <p className="small-note">Vùng kỹ thuật thử nghiệm, không phải ranh giới hành chính.</p></>}
         </InspectorSection>
-        {mode === 'voucher' ? <VoucherPanel docked session={voucher} ready={voucherReady} onRuntime={next=>{setMapError('');setVoucherRuntime(next)}} onFocus={setBookingFocus} /> : mode === 'booking' ? <BookingPanel docked session={booking} ready={ready} onFocus={setBookingFocus} /> : mode === 'fleet' ? <FleetPanel docked fleet={fleet} ready={ready} onFocus={focusVehicle} /> : <><InspectorSection title="Thiết lập hành trình" defaultOpen><div className="section-heading"><RouteIcon size={17} /><h2>Thiết lập hành trình</h2><span className="section-number">01</span></div>
+        {mode === 'voucher' ? <VoucherPanel docked session={voucher} ready={voucherReady} onRuntime={next=>{setMapError('');setVoucherRuntime(next);window.history.pushState(null,'',modeUrl(window.location.href,'voucher',next))}} onFocus={setBookingFocus} /> : mode === 'booking' ? <BookingPanel docked session={booking} ready={ready} onFocus={setBookingFocus} /> : mode === 'fleet' ? <FleetPanel docked fleet={fleet} ready={ready} onFocus={focusVehicle} /> : <><InspectorSection title="Thiết lập hành trình" defaultOpen><div className="section-heading"><RouteIcon size={17} /><h2>Thiết lập hành trình</h2><span className="section-number">01</span></div>
           <p className="section-description">Nhấp trên bản đồ để chọn A, sau đó chọn B.</p>
           <div className="endpoint"><span className="endpoint-label">A</span><div><label>Điểm xuất phát</label><p>{coordinateText(start)}</p></div></div>
           <div className="endpoint"><span className="endpoint-label end">B</span><div><label>Điểm đến</label><p>{coordinateText(end)}</p></div></div>
@@ -150,9 +155,9 @@ export default function App() {
         <footer className="map-footer"><span>© OpenStreetMap contributors · Geofabrik</span><span>Sandbox nghiên cứu · {mode === 'single' ? 'một xe mô phỏng' : 'đội xe mô phỏng'}</span></footer>
       </section>
       {mode === 'voucher' && <aside className="analytics-panel" aria-label="Phân tích chỉ số kinh doanh"><Suspense fallback={<p>Đang tải phòng thí nghiệm cục bộ…</p>}><VoucherDashboard session={voucher}/></Suspense></aside>}
-      </div>
+      </div></> }
     </main>
-    {mode === 'single' ? <PlaybackDock label="Một hành trình" enabled={!!route && ready} time={playback.progress * (route?.duration ?? 0)} duration={route?.duration ?? 0} status={playback.progress >= 1 ? 'completed' : playback.playing ? 'playing' : 'paused'} speed={playback.speed} play={playback.play} pause={playback.pause} reset={playback.reset} seek={time => playback.seek(route ? time/route.duration : 0)} setSpeed={playback.setSpeed}/> : <ClockDock key={mode} label={mode === 'fleet' ? "Mô phỏng đội xe" : mode === 'booking' ? "Đặt xe và điều phối" : "Thí nghiệm voucher"} clock={mode === 'fleet' ? fleet.clock : mode === 'booking' ? booking.clock : voucher.clock} duration={mode === 'fleet' ? fleet.scenario?.simulationDurationSeconds ?? 0 : mode === 'booking' ? booking.plan?.simulationDurationSeconds ?? 0 : voucher.experiment?.simulationDurationSeconds ?? 0} enabled={(mode === 'voucher' ? voucherReady : ready) && (mode === 'fleet' ? !!fleet.scenario && !fleet.loading : mode === 'booking' ? !!booking.plan && !booking.loading : !!voucher.experiment && !voucher.loading)}/>}
+    {mode !== 'simulation' && (mode === 'single' ? <PlaybackDock label="Một hành trình" enabled={!!route && ready} time={playback.progress * (route?.duration ?? 0)} duration={route?.duration ?? 0} status={playback.progress >= 1 ? 'completed' : playback.playing ? 'playing' : 'paused'} speed={playback.speed} play={playback.play} pause={playback.pause} reset={playback.reset} seek={time => playback.seek(route ? time/route.duration : 0)} setSpeed={playback.setSpeed}/> : <ClockDock key={mode} label={mode === 'fleet' ? "Mô phỏng đội xe" : mode === 'booking' ? "Đặt xe và điều phối" : "Thí nghiệm voucher"} clock={mode === 'fleet' ? fleet.clock : mode === 'booking' ? booking.clock : voucher.clock} duration={mode === 'fleet' ? fleet.scenario?.simulationDurationSeconds ?? 0 : mode === 'booking' ? booking.plan?.simulationDurationSeconds ?? 0 : voucher.experiment?.simulationDurationSeconds ?? 0} enabled={(mode === 'voucher' ? voucherReady : ready) && (mode === 'fleet' ? !!fleet.scenario && !fleet.loading : mode === 'booking' ? !!booking.plan && !booking.loading : !!voucher.experiment && !voucher.loading)}/>)}
   </div>
 }
 

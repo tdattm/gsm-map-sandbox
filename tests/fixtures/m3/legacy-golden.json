@@ -1,0 +1,293 @@
+{
+  "source": "legacy build_plan at 455abebe177be42e07b88ed4f34d4fecbef29b75 before M3 edits",
+  "assignments": [
+    {
+      "bookingId": "B1",
+      "vehicleId": "GSM-01",
+      "assignedAtSeconds": 0.0,
+      "pickupAtSeconds": 10.0,
+      "dropoffAtSeconds": 50.0,
+      "estimatedPickupEtaSeconds": 10.0,
+      "tableEtaSeconds": 10.0,
+      "pickupRoute": {
+        "coordinates": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            2.0,
+            0.0
+          ]
+        ],
+        "distance": 100.0,
+        "duration": 10.0,
+        "snap_points": [
+          {
+            "location": [
+              0.0,
+              0.0
+            ],
+            "distance": 0.0,
+            "name": ""
+          },
+          {
+            "location": [
+              2.0,
+              0.0
+            ],
+            "distance": 0.0,
+            "name": ""
+          }
+        ],
+        "duration_source": "OSRM car profile estimate; not live traffic"
+      },
+      "tripRoute": {
+        "coordinates": [
+          [
+            2.0,
+            0.0
+          ],
+          [
+            3.0,
+            0.0
+          ]
+        ],
+        "distance": 100.0,
+        "duration": 40.0,
+        "snap_points": [
+          {
+            "location": [
+              2.0,
+              0.0
+            ],
+            "distance": 0.0,
+            "name": ""
+          },
+          {
+            "location": [
+              3.0,
+              0.0
+            ],
+            "distance": 0.0,
+            "name": ""
+          }
+        ],
+        "duration_source": "OSRM car profile estimate; not live traffic"
+      },
+      "dispatchCandidates": [
+        {
+          "vehicleId": "GSM-01",
+          "etaSeconds": 10.0
+        },
+        {
+          "vehicleId": "GSM-02",
+          "etaSeconds": 10.0
+        }
+      ]
+    },
+    {
+      "bookingId": "B3",
+      "vehicleId": "GSM-02",
+      "assignedAtSeconds": 0.0,
+      "pickupAtSeconds": 40.0,
+      "dropoffAtSeconds": 50.0,
+      "estimatedPickupEtaSeconds": 40.0,
+      "tableEtaSeconds": 10.0,
+      "pickupRoute": {
+        "coordinates": [
+          [
+            1.0,
+            0.0
+          ],
+          [
+            3.0,
+            0.0
+          ]
+        ],
+        "distance": 100.0,
+        "duration": 40.0,
+        "snap_points": [
+          {
+            "location": [
+              1.0,
+              0.0
+            ],
+            "distance": 0.0,
+            "name": ""
+          },
+          {
+            "location": [
+              3.0,
+              0.0
+            ],
+            "distance": 0.0,
+            "name": ""
+          }
+        ],
+        "duration_source": "OSRM car profile estimate; not live traffic"
+      },
+      "tripRoute": {
+        "coordinates": [
+          [
+            3.0,
+            0.0
+          ],
+          [
+            4.0,
+            0.0
+          ]
+        ],
+        "distance": 100.0,
+        "duration": 10.0,
+        "snap_points": [
+          {
+            "location": [
+              3.0,
+              0.0
+            ],
+            "distance": 0.0,
+            "name": ""
+          },
+          {
+            "location": [
+              4.0,
+              0.0
+            ],
+            "distance": 0.0,
+            "name": ""
+          }
+        ],
+        "duration_source": "OSRM car profile estimate; not live traffic"
+      },
+      "dispatchCandidates": [
+        {
+          "vehicleId": "GSM-02",
+          "etaSeconds": 10.0
+        }
+      ]
+    }
+  ],
+  "events": [
+    {
+      "id": "EV-0001",
+      "timestampSeconds": 0.0,
+      "type": "BOOKING_REQUESTED",
+      "bookingId": "B1",
+      "vehicleId": null,
+      "payload": {}
+    },
+    {
+      "id": "EV-0002",
+      "timestampSeconds": 0.0,
+      "type": "BOOKING_REQUESTED",
+      "bookingId": "B3",
+      "vehicleId": null,
+      "payload": {}
+    },
+    {
+      "id": "EV-0003",
+      "timestampSeconds": 0.0,
+      "type": "BOOKING_ASSIGNED",
+      "bookingId": "B1",
+      "vehicleId": "GSM-01",
+      "payload": {
+        "estimatedPickupEtaSeconds": 10.0,
+        "tableEtaSeconds": 10,
+        "dispatchCandidates": [
+          {
+            "vehicleId": "GSM-01",
+            "etaSeconds": 10
+          },
+          {
+            "vehicleId": "GSM-02",
+            "etaSeconds": 10
+          }
+        ]
+      }
+    },
+    {
+      "id": "EV-0004",
+      "timestampSeconds": 0.0,
+      "type": "BOOKING_ASSIGNED",
+      "bookingId": "B3",
+      "vehicleId": "GSM-02",
+      "payload": {
+        "estimatedPickupEtaSeconds": 40.0,
+        "tableEtaSeconds": 10,
+        "dispatchCandidates": [
+          {
+            "vehicleId": "GSM-02",
+            "etaSeconds": 10
+          }
+        ]
+      }
+    },
+    {
+      "id": "EV-0005",
+      "timestampSeconds": 5.0,
+      "type": "BOOKING_REQUESTED",
+      "bookingId": "B2",
+      "vehicleId": null,
+      "payload": {}
+    },
+    {
+      "id": "EV-0006",
+      "timestampSeconds": 10.0,
+      "type": "VEHICLE_ARRIVED_PICKUP",
+      "bookingId": "B1",
+      "vehicleId": "GSM-01",
+      "payload": {}
+    },
+    {
+      "id": "EV-0007",
+      "timestampSeconds": 10.0,
+      "type": "TRIP_STARTED",
+      "bookingId": "B1",
+      "vehicleId": "GSM-01",
+      "payload": {}
+    },
+    {
+      "id": "EV-0008",
+      "timestampSeconds": 40.0,
+      "type": "VEHICLE_ARRIVED_PICKUP",
+      "bookingId": "B3",
+      "vehicleId": "GSM-02",
+      "payload": {}
+    },
+    {
+      "id": "EV-0009",
+      "timestampSeconds": 40.0,
+      "type": "TRIP_STARTED",
+      "bookingId": "B3",
+      "vehicleId": "GSM-02",
+      "payload": {}
+    },
+    {
+      "id": "EV-0010",
+      "timestampSeconds": 50.0,
+      "type": "TRIP_COMPLETED",
+      "bookingId": "B1",
+      "vehicleId": "GSM-01",
+      "payload": {}
+    },
+    {
+      "id": "EV-0011",
+      "timestampSeconds": 50.0,
+      "type": "TRIP_COMPLETED",
+      "bookingId": "B3",
+      "vehicleId": "GSM-02",
+      "payload": {}
+    },
+    {
+      "id": "EV-0012",
+      "timestampSeconds": 55.0,
+      "type": "BOOKING_UNSERVED",
+      "bookingId": "B2",
+      "vehicleId": null,
+      "payload": {
+        "failureReason": "PICKUP_WAIT_LIMIT"
+      }
+    }
+  ]
+}

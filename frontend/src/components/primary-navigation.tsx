@@ -1,15 +1,16 @@
-import { Car, FlaskConical, Route, Users, PanelLeftClose, EyeOff, X } from 'lucide-react'
+import { Car, FlaskConical, Route, Users, PanelLeftClose, EyeOff, X, Layers } from 'lucide-react'
 import { modeLabels } from '@/lib/vi'
 import { Dialog } from '@base-ui/react/dialog'
 import { Button } from './ui/button'
 
-type Mode = 'single' | 'fleet' | 'booking' | 'voucher'
+import type { AppMode as Mode } from '@/lib/navigation'
 type NavigationSize = 'expanded' | 'collapsed' | 'hidden'
 const modes = [
   { id: 'single', label: modeLabels.single, icon: Route },
   { id: 'fleet', label: modeLabels.fleet, icon: Car },
   { id: 'booking', label: modeLabels.booking, icon: Users },
   { id: 'voucher', label: modeLabels.voucher, icon: FlaskConical },
+  { id: 'simulation', label: 'Mô phỏng quy mô lớn', icon: Layers },
 ] as const
 
 export function PrimaryNavigation({ mode, size, onMode, onSize, mobileOpen, onMobileOpen }: {
