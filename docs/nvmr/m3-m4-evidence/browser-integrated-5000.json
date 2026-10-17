@@ -1,0 +1,72 @@
+{
+  "kind": "browser-webgl-render-only",
+  "sampleCondition": "warm in-page; no page/process restart",
+  "pageAgeMs": 390842.5,
+  "sourceUpdatesBefore": 891,
+  "fixture": false,
+  "fleetSize": 5000,
+  "simulationTimeSeconds": 106.246,
+  "zoom": 13,
+  "browser": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36",
+  "viewport": [
+    920,
+    658
+  ],
+  "devicePixelRatio": 1.0000000149011612,
+  "webglRenderer": "ANGLE (Intel, Intel(R) Iris(R) Xe Graphics (0x00009A49) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+  "durationMs": 5012.79999999702,
+  "frames": 301,
+  "fps": 60.046281519346266,
+  "frameTimeP50Ms": 16.70000000001164,
+  "frameTimeP95Ms": 16.800000000046566,
+  "longTaskSupported": true,
+  "longTasks": 0,
+  "longTaskTotalMs": 0,
+  "heap": {
+    "usedJSHeapSize": 42457933,
+    "totalJSHeapSize": 105663749,
+    "jsHeapSizeLimit": 4395630592
+  },
+  "domMarkerCount": 0,
+  "sourceCount": 3,
+  "layerCount": 7,
+  "setDataSubmissionP50Ms": 0.29999999701976776,
+  "setDataSubmissionP95Ms": 0.5,
+  "sourceLoadedLagP95Ms": 39.3999999910593,
+  "dataUpdates": 23,
+  "selectionToNextFrameMs": 0.6000000089406967,
+  "snapshotAgeMs": 209.3999999910593,
+  "visibleClusterCount": 14,
+  "visibleVehicleCount": 3,
+  "visibleRepresentedVehicles": 5000,
+  "clusterOracle": {
+    "checked": 14,
+    "failures": [],
+    "representedLeafCount": 4997,
+    "uniqueLeafCount": 4997,
+    "scope": "all fleet represented in current viewport",
+    "passed": true,
+    "diagnostics": {
+      "center": [
+        105.83500789096632,
+        21.030751292510047
+      ],
+      "bounds": [
+        [
+          105.7955257742671,
+          21.004391676664767
+        ],
+        [
+          105.87449000766532,
+          21.057106246568495
+        ]
+      ],
+      "inputVehiclesInBounds": 5000,
+      "sourceFeatures": 5000,
+      "loaded": true
+    }
+  },
+  "clusterScope": "viewport; duplicates removed; not full-source coverage assertion",
+  "pan": "continuous small jumpTo pan during capture; zoom fixed",
+  "mapLifetime": "4e7fd573-e89f-4a33-9424-ab719ffd808c"
+}

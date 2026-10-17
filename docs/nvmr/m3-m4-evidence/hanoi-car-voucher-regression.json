@@ -1,0 +1,126 @@
+{
+  "status": "PASS",
+  "kind": "live Hanoi CAR paired Voucher regression",
+  "config": {
+    "seed": "m3-m4-hanoi-car-regression",
+    "fleetSize": 5,
+    "potentialCount": 20
+  },
+  "repeats": 2,
+  "semanticRepeat": true,
+  "provenance": {
+    "extract_sha256": "18fd3892f6d766387f2c3217d5d104e09a9319d3905a9172834b21c0064d6308",
+    "streets_sha256": "7230c17749cf16b4d09751ead369ab52b418b32c866f15599f1ccf0897f61244",
+    "image_digest": "ghcr.io/project-osrm/osrm-backend@sha256:855614a38f464b0558a2ad6eaa7cb8c139f39887da9b38b485ce453c6e6e6124",
+    "profile_sha256": "cb3df0546318665609606b746a1297f3d65ca3c2ff825f8a6f3c57247d86a2d3",
+    "profile": "car",
+    "algorithm": "mld",
+    "router_url": "http://127.0.0.1:5001",
+    "max_snap_meters": 100.0,
+    "display_bbox": [
+      105.802,
+      21.002,
+      105.875,
+      21.055
+    ],
+    "sampling_bbox": [
+      105.823,
+      21.0186,
+      105.84700000000001,
+      21.038400000000003
+    ],
+    "candidate_version": 2,
+    "region_id": "nvmr-hanoi-core",
+    "routing_bbox": [
+      105.762,
+      20.962,
+      105.915,
+      21.095
+    ],
+    "route_validation_bbox": [
+      105.762,
+      20.962,
+      105.915,
+      21.095
+    ],
+    "artifact_identity": {
+      "region_id": "nvmr-hanoi-core",
+      "config_sha256": "91c114a869a0eebe23d91df77641b9dd2f52afb7b7d09e941f249f78cfc9f05c",
+      "pipeline_version": "hanoi-car-pilot/v1"
+    },
+    "source_sha256": "2fbd2ee6b4dc151eecf04fa6823cddf584b47423e190118b10fce8b6115e9d8a",
+    "graph_manifest_sha256": "a24d4957a01ceeb04a0de1ad680fe4c5dd51732a7b381d9368e249a65c1b29b5"
+  },
+  "final": {
+    "baseline": {
+      "validPotential": 20,
+      "invalidPotential": 0,
+      "accepted": 16,
+      "assigned": 14,
+      "pickedUp": 14,
+      "completed": 14,
+      "unserved": 2,
+      "conversionRate": 0.8,
+      "completionRate": 0.875,
+      "averageWaitSeconds": 175.71514285714287,
+      "averagePickupEtaSeconds": 171.2357142857143,
+      "averageTripSeconds": 188.22142857142853,
+      "emptyMeters": 22665.8,
+      "occupiedMeters": 25989.399999999998,
+      "utilization": 0.5170238560009863,
+      "grossFareVnd": 451873,
+      "riderPaymentsVnd": 451873,
+      "voucherSpendVnd": 0,
+      "budget": {
+        "total": 0,
+        "reserved": 0,
+        "spent": 0,
+        "available": 0
+      },
+      "voucherCounts": {
+        "OFFERED": 0,
+        "RESERVED": 0,
+        "SETTLED": 0,
+        "RELEASED": 0
+      }
+    },
+    "treatment": {
+      "validPotential": 20,
+      "invalidPotential": 0,
+      "accepted": 18,
+      "assigned": 18,
+      "pickedUp": 18,
+      "completed": 18,
+      "unserved": 0,
+      "conversionRate": 0.9,
+      "completionRate": 1.0,
+      "averageWaitSeconds": 139.43850000000006,
+      "averagePickupEtaSeconds": 132.0777777777778,
+      "averageTripSeconds": 189.16111111111113,
+      "emptyMeters": 23120.5,
+      "occupiedMeters": 34193.799999999996,
+      "utilization": 0.5940678488503504,
+      "grossFareVnd": 590326,
+      "riderPaymentsVnd": 390613,
+      "voucherSpendVnd": 199713,
+      "budget": {
+        "total": 200000,
+        "reserved": 0,
+        "spent": 199713,
+        "available": 287
+      },
+      "voucherCounts": {
+        "OFFERED": 11,
+        "RESERVED": 10,
+        "SETTLED": 10,
+        "RELEASED": 0
+      }
+    }
+  },
+  "comparison": {
+    "bookingUplift": 2,
+    "incrementalCompleted": 4,
+    "costPerIncrementalCompletionVnd": 49928.25
+  },
+  "check_experiment": "common inputs/draws/lifecycle/ledger checked by existing M1b audit helper; unchanged model"
+}

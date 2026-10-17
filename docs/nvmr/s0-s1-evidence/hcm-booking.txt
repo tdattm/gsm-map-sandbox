@@ -1,0 +1,203 @@
+- banner:
+  - button "Mở menu chính":
+  - heading "GSM Map Sandbox" [level=1]
+  - text: Đặt xe và điều phối
+  - button "Mở hoặc ẩn bảng chi tiết" [expanded]: Chi tiết
+  - generic: Mô phỏng cục bộ
+  - generic: Bản đồ cục bộ
+  - generic: OSRM kết nối
+- main:
+  - complementary "Menu chính":
+    - paragraph: CHẾ ĐỘ MÔ PHỎNG
+    - navigation "Menu chính":
+      - button "Một hành trình":
+        - generic: Một hành trình
+      - button "Mô phỏng đội xe":
+        - generic: Mô phỏng đội xe
+      - button "Đặt xe và điều phối":
+        - generic: Đặt xe và điều phối
+      - button "Phòng thí nghiệm voucher":
+        - generic: Phòng thí nghiệm voucher
+      - button "Mô phỏng quy mô lớn":
+        - generic: Mô phỏng quy mô lớn
+    - button "Thu gọn menu":
+    - button "Ẩn menu":
+    - text: Mô phỏng cục bộ
+    - text: OSM · OSRM
+  - complementary "Cấu hình mô phỏng":
+    - strong: Cấu hình và chi tiết
+    - button "Đóng bảng chi tiết": ×
+    - button "Khu vực mô phỏng" [expanded]:
+      - text: Khu vực mô phỏng
+    - text: Khu vực mô phỏng
+    - combobox "Khu vực mô phỏng":
+      - option "Trung tâm TP.HCM · Quận 1 cũ" [selected]
+      - option "Hà Nội · vùng lõi NVMR"
+    - paragraph: Khu vực đã sẵn sàng cho mô phỏng trực tiếp.
+    - button "Loại phương tiện" [expanded]:
+      - text: Loại phương tiện
+    - text: Loại dịch vụ
+    - combobox "Loại dịch vụ":
+      - option "CAR · Ô tô điện" [selected]
+      - option "MOTORBIKE · Mô tô điện" [disabled]
+      - option "Hỗn hợp CAR + MOTORBIKE" [disabled]
+    - paragraph: CAR · định tuyến ô tô hiện có.
+    - button "Dữ liệu bản đồ":
+      - text: Dữ liệu bản đồ
+    - button "Cấu hình đặt xe":
+      - text: Cấu hình đặt xe
+    - button "Diễn biến kịch bản" [expanded]:
+      - text: Diễn biến kịch bản
+    - heading "Diễn biến kịch bản" [level=2]
+    - button "Xem toàn vùng kịch bản"
+    - button "Chỉ số tại thời điểm hiện tại" [expanded]:
+      - text: Chỉ số tại thời điểm hiện tại
+    - heading "Chỉ số tới thời điểm hiện tại" [level=2]
+    - generic: Đã yêu cầu
+    - strong: "5"
+    - generic: Đã phân công xe
+    - strong: "5"
+    - generic: Hoàn tất
+    - strong: "0"
+    - generic: Không được phục vụ
+    - strong: "0"
+    - term: Đã đón / đã yêu cầu
+    - definition: 40,0%
+    - term: Hoàn tất / đã yêu cầu
+    - definition: 0,0%
+    - term: Chờ TB · đã đón
+    - definition: 194,6 giây
+    - term: Chuyến TB · hoàn tất
+    - definition: —
+    - term: ETA đón TB · đã gán
+    - definition: 227,1 giây
+    - term: Quãng đường rỗng
+    - definition: 5,3 km
+    - term: Quãng đường chở khách
+    - definition: 0,8 km
+    - term: Mức sử dụng đội xe · thời gian bận / tổng thời gian xe
+    - definition: 35,6%
+    - paragraph: Thời gian chờ và mức sử dụng đội xe là chỉ số mô phỏng; thời gian và quãng đường theo cấu hình OSRM, không phản ánh giao thông trực tiếp. Số đã phân công gồm mọi yêu cầu từng được gán xe.
+    - generic "Kết quả cuối kịch bản"
+    - button "Yêu cầu đặt xe" [expanded]:
+      - text: Yêu cầu đặt xe
+    - heading "Yêu cầu đặt xe" [level=2]
+    - text: Lọc trạng thái
+    - combobox "Lọc trạng thái đặt xe":
+      - option "Đang hoạt động" [selected]
+      - option "Tất cả (gồm tương lai)"
+      - option "Không được phục vụ"
+      - option "Hoàn tất"
+    - button "Chọn yêu cầu đặt xe BK-001" [pressed]:
+      - strong: BK-001
+      - generic: Đã đón khách
+      - generic: Yêu cầu +0,0 giây · GSM-02 · chờ 267,4 giây
+    - button "Chọn yêu cầu đặt xe BK-004":
+      - strong: BK-004
+      - generic: Đã đón khách
+      - generic: Yêu cầu +145,8 giây · GSM-04 · chờ 121,7 giây
+    - button "Chọn yêu cầu đặt xe BK-015":
+      - strong: BK-015
+      - generic: Đã phân công xe
+      - generic: Yêu cầu +233,3 giây · GSM-01 · chờ 66,7 giây
+    - button "Chọn yêu cầu đặt xe BK-005":
+      - strong: BK-005
+      - generic: Đã phân công xe
+      - generic: Yêu cầu +289,2 giây · GSM-03 · chờ 10,8 giây
+    - button "Chọn yêu cầu đặt xe BK-018":
+      - strong: BK-018
+      - generic: Đã phân công xe
+      - generic: Yêu cầu +297,5 giây · GSM-05 · chờ 2,5 giây
+    - button "Chi tiết yêu cầu đặt xe" [expanded]:
+      - text: Chi tiết yêu cầu đặt xe
+    - heading "BK-001 · Đã đón khách" [level=2]
+    - paragraph:
+      - text: "Điểm đón: 106.714276, 10.779433"
+      - text: "Điểm trả: 106.686325, 10.767599"
+    - paragraph:
+      - text: "Xe: GSM-02 · ETA đón 267,4 giây"
+      - text: "Chờ mô phỏng: 267,4 giây · chuyến OSRM: 399,6 giây"
+    - button "Xem vùng đón và trả khách"
+    - button "Đội xe điều phối" [expanded]:
+      - text: Đội xe điều phối
+    - heading "Đội xe điều phối" [level=2]
+    - button "Quan sát xe điều phối GSM-01":
+      - strong: GSM-01
+      - generic: Đang đến đón khách
+      - text: BK-015 · 0 chuyến hoàn tất
+      - text: Rỗng 0,7 km · chở khách 0,0 km
+    - button "Quan sát xe điều phối GSM-02":
+      - strong: GSM-02
+      - generic: Đang chở khách
+      - text: BK-001 · 0 chuyến hoàn tất
+      - text: Rỗng 2,9 km · chở khách 0,4 km
+    - button "Quan sát xe điều phối GSM-03":
+      - strong: GSM-03
+      - generic: Đang đến đón khách
+      - text: BK-005 · 0 chuyến hoàn tất
+      - text: Rỗng 0,1 km · chở khách 0,0 km
+    - button "Quan sát xe điều phối GSM-04":
+      - strong: GSM-04
+      - generic: Đang chở khách
+      - text: BK-004 · 0 chuyến hoàn tất
+      - text: Rỗng 1,6 km · chở khách 0,4 km
+    - button "Quan sát xe điều phối GSM-05":
+      - strong: GSM-05
+      - generic: Đang đến đón khách
+      - text: BK-018 · 0 chuyến hoàn tất
+      - text: Rỗng 0,0 km · chở khách 0,0 km
+    - button "Dòng thời gian sự kiện":
+      - text: Dòng thời gian sự kiện
+    - text: Chỉ chạy cục bộ
+    - generic: WGS84 · [lon, lat]
+  - region "Bản đồ Trung tâm TP.HCM · Quận 1 cũ":
+    - generic: KHU VỰC NGHIÊN CỨU
+    - heading "Trung tâm TP.HCM · Quận 1 cũ" [level=2]
+    - button "Kiểm tra lại":
+      - text: Kiểm tra lại
+    - region "Bản đồ"
+    - button "Xe điều phối GSM-01":
+      - text: "01"
+    - button "Xe điều phối GSM-02":
+      - text: "02"
+    - button "Xe điều phối GSM-03":
+      - text: "03"
+    - button "Xe điều phối GSM-04":
+      - text: "04"
+    - button "Xe điều phối GSM-05":
+      - text: "05"
+    - button "Điểm đón BK-001":
+      - text: "001"
+    - generic "Điểm trả BK-001":
+    - button "Điểm đón BK-015":
+      - text: "015"
+    - button "Điểm đón BK-005":
+      - text: "005"
+    - button "Điểm đón BK-018":
+      - text: "018"
+    - generic: © OpenStreetMap contributors
+    - button "Phóng to":
+    - button "Thu nhỏ":
+    - button "Đưa hướng bản đồ về phía Bắc":
+    - text: GeoJSON cục bộ · OSM Dữ liệu đường phố
+    - generic: "Đặt xe mô phỏng · màu vàng: đến đón · xanh: chở khách · xám: rảnh"
+    - generic: © OpenStreetMap contributors · Geofabrik
+- region "Điều khiển phát lại · Đặt xe và điều phối":
+  - button "Tiếp tục":
+    - text: Tiếp tục
+  - button "Tạm dừng" [disabled]:
+    - text: Tạm dừng
+  - button "Về đầu":
+  - strong: Đặt xe và điều phối
+  - generic: 300,0 / 2.092,4 giây · 14%
+  - group "Dòng thời gian mô phỏng":
+    - slider "Dòng thời gian mô phỏng": "300"
+  - spinbutton "Thời điểm mô phỏng (giây)": "300"
+  - button "Đến thời điểm" [active]
+  - button "1x" [pressed]
+  - button "2x"
+  - button "4x"
+  - text: Tốc độ tùy chỉnh
+  - textbox "Tốc độ tùy chỉnh": "1"
+  - button "Áp dụng"
+  - generic "Tốc độ đã áp dụng": 1x

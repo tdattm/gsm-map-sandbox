@@ -1,0 +1,25 @@
+Workspace: D:\ThS\VinAI\Phase3_VRIC\gsm-map-sandbox
+Absolute shared store: D:\ThS\VinAI\Phase3_VRIC\gsm-map-sandbox\build\m3\jobs
+Available RAM: 3.36 GiB (2 GiB required to start missing services)
+
+failed to connect to the docker API at npipe:////./pipe/dockerDesktopLinuxEngine; check if the path is correct and if the daemon is running: open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.
+WARNING: Docker Engine unavailable. Start Docker Desktop (Linux Engine), then rerun.
+Router HCM CAR :5000 listening=False (mode API verifies graph identity)
+Router Hanoi CAR :5001 listening=False (mode API verifies graph identity)
+Router Hanoi MOTORBIKE :5002 listening=False (mode API verifies graph identity)
+API verified/reused: http://127.0.0.1:8015 ; worker=locked
+Worker lease verified on the same absolute store; reuse (not a heartbeat).
+Vite verified/reused; proxy=http://127.0.0.1:8015
+FastAPI health: status=ok backend_ready=True
+HCM readiness: ready=False router=unavailable
+WARNING: Cannot verify Hanoi mode/graph readiness. Check API then pipeline serve commands below.
+Local render streets : True
+Local render water : True
+Local render green : True
+Local render buildings : True
+Local render places : True
+Website: http://127.0.0.1:5186/ (root URL -> Mo phong quy mo lon)
+Router recovery (no rebuild): .\.venv\Scripts\python.exe scripts/pipeline.py serve --detach
+Hanoi: .\.venv\Scripts\python.exe scripts/pipeline.py serve --region nvmr-hanoi-core --profile car --detach
+Motorbike: .\.venv\Scripts\python.exe scripts/pipeline.py serve --region nvmr-hanoi-core --profile motorbike --detach
+API store/worker status: http://127.0.0.1:8015/api/v3/simulation/jobs/runtime

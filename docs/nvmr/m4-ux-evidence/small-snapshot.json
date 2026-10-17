@@ -1,0 +1,160 @@
+{
+  "schemaVersion": "gsm-simulation-snapshot/v1",
+  "runId": "2b6e2e4e7d6a41c98360695734d2184a",
+  "regionId": "nvmr-hanoi-core",
+  "sequenceNumber": 100000000,
+  "simulationTimeSeconds": 100.0,
+  "counts": {
+    "total": 10,
+    "offline": 0,
+    "online": 10,
+    "idle": 6,
+    "assigned": 1,
+    "onTrip": 3,
+    "moving": 4
+  },
+  "vehicles": [
+    {
+      "id": "GSM-00001",
+      "vehicleType": "CAR",
+      "serviceState": "IDLE",
+      "position": [
+        105.844094,
+        21.019367
+      ],
+      "headingDegrees": 0.0,
+      "activeBookingId": null,
+      "routeRef": null
+    },
+    {
+      "id": "GSM-00002",
+      "vehicleType": "CAR",
+      "serviceState": "ASSIGNED",
+      "position": [
+        105.8398526460952,
+        21.02504922666339
+      ],
+      "headingDegrees": 0.7639747678829271,
+      "activeBookingId": "BK-000012",
+      "routeRef": "2d3d1dd9660713e24dd9c65b40235753ace3a9fd227e7980b9b174fbfc649397"
+    },
+    {
+      "id": "GSM-00003",
+      "vehicleType": "CAR",
+      "serviceState": "IDLE",
+      "position": [
+        105.844094,
+        21.019367
+      ],
+      "headingDegrees": 0.0,
+      "activeBookingId": null,
+      "routeRef": null
+    },
+    {
+      "id": "GSM-00004",
+      "vehicleType": "CAR",
+      "serviceState": "ON_TRIP",
+      "position": [
+        105.84050002554383,
+        21.02917303342331
+      ],
+      "headingDegrees": 107.22745137524257,
+      "activeBookingId": "BK-000011",
+      "routeRef": "7ab94a944df557d21a05938dc8c549720834d618043db676e9c8d999779d2afc"
+    },
+    {
+      "id": "GSM-00005",
+      "vehicleType": "CAR",
+      "serviceState": "IDLE",
+      "position": [
+        105.836604,
+        21.033545
+      ],
+      "headingDegrees": 0.0,
+      "activeBookingId": null,
+      "routeRef": null
+    },
+    {
+      "id": "GSM-00006",
+      "vehicleType": "MOTORBIKE",
+      "serviceState": "IDLE",
+      "position": [
+        105.8372,
+        21.023519
+      ],
+      "headingDegrees": 0.0,
+      "activeBookingId": null,
+      "routeRef": null
+    },
+    {
+      "id": "GSM-00007",
+      "vehicleType": "MOTORBIKE",
+      "serviceState": "IDLE",
+      "position": [
+        105.826184,
+        21.021052
+      ],
+      "headingDegrees": 0.0,
+      "activeBookingId": null,
+      "routeRef": null
+    },
+    {
+      "id": "GSM-00008",
+      "vehicleType": "MOTORBIKE",
+      "serviceState": "ON_TRIP",
+      "position": [
+        105.83420027785073,
+        21.032098294968684
+      ],
+      "headingDegrees": 190.83059730038178,
+      "activeBookingId": "BK-000002",
+      "routeRef": "6bf4dc9a5eb64140f8410758eeecb288a0dc5d237750ad2ad45d3b44a903ff19"
+    },
+    {
+      "id": "GSM-00009",
+      "vehicleType": "MOTORBIKE",
+      "serviceState": "IDLE",
+      "position": [
+        105.834216,
+        21.032175
+      ],
+      "headingDegrees": 0.0,
+      "activeBookingId": null,
+      "routeRef": null
+    },
+    {
+      "id": "GSM-00010",
+      "vehicleType": "MOTORBIKE",
+      "serviceState": "ON_TRIP",
+      "position": [
+        105.83305560699061,
+        21.034396360373744
+      ],
+      "headingDegrees": 275.05752564962984,
+      "activeBookingId": "BK-000004",
+      "routeRef": "555800c1759ba22365eb126aaed38c85c9a9ef665ecdfb0906919359604e7de8"
+    }
+  ],
+  "routingIdentities": {
+    "CAR": {
+      "regionId": "nvmr-hanoi-core",
+      "vehicleType": "CAR",
+      "profile": "car",
+      "profileSha256": "cb3df0546318665609606b746a1297f3d65ca3c2ff825f8a6f3c57247d86a2d3",
+      "graphManifestSha256": "a24d4957a01ceeb04a0de1ad680fe4c5dd51732a7b381d9368e249a65c1b29b5",
+      "sourceSha256": "2fbd2ee6b4dc151eecf04fa6823cddf584b47423e190118b10fce8b6115e9d8a",
+      "extractSha256": "18fd3892f6d766387f2c3217d5d104e09a9319d3905a9172834b21c0064d6308",
+      "algorithm": "mld"
+    },
+    "MOTORBIKE": {
+      "regionId": "nvmr-hanoi-core",
+      "vehicleType": "MOTORBIKE",
+      "profile": "motorbike",
+      "profileSha256": "075ecdbc70a3e75c4338d2c6a41597c132a1837ec2d27f1c2fcdd824a788b209",
+      "graphManifestSha256": "fb97489d066397b11cb9178238cd56a5f52281bcf5711430bb7cf411496ca455",
+      "sourceSha256": "2fbd2ee6b4dc151eecf04fa6823cddf584b47423e190118b10fce8b6115e9d8a",
+      "extractSha256": "18fd3892f6d766387f2c3217d5d104e09a9319d3905a9172834b21c0064d6308",
+      "algorithm": "mld"
+    }
+  }
+}

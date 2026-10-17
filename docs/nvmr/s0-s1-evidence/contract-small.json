@@ -1,0 +1,174 @@
+{
+  "status": "PASS",
+  "kind": "real-worker-HTTP-to-product-TypeScript-validator",
+  "jobId": "d944b4be727e46ae8a6a580ad66430cb",
+  "config": {
+    "regionId": "nvmr-hanoi-core",
+    "seed": "s0-s1-live-10",
+    "fleetSize": 10,
+    "carCount": 5,
+    "bookingCount": 20,
+    "horizonSeconds": 900,
+    "maxWaitSeconds": 300,
+    "onlineFraction": 1,
+    "onlineSchedule": [],
+    "workload": "typical",
+    "initialCandidates": 16,
+    "maxCandidates": 128,
+    "gridCellDegrees": 0.005
+  },
+  "counts": {
+    "requested": 20,
+    "assigned": 20,
+    "completed": 20,
+    "unserved": 0,
+    "pending": 0,
+    "activeTrips": 0
+  },
+  "snapshotSamples": [
+    {
+      "time": 0,
+      "sequence": 0,
+      "counts": {
+        "total": 10,
+        "offline": 0,
+        "online": 10,
+        "idle": 10,
+        "assigned": 0,
+        "onTrip": 0,
+        "moving": 0
+      }
+    },
+    {
+      "time": 226.65699999999998,
+      "sequence": 226656999,
+      "counts": {
+        "total": 10,
+        "offline": 0,
+        "online": 10,
+        "idle": 6,
+        "assigned": 1,
+        "onTrip": 3,
+        "moving": 4
+      }
+    },
+    {
+      "time": 233.421,
+      "sequence": 233421000,
+      "counts": {
+        "total": 10,
+        "offline": 0,
+        "online": 10,
+        "idle": 6,
+        "assigned": 1,
+        "onTrip": 3,
+        "moving": 4
+      }
+    },
+    {
+      "time": 329.4125,
+      "sequence": 329412500,
+      "counts": {
+        "total": 10,
+        "offline": 0,
+        "online": 10,
+        "idle": 7,
+        "assigned": 2,
+        "onTrip": 1,
+        "moving": 3
+      }
+    },
+    {
+      "time": 658.825,
+      "sequence": 658825000,
+      "counts": {
+        "total": 10,
+        "offline": 0,
+        "online": 10,
+        "idle": 1,
+        "assigned": 4,
+        "onTrip": 5,
+        "moving": 9
+      }
+    },
+    {
+      "time": 1317.65,
+      "sequence": 1317650000,
+      "counts": {
+        "total": 10,
+        "offline": 0,
+        "online": 10,
+        "idle": 10,
+        "assigned": 0,
+        "onTrip": 0,
+        "moving": 0
+      }
+    }
+  ],
+  "selectedRoutes": [
+    {
+      "vehicleType": "CAR",
+      "vehicleId": "GSM-00004",
+      "routeRef": "7c94a9b938ec7aa94ded14064309c6378bf12dafe7531205a245a7f8527c600b",
+      "graph": "a24d4957a01ceeb04a0de1ad680fe4c5dd51732a7b381d9368e249a65c1b29b5",
+      "points": 28
+    },
+    {
+      "vehicleType": "MOTORBIKE",
+      "vehicleId": "GSM-00006",
+      "routeRef": "dddbc5f3eecc243594bb9c0bf5ced3a87fbc23390a7a8c6acff57cac79960dfb",
+      "graph": "fb97489d066397b11cb9178238cd56a5f52281bcf5711430bb7cf411496ca455",
+      "points": 60
+    }
+  ],
+  "selectedBookings": [
+    {
+      "vehicleType": "CAR",
+      "vehicleId": "GSM-00004",
+      "bookingId": "BK-000016",
+      "pickup": [
+        105.845496,
+        21.026412
+      ],
+      "dropoff": [
+        105.823914,
+        21.027612
+      ],
+      "legs": [
+        {
+          "phase": "pickup",
+          "routeRef": "7c94a9b938ec7aa94ded14064309c6378bf12dafe7531205a245a7f8527c600b",
+          "points": 28
+        },
+        {
+          "phase": "trip",
+          "routeRef": "ffbaf2af7f3fd4267e4073b42aaf14c0144921421fae9d9c299c82215dc33808",
+          "points": 120
+        }
+      ]
+    },
+    {
+      "vehicleType": "MOTORBIKE",
+      "vehicleId": "GSM-00006",
+      "bookingId": "BK-000008",
+      "pickup": [
+        105.844003,
+        21.028523
+      ],
+      "dropoff": [
+        105.833522,
+        21.026248
+      ],
+      "legs": [
+        {
+          "phase": "trip",
+          "routeRef": "dddbc5f3eecc243594bb9c0bf5ced3a87fbc23390a7a8c6acff57cac79960dfb",
+          "points": 60
+        }
+      ]
+    }
+  ],
+  "summaryWithoutHistory": true,
+  "duplicateSnapshotsRejected": true,
+  "savedV1": "separate contract; untouched"
+}

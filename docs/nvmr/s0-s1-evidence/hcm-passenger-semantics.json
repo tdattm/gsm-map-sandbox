@@ -1,0 +1,6 @@
+{
+  "waitingTime": 100,
+  "waitingIcon": "/icons/gsm/passenger.svg",
+  "boardedTime": 300,
+  "boardedIcon": "/icons/gsm/pickup.svg"
+}

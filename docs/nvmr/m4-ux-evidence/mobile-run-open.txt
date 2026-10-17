@@ -1,0 +1,111 @@
+- banner:
+  - button "Mở menu chính":
+  - heading "GSM Map Sandbox" [level=1]
+- main:
+  - complementary "Cấu hình mô phỏng quy mô lớn":
+    - generic: KỊCH BẢN MÔ HÌNH
+    - heading "Mô phỏng quy mô lớn" [level=2]
+    - paragraph: Hanoi Core · CAR + MOTORBIKE
+    - paragraph: Hiện chỉ hỗ trợ Hà Nội. Khu vực ở chế độ cũ (Trung tâm TP.HCM · Quận 1 cũ) được giữ lại khi quay về. Bản đồ dưới đây luôn là Hà Nội.
+    - paragraph: Tính toán trước, phát lại sau. Vị trí mô phỏng, không phải GPS trực tiếp.
+    - heading "Thiết lập mô phỏng" [level=2]
+    - text: Tổng đội xe
+    - spinbutton "Tổng đội xe": "100"
+    - text: Số xe CAR
+    - spinbutton "Số xe CAR": "40"
+    - paragraph: 40 CAR + 60 MOTORBIKE
+    - text: Số yêu cầu
+    - spinbutton "Số yêu cầu": "20"
+    - text: Tỷ lệ online
+    - spinbutton "Tỷ lệ online": "0.8"
+    - text: Seed
+    - textbox "Seed": m4-ux-pilot
+    - generic "Tham số nhu cầu"
+    - option "Thưa (low)"
+    - option "Thông thường (typical)" [selected]
+    - option "Dồn đầu kỳ (burst)"
+    - button "Tạo mô phỏng"
+    - generic "Mở run đã có"
+    - text: Mã run
+    - textbox "Mã run": 088a063b0b0d46e1a8241fea277334a9
+    - button "Mở kết quả"
+    - heading "Tiến trình" [level=2]
+    - status: Đã tính xong · COMPLETED
+    - progressbar "Tiến trình tính toán"
+    - paragraph: 100% · 088a063b0b0d46e1a8241fea277334a9
+    - button "Xóa phiên hiển thị"
+    - paragraph: Rời chế độ chỉ dừng phát lại và requests của màn hình; job đã gửi vẫn được worker xử lý. Hãy lưu mã run hoặc hủy job trước khi rời.
+    - heading "Đội xe tại thời điểm phát lại" [level=2]
+    - term: Tổng đội xe
+    - definition: "5.000"
+    - term: Offline
+    - definition: "1.000"
+    - term: Online
+    - definition: "4.000"
+    - term: Rảnh
+    - definition: "3.861"
+    - term: Đang đến đón
+    - definition: "1"
+    - term: Đang chở khách
+    - definition: "138"
+    - term: Đang di chuyển
+    - definition: "139"
+    - paragraph: Tổng = Offline + Online. Online = Rảnh + Đến đón + Chở khách. Đang di chuyển là tập con của xe đến đón/chở khách.
+    - heading "Kết quả cuối toàn run" [level=3]
+    - paragraph: 1250 yêu cầu · 1250 đã gán · 1250 hoàn tất · 0 không phục vụ
+    - paragraph: Không phải số booking hoàn tất tại thời điểm playback. Contract hiện chưa cung cấp số đó.
+    - heading "Xe được chọn" [level=2]
+    - text: Mã phương tiện
+    - combobox "Vehicle inspector": GSM-02001
+    - paragraph:
+      - strong: GSM-02001
+      - text: · MOTORBIKE
+      - text: Đang chở khách · ON_TRIP
+    - paragraph: Hướng 335° · [105.844667, 21.027211]
+    - paragraph: "Booking: BK-000549"
+    - button "Theo dõi vị trí xe" [active]
+    - paragraph: 2113 m · 184.5 giây
+    - generic "Định danh tuyến và dữ liệu"
+    - generic "Chi tiết snapshot"
+    - generic "Benchmark / Developer Tools"
+    - option "100" [selected]
+    - option "500"
+    - option "1000"
+    - option "3000"
+    - option "5000"
+    - option "5 giây"
+    - option "30 giây" [selected]
+    - option "60 giây"
+  - region "Bản đồ mô phỏng Hà Nội":
+    - generic: BẢN ĐỒ CỤC BỘ · OSM
+    - heading "Hà Nội · Hanoi Core" [level=2]
+    - status: Bản đồ Hà Nội sẵn sàng · 5/5 lớp địa lý
+    - button "Tải lại bản đồ"
+    - region "Map"
+    - generic: © OpenStreetMap contributors · Geofabrik · ODbL 1.0
+    - button "Phóng to":
+    - button "Thu nhỏ":
+    - button "Đưa hướng bản đồ về phía Bắc":
+    - generic: ● CAR
+    - generic: ◉ MOTORBIKE
+    - generic: "Vàng: đến đón · xanh lá: chở khách · mờ: offline · cam: xe chọn"
+    - paragraph: Phát lại kịch bản đã tính xong · Nhấp cụm để phóng to, nhấp xe để xem tuyến.
+  - region "Điều khiển phát lại · Phát lại mô phỏng đã tính xong":
+    - button "Tiếp tục":
+      - text: Tiếp tục
+    - button "Tạm dừng" [disabled]:
+      - text: Tạm dừng
+    - button "Về đầu":
+    - strong: Phát lại mô phỏng đã tính xong
+    - generic: 100,0 / 1.270,6 giây · 8%
+    - group "Dòng thời gian mô phỏng":
+      - slider "Dòng thời gian mô phỏng": "100"
+    - spinbutton "Thời điểm mô phỏng (giây)": "100"
+    - button "Đến thời điểm"
+    - button "1x" [pressed]
+    - button "2x"
+    - button "4x"
+    - text: Tốc độ tùy chỉnh
+    - textbox "Tốc độ tùy chỉnh": "1"
+    - button "Áp dụng"
+    - generic "Tốc độ đã áp dụng": 1x

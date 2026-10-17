@@ -1,0 +1,191 @@
+- banner:
+  - button "Mở menu chính":
+  - heading "GSM Map Sandbox" [level=1]
+  - text: Mô phỏng quy mô lớn
+  - generic: Mô phỏng cục bộ
+  - generic: Hanoi Core · CAR + MOTORBIKE · phát lại mô hình
+- main:
+  - complementary "Menu chính":
+    - paragraph: CHẾ ĐỘ MÔ PHỎNG
+    - navigation "Menu chính":
+      - button "Một hành trình":
+        - generic: Một hành trình
+      - button "Mô phỏng đội xe":
+        - generic: Mô phỏng đội xe
+      - button "Đặt xe và điều phối":
+        - generic: Đặt xe và điều phối
+      - button "Phòng thí nghiệm voucher":
+        - generic: Phòng thí nghiệm voucher
+      - button "Mô phỏng quy mô lớn":
+        - generic: Mô phỏng quy mô lớn
+    - button "Thu gọn menu":
+    - button "Ẩn menu":
+    - text: Mô phỏng cục bộ
+    - text: OSM · OSRM
+  - complementary "Cấu hình mô phỏng quy mô lớn":
+    - generic: KỊCH BẢN MÔ HÌNH
+    - heading "Mô phỏng quy mô lớn" [level=2]
+    - paragraph: Hanoi Core · CAR + MOTORBIKE
+    - paragraph: Hiện chỉ hỗ trợ Hà Nội. Khu vực ở chế độ cũ (Trung tâm TP.HCM · Quận 1 cũ) được giữ lại khi quay về. Bản đồ dưới đây luôn là Hà Nội.
+    - paragraph: Tính toán trước, phát lại sau. Vị trí mô phỏng, không phải GPS trực tiếp.
+    - paragraph: 5.000 xe là stress case Hanoi Core, chưa phải phân bổ trên toàn NVMR. Mở rộng vùng là nhiệm vụ R1.
+    - heading "Thiết lập mô phỏng mới" [level=2]
+    - text: Tổng đội xe
+    - spinbutton "Tổng đội xe": "100"
+    - text: Số xe CAR
+    - spinbutton "Số xe CAR": "40"
+    - paragraph: 40 CAR + 60 MOTORBIKE
+    - text: Số yêu cầu
+    - spinbutton "Số yêu cầu": "20"
+    - text: Tỷ lệ online
+    - spinbutton "Tỷ lệ online": "0.8"
+    - text: Seed
+    - textbox "Seed": m4-ux-pilot
+    - generic "Tham số nhu cầu"
+    - option "Thưa (low)"
+    - option "Thông thường (typical)" [selected]
+    - option "Dồn đầu kỳ (burst)"
+    - button "Tạo mô phỏng"
+    - generic "Mở run đã có"
+    - text: Mã run
+    - textbox "Mã run": 088a063b0b0d46e1a8241fea277334a9
+    - button "Mở kết quả"
+    - heading "Tiến trình" [level=2]
+    - status: Chưa có mô phỏng · thiết lập kịch bản để bắt đầu
+    - status: FastAPI đã kết nối · Worker giữ lease đúng store (không phải heartbeat)
+    - button "Kiểm tra lại kết nối"
+    - paragraph: Chỉ kiểm tra GET, không gửi lại job. QUEUED cũng có thể do worker đang bận.
+    - button "Xóa phiên hiển thị"
+    - paragraph: Rời chế độ chỉ dừng phát lại và requests của màn hình; job đã gửi vẫn được worker xử lý. Hãy lưu mã run hoặc hủy job trước khi rời.
+    - heading "Đội xe tại thời điểm phát lại" [level=2]
+    - term: Tổng đội xe
+    - definition: "100"
+    - term: Offline
+    - definition: "10"
+    - term: Online
+    - definition: "90"
+    - term: Rảnh
+    - definition: "53"
+    - term: Đang đến đón
+    - definition: "10"
+    - term: Đang chở khách
+    - definition: "27"
+    - term: Đang di chuyển
+    - definition: "37"
+    - paragraph: Tổng = Offline + Online. Online = Rảnh + Đến đón + Chở khách. Đang di chuyển là tập con của xe đến đón/chở khách.
+    - paragraph: Fixture đồ họa — không phải hành trình OSRM. Chuyển động synthetic; không có booking, hành khách hoặc tuyến nghiệp vụ.
+    - heading "Xe được chọn" [level=2]
+    - text: Mã phương tiện
+    - textbox "Vehicle inspector":
+      - /placeholder: Nhấp xe hoặc nhập ID chính xác
+      - text: fixture-00000
+    - text: Tìm xe
+    - textbox "Tìm xe":
+      - /placeholder: Một phần mã xe
+    - text: Lọc trạng thái
+    - combobox "Lọc trạng thái xe":
+      - option "Đến đón / Chở khách" [selected]
+      - option "Tất cả"
+      - option "Đang đến đón"
+      - option "Đang chở khách"
+      - option "Rảnh"
+      - option "Offline"
+    - paragraph: 37 xe phù hợp · hiển thị tối đa 12. Nhập ID để thu hẹp khi xe cùng depot.
+    - button "fixture-00003 · Đang chở khách":
+      - text: fixture-00003 · Đang chở khách
+    - button "fixture-00005 · Đang đến đón":
+      - text: fixture-00005 · Đang đến đón
+    - button "fixture-00006 · Đang chở khách":
+      - text: fixture-00006 · Đang chở khách
+    - button "fixture-00009 · Đang chở khách":
+      - text: fixture-00009 · Đang chở khách
+    - button "fixture-00012 · Đang chở khách":
+      - text: fixture-00012 · Đang chở khách
+    - button "fixture-00015 · Đang đến đón":
+      - text: fixture-00015 · Đang đến đón
+    - button "fixture-00018 · Đang chở khách":
+      - text: fixture-00018 · Đang chở khách
+    - button "fixture-00021 · Đang chở khách":
+      - text: fixture-00021 · Đang chở khách
+    - button "fixture-00024 · Đang chở khách":
+      - text: fixture-00024 · Đang chở khách
+    - button "fixture-00025 · Đang đến đón":
+      - text: fixture-00025 · Đang đến đón
+    - button "fixture-00027 · Đang chở khách":
+      - text: fixture-00027 · Đang chở khách
+    - button "fixture-00033 · Đang chở khách":
+      - text: fixture-00033 · Đang chở khách
+    - paragraph:
+      - strong: fixture-00000
+      - text: · CAR
+    - paragraph: Offline · OFFLINE
+    - paragraph:
+      - text: Hanoi Core · t=17.153 s
+      - text: Không có hướng di chuyển active · [105.890263, 20.981631]
+    - paragraph: "Booking: Không có"
+    - button "Theo dõi vị trí xe"
+    - button "Xem toàn hành trình" [disabled]
+    - paragraph: Fixture chỉ kiểm thử biểu tượng/render, không có hành trình.
+    - generic "Định danh tuyến active"
+    - generic "Chi tiết snapshot"
+    - generic "Benchmark / Developer Tools"
+    - paragraph: Đo render độc lập với throughput M3. Giữ tab foreground, không stress backend đồng thời, RAM khả dụng ≥2 GiB trước tăng tải. Nền Hà Nội mặc định bật. Mỗi zoom đo theo thời lượng chọn.
+    - paragraph: "Selected booking + hai route HTTP/validation: chưa đo. Một sample, chưa phải p95/render latency."
+    - text: Quy mô fixture
+    - combobox "Quy mô fixture":
+      - option "100" [selected]
+      - option "500"
+      - option "1000"
+      - option "3000"
+      - option "5000"
+    - button "Tải fixture render 100 xe"
+    - button "Zoom 11"
+    - button "Zoom 13"
+    - button "Zoom 16"
+    - checkbox "Nền trống (chỉ benchmark nâng cao)"
+    - text: Nền trống (chỉ benchmark nâng cao)
+    - text: Thời lượng đo mỗi zoom
+    - combobox "Thời lượng đo":
+      - option "5 giây" [selected]
+      - option "30 giây"
+      - option "60 giây"
+    - button "Đo WebGL 5 giây"
+    - button "Đo 3 zoom cho quy mô hiện tại"
+    - button "Tải JSON số đo (5)"
+    - generic: "{ \"series\": [ { \"kind\": \"browser-webgl-render-only\", \"sampleCondition\": \"warm in-page; no page/process restart\", \"pageAgeMs\": 172590.59999999404, \"sourceUpdatesBefore\": 261, \"fixture\": true, \"fleetSize\": 100, \"simulationTimeSeconds\": 5.7081999999880795, \"zoom\": 11, \"browser\": \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36\", \"viewport\": [ 764, 568 ], \"devicePixelRatio\": 1.0000000149011612, \"webglRenderer\": \"ANGLE (Intel, Intel(R) Iris(R) Xe Graphics (0x00009A49) Direct3D11 vs_5_0 ps_5_0, D3D11)\", \"durationMs\": 5007.699999988079, \"frames\": 289, \"fps\": 57.71112486784112, \"frameTimeP50Ms\": 16.699999999982538, \"frameTimeP95Ms\": 17, \"longTaskSupported\": true, \"longTasks\": 0, \"longTaskTotalMs\": 0, \"heap\": { \"usedJSHeapSize\": 185694312, \"totalJSHeapSize\": 223296568, \"jsHeapSizeLimit\": 4395630592 }, \"domMarkerCount\": 0, \"sourceCount\": 10, \"layerCount\": 20, \"setDataSubmissionP50Ms\": 0.09999999403953552, \"setDataSubmissionP95Ms\": 0.20000000298023224, \"sourceLoadedLagP95Ms\": 19.700000002980232, \"dataUpdates\": 51, \"selectionToNextFrameMs\": 10.700000002980232, \"snapshotAgeMs\": 295, \"visibleClusterCount\": 23, \"visibleVehicleCount\": 10, \"visibleRepresentedVehicles\": 100, \"clusterOracle\": { \"checked\": 23, \"failures\": [], \"representedLeafCount\": 90, \"uniqueLeafCount\": 90, \"scope\": \"all fleet represented in current viewport\", \"passed\": true, \"diagnostics\": { \"center\": [ 105.83732139184514, 21.030078006302524 ], \"bounds\": [ [ 105.706172099853, 20.939041095090317 ], [ 105.9684706838375, 21.1210593391762 ] ], \"inputVehiclesInBounds\": 100, \"sourceFeatures\": 100, \"loaded\": true }, \"snapshotSettled\": true, \"renderSettled\": true, \"postFreezeWaitMs\": 370.90000000596046, \"frozenTime\": 5.7081999999880795 }, \"clusterScope\": \"viewport; duplicates removed; not full-source coverage assertion\", \"pan\": \"continuous small jumpTo pan during capture; zoom fixed\", \"mapLifetime\": \"cae50171-e33f-42c5-b97e-e8f093286ec4\", \"basemap\": \"HANOI_LOCAL_ON\", \"mapHealth\": { \"state\": \"ready\", \"message\": \"Bản đồ Hà Nội sẵn sàng · 5/5 lớp địa lý\", \"loaded\": 5, \"milliseconds\": 2388.9000000059605 } }, { \"kind\": \"browser-webgl-render-only\", \"sampleCondition\": \"warm in-page; no page/process restart\", \"pageAgeMs\": 178690.70000000298, \"sourceUpdatesBefore\": 319, \"fixture\": true, \"fleetSize\": 100, \"simulationTimeSeconds\": 11.43209999999404, \"zoom\": 13, \"browser\": \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36\", \"viewport\": [ 764, 568 ], \"devicePixelRatio\": 1.0000000149011612, \"webglRenderer\": \"ANGLE (Intel, Intel(R) Iris(R) Xe Graphics (0x00009A49) Direct3D11 vs_5_0 ps_5_0, D3D11)\", \"durationMs\": 5018.0999999940395, \"frames\": 301, \"fps\": 59.98286203948855, \"frameTimeP50Ms\": 16.699999999982538, \"frameTimeP95Ms\": 16.900000000023283, \"longTaskSupported\": true, \"longTasks\": 0, \"longTaskTotalMs\": 0, \"heap\": { \"usedJSHeapSize\": 167035738, \"totalJSHeapSize\": 225586482, \"jsHeapSizeLimit\": 4395630592 }, \"domMarkerCount\": 0, \"sourceCount\": 10, \"layerCount\": 20, \"setDataSubmissionP50Ms\": 0.09999999403953552, \"setDataSubmissionP95Ms\": 0.19999998807907104, \"sourceLoadedLagP95Ms\": 11.900000005960464, \"dataUpdates\": 51, \"selectionToNextFrameMs\": 10.600000008940697, \"snapshotAgeMs\": 302.40000000596046, \"visibleClusterCount\": 4, \"visibleVehicleCount\": 14, \"visibleRepresentedVehicles\": 22, \"clusterOracle\": { \"checked\": 4, \"failures\": [], \"representedLeafCount\": 8, \"uniqueLeafCount\": 8, \"scope\": \"visible viewport clusters only\", \"passed\": true, \"diagnostics\": { \"center\": [ 105.83732139184514, 21.030078006302524 ], \"bounds\": [ [ 105.80453406884959, 21.007323981322003 ], [ 105.87010871484523, 21.052828557631145 ] ], \"inputVehiclesInBounds\": 21, \"sourceFeatures\": 100, \"loaded\": true }, \"snapshotSettled\": true, \"renderSettled\": true, \"postFreezeWaitMs\": 364.70000000298023, \"frozenTime\": 11.43209999999404 }, \"clusterScope\": \"viewport; duplicates removed; not full-source coverage assertion\", \"pan\": \"continuous small jumpTo pan during capture; zoom fixed\", \"mapLifetime\": \"cae50171-e33f-42c5-b97e-e8f093286ec4\", \"basemap\": \"HANOI_LOCAL_ON\", \"mapHealth\": { \"state\": \"ready\", \"message\": \"Bản đồ Hà Nội sẵn sàng · 5/5 lớp địa lý\", \"loaded\": 5, \"milliseconds\": 2388.9000000059605 } }, { \"kind\": \"browser-webgl-render-only\", \"sampleCondition\": \"warm in-page; no page/process restart\", \"pageAgeMs\": 184790, \"sourceUpdatesBefore\": 377, \"fixture\": true, \"fleetSize\": 100, \"simulationTimeSeconds\": 17.15309999999404, \"zoom\": 16, \"browser\": \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36\", \"viewport\": [ 764, 568 ], \"devicePixelRatio\": 1.0000000149011612, \"webglRenderer\": \"ANGLE (Intel, Intel(R) Iris(R) Xe Graphics (0x00009A49) Direct3D11 vs_5_0 ps_5_0, D3D11)\", \"durationMs\": 5016.79999999702, \"frames\": 300, \"fps\": 59.79907510767386, \"frameTimeP50Ms\": 16.699999999982538, \"frameTimeP95Ms\": 16.900000000023283, \"longTaskSupported\": true, \"longTasks\": 0, \"longTaskTotalMs\": 0, \"heap\": { \"usedJSHeapSize\": 168396513, \"totalJSHeapSize\": 232649485, \"jsHeapSizeLimit\": 4395630592 }, \"domMarkerCount\": 0, \"sourceCount\": 10, \"layerCount\": 20, \"setDataSubmissionP50Ms\": 0.09999999403953552, \"setDataSubmissionP95Ms\": 0.20000000298023224, \"sourceLoadedLagP95Ms\": 12.899999991059303, \"dataUpdates\": 51, \"selectionToNextFrameMs\": 14.600000008940697, \"snapshotAgeMs\": 290, \"visibleClusterCount\": 0, \"visibleVehicleCount\": 1, \"visibleRepresentedVehicles\": 1, \"clusterOracle\": { \"checked\": 0, \"failures\": [], \"representedLeafCount\": 0, \"uniqueLeafCount\": 0, \"scope\": \"visible viewport clusters only\", \"passed\": true, \"diagnostics\": { \"center\": [ 105.80424828159306, 20.99977898794044 ], \"bounds\": [ [ 105.80014986621887, 20.996934346921634 ], [ 105.80834669696748, 21.002623574746934 ] ], \"inputVehiclesInBounds\": 1, \"sourceFeatures\": 100, \"loaded\": true }, \"snapshotSettled\": true, \"renderSettled\": true, \"postFreezeWaitMs\": 362.79999999701977, \"frozenTime\": 17.15309999999404 }, \"clusterScope\": \"viewport; duplicates removed; not full-source coverage assertion\", \"pan\": \"continuous small jumpTo pan during capture; zoom fixed\", \"mapLifetime\": \"cae50171-e33f-42c5-b97e-e8f093286ec4\", \"basemap\": \"HANOI_LOCAL_ON\", \"mapHealth\": { \"state\": \"ready\", \"message\": \"Bản đồ Hà Nội sẵn sàng · 5/5 lớp địa lý\", \"loaded\": 5, \"milliseconds\": 2388.9000000059605 } } ] }"
+  - region "Bản đồ mô phỏng Hà Nội":
+    - generic: BẢN ĐỒ CỤC BỘ · OSM
+    - heading "Hà Nội · Hanoi Core" [level=2]
+    - status: Bản đồ Hà Nội sẵn sàng · 5/5 lớp địa lý
+    - button "Tải lại bản đồ"
+    - status: Fixture đồ họa — không phải hành trình OSRM
+    - region "Map"
+    - generic: © OpenStreetMap contributors · Geofabrik · ODbL 1.0
+    - button "Phóng to":
+    - button "Thu nhỏ":
+    - button "Đưa hướng bản đồ về phía Bắc":
+    - text: CAR
+    - text: MOTORBIKE
+    - text: Chờ đón
+    - text: Trả khách
+    - generic: "P: đến đón · →: chở khách · Ⅱ: rảnh · ×/mờ: offline · vòng cam: chọn"
+    - paragraph: Bản đồ Hà Nội sẵn có trước khi tạo job · Nhấp cụm để phóng to, nhấp xe để xem tuyến.
+  - region "Điều khiển phát lại · Fixture render · synthetic":
+    - button "Tiếp tục":
+      - text: Tiếp tục
+    - button "Tạm dừng" [disabled]:
+      - text: Tạm dừng
+    - button "Về đầu":
+    - strong: Fixture render · synthetic
+    - generic: 17,2 / 3.600,0 giây · 0%
+    - group "Dòng thời gian mô phỏng":
+      - slider "Dòng thời gian mô phỏng": "17.2"
+    - spinbutton "Thời điểm mô phỏng (giây)": "100"
+    - button "Đến thời điểm"
+    - button "1x" [pressed]
+    - button "2x"
+    - button "4x"
+    - text: Tốc độ tùy chỉnh
+    - textbox "Tốc độ tùy chỉnh": "1"
+    - button "Áp dụng"
+    - generic "Tốc độ đã áp dụng": 1x

@@ -1,0 +1,241 @@
+{
+  "series": [
+    {
+      "kind": "browser-webgl-render-only",
+      "sampleCondition": "warm in-page; no page/process restart",
+      "pageAgeMs": 251137.20000000298,
+      "sourceUpdatesBefore": 19,
+      "fixture": true,
+      "fleetSize": 100,
+      "simulationTimeSeconds": 5.73820000000298,
+      "zoom": 11,
+      "browser": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36",
+      "viewport": [
+        764,
+        568
+      ],
+      "devicePixelRatio": 1.0000000149011612,
+      "webglRenderer": "ANGLE (Intel, Intel(R) Iris(R) Xe Graphics (0x00009A49) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "durationMs": 5028.5999999940395,
+      "frames": 300,
+      "fps": 59.65875193898015,
+      "frameTimeP50Ms": 16.699999999982538,
+      "frameTimeP95Ms": 17,
+      "longTaskSupported": true,
+      "longTasks": 0,
+      "longTaskTotalMs": 0,
+      "heap": {
+        "usedJSHeapSize": 164570556,
+        "totalJSHeapSize": 237178536,
+        "jsHeapSizeLimit": 4395630592
+      },
+      "domMarkerCount": 0,
+      "sourceCount": 10,
+      "layerCount": 19,
+      "setDataSubmissionP50Ms": 0.09999999403953552,
+      "setDataSubmissionP95Ms": 0.10000000894069672,
+      "sourceLoadedLagP95Ms": 11.899999991059303,
+      "dataUpdates": 52,
+      "selectionToNextFrameMs": 10.299999997019768,
+      "snapshotAgeMs": 233.59999999403954,
+      "visibleClusterCount": 23,
+      "visibleVehicleCount": 10,
+      "visibleRepresentedVehicles": 100,
+      "clusterOracle": {
+        "checked": 23,
+        "failures": [],
+        "representedLeafCount": 90,
+        "uniqueLeafCount": 90,
+        "scope": "all fleet represented in current viewport",
+        "passed": true,
+        "diagnostics": {
+          "center": [
+            105.83697999999993,
+            21.030786529307832
+          ],
+          "bounds": [
+            [
+              105.70583070800166,
+              20.93975005002757
+            ],
+            [
+              105.9681292919862,
+              21.121767428725263
+            ]
+          ],
+          "inputVehiclesInBounds": 100,
+          "sourceFeatures": 100,
+          "loaded": true
+        }
+      },
+      "clusterScope": "viewport; duplicates removed; not full-source coverage assertion",
+      "pan": "continuous small jumpTo pan during capture; zoom fixed",
+      "mapLifetime": "ee85494d-2dc9-4946-88f7-d477910ca9ef",
+      "basemap": "HANOI_LOCAL_ON",
+      "mapHealth": {
+        "state": "ready",
+        "message": "Bản đồ Hà Nội sẵn sàng · 5/5 lớp địa lý",
+        "loaded": 5,
+        "milliseconds": 0
+      }
+    },
+    {
+      "kind": "browser-webgl-render-only",
+      "sampleCondition": "warm in-page; no page/process restart",
+      "pageAgeMs": 257136.80000001192,
+      "sourceUpdatesBefore": 77,
+      "fixture": true,
+      "fleetSize": 100,
+      "simulationTimeSeconds": 11.471099999994038,
+      "zoom": 13,
+      "browser": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36",
+      "viewport": [
+        764,
+        568
+      ],
+      "devicePixelRatio": 1.0000000149011612,
+      "webglRenderer": "ANGLE (Intel, Intel(R) Iris(R) Xe Graphics (0x00009A49) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "durationMs": 5018.5999999940395,
+      "frames": 302,
+      "fps": 60.17614474163286,
+      "frameTimeP50Ms": 16.699999999982538,
+      "frameTimeP95Ms": 16.89999999999418,
+      "longTaskSupported": true,
+      "longTasks": 0,
+      "longTaskTotalMs": 0,
+      "heap": {
+        "usedJSHeapSize": 169733119,
+        "totalJSHeapSize": 226445523,
+        "jsHeapSizeLimit": 4395630592
+      },
+      "domMarkerCount": 0,
+      "sourceCount": 10,
+      "layerCount": 19,
+      "setDataSubmissionP50Ms": 0.09999999403953552,
+      "setDataSubmissionP95Ms": 0.20000000298023224,
+      "sourceLoadedLagP95Ms": 10.700000002980232,
+      "dataUpdates": 51,
+      "selectionToNextFrameMs": 9.799999997019768,
+      "snapshotAgeMs": 237.40000000596046,
+      "visibleClusterCount": 4,
+      "visibleVehicleCount": 14,
+      "visibleRepresentedVehicles": 22,
+      "clusterOracle": {
+        "checked": 4,
+        "failures": [],
+        "representedLeafCount": 8,
+        "uniqueLeafCount": 8,
+        "scope": "visible viewport clusters only",
+        "passed": true,
+        "diagnostics": {
+          "center": [
+            105.83697999999993,
+            21.030786529307832
+          ],
+          "bounds": [
+            [
+              105.8041926770004,
+              21.00803261245494
+            ],
+            [
+              105.86976732299598,
+              21.053536972416623
+            ]
+          ],
+          "inputVehiclesInBounds": 20,
+          "sourceFeatures": 100,
+          "loaded": true
+        }
+      },
+      "clusterScope": "viewport; duplicates removed; not full-source coverage assertion",
+      "pan": "continuous small jumpTo pan during capture; zoom fixed",
+      "mapLifetime": "ee85494d-2dc9-4946-88f7-d477910ca9ef",
+      "basemap": "HANOI_LOCAL_ON",
+      "mapHealth": {
+        "state": "ready",
+        "message": "Bản đồ Hà Nội sẵn sàng · 5/5 lớp địa lý",
+        "loaded": 5,
+        "milliseconds": 0
+      }
+    },
+    {
+      "kind": "browser-webgl-render-only",
+      "sampleCondition": "warm in-page; no page/process restart",
+      "pageAgeMs": 263129.8000000119,
+      "sourceUpdatesBefore": 134,
+      "fixture": true,
+      "fleetSize": 100,
+      "simulationTimeSeconds": 17.1935,
+      "zoom": 16,
+      "browser": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36",
+      "viewport": [
+        764,
+        568
+      ],
+      "devicePixelRatio": 1.0000000149011612,
+      "webglRenderer": "ANGLE (Intel, Intel(R) Iris(R) Xe Graphics (0x00009A49) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "durationMs": 5014.0999999940395,
+      "frames": 300,
+      "fps": 59.83127580230882,
+      "frameTimeP50Ms": 16.699999999982538,
+      "frameTimeP95Ms": 16.900000000023283,
+      "longTaskSupported": true,
+      "longTasks": 0,
+      "longTaskTotalMs": 0,
+      "heap": {
+        "usedJSHeapSize": 200316857,
+        "totalJSHeapSize": 241489201,
+        "jsHeapSizeLimit": 4395630592
+      },
+      "domMarkerCount": 0,
+      "sourceCount": 10,
+      "layerCount": 19,
+      "setDataSubmissionP50Ms": 0.09999999403953552,
+      "setDataSubmissionP95Ms": 0.20000000298023224,
+      "sourceLoadedLagP95Ms": 11.099999994039536,
+      "dataUpdates": 51,
+      "selectionToNextFrameMs": 8.900000005960464,
+      "snapshotAgeMs": 229,
+      "visibleClusterCount": 0,
+      "visibleVehicleCount": 1,
+      "visibleRepresentedVehicles": 1,
+      "clusterOracle": {
+        "checked": 0,
+        "failures": [],
+        "representedLeafCount": 0,
+        "uniqueLeafCount": 0,
+        "scope": "visible viewport clusters only",
+        "passed": true,
+        "diagnostics": {
+          "center": [
+            105.80424765024311,
+            20.99977914252754
+          ],
+          "bounds": [
+            [
+              105.80014923486948,
+              20.996934501511234
+            ],
+            [
+              105.80834606561808,
+              21.002623729330622
+            ]
+          ],
+          "inputVehiclesInBounds": 1,
+          "sourceFeatures": 100,
+          "loaded": true
+        }
+      },
+      "clusterScope": "viewport; duplicates removed; not full-source coverage assertion",
+      "pan": "continuous small jumpTo pan during capture; zoom fixed",
+      "mapLifetime": "ee85494d-2dc9-4946-88f7-d477910ca9ef",
+      "basemap": "HANOI_LOCAL_ON",
+      "mapHealth": {
+        "state": "ready",
+        "message": "Bản đồ Hà Nội sẵn sàng · 5/5 lớp địa lý",
+        "loaded": 5,
+        "milliseconds": 0
+      }
+    }
+  ]
+}

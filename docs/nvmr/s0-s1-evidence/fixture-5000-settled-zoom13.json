@@ -1,0 +1,83 @@
+{
+  "kind": "browser-webgl-render-only",
+  "sampleCondition": "warm in-page; no page/process restart",
+  "pageAgeMs": 10817.5,
+  "sourceUpdatesBefore": 7,
+  "fixture": true,
+  "fleetSize": 5000,
+  "simulationTimeSeconds": 5.838899999991059,
+  "zoom": 13,
+  "browser": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36",
+  "viewport": [
+    764,
+    568
+  ],
+  "devicePixelRatio": 1.0000000149011612,
+  "webglRenderer": "ANGLE (Intel, Intel(R) Iris(R) Xe Graphics (0x00009A49) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+  "durationMs": 5136.29999999702,
+  "frames": 220,
+  "fps": 42.83238907387179,
+  "frameTimeP50Ms": 16.699999999999818,
+  "frameTimeP95Ms": 50.100000000000364,
+  "longTaskSupported": true,
+  "longTasks": 6,
+  "longTaskTotalMs": 347,
+  "heap": {
+    "usedJSHeapSize": 303640850,
+    "totalJSHeapSize": 364261282,
+    "jsHeapSizeLimit": 4395630592
+  },
+  "domMarkerCount": 0,
+  "sourceCount": 10,
+  "layerCount": 20,
+  "setDataSubmissionP50Ms": 0.5,
+  "setDataSubmissionP95Ms": 0.800000011920929,
+  "sourceLoadedLagP95Ms": 83.79999999701977,
+  "dataUpdates": 52,
+  "selectionToNextFrameMs": 0.09999999403953552,
+  "snapshotAgeMs": 541.9000000059605,
+  "visibleClusterCount": 111,
+  "visibleVehicleCount": 17,
+  "visibleRepresentedVehicles": 1160,
+  "clusterOracle": {
+    "checked": 111,
+    "failures": [],
+    "representedLeafCount": 1143,
+    "uniqueLeafCount": 1143,
+    "scope": "visible viewport clusters only",
+    "passed": true,
+    "diagnostics": {
+      "center": [
+        105.84,
+        21.04
+      ],
+      "bounds": [
+        [
+          105.80721267700443,
+          21.01724748950977
+        ],
+        [
+          105.87278732299995,
+          21.062749035505064
+        ]
+      ],
+      "inputVehiclesInBounds": 1050,
+      "sourceFeatures": 5000,
+      "loaded": true
+    },
+    "snapshotSettled": true,
+    "renderSettled": true,
+    "postFreezeWaitMs": 657.9000000059605,
+    "frozenTime": 5.838899999991059
+  },
+  "clusterScope": "viewport; duplicates removed; not full-source coverage assertion",
+  "pan": "continuous small jumpTo pan during capture; zoom fixed",
+  "mapLifetime": "7268aa6e-d88a-40de-9377-abed6243964b",
+  "basemap": "HANOI_LOCAL_ON",
+  "mapHealth": {
+    "state": "ready",
+    "message": "Bản đồ Hà Nội sẵn sàng · 5/5 lớp địa lý",
+    "loaded": 5,
+    "milliseconds": 2174.2000000029802
+  }
+}

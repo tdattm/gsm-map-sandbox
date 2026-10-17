@@ -1,0 +1,1 @@
+Selected booking + hai route HTTP/validation: 135.6 ms. Một sample, chưa phải p95/render latency.

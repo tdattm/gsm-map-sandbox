@@ -1,0 +1,38 @@
+Browser tab: 1, Title: "GSM Map Sandbox", URL: "http://127.0.0.1:5186/?runtime=simulation".
+The following is a diff from the previous accessibility tree with ~ and + representing changed and added elements, respectively. Removed elements are summarized by ID range.
++					171 button (expanded) Nhiều xe tại vị trí vừa nhấp (30, tối đa 30), Secondary Actions: Collapse
++						172 text Nhiều xe tại vị trí vừa nhấp (
++						173 text 30
++						174 text , tối đa 30)
++					175 container
++						176 button GSM-00001
++						177 button GSM-00213
++						178 button GSM-00774
++						179 button GSM-00420
++						180 button GSM-01388
++						181 button GSM-02087
++						182 button GSM-01602
++						183 button GSM-00663
++						184 button GSM-04000
++						185 button GSM-04005
++						186 button GSM-02981
++						187 button GSM-00415
++						188 button GSM-02587
++						189 button GSM-03553
++						190 button GSM-01619
++						191 button GSM-01630
++						192 button GSM-03277
++						193 button GSM-02998
++						194 button GSM-02521
++						195 button GSM-01940
++						196 button GSM-04264
++						197 button GSM-01215
++						198 button GSM-04406
++						199 button GSM-04657
++						200 button GSM-01177
++						201 button GSM-01970
++						202 button GSM-01715
++						203 button GSM-02643
++						204 button GSM-03658
++						205 button GSM-04382
+The focused UI element is 92 container Map

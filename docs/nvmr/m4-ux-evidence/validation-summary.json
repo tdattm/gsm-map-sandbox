@@ -1,0 +1,508 @@
+{
+  "date": "2026-10-17",
+  "kind": "M4-product-UX-remediation",
+  "workspace": "D:\\ThS\\VinAI\\Phase3_VRIC\\gsm-map-sandbox",
+  "branch": "feature/nvmr-m0-architecture",
+  "head": "455abebe177be42e07b88ed4f34d4fecbef29b75",
+  "git": {
+    "stagedFiles": [],
+    "modifiedExistingSinceTaskStart": [
+      "README.md",
+      "docs/nvmr/M3_M4_INTEGRATION_REVIEW.md",
+      "docs/nvmr/M4_IMPLEMENTATION.md",
+      "frontend/src/App.css",
+      "frontend/src/App.tsx",
+      "frontend/src/components/primary-navigation.tsx",
+      "frontend/src/components/simulation-map.tsx",
+      "frontend/src/components/simulation-workspace.tsx",
+      "frontend/src/lib/simulation.ts",
+      "frontend/src/lib/use-simulation.ts",
+      "frontend/src/test-setup.ts",
+      "frontend/tests/use-simulation.test.ts",
+      "frontend/tests/workspace.test.tsx"
+    ],
+    "trackedCleanAtStartNowModified": [
+      "frontend/src/test-setup.ts",
+      "frontend/tests/workspace.test.tsx"
+    ],
+    "stageCommitPushMergePerformed": false
+  },
+  "services": {
+    "ownerPreserved": {
+      "api": 8013,
+      "frontend": 5183,
+      "HCM_OSRM": 5000,
+      "Hanoi_CAR_OSRM": 5001,
+      "Hanoi_MOTORBIKE_OSRM": 5002
+    },
+    "taskFaultProxy8014Stopped": true,
+    "taskVite5185Stopped": true,
+    "noGraphRebuild": true,
+    "noUserProcessTerminated": true
+  },
+  "checks": {
+    "backend": {
+      "status": "PASS",
+      "command": "$env:RUN_REAL_DATA='1'; .\\.venv\\Scripts\\python.exe -m pytest -q",
+      "passed": 189,
+      "seconds": 45.22,
+      "warnings": 1
+    },
+    "frontend": {
+      "status": "PASS",
+      "command": "npm.cmd test --prefix frontend",
+      "passed": 174,
+      "files": 19,
+      "seconds": 10.28
+    },
+    "typecheck": "PASS",
+    "build": "PASS with chunk >500kB warning",
+    "lint": {
+      "status": "PASS",
+      "errors": 0,
+      "warnings": 33
+    },
+    "savedVerifier": "PASS 9 assets; browser chooser NOT VERIFIED",
+    "M2LiveRerun": "PASS run(write=False),20 completed,0 unserved",
+    "real5000TSContract": "PASS",
+    "realCancel": "PASS CANCELLED + five HTTP409 results"
+  },
+  "acceptance": {
+    "rootNavigation": "PASS actual root→visible menu button→Simulation, desktop and mobile",
+    "mapBeforeJob": "PASS Hanoi five layers,zoom/pan,OSM attribution",
+    "smallLive": "PASS 10 fleet,5 CAR+5 MOTORBIKE,20/20 completed",
+    "largeLive": "PASS fresh5000 fleet,2000 CAR+3000 MOTORBIKE,1250/1250completed;seek/selection/focus/routes",
+    "legacy": "PASS navigation HCM Single/Fleet/Booking/Voucher;Hanoi CAR/MOTORBIKE readiness;Saved sample/checksum/seek500;not full manual export flow",
+    "history": "PASS Back/Forward/reload and persisted run opener",
+    "mobile": "PASS390x844,pageWidth390,onecanvas373x358;real5000runopened",
+    "failure": "PASS controlled HTTP503/404+retry/QUEUED/FAILED/CANCELLED/INTERRUPTED UI;physical outages NOT VERIFIED",
+    "realFailedCancelledUI": "PASS opening actual jobs,oldfailedjob clearly historical",
+    "staleIsolation": "PASS deferred hook tests/TSsnapshot validators and browser mode/run changes"
+  },
+  "performance": {
+    "condition": "Hanoi basemap ON, Vite dev warm page, Chrome155 IrisXe ANGLE D3D11,desktop1280x800,map764x543,DPR~1",
+    "fixture100": "three zooms11/13/16,30sec each,before clock subscription isolation",
+    "fixture1000": "three zooms11/13/16,30sec each,before clock subscription isolation",
+    "fixture5000BeforeAfter": "both three zooms,30sec each;different page lifetimes intentional reload;no uniform causal FPS improvement claim",
+    "live5000": "30sec zoom11,worker already completed;API polling active;56.970FPS,p95frame16.9ms,93updates,sourceLagP9579.9ms",
+    "counts": "8 sources,15layers,0DOMfleetmarkers;clusteroraclePASS;zoom11represents5000",
+    "notThroughputOrProductionClaim": true
+  },
+  "resourceScheduling": {
+    "initialAvailableGiBApprox": [
+      0.85,
+      1.2
+    ],
+    "userFreedRAMBeforeIncreasingLoad": true,
+    "guardGiB": 2,
+    "performanceWindowsNoFullTestsBuildOrM3Stress": true,
+    "initialRegressionOverlap": "A frontend lint/build command began while backend PTY was still pending;outside performance captures;reported explicitly. Subsequent delivery checks sequential.",
+    "resourceFiles": [
+      "resource-fixture-100.json",
+      "resource-fixture-1000.json",
+      "resource-fixture-5000-tuned.json",
+      "resource-fixture-5000.json",
+      "resource-live-5000.json"
+    ]
+  },
+  "notVerified": [
+    "physical full API/worker/router shutdown",
+    "real job hard-crash browser scenario",
+    "prolonged GPU context-loss recovery",
+    "30-60minute leak soak",
+    "whole browser process CPU/RSS/VRAM",
+    "p95 network route/snapshot SLO",
+    "mobile performance",
+    "browser file chooser import/export roundtrip",
+    "production deployment"
+  ],
+  "decisions": {
+    "M3": "GO proven workload;CONDITIONAL broader readiness",
+    "M4": "GO local MVP;CONDITIONAL stable 5000 visual performance",
+    "productIntegration": "GO tested local MVP journeys",
+    "M5": "GO start small multimodal choice pilot;not implemented",
+    "production": "NO-GO"
+  },
+  "historicalEvidenceUnchanged": true,
+  "protectedM3SourcesUnchanged": true,
+  "sourceHashes": {
+    "frontend/src/App.tsx": "1c9a73f564b07d105057a9b8613c4e21e6d6a845cb907768c2db5e622efd3e8c",
+    "frontend/src/App.css": "a2b168abd12725e5c758e1051250bab0d3fc791bad4d71afe19cc610c905dcb1",
+    "frontend/src/components/simulation-map.tsx": "3d4185f4d2bb02653beff66ad7ad01b2017a9d72c65aa2bdb6420fa8e9a6a6d7",
+    "frontend/src/components/simulation-workspace.tsx": "213ddcb6172e48ebc20172fd3405e55390fad72e6636855ed22324f331fb5ac8",
+    "frontend/src/lib/simulation.ts": "c1c8b70da904b63ab4ea92bd0c1ebda3a9cfab39505b0cefefb52aa403605ff1",
+    "frontend/src/lib/use-simulation.ts": "9660ac9080e9978b52cd3a1cb4caddaff0f089e41b3473c95b3b4c8c8d22aa57",
+    "frontend/tests/simulation.test.ts": "9e3506b66c91af3e0005e9eca913d0cdc1d30ee3a9a57a5de036d06d5ed9a87a",
+    "frontend/tests/use-simulation.test.ts": "70f8cbf5cfab3493899f988cde4a3b73b1bbef956475a9d5b857e2d618960f21",
+    "docs/nvmr/M4_IMPLEMENTATION.md": "6ddca2d70c38bf9bb14c9a580b4b1154339cf0812aa8163402c4fac6b5def84f",
+    "frontend/src/components/primary-navigation.tsx": "a5f4b0692b49f368974f562fabac01bd53ea49464d984ebf50da2ac12f02ead4",
+    "frontend/src/components/simulation-map-health.tsx": "ff7207c3cba3fa52365d34dfe056c39372695e265e7d022283337d4702d8cf6f",
+    "frontend/src/lib/navigation.ts": "cae38d950e68521238a1503fcda2ac994a38d59dbbdcf2b28679726c3cdd89da",
+    "frontend/src/test-setup.ts": "dba8c6391ceb020e06231f54551c288862e5b0b81dab96a475842b6f6a397217",
+    "frontend/tests/navigation.test.ts": "72623769bc0fce6a6de62be71856de8277d73d94d207028371269e67a74aa65a",
+    "frontend/tests/simulation-map-health.test.tsx": "85c9b7a0e2b98e339c98f8394ba3cba6d109fbe84ccba5a8b25526a112dc14e5",
+    "frontend/tests/workspace.test.tsx": "370183c199f2a14971fb1df67c75da363c84b58df0736f87e090dfcf5dc3d052",
+    "docs/nvmr/M4_UX_REMEDIATION.md": "baedf5d04958ffe8c89843b399b1275d46e1d637720616da02edd301f7fffe48",
+    "scripts/serve_ux_fault_proxy.py": "3f165c6392d66042d6baf9bd8f8bd4bd29dff63d933bdbff03976fb82936666a",
+    "README.md": "7d9d73686fc2adde98fbca6090bd1af13c9fa038756384e2e7e97cfa9e427285",
+    "docs/nvmr/M3_M4_INTEGRATION_REVIEW.md": "9474144534d6c8f97c76e28173d3c074986b20e7f2658a7aad5d01590815290e"
+  },
+  "rawIgnoredLogIdentity": {
+    "backend-tests.log": {
+      "bytes": 757,
+      "sha256": "8866ce09b1815017a0281495e3a9d308d04a517905841f0e1eeddb131cd2caf5"
+    },
+    "build-delivery.log": {
+      "bytes": 2154,
+      "sha256": "0a75fcdba43495d907de91b1ee0d629325d7f21427f8495a30d653e49d7572f0"
+    },
+    "build-final.log": {
+      "bytes": 2154,
+      "sha256": "727860fe944079793e24057e76e1efb3dbf97a017bdb5ab0afe18375868541fc"
+    },
+    "build.log": {
+      "bytes": 2154,
+      "sha256": "9eae5522096f6a84647ea27b04d6ad13d1bf981d2f84ba84d472c724881b681f"
+    },
+    "contract.log": {
+      "bytes": 2973,
+      "sha256": "8bf83e526443581602084fbf8907c59c197c35f238f7a1e0ef44d2e386709dc3"
+    },
+    "frontend-tests-delivery.log": {
+      "bytes": 601,
+      "sha256": "d678f14122c1e4dfd156db11cb1e3f8c59375cc849ff096f1fa803c117c3645f"
+    },
+    "frontend-tests-final.log": {
+      "bytes": 601,
+      "sha256": "5487b2ea27845cf3f730e412aacfba9f7ed196c528056eb7238266411070d866"
+    },
+    "frontend-tests.log": {
+      "bytes": 76196,
+      "sha256": "6e42e99ad9c33b12ed3483222f0337a0a6130cbaeadb12506e588439b2c7eb2f"
+    },
+    "lint-delivery.log": {
+      "bytes": 11056,
+      "sha256": "883abd5d02f6f55cecdb3b6b6c70057164e1762c6d12dd45fc0e533b9f31c28e"
+    },
+    "lint-final.log": {
+      "bytes": 11056,
+      "sha256": "065a3f82840818df85ad4ec20d464e58e7ea76e5b277232b7d0cd1000f380fad"
+    },
+    "lint.log": {
+      "bytes": 11056,
+      "sha256": "9b8e2ad5348c7f89f5a96786a7784cdc334d4b91c557c42991e8942afe0e647f"
+    },
+    "m2-live.log": {
+      "bytes": 283,
+      "sha256": "1f776f0fd60d812885657d3199275f97415470e5908e3b0474f3bc86b94513fa"
+    },
+    "multimodal.log": {
+      "bytes": 304,
+      "sha256": "b560f2709fcd0d123a69ca2148764842e6b6bc3a1d4a1a8bb11cc61593fe2fc4"
+    },
+    "replay.log": {
+      "bytes": 250,
+      "sha256": "78262c5d78a7ad66c89c639acf5d520490b5037b324d90889292fef2110051f8"
+    },
+    "typecheck-delivery.log": {
+      "bytes": 58,
+      "sha256": "ce47ca57861e4fa3aa21c4ee091eccdf3e660ef66243377ebaaed3616baa0b88"
+    },
+    "typecheck-final.log": {
+      "bytes": 58,
+      "sha256": "ce47ca57861e4fa3aa21c4ee091eccdf3e660ef66243377ebaaed3616baa0b88"
+    },
+    "typecheck.log": {
+      "bytes": 58,
+      "sha256": "ce47ca57861e4fa3aa21c4ee091eccdf3e660ef66243377ebaaed3616baa0b88"
+    }
+  },
+  "proposedCommitGroups": {
+    "M2": [
+      "docs/nvmr/M2_IMPLEMENTATION.md"
+    ],
+    "M3": [
+      "backend/app/main.py",
+      "backend/app/simulation.py",
+      "backend/app/simulation_jobs.py",
+      "backend/app/simulation_worker.py",
+      "scripts/benchmark_simulation.py",
+      "scripts/benchmark_simulation_live.py",
+      "scripts/m3_fixture_travel.py",
+      "scripts/m3_resources.py",
+      "tests/test_m3.py",
+      "tests/fixtures/m3/legacy-golden.json",
+      "tests/fixtures/m3/travel-matrix.json",
+      "docs/nvmr/M3_IMPLEMENTATION.md"
+    ],
+    "M4": [
+      "frontend/src/App.tsx",
+      "frontend/src/App.css",
+      "frontend/src/components/simulation-map.tsx",
+      "frontend/src/components/simulation-workspace.tsx",
+      "frontend/src/lib/simulation.ts",
+      "frontend/src/lib/use-simulation.ts",
+      "frontend/tests/simulation.test.ts",
+      "frontend/tests/use-simulation.test.ts",
+      "docs/nvmr/M4_IMPLEMENTATION.md",
+      "frontend/src/components/primary-navigation.tsx",
+      "frontend/src/components/simulation-map-health.tsx",
+      "frontend/src/lib/navigation.ts",
+      "frontend/src/test-setup.ts",
+      "frontend/tests/navigation.test.ts",
+      "frontend/tests/simulation-map-health.test.tsx",
+      "frontend/tests/workspace.test.tsx",
+      "docs/nvmr/M4_UX_REMEDIATION.md"
+    ],
+    "integration": [
+      "README.md",
+      "scripts/validate_simulation_api.py",
+      "frontend/scripts/verify-simulation.mjs",
+      "docs/nvmr/M3_M4_INTEGRATION_REVIEW.md",
+      "docs/nvmr/m3-m4-evidence/api-integration.json",
+      "docs/nvmr/m3-m4-evidence/browser-benchmark.json",
+      "docs/nvmr/m3-m4-evidence/browser-initial-invalid.json",
+      "docs/nvmr/m3-m4-evidence/browser-integrated-5000.json",
+      "docs/nvmr/m3-m4-evidence/browser-live-100-summary.json",
+      "docs/nvmr/m3-m4-evidence/browser-live-5000-job.json",
+      "docs/nvmr/m3-m4-evidence/browser-live-5000-summary.json",
+      "docs/nvmr/m3-m4-evidence/clusters-5000.jpg",
+      "docs/nvmr/m3-m4-evidence/contract-verification-5000.json",
+      "docs/nvmr/m3-m4-evidence/contract-verification.json",
+      "docs/nvmr/m3-m4-evidence/domain-summary.json",
+      "docs/nvmr/m3-m4-evidence/hanoi-car-voucher-regression.json",
+      "docs/nvmr/m3-m4-evidence/integration-summary.json",
+      "docs/nvmr/m3-m4-evidence/live-car-5000.jpg",
+      "docs/nvmr/m3-m4-evidence/live-motorbike-inspector.jpg",
+      "docs/nvmr/m3-m4-evidence/live-summary.json",
+      "docs/nvmr/m3-m4-evidence/native-inspector-5000.jpg",
+      "docs/nvmr/m3-m4-evidence/saved-api-off.jpg",
+      "docs/nvmr/m3-m4-evidence/validation-summary.json",
+      "scripts/serve_ux_fault_proxy.py",
+      "docs/nvmr/m4-ux-evidence/before-basemap-enabled.jpg",
+      "docs/nvmr/m4-ux-evidence/before-blank.jpg",
+      "docs/nvmr/m4-ux-evidence/failure-api.jpg",
+      "docs/nvmr/m4-ux-evidence/failure-api.txt",
+      "docs/nvmr/m4-ux-evidence/failure-cancelled.txt",
+      "docs/nvmr/m4-ux-evidence/failure-console.json",
+      "docs/nvmr/m4-ux-evidence/failure-interrupted.txt",
+      "docs/nvmr/m4-ux-evidence/failure-map-asset.jpg",
+      "docs/nvmr/m4-ux-evidence/failure-map-asset.txt",
+      "docs/nvmr/m4-ux-evidence/failure-queued.txt",
+      "docs/nvmr/m4-ux-evidence/failure-router.txt",
+      "docs/nvmr/m4-ux-evidence/fixture-100-basemap.json",
+      "docs/nvmr/m4-ux-evidence/fixture-1000-basemap.json",
+      "docs/nvmr/m4-ux-evidence/fixture-5000-basemap.jpg",
+      "docs/nvmr/m4-ux-evidence/fixture-5000-basemap.json",
+      "docs/nvmr/m4-ux-evidence/fixture-5000-tuned-basemap.json",
+      "docs/nvmr/m4-ux-evidence/hanoi-m2-navigation.txt",
+      "docs/nvmr/m4-ux-evidence/live-5000-basemap-benchmark.json",
+      "docs/nvmr/m4-ux-evidence/live-5000-car.jpg",
+      "docs/nvmr/m4-ux-evidence/live-5000-contract.json",
+      "docs/nvmr/m4-ux-evidence/live-5000-job.json",
+      "docs/nvmr/m4-ux-evidence/live-5000-motorbike.jpg",
+      "docs/nvmr/m4-ux-evidence/live-5000-proof.json",
+      "docs/nvmr/m4-ux-evidence/m2-live-rerun.json",
+      "docs/nvmr/m4-ux-evidence/mobile-390.jpg",
+      "docs/nvmr/m4-ux-evidence/mobile-layout.json",
+      "docs/nvmr/m4-ux-evidence/mobile-run-open.txt",
+      "docs/nvmr/m4-ux-evidence/navigation-default-map.jpg",
+      "docs/nvmr/m4-ux-evidence/normal-console.json",
+      "docs/nvmr/m4-ux-evidence/product-final.jpg",
+      "docs/nvmr/m4-ux-evidence/real-cancellation.json",
+      "docs/nvmr/m4-ux-evidence/real-cancelled-ui.txt",
+      "docs/nvmr/m4-ux-evidence/real-failed-ui.txt",
+      "docs/nvmr/m4-ux-evidence/resource-fixture-100.json",
+      "docs/nvmr/m4-ux-evidence/resource-fixture-1000.json",
+      "docs/nvmr/m4-ux-evidence/resource-fixture-5000-tuned.json",
+      "docs/nvmr/m4-ux-evidence/resource-fixture-5000.json",
+      "docs/nvmr/m4-ux-evidence/resource-live-5000.json",
+      "docs/nvmr/m4-ux-evidence/saved-regression.jpg",
+      "docs/nvmr/m4-ux-evidence/small-car-route.jpg",
+      "docs/nvmr/m4-ux-evidence/small-motorbike-route.jpg",
+      "docs/nvmr/m4-ux-evidence/small-result.json",
+      "docs/nvmr/m4-ux-evidence/small-snapshot.json",
+      "docs/nvmr/m4-ux-evidence/git-allowlists.json",
+      "docs/nvmr/m4-ux-evidence/validation-summary.json"
+    ]
+  },
+  "evidenceFiles": {
+    "before-basemap-enabled.jpg": {
+      "bytes": 55742,
+      "sha256": "1c3b0128ef2d9085d4fb7d4469731a0a2d61c89a856ec8b667811609e0df6a8b"
+    },
+    "before-blank.jpg": {
+      "bytes": 32719,
+      "sha256": "40c9ade541867a9cb05396c14dfe49ca9db3837d6fd6076b5f24fb3bd2b5f5e2"
+    },
+    "failure-api.jpg": {
+      "bytes": 95170,
+      "sha256": "c0ae193ac35788d1fe2833418994945970a0b26e7fe95881cb7e38dc164cbeb0"
+    },
+    "failure-api.txt": {
+      "bytes": 5038,
+      "sha256": "baad6c0c20ea12669d5ff6be5d492f4b5ded16996cf56c43e6a27f00245ac25f"
+    },
+    "failure-cancelled.txt": {
+      "bytes": 4771,
+      "sha256": "699d66abe923152e61a65a787e4186d64002209c5334d31663f9e23afeebe9ed"
+    },
+    "failure-console.json": {
+      "bytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "failure-interrupted.txt": {
+      "bytes": 4781,
+      "sha256": "fc298b3b281cca91bfeeed810abeea1f496b3f47b16df4eb7a179278ba7af06c"
+    },
+    "failure-map-asset.jpg": {
+      "bytes": 81866,
+      "sha256": "1ecd72f3bd24a24cc6d9a656083fa4f2143fa4e18a271d9ff614fdc56a691935"
+    },
+    "failure-map-asset.txt": {
+      "bytes": 5205,
+      "sha256": "eff694108d4771c5d5a40760996581c243d1ce614171cafa8d5c7e862faa502e"
+    },
+    "failure-queued.txt": {
+      "bytes": 5034,
+      "sha256": "4b2373485113d6d970587775680dc6788e41e8f2fbc450af0ef4fc9edd4507fd"
+    },
+    "failure-router.txt": {
+      "bytes": 4995,
+      "sha256": "3ace024dd2c45e35cae1106638e3cd911c5f2039c7a4cb79aa4cefec665db227"
+    },
+    "fixture-100-basemap.json": {
+      "bytes": 7876,
+      "sha256": "d974c82b44a32e8d863246e0dbecff53e2ac91c040da992a8057a62408bd6e99"
+    },
+    "fixture-1000-basemap.json": {
+      "bytes": 7928,
+      "sha256": "76e7d7f56eca29601c68e8d299adc7494f7a0e6c002f4a8a6346ac131b49caa8"
+    },
+    "fixture-5000-basemap.jpg": {
+      "bytes": 79244,
+      "sha256": "afc710ffd5ff544af841f765d497f100a1b81701b5aca0fce4db0d7bc3077944"
+    },
+    "fixture-5000-basemap.json": {
+      "bytes": 7954,
+      "sha256": "80ff6165f867f127de18223c280f4dba9820749ce9b19ddba291490eaccc3313"
+    },
+    "fixture-5000-tuned-basemap.json": {
+      "bytes": 7897,
+      "sha256": "941e1e643adfa57e8fec478ce0279af88ce1a91fe176e09766d82b841efc6551"
+    },
+    "git-allowlists.json": {
+      "bytes": 5099,
+      "sha256": "4127818da1bcb27c9f3b36a00c5cebc43c833513b9448c13692139909fc3c255"
+    },
+    "hanoi-m2-navigation.txt": {
+      "bytes": 4050,
+      "sha256": "db2414f34eea6c2b02de519ce7e84c84c6b5cb3556ea99dd66e4f09d8f792ee0"
+    },
+    "live-5000-basemap-benchmark.json": {
+      "bytes": 2296,
+      "sha256": "b199cd84181ce42cbe9c69d13b4eba4c34d1bfd17a0349071a7d8b8322adef84"
+    },
+    "live-5000-car.jpg": {
+      "bytes": 60015,
+      "sha256": "afb6e09db4051b95e0998a5e18bb8f73b3a0811c064dae071f4e447594a10132"
+    },
+    "live-5000-contract.json": {
+      "bytes": 2846,
+      "sha256": "fa499087adb21a4614b811e4583ad88e662399c7206912cad8070370eec771e7"
+    },
+    "live-5000-job.json": {
+      "bytes": 740,
+      "sha256": "dc25672ed1cae036f900b8781cd8ab8cfd9cc99307f85935f32d2d6aa0ba20a9"
+    },
+    "live-5000-motorbike.jpg": {
+      "bytes": 109596,
+      "sha256": "ce59a4f440a6ebb327dddf6142197f79daf8e031eb2b6a2bfda64b8522cd114a"
+    },
+    "live-5000-proof.json": {
+      "bytes": 25753,
+      "sha256": "64cefea8c4188fca6a9819a0ab27f71a297e1a4f8c4f729f0ee726d827a6ff8e"
+    },
+    "m2-live-rerun.json": {
+      "bytes": 24490,
+      "sha256": "d0077e0f0c651b654a47c7bf41732ac266055bb0f366371b86ce851e6651c38f"
+    },
+    "mobile-390.jpg": {
+      "bytes": 36323,
+      "sha256": "9478c78f901838bff42ff47e7f8d569b52b59c1201a0e63f1d36c59552f6c0d9"
+    },
+    "mobile-layout.json": {
+      "bytes": 147,
+      "sha256": "5dfbed9b81e39b297a02ecb6cef3c4993ee9565ed897cd696fec67d1186f4585"
+    },
+    "mobile-run-open.txt": {
+      "bytes": 4849,
+      "sha256": "333ff0ef73f5c006aa81751b32a14798c051b717a345258a885ee7486c99953a"
+    },
+    "navigation-default-map.jpg": {
+      "bytes": 57501,
+      "sha256": "4367bf1b4ae47fafb854f27e44dafc774d536fe4c87d3964fcfc1c14cc4daf70"
+    },
+    "normal-console.json": {
+      "bytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "product-final.jpg": {
+      "bytes": 96869,
+      "sha256": "33a24bdfcbbb4bf68def772aabee75e483b2eea3d53c6c4865e54d5408078f19"
+    },
+    "real-cancellation.json": {
+      "bytes": 1638,
+      "sha256": "a81cf9b195c848793fc19ac4652f9dbc908c07489669e9b0ff25211dd89763f5"
+    },
+    "real-cancelled-ui.txt": {
+      "bytes": 4892,
+      "sha256": "d2163310a858125dc84495aa6fe851eb9d06ff85cb6094c4fddca8c39c475e94"
+    },
+    "real-failed-ui.txt": {
+      "bytes": 5119,
+      "sha256": "e3965cdf8ca34980773503786a671f0119d62caf40ef8f3ac8071e226b74a029"
+    },
+    "resource-fixture-100.json": {
+      "bytes": 2124,
+      "sha256": "dc30dfc026dcdf9f434b3d0db5c0f782f9137be50bff3d4e3809012f9624efba"
+    },
+    "resource-fixture-1000.json": {
+      "bytes": 2119,
+      "sha256": "1c5b46bb1c903293d239b4e4dea236e01c1e6b7544bf152516b2ac66b66eb50b"
+    },
+    "resource-fixture-5000-tuned.json": {
+      "bytes": 2124,
+      "sha256": "7452873a77795df21d0a2a0d28da241cf47835900a1ee3918fec91057b96cd5b"
+    },
+    "resource-fixture-5000.json": {
+      "bytes": 2120,
+      "sha256": "2f054762f58690110dc7dd7dac6d9bcde0f6d4a06fc0d5e491eb779edd81495b"
+    },
+    "resource-live-5000.json": {
+      "bytes": 2124,
+      "sha256": "0a9f4a5330d2a3100e8b871e3fea1ea8e1200ec3cc549f390007435b09d38df7"
+    },
+    "saved-regression.jpg": {
+      "bytes": 127391,
+      "sha256": "daff59fec2df70a1ef7bb3036d41dd12481620af3dca9060de6fa2786a4f073f"
+    },
+    "small-car-route.jpg": {
+      "bytes": 102158,
+      "sha256": "8b7abbf4996412eebf94ccb63a6bab816b571b8f85bc0dec6d0ba7b5cb007aa0"
+    },
+    "small-motorbike-route.jpg": {
+      "bytes": 103007,
+      "sha256": "f567fcaaa6f97cbc2a8bd4974bf0fb2fc0f28e1df02faf2c04069760578a1dfe"
+    },
+    "small-result.json": {
+      "bytes": 3680,
+      "sha256": "7ac30ca6046b069d99cfc7690653b5280e4caf445959aaf02757c18892742142"
+    },
+    "small-snapshot.json": {
+      "bytes": 4471,
+      "sha256": "1d2564af44b55346dc9d674ac790dc1553aedfbfcaa7bcbff75daa5c76bf86f4"
+    }
+  },
+  "advancedBasemapLifecycleSmoke": "PASS same map lifetime OFF3sources/7layers -> ON8sources/15layers; both cluster oracles PASS; in live-5000-proof.json;5s smoke not capacity benchmark"
+}

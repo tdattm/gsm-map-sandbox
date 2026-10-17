@@ -1,0 +1,12 @@
+[
+  {
+    "ProcessId": 16024,
+    "ParentProcessId": 29308,
+    "CommandLine": "\"D:\\ThS\\VinAI\\Phase3_VRIC\\gsm-map-sandbox\\.venv\\Scripts\\python.exe\" -m backend.app.simulation_worker --store \"D:\\ThS\\VinAI\\Phase3_VRIC\\gsm-map-sandbox\\build\\s0-s1\\runtime test jobs\" "
+  },
+  {
+    "ProcessId": 23864,
+    "ParentProcessId": 16024,
+    "CommandLine": "\"C:\\Users\\TIEN DAT\\AppData\\Local\\Programs\\Python\\Python311\\python.exe\" -m backend.app.simulation_worker --store \"D:\\ThS\\VinAI\\Phase3_VRIC\\gsm-map-sandbox\\build\\s0-s1\\runtime test jobs\" "
+  }
+]

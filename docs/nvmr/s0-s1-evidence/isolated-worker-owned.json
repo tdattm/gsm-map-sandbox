@@ -1,0 +1,5 @@
+{
+  "ProcessId": 14504,
+  "ParentProcessId": 18248,
+  "CommandLine": "\"C:\\Users\\TIEN DAT\\AppData\\Local\\Programs\\Python\\Python311\\python.exe\" -m backend.app.simulation_worker --store \"D:\\ThS\\VinAI\\Phase3_VRIC\\gsm-map-sandbox\\build\\s0-s1\\runtime test jobs\" "
+}

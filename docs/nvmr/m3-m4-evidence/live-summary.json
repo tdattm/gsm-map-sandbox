@@ -1,0 +1,2918 @@
+{
+  "status": "PASS",
+  "kind": "live-local-OSRM",
+  "repetitionsPerConfig": 1,
+  "routerCache": "running routers reused, new Python/travel caches each process",
+  "runs": [
+    {
+      "schemaVersion": "gsm-live-simulation-benchmark/v1",
+      "kind": "live-local-OSRM",
+      "environmentBefore": {
+        "platform": "Windows-10-10.0.26300-SP0",
+        "python": "3.11.9",
+        "cpuCount": 8,
+        "processor": "Intel64 Family 6 Model 140 Stepping 2, GenuineIntel",
+        "memory": {
+          "totalPhysicalBytes": 16948453376,
+          "availablePhysicalBytes": 3734749184,
+          "processRssBytes": 50176000,
+          "processPeakRssBytes": 50294784,
+          "processPagefileBytes": 37908480
+        },
+        "dockerStats": [
+          "{\"BlockIO\":\"0B / 0B\",\"CPUPerc\":\"0.00%\",\"Container\":\"59fd1f3d6b543e795069290001fba11048a5004b0f57757a16305206bb5f0f27\",\"ID\":\"59fd1f3d6b54\",\"MemPerc\":\"2.47%\",\"MemUsage\":\"25.27MiB / 1GiB\",\"Name\":\"gsm-map-osrm\",\"NetIO\":\"856kB / 1.63MB\",\"PIDs\":\"10\"}",
+          "{\"BlockIO\":\"0B / 0B\",\"CPUPerc\":\"0.00%\",\"Container\":\"af5f68c19008785d15d820556a286d9814114cfb87449d940b126e9fefec3911\",\"ID\":\"af5f68c19008\",\"MemPerc\":\"5.72%\",\"MemUsage\":\"58.62MiB / 1GiB\",\"Name\":\"gsm-map-osrm-hanoi-motorbike\",\"NetIO\":\"1.28MB / 2.19MB\",\"PIDs\":\"10\"}",
+          "{\"BlockIO\":\"0B / 0B\",\"CPUPerc\":\"0.00%\",\"Container\":\"343e1ee656e4a30c2645352268b7c22bd9b57d76c9914d88aea767764b6dc1df\",\"ID\":\"343e1ee656e4\",\"MemPerc\":\"3.81%\",\"MemUsage\":\"38.98MiB / 1GiB\",\"Name\":\"gsm-map-osrm-hanoi-car\",\"NetIO\":\"2.7MB / 4.31MB\",\"PIDs\":\"10\"}"
+        ],
+        "hardware": "{\"Name\":\"11th Gen Intel(R) Core(TM) i5-11320H @ 3.20GHz\",\"NumberOfCores\":4,\"NumberOfLogicalProcessors\":8}\n[{\"Name\":\"NVIDIA GeForce RTX 3050 Laptop GPU\",\"AdapterRAM\":4293918720,\"DriverVersion\":\"32.0.15.7700\"},{\"Name\":\"Intel(R) Iris(R) Xe Graphics\",\"AdapterRAM\":1073741824,\"DriverVersion\":\"30.0.100.9864\"}]"
+      },
+      "config": {
+        "regionId": "nvmr-hanoi-core",
+        "seed": "m3-live-0",
+        "fleetSize": 100,
+        "carCount": 40,
+        "bookingCount": 2,
+        "horizonSeconds": 900,
+        "maxWaitSeconds": 300,
+        "onlineFraction": 0.25,
+        "onlineSchedule": [],
+        "workload": "low",
+        "initialCandidates": 16,
+        "maxCandidates": 128,
+        "gridCellDegrees": 0.005
+      },
+      "status": "PASS",
+      "resources": {
+        "wallSeconds": 2.0539903000026243,
+        "cpuSeconds": 2.03125,
+        "cpuPercentOneCore": 98.89287208403101,
+        "peakRssBytesSampled": 120655872,
+        "processPeakRssBytes": 120655872,
+        "minimumAvailablePhysicalBytes": 3836055552,
+        "sampleIntervalSeconds": 0.05,
+        "sampleCount": 33
+      },
+      "counts": {
+        "requested": 2,
+        "assigned": 2,
+        "completed": 2,
+        "unserved": 0,
+        "pending": 0,
+        "activeTrips": 0
+      },
+      "metrics": {
+        "eventsProcessed": 8,
+        "peakEventQueue": 5,
+        "peakPending": 1,
+        "tableCandidates": 30,
+        "searchBudgetExhaustions": 0,
+        "dispatchAttempts": 2,
+        "dispatchVersion": "grid-fifo/v1",
+        "preparationMilliseconds": 2004.19970000803,
+        "totalMilliseconds": 2051.0243000026094,
+        "routing": {
+          "CAR": {
+            "requests": {
+              "nearest": 18,
+              "table": 0,
+              "route": 0,
+              "routeCacheHits": 0,
+              "tableCacheHits": 0
+            },
+            "requestFailures": 0,
+            "latencyMilliseconds": {
+              "count": 18,
+              "p50": 5.863900005351752,
+              "p95": 8.43100000929553,
+              "total": 109.46109998621978
+            },
+            "routeCacheSize": 0,
+            "tableCacheSize": 0
+          },
+          "MOTORBIKE": {
+            "requests": {
+              "nearest": 22,
+              "table": 2,
+              "route": 4,
+              "routeCacheHits": 0,
+              "tableCacheHits": 0
+            },
+            "requestFailures": 0,
+            "latencyMilliseconds": {
+              "count": 28,
+              "p50": 5.8982000045944005,
+              "p95": 8.609399999841116,
+              "total": 172.23460000241175
+            },
+            "routeCacheSize": 4,
+            "tableCacheSize": 2
+          }
+        }
+      },
+      "routingIdentities": {
+        "CAR": {
+          "regionId": "nvmr-hanoi-core",
+          "vehicleType": "CAR",
+          "profile": "car",
+          "profileSha256": "cb3df0546318665609606b746a1297f3d65ca3c2ff825f8a6f3c57247d86a2d3",
+          "graphManifestSha256": "a24d4957a01ceeb04a0de1ad680fe4c5dd51732a7b381d9368e249a65c1b29b5",
+          "sourceSha256": "2fbd2ee6b4dc151eecf04fa6823cddf584b47423e190118b10fce8b6115e9d8a",
+          "extractSha256": "18fd3892f6d766387f2c3217d5d104e09a9319d3905a9172834b21c0064d6308",
+          "algorithm": "mld"
+        },
+        "MOTORBIKE": {
+          "regionId": "nvmr-hanoi-core",
+          "vehicleType": "MOTORBIKE",
+          "profile": "motorbike",
+          "profileSha256": "075ecdbc70a3e75c4338d2c6a41597c132a1837ec2d27f1c2fcdd824a788b209",
+          "graphManifestSha256": "fb97489d066397b11cb9178238cd56a5f52281bcf5711430bb7cf411496ca455",
+          "sourceSha256": "2fbd2ee6b4dc151eecf04fa6823cddf584b47423e190118b10fce8b6115e9d8a",
+          "extractSha256": "18fd3892f6d766387f2c3217d5d104e09a9319d3905a9172834b21c0064d6308",
+          "algorithm": "mld"
+        }
+      },
+      "simulationDurationSeconds": 900,
+      "provenance": {
+        "catalogFingerprint": "eb6e3288f8346294b07fcff49992d82bffe0e830784b02283772302d93810ae3",
+        "catalog": {
+          "extract_sha256": "18fd3892f6d766387f2c3217d5d104e09a9319d3905a9172834b21c0064d6308",
+          "streets_sha256": "7230c17749cf16b4d09751ead369ab52b418b32c866f15599f1ccf0897f61244",
+          "image_digest": "ghcr.io/project-osrm/osrm-backend@sha256:855614a38f464b0558a2ad6eaa7cb8c139f39887da9b38b485ce453c6e6e6124",
+          "profile_sha256": "cb3df0546318665609606b746a1297f3d65ca3c2ff825f8a6f3c57247d86a2d3",
+          "profile": "car",
+          "algorithm": "mld",
+          "router_url": "http://127.0.0.1:5001",
+          "max_snap_meters": 100.0,
+          "display_bbox": [
+            105.802,
+            21.002,
+            105.875,
+            21.055
+          ],
+          "sampling_bbox": [
+            105.823,
+            21.0186,
+            105.84700000000001,
+            21.038400000000003
+          ],
+          "candidate_version": 2,
+          "region_id": "nvmr-hanoi-core",
+          "routing_bbox": [
+            105.762,
+            20.962,
+            105.915,
+            21.095
+          ],
+          "route_validation_bbox": [
+            105.762,
+            20.962,
+            105.915,
+            21.095
+          ],
+          "artifact_identity": {
+            "region_id": "nvmr-hanoi-core",
+            "config_sha256": "91c114a869a0eebe23d91df77641b9dd2f52afb7b7d09e941f249f78cfc9f05c",
+            "pipeline_version": "hanoi-car-pilot/v1"
+          },
+          "source_sha256": "2fbd2ee6b4dc151eecf04fa6823cddf584b47423e190118b10fce8b6115e9d8a",
+          "graph_manifest_sha256": "a24d4957a01ceeb04a0de1ad680fe4c5dd51732a7b381d9368e249a65c1b29b5"
+        }
+      },
+      "environmentAfter": {
+        "platform": "Windows-10-10.0.26300-SP0",
+        "python": "3.11.9",
+        "cpuCount": 8,
+        "processor": "Intel64 Family 6 Model 140 Stepping 2, GenuineIntel",
+        "memory": {
+          "totalPhysicalBytes": 16948453376,
+          "availablePhysicalBytes": 3874717696,
+          "processRssBytes": 75186176,
+          "processPeakRssBytes": 120655872,
+          "processPagefileBytes": 61644800
+        },
+        "dockerStats": [
+          "{\"BlockIO\":\"0B / 0B\",\"CPUPerc\":\"0.00%\",\"Container\":\"59fd1f3d6b543e795069290001fba11048a5004b0f57757a16305206bb5f0f27\",\"ID\":\"59fd1f3d6b54\",\"MemPerc\":\"2.47%\",\"MemUsage\":\"25.27MiB / 1GiB\",\"Name\":\"gsm-map-osrm\",\"NetIO\":\"856kB / 1.63MB\",\"PIDs\":\"10\"}",
+          "{\"BlockIO\":\"0B / 0B\",\"CPUPerc\":\"0.00%\",\"Container\":\"af5f68c19008785d15d820556a286d9814114cfb87449d940b126e9fefec3911\",\"ID\":\"af5f68c19008\",\"MemPerc\":\"5.76%\",\"MemUsage\":\"59.02MiB / 1GiB\",\"Name\":\"gsm-map-osrm-hanoi-motorbike\",\"NetIO\":\"1.3MB / 2.23MB\",\"PIDs\":\"10\"}",
+          "{\"BlockIO\":\"0B / 0B\",\"CPUPerc\":\"0.00%\",\"Container\":\"343e1ee656e4a30c2645352268b7c22bd9b57d76c9914d88aea767764b6dc1df\",\"ID\":\"343e1ee656e4\",\"MemPerc\":\"3.81%\",\"MemUsage\":\"39.01MiB / 1GiB\",\"Name\":\"gsm-map-osrm-hanoi-car\",\"NetIO\":\"2.72MB / 4.33MB\",\"PIDs\":\"10\"}"
+        ],
+        "hardware": "{\"Name\":\"11th Gen Intel(R) Core(TM) i5-11320H @ 3.20GHz\",\"NumberOfCores\":4,\"NumberOfLogicalProcessors\":8}\n[{\"Name\":\"NVIDIA GeForce RTX 3050 Laptop GPU\",\"AdapterRAM\":4293918720,\"DriverVersion\":\"32.0.15.7700\"},{\"Name\":\"Intel(R) Iris(R) Xe Graphics\",\"AdapterRAM\":1073741824,\"DriverVersion\":\"30.0.100.9864\"}]"
+      }
+    },
+    {
+      "schemaVersion": "gsm-live-simulation-benchmark/v1",
+      "kind": "live-local-OSRM",
+      "environmentBefore": {
+        "platform": "Windows-10-10.0.26300-SP0",
+        "python": "3.11.9",
+        "cpuCount": 8,
+        "processor": "Intel64 Family 6 Model 140 Stepping 2, GenuineIntel",
+        "memory": {
+          "totalPhysicalBytes": 16948453376,
+          "availablePhysicalBytes": 3902984192,
+          "processRssBytes": 50372608,
+          "processPeakRssBytes": 50491392,
+          "processPagefileBytes": 38092800
+        },
+        "dockerStats": [
+          "{\"BlockIO\":\"0B / 0B\",\"CPUPerc\":\"0.00%\",\"Container\":\"59fd1f3d6b543e795069290001fba11048a5004b0f57757a16305206bb5f0f27\",\"ID\":\"59fd1f3d6b54\",\"MemPerc\":\"2.47%\",\"MemUsage\":\"25.27MiB / 1GiB\",\"Name\":\"gsm-map-osrm\",\"NetIO\":\"856kB / 1.63MB\",\"PIDs\":\"10\"}",
+          "{\"BlockIO\":\"0B / 0B\",\"CPUPerc\":\"0.00%\",\"Container\":\"af5f68c19008785d15d820556a286d9814114cfb87449d940b126e9fefec3911\",\"ID\":\"af5f68c19008\",\"MemPerc\":\"5.76%\",\"MemUsage\":\"59.02MiB / 1GiB\",\"Name\":\"gsm-map-osrm-hanoi-motorbike\",\"NetIO\":\"1.3MB / 2.23MB\",\"PIDs\":\"10\"}",
+          "{\"BlockIO\":\"0B / 0B\",\"CPUPerc\":\"0.01%\",\"Container\":\"343e1ee656e4a30c2645352268b7c22bd9b57d76c9914d88aea767764b6dc1df\",\"ID\":\"343e1ee656e4\",\"MemPerc\":\"3.81%\",\"MemUsage\":\"39.01MiB / 1GiB\",\"Name\":\"gsm-map-osrm-hanoi-car\",\"NetIO\":\"2.72MB / 4.33MB\",\"PIDs\":\"10\"}"
+        ],
+        "hardware": "{\"Name\":\"11th Gen Intel(R) Core(TM) i5-11320H @ 3.20GHz\",\"NumberOfCores\":4,\"NumberOfLogicalProcessors\":8}\n[{\"Name\":\"NVIDIA GeForce RTX 3050 Laptop GPU\",\"AdapterRAM\":4293918720,\"DriverVersion\":\"32.0.15.7700\"},{\"Name\":\"Intel(R) Iris(R) Xe Graphics\",\"AdapterRAM\":1073741824,\"DriverVersion\":\"30.0.100.9864\"}]"
+      },
+      "config": {
+        "regionId": "nvmr-hanoi-core",
+        "seed": "m3-live-0",
+        "fleetSize": 100,
+        "carCount": 40,
+        "bookingCount": 25,
+        "horizonSeconds": 900,
+        "maxWaitSeconds": 300,
+        "onlineFraction": 0.8,
+        "onlineSchedule": [],
+        "workload": "typical",
+        "initialCandidates": 16,
+        "maxCandidates": 128,
+        "gridCellDegrees": 0.005
+      },
+      "status": "PASS",
+      "resources": {
+        "wallSeconds": 2.348604599988903,
+        "cpuSeconds": 2.265625,
+        "cpuPercentOneCore": 96.4668552556997,
+        "peakRssBytesSampled": 120774656,
+        "processPeakRssBytes": 120774656,
+        "minimumAvailablePhysicalBytes": 3851927552,
+        "sampleIntervalSeconds": 0.05,
+        "sampleCount": 37
+      },
+      "counts": {
+        "requested": 25,
+        "assigned": 25,
+        "completed": 25,
+        "unserved": 0,
+        "pending": 0,
+        "activeTrips": 0
+      },
+      "metrics": {
+        "eventsProcessed": 81,
+        "peakEventQueue": 51,
+        "peakPending": 1,
+        "tableCandidates": 400,
+        "searchBudgetExhaustions": 0,
+        "dispatchAttempts": 25,
+        "dispatchVersion": "grid-fifo/v1",
+        "preparationMilliseconds": 1896.0842999949818,
+        "totalMilliseconds": 2345.426800005953,
+        "routing": {
+          "CAR": {
+            "requests": {
+              "nearest": 18,
+              "table": 8,
+              "route": 10,
+              "routeCacheHits": 1,
+              "tableCacheHits": 0
+            },
+            "requestFailures": 0,
+            "latencyMilliseconds": {
+              "count": 36,
+              "p50": 6.3781000062590465,
+              "p95": 11.426499986555427,
+              "total": 252.64929998957086
+            },
+            "routeCacheSize": 10,
+            "tableCacheSize": 8
+          },
+          "MOTORBIKE": {
+            "requests": {
+              "nearest": 22,
+              "table": 17,
+              "route": 19,
+              "routeCacheHits": 1,
+              "tableCacheHits": 0
+            },
+            "requestFailures": 0,
+            "latencyMilliseconds": {
+              "count": 58,
+              "p50": 6.365300010656938,
+              "p95": 12.786400009645149,
+              "total": 408.85419996629935
+            },
+            "routeCacheSize": 19,
+            "tableCacheSize": 17
+          }
+        }
+      },
+      "routingIdentities": {
+        "CAR": {
+          "regionId": "nvmr-hanoi-core",
+          "vehicleType": "CAR",
+          "profile": "car",
+          "profileSha256": "cb3df0546318665609606b746a1297f3d65ca3c2ff825f8a6f3c57247d86a2d3",
+          "graphManifestSha256": "a24d4957a01ceeb04a0de1ad680fe4c5dd51732a7b381d9368e249a65c1b29b5",
+          "sourceSha256": "2fbd2ee6b4dc151eecf04fa6823cddf584b47423e190118b10fce8b6115e9d8a",
+          "extractSha256": "18fd3892f6d766387f2c3217d5d104e09a9319d3905a9172834b21c0064d6308",
+          "algorithm": "mld"
+        },
+        "MOTORBIKE": {
+          "regionId": "nvmr-hanoi-core",
+          "vehicleType": "MOTORBIKE",
+          "profile": "motorbike",
+          "profileSha256": "075ecdbc70a3e75c4338d2c6a41597c132a1837ec2d27f1c2fcdd824a788b209",
+          "graphManifestSha256": "fb97489d066397b11cb9178238cd56a5f52281bcf5711430bb7cf411496ca455",
+          "sourceSha256": "2fbd2ee6b4dc151eecf04fa6823cddf584b47423e190118b10fce8b6115e9d8a",
+          "extractSha256": "18fd3892f6d766387f2c3217d5d104e09a9319d3905a9172834b21c0064d6308",
+          "algorithm": "mld"
+        }
+      },
+      "simulationDurationSeconds": 1054.478,
+      "provenance": {
+        "catalogFingerprint": "eb6e3288f8346294b07fcff49992d82bffe0e830784b02283772302d93810ae3",
+        "catalog": {
+          "extract_sha256": "18fd3892f6d766387f2c3217d5d104e09a9319d3905a9172834b21c0064d6308",
+          "streets_sha256": "7230c17749cf16b4d09751ead369ab52b418b32c866f15599f1ccf0897f61244",
+          "image_digest": "ghcr.io/project-osrm/osrm-backend@sha256:855614a38f464b0558a2ad6eaa7cb8c139f39887da9b38b485ce453c6e6e6124",
+          "profile_sha256": "cb3df0546318665609606b746a1297f3d65ca3c2ff825f8a6f3c57247d86a2d3",
+          "profile": "car",
+          "algorithm": "mld",
+          "router_url": "http://127.0.0.1:5001",
+          "max_snap_meters": 100.0,
+          "display_bbox": [
+            105.802,
+            21.002,
+            105.875,
+            21.055
+          ],
+          "sampling_bbox": [
+            105.823,
+            21.0186,
+            105.84700000000001,
+            21.038400000000003
+          ],
+          "candidate_version": 2,
+          "region_id": "nvmr-hanoi-core",
+          "routing_bbox": [
+            105.762,
+            20.962,
+            105.915,
+            21.095
+          ],
+          "route_validation_bbox": [
+            105.762,
+            20.962,
+            105.915,
+            21.095
+          ],
+          "artifact_identity": {
+            "region_id": "nvmr-hanoi-core",
+            "config_sha256": "91c114a869a0eebe23d91df77641b9dd2f52afb7b7d09e941f249f78cfc9f05c",
+            "pipeline_version": "hanoi-car-pilot/v1"
+          },
+          "source_sha256": "2fbd2ee6b4dc151eecf04fa6823cddf584b47423e190118b10fce8b6115e9d8a",
+          "graph_manifest_sha256": "a24d4957a01ceeb04a0de1ad680fe4c5dd51732a7b381d9368e249a65c1b29b5"
+        }
+      },
+      "environmentAfter": {
+        "platform": "Windows-10-10.0.26300-SP0",
+        "python": "3.11.9",
+        "cpuCount": 8,
+        "processor": "Intel64 Family 6 Model 140 Stepping 2, GenuineIntel",
+        "memory": {
+          "totalPhysicalBytes": 16948453376,
+          "availablePhysicalBytes": 3853500416,
+          "processRssBytes": 75280384,
+          "processPeakRssBytes": 120774656,
+          "processPagefileBytes": 61644800
+        },
+        "dockerStats": [
+          "{\"BlockIO\":\"0B / 0B\",\"CPUPerc\":\"0.00%\",\"Container\":\"59fd1f3d6b543e795069290001fba11048a5004b0f57757a16305206bb5f0f27\",\"ID\":\"59fd1f3d6b54\",\"MemPerc\":\"2.47%\",\"MemUsage\":\"25.27MiB / 1GiB\",\"Name\":\"gsm-map-osrm\",\"NetIO\":\"856kB / 1.63MB\",\"PIDs\":\"10\"}",
+          "{\"BlockIO\":\"0B / 0B\",\"CPUPerc\":\"0.00%\",\"Container\":\"af5f68c19008785d15d820556a286d9814114cfb87449d940b126e9fefec3911\",\"ID\":\"af5f68c19008\",\"MemPerc\":\"5.73%\",\"MemUsage\":\"58.66MiB / 1GiB\",\"Name\":\"gsm-map-osrm-hanoi-motorbike\",\"NetIO\":\"1.36MB / 2.32MB\",\"PIDs\":\"10\"}",
+          "{\"BlockIO\":\"0B / 0B\",\"CPUPerc\":\"0.00%\",\"Container\":\"343e1ee656e4a30c2645352268b7c22bd9b57d76c9914d88aea767764b6dc1df\",\"ID\":\"343e1ee656e4\",\"MemPerc\":\"3.84%\",\"MemUsage\":\"39.28MiB / 1GiB\",\"Name\":\"gsm-map-osrm-hanoi-car\",\"NetIO\":\"2.75MB / 4.39MB\",\"PIDs\":\"10\"}"
+        ],
+        "hardware": "{\"Name\":\"11th Gen Intel(R) Core(TM) i5-11320H @ 3.20GHz\",\"NumberOfCores\":4,\"NumberOfLogicalProcessors\":8}\n[{\"Name\":\"NVIDIA GeForce RTX 3050 Laptop GPU\",\"AdapterRAM\":4293918720,\"DriverVersion\":\"32.0.15.7700\"},{\"Name\":\"Intel(R) Iris(R) Xe Graphics\",\"AdapterRAM\":1073741824,\"DriverVersion\":\"30.0.100.9864\"}]"
+      }
+    },
+    {
+      "schemaVersion": "gsm-live-simulation-benchmark/v1",
+      "kind": "live-local-OSRM",
+      "environmentBefore": {
+        "platform": "Windows-10-10.0.26300-SP0",
+        "python": "3.11.9",
+        "cpuCount": 8,
+        "processor": "Intel64 Family 6 Model 140 Stepping 2, GenuineIntel",
+        "memory": {
+          "totalPhysicalBytes": 16948453376,
+          "availablePhysicalBytes": 3905933312,
+          "processRssBytes": 50184192,
+          "processPeakRssBytes": 50302976,
+          "processPagefileBytes": 37908480
+        },
+        "dockerStats": [
+          "{\"BlockIO\":\"0B / 0B\",\"CPUPerc\":\"0.00%\",\"Container\":\"59fd1f3d6b543e795069290001fba11048a5004b0f57757a16305206bb5f0f27\",\"ID\":\"59fd1f3d6b54\",\"MemPerc\":\"2.47%\",\"MemUsage\":\"25.27MiB / 1GiB\",\"Name\":\"gsm-map-osrm\",\"NetIO\":\"856kB / 1.63MB\",\"PIDs\":\"10\"}",
+          "{\"BlockIO\":\"0B / 0B\",\"CPUPerc\":\"0.00%\",\"Container\":\"af5f68c19008785d15d820556a286d9814114cfb87449d940b126e9fefec3911\",\"ID\":\"af5f68c19008\",\"MemPerc\":\"5.73%\",\"MemUsage\":\"58.66MiB / 1GiB\",\"Name\":\"gsm-map-osrm-hanoi-motorbike\",\"NetIO\":\"1.36MB / 2.32MB\",\"PIDs\":\"10\"}",
+          "{\"BlockIO\":\"0B / 0B\",\"CPUPerc\":\"0.00%\",\"Container\":\"343e1ee656e4a30c2645352268b7c22bd9b57d76c9914d88aea767764b6dc1df\",\"ID\":\"343e1ee656e4\",\"MemPerc\":\"3.84%\",\"MemUsage\":\"39.28MiB / 1GiB\",\"Name\":\"gsm-map-osrm-hanoi-car\",\"NetIO\":\"2.75MB / 4.39MB\",\"PIDs\":\"10\"}"
+        ],
+        "hardware": "{\"Name\":\"11th Gen Intel(R) Core(TM) i5-11320H @ 3.20GHz\",\"NumberOfCores\":4,\"NumberOfLogicalProcessors\":8}\n[{\"Name\":\"NVIDIA GeForce RTX 3050 Laptop GPU\",\"AdapterRAM\":4293918720,\"DriverVersion\":\"32.0.15.7700\"},{\"Name\":\"Intel(R) Iris(R) Xe Graphics\",\"AdapterRAM\":1073741824,\"DriverVersion\":\"30.0.100.9864\"}]"
+      },
+      "config": {
+        "regionId": "nvmr-hanoi-core",
+        "seed": "m3-live-0",
+        "fleetSize": 100,
+        "carCount": 40,
+        "bookingCount": 100,
+        "horizonSeconds": 900,
+        "maxWaitSeconds": 300,
+        "onlineFraction": 0.6,
+        "onlineSchedule": [],
+        "workload": "burst",
+        "initialCandidates": 16,
+        "maxCandidates": 128,
+        "gridCellDegrees": 0.005
+      },
+      "status": "PASS",
+      "resources": {
+        "wallSeconds": 4.436006000003545,
+        "cpuSeconds": 3.9375,
+        "cpuPercentOneCore": 88.76227850000325,
+        "peakRssBytesSampled": 107991040,
+        "processPeakRssBytes": 120205312,
+        "minimumAvailablePhysicalBytes": 3837149184,
+        "sampleIntervalSeconds": 0.05,
+        "sampleCount": 71
+      },
+      "counts": {
+        "requested": 100,
+        "assigned": 92,
+        "completed": 92,
+        "unserved": 8,
+        "pending": 0,
+        "activeTrips": 0
+      },
+      "metrics": {
+        "eventsProcessed": 351,
+        "peakEventQueue": 231,
+        "peakPending": 39,
+        "tableCandidates": 3030,
+        "searchBudgetExhaustions": 0,
+        "dispatchAttempts": 648,
+        "dispatchVersion": "grid-fifo/v1",
+        "preparationMilliseconds": 1993.126500005019,
+        "totalMilliseconds": 4432.5408000004245,
+        "routing": {
+          "CAR": {
+            "requests": {
+              "nearest": 18,
+              "table": 72,
+              "route": 59,
+              "routeCacheHits": 5,
+              "tableCacheHits": 214
+            },
+            "requestFailures": 0,
+            "latencyMilliseconds": {
+              "count": 149,
+              "p50": 6.682899998850189,
+              "p95": 8.94450000487268,
+              "total": 1056.1576000618516
+            },
+            "routeCacheSize": 59,
+            "tableCacheSize": 72
+          },
+          "MOTORBIKE": {
+            "requests": {
+              "nearest": 22,
+              "table": 122,
+              "route": 89,
+              "routeCacheHits": 6,
+              "tableCacheHits": 240
+            },
+            "requestFailures": 0,
+            "latencyMilliseconds": {
+              "count": 233,
+              "p50": 6.480900003225543,
+              "p95": 8.715799995115958,
+              "total": 1580.3445999481482
+            },
+            "routeCacheSize": 89,
+            "tableCacheSize": 122
+          }
+        }
+      },
+      "routingIdentities": {
+        "CAR": {
+          "regionId": "nvmr-hanoi-core",
+          "vehicleType": "CAR",
+          "profile": "car",
+          "profileSha256": "cb3df0546318665609606b746a1297f3d65ca3c2ff825f8a6f3c57247d86a2d3",
+          "graphManifestSha256": "a24d4957a01ceeb04a0de1ad680fe4c5dd51732a7b381d9368e249a65c1b29b5",
+          "sourceSha256": "2fbd2ee6b4dc151eecf04fa6823cddf584b47423e190118b10fce8b6115e9d8a",
+          "extractSha256": "18fd3892f6d766387f2c3217d5d104e09a9319d3905a9172834b21c0064d6308",
+          "algorithm": "mld"
+        },
+        "MOTORBIKE": {
+          "regionId": "nvmr-hanoi-core",
+          "vehicleType": "MOTORBIKE",
+          "profile": "motorbike",
+          "profileSha256": "075ecdbc70a3e75c4338d2c6a41597c132a1837ec2d27f1c2fcdd824a788b209",
+          "graphManifestSha256": "fb97489d066397b11cb9178238cd56a5f52281bcf5711430bb7cf411496ca455",
+          "sourceSha256": "2fbd2ee6b4dc151eecf04fa6823cddf584b47423e190118b10fce8b6115e9d8a",
+          "extractSha256": "18fd3892f6d766387f2c3217d5d104e09a9319d3905a9172834b21c0064d6308",
+          "algorithm": "mld"
+        }
+      },
+      "simulationDurationSeconds": 900,
+      "provenance": {
+        "catalogFingerprint": "eb6e3288f8346294b07fcff49992d82bffe0e830784b02283772302d93810ae3",
+        "catalog": {
+          "extract_sha256": "18fd3892f6d766387f2c3217d5d104e09a9319d3905a9172834b21c0064d6308",
+          "streets_sha256": "7230c17749cf16b4d09751ead369ab52b418b32c866f15599f1ccf0897f61244",
+          "image_digest": "ghcr.io/project-osrm/osrm-backend@sha256:855614a38f464b0558a2ad6eaa7cb8c139f39887da9b38b485ce453c6e6e6124",
+          "profile_sha256": "cb3df0546318665609606b746a1297f3d65ca3c2ff825f8a6f3c57247d86a2d3",
+          "profile": "car",
+          "algorithm": "mld",
+          "router_url": "http://127.0.0.1:5001",
+          "max_snap_meters": 100.0,
+          "display_bbox": [
+            105.802,
+            21.002,
+            105.875,
+            21.055
+          ],
+          "sampling_bbox": [
+            105.823,
+            21.0186,
+            105.84700000000001,
+            21.038400000000003
+          ],
+          "candidate_version": 2,
+          "region_id": "nvmr-hanoi-core",
+          "routing_bbox": [
+            105.762,
+            20.962,
+            105.915,
+            21.095
+          ],
+          "route_validation_bbox": [
+            105.762,
+            20.962,
+            105.915,
+            21.095
+          ],
+          "artifact_identity": {
+            "region_id": "nvmr-hanoi-core",
+            "config_sha256": "91c114a869a0eebe23d91df77641b9dd2f52afb7b7d09e941f249f78cfc9f05c",
+            "pipeline_version": "hanoi-car-pilot/v1"
+          },
+          "source_sha256": "2fbd2ee6b4dc151eecf04fa6823cddf584b47423e190118b10fce8b6115e9d8a",
+          "graph_manifest_sha256": "a24d4957a01ceeb04a0de1ad680fe4c5dd51732a7b381d9368e249a65c1b29b5"
+        }
+      },
+      "environmentAfter": {
+        "platform": "Windows-10-10.0.26300-SP0",
+        "python": "3.11.9",
+        "cpuCount": 8,
+        "processor": "Intel64 Family 6 Model 140 Stepping 2, GenuineIntel",
+        "memory": {
+          "totalPhysicalBytes": 16948453376,
+          "availablePhysicalBytes": 3882016768,
+          "processRssBytes": 75784192,
+          "processPeakRssBytes": 120205312,
+          "processPagefileBytes": 61276160
+        },
+        "dockerStats": [
+          "{\"BlockIO\":\"0B / 0B\",\"CPUPerc\":\"0.00%\",\"Container\":\"59fd1f3d6b543e795069290001fba11048a5004b0f57757a16305206bb5f0f27\",\"ID\":\"59fd1f3d6b54\",\"MemPerc\":\"2.47%\",\"MemUsage\":\"25.27MiB / 1GiB\",\"Name\":\"gsm-map-osrm\",\"NetIO\":\"856kB / 1.63MB\",\"PIDs\":\"10\"}",
+          "{\"BlockIO\":\"0B / 0B\",\"CPUPerc\":\"0.00%\",\"Container\":\"af5f68c19008785d15d820556a286d9814114cfb87449d940b126e9fefec3911\",\"ID\":\"af5f68c19008\",\"MemPerc\":\"5.75%\",\"MemUsage\":\"58.86MiB / 1GiB\",\"Name\":\"gsm-map-osrm-hanoi-motorbike\",\"NetIO\":\"1.57MB / 2.69MB\",\"PIDs\":\"10\"}",
+          "{\"BlockIO\":\"0B / 0B\",\"CPUPerc\":\"0.00%\",\"Container\":\"343e1ee656e4a30c2645352268b7c22bd9b57d76c9914d88aea767764b6dc1df\",\"ID\":\"343e1ee656e4\",\"MemPerc\":\"3.81%\",\"MemUsage\":\"39MiB / 1GiB\",\"Name\":\"gsm-map-osrm-hanoi-car\",\"NetIO\":\"2.88MB / 4.64MB\",\"PIDs\":\"10\"}"
+        ],
+        "hardware": "{\"Name\":\"11th Gen Intel(R) Core(TM) i5-11320H @ 3.20GHz\",\"NumberOfCores\":4,\"NumberOfLogicalProcessors\":8}\n[{\"Name\":\"NVIDIA GeForce RTX 3050 Laptop GPU\",\"AdapterRAM\":4293918720,\"DriverVersion\":\"32.0.15.7700\"},{\"Name\":\"Intel(R) Iris(R) Xe Graphics\",\"AdapterRAM\":1073741824,\"DriverVersion\":\"30.0.100.9864\"}]"
+      }
+    },
+    {
+      "schemaVersion": "gsm-live-simulation-benchmark/v1",
+      "kind": "live-local-OSRM",
+      "environmentBefore": {
+        "platform": "Windows-10-10.0.26300-SP0",
+        "python": "3.11.9",
+        "cpuCount": 8,
+        "processor": "Intel64 Family 6 Model 140 Stepping 2, GenuineIntel",
+        "memory": {
+          "totalPhysicalBytes": 16948453376,
+          "availablePhysicalBytes": 3904716800,
+          "processRssBytes": 50147328,
+          "processPeakRssBytes": 50266112,
+          "processPagefileBytes": 37834752
+        },
+        "dockerStats": [
+          "{\"BlockIO\":\"0B / 0B\",\"CPUPerc\":\"0.00%\",\"Container\":\"59fd1f3d6b543e795069290001fba11048a5004b0f57757a16305206bb5f0f27\",\"ID\":\"59fd1f3d6b54\",\"MemPerc\":\"2.47%\",\"MemUsage\":\"25.27MiB / 1GiB\",\"Name\":\"gsm-map-osrm\",\"NetIO\":\"856kB / 1.63MB\",\"PIDs\":\"10\"}",
+          "{\"BlockIO\":\"0B / 0B\",\"CPUPerc\":\"0.01%\",\"Container\":\"af5f68c19008785d15d820556a286d9814114cfb87449d940b126e9fefec3911\",\"ID\":\"af5f68c19008\",\"MemPerc\":\"5.75%\",\"MemUsage\":\"58.86MiB / 1GiB\",\"Name\":\"gsm-map-osrm-hanoi-motorbike\",\"NetIO\":\"1.57MB / 2.69MB\",\"PIDs\":\"10\"}",
+          "{\"BlockIO\":\"0B / 0B\",\"CPUPerc\":\"0.00%\",\"Container\":\"343e1ee656e4a30c2645352268b7c22bd9b57d76c9914d88aea767764b6dc1df\",\"ID\":\"343e1ee656e4\",\"MemPerc\":\"3.81%\",\"MemUsage\":\"39MiB / 1GiB\",\"Name\":\"gsm-map-osrm-hanoi-car\",\"NetIO\":\"2.88MB / 4.64MB\",\"PIDs\":\"10\"}"
+        ],
+        "hardware": "{\"Name\":\"11th Gen Intel(R) Core(TM) i5-11320H @ 3.20GHz\",\"NumberOfCores\":4,\"NumberOfLogicalProcessors\":8}\n[{\"Name\":\"NVIDIA GeForce RTX 3050 Laptop GPU\",\"AdapterRAM\":4293918720,\"DriverVersion\":\"32.0.15.7700\"},{\"Name\":\"Intel(R) Iris(R) Xe Graphics\",\"AdapterRAM\":1073741824,\"DriverVersion\":\"30.0.100.9864\"}]"
+      },
+      "config": {
+        "regionId": "nvmr-hanoi-core",
+        "seed": "m3-live-0",
+        "fleetSize": 500,
+        "carCount": 200,
+        "bookingCount": 10,
+        "horizonSeconds": 900,
+        "maxWaitSeconds": 300,
+        "onlineFraction": 0.25,
+        "onlineSchedule": [],
+        "workload": "low",
+        "initialCandidates": 16,
+        "maxCandidates": 128,
+        "gridCellDegrees": 0.005
+      },
+      "status": "PASS",
+      "resources": {
+        "wallSeconds": 2.1540067000023555,
+        "cpuSeconds": 2.109375,
+        "cpuPercentOneCore": 97.92796837622154,
+        "peakRssBytesSampled": 81137664,
+        "processPeakRssBytes": 120553472,
+        "minimumAvailablePhysicalBytes": 3817938944,
+        "sampleIntervalSeconds": 0.05,
+        "sampleCount": 34
+      },
+      "counts": {
+        "requested": 10,
+        "assigned": 10,
+        "completed": 10,
+        "unserved": 0,
+        "pending": 0,
+        "activeTrips": 0
+      },
+      "metrics": {
+        "eventsProcessed": 30,
+        "peakEventQueue": 20,
+        "peakPending": 1,
+        "tableCandidates": 160,
+        "searchBudgetExhaustions": 0,
+        "dispatchAttempts": 10,
+        "dispatchVersion": "grid-fifo/v1",
+        "preparationMilliseconds": 1968.2198999944376,
+        "totalMilliseconds": 2147.0892999932403,
+        "routing": {
+          "CAR": {
+            "requests": {
+              "nearest": 24,
+              "table": 5,
+              "route": 5,
+              "routeCacheHits": 0,
+              "tableCacheHits": 0
+            },
+            "requestFailures": 0,
+            "latencyMilliseconds": {
+              "count": 34,
+              "p50": 5.818000005092472,
+              "p95": 8.982300001662225,
+              "total": 223.27460000815336
+            },
+            "routeCacheSize": 5,
+            "tableCacheSize": 5
+          },
+          "MOTORBIKE": {
+            "requests": {
+              "nearest": 24,
+              "table": 5,
+              "route": 5,
+              "routeCacheHits": 0,
+              "tableCacheHits": 0
+            },
+            "requestFailures": 0,
+            "latencyMilliseconds": {
+              "count": 34,
+              "p50": 6.124699997599237,
+              "p95": 9.79719999304507,
+              "total": 233.41579997213557
+            },
+            "routeCacheSize": 5,
+            "tableCacheSize": 5
+          }
+        }
+      },
+      "routingIdentities": {
+        "CAR": {
+          "regionId": "nvmr-hanoi-core",
+          "vehicleType": "CAR",
+          "profile": "car",
+          "profileSha256": "cb3df0546318665609606b746a1297f3d65ca3c2ff825f8a6f3c57247d86a2d3",
+          "graphManifestSha256": "a24d4957a01ceeb04a0de1ad680fe4c5dd51732a7b381d9368e249a65c1b29b5",
+          "sourceSha256": "2fbd2ee6b4dc151eecf04fa6823cddf584b47423e190118b10fce8b6115e9d8a",
+          "extractSha256": "18fd3892f6d766387f2c3217d5d104e09a9319d3905a9172834b21c0064d6308",
+          "algorithm": "mld"
+        },
+        "MOTORBIKE": {
+          "regionId": "nvmr-hanoi-core",
+          "vehicleType": "MOTORBIKE",
+          "profile": "motorbike",
+          "profileSha256": "075ecdbc70a3e75c4338d2c6a41597c132a1837ec2d27f1c2fcdd824a788b209",
+          "graphManifestSha256": "fb97489d066397b11cb9178238cd56a5f52281bcf5711430bb7cf411496ca455",
+          "sourceSha256": "2fbd2ee6b4dc151eecf04fa6823cddf584b47423e190118b10fce8b6115e9d8a",
+          "extractSha256": "18fd3892f6d766387f2c3217d5d104e09a9319d3905a9172834b21c0064d6308",
+          "algorithm": "mld"
+        }
+      },
+      "simulationDurationSeconds": 1043.28,
+      "provenance": {
+        "catalogFingerprint": "eb6e3288f8346294b07fcff49992d82bffe0e830784b02283772302d93810ae3",
+        "catalog": {
+          "extract_sha256": "18fd3892f6d766387f2c3217d5d104e09a9319d3905a9172834b21c0064d6308",
+          "streets_sha256": "7230c17749cf16b4d09751ead369ab52b418b32c866f15599f1ccf0897f61244",
+          "image_digest": "ghcr.io/project-osrm/osrm-backend@sha256:855614a38f464b0558a2ad6eaa7cb8c139f39887da9b38b485ce453c6e6e6124",
+          "profile_sha256": "cb3df0546318665609606b746a1297f3d65ca3c2ff825f8a6f3c57247d86a2d3",
+          "profile": "car",
+          "algorithm": "mld",
+          "router_url": "http://127.0.0.1:5001",
+          "max_snap_meters": 100.0,
+          "display_bbox": [
+            105.802,
+            21.002,
+            105.875,
+            21.055
+          ],
+          "sampling_bbox": [
+            105.823,
+            21.0186,
+            105.84700000000001,
+            21.038400000000003
+          ],
+          "candidate_version": 2,
+          "region_id": "nvmr-hanoi-core",
+          "routing_bbox": [
+            105.762,
+            20.962,
+            105.915,
+            21.095
+          ],
+          "route_validation_bbox": [
+            105.762,
+            20.962,
+            105.915,
+            21.095
+          ],
+          "artifact_identity": {
+            "region_id": "nvmr-hanoi-core",
+            "config_sha256": "91c114a869a0eebe23d91df77641b9dd2f52afb7b7d09e941f249f78cfc9f05c",
+            "pipeline_version": "hanoi-car-pilot/v1"
+          },
+          "source_sha256": "2fbd2ee6b4dc151eecf04fa6823cddf584b47423e190118b10fce8b6115e9d8a",
+          "graph_manifest_sha256": "a24d4957a01ceeb04a0de1ad680fe4c5dd51732a7b381d9368e249a65c1b29b5"
+        }
+      },
+      "environmentAfter": {
+        "platform": "Windows-10-10.0.26300-SP0",
+        "python": "3.11.9",
+        "cpuCount": 8,
+        "processor": "Intel64 Family 6 Model 140 Stepping 2, GenuineIntel",
+        "memory": {
+          "totalPhysicalBytes": 16948453376,
+          "availablePhysicalBytes": 3883724800,
+          "processRssBytes": 74874880,
+          "processPeakRssBytes": 120553472,
+          "processPagefileBytes": 61374464
+        },
+        "dockerStats": [
+          "{\"BlockIO\":\"0B / 0B\",\"CPUPerc\":\"0.00%\",\"Container\":\"59fd1f3d6b543e795069290001fba11048a5004b0f57757a16305206bb5f0f27\",\"ID\":\"59fd1f3d6b54\",\"MemPerc\":\"2.47%\",\"MemUsage\":\"25.27MiB / 1GiB\",\"Name\":\"gsm-map-osrm\",\"NetIO\":\"856kB / 1.63MB\",\"PIDs\":\"10\"}",
+          "{\"BlockIO\":\"0B / 0B\",\"CPUPerc\":\"0.00%\",\"Container\":\"af5f68c19008785d15d820556a286d9814114cfb87449d940b126e9fefec3911\",\"ID\":\"af5f68c19008\",\"MemPerc\":\"5.77%\",\"MemUsage\":\"59.09MiB / 1GiB\",\"Name\":\"gsm-map-osrm-hanoi-motorbike\",\"NetIO\":\"1.6MB / 2.74MB\",\"PIDs\":\"10\"}",
+          "{\"BlockIO\":\"0B / 0B\",\"CPUPerc\":\"0.00%\",\"Container\":\"343e1ee656e4a30c2645352268b7c22bd9b57d76c9914d88aea767764b6dc1df\",\"ID\":\"343e1ee656e4\",\"MemPerc\":\"3.82%\",\"MemUsage\":\"39.12MiB / 1GiB\",\"Name\":\"gsm-map-osrm-hanoi-car\",\"NetIO\":\"2.91MB / 4.68MB\",\"PIDs\":\"10\"}"
+        ],
+        "hardware": "{\"Name\":\"11th Gen Intel(R) Core(TM) i5-11320H @ 3.20GHz\",\"NumberOfCores\":4,\"NumberOfLogicalProcessors\":8}\n[{\"Name\":\"NVIDIA GeForce RTX 3050 Laptop GPU\",\"AdapterRAM\":4293918720,\"DriverVersion\":\"32.0.15.7700\"},{\"Name\":\"Intel(R) Iris(R) Xe Graphics\",\"AdapterRAM\":1073741824,\"DriverVersion\":\"30.0.100.9864\"}]"
+      }
+    },
+    {
+      "schemaVersion": "gsm-live-simulation-benchmark/v1",
+      "kind": "live-local-OSRM",
+      "environmentBefore": {
+        "platform": "Windows-10-10.0.26300-SP0",
+        "python": "3.11.9",
+        "cpuCount": 8,
+        "processor": "Intel64 Family 6 Model 140 Stepping 2, GenuineIntel",
+        "memory": {
+          "totalPhysicalBytes": 16948453376,
+          "availablePhysicalBytes": 3952062464,
+          "processRssBytes": 50302976,
+          "processPeakRssBytes": 50421760,
+          "processPagefileBytes": 38051840
+        },
+        "dockerStats": [
+          "{\"BlockIO\":\"0B / 0B\",\"CPUPerc\":\"0.00%\",\"Container\":\"59fd1f3d6b543e795069290001fba11048a5004b0f57757a16305206bb5f0f27\",\"ID\":\"59fd1f3d6b54\",\"MemPerc\":\"2.47%\",\"MemUsage\":\"25.27MiB / 1GiB\",\"Name\":\"gsm-map-osrm\",\"NetIO\":\"856kB / 1.63MB\",\"PIDs\":\"10\"}",
+          "{\"BlockIO\":\"0B / 0B\",\"CPUPerc\":\"0.01%\",\"Container\":\"af5f68c19008785d15d820556a286d9814114cfb87449d940b126e9fefec3911\",\"ID\":\"af5f68c19008\",\"MemPerc\":\"5.77%\",\"MemUsage\":\"59.09MiB / 1GiB\",\"Name\":\"gsm-map-osrm-hanoi-motorbike\",\"NetIO\":\"1.6MB / 2.74MB\",\"PIDs\":\"10\"}",
+          "{\"BlockIO\":\"0B / 0B\",\"CPUPerc\":\"0.00%\",\"Container\":\"343e1ee656e4a30c2645352268b7c22bd9b57d76c9914d88aea767764b6dc1df\",\"ID\":\"343e1ee656e4\",\"MemPerc\":\"3.82%\",\"MemUsage\":\"39.12MiB / 1GiB\",\"Name\":\"gsm-map-osrm-hanoi-car\",\"NetIO\":\"2.91MB / 4.68MB\",\"PIDs\":\"10\"}"
+        ],
+        "hardware": "{\"Name\":\"11th Gen Intel(R) Core(TM) i5-11320H @ 3.20GHz\",\"NumberOfCores\":4,\"NumberOfLogicalProcessors\":8}\n[{\"Name\":\"NVIDIA GeForce RTX 3050 Laptop GPU\",\"AdapterRAM\":4293918720,\"DriverVersion\":\"32.0.15.7700\"},{\"Name\":\"Intel(R) Iris(R) Xe Graphics\",\"AdapterRAM\":1073741824,\"DriverVersion\":\"30.0.100.9864\"}]"
+      },
+      "config": {
+        "regionId": "nvmr-hanoi-core",
+        "seed": "m3-live-0",
+        "fleetSize": 500,
+        "carCount": 200,
+        "bookingCount": 125,
+        "horizonSeconds": 900,
+        "maxWaitSeconds": 300,
+        "onlineFraction": 0.8,
+        "onlineSchedule": [],
+        "workload": "typical",
+        "initialCandidates": 16,
+        "maxCandidates": 128,
+        "gridCellDegrees": 0.005
+      },
+      "status": "PASS",
+      "resources": {
+        "wallSeconds": 3.6201121999911265,
+        "cpuSeconds": 3.28125,
+        "cpuPercentOneCore": 90.63945587123081,
+        "peakRssBytesSampled": 81707008,
+        "processPeakRssBytes": 121249792,
+        "minimumAvailablePhysicalBytes": 3834261504,
+        "sampleIntervalSeconds": 0.05,
+        "sampleCount": 57
+      },
+      "counts": {
+        "requested": 125,
+        "assigned": 125,
+        "completed": 125,
+        "unserved": 0,
+        "pending": 0,
+        "activeTrips": 0
+      },
+      "metrics": {
+        "eventsProcessed": 375,
+        "peakEventQueue": 250,
+        "peakPending": 1,
+        "tableCandidates": 2000,
+        "searchBudgetExhaustions": 0,
+        "dispatchAttempts": 125,
+        "dispatchVersion": "grid-fifo/v1",
+        "preparationMilliseconds": 2006.8288000038592,
+        "totalMilliseconds": 3607.649000012316,
+        "routing": {
+          "CAR": {
+            "requests": {
+              "nearest": 24,
+              "table": 44,
+              "route": 46,
+              "routeCacheHits": 3,
+              "tableCacheHits": 5
+            },
+            "requestFailures": 0,
+            "latencyMilliseconds": {
+              "count": 114,
+              "p50": 6.513000000268221,
+              "p95": 8.731699999771081,
+              "total": 767.5836999696912
+            },
+            "routeCacheSize": 46,
+            "tableCacheSize": 44
+          },
+          "MOTORBIKE": {
+            "requests": {
+              "nearest": 24,
+              "table": 53,
+              "route": 75,
+              "routeCacheHits": 1,
+              "tableCacheHits": 23
+            },
+            "requestFailures": 0,
+            "latencyMilliseconds": {
+              "count": 152,
+              "p50": 6.51530000322964,
+              "p95": 8.738800010178238,
+              "total": 1033.9342000806937
+            },
+            "routeCacheSize": 75,
+            "tableCacheSize": 53
+          }
+        }
+      },
+      "routingIdentities": {
+        "CAR": {
+          "regionId": "nvmr-hanoi-core",
+          "vehicleType": "CAR",
+          "profile": "car",
+          "profileSha256": "cb3df0546318665609606b746a1297f3d65ca3c2ff825f8a6f3c57247d86a2d3",
+          "graphManifestSha256": "a24d4957a01ceeb04a0de1ad680fe4c5dd51732a7b381d9368e249a65c1b29b5",
+          "sourceSha256": "2fbd2ee6b4dc151eecf04fa6823cddf584b47423e190118b10fce8b6115e9d8a",
+          "extractSha256": "18fd3892f6d766387f2c3217d5d104e09a9319d3905a9172834b21c0064d6308",
+          "algorithm": "mld"
+        },
+        "MOTORBIKE": {
+          "regionId": "nvmr-hanoi-core",
+          "vehicleType": "MOTORBIKE",
+          "profile": "motorbike",
+          "profileSha256": "075ecdbc70a3e75c4338d2c6a41597c132a1837ec2d27f1c2fcdd824a788b209",
+          "graphManifestSha256": "fb97489d066397b11cb9178238cd56a5f52281bcf5711430bb7cf411496ca455",
+          "sourceSha256": "2fbd2ee6b4dc151eecf04fa6823cddf584b47423e190118b10fce8b6115e9d8a",
+          "extractSha256": "18fd3892f6d766387f2c3217d5d104e09a9319d3905a9172834b21c0064d6308",
+          "algorithm": "mld"
+        }
+      },
+      "simulationDurationSeconds": 1125.424,
+      "provenance": {
+        "catalogFingerprint": "eb6e3288f8346294b07fcff49992d82bffe0e830784b02283772302d93810ae3",
+        "catalog": {
+          "extract_sha256": "18fd3892f6d766387f2c3217d5d104e09a9319d3905a9172834b21c0064d6308",
+          "streets_sha256": "7230c17749cf16b4d09751ead369ab52b418b32c866f15599f1ccf0897f61244",
+          "image_digest": "ghcr.io/project-osrm/osrm-backend@sha256:855614a38f464b0558a2ad6eaa7cb8c139f39887da9b38b485ce453c6e6e6124",
+          "profile_sha256": "cb3df0546318665609606b746a1297f3d65ca3c2ff825f8a6f3c57247d86a2d3",
+          "profile": "car",
+          "algorithm": "mld",
+          "router_url": "http://127.0.0.1:5001",
+          "max_snap_meters": 100.0,
+          "display_bbox": [
+            105.802,
+            21.002,
+            105.875,
+            21.055
+          ],
+          "sampling_bbox": [
+            105.823,
+            21.0186,
+            105.84700000000001,
+            21.038400000000003
+          ],
+          "candidate_version": 2,
+          "region_id": "nvmr-hanoi-core",
+          "routing_bbox": [
+            105.762,
+            20.962,
+            105.915,
+            21.095
+          ],
+          "route_validation_bbox": [
+            105.762,
+            20.962,
+            105.915,
+            21.095
+          ],
+          "artifact_identity": {
+            "region_id": "nvmr-hanoi-core",
+            "config_sha256": "91c114a869a0eebe23d91df77641b9dd2f52afb7b7d09e941f249f78cfc9f05c",
+            "pipeline_version": "hanoi-car-pilot/v1"
+          },
+          "source_sha256": "2fbd2ee6b4dc151eecf04fa6823cddf584b47423e190118b10fce8b6115e9d8a",
+          "graph_manifest_sha256": "a24d4957a01ceeb04a0de1ad680fe4c5dd51732a7b381d9368e249a65c1b29b5"
+        }
+      },
+      "environmentAfter": {
+        "platform": "Windows-10-10.0.26300-SP0",
+        "python": "3.11.9",
+        "cpuCount": 8,
+        "processor": "Intel64 Family 6 Model 140 Stepping 2, GenuineIntel",
+        "memory": {
+          "totalPhysicalBytes": 16948453376,
+          "availablePhysicalBytes": 3915227136,
+          "processRssBytes": 76423168,
+          "processPeakRssBytes": 121249792,
+          "processPagefileBytes": 61829120
+        },
+        "dockerStats": [
+          "{\"BlockIO\":\"0B / 0B\",\"CPUPerc\":\"0.00%\",\"Container\":\"59fd1f3d6b543e795069290001fba11048a5004b0f57757a16305206bb5f0f27\",\"ID\":\"59fd1f3d6b54\",\"MemPerc\":\"2.47%\",\"MemUsage\":\"25.27MiB / 1GiB\",\"Name\":\"gsm-map-osrm\",\"NetIO\":\"856kB / 1.63MB\",\"PIDs\":\"10\"}",
+          "{\"BlockIO\":\"0B / 0B\",\"CPUPerc\":\"0.00%\",\"Container\":\"af5f68c19008785d15d820556a286d9814114cfb87449d940b126e9fefec3911\",\"ID\":\"af5f68c19008\",\"MemPerc\":\"5.74%\",\"MemUsage\":\"58.74MiB / 1GiB\",\"Name\":\"gsm-map-osrm-hanoi-motorbike\",\"NetIO\":\"1.75MB / 2.97MB\",\"PIDs\":\"10\"}",
+          "{\"BlockIO\":\"0B / 0B\",\"CPUPerc\":\"0.00%\",\"Container\":\"343e1ee656e4a30c2645352268b7c22bd9b57d76c9914d88aea767764b6dc1df\",\"ID\":\"343e1ee656e4\",\"MemPerc\":\"3.84%\",\"MemUsage\":\"39.29MiB / 1GiB\",\"Name\":\"gsm-map-osrm-hanoi-car\",\"NetIO\":\"3.03MB / 4.85MB\",\"PIDs\":\"10\"}"
+        ],
+        "hardware": "{\"Name\":\"11th Gen Intel(R) Core(TM) i5-11320H @ 3.20GHz\",\"NumberOfCores\":4,\"NumberOfLogicalProcessors\":8}\n[{\"Name\":\"NVIDIA GeForce RTX 3050 Laptop GPU\",\"AdapterRAM\":4293918720,\"DriverVersion\":\"32.0.15.7700\"},{\"Name\":\"Intel(R) Iris(R) Xe Graphics\",\"AdapterRAM\":1073741824,\"DriverVersion\":\"30.0.100.9864\"}]"
+      }
+    },
+    {
+      "schemaVersion": "gsm-live-simulation-benchmark/v1",
+      "kind": "live-local-OSRM",
+      "environmentBefore": {
+        "platform": "Windows-10-10.0.26300-SP0",
+        "python": "3.11.9",
+        "cpuCount": 8,
+        "processor": "Intel64 Family 6 Model 140 Stepping 2, GenuineIntel",
+        "memory": {
+          "totalPhysicalBytes": 16948453376,
+          "availablePhysicalBytes": 3930365952,
+          "processRssBytes": 50278400,
+          "processPeakRssBytes": 50397184,
+          "processPagefileBytes": 37982208
+        },
+        "dockerStats": [
+          "{\"BlockIO\":\"0B / 0B\",\"CPUPerc\":\"0.00%\",\"Container\":\"59fd1f3d6b543e795069290001fba11048a5004b0f57757a16305206bb5f0f27\",\"ID\":\"59fd1f3d6b54\",\"MemPerc\":\"2.47%\",\"MemUsage\":\"25.27MiB / 1GiB\",\"Name\":\"gsm-map-osrm\",\"NetIO\":\"856kB / 1.63MB\",\"PIDs\":\"10\"}",
+          "{\"BlockIO\":\"0B / 0B\",\"CPUPerc\":\"0.01%\",\"Container\":\"af5f68c19008785d15d820556a286d9814114cfb87449d940b126e9fefec3911\",\"ID\":\"af5f68c19008\",\"MemPerc\":\"5.74%\",\"MemUsage\":\"58.74MiB / 1GiB\",\"Name\":\"gsm-map-osrm-hanoi-motorbike\",\"NetIO\":\"1.75MB / 2.97MB\",\"PIDs\":\"10\"}",
+          "{\"BlockIO\":\"0B / 0B\",\"CPUPerc\":\"0.01%\",\"Container\":\"343e1ee656e4a30c2645352268b7c22bd9b57d76c9914d88aea767764b6dc1df\",\"ID\":\"343e1ee656e4\",\"MemPerc\":\"3.84%\",\"MemUsage\":\"39.29MiB / 1GiB\",\"Name\":\"gsm-map-osrm-hanoi-car\",\"NetIO\":\"3.03MB / 4.85MB\",\"PIDs\":\"10\"}"
+        ],
+        "hardware": "{\"Name\":\"11th Gen Intel(R) Core(TM) i5-11320H @ 3.20GHz\",\"NumberOfCores\":4,\"NumberOfLogicalProcessors\":8}\n[{\"Name\":\"NVIDIA GeForce RTX 3050 Laptop GPU\",\"AdapterRAM\":4293918720,\"DriverVersion\":\"32.0.15.7700\"},{\"Name\":\"Intel(R) Iris(R) Xe Graphics\",\"AdapterRAM\":1073741824,\"DriverVersion\":\"30.0.100.9864\"}]"
+      },
+      "config": {
+        "regionId": "nvmr-hanoi-core",
+        "seed": "m3-live-0",
+        "fleetSize": 500,
+        "carCount": 200,
+        "bookingCount": 500,
+        "horizonSeconds": 900,
+        "maxWaitSeconds": 300,
+        "onlineFraction": 0.6,
+        "onlineSchedule": [],
+        "workload": "burst",
+        "initialCandidates": 16,
+        "maxCandidates": 128,
+        "gridCellDegrees": 0.005
+      },
+      "status": "PASS",
+      "resources": {
+        "wallSeconds": 12.480894499996793,
+        "cpuSeconds": 10.84375,
+        "cpuPercentOneCore": 86.8827951394252,
+        "peakRssBytesSampled": 108175360,
+        "processPeakRssBytes": 120213504,
+        "minimumAvailablePhysicalBytes": 3847008256,
+        "sampleIntervalSeconds": 0.05,
+        "sampleCount": 201
+      },
+      "counts": {
+        "requested": 500,
+        "assigned": 497,
+        "completed": 497,
+        "unserved": 3,
+        "pending": 0,
+        "activeTrips": 0
+      },
+      "metrics": {
+        "eventsProcessed": 1756,
+        "peakEventQueue": 1062,
+        "peakPending": 194,
+        "tableCandidates": 22223,
+        "searchBudgetExhaustions": 0,
+        "dispatchAttempts": 1963,
+        "dispatchVersion": "grid-fifo/v1",
+        "preparationMilliseconds": 2128.8214000087464,
+        "totalMilliseconds": 12471.648200007621,
+        "routing": {
+          "CAR": {
+            "requests": {
+              "nearest": 24,
+              "table": 454,
+              "route": 268,
+              "routeCacheHits": 68,
+              "tableCacheHits": 1682
+            },
+            "requestFailures": 0,
+            "latencyMilliseconds": {
+              "count": 746,
+              "p50": 6.655899996985681,
+              "p95": 9.313500006101094,
+              "total": 5258.2350002921885
+            },
+            "routeCacheSize": 268,
+            "tableCacheSize": 454
+          },
+          "MOTORBIKE": {
+            "requests": {
+              "nearest": 24,
+              "table": 361,
+              "route": 324,
+              "routeCacheHits": 99,
+              "tableCacheHits": 97
+            },
+            "requestFailures": 0,
+            "latencyMilliseconds": {
+              "count": 709,
+              "p50": 6.60200000857003,
+              "p95": 8.942500004195608,
+              "total": 4932.4164000863675
+            },
+            "routeCacheSize": 324,
+            "tableCacheSize": 361
+          }
+        }
+      },
+      "routingIdentities": {
+        "CAR": {
+          "regionId": "nvmr-hanoi-core",
+          "vehicleType": "CAR",
+          "profile": "car",
+          "profileSha256": "cb3df0546318665609606b746a1297f3d65ca3c2ff825f8a6f3c57247d86a2d3",
+          "graphManifestSha256": "a24d4957a01ceeb04a0de1ad680fe4c5dd51732a7b381d9368e249a65c1b29b5",
+          "sourceSha256": "2fbd2ee6b4dc151eecf04fa6823cddf584b47423e190118b10fce8b6115e9d8a",
+          "extractSha256": "18fd3892f6d766387f2c3217d5d104e09a9319d3905a9172834b21c0064d6308",
+          "algorithm": "mld"
+        },
+        "MOTORBIKE": {
+          "regionId": "nvmr-hanoi-core",
+          "vehicleType": "MOTORBIKE",
+          "profile": "motorbike",
+          "profileSha256": "075ecdbc70a3e75c4338d2c6a41597c132a1837ec2d27f1c2fcdd824a788b209",
+          "graphManifestSha256": "fb97489d066397b11cb9178238cd56a5f52281bcf5711430bb7cf411496ca455",
+          "sourceSha256": "2fbd2ee6b4dc151eecf04fa6823cddf584b47423e190118b10fce8b6115e9d8a",
+          "extractSha256": "18fd3892f6d766387f2c3217d5d104e09a9319d3905a9172834b21c0064d6308",
+          "algorithm": "mld"
+        }
+      },
+      "simulationDurationSeconds": 900,
+      "provenance": {
+        "catalogFingerprint": "eb6e3288f8346294b07fcff49992d82bffe0e830784b02283772302d93810ae3",
+        "catalog": {
+          "extract_sha256": "18fd3892f6d766387f2c3217d5d104e09a9319d3905a9172834b21c0064d6308",
+          "streets_sha256": "7230c17749cf16b4d09751ead369ab52b418b32c866f15599f1ccf0897f61244",
+          "image_digest": "ghcr.io/project-osrm/osrm-backend@sha256:855614a38f464b0558a2ad6eaa7cb8c139f39887da9b38b485ce453c6e6e6124",
+          "profile_sha256": "cb3df0546318665609606b746a1297f3d65ca3c2ff825f8a6f3c57247d86a2d3",
+          "profile": "car",
+          "algorithm": "mld",
+          "router_url": "http://127.0.0.1:5001",
+          "max_snap_meters": 100.0,
+          "display_bbox": [
+            105.802,
+            21.002,
+            105.875,
+            21.055
+          ],
+          "sampling_bbox": [
+            105.823,
+            21.0186,
+            105.84700000000001,
+            21.038400000000003
+          ],
+          "candidate_version": 2,
+          "region_id": "nvmr-hanoi-core",
+          "routing_bbox": [
+            105.762,
+            20.962,
+            105.915,
+            21.095
+          ],
+          "route_validation_bbox": [
+            105.762,
+            20.962,
+            105.915,
+            21.095
+          ],
+          "artifact_identity": {
+            "region_id": "nvmr-hanoi-core",
+            "config_sha256": "91c114a869a0eebe23d91df77641b9dd2f52afb7b7d09e941f249f78cfc9f05c",
+            "pipeline_version": "hanoi-car-pilot/v1"
+          },
+          "source_sha256": "2fbd2ee6b4dc151eecf04fa6823cddf584b47423e190118b10fce8b6115e9d8a",
+          "graph_manifest_sha256": "a24d4957a01ceeb04a0de1ad680fe4c5dd51732a7b381d9368e249a65c1b29b5"
+        }
+      },
+      "environmentAfter": {
+        "platform": "Windows-10-10.0.26300-SP0",
+        "python": "3.11.9",
+        "cpuCount": 8,
+        "processor": "Intel64 Family 6 Model 140 Stepping 2, GenuineIntel",
+        "memory": {
+          "totalPhysicalBytes": 16948453376,
+          "availablePhysicalBytes": 3877576704,
+          "processRssBytes": 76439552,
+          "processPeakRssBytes": 120213504,
+          "processPagefileBytes": 61833216
+        },
+        "dockerStats": [
+          "{\"BlockIO\":\"0B / 0B\",\"CPUPerc\":\"0.00%\",\"Container\":\"59fd1f3d6b543e795069290001fba11048a5004b0f57757a16305206bb5f0f27\",\"ID\":\"59fd1f3d6b54\",\"MemPerc\":\"2.47%\",\"MemUsage\":\"25.27MiB / 1GiB\",\"Name\":\"gsm-map-osrm\",\"NetIO\":\"856kB / 1.63MB\",\"PIDs\":\"10\"}",
+          "{\"BlockIO\":\"0B / 0B\",\"CPUPerc\":\"0.00%\",\"Container\":\"af5f68c19008785d15d820556a286d9814114cfb87449d940b126e9fefec3911\",\"ID\":\"af5f68c19008\",\"MemPerc\":\"5.73%\",\"MemUsage\":\"58.67MiB / 1GiB\",\"Name\":\"gsm-map-osrm-hanoi-motorbike\",\"NetIO\":\"2.41MB / 4.08MB\",\"PIDs\":\"10\"}",
+          "{\"BlockIO\":\"0B / 0B\",\"CPUPerc\":\"0.00%\",\"Container\":\"343e1ee656e4a30c2645352268b7c22bd9b57d76c9914d88aea767764b6dc1df\",\"ID\":\"343e1ee656e4\",\"MemPerc\":\"3.93%\",\"MemUsage\":\"40.2MiB / 1GiB\",\"Name\":\"gsm-map-osrm-hanoi-car\",\"NetIO\":\"3.71MB / 6.05MB\",\"PIDs\":\"10\"}"
+        ],
+        "hardware": "{\"Name\":\"11th Gen Intel(R) Core(TM) i5-11320H @ 3.20GHz\",\"NumberOfCores\":4,\"NumberOfLogicalProcessors\":8}\n[{\"Name\":\"NVIDIA GeForce RTX 3050 Laptop GPU\",\"AdapterRAM\":4293918720,\"DriverVersion\":\"32.0.15.7700\"},{\"Name\":\"Intel(R) Iris(R) Xe Graphics\",\"AdapterRAM\":1073741824,\"DriverVersion\":\"30.0.100.9864\"}]"
+      }
+    },
+    {
+      "schemaVersion": "gsm-live-simulation-benchmark/v1",
+      "kind": "live-local-OSRM",
+      "environmentBefore": {
+        "platform": "Windows-10-10.0.26300-SP0",
+        "python": "3.11.9",
+        "cpuCount": 8,
+        "processor": "Intel64 Family 6 Model 140 Stepping 2, GenuineIntel",
+        "memory": {
+          "totalPhysicalBytes": 16948453376,
+          "availablePhysicalBytes": 3921649664,
+          "processRssBytes": 50016256,
+          "processPeakRssBytes": 50135040,
+          "processPagefileBytes": 37724160
+        },
+        "dockerStats": [
+          "{\"BlockIO\":\"0B / 0B\",\"CPUPerc\":\"0.00%\",\"Container\":\"59fd1f3d6b543e795069290001fba11048a5004b0f57757a16305206bb5f0f27\",\"ID\":\"59fd1f3d6b54\",\"MemPerc\":\"2.47%\",\"MemUsage\":\"25.27MiB / 1GiB\",\"Name\":\"gsm-map-osrm\",\"NetIO\":\"856kB / 1.63MB\",\"PIDs\":\"10\"}",
+          "{\"BlockIO\":\"0B / 0B\",\"CPUPerc\":\"0.00%\",\"Container\":\"af5f68c19008785d15d820556a286d9814114cfb87449d940b126e9fefec3911\",\"ID\":\"af5f68c19008\",\"MemPerc\":\"5.73%\",\"MemUsage\":\"58.67MiB / 1GiB\",\"Name\":\"gsm-map-osrm-hanoi-motorbike\",\"NetIO\":\"2.41MB / 4.08MB\",\"PIDs\":\"10\"}",
+          "{\"BlockIO\":\"0B / 0B\",\"CPUPerc\":\"0.01%\",\"Container\":\"343e1ee656e4a30c2645352268b7c22bd9b57d76c9914d88aea767764b6dc1df\",\"ID\":\"343e1ee656e4\",\"MemPerc\":\"3.93%\",\"MemUsage\":\"40.2MiB / 1GiB\",\"Name\":\"gsm-map-osrm-hanoi-car\",\"NetIO\":\"3.71MB / 6.05MB\",\"PIDs\":\"10\"}"
+        ],
+        "hardware": "{\"Name\":\"11th Gen Intel(R) Core(TM) i5-11320H @ 3.20GHz\",\"NumberOfCores\":4,\"NumberOfLogicalProcessors\":8}\n[{\"Name\":\"NVIDIA GeForce RTX 3050 Laptop GPU\",\"AdapterRAM\":4293918720,\"DriverVersion\":\"32.0.15.7700\"},{\"Name\":\"Intel(R) Iris(R) Xe Graphics\",\"AdapterRAM\":1073741824,\"DriverVersion\":\"30.0.100.9864\"}]"
+      },
+      "config": {
+        "regionId": "nvmr-hanoi-core",
+        "seed": "m3-live-0",
+        "fleetSize": 1000,
+        "carCount": 400,
+        "bookingCount": 20,
+        "horizonSeconds": 900,
+        "maxWaitSeconds": 300,
+        "onlineFraction": 0.25,
+        "onlineSchedule": [],
+        "workload": "low",
+        "initialCandidates": 16,
+        "maxCandidates": 128,
+        "gridCellDegrees": 0.005
+      },
+      "status": "PASS",
+      "resources": {
+        "wallSeconds": 2.7020686000032583,
+        "cpuSeconds": 2.625,
+        "cpuPercentOneCore": 97.14779262069196,
+        "peakRssBytesSampled": 119836672,
+        "processPeakRssBytes": 119836672,
+        "minimumAvailablePhysicalBytes": 3665354752,
+        "sampleIntervalSeconds": 0.05,
+        "sampleCount": 42
+      },
+      "counts": {
+        "requested": 20,
+        "assigned": 20,
+        "completed": 20,
+        "unserved": 0,
+        "pending": 0,
+        "activeTrips": 0
+      },
+      "metrics": {
+        "eventsProcessed": 60,
+        "peakEventQueue": 40,
+        "peakPending": 1,
+        "tableCandidates": 320,
+        "searchBudgetExhaustions": 0,
+        "dispatchAttempts": 20,
+        "dispatchVersion": "grid-fifo/v1",
+        "preparationMilliseconds": 2346.329100008006,
+        "totalMilliseconds": 2690.404499997385,
+        "routing": {
+          "CAR": {
+            "requests": {
+              "nearest": 24,
+              "table": 10,
+              "route": 10,
+              "routeCacheHits": 0,
+              "tableCacheHits": 0
+            },
+            "requestFailures": 0,
+            "latencyMilliseconds": {
+              "count": 44,
+              "p50": 7.535299999290146,
+              "p95": 9.907200001180172,
+              "total": 341.5736999595538
+            },
+            "routeCacheSize": 10,
+            "tableCacheSize": 10
+          },
+          "MOTORBIKE": {
+            "requests": {
+              "nearest": 24,
+              "table": 10,
+              "route": 10,
+              "routeCacheHits": 0,
+              "tableCacheHits": 0
+            },
+            "requestFailures": 0,
+            "latencyMilliseconds": {
+              "count": 44,
+              "p50": 7.390300001134165,
+              "p95": 10.539099996094592,
+              "total": 333.9938000572147
+            },
+            "routeCacheSize": 10,
+            "tableCacheSize": 10
+          }
+        }
+      },
+      "routingIdentities": {
+        "CAR": {
+          "regionId": "nvmr-hanoi-core",
+          "vehicleType": "CAR",
+          "profile": "car",
+          "profileSha256": "cb3df0546318665609606b746a1297f3d65ca3c2ff825f8a6f3c57247d86a2d3",
+          "graphManifestSha256": "a24d4957a01ceeb04a0de1ad680fe4c5dd51732a7b381d9368e249a65c1b29b5",
+          "sourceSha256": "2fbd2ee6b4dc151eecf04fa6823cddf584b47423e190118b10fce8b6115e9d8a",
+          "extractSha256": "18fd3892f6d766387f2c3217d5d104e09a9319d3905a9172834b21c0064d6308",
+          "algorithm": "mld"
+        },
+        "MOTORBIKE": {
+          "regionId": "nvmr-hanoi-core",
+          "vehicleType": "MOTORBIKE",
+          "profile": "motorbike",
+          "profileSha256": "075ecdbc70a3e75c4338d2c6a41597c132a1837ec2d27f1c2fcdd824a788b209",
+          "graphManifestSha256": "fb97489d066397b11cb9178238cd56a5f52281bcf5711430bb7cf411496ca455",
+          "sourceSha256": "2fbd2ee6b4dc151eecf04fa6823cddf584b47423e190118b10fce8b6115e9d8a",
+          "extractSha256": "18fd3892f6d766387f2c3217d5d104e09a9319d3905a9172834b21c0064d6308",
+          "algorithm": "mld"
+        }
+      },
+      "simulationDurationSeconds": 1128.5819999999999,
+      "provenance": {
+        "catalogFingerprint": "eb6e3288f8346294b07fcff49992d82bffe0e830784b02283772302d93810ae3",
+        "catalog": {
+          "extract_sha256": "18fd3892f6d766387f2c3217d5d104e09a9319d3905a9172834b21c0064d6308",
+          "streets_sha256": "7230c17749cf16b4d09751ead369ab52b418b32c866f15599f1ccf0897f61244",
+          "image_digest": "ghcr.io/project-osrm/osrm-backend@sha256:855614a38f464b0558a2ad6eaa7cb8c139f39887da9b38b485ce453c6e6e6124",
+          "profile_sha256": "cb3df0546318665609606b746a1297f3d65ca3c2ff825f8a6f3c57247d86a2d3",
+          "profile": "car",
+          "algorithm": "mld",
+          "router_url": "http://127.0.0.1:5001",
+          "max_snap_meters": 100.0,
+          "display_bbox": [
+            105.802,
+            21.002,
+            105.875,
+            21.055
+          ],
+          "sampling_bbox": [
+            105.823,
+            21.0186,
+            105.84700000000001,
+            21.038400000000003
+          ],
+          "candidate_version": 2,
+          "region_id": "nvmr-hanoi-core",
+          "routing_bbox": [
+            105.762,
+            20.962,
+            105.915,
+            21.095
+          ],
+          "route_validation_bbox": [
+            105.762,
+            20.962,
+            105.915,
+            21.095
+          ],
+          "artifact_identity": {
+            "region_id": "nvmr-hanoi-core",
+            "config_sha256": "91c114a869a0eebe23d91df77641b9dd2f52afb7b7d09e941f249f78cfc9f05c",
+            "pipeline_version": "hanoi-car-pilot/v1"
+          },
+          "source_sha256": "2fbd2ee6b4dc151eecf04fa6823cddf584b47423e190118b10fce8b6115e9d8a",
+          "graph_manifest_sha256": "a24d4957a01ceeb04a0de1ad680fe4c5dd51732a7b381d9368e249a65c1b29b5"
+        }
+      },
+      "environmentAfter": {
+        "platform": "Windows-10-10.0.26300-SP0",
+        "python": "3.11.9",
+        "cpuCount": 8,
+        "processor": "Intel64 Family 6 Model 140 Stepping 2, GenuineIntel",
+        "memory": {
+          "totalPhysicalBytes": 16948453376,
+          "availablePhysicalBytes": 3696197632,
+          "processRssBytes": 75317248,
+          "processPeakRssBytes": 119836672,
+          "processPagefileBytes": 60891136
+        },
+        "dockerStats": [
+          "{\"BlockIO\":\"0B / 0B\",\"CPUPerc\":\"0.00%\",\"Container\":\"59fd1f3d6b543e795069290001fba11048a5004b0f57757a16305206bb5f0f27\",\"ID\":\"59fd1f3d6b54\",\"MemPerc\":\"2.47%\",\"MemUsage\":\"25.27MiB / 1GiB\",\"Name\":\"gsm-map-osrm\",\"NetIO\":\"856kB / 1.63MB\",\"PIDs\":\"10\"}",
+          "{\"BlockIO\":\"0B / 0B\",\"CPUPerc\":\"0.00%\",\"Container\":\"af5f68c19008785d15d820556a286d9814114cfb87449d940b126e9fefec3911\",\"ID\":\"af5f68c19008\",\"MemPerc\":\"5.77%\",\"MemUsage\":\"59.07MiB / 1GiB\",\"Name\":\"gsm-map-osrm-hanoi-motorbike\",\"NetIO\":\"2.45MB / 4.14MB\",\"PIDs\":\"10\"}",
+          "{\"BlockIO\":\"0B / 0B\",\"CPUPerc\":\"0.00%\",\"Container\":\"343e1ee656e4a30c2645352268b7c22bd9b57d76c9914d88aea767764b6dc1df\",\"ID\":\"343e1ee656e4\",\"MemPerc\":\"3.90%\",\"MemUsage\":\"39.93MiB / 1GiB\",\"Name\":\"gsm-map-osrm-hanoi-car\",\"NetIO\":\"3.76MB / 6.11MB\",\"PIDs\":\"10\"}"
+        ],
+        "hardware": "{\"Name\":\"11th Gen Intel(R) Core(TM) i5-11320H @ 3.20GHz\",\"NumberOfCores\":4,\"NumberOfLogicalProcessors\":8}\n[{\"Name\":\"NVIDIA GeForce RTX 3050 Laptop GPU\",\"AdapterRAM\":4293918720,\"DriverVersion\":\"32.0.15.7700\"},{\"Name\":\"Intel(R) Iris(R) Xe Graphics\",\"AdapterRAM\":1073741824,\"DriverVersion\":\"30.0.100.9864\"}]"
+      }
+    },
+    {
+      "schemaVersion": "gsm-live-simulation-benchmark/v1",
+      "kind": "live-local-OSRM",
+      "environmentBefore": {
+        "platform": "Windows-10-10.0.26300-SP0",
+        "python": "3.11.9",
+        "cpuCount": 8,
+        "processor": "Intel64 Family 6 Model 140 Stepping 2, GenuineIntel",
+        "memory": {
+          "totalPhysicalBytes": 16948453376,
+          "availablePhysicalBytes": 3700338688,
+          "processRssBytes": 50016256,
+          "processPeakRssBytes": 50135040,
+          "processPagefileBytes": 37720064
+        },
+        "dockerStats": [
+          "{\"BlockIO\":\"0B / 0B\",\"CPUPerc\":\"0.00%\",\"Container\":\"59fd1f3d6b543e795069290001fba11048a5004b0f57757a16305206bb5f0f27\",\"ID\":\"59fd1f3d6b54\",\"MemPerc\":\"2.47%\",\"MemUsage\":\"25.27MiB / 1GiB\",\"Name\":\"gsm-map-osrm\",\"NetIO\":\"856kB / 1.63MB\",\"PIDs\":\"10\"}",
+          "{\"BlockIO\":\"0B / 0B\",\"CPUPerc\":\"0.01%\",\"Container\":\"af5f68c19008785d15d820556a286d9814114cfb87449d940b126e9fefec3911\",\"ID\":\"af5f68c19008\",\"MemPerc\":\"5.77%\",\"MemUsage\":\"59.07MiB / 1GiB\",\"Name\":\"gsm-map-osrm-hanoi-motorbike\",\"NetIO\":\"2.45MB / 4.14MB\",\"PIDs\":\"10\"}",
+          "{\"BlockIO\":\"0B / 0B\",\"CPUPerc\":\"0.01%\",\"Container\":\"343e1ee656e4a30c2645352268b7c22bd9b57d76c9914d88aea767764b6dc1df\",\"ID\":\"343e1ee656e4\",\"MemPerc\":\"3.90%\",\"MemUsage\":\"39.93MiB / 1GiB\",\"Name\":\"gsm-map-osrm-hanoi-car\",\"NetIO\":\"3.76MB / 6.11MB\",\"PIDs\":\"10\"}"
+        ],
+        "hardware": "{\"Name\":\"11th Gen Intel(R) Core(TM) i5-11320H @ 3.20GHz\",\"NumberOfCores\":4,\"NumberOfLogicalProcessors\":8}\n[{\"Name\":\"NVIDIA GeForce RTX 3050 Laptop GPU\",\"AdapterRAM\":4293918720,\"DriverVersion\":\"32.0.15.7700\"},{\"Name\":\"Intel(R) Iris(R) Xe Graphics\",\"AdapterRAM\":1073741824,\"DriverVersion\":\"30.0.100.9864\"}]"
+      },
+      "config": {
+        "regionId": "nvmr-hanoi-core",
+        "seed": "m3-live-0",
+        "fleetSize": 1000,
+        "carCount": 400,
+        "bookingCount": 250,
+        "horizonSeconds": 900,
+        "maxWaitSeconds": 300,
+        "onlineFraction": 0.8,
+        "onlineSchedule": [],
+        "workload": "typical",
+        "initialCandidates": 16,
+        "maxCandidates": 128,
+        "gridCellDegrees": 0.005
+      },
+      "status": "PASS",
+      "resources": {
+        "wallSeconds": 5.058259700002964,
+        "cpuSeconds": 4.640625,
+        "cpuPercentOneCore": 91.74351012458457,
+        "peakRssBytesSampled": 81313792,
+        "processPeakRssBytes": 120856576,
+        "minimumAvailablePhysicalBytes": 3630190592,
+        "sampleIntervalSeconds": 0.05,
+        "sampleCount": 80
+      },
+      "counts": {
+        "requested": 250,
+        "assigned": 250,
+        "completed": 250,
+        "unserved": 0,
+        "pending": 0,
+        "activeTrips": 0
+      },
+      "metrics": {
+        "eventsProcessed": 753,
+        "peakEventQueue": 500,
+        "peakPending": 1,
+        "tableCandidates": 4000,
+        "searchBudgetExhaustions": 0,
+        "dispatchAttempts": 250,
+        "dispatchVersion": "grid-fifo/v1",
+        "preparationMilliseconds": 2459.8574999981793,
+        "totalMilliseconds": 5050.072899990482,
+        "routing": {
+          "CAR": {
+            "requests": {
+              "nearest": 24,
+              "table": 66,
+              "route": 89,
+              "routeCacheHits": 15,
+              "tableCacheHits": 36
+            },
+            "requestFailures": 0,
+            "latencyMilliseconds": {
+              "count": 179,
+              "p50": 6.54420000500977,
+              "p95": 8.94299999345094,
+              "total": 1217.0965001278091
+            },
+            "routeCacheSize": 89,
+            "tableCacheSize": 66
+          },
+          "MOTORBIKE": {
+            "requests": {
+              "nearest": 24,
+              "table": 75,
+              "route": 129,
+              "routeCacheHits": 20,
+              "tableCacheHits": 73
+            },
+            "requestFailures": 0,
+            "latencyMilliseconds": {
+              "count": 228,
+              "p50": 6.524500000523403,
+              "p95": 8.397300000069663,
+              "total": 1543.4965999011183
+            },
+            "routeCacheSize": 129,
+            "tableCacheSize": 75
+          }
+        }
+      },
+      "routingIdentities": {
+        "CAR": {
+          "regionId": "nvmr-hanoi-core",
+          "vehicleType": "CAR",
+          "profile": "car",
+          "profileSha256": "cb3df0546318665609606b746a1297f3d65ca3c2ff825f8a6f3c57247d86a2d3",
+          "graphManifestSha256": "a24d4957a01ceeb04a0de1ad680fe4c5dd51732a7b381d9368e249a65c1b29b5",
+          "sourceSha256": "2fbd2ee6b4dc151eecf04fa6823cddf584b47423e190118b10fce8b6115e9d8a",
+          "extractSha256": "18fd3892f6d766387f2c3217d5d104e09a9319d3905a9172834b21c0064d6308",
+          "algorithm": "mld"
+        },
+        "MOTORBIKE": {
+          "regionId": "nvmr-hanoi-core",
+          "vehicleType": "MOTORBIKE",
+          "profile": "motorbike",
+          "profileSha256": "075ecdbc70a3e75c4338d2c6a41597c132a1837ec2d27f1c2fcdd824a788b209",
+          "graphManifestSha256": "fb97489d066397b11cb9178238cd56a5f52281bcf5711430bb7cf411496ca455",
+          "sourceSha256": "2fbd2ee6b4dc151eecf04fa6823cddf584b47423e190118b10fce8b6115e9d8a",
+          "extractSha256": "18fd3892f6d766387f2c3217d5d104e09a9319d3905a9172834b21c0064d6308",
+          "algorithm": "mld"
+        }
+      },
+      "simulationDurationSeconds": 1173.205,
+      "provenance": {
+        "catalogFingerprint": "eb6e3288f8346294b07fcff49992d82bffe0e830784b02283772302d93810ae3",
+        "catalog": {
+          "extract_sha256": "18fd3892f6d766387f2c3217d5d104e09a9319d3905a9172834b21c0064d6308",
+          "streets_sha256": "7230c17749cf16b4d09751ead369ab52b418b32c866f15599f1ccf0897f61244",
+          "image_digest": "ghcr.io/project-osrm/osrm-backend@sha256:855614a38f464b0558a2ad6eaa7cb8c139f39887da9b38b485ce453c6e6e6124",
+          "profile_sha256": "cb3df0546318665609606b746a1297f3d65ca3c2ff825f8a6f3c57247d86a2d3",
+          "profile": "car",
+          "algorithm": "mld",
+          "router_url": "http://127.0.0.1:5001",
+          "max_snap_meters": 100.0,
+          "display_bbox": [
+            105.802,
+            21.002,
+            105.875,
+            21.055
+          ],
+          "sampling_bbox": [
+            105.823,
+            21.0186,
+            105.84700000000001,
+            21.038400000000003
+          ],
+          "candidate_version": 2,
+          "region_id": "nvmr-hanoi-core",
+          "routing_bbox": [
+            105.762,
+            20.962,
+            105.915,
+            21.095
+          ],
+          "route_validation_bbox": [
+            105.762,
+            20.962,
+            105.915,
+            21.095
+          ],
+          "artifact_identity": {
+            "region_id": "nvmr-hanoi-core",
+            "config_sha256": "91c114a869a0eebe23d91df77641b9dd2f52afb7b7d09e941f249f78cfc9f05c",
+            "pipeline_version": "hanoi-car-pilot/v1"
+          },
+          "source_sha256": "2fbd2ee6b4dc151eecf04fa6823cddf584b47423e190118b10fce8b6115e9d8a",
+          "graph_manifest_sha256": "a24d4957a01ceeb04a0de1ad680fe4c5dd51732a7b381d9368e249a65c1b29b5"
+        }
+      },
+      "environmentAfter": {
+        "platform": "Windows-10-10.0.26300-SP0",
+        "python": "3.11.9",
+        "cpuCount": 8,
+        "processor": "Intel64 Family 6 Model 140 Stepping 2, GenuineIntel",
+        "memory": {
+          "totalPhysicalBytes": 16948453376,
+          "availablePhysicalBytes": 3674914816,
+          "processRssBytes": 76263424,
+          "processPeakRssBytes": 120856576,
+          "processPagefileBytes": 61706240
+        },
+        "dockerStats": [
+          "{\"BlockIO\":\"0B / 0B\",\"CPUPerc\":\"0.00%\",\"Container\":\"59fd1f3d6b543e795069290001fba11048a5004b0f57757a16305206bb5f0f27\",\"ID\":\"59fd1f3d6b54\",\"MemPerc\":\"2.47%\",\"MemUsage\":\"25.27MiB / 1GiB\",\"Name\":\"gsm-map-osrm\",\"NetIO\":\"856kB / 1.63MB\",\"PIDs\":\"10\"}",
+          "{\"BlockIO\":\"0B / 0B\",\"CPUPerc\":\"0.00%\",\"Container\":\"af5f68c19008785d15d820556a286d9814114cfb87449d940b126e9fefec3911\",\"ID\":\"af5f68c19008\",\"MemPerc\":\"5.73%\",\"MemUsage\":\"58.72MiB / 1GiB\",\"Name\":\"gsm-map-osrm-hanoi-motorbike\",\"NetIO\":\"2.67MB / 4.49MB\",\"PIDs\":\"10\"}",
+          "{\"BlockIO\":\"0B / 0B\",\"CPUPerc\":\"0.00%\",\"Container\":\"343e1ee656e4a30c2645352268b7c22bd9b57d76c9914d88aea767764b6dc1df\",\"ID\":\"343e1ee656e4\",\"MemPerc\":\"3.88%\",\"MemUsage\":\"39.73MiB / 1GiB\",\"Name\":\"gsm-map-osrm-hanoi-car\",\"NetIO\":\"3.93MB / 6.39MB\",\"PIDs\":\"10\"}"
+        ],
+        "hardware": "{\"Name\":\"11th Gen Intel(R) Core(TM) i5-11320H @ 3.20GHz\",\"NumberOfCores\":4,\"NumberOfLogicalProcessors\":8}\n[{\"Name\":\"NVIDIA GeForce RTX 3050 Laptop GPU\",\"AdapterRAM\":4293918720,\"DriverVersion\":\"32.0.15.7700\"},{\"Name\":\"Intel(R) Iris(R) Xe Graphics\",\"AdapterRAM\":1073741824,\"DriverVersion\":\"30.0.100.9864\"}]"
+      }
+    },
+    {
+      "schemaVersion": "gsm-live-simulation-benchmark/v1",
+      "kind": "live-local-OSRM",
+      "environmentBefore": {
+        "platform": "Windows-10-10.0.26300-SP0",
+        "python": "3.11.9",
+        "cpuCount": 8,
+        "processor": "Intel64 Family 6 Model 140 Stepping 2, GenuineIntel",
+        "memory": {
+          "totalPhysicalBytes": 16948453376,
+          "availablePhysicalBytes": 3694751744,
+          "processRssBytes": 50102272,
+          "processPeakRssBytes": 50221056,
+          "processPagefileBytes": 37822464
+        },
+        "dockerStats": [
+          "{\"BlockIO\":\"0B / 0B\",\"CPUPerc\":\"0.00%\",\"Container\":\"59fd1f3d6b543e795069290001fba11048a5004b0f57757a16305206bb5f0f27\",\"ID\":\"59fd1f3d6b54\",\"MemPerc\":\"2.47%\",\"MemUsage\":\"25.27MiB / 1GiB\",\"Name\":\"gsm-map-osrm\",\"NetIO\":\"856kB / 1.63MB\",\"PIDs\":\"10\"}",
+          "{\"BlockIO\":\"0B / 0B\",\"CPUPerc\":\"0.01%\",\"Container\":\"af5f68c19008785d15d820556a286d9814114cfb87449d940b126e9fefec3911\",\"ID\":\"af5f68c19008\",\"MemPerc\":\"5.73%\",\"MemUsage\":\"58.72MiB / 1GiB\",\"Name\":\"gsm-map-osrm-hanoi-motorbike\",\"NetIO\":\"2.67MB / 4.49MB\",\"PIDs\":\"10\"}",
+          "{\"BlockIO\":\"0B / 0B\",\"CPUPerc\":\"0.01%\",\"Container\":\"343e1ee656e4a30c2645352268b7c22bd9b57d76c9914d88aea767764b6dc1df\",\"ID\":\"343e1ee656e4\",\"MemPerc\":\"3.88%\",\"MemUsage\":\"39.73MiB / 1GiB\",\"Name\":\"gsm-map-osrm-hanoi-car\",\"NetIO\":\"3.93MB / 6.39MB\",\"PIDs\":\"10\"}"
+        ],
+        "hardware": "{\"Name\":\"11th Gen Intel(R) Core(TM) i5-11320H @ 3.20GHz\",\"NumberOfCores\":4,\"NumberOfLogicalProcessors\":8}\n[{\"Name\":\"NVIDIA GeForce RTX 3050 Laptop GPU\",\"AdapterRAM\":4293918720,\"DriverVersion\":\"32.0.15.7700\"},{\"Name\":\"Intel(R) Iris(R) Xe Graphics\",\"AdapterRAM\":1073741824,\"DriverVersion\":\"30.0.100.9864\"}]"
+      },
+      "config": {
+        "regionId": "nvmr-hanoi-core",
+        "seed": "m3-live-0",
+        "fleetSize": 1000,
+        "carCount": 400,
+        "bookingCount": 1000,
+        "horizonSeconds": 900,
+        "maxWaitSeconds": 300,
+        "onlineFraction": 0.6,
+        "onlineSchedule": [],
+        "workload": "burst",
+        "initialCandidates": 16,
+        "maxCandidates": 128,
+        "gridCellDegrees": 0.005
+      },
+      "status": "PASS",
+      "resources": {
+        "wallSeconds": 18.99405320000369,
+        "cpuSeconds": 16.125,
+        "cpuPercentOneCore": 84.89499229157084,
+        "peakRssBytesSampled": 107900928,
+        "processPeakRssBytes": 120258560,
+        "minimumAvailablePhysicalBytes": 3648335872,
+        "sampleIntervalSeconds": 0.05,
+        "sampleCount": 308
+      },
+      "counts": {
+        "requested": 1000,
+        "assigned": 1000,
+        "completed": 1000,
+        "unserved": 0,
+        "pending": 0,
+        "activeTrips": 0
+      },
+      "metrics": {
+        "eventsProcessed": 3485,
+        "peakEventQueue": 2120,
+        "peakPending": 383,
+        "tableCandidates": 19660,
+        "searchBudgetExhaustions": 0,
+        "dispatchAttempts": 2413,
+        "dispatchVersion": "grid-fifo/v1",
+        "preparationMilliseconds": 2010.0270999973873,
+        "totalMilliseconds": 18917.68270000466,
+        "routing": {
+          "CAR": {
+            "requests": {
+              "nearest": 24,
+              "table": 696,
+              "route": 407,
+              "routeCacheHits": 175,
+              "tableCacheHits": 834
+            },
+            "requestFailures": 0,
+            "latencyMilliseconds": {
+              "count": 1127,
+              "p50": 6.618799990974367,
+              "p95": 8.817200010525994,
+              "total": 7810.787400172558
+            },
+            "routeCacheSize": 407,
+            "tableCacheSize": 696
+          },
+          "MOTORBIKE": {
+            "requests": {
+              "nearest": 24,
+              "table": 692,
+              "route": 554,
+              "routeCacheHits": 349,
+              "tableCacheHits": 430
+            },
+            "requestFailures": 0,
+            "latencyMilliseconds": {
+              "count": 1270,
+              "p50": 6.50649999442976,
+              "p95": 8.342700006323867,
+              "total": 8635.614399827318
+            },
+            "routeCacheSize": 554,
+            "tableCacheSize": 692
+          }
+        }
+      },
+      "routingIdentities": {
+        "CAR": {
+          "regionId": "nvmr-hanoi-core",
+          "vehicleType": "CAR",
+          "profile": "car",
+          "profileSha256": "cb3df0546318665609606b746a1297f3d65ca3c2ff825f8a6f3c57247d86a2d3",
+          "graphManifestSha256": "a24d4957a01ceeb04a0de1ad680fe4c5dd51732a7b381d9368e249a65c1b29b5",
+          "sourceSha256": "2fbd2ee6b4dc151eecf04fa6823cddf584b47423e190118b10fce8b6115e9d8a",
+          "extractSha256": "18fd3892f6d766387f2c3217d5d104e09a9319d3905a9172834b21c0064d6308",
+          "algorithm": "mld"
+        },
+        "MOTORBIKE": {
+          "regionId": "nvmr-hanoi-core",
+          "vehicleType": "MOTORBIKE",
+          "profile": "motorbike",
+          "profileSha256": "075ecdbc70a3e75c4338d2c6a41597c132a1837ec2d27f1c2fcdd824a788b209",
+          "graphManifestSha256": "fb97489d066397b11cb9178238cd56a5f52281bcf5711430bb7cf411496ca455",
+          "sourceSha256": "2fbd2ee6b4dc151eecf04fa6823cddf584b47423e190118b10fce8b6115e9d8a",
+          "extractSha256": "18fd3892f6d766387f2c3217d5d104e09a9319d3905a9172834b21c0064d6308",
+          "algorithm": "mld"
+        }
+      },
+      "simulationDurationSeconds": 900,
+      "provenance": {
+        "catalogFingerprint": "eb6e3288f8346294b07fcff49992d82bffe0e830784b02283772302d93810ae3",
+        "catalog": {
+          "extract_sha256": "18fd3892f6d766387f2c3217d5d104e09a9319d3905a9172834b21c0064d6308",
+          "streets_sha256": "7230c17749cf16b4d09751ead369ab52b418b32c866f15599f1ccf0897f61244",
+          "image_digest": "ghcr.io/project-osrm/osrm-backend@sha256:855614a38f464b0558a2ad6eaa7cb8c139f39887da9b38b485ce453c6e6e6124",
+          "profile_sha256": "cb3df0546318665609606b746a1297f3d65ca3c2ff825f8a6f3c57247d86a2d3",
+          "profile": "car",
+          "algorithm": "mld",
+          "router_url": "http://127.0.0.1:5001",
+          "max_snap_meters": 100.0,
+          "display_bbox": [
+            105.802,
+            21.002,
+            105.875,
+            21.055
+          ],
+          "sampling_bbox": [
+            105.823,
+            21.0186,
+            105.84700000000001,
+            21.038400000000003
+          ],
+          "candidate_version": 2,
+          "region_id": "nvmr-hanoi-core",
+          "routing_bbox": [
+            105.762,
+            20.962,
+            105.915,
+            21.095
+          ],
+          "route_validation_bbox": [
+            105.762,
+            20.962,
+            105.915,
+            21.095
+          ],
+          "artifact_identity": {
+            "region_id": "nvmr-hanoi-core",
+            "config_sha256": "91c114a869a0eebe23d91df77641b9dd2f52afb7b7d09e941f249f78cfc9f05c",
+            "pipeline_version": "hanoi-car-pilot/v1"
+          },
+          "source_sha256": "2fbd2ee6b4dc151eecf04fa6823cddf584b47423e190118b10fce8b6115e9d8a",
+          "graph_manifest_sha256": "a24d4957a01ceeb04a0de1ad680fe4c5dd51732a7b381d9368e249a65c1b29b5"
+        }
+      },
+      "environmentAfter": {
+        "platform": "Windows-10-10.0.26300-SP0",
+        "python": "3.11.9",
+        "cpuCount": 8,
+        "processor": "Intel64 Family 6 Model 140 Stepping 2, GenuineIntel",
+        "memory": {
+          "totalPhysicalBytes": 16948453376,
+          "availablePhysicalBytes": 3880525824,
+          "processRssBytes": 89042944,
+          "processPeakRssBytes": 120258560,
+          "processPagefileBytes": 74846208
+        },
+        "dockerStats": [
+          "{\"BlockIO\":\"0B / 0B\",\"CPUPerc\":\"0.00%\",\"Container\":\"59fd1f3d6b543e795069290001fba11048a5004b0f57757a16305206bb5f0f27\",\"ID\":\"59fd1f3d6b54\",\"MemPerc\":\"2.47%\",\"MemUsage\":\"25.27MiB / 1GiB\",\"Name\":\"gsm-map-osrm\",\"NetIO\":\"856kB / 1.63MB\",\"PIDs\":\"10\"}",
+          "{\"BlockIO\":\"0B / 0B\",\"CPUPerc\":\"0.00%\",\"Container\":\"af5f68c19008785d15d820556a286d9814114cfb87449d940b126e9fefec3911\",\"ID\":\"af5f68c19008\",\"MemPerc\":\"5.73%\",\"MemUsage\":\"58.71MiB / 1GiB\",\"Name\":\"gsm-map-osrm-hanoi-motorbike\",\"NetIO\":\"3.86MB / 6.44MB\",\"PIDs\":\"10\"}",
+          "{\"BlockIO\":\"0B / 0B\",\"CPUPerc\":\"0.00%\",\"Container\":\"343e1ee656e4a30c2645352268b7c22bd9b57d76c9914d88aea767764b6dc1df\",\"ID\":\"343e1ee656e4\",\"MemPerc\":\"3.98%\",\"MemUsage\":\"40.75MiB / 1GiB\",\"Name\":\"gsm-map-osrm-hanoi-car\",\"NetIO\":\"5.02MB / 8.2MB\",\"PIDs\":\"10\"}"
+        ],
+        "hardware": "{\"Name\":\"11th Gen Intel(R) Core(TM) i5-11320H @ 3.20GHz\",\"NumberOfCores\":4,\"NumberOfLogicalProcessors\":8}\n[{\"Name\":\"NVIDIA GeForce RTX 3050 Laptop GPU\",\"AdapterRAM\":4293918720,\"DriverVersion\":\"32.0.15.7700\"},{\"Name\":\"Intel(R) Iris(R) Xe Graphics\",\"AdapterRAM\":1073741824,\"DriverVersion\":\"30.0.100.9864\"}]"
+      }
+    },
+    {
+      "schemaVersion": "gsm-live-simulation-benchmark/v1",
+      "kind": "live-local-OSRM",
+      "environmentBefore": {
+        "platform": "Windows-10-10.0.26300-SP0",
+        "python": "3.11.9",
+        "cpuCount": 8,
+        "processor": "Intel64 Family 6 Model 140 Stepping 2, GenuineIntel",
+        "memory": {
+          "totalPhysicalBytes": 16948453376,
+          "availablePhysicalBytes": 3875778560,
+          "processRssBytes": 49922048,
+          "processPeakRssBytes": 50040832,
+          "processPagefileBytes": 37601280
+        },
+        "dockerStats": [
+          "{\"BlockIO\":\"0B / 0B\",\"CPUPerc\":\"0.00%\",\"Container\":\"59fd1f3d6b543e795069290001fba11048a5004b0f57757a16305206bb5f0f27\",\"ID\":\"59fd1f3d6b54\",\"MemPerc\":\"2.47%\",\"MemUsage\":\"25.27MiB / 1GiB\",\"Name\":\"gsm-map-osrm\",\"NetIO\":\"856kB / 1.63MB\",\"PIDs\":\"10\"}",
+          "{\"BlockIO\":\"0B / 0B\",\"CPUPerc\":\"0.00%\",\"Container\":\"af5f68c19008785d15d820556a286d9814114cfb87449d940b126e9fefec3911\",\"ID\":\"af5f68c19008\",\"MemPerc\":\"5.73%\",\"MemUsage\":\"58.71MiB / 1GiB\",\"Name\":\"gsm-map-osrm-hanoi-motorbike\",\"NetIO\":\"3.86MB / 6.44MB\",\"PIDs\":\"10\"}",
+          "{\"BlockIO\":\"0B / 0B\",\"CPUPerc\":\"0.00%\",\"Container\":\"343e1ee656e4a30c2645352268b7c22bd9b57d76c9914d88aea767764b6dc1df\",\"ID\":\"343e1ee656e4\",\"MemPerc\":\"3.98%\",\"MemUsage\":\"40.75MiB / 1GiB\",\"Name\":\"gsm-map-osrm-hanoi-car\",\"NetIO\":\"5.02MB / 8.2MB\",\"PIDs\":\"10\"}"
+        ],
+        "hardware": "{\"Name\":\"11th Gen Intel(R) Core(TM) i5-11320H @ 3.20GHz\",\"NumberOfCores\":4,\"NumberOfLogicalProcessors\":8}\n[{\"Name\":\"NVIDIA GeForce RTX 3050 Laptop GPU\",\"AdapterRAM\":4293918720,\"DriverVersion\":\"32.0.15.7700\"},{\"Name\":\"Intel(R) Iris(R) Xe Graphics\",\"AdapterRAM\":1073741824,\"DriverVersion\":\"30.0.100.9864\"}]"
+      },
+      "config": {
+        "regionId": "nvmr-hanoi-core",
+        "seed": "m3-live-0",
+        "fleetSize": 3000,
+        "carCount": 1200,
+        "bookingCount": 60,
+        "horizonSeconds": 900,
+        "maxWaitSeconds": 300,
+        "onlineFraction": 0.25,
+        "onlineSchedule": [],
+        "workload": "low",
+        "initialCandidates": 16,
+        "maxCandidates": 128,
+        "gridCellDegrees": 0.005
+      },
+      "status": "PASS",
+      "resources": {
+        "wallSeconds": 2.914159300009487,
+        "cpuSeconds": 2.8125,
+        "cpuPercentOneCore": 96.51153936543015,
+        "peakRssBytesSampled": 81043456,
+        "processPeakRssBytes": 120365056,
+        "minimumAvailablePhysicalBytes": 3841142784,
+        "sampleIntervalSeconds": 0.05,
+        "sampleCount": 46
+      },
+      "counts": {
+        "requested": 60,
+        "assigned": 60,
+        "completed": 60,
+        "unserved": 0,
+        "pending": 0,
+        "activeTrips": 0
+      },
+      "metrics": {
+        "eventsProcessed": 180,
+        "peakEventQueue": 120,
+        "peakPending": 1,
+        "tableCandidates": 960,
+        "searchBudgetExhaustions": 0,
+        "dispatchAttempts": 60,
+        "dispatchVersion": "grid-fifo/v1",
+        "preparationMilliseconds": 2124.3172000104096,
+        "totalMilliseconds": 2895.297399998526,
+        "routing": {
+          "CAR": {
+            "requests": {
+              "nearest": 24,
+              "table": 16,
+              "route": 20,
+              "routeCacheHits": 0,
+              "tableCacheHits": 4
+            },
+            "requestFailures": 0,
+            "latencyMilliseconds": {
+              "count": 60,
+              "p50": 6.252699997276068,
+              "p95": 7.79470000998117,
+              "total": 402.1091000031447
+            },
+            "routeCacheSize": 20,
+            "tableCacheSize": 16
+          },
+          "MOTORBIKE": {
+            "requests": {
+              "nearest": 24,
+              "table": 31,
+              "route": 39,
+              "routeCacheHits": 1,
+              "tableCacheHits": 9
+            },
+            "requestFailures": 0,
+            "latencyMilliseconds": {
+              "count": 94,
+              "p50": 6.424399995012209,
+              "p95": 7.498600010876544,
+              "total": 608.139900068636
+            },
+            "routeCacheSize": 39,
+            "tableCacheSize": 31
+          }
+        }
+      },
+      "routingIdentities": {
+        "CAR": {
+          "regionId": "nvmr-hanoi-core",
+          "vehicleType": "CAR",
+          "profile": "car",
+          "profileSha256": "cb3df0546318665609606b746a1297f3d65ca3c2ff825f8a6f3c57247d86a2d3",
+          "graphManifestSha256": "a24d4957a01ceeb04a0de1ad680fe4c5dd51732a7b381d9368e249a65c1b29b5",
+          "sourceSha256": "2fbd2ee6b4dc151eecf04fa6823cddf584b47423e190118b10fce8b6115e9d8a",
+          "extractSha256": "18fd3892f6d766387f2c3217d5d104e09a9319d3905a9172834b21c0064d6308",
+          "algorithm": "mld"
+        },
+        "MOTORBIKE": {
+          "regionId": "nvmr-hanoi-core",
+          "vehicleType": "MOTORBIKE",
+          "profile": "motorbike",
+          "profileSha256": "075ecdbc70a3e75c4338d2c6a41597c132a1837ec2d27f1c2fcdd824a788b209",
+          "graphManifestSha256": "fb97489d066397b11cb9178238cd56a5f52281bcf5711430bb7cf411496ca455",
+          "sourceSha256": "2fbd2ee6b4dc151eecf04fa6823cddf584b47423e190118b10fce8b6115e9d8a",
+          "extractSha256": "18fd3892f6d766387f2c3217d5d104e09a9319d3905a9172834b21c0064d6308",
+          "algorithm": "mld"
+        }
+      },
+      "simulationDurationSeconds": 1080.951,
+      "provenance": {
+        "catalogFingerprint": "eb6e3288f8346294b07fcff49992d82bffe0e830784b02283772302d93810ae3",
+        "catalog": {
+          "extract_sha256": "18fd3892f6d766387f2c3217d5d104e09a9319d3905a9172834b21c0064d6308",
+          "streets_sha256": "7230c17749cf16b4d09751ead369ab52b418b32c866f15599f1ccf0897f61244",
+          "image_digest": "ghcr.io/project-osrm/osrm-backend@sha256:855614a38f464b0558a2ad6eaa7cb8c139f39887da9b38b485ce453c6e6e6124",
+          "profile_sha256": "cb3df0546318665609606b746a1297f3d65ca3c2ff825f8a6f3c57247d86a2d3",
+          "profile": "car",
+          "algorithm": "mld",
+          "router_url": "http://127.0.0.1:5001",
+          "max_snap_meters": 100.0,
+          "display_bbox": [
+            105.802,
+            21.002,
+            105.875,
+            21.055
+          ],
+          "sampling_bbox": [
+            105.823,
+            21.0186,
+            105.84700000000001,
+            21.038400000000003
+          ],
+          "candidate_version": 2,
+          "region_id": "nvmr-hanoi-core",
+          "routing_bbox": [
+            105.762,
+            20.962,
+            105.915,
+            21.095
+          ],
+          "route_validation_bbox": [
+            105.762,
+            20.962,
+            105.915,
+            21.095
+          ],
+          "artifact_identity": {
+            "region_id": "nvmr-hanoi-core",
+            "config_sha256": "91c114a869a0eebe23d91df77641b9dd2f52afb7b7d09e941f249f78cfc9f05c",
+            "pipeline_version": "hanoi-car-pilot/v1"
+          },
+          "source_sha256": "2fbd2ee6b4dc151eecf04fa6823cddf584b47423e190118b10fce8b6115e9d8a",
+          "graph_manifest_sha256": "a24d4957a01ceeb04a0de1ad680fe4c5dd51732a7b381d9368e249a65c1b29b5"
+        }
+      },
+      "environmentAfter": {
+        "platform": "Windows-10-10.0.26300-SP0",
+        "python": "3.11.9",
+        "cpuCount": 8,
+        "processor": "Intel64 Family 6 Model 140 Stepping 2, GenuineIntel",
+        "memory": {
+          "totalPhysicalBytes": 16948453376,
+          "availablePhysicalBytes": 3896442880,
+          "processRssBytes": 75984896,
+          "processPeakRssBytes": 120365056,
+          "processPagefileBytes": 61460480
+        },
+        "dockerStats": [
+          "{\"BlockIO\":\"0B / 0B\",\"CPUPerc\":\"0.00%\",\"Container\":\"59fd1f3d6b543e795069290001fba11048a5004b0f57757a16305206bb5f0f27\",\"ID\":\"59fd1f3d6b54\",\"MemPerc\":\"2.47%\",\"MemUsage\":\"25.27MiB / 1GiB\",\"Name\":\"gsm-map-osrm\",\"NetIO\":\"856kB / 1.63MB\",\"PIDs\":\"10\"}",
+          "{\"BlockIO\":\"0B / 0B\",\"CPUPerc\":\"0.00%\",\"Container\":\"af5f68c19008785d15d820556a286d9814114cfb87449d940b126e9fefec3911\",\"ID\":\"af5f68c19008\",\"MemPerc\":\"5.78%\",\"MemUsage\":\"59.23MiB / 1GiB\",\"Name\":\"gsm-map-osrm-hanoi-motorbike\",\"NetIO\":\"3.95MB / 6.58MB\",\"PIDs\":\"10\"}",
+          "{\"BlockIO\":\"0B / 0B\",\"CPUPerc\":\"0.00%\",\"Container\":\"343e1ee656e4a30c2645352268b7c22bd9b57d76c9914d88aea767764b6dc1df\",\"ID\":\"343e1ee656e4\",\"MemPerc\":\"3.90%\",\"MemUsage\":\"39.98MiB / 1GiB\",\"Name\":\"gsm-map-osrm-hanoi-car\",\"NetIO\":\"5.07MB / 8.29MB\",\"PIDs\":\"10\"}"
+        ],
+        "hardware": "{\"Name\":\"11th Gen Intel(R) Core(TM) i5-11320H @ 3.20GHz\",\"NumberOfCores\":4,\"NumberOfLogicalProcessors\":8}\n[{\"Name\":\"NVIDIA GeForce RTX 3050 Laptop GPU\",\"AdapterRAM\":4293918720,\"DriverVersion\":\"32.0.15.7700\"},{\"Name\":\"Intel(R) Iris(R) Xe Graphics\",\"AdapterRAM\":1073741824,\"DriverVersion\":\"30.0.100.9864\"}]"
+      }
+    },
+    {
+      "schemaVersion": "gsm-live-simulation-benchmark/v1",
+      "kind": "live-local-OSRM",
+      "environmentBefore": {
+        "platform": "Windows-10-10.0.26300-SP0",
+        "python": "3.11.9",
+        "cpuCount": 8,
+        "processor": "Intel64 Family 6 Model 140 Stepping 2, GenuineIntel",
+        "memory": {
+          "totalPhysicalBytes": 16948453376,
+          "availablePhysicalBytes": 3907026944,
+          "processRssBytes": 50040832,
+          "processPeakRssBytes": 50159616,
+          "processPagefileBytes": 37752832
+        },
+        "dockerStats": [
+          "{\"BlockIO\":\"0B / 0B\",\"CPUPerc\":\"0.00%\",\"Container\":\"59fd1f3d6b543e795069290001fba11048a5004b0f57757a16305206bb5f0f27\",\"ID\":\"59fd1f3d6b54\",\"MemPerc\":\"2.47%\",\"MemUsage\":\"25.27MiB / 1GiB\",\"Name\":\"gsm-map-osrm\",\"NetIO\":\"856kB / 1.63MB\",\"PIDs\":\"10\"}",
+          "{\"BlockIO\":\"0B / 0B\",\"CPUPerc\":\"0.00%\",\"Container\":\"af5f68c19008785d15d820556a286d9814114cfb87449d940b126e9fefec3911\",\"ID\":\"af5f68c19008\",\"MemPerc\":\"5.78%\",\"MemUsage\":\"59.23MiB / 1GiB\",\"Name\":\"gsm-map-osrm-hanoi-motorbike\",\"NetIO\":\"3.95MB / 6.58MB\",\"PIDs\":\"10\"}",
+          "{\"BlockIO\":\"0B / 0B\",\"CPUPerc\":\"0.00%\",\"Container\":\"343e1ee656e4a30c2645352268b7c22bd9b57d76c9914d88aea767764b6dc1df\",\"ID\":\"343e1ee656e4\",\"MemPerc\":\"3.90%\",\"MemUsage\":\"39.98MiB / 1GiB\",\"Name\":\"gsm-map-osrm-hanoi-car\",\"NetIO\":\"5.07MB / 8.29MB\",\"PIDs\":\"10\"}"
+        ],
+        "hardware": "{\"Name\":\"11th Gen Intel(R) Core(TM) i5-11320H @ 3.20GHz\",\"NumberOfCores\":4,\"NumberOfLogicalProcessors\":8}\n[{\"Name\":\"NVIDIA GeForce RTX 3050 Laptop GPU\",\"AdapterRAM\":4293918720,\"DriverVersion\":\"32.0.15.7700\"},{\"Name\":\"Intel(R) Iris(R) Xe Graphics\",\"AdapterRAM\":1073741824,\"DriverVersion\":\"30.0.100.9864\"}]"
+      },
+      "config": {
+        "regionId": "nvmr-hanoi-core",
+        "seed": "m3-live-0",
+        "fleetSize": 3000,
+        "carCount": 1200,
+        "bookingCount": 750,
+        "horizonSeconds": 900,
+        "maxWaitSeconds": 300,
+        "onlineFraction": 0.8,
+        "onlineSchedule": [],
+        "workload": "typical",
+        "initialCandidates": 16,
+        "maxCandidates": 128,
+        "gridCellDegrees": 0.005
+      },
+      "status": "PASS",
+      "resources": {
+        "wallSeconds": 8.62034140000469,
+        "cpuSeconds": 7.6875,
+        "cpuPercentOneCore": 89.17860260146793,
+        "peakRssBytesSampled": 108613632,
+        "processPeakRssBytes": 120647680,
+        "minimumAvailablePhysicalBytes": 3538751488,
+        "sampleIntervalSeconds": 0.05,
+        "sampleCount": 138
+      },
+      "counts": {
+        "requested": 750,
+        "assigned": 750,
+        "completed": 750,
+        "unserved": 0,
+        "pending": 0,
+        "activeTrips": 0
+      },
+      "metrics": {
+        "eventsProcessed": 2251,
+        "peakEventQueue": 1500,
+        "peakPending": 1,
+        "tableCandidates": 12000,
+        "searchBudgetExhaustions": 0,
+        "dispatchAttempts": 750,
+        "dispatchVersion": "grid-fifo/v1",
+        "preparationMilliseconds": 2330.666399997426,
+        "totalMilliseconds": 8542.877300002147,
+        "routing": {
+          "CAR": {
+            "requests": {
+              "nearest": 24,
+              "table": 96,
+              "route": 218,
+              "routeCacheHits": 59,
+              "tableCacheHits": 181
+            },
+            "requestFailures": 0,
+            "latencyMilliseconds": {
+              "count": 338,
+              "p50": 7.239900005515665,
+              "p95": 9.858899997198023,
+              "total": 2614.0139998606173
+            },
+            "routeCacheSize": 218,
+            "tableCacheSize": 96
+          },
+          "MOTORBIKE": {
+            "requests": {
+              "nearest": 24,
+              "table": 127,
+              "route": 315,
+              "routeCacheHits": 159,
+              "tableCacheHits": 346
+            },
+            "requestFailures": 0,
+            "latencyMilliseconds": {
+              "count": 466,
+              "p50": 7.207299990113825,
+              "p95": 9.515699988696724,
+              "total": 3490.3218000545166
+            },
+            "routeCacheSize": 315,
+            "tableCacheSize": 127
+          }
+        }
+      },
+      "routingIdentities": {
+        "CAR": {
+          "regionId": "nvmr-hanoi-core",
+          "vehicleType": "CAR",
+          "profile": "car",
+          "profileSha256": "cb3df0546318665609606b746a1297f3d65ca3c2ff825f8a6f3c57247d86a2d3",
+          "graphManifestSha256": "a24d4957a01ceeb04a0de1ad680fe4c5dd51732a7b381d9368e249a65c1b29b5",
+          "sourceSha256": "2fbd2ee6b4dc151eecf04fa6823cddf584b47423e190118b10fce8b6115e9d8a",
+          "extractSha256": "18fd3892f6d766387f2c3217d5d104e09a9319d3905a9172834b21c0064d6308",
+          "algorithm": "mld"
+        },
+        "MOTORBIKE": {
+          "regionId": "nvmr-hanoi-core",
+          "vehicleType": "MOTORBIKE",
+          "profile": "motorbike",
+          "profileSha256": "075ecdbc70a3e75c4338d2c6a41597c132a1837ec2d27f1c2fcdd824a788b209",
+          "graphManifestSha256": "fb97489d066397b11cb9178238cd56a5f52281bcf5711430bb7cf411496ca455",
+          "sourceSha256": "2fbd2ee6b4dc151eecf04fa6823cddf584b47423e190118b10fce8b6115e9d8a",
+          "extractSha256": "18fd3892f6d766387f2c3217d5d104e09a9319d3905a9172834b21c0064d6308",
+          "algorithm": "mld"
+        }
+      },
+      "simulationDurationSeconds": 1188.939,
+      "provenance": {
+        "catalogFingerprint": "eb6e3288f8346294b07fcff49992d82bffe0e830784b02283772302d93810ae3",
+        "catalog": {
+          "extract_sha256": "18fd3892f6d766387f2c3217d5d104e09a9319d3905a9172834b21c0064d6308",
+          "streets_sha256": "7230c17749cf16b4d09751ead369ab52b418b32c866f15599f1ccf0897f61244",
+          "image_digest": "ghcr.io/project-osrm/osrm-backend@sha256:855614a38f464b0558a2ad6eaa7cb8c139f39887da9b38b485ce453c6e6e6124",
+          "profile_sha256": "cb3df0546318665609606b746a1297f3d65ca3c2ff825f8a6f3c57247d86a2d3",
+          "profile": "car",
+          "algorithm": "mld",
+          "router_url": "http://127.0.0.1:5001",
+          "max_snap_meters": 100.0,
+          "display_bbox": [
+            105.802,
+            21.002,
+            105.875,
+            21.055
+          ],
+          "sampling_bbox": [
+            105.823,
+            21.0186,
+            105.84700000000001,
+            21.038400000000003
+          ],
+          "candidate_version": 2,
+          "region_id": "nvmr-hanoi-core",
+          "routing_bbox": [
+            105.762,
+            20.962,
+            105.915,
+            21.095
+          ],
+          "route_validation_bbox": [
+            105.762,
+            20.962,
+            105.915,
+            21.095
+          ],
+          "artifact_identity": {
+            "region_id": "nvmr-hanoi-core",
+            "config_sha256": "91c114a869a0eebe23d91df77641b9dd2f52afb7b7d09e941f249f78cfc9f05c",
+            "pipeline_version": "hanoi-car-pilot/v1"
+          },
+          "source_sha256": "2fbd2ee6b4dc151eecf04fa6823cddf584b47423e190118b10fce8b6115e9d8a",
+          "graph_manifest_sha256": "a24d4957a01ceeb04a0de1ad680fe4c5dd51732a7b381d9368e249a65c1b29b5"
+        }
+      },
+      "environmentAfter": {
+        "platform": "Windows-10-10.0.26300-SP0",
+        "python": "3.11.9",
+        "cpuCount": 8,
+        "processor": "Intel64 Family 6 Model 140 Stepping 2, GenuineIntel",
+        "memory": {
+          "totalPhysicalBytes": 16948453376,
+          "availablePhysicalBytes": 3715072000,
+          "processRssBytes": 83132416,
+          "processPeakRssBytes": 120647680,
+          "processPagefileBytes": 68833280
+        },
+        "dockerStats": [
+          "{\"BlockIO\":\"0B / 0B\",\"CPUPerc\":\"0.00%\",\"Container\":\"59fd1f3d6b543e795069290001fba11048a5004b0f57757a16305206bb5f0f27\",\"ID\":\"59fd1f3d6b54\",\"MemPerc\":\"2.47%\",\"MemUsage\":\"25.27MiB / 1GiB\",\"Name\":\"gsm-map-osrm\",\"NetIO\":\"856kB / 1.63MB\",\"PIDs\":\"10\"}",
+          "{\"BlockIO\":\"0B / 0B\",\"CPUPerc\":\"0.00%\",\"Container\":\"af5f68c19008785d15d820556a286d9814114cfb87449d940b126e9fefec3911\",\"ID\":\"af5f68c19008\",\"MemPerc\":\"5.76%\",\"MemUsage\":\"58.99MiB / 1GiB\",\"Name\":\"gsm-map-osrm-hanoi-motorbike\",\"NetIO\":\"4.39MB / 7.34MB\",\"PIDs\":\"10\"}",
+          "{\"BlockIO\":\"0B / 0B\",\"CPUPerc\":\"0.00%\",\"Container\":\"343e1ee656e4a30c2645352268b7c22bd9b57d76c9914d88aea767764b6dc1df\",\"ID\":\"343e1ee656e4\",\"MemPerc\":\"3.92%\",\"MemUsage\":\"40.11MiB / 1GiB\",\"Name\":\"gsm-map-osrm-hanoi-car\",\"NetIO\":\"5.4MB / 8.83MB\",\"PIDs\":\"10\"}"
+        ],
+        "hardware": "{\"Name\":\"11th Gen Intel(R) Core(TM) i5-11320H @ 3.20GHz\",\"NumberOfCores\":4,\"NumberOfLogicalProcessors\":8}\n[{\"Name\":\"NVIDIA GeForce RTX 3050 Laptop GPU\",\"AdapterRAM\":4293918720,\"DriverVersion\":\"32.0.15.7700\"},{\"Name\":\"Intel(R) Iris(R) Xe Graphics\",\"AdapterRAM\":1073741824,\"DriverVersion\":\"30.0.100.9864\"}]"
+      }
+    },
+    {
+      "schemaVersion": "gsm-live-simulation-benchmark/v1",
+      "kind": "live-local-OSRM",
+      "environmentBefore": {
+        "platform": "Windows-10-10.0.26300-SP0",
+        "python": "3.11.9",
+        "cpuCount": 8,
+        "processor": "Intel64 Family 6 Model 140 Stepping 2, GenuineIntel",
+        "memory": {
+          "totalPhysicalBytes": 16948453376,
+          "availablePhysicalBytes": 3754962944,
+          "processRssBytes": 49926144,
+          "processPeakRssBytes": 50044928,
+          "processPagefileBytes": 37621760
+        },
+        "dockerStats": [
+          "{\"BlockIO\":\"0B / 0B\",\"CPUPerc\":\"0.00%\",\"Container\":\"59fd1f3d6b543e795069290001fba11048a5004b0f57757a16305206bb5f0f27\",\"ID\":\"59fd1f3d6b54\",\"MemPerc\":\"2.47%\",\"MemUsage\":\"25.27MiB / 1GiB\",\"Name\":\"gsm-map-osrm\",\"NetIO\":\"856kB / 1.63MB\",\"PIDs\":\"10\"}",
+          "{\"BlockIO\":\"0B / 0B\",\"CPUPerc\":\"0.00%\",\"Container\":\"af5f68c19008785d15d820556a286d9814114cfb87449d940b126e9fefec3911\",\"ID\":\"af5f68c19008\",\"MemPerc\":\"5.76%\",\"MemUsage\":\"58.99MiB / 1GiB\",\"Name\":\"gsm-map-osrm-hanoi-motorbike\",\"NetIO\":\"4.39MB / 7.34MB\",\"PIDs\":\"10\"}",
+          "{\"BlockIO\":\"0B / 0B\",\"CPUPerc\":\"0.01%\",\"Container\":\"343e1ee656e4a30c2645352268b7c22bd9b57d76c9914d88aea767764b6dc1df\",\"ID\":\"343e1ee656e4\",\"MemPerc\":\"3.92%\",\"MemUsage\":\"40.11MiB / 1GiB\",\"Name\":\"gsm-map-osrm-hanoi-car\",\"NetIO\":\"5.4MB / 8.83MB\",\"PIDs\":\"10\"}"
+        ],
+        "hardware": "{\"Name\":\"11th Gen Intel(R) Core(TM) i5-11320H @ 3.20GHz\",\"NumberOfCores\":4,\"NumberOfLogicalProcessors\":8}\n[{\"Name\":\"NVIDIA GeForce RTX 3050 Laptop GPU\",\"AdapterRAM\":4293918720,\"DriverVersion\":\"32.0.15.7700\"},{\"Name\":\"Intel(R) Iris(R) Xe Graphics\",\"AdapterRAM\":1073741824,\"DriverVersion\":\"30.0.100.9864\"}]"
+      },
+      "config": {
+        "regionId": "nvmr-hanoi-core",
+        "seed": "m3-live-0",
+        "fleetSize": 3000,
+        "carCount": 1200,
+        "bookingCount": 3000,
+        "horizonSeconds": 900,
+        "maxWaitSeconds": 300,
+        "onlineFraction": 0.6,
+        "onlineSchedule": [],
+        "workload": "burst",
+        "initialCandidates": 16,
+        "maxCandidates": 128,
+        "gridCellDegrees": 0.005
+      },
+      "status": "PASS",
+      "resources": {
+        "wallSeconds": 33.09879380000348,
+        "cpuSeconds": 27.953125,
+        "cpuPercentOneCore": 84.45360628216326,
+        "peakRssBytesSampled": 124506112,
+        "processPeakRssBytes": 125829120,
+        "minimumAvailablePhysicalBytes": 3689996288,
+        "sampleIntervalSeconds": 0.05,
+        "sampleCount": 534
+      },
+      "counts": {
+        "requested": 3000,
+        "assigned": 3000,
+        "completed": 3000,
+        "unserved": 0,
+        "pending": 0,
+        "activeTrips": 0
+      },
+      "metrics": {
+        "eventsProcessed": 10284,
+        "peakEventQueue": 6189,
+        "peakPending": 1143,
+        "tableCandidates": 72989,
+        "searchBudgetExhaustions": 24,
+        "dispatchAttempts": 7582,
+        "dispatchVersion": "grid-fifo/v1",
+        "preparationMilliseconds": 2299.7990000003483,
+        "totalMilliseconds": 32952.93560001301,
+        "routing": {
+          "CAR": {
+            "requests": {
+              "nearest": 24,
+              "table": 1136,
+              "route": 705,
+              "routeCacheHits": 934,
+              "tableCacheHits": 2875
+            },
+            "requestFailures": 0,
+            "latencyMilliseconds": {
+              "count": 1865,
+              "p50": 6.967199995415285,
+              "p95": 11.10980000521522,
+              "total": 14040.230399943539
+            },
+            "routeCacheSize": 705,
+            "tableCacheSize": 1136
+          },
+          "MOTORBIKE": {
+            "requests": {
+              "nearest": 24,
+              "table": 1237,
+              "route": 839,
+              "routeCacheHits": 1806,
+              "tableCacheHits": 3270
+            },
+            "requestFailures": 0,
+            "latencyMilliseconds": {
+              "count": 2100,
+              "p50": 6.940500010387041,
+              "p95": 9.367699996801093,
+              "total": 15167.733199763461
+            },
+            "routeCacheSize": 839,
+            "tableCacheSize": 1237
+          }
+        }
+      },
+      "routingIdentities": {
+        "CAR": {
+          "regionId": "nvmr-hanoi-core",
+          "vehicleType": "CAR",
+          "profile": "car",
+          "profileSha256": "cb3df0546318665609606b746a1297f3d65ca3c2ff825f8a6f3c57247d86a2d3",
+          "graphManifestSha256": "a24d4957a01ceeb04a0de1ad680fe4c5dd51732a7b381d9368e249a65c1b29b5",
+          "sourceSha256": "2fbd2ee6b4dc151eecf04fa6823cddf584b47423e190118b10fce8b6115e9d8a",
+          "extractSha256": "18fd3892f6d766387f2c3217d5d104e09a9319d3905a9172834b21c0064d6308",
+          "algorithm": "mld"
+        },
+        "MOTORBIKE": {
+          "regionId": "nvmr-hanoi-core",
+          "vehicleType": "MOTORBIKE",
+          "profile": "motorbike",
+          "profileSha256": "075ecdbc70a3e75c4338d2c6a41597c132a1837ec2d27f1c2fcdd824a788b209",
+          "graphManifestSha256": "fb97489d066397b11cb9178238cd56a5f52281bcf5711430bb7cf411496ca455",
+          "sourceSha256": "2fbd2ee6b4dc151eecf04fa6823cddf584b47423e190118b10fce8b6115e9d8a",
+          "extractSha256": "18fd3892f6d766387f2c3217d5d104e09a9319d3905a9172834b21c0064d6308",
+          "algorithm": "mld"
+        }
+      },
+      "simulationDurationSeconds": 900,
+      "provenance": {
+        "catalogFingerprint": "eb6e3288f8346294b07fcff49992d82bffe0e830784b02283772302d93810ae3",
+        "catalog": {
+          "extract_sha256": "18fd3892f6d766387f2c3217d5d104e09a9319d3905a9172834b21c0064d6308",
+          "streets_sha256": "7230c17749cf16b4d09751ead369ab52b418b32c866f15599f1ccf0897f61244",
+          "image_digest": "ghcr.io/project-osrm/osrm-backend@sha256:855614a38f464b0558a2ad6eaa7cb8c139f39887da9b38b485ce453c6e6e6124",
+          "profile_sha256": "cb3df0546318665609606b746a1297f3d65ca3c2ff825f8a6f3c57247d86a2d3",
+          "profile": "car",
+          "algorithm": "mld",
+          "router_url": "http://127.0.0.1:5001",
+          "max_snap_meters": 100.0,
+          "display_bbox": [
+            105.802,
+            21.002,
+            105.875,
+            21.055
+          ],
+          "sampling_bbox": [
+            105.823,
+            21.0186,
+            105.84700000000001,
+            21.038400000000003
+          ],
+          "candidate_version": 2,
+          "region_id": "nvmr-hanoi-core",
+          "routing_bbox": [
+            105.762,
+            20.962,
+            105.915,
+            21.095
+          ],
+          "route_validation_bbox": [
+            105.762,
+            20.962,
+            105.915,
+            21.095
+          ],
+          "artifact_identity": {
+            "region_id": "nvmr-hanoi-core",
+            "config_sha256": "91c114a869a0eebe23d91df77641b9dd2f52afb7b7d09e941f249f78cfc9f05c",
+            "pipeline_version": "hanoi-car-pilot/v1"
+          },
+          "source_sha256": "2fbd2ee6b4dc151eecf04fa6823cddf584b47423e190118b10fce8b6115e9d8a",
+          "graph_manifest_sha256": "a24d4957a01ceeb04a0de1ad680fe4c5dd51732a7b381d9368e249a65c1b29b5"
+        }
+      },
+      "environmentAfter": {
+        "platform": "Windows-10-10.0.26300-SP0",
+        "python": "3.11.9",
+        "cpuCount": 8,
+        "processor": "Intel64 Family 6 Model 140 Stepping 2, GenuineIntel",
+        "memory": {
+          "totalPhysicalBytes": 16948453376,
+          "availablePhysicalBytes": 3848163328,
+          "processRssBytes": 123449344,
+          "processPeakRssBytes": 125829120,
+          "processPagefileBytes": 110514176
+        },
+        "dockerStats": [
+          "{\"BlockIO\":\"0B / 0B\",\"CPUPerc\":\"0.00%\",\"Container\":\"59fd1f3d6b543e795069290001fba11048a5004b0f57757a16305206bb5f0f27\",\"ID\":\"59fd1f3d6b54\",\"MemPerc\":\"2.47%\",\"MemUsage\":\"25.27MiB / 1GiB\",\"Name\":\"gsm-map-osrm\",\"NetIO\":\"856kB / 1.63MB\",\"PIDs\":\"10\"}",
+          "{\"BlockIO\":\"0B / 0B\",\"CPUPerc\":\"0.00%\",\"Container\":\"af5f68c19008785d15d820556a286d9814114cfb87449d940b126e9fefec3911\",\"ID\":\"af5f68c19008\",\"MemPerc\":\"5.75%\",\"MemUsage\":\"58.88MiB / 1GiB\",\"Name\":\"gsm-map-osrm-hanoi-motorbike\",\"NetIO\":\"6.38MB / 10.6MB\",\"PIDs\":\"10\"}",
+          "{\"BlockIO\":\"0B / 0B\",\"CPUPerc\":\"0.00%\",\"Container\":\"343e1ee656e4a30c2645352268b7c22bd9b57d76c9914d88aea767764b6dc1df\",\"ID\":\"343e1ee656e4\",\"MemPerc\":\"4.02%\",\"MemUsage\":\"41.21MiB / 1GiB\",\"Name\":\"gsm-map-osrm-hanoi-car\",\"NetIO\":\"7.31MB / 11.8MB\",\"PIDs\":\"10\"}"
+        ],
+        "hardware": "{\"Name\":\"11th Gen Intel(R) Core(TM) i5-11320H @ 3.20GHz\",\"NumberOfCores\":4,\"NumberOfLogicalProcessors\":8}\n[{\"Name\":\"NVIDIA GeForce RTX 3050 Laptop GPU\",\"AdapterRAM\":4293918720,\"DriverVersion\":\"32.0.15.7700\"},{\"Name\":\"Intel(R) Iris(R) Xe Graphics\",\"AdapterRAM\":1073741824,\"DriverVersion\":\"30.0.100.9864\"}]"
+      }
+    },
+    {
+      "schemaVersion": "gsm-live-simulation-benchmark/v1",
+      "kind": "live-local-OSRM",
+      "environmentBefore": {
+        "platform": "Windows-10-10.0.26300-SP0",
+        "python": "3.11.9",
+        "cpuCount": 8,
+        "processor": "Intel64 Family 6 Model 140 Stepping 2, GenuineIntel",
+        "memory": {
+          "totalPhysicalBytes": 16948453376,
+          "availablePhysicalBytes": 3871600640,
+          "processRssBytes": 49983488,
+          "processPeakRssBytes": 50102272,
+          "processPagefileBytes": 37695488
+        },
+        "dockerStats": [
+          "{\"BlockIO\":\"0B / 0B\",\"CPUPerc\":\"0.00%\",\"Container\":\"59fd1f3d6b543e795069290001fba11048a5004b0f57757a16305206bb5f0f27\",\"ID\":\"59fd1f3d6b54\",\"MemPerc\":\"2.47%\",\"MemUsage\":\"25.27MiB / 1GiB\",\"Name\":\"gsm-map-osrm\",\"NetIO\":\"856kB / 1.63MB\",\"PIDs\":\"10\"}",
+          "{\"BlockIO\":\"0B / 0B\",\"CPUPerc\":\"0.00%\",\"Container\":\"af5f68c19008785d15d820556a286d9814114cfb87449d940b126e9fefec3911\",\"ID\":\"af5f68c19008\",\"MemPerc\":\"5.75%\",\"MemUsage\":\"58.88MiB / 1GiB\",\"Name\":\"gsm-map-osrm-hanoi-motorbike\",\"NetIO\":\"6.38MB / 10.6MB\",\"PIDs\":\"10\"}",
+          "{\"BlockIO\":\"0B / 0B\",\"CPUPerc\":\"0.00%\",\"Container\":\"343e1ee656e4a30c2645352268b7c22bd9b57d76c9914d88aea767764b6dc1df\",\"ID\":\"343e1ee656e4\",\"MemPerc\":\"4.02%\",\"MemUsage\":\"41.21MiB / 1GiB\",\"Name\":\"gsm-map-osrm-hanoi-car\",\"NetIO\":\"7.31MB / 11.8MB\",\"PIDs\":\"10\"}"
+        ],
+        "hardware": "{\"Name\":\"11th Gen Intel(R) Core(TM) i5-11320H @ 3.20GHz\",\"NumberOfCores\":4,\"NumberOfLogicalProcessors\":8}\n[{\"Name\":\"NVIDIA GeForce RTX 3050 Laptop GPU\",\"AdapterRAM\":4293918720,\"DriverVersion\":\"32.0.15.7700\"},{\"Name\":\"Intel(R) Iris(R) Xe Graphics\",\"AdapterRAM\":1073741824,\"DriverVersion\":\"30.0.100.9864\"}]"
+      },
+      "config": {
+        "regionId": "nvmr-hanoi-core",
+        "seed": "m3-live-0",
+        "fleetSize": 5000,
+        "carCount": 2000,
+        "bookingCount": 100,
+        "horizonSeconds": 900,
+        "maxWaitSeconds": 300,
+        "onlineFraction": 0.25,
+        "onlineSchedule": [],
+        "workload": "low",
+        "initialCandidates": 16,
+        "maxCandidates": 128,
+        "gridCellDegrees": 0.005
+      },
+      "status": "PASS",
+      "resources": {
+        "wallSeconds": 3.4534075999981724,
+        "cpuSeconds": 3.25,
+        "cpuPercentOneCore": 94.10994520315876,
+        "peakRssBytesSampled": 120848384,
+        "processPeakRssBytes": 120848384,
+        "minimumAvailablePhysicalBytes": 3849232384,
+        "sampleIntervalSeconds": 0.05,
+        "sampleCount": 55
+      },
+      "counts": {
+        "requested": 100,
+        "assigned": 100,
+        "completed": 100,
+        "unserved": 0,
+        "pending": 0,
+        "activeTrips": 0
+      },
+      "metrics": {
+        "eventsProcessed": 300,
+        "peakEventQueue": 200,
+        "peakPending": 1,
+        "tableCandidates": 1600,
+        "searchBudgetExhaustions": 0,
+        "dispatchAttempts": 100,
+        "dispatchVersion": "grid-fifo/v1",
+        "preparationMilliseconds": 2185.2811999997357,
+        "totalMilliseconds": 3397.1062999917194,
+        "routing": {
+          "CAR": {
+            "requests": {
+              "nearest": 24,
+              "table": 21,
+              "route": 26,
+              "routeCacheHits": 1,
+              "tableCacheHits": 6
+            },
+            "requestFailures": 0,
+            "latencyMilliseconds": {
+              "count": 71,
+              "p50": 7.104699994670227,
+              "p95": 7.873499998822808,
+              "total": 505.55019997409545
+            },
+            "routeCacheSize": 26,
+            "tableCacheSize": 21
+          },
+          "MOTORBIKE": {
+            "requests": {
+              "nearest": 24,
+              "table": 37,
+              "route": 69,
+              "routeCacheHits": 4,
+              "tableCacheHits": 36
+            },
+            "requestFailures": 0,
+            "latencyMilliseconds": {
+              "count": 130,
+              "p50": 7.170500000938773,
+              "p95": 7.890900000347756,
+              "total": 941.7486999445828
+            },
+            "routeCacheSize": 69,
+            "tableCacheSize": 37
+          }
+        }
+      },
+      "routingIdentities": {
+        "CAR": {
+          "regionId": "nvmr-hanoi-core",
+          "vehicleType": "CAR",
+          "profile": "car",
+          "profileSha256": "cb3df0546318665609606b746a1297f3d65ca3c2ff825f8a6f3c57247d86a2d3",
+          "graphManifestSha256": "a24d4957a01ceeb04a0de1ad680fe4c5dd51732a7b381d9368e249a65c1b29b5",
+          "sourceSha256": "2fbd2ee6b4dc151eecf04fa6823cddf584b47423e190118b10fce8b6115e9d8a",
+          "extractSha256": "18fd3892f6d766387f2c3217d5d104e09a9319d3905a9172834b21c0064d6308",
+          "algorithm": "mld"
+        },
+        "MOTORBIKE": {
+          "regionId": "nvmr-hanoi-core",
+          "vehicleType": "MOTORBIKE",
+          "profile": "motorbike",
+          "profileSha256": "075ecdbc70a3e75c4338d2c6a41597c132a1837ec2d27f1c2fcdd824a788b209",
+          "graphManifestSha256": "fb97489d066397b11cb9178238cd56a5f52281bcf5711430bb7cf411496ca455",
+          "sourceSha256": "2fbd2ee6b4dc151eecf04fa6823cddf584b47423e190118b10fce8b6115e9d8a",
+          "extractSha256": "18fd3892f6d766387f2c3217d5d104e09a9319d3905a9172834b21c0064d6308",
+          "algorithm": "mld"
+        }
+      },
+      "simulationDurationSeconds": 1147.2289999999998,
+      "provenance": {
+        "catalogFingerprint": "eb6e3288f8346294b07fcff49992d82bffe0e830784b02283772302d93810ae3",
+        "catalog": {
+          "extract_sha256": "18fd3892f6d766387f2c3217d5d104e09a9319d3905a9172834b21c0064d6308",
+          "streets_sha256": "7230c17749cf16b4d09751ead369ab52b418b32c866f15599f1ccf0897f61244",
+          "image_digest": "ghcr.io/project-osrm/osrm-backend@sha256:855614a38f464b0558a2ad6eaa7cb8c139f39887da9b38b485ce453c6e6e6124",
+          "profile_sha256": "cb3df0546318665609606b746a1297f3d65ca3c2ff825f8a6f3c57247d86a2d3",
+          "profile": "car",
+          "algorithm": "mld",
+          "router_url": "http://127.0.0.1:5001",
+          "max_snap_meters": 100.0,
+          "display_bbox": [
+            105.802,
+            21.002,
+            105.875,
+            21.055
+          ],
+          "sampling_bbox": [
+            105.823,
+            21.0186,
+            105.84700000000001,
+            21.038400000000003
+          ],
+          "candidate_version": 2,
+          "region_id": "nvmr-hanoi-core",
+          "routing_bbox": [
+            105.762,
+            20.962,
+            105.915,
+            21.095
+          ],
+          "route_validation_bbox": [
+            105.762,
+            20.962,
+            105.915,
+            21.095
+          ],
+          "artifact_identity": {
+            "region_id": "nvmr-hanoi-core",
+            "config_sha256": "91c114a869a0eebe23d91df77641b9dd2f52afb7b7d09e941f249f78cfc9f05c",
+            "pipeline_version": "hanoi-car-pilot/v1"
+          },
+          "source_sha256": "2fbd2ee6b4dc151eecf04fa6823cddf584b47423e190118b10fce8b6115e9d8a",
+          "graph_manifest_sha256": "a24d4957a01ceeb04a0de1ad680fe4c5dd51732a7b381d9368e249a65c1b29b5"
+        }
+      },
+      "environmentAfter": {
+        "platform": "Windows-10-10.0.26300-SP0",
+        "python": "3.11.9",
+        "cpuCount": 8,
+        "processor": "Intel64 Family 6 Model 140 Stepping 2, GenuineIntel",
+        "memory": {
+          "totalPhysicalBytes": 16948453376,
+          "availablePhysicalBytes": 3888259072,
+          "processRssBytes": 74997760,
+          "processPeakRssBytes": 120848384,
+          "processPagefileBytes": 60776448
+        },
+        "dockerStats": [
+          "{\"BlockIO\":\"0B / 0B\",\"CPUPerc\":\"0.00%\",\"Container\":\"59fd1f3d6b543e795069290001fba11048a5004b0f57757a16305206bb5f0f27\",\"ID\":\"59fd1f3d6b54\",\"MemPerc\":\"2.47%\",\"MemUsage\":\"25.27MiB / 1GiB\",\"Name\":\"gsm-map-osrm\",\"NetIO\":\"856kB / 1.63MB\",\"PIDs\":\"10\"}",
+          "{\"BlockIO\":\"0B / 0B\",\"CPUPerc\":\"0.00%\",\"Container\":\"af5f68c19008785d15d820556a286d9814114cfb87449d940b126e9fefec3911\",\"ID\":\"af5f68c19008\",\"MemPerc\":\"5.81%\",\"MemUsage\":\"59.54MiB / 1GiB\",\"Name\":\"gsm-map-osrm-hanoi-motorbike\",\"NetIO\":\"6.5MB / 10.8MB\",\"PIDs\":\"10\"}",
+          "{\"BlockIO\":\"0B / 0B\",\"CPUPerc\":\"0.00%\",\"Container\":\"343e1ee656e4a30c2645352268b7c22bd9b57d76c9914d88aea767764b6dc1df\",\"ID\":\"343e1ee656e4\",\"MemPerc\":\"3.98%\",\"MemUsage\":\"40.74MiB / 1GiB\",\"Name\":\"gsm-map-osrm-hanoi-car\",\"NetIO\":\"7.38MB / 11.9MB\",\"PIDs\":\"10\"}"
+        ],
+        "hardware": "{\"Name\":\"11th Gen Intel(R) Core(TM) i5-11320H @ 3.20GHz\",\"NumberOfCores\":4,\"NumberOfLogicalProcessors\":8}\n[{\"Name\":\"NVIDIA GeForce RTX 3050 Laptop GPU\",\"AdapterRAM\":4293918720,\"DriverVersion\":\"32.0.15.7700\"},{\"Name\":\"Intel(R) Iris(R) Xe Graphics\",\"AdapterRAM\":1073741824,\"DriverVersion\":\"30.0.100.9864\"}]"
+      }
+    },
+    {
+      "schemaVersion": "gsm-live-simulation-benchmark/v1",
+      "kind": "live-local-OSRM",
+      "environmentBefore": {
+        "platform": "Windows-10-10.0.26300-SP0",
+        "python": "3.11.9",
+        "cpuCount": 8,
+        "processor": "Intel64 Family 6 Model 140 Stepping 2, GenuineIntel",
+        "memory": {
+          "totalPhysicalBytes": 16948453376,
+          "availablePhysicalBytes": 3906269184,
+          "processRssBytes": 50085888,
+          "processPeakRssBytes": 50204672,
+          "processPagefileBytes": 37797888
+        },
+        "dockerStats": [
+          "{\"BlockIO\":\"0B / 0B\",\"CPUPerc\":\"0.00%\",\"Container\":\"59fd1f3d6b543e795069290001fba11048a5004b0f57757a16305206bb5f0f27\",\"ID\":\"59fd1f3d6b54\",\"MemPerc\":\"2.47%\",\"MemUsage\":\"25.27MiB / 1GiB\",\"Name\":\"gsm-map-osrm\",\"NetIO\":\"856kB / 1.63MB\",\"PIDs\":\"10\"}",
+          "{\"BlockIO\":\"0B / 0B\",\"CPUPerc\":\"0.00%\",\"Container\":\"af5f68c19008785d15d820556a286d9814114cfb87449d940b126e9fefec3911\",\"ID\":\"af5f68c19008\",\"MemPerc\":\"5.81%\",\"MemUsage\":\"59.54MiB / 1GiB\",\"Name\":\"gsm-map-osrm-hanoi-motorbike\",\"NetIO\":\"6.5MB / 10.8MB\",\"PIDs\":\"10\"}",
+          "{\"BlockIO\":\"0B / 0B\",\"CPUPerc\":\"0.01%\",\"Container\":\"343e1ee656e4a30c2645352268b7c22bd9b57d76c9914d88aea767764b6dc1df\",\"ID\":\"343e1ee656e4\",\"MemPerc\":\"3.98%\",\"MemUsage\":\"40.74MiB / 1GiB\",\"Name\":\"gsm-map-osrm-hanoi-car\",\"NetIO\":\"7.38MB / 11.9MB\",\"PIDs\":\"10\"}"
+        ],
+        "hardware": "{\"Name\":\"11th Gen Intel(R) Core(TM) i5-11320H @ 3.20GHz\",\"NumberOfCores\":4,\"NumberOfLogicalProcessors\":8}\n[{\"Name\":\"NVIDIA GeForce RTX 3050 Laptop GPU\",\"AdapterRAM\":4293918720,\"DriverVersion\":\"32.0.15.7700\"},{\"Name\":\"Intel(R) Iris(R) Xe Graphics\",\"AdapterRAM\":1073741824,\"DriverVersion\":\"30.0.100.9864\"}]"
+      },
+      "config": {
+        "regionId": "nvmr-hanoi-core",
+        "seed": "m3-live-0",
+        "fleetSize": 5000,
+        "carCount": 2000,
+        "bookingCount": 1250,
+        "horizonSeconds": 900,
+        "maxWaitSeconds": 300,
+        "onlineFraction": 0.8,
+        "onlineSchedule": [],
+        "workload": "typical",
+        "initialCandidates": 16,
+        "maxCandidates": 128,
+        "gridCellDegrees": 0.005
+      },
+      "status": "PASS",
+      "resources": {
+        "wallSeconds": 10.214334300006158,
+        "cpuSeconds": 9.015625,
+        "cpuPercentOneCore": 88.26444029734336,
+        "peakRssBytesSampled": 120639488,
+        "processPeakRssBytes": 120639488,
+        "minimumAvailablePhysicalBytes": 3816591360,
+        "sampleIntervalSeconds": 0.05,
+        "sampleCount": 164
+      },
+      "counts": {
+        "requested": 1250,
+        "assigned": 1250,
+        "completed": 1250,
+        "unserved": 0,
+        "pending": 0,
+        "activeTrips": 0
+      },
+      "metrics": {
+        "eventsProcessed": 3777,
+        "peakEventQueue": 2500,
+        "peakPending": 2,
+        "tableCandidates": 20000,
+        "searchBudgetExhaustions": 0,
+        "dispatchAttempts": 1250,
+        "dispatchVersion": "grid-fifo/v1",
+        "preparationMilliseconds": 2154.677400001674,
+        "totalMilliseconds": 10169.195199996466,
+        "routing": {
+          "CAR": {
+            "requests": {
+              "nearest": 24,
+              "table": 134,
+              "route": 309,
+              "routeCacheHits": 171,
+              "tableCacheHits": 343
+            },
+            "requestFailures": 0,
+            "latencyMilliseconds": {
+              "count": 467,
+              "p50": 6.882300003780983,
+              "p95": 8.583300004829653,
+              "total": 3339.4599997991463
+            },
+            "routeCacheSize": 309,
+            "tableCacheSize": 134
+          },
+          "MOTORBIKE": {
+            "requests": {
+              "nearest": 24,
+              "table": 167,
+              "route": 421,
+              "routeCacheHits": 376,
+              "tableCacheHits": 606
+            },
+            "requestFailures": 0,
+            "latencyMilliseconds": {
+              "count": 612,
+              "p50": 6.950499999220483,
+              "p95": 8.087800000794232,
+              "total": 4319.131399766775
+            },
+            "routeCacheSize": 421,
+            "tableCacheSize": 167
+          }
+        }
+      },
+      "routingIdentities": {
+        "CAR": {
+          "regionId": "nvmr-hanoi-core",
+          "vehicleType": "CAR",
+          "profile": "car",
+          "profileSha256": "cb3df0546318665609606b746a1297f3d65ca3c2ff825f8a6f3c57247d86a2d3",
+          "graphManifestSha256": "a24d4957a01ceeb04a0de1ad680fe4c5dd51732a7b381d9368e249a65c1b29b5",
+          "sourceSha256": "2fbd2ee6b4dc151eecf04fa6823cddf584b47423e190118b10fce8b6115e9d8a",
+          "extractSha256": "18fd3892f6d766387f2c3217d5d104e09a9319d3905a9172834b21c0064d6308",
+          "algorithm": "mld"
+        },
+        "MOTORBIKE": {
+          "regionId": "nvmr-hanoi-core",
+          "vehicleType": "MOTORBIKE",
+          "profile": "motorbike",
+          "profileSha256": "075ecdbc70a3e75c4338d2c6a41597c132a1837ec2d27f1c2fcdd824a788b209",
+          "graphManifestSha256": "fb97489d066397b11cb9178238cd56a5f52281bcf5711430bb7cf411496ca455",
+          "sourceSha256": "2fbd2ee6b4dc151eecf04fa6823cddf584b47423e190118b10fce8b6115e9d8a",
+          "extractSha256": "18fd3892f6d766387f2c3217d5d104e09a9319d3905a9172834b21c0064d6308",
+          "algorithm": "mld"
+        }
+      },
+      "simulationDurationSeconds": 1225.9950000000001,
+      "provenance": {
+        "catalogFingerprint": "eb6e3288f8346294b07fcff49992d82bffe0e830784b02283772302d93810ae3",
+        "catalog": {
+          "extract_sha256": "18fd3892f6d766387f2c3217d5d104e09a9319d3905a9172834b21c0064d6308",
+          "streets_sha256": "7230c17749cf16b4d09751ead369ab52b418b32c866f15599f1ccf0897f61244",
+          "image_digest": "ghcr.io/project-osrm/osrm-backend@sha256:855614a38f464b0558a2ad6eaa7cb8c139f39887da9b38b485ce453c6e6e6124",
+          "profile_sha256": "cb3df0546318665609606b746a1297f3d65ca3c2ff825f8a6f3c57247d86a2d3",
+          "profile": "car",
+          "algorithm": "mld",
+          "router_url": "http://127.0.0.1:5001",
+          "max_snap_meters": 100.0,
+          "display_bbox": [
+            105.802,
+            21.002,
+            105.875,
+            21.055
+          ],
+          "sampling_bbox": [
+            105.823,
+            21.0186,
+            105.84700000000001,
+            21.038400000000003
+          ],
+          "candidate_version": 2,
+          "region_id": "nvmr-hanoi-core",
+          "routing_bbox": [
+            105.762,
+            20.962,
+            105.915,
+            21.095
+          ],
+          "route_validation_bbox": [
+            105.762,
+            20.962,
+            105.915,
+            21.095
+          ],
+          "artifact_identity": {
+            "region_id": "nvmr-hanoi-core",
+            "config_sha256": "91c114a869a0eebe23d91df77641b9dd2f52afb7b7d09e941f249f78cfc9f05c",
+            "pipeline_version": "hanoi-car-pilot/v1"
+          },
+          "source_sha256": "2fbd2ee6b4dc151eecf04fa6823cddf584b47423e190118b10fce8b6115e9d8a",
+          "graph_manifest_sha256": "a24d4957a01ceeb04a0de1ad680fe4c5dd51732a7b381d9368e249a65c1b29b5"
+        }
+      },
+      "environmentAfter": {
+        "platform": "Windows-10-10.0.26300-SP0",
+        "python": "3.11.9",
+        "cpuCount": 8,
+        "processor": "Intel64 Family 6 Model 140 Stepping 2, GenuineIntel",
+        "memory": {
+          "totalPhysicalBytes": 16948453376,
+          "availablePhysicalBytes": 3862810624,
+          "processRssBytes": 99131392,
+          "processPeakRssBytes": 120639488,
+          "processPagefileBytes": 85737472
+        },
+        "dockerStats": [
+          "{\"BlockIO\":\"0B / 0B\",\"CPUPerc\":\"0.00%\",\"Container\":\"59fd1f3d6b543e795069290001fba11048a5004b0f57757a16305206bb5f0f27\",\"ID\":\"59fd1f3d6b54\",\"MemPerc\":\"2.47%\",\"MemUsage\":\"25.27MiB / 1GiB\",\"Name\":\"gsm-map-osrm\",\"NetIO\":\"856kB / 1.63MB\",\"PIDs\":\"10\"}",
+          "{\"BlockIO\":\"0B / 0B\",\"CPUPerc\":\"0.00%\",\"Container\":\"af5f68c19008785d15d820556a286d9814114cfb87449d940b126e9fefec3911\",\"ID\":\"af5f68c19008\",\"MemPerc\":\"5.79%\",\"MemUsage\":\"59.28MiB / 1GiB\",\"Name\":\"gsm-map-osrm-hanoi-motorbike\",\"NetIO\":\"7.08MB / 11.8MB\",\"PIDs\":\"10\"}",
+          "{\"BlockIO\":\"0B / 0B\",\"CPUPerc\":\"0.00%\",\"Container\":\"343e1ee656e4a30c2645352268b7c22bd9b57d76c9914d88aea767764b6dc1df\",\"ID\":\"343e1ee656e4\",\"MemPerc\":\"4.00%\",\"MemUsage\":\"41MiB / 1GiB\",\"Name\":\"gsm-map-osrm-hanoi-car\",\"NetIO\":\"7.82MB / 12.7MB\",\"PIDs\":\"10\"}"
+        ],
+        "hardware": "{\"Name\":\"11th Gen Intel(R) Core(TM) i5-11320H @ 3.20GHz\",\"NumberOfCores\":4,\"NumberOfLogicalProcessors\":8}\n[{\"Name\":\"NVIDIA GeForce RTX 3050 Laptop GPU\",\"AdapterRAM\":4293918720,\"DriverVersion\":\"32.0.15.7700\"},{\"Name\":\"Intel(R) Iris(R) Xe Graphics\",\"AdapterRAM\":1073741824,\"DriverVersion\":\"30.0.100.9864\"}]"
+      }
+    },
+    {
+      "schemaVersion": "gsm-live-simulation-benchmark/v1",
+      "kind": "live-local-OSRM",
+      "environmentBefore": {
+        "platform": "Windows-10-10.0.26300-SP0",
+        "python": "3.11.9",
+        "cpuCount": 8,
+        "processor": "Intel64 Family 6 Model 140 Stepping 2, GenuineIntel",
+        "memory": {
+          "totalPhysicalBytes": 16948453376,
+          "availablePhysicalBytes": 3851440128,
+          "processRssBytes": 50253824,
+          "processPeakRssBytes": 50372608,
+          "processPagefileBytes": 38023168
+        },
+        "dockerStats": [
+          "{\"BlockIO\":\"0B / 0B\",\"CPUPerc\":\"0.00%\",\"Container\":\"59fd1f3d6b543e795069290001fba11048a5004b0f57757a16305206bb5f0f27\",\"ID\":\"59fd1f3d6b54\",\"MemPerc\":\"2.47%\",\"MemUsage\":\"25.27MiB / 1GiB\",\"Name\":\"gsm-map-osrm\",\"NetIO\":\"856kB / 1.63MB\",\"PIDs\":\"10\"}",
+          "{\"BlockIO\":\"0B / 0B\",\"CPUPerc\":\"0.00%\",\"Container\":\"af5f68c19008785d15d820556a286d9814114cfb87449d940b126e9fefec3911\",\"ID\":\"af5f68c19008\",\"MemPerc\":\"5.79%\",\"MemUsage\":\"59.28MiB / 1GiB\",\"Name\":\"gsm-map-osrm-hanoi-motorbike\",\"NetIO\":\"7.08MB / 11.8MB\",\"PIDs\":\"10\"}",
+          "{\"BlockIO\":\"0B / 0B\",\"CPUPerc\":\"0.00%\",\"Container\":\"343e1ee656e4a30c2645352268b7c22bd9b57d76c9914d88aea767764b6dc1df\",\"ID\":\"343e1ee656e4\",\"MemPerc\":\"4.00%\",\"MemUsage\":\"41MiB / 1GiB\",\"Name\":\"gsm-map-osrm-hanoi-car\",\"NetIO\":\"7.82MB / 12.7MB\",\"PIDs\":\"10\"}"
+        ],
+        "hardware": "{\"Name\":\"11th Gen Intel(R) Core(TM) i5-11320H @ 3.20GHz\",\"NumberOfCores\":4,\"NumberOfLogicalProcessors\":8}\n[{\"Name\":\"NVIDIA GeForce RTX 3050 Laptop GPU\",\"AdapterRAM\":4293918720,\"DriverVersion\":\"32.0.15.7700\"},{\"Name\":\"Intel(R) Iris(R) Xe Graphics\",\"AdapterRAM\":1073741824,\"DriverVersion\":\"30.0.100.9864\"}]"
+      },
+      "config": {
+        "regionId": "nvmr-hanoi-core",
+        "seed": "m3-live-0",
+        "fleetSize": 5000,
+        "carCount": 2000,
+        "bookingCount": 5000,
+        "horizonSeconds": 900,
+        "maxWaitSeconds": 300,
+        "onlineFraction": 0.6,
+        "onlineSchedule": [],
+        "workload": "burst",
+        "initialCandidates": 16,
+        "maxCandidates": 128,
+        "gridCellDegrees": 0.005
+      },
+      "status": "PASS",
+      "resources": {
+        "wallSeconds": 38.36006609999458,
+        "cpuSeconds": 33.0,
+        "cpuPercentOneCore": 86.02696333728336,
+        "peakRssBytesSampled": 153210880,
+        "processPeakRssBytes": 153210880,
+        "minimumAvailablePhysicalBytes": 3455934464,
+        "sampleIntervalSeconds": 0.05,
+        "sampleCount": 620
+      },
+      "counts": {
+        "requested": 5000,
+        "assigned": 5000,
+        "completed": 5000,
+        "unserved": 0,
+        "pending": 0,
+        "activeTrips": 0
+      },
+      "metrics": {
+        "eventsProcessed": 17069,
+        "peakEventQueue": 10220,
+        "peakPending": 1909,
+        "tableCandidates": 87181,
+        "searchBudgetExhaustions": 36,
+        "dispatchAttempts": 10873,
+        "dispatchVersion": "grid-fifo/v1",
+        "preparationMilliseconds": 2419.918500003405,
+        "totalMilliseconds": 38288.8149000064,
+        "routing": {
+          "CAR": {
+            "requests": {
+              "nearest": 24,
+              "table": 1350,
+              "route": 820,
+              "routeCacheHits": 1865,
+              "tableCacheHits": 3885
+            },
+            "requestFailures": 0,
+            "latencyMilliseconds": {
+              "count": 2194,
+              "p50": 7.560500002000481,
+              "p95": 10.895600004005246,
+              "total": 17744.021300022723
+            },
+            "routeCacheSize": 820,
+            "tableCacheSize": 1350
+          },
+          "MOTORBIKE": {
+            "requests": {
+              "nearest": 24,
+              "table": 1129,
+              "route": 902,
+              "routeCacheHits": 3482,
+              "tableCacheHits": 5302
+            },
+            "requestFailures": 0,
+            "latencyMilliseconds": {
+              "count": 2055,
+              "p50": 7.361100011621602,
+              "p95": 9.887499996693805,
+              "total": 15886.486300310935
+            },
+            "routeCacheSize": 902,
+            "tableCacheSize": 1129
+          }
+        }
+      },
+      "routingIdentities": {
+        "CAR": {
+          "regionId": "nvmr-hanoi-core",
+          "vehicleType": "CAR",
+          "profile": "car",
+          "profileSha256": "cb3df0546318665609606b746a1297f3d65ca3c2ff825f8a6f3c57247d86a2d3",
+          "graphManifestSha256": "a24d4957a01ceeb04a0de1ad680fe4c5dd51732a7b381d9368e249a65c1b29b5",
+          "sourceSha256": "2fbd2ee6b4dc151eecf04fa6823cddf584b47423e190118b10fce8b6115e9d8a",
+          "extractSha256": "18fd3892f6d766387f2c3217d5d104e09a9319d3905a9172834b21c0064d6308",
+          "algorithm": "mld"
+        },
+        "MOTORBIKE": {
+          "regionId": "nvmr-hanoi-core",
+          "vehicleType": "MOTORBIKE",
+          "profile": "motorbike",
+          "profileSha256": "075ecdbc70a3e75c4338d2c6a41597c132a1837ec2d27f1c2fcdd824a788b209",
+          "graphManifestSha256": "fb97489d066397b11cb9178238cd56a5f52281bcf5711430bb7cf411496ca455",
+          "sourceSha256": "2fbd2ee6b4dc151eecf04fa6823cddf584b47423e190118b10fce8b6115e9d8a",
+          "extractSha256": "18fd3892f6d766387f2c3217d5d104e09a9319d3905a9172834b21c0064d6308",
+          "algorithm": "mld"
+        }
+      },
+      "simulationDurationSeconds": 900,
+      "provenance": {
+        "catalogFingerprint": "eb6e3288f8346294b07fcff49992d82bffe0e830784b02283772302d93810ae3",
+        "catalog": {
+          "extract_sha256": "18fd3892f6d766387f2c3217d5d104e09a9319d3905a9172834b21c0064d6308",
+          "streets_sha256": "7230c17749cf16b4d09751ead369ab52b418b32c866f15599f1ccf0897f61244",
+          "image_digest": "ghcr.io/project-osrm/osrm-backend@sha256:855614a38f464b0558a2ad6eaa7cb8c139f39887da9b38b485ce453c6e6e6124",
+          "profile_sha256": "cb3df0546318665609606b746a1297f3d65ca3c2ff825f8a6f3c57247d86a2d3",
+          "profile": "car",
+          "algorithm": "mld",
+          "router_url": "http://127.0.0.1:5001",
+          "max_snap_meters": 100.0,
+          "display_bbox": [
+            105.802,
+            21.002,
+            105.875,
+            21.055
+          ],
+          "sampling_bbox": [
+            105.823,
+            21.0186,
+            105.84700000000001,
+            21.038400000000003
+          ],
+          "candidate_version": 2,
+          "region_id": "nvmr-hanoi-core",
+          "routing_bbox": [
+            105.762,
+            20.962,
+            105.915,
+            21.095
+          ],
+          "route_validation_bbox": [
+            105.762,
+            20.962,
+            105.915,
+            21.095
+          ],
+          "artifact_identity": {
+            "region_id": "nvmr-hanoi-core",
+            "config_sha256": "91c114a869a0eebe23d91df77641b9dd2f52afb7b7d09e941f249f78cfc9f05c",
+            "pipeline_version": "hanoi-car-pilot/v1"
+          },
+          "source_sha256": "2fbd2ee6b4dc151eecf04fa6823cddf584b47423e190118b10fce8b6115e9d8a",
+          "graph_manifest_sha256": "a24d4957a01ceeb04a0de1ad680fe4c5dd51732a7b381d9368e249a65c1b29b5"
+        }
+      },
+      "environmentAfter": {
+        "platform": "Windows-10-10.0.26300-SP0",
+        "python": "3.11.9",
+        "cpuCount": 8,
+        "processor": "Intel64 Family 6 Model 140 Stepping 2, GenuineIntel",
+        "memory": {
+          "totalPhysicalBytes": 16948453376,
+          "availablePhysicalBytes": 3662385152,
+          "processRssBytes": 148709376,
+          "processPeakRssBytes": 153210880,
+          "processPagefileBytes": 134463488
+        },
+        "dockerStats": [
+          "{\"BlockIO\":\"0B / 0B\",\"CPUPerc\":\"0.00%\",\"Container\":\"59fd1f3d6b543e795069290001fba11048a5004b0f57757a16305206bb5f0f27\",\"ID\":\"59fd1f3d6b54\",\"MemPerc\":\"2.47%\",\"MemUsage\":\"25.27MiB / 1GiB\",\"Name\":\"gsm-map-osrm\",\"NetIO\":\"856kB / 1.63MB\",\"PIDs\":\"10\"}",
+          "{\"BlockIO\":\"0B / 0B\",\"CPUPerc\":\"0.00%\",\"Container\":\"af5f68c19008785d15d820556a286d9814114cfb87449d940b126e9fefec3911\",\"ID\":\"af5f68c19008\",\"MemPerc\":\"5.75%\",\"MemUsage\":\"58.92MiB / 1GiB\",\"Name\":\"gsm-map-osrm-hanoi-motorbike\",\"NetIO\":\"8.99MB / 14.9MB\",\"PIDs\":\"10\"}",
+          "{\"BlockIO\":\"0B / 0B\",\"CPUPerc\":\"0.00%\",\"Container\":\"343e1ee656e4a30c2645352268b7c22bd9b57d76c9914d88aea767764b6dc1df\",\"ID\":\"343e1ee656e4\",\"MemPerc\":\"4.08%\",\"MemUsage\":\"41.77MiB / 1GiB\",\"Name\":\"gsm-map-osrm-hanoi-car\",\"NetIO\":\"10.1MB / 16.3MB\",\"PIDs\":\"10\"}"
+        ],
+        "hardware": "{\"Name\":\"11th Gen Intel(R) Core(TM) i5-11320H @ 3.20GHz\",\"NumberOfCores\":4,\"NumberOfLogicalProcessors\":8}\n[{\"Name\":\"NVIDIA GeForce RTX 3050 Laptop GPU\",\"AdapterRAM\":4293918720,\"DriverVersion\":\"32.0.15.7700\"},{\"Name\":\"Intel(R) Iris(R) Xe Graphics\",\"AdapterRAM\":1073741824,\"DriverVersion\":\"30.0.100.9864\"}]"
+      }
+    }
+  ]
+}
