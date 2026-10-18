@@ -1,0 +1,8 @@
+{
+  "vehicleType": "MOTORBIKE",
+  "profile": "motorbike",
+  "artifactVersion": "nvmr-regional-electric-motorcycle/v1",
+  "osrm_base_url": "http://127.0.0.1:5004",
+  "container_name": "gsm-map-osrm-bac-ninh-motorbike",
+  "graph_basename": "bac-ninh-motorbike"
+}

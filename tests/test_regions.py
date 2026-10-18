@@ -128,7 +128,7 @@ def test_unconfigured_hanoi_not_ready_and_public_metadata_redacted():
     client = TestClient(create_app(registry=registry))
     payload = client.get('/api/regions').json()
     assert payload["defaultRegionId"] == "hcm-center"
-    assert [r["id"] for r in payload["regions"]] == ["hcm-center", "nvmr-hanoi-core"]
+    assert [r["id"] for r in payload["regions"]] == ["hcm-center", "nvmr-hanoi-core", "nvmr-bac-ninh-core"]
     text = json.dumps(payload)
     assert "127.0.0.1" not in text and "data/" not in text and "TIEN DAT" not in text
     for path in ('route', 'booking-simulation/prepare', 'voucher-experiment/prepare'):

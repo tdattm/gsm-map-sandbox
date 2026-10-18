@@ -139,7 +139,8 @@ async def public_region_status(context):
         pbf = {"state": "not_prepared", "size_bytes": None, "format_verified": False, "osmium_available": False}
         artifacts = {"map_ready": False, "graph_ready": False, "extracted_ready": False}
         router, ready = {"state": "not_configured"}, False
-    reason = "" if ready else (context.unavailable_reason or "Dữ liệu bản đồ hoặc bộ định tuyến CAR cục bộ chưa sẵn sàng.")
+    mode = getattr(context, 'vehicle_type', 'CAR')
+    reason = "" if ready else (context.unavailable_reason or f"Dữ liệu bản đồ hoặc bộ định tuyến {mode} cục bộ chưa sẵn sàng cho {context.id}.")
     region = context.region
     return {"regionId": context.id, "state": "ready" if ready else "not_ready", "ready": ready,
             "readinessReason": reason,

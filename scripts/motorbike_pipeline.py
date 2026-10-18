@@ -11,13 +11,27 @@ from scripts.pipeline import execute, image_lock, refuse_existing, sha256, write
 from scripts.region_pipeline import check_files, checked_manifest, profile_evidence
 
 
+def preserve_router_evidence(path, proof):
+    """Reuse identical historical proof bytes/mtime; never replace a mismatch."""
+    path = Path(path)
+    if path.exists():
+        if json.loads(path.read_text(encoding='utf-8')) != json.loads(json.dumps(proof)):
+            raise RuntimeError('Existing MOTORBIKE router evidence differs; refusing overwrite')
+        print('REUSE unchanged graph-specific MOTORBIKE router evidence')
+    else:
+        write_json(path, proof)
+
+
 def run(settings,args):
     c=resolve_mode(default_registry(settings),args.region,'MOTORBIKE')
     if args.action not in ('routing','serve'):
         raise RuntimeError('MOTORBIKE reuses CAR verified extract/render; use --profile car for verify/extract/display')
     print(json.dumps({'region':c.id,'mode':'MOTORBIKE','identity':c.artifact_identity,'output':str(c.routing_dir)}))
     if args.dry_run:
-        print('PREFLIGHT: read-only existing CAR inputs; isolated MOTORBIKE graph/service 5002; no writes');return 0
+        print(f'PREFLIGHT: read-only existing CAR inputs; isolated MOTORBIKE graph/service {c.osrm_base_url}; no writes');return 0
+    if c.id == 'nvmr-bac-ninh-core':
+        from scripts.regional_resources import preflight
+        preflight(c, args.action)
     # Do not mutate/rebuild shared CAR source or render artifacts.
     from backend.app.dataset import artifact_status,pbf_status
     if not pbf_status(c.base)['format_verified'] or not artifact_status(c.base)['map_ready']:
@@ -59,23 +73,27 @@ def run(settings,args):
         raise RuntimeError('Graph/profile/input identity mismatch; refusing overwrite')
     check_files(directory,data['artifact_sha256'])
     if args.action=='routing':print('REUSE verified MOTORBIKE MLD graph');return 0
-    config=json.loads((ROOT/'config/regions/nvmr-hanoi-core-motorbike.json').read_text())
-    name=config['container_name']; port='5002'
+    config=json.loads((ROOT/f'config/regions/{c.id}-motorbike.json').read_text(encoding='utf-8'))
+    from urllib.parse import urlsplit
+    name=config['container_name']; port=str(urlsplit(c.osrm_base_url).port)
     existing=subprocess.run(['docker','inspect',name],capture_output=True,text=True)
     cmd=['osrm-routed','--algorithm','mld',graph]
     if existing.returncode==0:
         d=json.loads(existing.stdout)[0]
         if (d['Config']['Image']!=image or d['Config']['Cmd']!=cmd
             or d['Config'].get('Labels',{}).get('nvmr-mode')!='MOTORBIKE'
+            or (c.id != 'nvmr-hanoi-core' and d['Config'].get('Labels',{}).get('nvmr-region')!=c.id)
             or not any(Path(m['Source']).resolve()==directory.resolve() and m['Destination']=='/data' and not m['RW'] for m in d['Mounts'])
             or d['HostConfig']['PortBindings'].get('5000/tcp')!=[{'HostIp':'127.0.0.1','HostPort':port}]):
             raise RuntimeError('Existing container belongs to different config; not replacing')
         if not d['State']['Running']:execute(['docker','start',name])
     else:
         execute(['docker','run','--detach','--name',name,'--label','gsm-map-sandbox=true','--label','nvmr-mode=MOTORBIKE',
+            '--label',f'nvmr-region={c.id}',
             '--memory','1g','--cpus','2','-p',f'127.0.0.1:{port}:5000','--mount',mount+',readonly',image,*cmd])
     probes=[]
-    for point in [c.viewport_center,(105.841,21.028),(105.832,21.039)]:
+    region_config=json.loads((ROOT/f'config/regions/{c.id}.json').read_text(encoding='utf-8'))
+    for point in region_config.get('probe_points', [c.viewport_center,(105.841,21.028),(105.832,21.039)]):
         for attempt in range(30):
             try:
                 r=httpx.get(f'{c.osrm_base_url}/nearest/v1/driving/{point[0]},{point[1]}',timeout=3,trust_env=False)
@@ -84,7 +102,7 @@ def run(settings,args):
                 if attempt==29:raise
                 time.sleep(.5)
         probes.append(dict(point=point,location=w['location'],hint=w['hint']))
-    write_json(directory/'router-evidence.json',dict(identity=c.artifact_identity,manifest_sha256=sha256(manifest),
+    preserve_router_evidence(directory/'router-evidence.json',dict(identity=c.artifact_identity,manifest_sha256=sha256(manifest),
         container=name,image_digest=image,probes=probes))
     print('Serving MOTORBIKE; NOT READY until independent validation.json passes')
     return 0

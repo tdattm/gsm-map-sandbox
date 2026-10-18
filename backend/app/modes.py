@@ -21,6 +21,7 @@ class ModeContext:
     assumptions_sha256: str
     vehicle_type: str = 'MOTORBIKE'
     profile: str = 'motorbike'
+    artifact_version: str = 'hanoi-electric-motorcycle/v1'
 
     def __getattr__(self, name):
         return getattr(self.base, name)
@@ -29,7 +30,7 @@ class ModeContext:
     def artifact_identity(self):
         return {**self.base.artifact_identity, 'vehicle_type': self.vehicle_type,
                 'mode_config_sha256': self.config_sha256, 'profile_sha256': self.profile_sha256,
-                'assumptions_sha256': self.assumptions_sha256, 'version': 'hanoi-electric-motorcycle/v1'}
+                'assumptions_sha256': self.assumptions_sha256, 'version': self.artifact_version}
 
 
 def resolve_mode(registry, region_id, mode):
@@ -38,16 +39,19 @@ def resolve_mode(registry, region_id, mode):
         return base
     if mode != 'MOTORBIKE':
         raise HTTPException(404, {'code': 'UNKNOWN_VEHICLE_TYPE', 'message': 'Loại dịch vụ không hợp lệ.'})
-    if region_id != 'nvmr-hanoi-core':
-        raise HTTPException(503, {'code': 'MODE_NOT_READY', 'message': 'MOTORBIKE chỉ hỗ trợ pilot Hanoi Core.'})
-    path = ROOT/'config/regions/nvmr-hanoi-core-motorbike.json'
+    versions = {'nvmr-hanoi-core': 'hanoi-electric-motorcycle/v1',
+                'nvmr-bac-ninh-core': 'nvmr-regional-electric-motorcycle/v1'}
+    if region_id not in versions:
+        raise HTTPException(503, {'code': 'MODE_NOT_READY', 'message': 'Khu vực chưa có MOTORBIKE profile được kiểm chứng.'})
+    path = ROOT/f'config/regions/{region_id}-motorbike.json'
     config = json.loads(path.read_text(encoding='utf-8'))
-    if (config['vehicleType'],config['profile'],config['artifactVersion']) != ('MOTORBIKE','motorbike','hanoi-electric-motorcycle/v1'):
+    if (config['vehicleType'],config['profile'],config['artifactVersion']) != ('MOTORBIKE','motorbike',versions[region_id]):
         raise ValueError('Unsupported server mode/profile/version')
     from .config import Settings
     return ModeContext(base, base.routing_dir.parent/'motorbike', config['graph_basename'],
                        Settings.local_router_only(config['osrm_base_url']), digest(path),
-                       digest(ROOT/'profiles/motorbike.lua'),digest(ROOT/'profiles/motorbike.json'))
+                       digest(ROOT/'profiles/motorbike.lua'),digest(ROOT/'profiles/motorbike.json'),
+                       artifact_version=config['artifactVersion'])
 
 
 def motor_artifacts(context):
@@ -70,10 +74,22 @@ def motor_artifacts(context):
         validation = json.loads((context.routing_dir/'validation.json').read_text(encoding='utf-8'))
         valid = valid and validation['status'] == 'PASS' and validation['manifest_sha256'] == digest(context.routing_dir/'manifest.json')
         valid = valid and not (context.routing_dir/'.validation-incomplete').exists()
-        valid = valid and validation['validator_sha256'] == digest(ROOT/'scripts/validate_motorbike.py')
-        for key,name in [('synthetic_sha256','synthetic-validation.json'),('real_oneway_sha256','osm-oneway-nodes.json'),('directed_cases_sha256','real-mode-cases.json')]:
-            evidence=ROOT/'docs/nvmr/m2-evidence'/name
-            valid = valid and validation[key] == digest(evidence) and json.loads(evidence.read_text(encoding='utf-8'))['status']=='PASS'
+        if context.id == 'nvmr-hanoi-core':
+            valid = valid and validation['validator_sha256'] == digest(ROOT/'scripts/validate_motorbike.py')
+            for key,name in [('synthetic_sha256','synthetic-validation.json'),('real_oneway_sha256','osm-oneway-nodes.json'),('directed_cases_sha256','real-mode-cases.json')]:
+                evidence=ROOT/'docs/nvmr/m2-evidence'/name
+                valid = valid and validation[key] == digest(evidence) and json.loads(evidence.read_text(encoding='utf-8'))['status']=='PASS'
+        else:
+            # Bac Ninh readiness is bound to its own regional source/OD/node proof.
+            valid = valid and validation['regionId'] == context.id
+            valid = valid and validation['validator_sha256'] == digest(ROOT/'scripts/validate_regional_routing.py')
+            evidence_root = ROOT/'docs/nvmr/r1a-evidence/gis'/context.id
+            for name in ('synthetic-validation.json','regional-routing.json'):
+                evidence = evidence_root/name
+                proof = json.loads(evidence.read_text(encoding='utf-8'))
+                valid = valid and validation['evidence_sha256'][name] == digest(evidence) and proof['status'] == 'PASS'
+            valid = valid and proof['regionId'] == context.id and proof['extractSha256'] == graph['extract_sha256']
+            valid = valid and proof['routingIdentities']['MOTORBIKE']['graphManifestSha256'] == digest(context.routing_dir/'manifest.json')
         return {**status, 'graph_ready': bool(valid), 'routing_manifest': graph}
     except (OSError,ValueError,KeyError,TypeError):
         return {**status, 'graph_ready': False, 'routing_manifest': None}

@@ -40,13 +40,14 @@ class RegionContext:
     enabled: bool = True
     unavailable_reason: str = ""
     artifact_config_sha256: str = ""
+    pipeline_version: str = "hanoi-car-pilot/v1"
 
     @property
     def artifact_identity(self):
         if not self.artifact_config_sha256:
             return None  # Legacy HCM and explicit synthetic test contexts.
         return {"region_id": self.id, "config_sha256": self.artifact_config_sha256,
-                "pipeline_version": "hanoi-car-pilot/v1"}
+                "pipeline_version": self.pipeline_version}
 
     def __post_init__(self):
         object.__setattr__(self, "region", FrozenRegion.model_validate(self.region.model_dump()))
@@ -114,4 +115,19 @@ def default_registry(settings: Settings) -> RegionRegistry:
         graph_basename=config.get("graph_basename", "hanoi-core"), osrm_base_url=config.get("osrm_base_url", ""), osrm_timeout_seconds=settings.osrm_timeout_seconds,
         max_snap_meters=settings.max_snap_meters, enabled=config.get("enabled", False),
         artifact_config_sha256=hashlib.sha256(config_bytes).hexdigest())
-    return RegionRegistry({hcm.id: hcm, hanoi.id: hanoi})
+    # Keep the historical Hanoi configuration bytes/identity untouched.
+    bac_bytes = (Path(__file__).resolve().parents[2] / "config/regions/nvmr-bac-ninh-core.json").read_bytes()
+    bac = json.loads(bac_bytes)
+    w, s, e, n = bac["viewport_bbox"]
+    bac_region = FrozenRegion.model_validate({**region.model_dump(), "name": bac["label"],
+        "display_bbox": bac["viewport_bbox"], "routing_buffer_degrees": bac["routing_buffer_degrees"], "boundary_note": bac["note"]})
+    base = settings.resolve("data/regions/nvmr-bac-ninh-core")
+    bac_ninh = RegionContext(id="nvmr-bac-ninh-core", region=bac_region,
+        viewport_center=((w+e)/2, (s+n)/2), viewport_zoom=bac["viewport_zoom"],
+        operating_bbox=bac["operating_bbox"], routing_bbox=bac["routing_bbox"], render_bbox=bac["render_bbox"],
+        pbf_path=settings.pbf_path, map_path=base/"render/streets.geojson", routing_dir=base/"routing/car",
+        extracted_path=base/"extracted/coverage.osm.pbf", graph_basename=bac["graph_basename"],
+        osrm_base_url=bac["osrm_base_url"], osrm_timeout_seconds=settings.osrm_timeout_seconds,
+        max_snap_meters=settings.max_snap_meters, enabled=bac["enabled"],
+        artifact_config_sha256=hashlib.sha256(bac_bytes).hexdigest(), pipeline_version=bac["pipeline_version"])
+    return RegionRegistry({hcm.id: hcm, hanoi.id: hanoi, bac_ninh.id: bac_ninh})

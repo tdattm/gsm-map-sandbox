@@ -1,4 +1,4 @@
-"""Allowlisted Hanoi CAR pilot pipeline; legacy HCM commands remain in pipeline.py.
+"""Allowlisted regional CAR pilot pipeline; legacy HCM commands remain in pipeline.py.
 
 Every output stage is write-once and content verified on reuse. Incomplete or
 stale artifacts require a deliberately chosen new namespace/config, never overwrite.
@@ -8,6 +8,7 @@ import shutil
 import subprocess
 from datetime import datetime, timezone
 from pathlib import Path
+from urllib.parse import urlsplit
 
 from backend.app.regions import default_registry
 from scripts.pipeline import ROOT, Osmium, execute, image_lock, refuse_existing, sha256, write_json
@@ -44,14 +45,18 @@ def run(settings, args):
     source_path = base/'source-verification.json'
     graph_pbf = graph_dir/f'{c.graph_basename}.osm.pbf'
     manifest_path, incomplete = graph_dir/'manifest.json', graph_dir/'.incomplete'
-    config = json.loads((ROOT/'config/regions/nvmr-hanoi-core.json').read_text(encoding='utf-8'))
+    config = json.loads((ROOT/f'config/regions/{c.id}.json').read_text(encoding='utf-8'))
+    port = str(urlsplit(c.osrm_base_url).port)
     print(json.dumps({'region': c.id, 'profile': args.profile, 'identity': identity,
         'source': str(c.pbf_path), 'outputs': str(base), 'operating': c.operating_bbox,
         'display': c.region.display_bbox, 'routing': c.routing_bbox, 'render': c.render_bbox}, ensure_ascii=False), flush=True)
     if dry:
         print(f'PREFLIGHT {args.action}: input read-only; outputs isolated; no Docker/data reads or writes')
-        print(f'osmium smart extract {c.routing_bbox}; render {c.render_bbox}; OSRM /opt/car.lua MLD; port 5001')
+        print(f'osmium smart extract {c.routing_bbox}; render {c.render_bbox}; OSRM /opt/car.lua MLD; port {port}')
         return 0
+    if c.id == 'nvmr-bac-ninh-core':
+        from scripts.regional_resources import preflight
+        preflight(c, args.action)
     if execute(['docker','info','--format','{{.OSType}}'], capture=True).strip() != 'linux':
         raise RuntimeError('Linux Docker required')
     now = datetime.now(timezone.utc).isoformat()
@@ -148,20 +153,20 @@ def run(settings, args):
                 or container['Config']['Image']!=image
                 or container['Config']['Cmd']!=['osrm-routed','--algorithm','mld',f'/data/{c.graph_basename}.osrm']
                 or not any(Path(m['Source']).resolve()==graph_dir.resolve() and m['Destination']=='/data' and not m['RW'] for m in container['Mounts'])
-                or container['HostConfig']['PortBindings'].get('5000/tcp')!=[{'HostIp':'127.0.0.1','HostPort':'5001'}]):
+                or container['HostConfig']['PortBindings'].get('5000/tcp')!=[{'HostIp':'127.0.0.1','HostPort':port}]):
             raise RuntimeError('Container identity/mount/port mismatch; not replacing it')
         if not container['State']['Running']:
             execute(['docker','start',name])
     else:
         execute(['docker','run','--detach','--name',name,'--label',f'nvmr-region={c.id}',
-            '--label','gsm-map-sandbox=true','--memory','1g','--cpus','2','-p','127.0.0.1:5001:5000',
+            '--label','gsm-map-sandbox=true','--memory','1g','--cpus','2','-p',f'127.0.0.1:{port}:5000',
             '--mount',mount+',readonly',image,'osrm-routed','--algorithm','mld',f'/data/{c.graph_basename}.osrm'])
     # Graph-specific hints (OSRM graph checksum) and positions bind readiness to this
     # inspected image/read-only mount, rather than any /nearest HTTP success.
     import httpx
     import time
     probes=[]
-    for point in [c.viewport_center,(105.841,21.028),(105.832,21.039)]:
+    for point in config.get('probe_points', [c.viewport_center,(105.841,21.028),(105.832,21.039)]):
         for attempt in range(30):
             try:
                 response=httpx.get(f'{c.osrm_base_url}/nearest/v1/driving/{point[0]},{point[1]}',trust_env=False,timeout=3)
