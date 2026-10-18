@@ -86,6 +86,20 @@ class InstrumentedTravel(LocalTravel):
                 'total': sum(values)}, 'routeCacheSize': len(self.cache), 'tableCacheSize': len(self.table_cache)}
 
 
+class RegionalInstrumentedTravel(InstrumentedTravel):
+    """V4 Table sources are already verified vehicle positions, never new anchors.
+
+    OSRM may otherwise choose a distant large-component phantom for a source on
+    a small component. Keep the existing one-meter continuity requirement in
+    the query as well as response validation; disconnected ETAs remain null.
+    """
+    async def service(self, name, points, params):
+        if name == 'table':
+            params = {**params, 'radiuses': ';'.join(
+                ['1']*(len(points)-1)+[str(self.settings.max_snap_meters)])}
+        return await super().service(name, points, params)
+
+
 @asynccontextmanager
 async def live_travels(config):
     registry = default_registry(Settings())
@@ -138,7 +152,7 @@ async def execute_live(config, run_id, cancelled=None, progress=None, prepared=N
         return result
 
 
-async def run_claimed(store, status, executor=execute_live, stopping=lambda: False):
+async def run_claimed(store, status, executor=None, stopping=lambda: False):
     id = status['id']
     last_progress = 0.
     async def cancelled():
@@ -157,8 +171,15 @@ async def run_claimed(store, status, executor=execute_live, stopping=lambda: Fal
         import hashlib
         if hashlib.sha256(json.dumps(manifest['config'], sort_keys=True).encode()).hexdigest() != manifest['inputHash']:
             raise ValueError('Immutable run configuration modified')
-        config = SimulationConfig.model_validate(manifest['config'])
-        result = await executor(config, id, cancelled, progress,
+        if manifest['config'].get('schemaVersion') == 'gsm-nvmr-regional-scenario/v1':
+            from .regional_simulation import RegionalScenarioConfig
+            from .regional_jobs import execute_regional_live
+            config = RegionalScenarioConfig.model_validate(manifest['config'])
+            selected_executor = executor or execute_regional_live
+        else:
+            config = SimulationConfig.model_validate(manifest['config'])
+            selected_executor = executor or execute_live
+        result = await selected_executor(config, id, cancelled, progress,
             lambda value: atomic_json(store.path(id)/'prepared-input.json', value))
         if stopping():
             store.cancel(id)

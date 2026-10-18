@@ -97,9 +97,10 @@ class JobStore:
                 error('JOB_QUEUE_FULL', 'Bounded simulation queue is full', 429)
             id = uuid.uuid4().hex
             raw = config.model_dump()
-            manifest = {'schemaVersion': 'gsm-simulation-job/v1', 'id': id, 'config': raw,
+            regional = raw.get('schemaVersion') == 'gsm-nvmr-regional-scenario/v1'
+            manifest = {'schemaVersion': 'gsm-nvmr-regional-job/v1' if regional else 'gsm-simulation-job/v1', 'id': id, 'config': raw,
                 'inputHash': hashlib.sha256(json.dumps(raw, sort_keys=True).encode()).hexdigest(),
-                'createdAt': timestamp(), 'engineVersion': 'heap-grid/v1'}
+                'createdAt': timestamp(), 'engineVersion': 'heap-grid-regional/v1' if regional else 'heap-grid/v1'}
             atomic_json(self.path(id)/'input.json', manifest)
             status = {'id': id, 'runId': id, 'status': 'QUEUED', 'progress': 0.,
                 'createdAt': manifest['createdAt'], 'updatedAt': timestamp(), 'config': raw, 'inputHash': manifest['inputHash']}
@@ -194,8 +195,14 @@ def create_router(store=None):
     router = APIRouter(prefix='/api/v3/simulation/jobs', tags=['NVMR scalable simulation'])
     cache = IdleResultCache()
 
+    def legacy_status(id):
+        value = store.read(id)
+        if value['config'].get('schemaVersion') == 'gsm-nvmr-regional-scenario/v1':
+            error('JOB_NOT_FOUND', 'No v3 simulation job with this identity', 404)
+        return value
+
     def result(id):
-        if store.read(id)['status'] != 'COMPLETED':
+        if legacy_status(id)['status'] != 'COMPLETED':
             error('RESULT_NOT_FINAL', 'Only a completed job exposes its final result')
         return cache.get(id, lambda: store.result(id))
 
@@ -216,10 +223,11 @@ def create_router(store=None):
 
     @router.get('/{id}')
     def status(id: str):
-        return store.read(id)
+        return legacy_status(id)
 
     @router.post('/{id}/cancel')
     def cancel(id: str):
+        legacy_status(id)
         return store.cancel(id)
 
     @router.get('/{id}/result')

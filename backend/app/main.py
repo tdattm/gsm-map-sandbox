@@ -35,6 +35,8 @@ def create_app(settings: Settings | None = None, registry: RegionRegistry | None
     app.include_router(create_router())
     preparation_lock = asyncio.Semaphore(2)
     registry = registry or default_registry(settings)
+    from .regional_jobs import create_regional_router
+    app.include_router(create_regional_router(registry=registry))
     settings = registry.resolve("hcm-center")  # Pin legacy requests to the same immutable HCM snapshot.
 
     @app.exception_handler(HTTPException)

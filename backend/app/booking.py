@@ -241,7 +241,7 @@ class LocalTravel:
         try:
             async def query(client):
                 return await client.get(f"{self.settings.osrm_base_url}/{name}/v1/driving/{coordinates}",
-                    params={**params, "radiuses": ";".join(str(self.settings.max_snap_meters) for _ in points)})
+                    params={"radiuses": ";".join(str(self.settings.max_snap_meters) for _ in points), **params})
             if self.client is not None:
                 response = await query(self.client)
             else:
