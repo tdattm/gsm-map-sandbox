@@ -33,11 +33,21 @@ describe('M3 job lifecycle isolation',()=>{
     await act(()=>result.current.create(100,0,.8,'seed'))
     await act(()=>vi.advanceTimersByTimeAsync(1000))
     expect(mocked.mock.calls.filter(([path])=>path.includes('/snapshot')).length).toBe(1)
+    expect(vi.getTimerCount()).toBe(0) // Paused projection has no 100ms wake loop.
     act(()=>result.current.seek(10))
     await act(()=>vi.advanceTimersByTimeAsync(1000))
     expect(mocked.mock.calls.filter(([path])=>path.includes('/snapshot')).length).toBe(2)
     expect(result.current.snapshot?.simulationTimeSeconds).toBe(10)
     unmount()
+  })
+  it('Meeting changes only presentation cadence and does not edit the submitted scientific config',async()=>{
+    const bodies:unknown[]=[]
+    mocked.mockImplementation((_path,options)=>{if(options?.body)bodies.push(JSON.parse(String(options.body)));return Promise.resolve({id:'done',status:'CANCELLED',progress:0})})
+    const standard=renderHook(()=>useSimulation('standard')),meeting=renderHook(()=>useSimulation('meeting'))
+    await act(()=>standard.result.current.create(100,20,.8,'same',{carCount:40,horizonSeconds:900,maxWaitSeconds:300}))
+    await act(()=>meeting.result.current.create(100,20,.8,'same',{carCount:40,horizonSeconds:900,maxWaitSeconds:300}))
+    expect(bodies).toHaveLength(2);expect(bodies[0]).toEqual(bodies[1])
+    standard.unmount();meeting.unmount()
   })
   it('does not resurrect a late create response after reset / fixture change',async()=>{
     const pending=deferred<unknown>();mocked.mockReturnValue(pending.promise)

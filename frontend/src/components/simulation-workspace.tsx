@@ -10,19 +10,22 @@ import { emptyStyle, localStyle, regionMapStyle } from '@/lib/map-style'
 import { MobilityIcon } from './mobility-icon'
 import { SimulationRuntime, simulationErrorText } from './simulation-runtime'
 import { legProgress } from '@/lib/simulation'
+import { initialPresentationProfile, presentationPolicy, type PresentationProfile } from '@/lib/simulation-profile'
 
 const scales=[100,500,1000,3000,5000]
 const countLabels:Record<string,string>={total:'Tổng đội xe',online:'Online',offline:'Offline',idle:'Rảnh',assigned:'Đang đến đón',onTrip:'Đang chở khách',moving:'Đang di chuyển'}
 const stateLabels:Record<string,string>={OFFLINE:'Offline',IDLE:'Rảnh',ASSIGNED:'Đang đến đón',ON_TRIP:'Đang chở khách'}
 const statuses:Record<string,string>={QUEUED:'Đang chờ worker',RUNNING:'Đang tính toán',COMPLETED:'Đã tính xong',FAILED:'Không hoàn thành',CANCELLED:'Đã hủy',INTERRUPTED:'Bị gián đoạn'}
 export default function SimulationWorkspace({previousRegion}:{previousRegion:string}){
-  const session=useSimulation(),telemetry=useRef(emptyTelemetry())
+  const [profile,setProfile]=useState<PresentationProfile>(initialPresentationProfile)
+  const session=useSimulation(profile),telemetry=useRef(emptyTelemetry())
   const clock=session.clock.getSnapshot()
   const query=useMemo(()=>new URLSearchParams(window.location.search),[])
   const [size,setSize]=useState(()=>{const n=Number(query.get('fleet'));return scales.includes(n)?n:100}),[carCount,setCarCount]=useState(()=>Math.round((Number(query.get('fleet'))||100)*.4)),[bookings,setBookings]=useState(20),[online,setOnline]=useState(.8),[seed,setSeed]=useState('m4-ux-pilot')
   const [horizon,setHorizon]=useState(900),[wait,setWait]=useState(300),[workload,setWorkload]=useState('typical'),[openId,setOpenId]=useState(''),[blank,setBlank]=useState(false),[retryMap,setRetryMap]=useState(0)
   const [mapHealth,setMapHealth]=useState<MapHealth>({state:'loading',message:'Đang tải bản đồ Hà Nội…',loaded:0,milliseconds:0})
   const [measurement,setMeasurement]=useState<Record<string,unknown>|null>(null),[measuring,setMeasuring]=useState(false),[seconds,setSeconds]=useState(30),[fixtureSize,setFixtureSize]=useState(100),[history,setHistory]=useState<Record<string,unknown>[]>([]),[queuedSeconds,setQueuedSeconds]=useState(0)
+  const [benchmarkPan,setBenchmarkPan]=useState(true),[benchmarkPlay,setBenchmarkPlay]=useState(true)
   const mounted=useRef(true)
   const [vehicleQuery,setVehicleQuery]=useState(''),[vehicleFilter,setVehicleFilter]=useState('ACTIVE'),[candidates,setCandidates]=useState<string[]>([])
   useEffect(()=>{setCandidates([]);setVehicleQuery('')},[session.snapshot?.runId])
@@ -45,14 +48,14 @@ export default function SimulationWorkspace({previousRegion}:{previousRegion:str
       const rows:Record<string,unknown>[]=[]
       for(const zoom of series?[11,13,16]:[null]) {
         if(!mounted.current)break
-        session.clock.play()
+        if(benchmarkPlay)session.clock.play();else session.clock.pause()
         if(zoom!==null)telemetry.current.zoomTo(zoom,zoom>=14)
         await new Promise<void>(resolve=>window.setTimeout(resolve,700))
         if(!mounted.current)break
-        const row=await telemetry.current.measure(seconds,()=>{session.clock.pause();return session.clock.getSnapshot().simulationTimeSeconds})
+        const row=await telemetry.current.measure(seconds,()=>{session.clock.pause();return session.clock.getSnapshot().simulationTimeSeconds},{pan:benchmarkPan})
         rows.push({...row,basemap:blank?'OFF':'HANOI_LOCAL_ON',mapHealth:healthAtStart})
       }
-      if(mounted.current){setMeasurement(series?{series:rows}:rows[0]??null);setHistory(old=>[...old,...rows])}
+      if(mounted.current){setMeasurement(series?{series:rows}:rows[0]??null);setHistory(old=>[...old,...rows].slice(-100))}
     }catch(e){if(mounted.current)setMeasurement({error:e instanceof Error?e.message:String(e)})}finally{if(mounted.current){if(wasPlaying)session.clock.play();else session.clock.pause();setMeasuring(false)}}
   }
   const download=()=>{const blob=new Blob([JSON.stringify(history,null,2)],{type:'application/json'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='m4-browser-measurements.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000)}
@@ -65,6 +68,8 @@ export default function SimulationWorkspace({previousRegion}:{previousRegion:str
           <p className="small-note">5.000 xe là stress case Hanoi Core, chưa phải phân bổ trên toàn NVMR. Mở rộng vùng là nhiệm vụ R1.</p>
         </section>
         <section className="simulation-card"><h2>Thiết lập mô phỏng mới</h2>
+        <label>Chế độ sử dụng<select aria-label="Chế độ sử dụng" value={profile} disabled={measuring} onChange={e=>{const next=e.target.value as PresentationProfile;setProfile(next);const url=new URL(window.location.href);url.searchParams.set('profile',next);window.history.replaceState(null,'',url)}}><option value="standard">Standard</option><option value="meeting">Meeting · tiết kiệm cập nhật</option><option value="benchmark">Benchmark</option></select></label>
+        <p className="small-note">{profile==='meeting'?'Meeting: snapshot tối đa 4 lần/giây, đồng hồ hiển thị 10 Hz. Phù hợp thử 10–100 xe; số xe, booking, seed và thuật toán không bị thay đổi.':'Standard/Benchmark: snapshot tối đa 10 lần/giây, đồng hồ hiển thị 30 Hz.'} Khi tạm dừng và thời gian không đổi, không poll snapshot. Meeting chưa phải chứng nhận Google Meet.</p>
         <form onSubmit={e=>{e.preventDefault();setMeasurement(null);void session.create(size,bookings,online,seed,{carCount,horizonSeconds:horizon,maxWaitSeconds:wait,workload})}}>
           <div className="simulation-form-grid"><label>Tổng đội xe<input aria-label="Tổng đội xe" type="number" min="1" max="5000" required value={size} onChange={e=>{const n=Number(e.target.value);setSize(n);setCarCount(Math.min(carCount,n))}}/></label>
           <label>Số xe CAR<input aria-label="Số xe CAR" type="number" min="0" max={size} required value={carCount} onChange={e=>setCarCount(+e.target.value)}/></label></div>
@@ -78,7 +83,7 @@ export default function SimulationWorkspace({previousRegion}:{previousRegion:str
         <details><summary>Mở run đã có</summary><form onSubmit={e=>{e.preventDefault();setMeasurement(null);void session.open(openId)}}><label>Mã run<input aria-label="Mã run" required value={openId} onChange={e=>setOpenId(e.target.value)}/></label><Button variant="outline" disabled={busy} type="submit">Mở kết quả</Button></form></details>
         </section>
         <section className="simulation-card"><h2>Tiến trình</h2><div role="status" aria-live="polite" className={`simulation-status status-${session.job?.status??'EMPTY'}`}>{session.loading?'Đang kết nối API…':session.job?`${statuses[session.job.status]} · ${session.job.status}`:'Chưa có mô phỏng · thiết lập kịch bản để bắt đầu'}</div>
-        <SimulationRuntime/>
+        <SimulationRuntime intervalMs={presentationPolicy[profile].healthMs}/>
         {session.job&&<><progress max="1" value={session.job.progress} aria-label="Tiến trình tính toán"/><p className="small-note">{Math.round(session.job.progress*100)}% · {session.job.id}</p></>}
         {session.job?.status==='QUEUED'&&<p className="small-note">Chờ {queuedSeconds} giây. {queuedSeconds>=10?'Worker có thể chưa chạy hoặc đang xử lý job khác. Kiểm tra terminal worker và cùng thư mục store.':'Job đã được lưu, chờ worker nhận.'} UI không có heartbeat để xác nhận worker đang hoạt động.</p>}
         {session.job?.config&&<details><summary>Cấu hình run và seed đã lưu</summary><pre>{JSON.stringify(session.job.config,null,2)}</pre></details>}
@@ -109,7 +114,9 @@ export default function SimulationWorkspace({previousRegion}:{previousRegion:str
         {session.routeError&&<p role="alert" className="error-text">Chi tiết/tuyến không khả dụng: {session.routeError}. Không tính lại bằng graph khác.<Button variant="outline" onClick={session.retryDetail}>Thử lại chi tiết</Button></p>}
         {session.snapshot&&<details><summary>Chi tiết snapshot</summary><p className="small-note">{session.snapshot.runId} · sequence {session.snapshot.sequenceNumber}<br/>Thời gian {session.snapshot.simulationTimeSeconds.toFixed(1)} s · chênh clock {(clock.simulationTimeSeconds-session.snapshot.simulationTimeSeconds).toFixed(1)} s</p></details>}
         </section>
-        <details className="simulation-card simulation-developer"><summary>Benchmark / Developer Tools</summary><p className="small-note">Đo render độc lập với throughput M3. Giữ tab foreground, không stress backend đồng thời, RAM khả dụng ≥2 GiB trước tăng tải. Nền Hà Nội mặc định bật. Mỗi zoom đo theo thời lượng chọn.</p>
+        <details className="simulation-card simulation-developer"><summary>Benchmark / Developer Tools</summary><p className="small-note">Đo render độc lập với throughput M3. Giữ tab foreground, không stress backend đồng thời. Theo dõi RAM/commit và paging khi tăng tải; ngưỡng tạo job theo workload được hiển thị ở Tiến trình. Nền Hà Nội mặc định bật. Mỗi zoom đo theo thời lượng chọn.</p>
+        <p><a href="/performance.html" target="_blank" rel="noreferrer">Mở Performance Lab · plain RAF / MapLibre isolation</a></p>
+        <label><input type="checkbox" checked={benchmarkPan} disabled={measuring} onChange={e=>setBenchmarkPan(e.target.checked)}/> Pan trong phép đo</label><label><input type="checkbox" checked={benchmarkPlay} disabled={measuring} onChange={e=>setBenchmarkPlay(e.target.checked)}/> Phát trong phép đo</label>
         <p className="small-note" data-testid="selected-detail-latency">Selected booking + hai route HTTP/validation: {session.detailLatencyMs===null?'chưa đo':`${session.detailLatencyMs.toFixed(1)} ms`}. Một sample, chưa phải p95/render latency.</p>
         <label>Quy mô fixture<select aria-label="Quy mô fixture" value={fixtureSize} onChange={e=>setFixtureSize(+e.target.value)}>{scales.map(n=><option key={n}>{n}</option>)}</select></label>
         <Button disabled={busy} variant="outline" onClick={()=>{session.fixture(fixtureSize);setMeasurement(null)}}>Tải fixture render {fixtureSize} xe</Button>

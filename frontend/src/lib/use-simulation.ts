@@ -2,11 +2,12 @@ import { useCallback, useEffect, useRef, useState } from 'react'
 import { api, ApiError } from './api'
 import { FleetClock } from './fleet-clock'
 import { fixtureSnapshot, SnapshotGate, validateSimulationRoute, validateBookingDetail, type BookingDetail, type SelectedJourney, type SimulationJob, type SimulationResult, type SimulationRoute, type SimulationSnapshot } from './simulation'
+import { presentationPolicy, type PresentationProfile } from './simulation-profile'
 
 const base='/api/v3/simulation/jobs',regionId='nvmr-hanoi-core'
 const terminal=(status:string)=>['COMPLETED','FAILED','CANCELLED','INTERRUPTED'].includes(status)
 const errorMessage=(e:unknown)=>e instanceof Error?e.message+(e instanceof ApiError?` (HTTP ${e.status})`:''):String(e)
-export function useSimulation() {
+export function useSimulation(profile:PresentationProfile='standard') {
   const [clock]=useState(()=>new FleetClock()),[job,setJob]=useState<SimulationJob|null>(null),[result,setResult]=useState<SimulationResult|null>(null)
   const [snapshot,setSnapshot]=useState<SimulationSnapshot|null>(null),[route,setRoute]=useState<SimulationRoute|null>(null),[selectedId,setSelectedId]=useState<string|null>(null),[error,setError]=useState(''),[routeError,setRouteError]=useState(''),[loading,setLoading]=useState(false),[fixtureSize,setFixtureSize]=useState<number|null>(null)
   const [pollEpoch,setPollEpoch]=useState(0)
@@ -14,16 +15,20 @@ export function useSimulation() {
   const [detailEpoch,setDetailEpoch]=useState(0)
   const [detailLatencyMs,setDetailLatencyMs]=useState<number|null>(null)
   const submitting=useRef(false)
+  const policy=presentationPolicy[profile]
+  useEffect(()=>{clock.setPresentationHz(policy.clockHz)},[clock,policy])
   const epoch=useRef(0),requests=useRef(new Set<AbortController>()),gate=useRef<SnapshotGate|null>(null)
   const reset=useCallback(()=>{epoch.current++;requests.current.forEach(c=>c.abort());requests.current.clear();clock.configure(0);setJob(null);setResult(null);setSnapshot(null);setRoute(null);setJourney(null);setSelectedId(null);setError('');setRouteError('');setFixtureSize(null);setLoading(false)},[clock])
   useEffect(()=>()=>{requests.current.forEach(c=>c.abort());clock.dispose()},[clock])
   const fixture=useCallback((size:number)=>{reset();setFixtureSize(size);clock.configure(3600);setSnapshot(fixtureSnapshot(size));setSelectedId('fixture-00000')},[clock,reset])
   useEffect(()=>{
     if(fixtureSize===null)return
-    let previousTime=-1
-    const timer=window.setInterval(()=>{const time=clock.getSnapshot().simulationTimeSeconds;if(time!==previousTime){previousTime=time;setSnapshot(fixtureSnapshot(fixtureSize,time))}},100)
-    return ()=>clearInterval(timer)
-  },[fixtureSize,clock])
+    let previousTime=clock.getSnapshot().simulationTimeSeconds,last=0,timer:number|undefined
+    const publish=()=>{timer=undefined;if(document.hidden)return;const time=clock.getSnapshot().simulationTimeSeconds;if(time!==previousTime){last=performance.now();previousTime=time;setSnapshot(fixtureSnapshot(fixtureSize,time))}}
+    const wake=()=>{if(timer===undefined&&!document.hidden)timer=window.setTimeout(publish,Math.max(0,policy.snapshotMs-(performance.now()-last)))}
+    const unsubscribe=clock.subscribe(wake);document.addEventListener('visibilitychange',wake)
+    return ()=>{unsubscribe();clearTimeout(timer);document.removeEventListener('visibilitychange',wake)}
+  },[fixtureSize,clock,policy])
   const create=async(fleetSize:number,bookingCount:number,onlineFraction:number,seed:string,options?:{carCount?:number;horizonSeconds?:number;maxWaitSeconds?:number;workload?:string})=>{
     if(submitting.current||loading||job&&['QUEUED','RUNNING'].includes(job.status))return
     submitting.current=true
@@ -54,20 +59,29 @@ export function useSimulation() {
   },[job?.id,job?.status,clock,pollEpoch])
   useEffect(()=>{
     if(!result)return
-    const controller=new AbortController();requests.current.add(controller);let timer:number|undefined
+    const controller=new AbortController();requests.current.add(controller);let timer:number|undefined,inFlight=false,lastStart=0
     let publishedKey:string|null=null
+    gate.current=new SnapshotGate(result.runId,regionId)
+    const wake=()=>{if(timer===undefined&&!controller.signal.aborted&&!document.hidden)timer=window.setTimeout(poll,Math.max(0,policy.snapshotMs-(performance.now()-lastStart)))}
     const poll=async()=>{
+      timer=undefined
+      if(inFlight||controller.signal.aborted||document.hidden)return
       const version=epoch.current,time=clock.getSnapshot().simulationTimeSeconds
       const key=`${version}:${time.toFixed(3)}`
-      if(key===publishedKey){timer=window.setTimeout(poll,100);return}
+      if(key===publishedKey)return
+      inFlight=true;lastStart=performance.now();let failed=false
       try {
         const next=await api<SimulationSnapshot>(`${base}/${encodeURIComponent(result.runId)}/snapshot?timeSeconds=${time.toFixed(3)}`,{signal:controller.signal})
         if(!controller.signal.aborted&&version===epoch.current&&gate.current?.accept(next)){publishedKey=key;setSnapshot(next);setError('')}
-      }catch(e){if(!controller.signal.aborted&&version===epoch.current)setError(errorMessage(e))}
-      if(!controller.signal.aborted)timer=window.setTimeout(poll,100)
+      }catch(e){failed=true;if(!controller.signal.aborted&&version===epoch.current)setError(errorMessage(e))}
+      inFlight=false
+      // Clock changes drive projections. A paused unchanged run has no polling loop.
+      if(!controller.signal.aborted&&!failed)wake()
+      else if(!controller.signal.aborted&&clock.getSnapshot().playbackStatus==='playing')timer=window.setTimeout(wake,2000)
     }
-    void poll();return ()=>{controller.abort();requests.current.delete(controller);clearTimeout(timer)}
-  },[result,clock])
+    const unsubscribe=clock.subscribe(wake);document.addEventListener('visibilitychange',wake)
+    void poll();return ()=>{controller.abort();requests.current.delete(controller);clearTimeout(timer);unsubscribe();document.removeEventListener('visibilitychange',wake)}
+  },[result,clock,policy,pollEpoch])
   const seek=useCallback((seconds:number)=>{epoch.current++;gate.current=result?new SnapshotGate(result.runId,regionId):null;setRoute(null);setSnapshot(null);clock.seek(seconds);if(fixtureSize!==null)setSnapshot(fixtureSnapshot(fixtureSize,clock.getSnapshot().simulationTimeSeconds))},[clock,result,fixtureSize])
   const vehicle=snapshot?.vehicles.find(v=>v.id===selectedId),bookingId=vehicle?.activeBookingId??null,identity=vehicle?.vehicleType
   useEffect(()=>{

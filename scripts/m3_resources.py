@@ -18,7 +18,7 @@ def memory():
             raise OSError('GlobalMemoryStatusEx failed')
         class Counters(ctypes.Structure):
             _fields_ = [('cb', ctypes.c_ulong), ('pageFaultCount', ctypes.c_ulong)]+[(n, ctypes.c_size_t) for n in
-                ('peakWorkingSet', 'workingSet', 'quotaPeakPagedPool', 'quotaPagedPool', 'quotaPeakNonPagedPool', 'quotaNonPagedPool', 'pagefile', 'peakPagefile')]
+                ('peakWorkingSet', 'workingSet', 'quotaPeakPagedPool', 'quotaPagedPool', 'quotaPeakNonPagedPool', 'quotaNonPagedPool', 'pagefile', 'peakPagefile', 'privateUsage')]
         counters = Counters()
         counters.cb = ctypes.sizeof(counters)
         ctypes.windll.kernel32.GetCurrentProcess.restype = ctypes.c_void_p
@@ -27,9 +27,18 @@ def memory():
         handle = ctypes.windll.kernel32.GetCurrentProcess()
         if not process_memory(handle, ctypes.byref(counters), counters.cb):
             raise OSError('GetProcessMemoryInfo failed')
+        class Performance(ctypes.Structure):
+            _fields_ = [('cb', ctypes.c_ulong)]+[(n, ctypes.c_size_t) for n in
+                ('commitTotal', 'commitLimit', 'commitPeak', 'physicalTotal', 'physicalAvailable', 'systemCache', 'kernelTotal', 'kernelPaged', 'kernelNonpaged', 'pageSize')]+[(n, ctypes.c_ulong) for n in ('handleCount', 'processCount', 'threadCount')]
+        info = Performance()
+        info.cb = ctypes.sizeof(info)
+        if not ctypes.windll.psapi.GetPerformanceInfo(ctypes.byref(info), info.cb):
+            raise OSError('GetPerformanceInfo failed')
         return {'totalPhysicalBytes': status.totalPhysical, 'availablePhysicalBytes': status.availablePhysical,
             'processRssBytes': counters.workingSet, 'processPeakRssBytes': counters.peakWorkingSet,
-            'processPagefileBytes': counters.pagefile}
+            'processPagefileBytes': counters.pagefile, 'processPrivateBytes': counters.privateUsage,
+            'systemCommitBytes': info.commitTotal*info.pageSize, 'systemCommitLimitBytes': info.commitLimit*info.pageSize,
+            'systemCommitAvailableBytes': (info.commitLimit-info.commitTotal)*info.pageSize}
     values = {}
     with open('/proc/meminfo', encoding='ascii') as stream:
         for line in stream:
@@ -90,6 +99,8 @@ class Monitor:
             'peakRssBytesSampled': max(s['processRssBytes'] for s in self.samples),
             'processPeakRssBytes': max(s['processPeakRssBytes'] for s in self.samples),
             'minimumAvailablePhysicalBytes': min(s['availablePhysicalBytes'] for s in self.samples),
+            'peakPrivateBytesSampled': max((s['processPrivateBytes'] for s in self.samples if 'processPrivateBytes' in s), default=None),
+            'minimumCommitHeadroomBytes': min((s['systemCommitAvailableBytes'] for s in self.samples if 'systemCommitAvailableBytes' in s), default=None),
             'sampleIntervalSeconds': self.interval, 'sampleCount': len(self.samples)}
 
 

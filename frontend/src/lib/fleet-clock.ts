@@ -11,6 +11,8 @@ export class FleetClock {
   private anchorWall = 0
   private publishedWall = 0
   private lastFrameWall = 0
+  private publishInterval = 1000/30
+  setPresentationHz = (hz:number) => { if(Number.isFinite(hz)&&hz>=1&&hz<=60)this.publishInterval=1000/hz }
   private metrics = { frameSamples: 0, totalFrameMilliseconds: 0, maxFrameMilliseconds: 0 }
   getMetrics = () => ({ frameSamples: this.metrics.frameSamples, meanFrameMilliseconds: this.metrics.frameSamples ? this.metrics.totalFrameMilliseconds/this.metrics.frameSamples : 0, maxFrameMilliseconds: this.metrics.maxFrameMilliseconds })
   getSnapshot = () => this.snapshot
@@ -23,7 +25,7 @@ export class FleetClock {
     const delta = Math.max(0, now-this.lastFrameWall); this.lastFrameWall = now
     this.metrics.frameSamples++; this.metrics.totalFrameMilliseconds += delta; this.metrics.maxFrameMilliseconds = Math.max(this.metrics.maxFrameMilliseconds, delta)
     const time = this.time(now)
-    if (time >= this.duration || now-this.publishedWall >= 1000/30) {
+    if (time >= this.duration || now-this.publishedWall >= this.publishInterval) {
       this.publish({ simulationTimeSeconds: time, playbackStatus: time >= this.duration ? 'completed' : 'playing' }); this.publishedWall = now
     }
     if (time >= this.duration) { this.frame = null; return }

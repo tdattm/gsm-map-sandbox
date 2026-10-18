@@ -106,8 +106,8 @@ async def live_travels(config):
 
 
 async def execute_live(config, run_id, cancelled=None, progress=None, prepared=None):
-    from scripts.m3_resources import require_headroom
-    require_headroom()
+    from .simulation_resources import require_simulation_headroom
+    require_simulation_headroom(config)
     begun = time.perf_counter()
     async with live_travels(config) as (contexts, identities, travels, catalog):
         anchors = [c['coordinate'] for c in catalog['candidates']]

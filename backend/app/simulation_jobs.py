@@ -6,7 +6,6 @@ import json
 import os
 from pathlib import Path
 import re
-import threading
 import uuid
 
 from fastapi import APIRouter, HTTPException, Query
@@ -14,6 +13,8 @@ from fastapi import APIRouter, HTTPException, Query
 from .config import PROJECT_ROOT
 from .simulation import SimulationConfig, snapshot
 from .simulation_details import booking_detail
+from .simulation_cache import IdleResultCache
+from .simulation_resources import require_simulation_headroom
 
 TERMINAL = {'COMPLETED', 'FAILED', 'CANCELLED', 'INTERRUPTED'}
 
@@ -191,27 +192,27 @@ class JobStore:
 def create_router(store=None):
     store = store or JobStore()
     router = APIRouter(prefix='/api/v3/simulation/jobs', tags=['NVMR scalable simulation'])
-    # One completed result cache per API process. Retains no history from cancelled jobs.
-    cache = {}
-    cache_lock = threading.Lock()
+    cache = IdleResultCache()
 
     def result(id):
         if store.read(id)['status'] != 'COMPLETED':
             error('RESULT_NOT_FINAL', 'Only a completed job exposes its final result')
-        with cache_lock:
-            if id not in cache:
-                raw = store.result(id)
-                cache.clear()
-                cache[id] = raw
-            return cache[id]
+        return cache.get(id, lambda: store.result(id))
 
     @router.post('', status_code=202)
     def create(config: SimulationConfig):
+        # Refuse before creating input/status files. Worker rechecks queued jobs.
+        require_simulation_headroom(config)
         return store.create(config)
 
     @router.get('/runtime')
     def runtime():
-        return store.runtime()
+        from scripts.m3_resources import memory
+        from .simulation_resources import SMALL_MIN_AVAILABLE_GIB, admission_policy
+        current = memory()
+        return {**store.runtime(), 'resultCache': cache.status(), 'resources': {
+            **{k: current.get(k) for k in ('availablePhysicalBytes', 'systemCommitAvailableBytes', 'systemCommitBytes', 'systemCommitLimitBytes')},
+            'smallMinimumAvailableGiB': SMALL_MIN_AVAILABLE_GIB, 'admissionPolicy': admission_policy()}}
 
     @router.get('/{id}')
     def status(id: str):

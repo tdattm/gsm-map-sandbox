@@ -4,7 +4,7 @@ import { useMap } from './ui/map'
 import { vehicleFeatures, type SelectedJourney, type SimulationSnapshot, type SimulationRoute } from '@/lib/simulation'
 import { registerMobilityIcons, iconKinds } from '@/lib/simulation-map-icons'
 
-export interface MapTelemetry {setDataMs:number[];sourceLagMs:number[];selectionMs:number[];snapshotReceivedWall:number;mapReady:boolean;sourceCount:number;layerCount:number;zoom:number;renderedClusters:number;renderedVehicles:number;clusterRepresented:number;webglRenderer:string;measure:(seconds?:number,freeze?:()=>number|void)=>Promise<Record<string,unknown>>;focus:(id:string)=>void;focusTrip:()=>void;zoomTo:(zoom:number,inspectVehicle?:boolean)=>void}
+export interface MapTelemetry {setDataMs:number[];sourceLagMs:number[];selectionMs:number[];snapshotReceivedWall:number;mapReady:boolean;sourceCount:number;layerCount:number;zoom:number;renderedClusters:number;renderedVehicles:number;clusterRepresented:number;webglRenderer:string;measure:(seconds?:number,freeze?:()=>number|void,options?:{pan?:boolean})=>Promise<Record<string,unknown>>;focus:(id:string)=>void;focusTrip:()=>void;zoomTo:(zoom:number,inspectVehicle?:boolean)=>void}
 export function emptyTelemetry():MapTelemetry {return {setDataMs:[],sourceLagMs:[],selectionMs:[],snapshotReceivedWall:0,mapReady:false,sourceCount:0,layerCount:0,zoom:0,renderedClusters:0,renderedVehicles:0,clusterRepresented:0,webglRenderer:'unknown',measure:async()=>({error:'Map chưa sẵn sàng'}),focus:()=>{},focusTrip:()=>{},zoomTo:()=>{}}}
 const ids=['m4-clusters','m4-cluster-count','m4-vehicles','m4-state','m4-selected','m4-route','s1-pickup-route','s1-trip-route','s1-stops','s1-stop-labels','s1-selected-icon']
 const empty:GeoJSON.FeatureCollection={type:'FeatureCollection',features:[]}
@@ -58,14 +58,14 @@ export function SimulationMap({snapshot,selectedId,route,journey=null,onSelect,o
     t.zoomTo=(zoom,inspectVehicle)=>{const vehicle=inspectVehicle?(snapshotRef.current?.vehicles.find(v=>v.serviceState==='ASSIGNED'||v.serviceState==='ON_TRIP')??snapshotRef.current?.vehicles[0]):null;map.jumpTo(vehicle?{zoom,center:vehicle.position}:{zoom})}
     t.focus=id=>{const v=snapshotRef.current?.vehicles.find(v=>v.id===id);if(v)map.easeTo({center:v.position,zoom:16,duration:300})}
     t.focusTrip=()=>{const j=journeyRef.current;if(!j)return;const points=[...(j.pickupRoute?.coordinates??[]),...j.tripRoute.coordinates],xs=points.map(p=>p[0]),ys=points.map(p=>p[1]);map.fitBounds([[Math.min(...xs),Math.min(...ys)],[Math.max(...xs),Math.max(...ys)]],{padding:65,maxZoom:17,duration:300})}
-    t.measure=async(seconds=5,freeze)=>{
+    t.measure=async(seconds=5,freeze,options)=>{
       if(document.hidden)return {error:'Tab phải ở foreground'}
-      const samples:number[]=[],longTasks:number[]=[],started=performance.now(),updatesStart=t.setDataMs.length,lagStart=t.sourceLagMs.length,selectionStart=t.selectionMs.length,visibilityAtStart=document.visibilityState
+      const samples:number[]=[],longTasks:number[]=[],started=performance.now(),updatesStart=t.setDataMs.length,lagStart=t.sourceLagMs.length,selectionStart=t.selectionMs.length,visibilityAtStart=document.visibilityState,focusAtStart=document.hasFocus()
       let hiddenFrames=0
       let observer:PerformanceObserver|null=null
       try {observer=new PerformanceObserver(list=>list.getEntries().forEach(e=>longTasks.push(e.duration)));observer.observe({type:'longtask',buffered:false})}catch{/* Not all browsers expose longtask. */}
       const camera=map.getCenter(),original={lng:camera.lng,lat:camera.lat},zoom=map.getZoom()
-      await new Promise<void>(resolve=>{let last=performance.now();const tick=(now:number)=>{if(!map.getCanvas().isConnected){resolve();return}if(document.hidden)hiddenFrames++;samples.push(now-last);last=now;const elapsed=now-started;map.jumpTo({center:[original.lng+Math.sin(elapsed/500)*.0003,original.lat]});if(elapsed<seconds*1000)requestAnimationFrame(tick);else resolve()};requestAnimationFrame(tick)})
+      await new Promise<void>(resolve=>{let last=performance.now(),frame=0;const finish=()=>{cancelAnimationFrame(frame);clearTimeout(timeout);resolve()},timeout=setTimeout(finish,seconds*1000+3000);const tick=(now:number)=>{if(!map.getCanvas().isConnected){finish();return}if(document.hidden)hiddenFrames++;samples.push(now-last);last=now;const elapsed=now-started;if(options?.pan!==false)map.jumpTo({center:[original.lng+Math.sin(elapsed/500)*.0003,original.lat]});if(elapsed<seconds*1000)frame=requestAnimationFrame(tick);else finish()};frame=requestAnimationFrame(tick)})
       const duration=performance.now()-started
       observer?.disconnect();if(!map.getCanvas().isConnected)return {cancelled:true};map.jumpTo({center:original,zoom})
       // Pause the one playback clock after the timed sample, then wait for its final
@@ -76,12 +76,14 @@ export function SimulationMap({snapshot,selectedId,route,journey=null,onSelect,o
       // index. First await the final clock snapshot + quiet source, then MapLibre
       // idle (including placement/fades). This is outside the FPS window.
       const snapshotSettled=await new Promise<boolean>(resolve=>{
+        let frame=0
+        const finish=(ok:boolean)=>{cancelAnimationFrame(frame);clearTimeout(timeout);resolve(ok)}
+        const timeout=setTimeout(()=>finish(false),5000)
         const check=()=>{
-          if(!map.getCanvas().isConnected){resolve(false);return}
+          if(!map.getCanvas().isConnected){finish(false);return}
           const matching=typeof frozenTime!=='number'||Math.abs((snapshotRef.current?.simulationTimeSeconds??-1)-frozenTime)<=.001
-          if(matching&&map.isSourceLoaded('m4-fleet')&&!submitted.current&&performance.now()-t.snapshotReceivedWall>=250){resolve(true);return}
-          if(performance.now()-settleStarted>5000){resolve(false);return}
-          requestAnimationFrame(check)
+          if(matching&&map.isSourceLoaded('m4-fleet')&&!submitted.current&&performance.now()-t.snapshotReceivedWall>=250){finish(true);return}
+          frame=requestAnimationFrame(check)
         };check()
       })
       const renderSettled=snapshotSettled&&await new Promise<boolean>(resolve=>{
@@ -112,11 +114,11 @@ export function SimulationMap({snapshot,selectedId,route,journey=null,onSelect,o
       const memory=(performance as Performance & {memory?:{usedJSHeapSize:number;totalJSHeapSize:number;jsHeapSizeLimit:number}}).memory
       const style=map.getStyle(),selection=snapshotRef.current?.vehicles[0]
       if(selection){const begin=performance.now();selectRef.current(selection.id);await new Promise<void>(r=>requestAnimationFrame(()=>{t.selectionMs.push(performance.now()-begin);r()}))}
-      return {kind:'browser-webgl-render-only',visibility:{atStart:visibilityAtStart,atEnd:document.visibilityState,hiddenFrames,maxFrameGapMs:Math.max(0,...samples)},sampleCondition:'warm in-page; no page/process restart',pageAgeMs:performance.now(),sourceUpdatesBefore:updatesStart,fixture:snapshotRef.current?.runId.startsWith('fixture-'),fleetSize:snapshotRef.current?.counts.total,simulationTimeSeconds:snapshotRef.current?.simulationTimeSeconds,zoom,browser:navigator.userAgent,viewport:[map.getCanvas().clientWidth,map.getCanvas().clientHeight],devicePixelRatio,webglRenderer:gl?(debug?gl.getParameter(debug.UNMASKED_RENDERER_WEBGL):gl.getParameter(gl.RENDERER)):'unavailable',durationMs:duration,frames:samples.length,fps:samples.length/(duration/1000),frameTimeP50Ms:quantile(samples,.5),frameTimeP95Ms:quantile(samples,.95),longTaskSupported:PerformanceObserver.supportedEntryTypes.includes('longtask'),longTasks:longTasks.length,longTaskTotalMs:longTasks.reduce((a,b)=>a+b,0),heap:memory?{usedJSHeapSize:memory.usedJSHeapSize,totalJSHeapSize:memory.totalJSHeapSize,jsHeapSizeLimit:memory.jsHeapSizeLimit}:null,domMarkerCount:map.getContainer().querySelectorAll('.maplibregl-marker').length,sourceCount:Object.keys(style.sources).length,layerCount:style.layers.length,setDataSubmissionP50Ms:quantile(t.setDataMs.slice(updatesStart),.5),setDataSubmissionP95Ms:quantile(t.setDataMs.slice(updatesStart),.95),sourceLoadedLagP95Ms:quantile(t.sourceLagMs.slice(lagStart),.95),dataUpdates:t.setDataMs.length-updatesStart,selectionToNextFrameMs:quantile(t.selectionMs.slice(selectionStart),.95),snapshotAgeMs:performance.now()-t.snapshotReceivedWall,visibleClusterCount:clusters.size,visibleVehicleCount:vehicles.size,visibleRepresentedVehicles:represented,clusterOracle,clusterScope:'viewport; duplicates removed; not full-source coverage assertion',pan:'continuous small jumpTo pan during capture; zoom fixed',mapLifetime:map.getCanvas().dataset.mapLifetime}
+      return {kind:'browser-webgl-render-only',visibility:{atStart:visibilityAtStart,atEnd:document.visibilityState,focusAtStart,focusAtEnd:document.hasFocus(),hiddenFrames,maxFrameGapMs:Math.max(0,...samples)},cadenceDiagnostic:samples.length/(duration/1000)<10?'LOW_RAF_CADENCE: compare plain RAF in Performance Lab; do not infer fleet/icon cause':'NORMAL_IN_CAPTURE',rawFrameGapsMs:samples,sampleCondition:'warm in-page; no page/process restart',pageAgeMs:performance.now(),sourceUpdatesBefore:updatesStart,fixture:snapshotRef.current?.runId.startsWith('fixture-'),fleetSize:snapshotRef.current?.counts.total,simulationTimeSeconds:snapshotRef.current?.simulationTimeSeconds,zoom,browser:navigator.userAgent,viewport:[map.getCanvas().clientWidth,map.getCanvas().clientHeight],devicePixelRatio,webglRenderer:gl?(debug?gl.getParameter(debug.UNMASKED_RENDERER_WEBGL):gl.getParameter(gl.RENDERER)):'unavailable',durationMs:duration,frames:samples.length,fps:samples.length/(duration/1000),frameTimeP50Ms:quantile(samples,.5),frameTimeP95Ms:quantile(samples,.95),longTaskSupported:PerformanceObserver.supportedEntryTypes.includes('longtask'),longTasks:longTasks.length,longTaskTotalMs:longTasks.reduce((a,b)=>a+b,0),heap:memory?{usedJSHeapSize:memory.usedJSHeapSize,totalJSHeapSize:memory.totalJSHeapSize,jsHeapSizeLimit:memory.jsHeapSizeLimit}:null,domMarkerCount:map.getContainer().querySelectorAll('.maplibregl-marker').length,sourceCount:Object.keys(style.sources).length,layerCount:style.layers.length,setDataSubmissionP50Ms:quantile(t.setDataMs.slice(updatesStart),.5),setDataSubmissionP95Ms:quantile(t.setDataMs.slice(updatesStart),.95),sourceLoadedLagP95Ms:quantile(t.sourceLagMs.slice(lagStart),.95),dataUpdates:t.setDataMs.length-updatesStart,selectionToNextFrameMs:quantile(t.selectionMs.slice(selectionStart),.95),snapshotAgeMs:performance.now()-t.snapshotReceivedWall,visibleClusterCount:clusters.size,visibleVehicleCount:vehicles.size,visibleRepresentedVehicles:represented,clusterOracle,clusterScope:'viewport; duplicates removed; not full-source coverage assertion',pan:options?.pan===false?'OFF':'continuous small jumpTo pan during capture; zoom fixed',mapLifetime:map.getCanvas().dataset.mapLifetime}
     }
     if(!map.getCanvas().dataset.mapLifetime)map.getCanvas().dataset.mapLifetime=crypto.randomUUID()
     return ()=>{
-      icons.abort();t.mapReady=false;t.focus=()=>{};t.focusTrip=()=>{}
+      icons.abort();t.mapReady=false;t.focus=()=>{};t.focusTrip=()=>{};t.zoomTo=()=>{};t.measure=async()=>({error:'Map đã đóng'})
       map.off('click',clicked);map.off('sourcedata',settled)
       // Parent Map may already have removed its style before child passive cleanup.
       // MapLibre.hasImage dereferences style directly, unlike getSource/getLayer.
