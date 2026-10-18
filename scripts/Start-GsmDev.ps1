@@ -3,7 +3,7 @@
 param(
     [switch]$StatusOnly,
     [ValidateSet('Standard','Meeting','Benchmark')][string]$Profile='Standard',
-    [ValidateSet('HanoiCar','HanoiBoth','All','None')][string]$Routers='HanoiBoth',
+    [ValidateSet('HanoiCar','HanoiBoth','Regional','All','None')][string]$Routers='HanoiBoth',
     [switch]$StartRouters,
     [int]$ApiPort = 8013,
     [int]$FrontendPort = 5183,
@@ -90,10 +90,16 @@ try {
         if($Routers -eq 'All'){& $taskPython scripts/pipeline.py serve --detach;if($LASTEXITCODE -ne 0){throw 'HCM router serve failed'}}
         & $taskPython scripts/pipeline.py serve --region nvmr-hanoi-core --profile car --detach
         if($LASTEXITCODE -ne 0){throw 'Hanoi CAR serve failed; graph was not rebuilt'}
-        if($Routers -in @('HanoiBoth','All')){& $taskPython scripts/pipeline.py serve --region nvmr-hanoi-core --profile motorbike --detach;if($LASTEXITCODE -ne 0){throw 'Hanoi MOTORBIKE serve failed'}}
+        if($Routers -in @('HanoiBoth','Regional','All')){& $taskPython scripts/pipeline.py serve --region nvmr-hanoi-core --profile motorbike --detach;if($LASTEXITCODE -ne 0){throw 'Hanoi MOTORBIKE serve failed'}}
+        if($Routers -in @('Regional','All')){
+            & $taskPython scripts/pipeline.py serve --region nvmr-bac-ninh-core --profile car --detach
+            if($LASTEXITCODE -ne 0){throw 'Bac Ninh CAR serve failed; graph was not rebuilt'}
+            & $taskPython scripts/pipeline.py serve --region nvmr-bac-ninh-core --profile motorbike --detach
+            if($LASTEXITCODE -ne 0){throw 'Bac Ninh MOTORBIKE serve failed; graph was not rebuilt'}
+        }
     }
     # Readiness only. Never start/recreate an unverified Docker container here.
-    foreach ($router in @(@(5000,'HCM CAR'),@(5001,'Hanoi CAR'),@(5002,'Hanoi MOTORBIKE'))) {
+    foreach ($router in @(@(5000,'HCM CAR'),@(5001,'Hanoi CAR'),@(5002,'Hanoi MOTORBIKE'),@(5003,'Bac Ninh CAR'),@(5004,'Bac Ninh MOTORBIKE'))) {
         Write-Host "Router $($router[1]) :$($router[0]) listening=$(Port-Owned $router[0]) (mode API verifies graph identity)"
     }
     $runtime = Read-JsonUrl "$apiUrl/api/v3/simulation/jobs/runtime"

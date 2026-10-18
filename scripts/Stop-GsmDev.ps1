@@ -17,13 +17,17 @@ $plan=[Collections.Generic.List[object]]::new()
 foreach($service in @($data.services|Sort-Object @{Expression={if($_.name -eq 'frontend'){0}elseif($_.name -eq 'worker'){1}else{2}}})){
     $process=Get-CimInstance Win32_Process -Filter "ProcessId=$($service.pid)" -ErrorAction SilentlyContinue
     if(-not $process){Write-Host "Already stopped $($service.name) PID $($service.pid)";continue}
-    if([math]::Abs(($process.CreationDate.ToUniversalTime()-[datetime]$service.startTimeUtc).TotalSeconds) -gt 1 -or $process.ExecutablePath -ine $service.executable){throw 'PID identity changed; refusing to stop'}
+    # DateTime subtraction does not normalize a locally parsed Z timestamp in
+    # Windows PowerShell. Compare UTC instants explicitly, retaining the guard.
+    $recordedStart=if($service.startTimeUtc -is [datetime]){$service.startTimeUtc.ToUniversalTime()}elseif($service.startTimeUtc -is [datetimeoffset]){$service.startTimeUtc.UtcDateTime}else{[datetimeoffset]::Parse($service.startTimeUtc,[Globalization.CultureInfo]::InvariantCulture).UtcDateTime}
+    if([math]::Abs(($process.CreationDate.ToUniversalTime()-$recordedStart).TotalSeconds) -gt 1 -or $process.ExecutablePath -ine $service.executable){throw 'PID identity changed; refusing to stop'}
+    $suffix=($service.arguments -join ' ').TrimEnd()
+    if(-not $process.CommandLine.TrimEnd().EndsWith($suffix)){throw 'Process command differs from receipt; refusing to stop'}
     # venv python may have one interpreter child. Never select by process name alone.
     $children=@(Get-CimInstance Win32_Process -Filter "ParentProcessId=$($service.pid)")
     foreach($child in $children){
         if($child.ExecutablePath -ieq (Join-Path $env:WINDIR 'System32/conhost.exe')){continue}
-        $suffix=$service.arguments -join ' '
-        if($child.Name -ne 'python.exe' -or -not $child.CommandLine.EndsWith($suffix) -or $child.CreationDate -lt $process.CreationDate){throw 'Unexpected child command; inspect manually, no automatic tree termination'}
+        if($child.Name -ne 'python.exe' -or -not $child.CommandLine.TrimEnd().EndsWith($suffix) -or $child.CreationDate -lt $process.CreationDate){throw 'Unexpected child command; inspect manually, no automatic tree termination'}
         $plan.Add(@{pid=$child.ProcessId;created=$child.CreationDate;name=$service.name})
     }
     $plan.Add(@{pid=$service.pid;created=$process.CreationDate;name=$service.name})

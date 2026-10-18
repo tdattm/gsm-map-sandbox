@@ -11,12 +11,19 @@ import { MobilityIcon } from './mobility-icon'
 import { SimulationRuntime, simulationErrorText } from './simulation-runtime'
 import { legProgress } from '@/lib/simulation'
 import { initialPresentationProfile, presentationPolicy, type PresentationProfile } from '@/lib/simulation-profile'
+import RegionalWorkspace from './regional-workspace'
 
 const scales=[100,500,1000,3000,5000]
 const countLabels:Record<string,string>={total:'Tổng đội xe',online:'Online',offline:'Offline',idle:'Rảnh',assigned:'Đang đến đón',onTrip:'Đang chở khách',moving:'Đang di chuyển'}
 const stateLabels:Record<string,string>={OFFLINE:'Offline',IDLE:'Rảnh',ASSIGNED:'Đang đến đón',ON_TRIP:'Đang chở khách'}
 const statuses:Record<string,string>={QUEUED:'Đang chờ worker',RUNNING:'Đang tính toán',COMPLETED:'Đã tính xong',FAILED:'Không hoàn thành',CANCELLED:'Đã hủy',INTERRUPTED:'Bị gián đoạn'}
-export default function SimulationWorkspace({previousRegion}:{previousRegion:string}){
+export default function SimulationWorkspace({previousRegion}:{previousRegion:string}) {
+  const [regional,setRegional]=useState(()=>new URLSearchParams(window.location.search).get('scenario')==='regional')
+  useEffect(()=>{const sync=()=>setRegional(new URLSearchParams(window.location.search).get('scenario')==='regional');window.addEventListener('popstate',sync);return ()=>window.removeEventListener('popstate',sync)},[])
+  const select=(value:boolean)=>{const url=new URL(window.location.href);if(value)url.searchParams.set('scenario','regional');else url.searchParams.delete('scenario');window.history.pushState(null,'',url);setRegional(value)}
+  return <div className="simulation-container"><div className="simulation-scenario-selector"><label>Kịch bản mô phỏng<select aria-label="Kịch bản mô phỏng" value={regional?'regional':'hanoi'} onChange={e=>select(e.target.value==='regional')}><option value="hanoi">Hanoi Core · legacy v3</option><option value="regional">NVMR · Hanoi + Bắc Ninh Core pilot</option></select></label><p className="small-note">Lưu mã run trước khi đổi kịch bản. Job đã gửi vẫn được worker xử lý.</p></div>{regional?<RegionalWorkspace/>:<HanoiSimulationWorkspace previousRegion={previousRegion}/>}</div>
+}
+function HanoiSimulationWorkspace({previousRegion}:{previousRegion:string}){
   const [profile,setProfile]=useState<PresentationProfile>(initialPresentationProfile)
   const session=useSimulation(profile),telemetry=useRef(emptyTelemetry())
   const clock=session.clock.getSnapshot()
