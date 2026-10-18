@@ -1,0 +1,20 @@
+{
+  "schemaVersion": "gsm-dev-runtime/v1",
+  "application": "gsm-map-sandbox",
+  "workspace": "D:\\ThS\\VinAI\\Phase3_VRIC\\gsm-map-sandbox",
+  "store": "D:\\ThS\\VinAI\\Phase3_VRIC\\gsm-map-sandbox\\build\\m4-performance\\jobs",
+  "apiPid": 16656,
+  "worker": "locked",
+  "workerMeaning": "locked = OS worker lease held for this exact store; not a progress/health heartbeat",
+  "resultCache": {
+    "entries": 1,
+    "idleSeconds": 30.0
+  },
+  "resources": {
+    "availablePhysicalBytes": 4121624576,
+    "systemCommitAvailableBytes": 10999926784,
+    "systemCommitBytes": 14778810368,
+    "systemCommitLimitBytes": 25778737152,
+    "smallMinimumAvailableGiB": 0.5
+  }
+}

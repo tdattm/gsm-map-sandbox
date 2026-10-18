@@ -1,0 +1,35 @@
+{
+  "schemaVersion": "gsm-route-fidelity-audit/v1",
+  "runId": "e2caced02db64a02a56300050544690b",
+  "config": {
+    "regionId": "nvmr-hanoi-core",
+    "seed": "m4-memory-1000",
+    "fleetSize": 1000,
+    "carCount": 400,
+    "bookingCount": 250,
+    "horizonSeconds": 900,
+    "maxWaitSeconds": 300,
+    "onlineFraction": 1.0,
+    "onlineSchedule": [],
+    "workload": "typical",
+    "initialCandidates": 16,
+    "maxCandidates": 128,
+    "gridCellDegrees": 0.005
+  },
+  "toleranceMeters": 0.02,
+  "method": "Haversine lengths; query-centered equirectangular segment distance; independent of cumulativeMeters",
+  "toleranceReason": "2 cm numeric allowance for full GeoJSON coordinates; not an allowance for road snapping/GPS error",
+  "sampledAssignments": 40,
+  "samples": 320,
+  "modes": {
+    "CAR": 160,
+    "MOTORBIKE": 160
+  },
+  "stationaryPickups": 250,
+  "reusedVehicles": 63,
+  "maxDeviationMeters": 7.433581755608728e-10,
+  "seekDeterministic": true,
+  "violations": [],
+  "passed": true,
+  "scope": "Stored OSRM geometry fidelity, not an independent legal/OSM topology certification"
+}

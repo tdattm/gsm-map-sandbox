@@ -1,0 +1,9 @@
+{
+  "verifiedAt": "2026-10-18T01:45:06.4982722Z",
+  "status": "BLOCKED",
+  "source": "Docker Desktop local backend log",
+  "error": "[2026-10-18T01:43:52.661651700Z][com.docker.backend.exe.report] reporting error to user: starting services: initializing Inference manager: listening on unix://C:/Users/TIEN DAT/AppData/Local/Docker/run/dockerInference: remove C:/Users/TIEN DAT/AppData/Local/Docker/run/dockerInference: The file cannot be accessed by the system. (listener: The filename, directory name, or volume label syntax is incorrect.)",
+  "actions": "No reset, socket deletion, WSL shutdown or setting changes performed",
+  "fresh1000": "NOT RUN: Engine startup failure",
+  "fresh5000": "NOT RUN: Engine startup failure"
+}

@@ -1,5 +1,9 @@
 # S0 + S1 — Runtime reliability, route fidelity và trip tracking
 
+> **Latest follow-up18/10:** [FPS/resource follow-up](M4_FPS_RESOURCE_FOLLOWUP.md) ghi startup floor0,5 GiB cho mọi launcher profile, routine jobs tới5.000 xe dùng0,75 GiB physical floor, API/worker/profiler cùng policy; không sửa S1 geometry contracts.
+
+> **Bổ sung 18/10/2026:** [Performance/memory stabilization](M4_PERFORMANCE_MEMORY_STABILIZATION.md) mở rộng launcher với Standard/Meeting/Benchmark, fresh preview identity, router selection và scoped stop receipts; tách service startup reserve khỏi simulation admission, thêm available/commit diagnostics. S1 CAR/MOTORBIKE directed route regression đã rerun PASS, không thay geometry/lifecycle contracts. Xem Current Verified State trước khi dùng readiness/FPS lịch sử bên dưới.
+
 Ngày kiểm chứng: **17/10/2026**, Windows PowerShell, checkout `D:\ThS\VinAI\Phase3_VRIC\gsm-map-sandbox`, branch `feature/nvmr-m0-architecture`. Báo cáo ghi kết quả thực thi mới; không sửa số liệu lịch sử M2/M3/M4. Demand, booking, ETA và positions là mô hình nghiên cứu, không phải vận hành/GPS/traffic GSM thực.
 
 ## A. Executive summary

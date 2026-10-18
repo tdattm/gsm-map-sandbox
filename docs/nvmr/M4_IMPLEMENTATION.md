@@ -1,5 +1,9 @@
 # M4 — Multi-scale Map Visualization
 
+> **Follow-up18/10:** [FPS profiler + resource policy](M4_FPS_RESOURCE_FOLLOWUP.md): own-page JS sampling profiler và application timeline, source-of-truth admission diagnostics; fresh1.000/5.000 completed với floor0,5/0,75 GiB. Không kết luận đã xử lý root cause1FPS khi lỗi không tái lập.
+
+> **Performance/memory 18/10/2026:** [báo cáo stabilization](M4_PERFORMANCE_MEMORY_STABILIZATION.md) ghi Current Verified State, measured process/commit memory, Meeting preview, paused event-driven snapshots, idle result cache và CI. Controlled Live100 giảm source updates 48→20/5 s; lỗi lịch sử ~1 Hz chưa tái lập, chưa kết luận nguyên nhân. Real Meet/Chrome độc lập và fresh 1.000/5.000 chưa nghiệm thu. Các policy 100 ms polling bên dưới là lịch sử; hiện Standard tối đa 10 Hz, Meeting 4 Hz và paused unchanged không poll.
+
 > **Cập nhật product integration 17/10/2026:** truy cập từ URL gốc → menu **Mô phỏng quy mô lớn**. Hanoi basemap mặc định bật, cùng shell GSM, mix/demand controls và run opener. Báo cáo chi tiết root cause, acceptance, phép đo mới basemap ON và giới hạn: [M4_UX_REMEDIATION.md](M4_UX_REMEDIATION.md). Các sections bàn giao ban đầu bên dưới ghi lại kiến trúc/measurements trước lượt remediation; link riêng, mix cố định và blank default đã được thay thế trong lượt mới. Số liệu lịch sử vẫn giữ nguyên.
 
 

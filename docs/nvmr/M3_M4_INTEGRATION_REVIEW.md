@@ -1,5 +1,9 @@
 # M3 + M4 — Integration, validation và resource envelope
 
+> **Latest follow-up18/10:** [M4_FPS_RESOURCE_FOLLOWUP.md](M4_FPS_RESOURCE_FOLLOWUP.md) cập nhật current state: ordinary1.000/5.000 admission0,5/0,75 GiB thay small-only floor; cả hai fresh runs completed, hashes/audits/contracts giữ correctness. Các checkpoint bên dưới là lịch sử trước follow-up. FPS1 root cause còn mở; chưa đạt điều kiện commit/push mới của owner.
+
+> **Current review 18/10/2026:** xem [M4 performance/memory stabilization](M4_PERFORMANCE_MEMORY_STABILIZATION.md) và [validation summary](m4-performance-evidence/validation-summary.json). Small Live10/100 semantic hashes, route audits và HTTP→TS contracts PASS; immutable persisted5.000 hash giữ nguyên. Sau khi owner bật Docker, Hanoi modes READY và fresh1.000/250 completed; fresh5.000 vẫn hoãn theo reserve4 GiB. Theo yêu cầu mới của owner, Standard/Meeting startup và small physical admission floor là0,5 GiB; commit1 GiB, bounded small envelope giữ nguyên. Floor0,5 được unit-test, chưa stress thực tại boundary; scientific engine không đổi. Docker Inference manager failure trước recovery giữ trong evidence.
+
 > **Review bổ sung UX 17/10/2026:** [M4 product remediation](M4_UX_REMEDIATION.md) ghi kết quả mới từ URL gốc, live10 mix5/5, real Hanoi basemap và browser30s/zoom. Các số liệu/checkpoints dưới đây là lượt tích hợp M3/M4 trước remediation; không được dùng FPS blank-map làm FPS với Hanoi basemap. Backend engine/contracts không đổi trong lượt sửa UX.
 
 Ngày thực hiện: **17/10/2026**, Windows PowerShell. Baseline sạch `455abebe177be42e07b88ed4f34d4fecbef29b75`, branch `feature/nvmr-m0-architecture`. Hai development agents viết trong worktree riêng `gsm-map-sandbox-m3` và `gsm-map-sandbox-m4`, cùng detached baseline; Main tích hợp file/diff có kiểm soát về `D:\ThS\VinAI\Phase3_VRIC\gsm-map-sandbox`. Không stage/commit/push/merge; không copy GIS vào worktrees.

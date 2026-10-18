@@ -1,0 +1,9 @@
+{
+  "probe": {
+    "exitCode": -1,
+    "stderr": "Docker info probe exceeded 2000 ms; inspect Docker Desktop startup.",
+    "stdout": "",
+    "timedOut": true
+  },
+  "wallSeconds": 2.1854911
+}

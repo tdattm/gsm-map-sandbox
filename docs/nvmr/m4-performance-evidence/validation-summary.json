@@ -1,0 +1,696 @@
+{
+  "schemaVersion": "gsm-m4-stabilization-evidence/v1",
+  "verifiedAt": "2026-10-18T01:55:16.915776+00:00",
+  "baselineCommit": "3ef9160940e6129c911889add7d8aed0d6022bd1",
+  "branch": "feature/nvmr-m0-architecture",
+  "sourceSha256": {
+    ".github/workflows/source-checks.yml": "15f34a3f3de14d5f86592980defe8533fb40fbd82c2db489fc802303bb4d9c43",
+    "backend/app/simulation_cache.py": "bbc6ee211ab844d607a398236425bea486540c42c252e1d6a6ea512a17ecd3da",
+    "backend/app/simulation_jobs.py": "2eeaeb0914a5dca3de71865174785e351acc5e1b6c491a0f36f5adcd12c41d3a",
+    "backend/app/simulation_resources.py": "ef9397bfb9236d12a6a70b0c0019625b5ad892832442b1bdfb8ca5c10d793607",
+    "backend/app/simulation_worker.py": "dd471acca1c5544c1c44c13895bbfed65cbcdb21a36b09b5ab826deeab73d880",
+    "frontend/package.json": "413880cc9d65d90e0f0a1ca197a2d06c374870e1838851591dcc3b3672871b66",
+    "frontend/performance.html": "77af55e9b98fab71b17ab1f4917c0af07b53e5f92b905f5fdff268707b30f0eb",
+    "frontend/scripts/build-identity.mjs": "e1b310f176c09fbee3235638f8bb5f6e09de337d04f3753da0b0a2c828e80206",
+    "frontend/scripts/verify-replay.mjs": "c83e722c94e51a1f3c5da3c832fc53e4dfaaa7764250863f7464b3ff18ef3991",
+    "frontend/src/components/simulation-map.tsx": "82649d171878b40428a77854e27782c5dc4ba0fc0f6d8cdf97b5c42dc2574cbb",
+    "frontend/src/components/simulation-runtime.tsx": "265442cac6397c5c69d902ffb909673c40632e5484779b59702f370bd0408f58",
+    "frontend/src/components/simulation-workspace.tsx": "5f697f36fb92a9f1ac8c3a0ce1d764021bddc7a21afff67c20986eabe9c3b52c",
+    "frontend/src/lib/fleet-clock.ts": "8c5c106a8944a53e50c5c176cd239eb681f8e3d6d59ad62356d5de4430537716",
+    "frontend/src/lib/simulation-profile.ts": "51835294ca94127fe1c91e883c4e2678103a28d0883794aead954642e578c28a",
+    "frontend/src/lib/use-simulation.ts": "80e3baadfdaab1cfde5d2e3e3f3512553110f17a5f39f5c3b2dfe3ae5fd6b998",
+    "frontend/src/performance-lab.ts": "a350a20e30ceabc3c24cde5fba7b2c281e5108eefcf7608e01d65ed6b0814c85",
+    "frontend/tests/use-simulation.test.ts": "0125be876b968490bbd6c516f4609825f22d041eec86e1893499a6ad5c83dc7d",
+    "frontend/vite.config.ts": "ca20ae1a959e449afa3ced3c915f4ff0fd53f7468730e4af248600ca471846bf",
+    "scripts/GsmDockerProbe.ps1": "0749e01defa66941e642b9134725d5d05a133e5e322c03d61b7e8b4b1a91e4cc",
+    "scripts/Profile-GsmMemory.ps1": "6d823ce05533a3cba4678b1652020d766a1f532954b8e46510ab316664ac2289",
+    "scripts/Start-GsmDev.ps1": "e145257d1172e3c1b7fe7cdde87a6ccc8fcd71d01819cc4f8b0594a4d39ad3f6",
+    "scripts/Stop-GsmDev.ps1": "73eda760860b2e36a1d2db07ad7fc5f9a48c11e673102fc73cf8befea46a89ab",
+    "scripts/m3_resources.py": "68e3f50b52d6379cbd106c46480d7726ada202e41e2459f581b32b03b5379f75",
+    "scripts/profile_simulation_memory.py": "18de42d9df2327152bcb8bde2f44b08377037326b87cf1177850d24d44777568",
+    "tests/test_memory_performance.py": "48743868bd85ab8675024a5903a7c783dc279b5d8b27799ec7fcb192c411b08e"
+  },
+  "currentRuntime": {
+    "api": {
+      "status": 200,
+      "body": {
+        "schemaVersion": "gsm-dev-runtime/v1",
+        "application": "gsm-map-sandbox",
+        "workspace": "D:\\ThS\\VinAI\\Phase3_VRIC\\gsm-map-sandbox",
+        "store": "D:\\ThS\\VinAI\\Phase3_VRIC\\gsm-map-sandbox\\build\\m4-performance\\jobs",
+        "apiPid": 16656,
+        "worker": "locked",
+        "workerMeaning": "locked = OS worker lease held for this exact store; not a progress/health heartbeat",
+        "resultCache": {
+          "entries": 0,
+          "idleSeconds": 30.0
+        },
+        "resources": {
+          "availablePhysicalBytes": 4218290176,
+          "systemCommitAvailableBytes": 11100340224,
+          "systemCommitBytes": 14678396928,
+          "systemCommitLimitBytes": 25778737152,
+          "smallMinimumAvailableGiB": 0.5
+        }
+      }
+    },
+    "frontend": {
+      "status": 200,
+      "body": {
+        "application": "gsm-map-sandbox-vite",
+        "pid": 16528,
+        "workspace": "D:\\ThS\\VinAI\\Phase3_VRIC\\gsm-map-sandbox\\",
+        "proxy": "http://127.0.0.1:8016",
+        "kind": "preview"
+      }
+    },
+    "proxy": {
+      "status": 200,
+      "body": {
+        "schemaVersion": "gsm-dev-runtime/v1",
+        "application": "gsm-map-sandbox",
+        "workspace": "D:\\ThS\\VinAI\\Phase3_VRIC\\gsm-map-sandbox",
+        "store": "D:\\ThS\\VinAI\\Phase3_VRIC\\gsm-map-sandbox\\build\\m4-performance\\jobs",
+        "apiPid": 16656,
+        "worker": "locked",
+        "workerMeaning": "locked = OS worker lease held for this exact store; not a progress/health heartbeat",
+        "resultCache": {
+          "entries": 0,
+          "idleSeconds": 30.0
+        },
+        "resources": {
+          "availablePhysicalBytes": 4218204160,
+          "systemCommitAvailableBytes": 11101757440,
+          "systemCommitBytes": 14676979712,
+          "systemCommitLimitBytes": 25778737152,
+          "smallMinimumAvailableGiB": 0.5
+        }
+      }
+    },
+    "hanoiModes": {
+      "status": 200,
+      "body": {
+        "regionId": "nvmr-hanoi-core",
+        "modes": [
+          {
+            "vehicleType": "CAR",
+            "ready": true,
+            "reason": "",
+            "routingIdentity": {
+              "regionId": "nvmr-hanoi-core",
+              "vehicleType": "CAR",
+              "profile": "car",
+              "profileSha256": "cb3df0546318665609606b746a1297f3d65ca3c2ff825f8a6f3c57247d86a2d3",
+              "graphManifestSha256": "a24d4957a01ceeb04a0de1ad680fe4c5dd51732a7b381d9368e249a65c1b29b5",
+              "sourceSha256": "2fbd2ee6b4dc151eecf04fa6823cddf584b47423e190118b10fce8b6115e9d8a",
+              "extractSha256": "18fd3892f6d766387f2c3217d5d104e09a9319d3905a9172834b21c0064d6308",
+              "algorithm": "mld"
+            }
+          },
+          {
+            "vehicleType": "MOTORBIKE",
+            "ready": true,
+            "reason": "",
+            "routingIdentity": {
+              "regionId": "nvmr-hanoi-core",
+              "vehicleType": "MOTORBIKE",
+              "profile": "motorbike",
+              "profileSha256": "075ecdbc70a3e75c4338d2c6a41597c132a1837ec2d27f1c2fcdd824a788b209",
+              "graphManifestSha256": "fb97489d066397b11cb9178238cd56a5f52281bcf5711430bb7cf411496ca455",
+              "sourceSha256": "2fbd2ee6b4dc151eecf04fa6823cddf584b47423e190118b10fce8b6115e9d8a",
+              "extractSha256": "18fd3892f6d766387f2c3217d5d104e09a9319d3905a9172834b21c0064d6308",
+              "algorithm": "mld"
+            }
+          }
+        ]
+      }
+    },
+    "docker": "READY after owner restarted Docker Desktop. Hanoi CAR/MOTORBIKE ready=true. Earlier Inference manager failure retained; no reset/settings change/container stop attempted.",
+    "dockerStartupFailure": {
+      "verifiedAt": "2026-10-18T01:45:06.4982722Z",
+      "status": "BLOCKED",
+      "source": "Docker Desktop local backend log",
+      "error": "[2026-10-18T01:43:52.661651700Z][com.docker.backend.exe.report] reporting error to user: starting services: initializing Inference manager: listening on unix://C:/Users/TIEN DAT/AppData/Local/Docker/run/dockerInference: remove C:/Users/TIEN DAT/AppData/Local/Docker/run/dockerInference: The file cannot be accessed by the system. (listener: The filename, directory name, or volume label syntax is incorrect.)",
+      "actions": "No reset, socket deletion, WSL shutdown or setting changes performed",
+      "fresh1000": "NOT RUN: Engine startup failure",
+      "fresh5000": "NOT RUN: Engine startup failure"
+    },
+    "boundedProbe": {
+      "probe": {
+        "exitCode": -1,
+        "stderr": "Docker info probe exceeded 2000 ms; inspect Docker Desktop startup.",
+        "stdout": "",
+        "timedOut": true
+      },
+      "wallSeconds": 2.1854911
+    },
+    "receipt": "build/s0-runtime/session-20261018-085122-721.json"
+  },
+  "admissionPolicy": {
+    "small": {
+      "fleetMaximum": 100,
+      "bookingsMaximum": 20,
+      "horizonSecondsMaximum": 900,
+      "onlineSchedule": "empty",
+      "maxCandidatesMaximum": 128,
+      "minimumPhysicalGiB": 0.5,
+      "minimumCommitGiB": 1
+    },
+    "standard": {
+      "minimumPhysicalGiB": 2,
+      "minimumCommitGiB": 2
+    },
+    "standardAndMeetingStartupMinimumPhysicalGiB": 0.5,
+    "benchmarkStartupMinimumPhysicalGiB": 2,
+    "basis": "Owner explicitly requested0.5GiB. Real measurements start above1.8GiB; boundary0.50/0.49 unit-tested, physical0.5GiB stress NOT RUN."
+  },
+  "validation": {
+    "artifactFreePytest": {
+      "passed": 195,
+      "skipped": 6,
+      "warnings": 1,
+      "seconds": 25.54
+    },
+    "backendFinalFocused": {
+      "passed": 37,
+      "warnings": 1
+    },
+    "vitest": {
+      "passed": 182,
+      "files": 21
+    },
+    "frontendFinalFocused": {
+      "passed": 14
+    },
+    "typecheck": "PASS",
+    "build": "PASS",
+    "lint": {
+      "errors": 0,
+      "warnings": 39,
+      "scope": "root frontend; nested ignored CI copy lint NOT VALID"
+    },
+    "savedReplay": {
+      "status": "PASS local package, 9 assets",
+      "sha256": "b4a87ee371f976f12f4da28791dffc66ebeb24352c1d664bf71851eb89c27433",
+      "cleanCheckout": "SKIP absent Git-ignored package"
+    },
+    "backendFullFinalResume": {
+      "passed": 195,
+      "skipped": 6,
+      "warnings": 1,
+      "seconds": 65.38,
+      "beforeOwnerFloorChange": true
+    },
+    "s0AfterDockerProbeChange": {
+      "passed": 5,
+      "warnings": 1
+    },
+    "focusedAfterOwnerFloorChange": {
+      "passed": 37,
+      "warnings": 1,
+      "seconds": 3.03
+    },
+    "dockerProbe": "PASS bounded timeout on actual failed Engine; 2s budget completed in 2.185s, sampler 8s timeout recorded",
+    "httpContracts": "PASS10/100/persisted5000, fresh1000 and current-policy fresh10; snapshot/route/booking product TypeScript validators",
+    "githubActions": "NOT RUN; workflow not pushed"
+  },
+  "fresh1000": {
+    "resources": {
+      "label": "resume-large",
+      "kind": "serial-live-engine-with-atomic-persistence-not-browser",
+      "before": {
+        "platform": "Windows-10-10.0.26300-SP0",
+        "python": "3.11.9",
+        "cpuCount": 8,
+        "processor": "Intel64 Family 6 Model 140 Stepping 2, GenuineIntel",
+        "memory": {
+          "totalPhysicalBytes": 16948453376,
+          "availablePhysicalBytes": 4143149056,
+          "processRssBytes": 49405952,
+          "processPeakRssBytes": 49405952,
+          "processPagefileBytes": 38395904,
+          "processPrivateBytes": 38395904,
+          "systemCommitBytes": 14719533056,
+          "systemCommitLimitBytes": 25778737152,
+          "systemCommitAvailableBytes": 11059204096
+        },
+        "dockerStats": [
+          "{\"BlockIO\":\"0B / 0B\",\"CPUPerc\":\"0.00%\",\"Container\":\"af5f68c19008785d15d820556a286d9814114cfb87449d940b126e9fefec3911\",\"ID\":\"af5f68c19008\",\"MemPerc\":\"4.22%\",\"MemUsage\":\"43.22MiB / 1GiB\",\"Name\":\"gsm-map-osrm-hanoi-motorbike\",\"NetIO\":\"7.66kB / 8.02kB\",\"PIDs\":\"10\"}",
+          "{\"BlockIO\":\"0B / 0B\",\"CPUPerc\":\"0.00%\",\"Container\":\"343e1ee656e4a30c2645352268b7c22bd9b57d76c9914d88aea767764b6dc1df\",\"ID\":\"343e1ee656e4\",\"MemPerc\":\"3.27%\",\"MemUsage\":\"33.47MiB / 1GiB\",\"Name\":\"gsm-map-osrm-hanoi-car\",\"NetIO\":\"7.36kB / 8.01kB\",\"PIDs\":\"10\"}"
+        ],
+        "hardware": "{\"Name\":\"11th Gen Intel(R) Core(TM) i5-11320H @ 3.20GHz\",\"NumberOfCores\":4,\"NumberOfLogicalProcessors\":8}\n[{\"Name\":\"NVIDIA GeForce RTX 3050 Laptop GPU\",\"AdapterRAM\":4293918720,\"DriverVersion\":\"32.0.15.7700\"},{\"Name\":\"Intel(R) Iris(R) Xe Graphics\",\"AdapterRAM\":1073741824,\"DriverVersion\":\"30.0.100.9864\"}]"
+      },
+      "runs": [
+        {
+          "fleetSize": 1000,
+          "jobId": "e2caced02db64a02a56300050544690b",
+          "status": "COMPLETED",
+          "error": null,
+          "before": {
+            "totalPhysicalBytes": 16948453376,
+            "availablePhysicalBytes": 4174893056,
+            "processRssBytes": 49586176,
+            "processPeakRssBytes": 49586176,
+            "processPagefileBytes": 38416384,
+            "processPrivateBytes": 38416384,
+            "systemCommitBytes": 14678814720,
+            "systemCommitLimitBytes": 25778737152,
+            "systemCommitAvailableBytes": 11099922432
+          },
+          "resources": {
+            "wallSeconds": 5.618781299999682,
+            "cpuSeconds": 5.0,
+            "cpuPercentOneCore": 88.9872684669233,
+            "peakRssBytesSampled": 119648256,
+            "processPeakRssBytes": 119652352,
+            "minimumAvailablePhysicalBytes": 4122570752,
+            "peakPrivateBytesSampled": 107446272,
+            "minimumCommitHeadroomBytes": 10917691392,
+            "sampleIntervalSeconds": 0.05,
+            "sampleCount": 92
+          },
+          "semanticSha256": "f74c600f30a2b911cd4075aa446aa92f8c6acc182871499b8149cd1dd60f6f1f",
+          "counts": {
+            "requested": 250,
+            "assigned": 250,
+            "completed": 250,
+            "unserved": 0,
+            "pending": 0,
+            "activeTrips": 0
+          },
+          "routingIdentities": {
+            "CAR": {
+              "regionId": "nvmr-hanoi-core",
+              "vehicleType": "CAR",
+              "profile": "car",
+              "profileSha256": "cb3df0546318665609606b746a1297f3d65ca3c2ff825f8a6f3c57247d86a2d3",
+              "graphManifestSha256": "a24d4957a01ceeb04a0de1ad680fe4c5dd51732a7b381d9368e249a65c1b29b5",
+              "sourceSha256": "2fbd2ee6b4dc151eecf04fa6823cddf584b47423e190118b10fce8b6115e9d8a",
+              "extractSha256": "18fd3892f6d766387f2c3217d5d104e09a9319d3905a9172834b21c0064d6308",
+              "algorithm": "mld"
+            },
+            "MOTORBIKE": {
+              "regionId": "nvmr-hanoi-core",
+              "vehicleType": "MOTORBIKE",
+              "profile": "motorbike",
+              "profileSha256": "075ecdbc70a3e75c4338d2c6a41597c132a1837ec2d27f1c2fcdd824a788b209",
+              "graphManifestSha256": "fb97489d066397b11cb9178238cd56a5f52281bcf5711430bb7cf411496ca455",
+              "sourceSha256": "2fbd2ee6b4dc151eecf04fa6823cddf584b47423e190118b10fce8b6115e9d8a",
+              "extractSha256": "18fd3892f6d766387f2c3217d5d104e09a9319d3905a9172834b21c0064d6308",
+              "algorithm": "mld"
+            }
+          },
+          "resultBytes": 1637720,
+          "snapshotBytes": 177982,
+          "routing": {
+            "CAR": {
+              "requests": {
+                "nearest": 24,
+                "table": 51,
+                "route": 89,
+                "routeCacheHits": 6,
+                "tableCacheHits": 44
+              },
+              "requestFailures": 0,
+              "latencyMilliseconds": {
+                "count": 164,
+                "p50": 8.020299981581047,
+                "p95": 11.043699982110411,
+                "total": 1373.2887998921797
+              },
+              "routeCacheSize": 89,
+              "tableCacheSize": 51
+            },
+            "MOTORBIKE": {
+              "requests": {
+                "nearest": 24,
+                "table": 69,
+                "route": 133,
+                "routeCacheHits": 22,
+                "tableCacheHits": 86
+              },
+              "requestFailures": 0,
+              "latencyMilliseconds": {
+                "count": 226,
+                "p50": 7.995199994184077,
+                "p95": 11.036799987778068,
+                "total": 1898.7373001291417
+              },
+              "routeCacheSize": 133,
+              "tableCacheSize": 69
+            }
+          },
+          "afterRelease": {
+            "totalPhysicalBytes": 16948453376,
+            "availablePhysicalBytes": 4172791808,
+            "processRssBytes": 74280960,
+            "processPeakRssBytes": 119652352,
+            "processPagefileBytes": 60887040,
+            "processPrivateBytes": 60887040,
+            "systemCommitBytes": 14671364096,
+            "systemCommitLimitBytes": 25778737152,
+            "systemCommitAvailableBytes": 11107373056
+          }
+        },
+        {
+          "fleetSize": 5000,
+          "status": "NOT RUN",
+          "reason": "RESOURCE_STOP: available RAM 3.89 GiB < 4.0 GiB"
+        }
+      ],
+      "syntheticPressureBytes": 0,
+      "after": {
+        "platform": "Windows-10-10.0.26300-SP0",
+        "python": "3.11.9",
+        "cpuCount": 8,
+        "processor": "Intel64 Family 6 Model 140 Stepping 2, GenuineIntel",
+        "memory": {
+          "totalPhysicalBytes": 16948453376,
+          "availablePhysicalBytes": 4165726208,
+          "processRssBytes": 74289152,
+          "processPeakRssBytes": 119652352,
+          "processPagefileBytes": 60891136,
+          "processPrivateBytes": 60891136,
+          "systemCommitBytes": 14671364096,
+          "systemCommitLimitBytes": 25778737152,
+          "systemCommitAvailableBytes": 11107373056
+        },
+        "dockerStats": [
+          "{\"BlockIO\":\"0B / 0B\",\"CPUPerc\":\"0.00%\",\"Container\":\"af5f68c19008785d15d820556a286d9814114cfb87449d940b126e9fefec3911\",\"ID\":\"af5f68c19008\",\"MemPerc\":\"4.54%\",\"MemUsage\":\"46.5MiB / 1GiB\",\"Name\":\"gsm-map-osrm-hanoi-motorbike\",\"NetIO\":\"226kB / 361kB\",\"PIDs\":\"10\"}",
+          "{\"BlockIO\":\"0B / 0B\",\"CPUPerc\":\"0.00%\",\"Container\":\"343e1ee656e4a30c2645352268b7c22bd9b57d76c9914d88aea767764b6dc1df\",\"ID\":\"343e1ee656e4\",\"MemPerc\":\"3.58%\",\"MemUsage\":\"36.71MiB / 1GiB\",\"Name\":\"gsm-map-osrm-hanoi-car\",\"NetIO\":\"166kB / 266kB\",\"PIDs\":\"10\"}"
+        ],
+        "hardware": "{\"Name\":\"11th Gen Intel(R) Core(TM) i5-11320H @ 3.20GHz\",\"NumberOfCores\":4,\"NumberOfLogicalProcessors\":8}\n[{\"Name\":\"NVIDIA GeForce RTX 3050 Laptop GPU\",\"AdapterRAM\":4293918720,\"DriverVersion\":\"32.0.15.7700\"},{\"Name\":\"Intel(R) Iris(R) Xe Graphics\",\"AdapterRAM\":1073741824,\"DriverVersion\":\"30.0.100.9864\"}]"
+      }
+    },
+    "audit": {
+      "schemaVersion": "gsm-route-fidelity-audit/v1",
+      "runId": "e2caced02db64a02a56300050544690b",
+      "config": {
+        "regionId": "nvmr-hanoi-core",
+        "seed": "m4-memory-1000",
+        "fleetSize": 1000,
+        "carCount": 400,
+        "bookingCount": 250,
+        "horizonSeconds": 900,
+        "maxWaitSeconds": 300,
+        "onlineFraction": 1.0,
+        "onlineSchedule": [],
+        "workload": "typical",
+        "initialCandidates": 16,
+        "maxCandidates": 128,
+        "gridCellDegrees": 0.005
+      },
+      "toleranceMeters": 0.02,
+      "method": "Haversine lengths; query-centered equirectangular segment distance; independent of cumulativeMeters",
+      "toleranceReason": "2 cm numeric allowance for full GeoJSON coordinates; not an allowance for road snapping/GPS error",
+      "sampledAssignments": 40,
+      "samples": 320,
+      "modes": {
+        "CAR": 160,
+        "MOTORBIKE": 160
+      },
+      "stationaryPickups": 250,
+      "reusedVehicles": 63,
+      "maxDeviationMeters": 7.433581755608728e-10,
+      "seekDeterministic": true,
+      "violations": [],
+      "passed": true,
+      "scope": "Stored OSRM geometry fidelity, not an independent legal/OSM topology certification"
+    },
+    "immutableCopy": {
+      "jobId": "e2caced02db64a02a56300050544690b",
+      "files": [
+        {
+          "name": "input.json",
+          "sha256": "24e9059329a8f35776de3ca58e82854e8b9db7ca522786abdecb3853f779124e"
+        },
+        {
+          "name": "status.json",
+          "sha256": "4317f766318ad05d23554c32a448f2fd831a964ea43282b4ab8327cf453707c7"
+        },
+        {
+          "name": "event-log.json",
+          "sha256": "4c132bae741c29d44ec7ac42bb1866c71e351c79aa1c7cec6fbd27d292aec1a7"
+        },
+        {
+          "name": "result.json",
+          "sha256": "965afcc492f106061cdc109b2f65f1d308132deeb76e9bcda55823dbfbbaee68"
+        }
+      ]
+    }
+  },
+  "currentLowMemoryPolicyLive10": {
+    "status": "PASS",
+    "jobId": "786e10e8382540fc8de15ccbf87bff9e",
+    "counts": {
+      "requested": 20,
+      "assigned": 19,
+      "completed": 19,
+      "unserved": 1,
+      "pending": 0,
+      "activeTrips": 0
+    },
+    "config": {
+      "regionId": "nvmr-hanoi-core",
+      "seed": "m4-memory-10",
+      "fleetSize": 10,
+      "carCount": 4,
+      "bookingCount": 20,
+      "horizonSeconds": 900,
+      "maxWaitSeconds": 300,
+      "onlineFraction": 1.0,
+      "onlineSchedule": [],
+      "workload": "typical",
+      "initialCandidates": 16,
+      "maxCandidates": 128,
+      "gridCellDegrees": 0.005
+    },
+    "semanticSha256": "f4101a1ff235f70074cf339892a35ffeab6981c9887ac3178144e5738fedb7aa",
+    "baselineSha256": "f4101a1ff235f70074cf339892a35ffeab6981c9887ac3178144e5738fedb7aa",
+    "matchesBaseline": true,
+    "smallPhysicalFloorGiB": 0.5,
+    "actualFreeRam": "Around4GiB, NOT a physical0.5GiB stress test"
+  },
+  "correctness": {
+    "status": "PASS",
+    "runs": [
+      {
+        "jobId": "08a6b84ce68847a398d67bb042d3ad2e",
+        "fleetSize": 10,
+        "semanticSha256": "f4101a1ff235f70074cf339892a35ffeab6981c9887ac3178144e5738fedb7aa",
+        "baselineSha256": "f4101a1ff235f70074cf339892a35ffeab6981c9887ac3178144e5738fedb7aa",
+        "matchesBaseline": true,
+        "counts": {
+          "requested": 20,
+          "assigned": 19,
+          "completed": 19,
+          "unserved": 1,
+          "pending": 0,
+          "activeTrips": 0
+        },
+        "audit": {
+          "schemaVersion": "gsm-route-fidelity-audit/v1",
+          "runId": "08a6b84ce68847a398d67bb042d3ad2e",
+          "config": {
+            "regionId": "nvmr-hanoi-core",
+            "seed": "m4-memory-10",
+            "fleetSize": 10,
+            "carCount": 4,
+            "bookingCount": 20,
+            "horizonSeconds": 900,
+            "maxWaitSeconds": 300,
+            "onlineFraction": 1.0,
+            "onlineSchedule": [],
+            "workload": "typical",
+            "initialCandidates": 16,
+            "maxCandidates": 128,
+            "gridCellDegrees": 0.005
+          },
+          "toleranceMeters": 0.02,
+          "method": "Haversine lengths; query-centered equirectangular segment distance; independent of cumulativeMeters",
+          "toleranceReason": "2 cm numeric allowance for full GeoJSON coordinates; not an allowance for road snapping/GPS error",
+          "sampledAssignments": 19,
+          "samples": 256,
+          "modes": {
+            "CAR": 168,
+            "MOTORBIKE": 88
+          },
+          "stationaryPickups": 6,
+          "reusedVehicles": 6,
+          "maxDeviationMeters": 7.59927361928493e-10,
+          "seekDeterministic": true,
+          "violations": [],
+          "passed": true,
+          "scope": "Stored OSRM geometry fidelity, not an independent legal/OSM topology certification"
+        },
+        "deterministicMetricsEqual": true,
+        "deterministicMetrics": {
+          "eventsProcessed": 72,
+          "peakEventQueue": 42,
+          "peakPending": 4,
+          "tableCandidates": 55,
+          "searchBudgetExhaustions": 0,
+          "dispatchAttempts": 21,
+          "dispatchVersion": "grid-fifo/v1"
+        }
+      },
+      {
+        "jobId": "6c958c86abed4e4ba1faf973ebe601eb",
+        "fleetSize": 100,
+        "semanticSha256": "91d3c406768af2ba8d7dcefc8541950ca2d69925f7f18a0ba281c19a4580152b",
+        "baselineSha256": "91d3c406768af2ba8d7dcefc8541950ca2d69925f7f18a0ba281c19a4580152b",
+        "matchesBaseline": true,
+        "counts": {
+          "requested": 20,
+          "assigned": 20,
+          "completed": 20,
+          "unserved": 0,
+          "pending": 0,
+          "activeTrips": 0
+        },
+        "audit": {
+          "schemaVersion": "gsm-route-fidelity-audit/v1",
+          "runId": "6c958c86abed4e4ba1faf973ebe601eb",
+          "config": {
+            "regionId": "nvmr-hanoi-core",
+            "seed": "m4-memory-100",
+            "fleetSize": 100,
+            "carCount": 40,
+            "bookingCount": 20,
+            "horizonSeconds": 900,
+            "maxWaitSeconds": 300,
+            "onlineFraction": 1.0,
+            "onlineSchedule": [],
+            "workload": "typical",
+            "initialCandidates": 16,
+            "maxCandidates": 128,
+            "gridCellDegrees": 0.005
+          },
+          "toleranceMeters": 0.02,
+          "method": "Haversine lengths; query-centered equirectangular segment distance; independent of cumulativeMeters",
+          "toleranceReason": "2 cm numeric allowance for full GeoJSON coordinates; not an allowance for road snapping/GPS error",
+          "sampledAssignments": 20,
+          "samples": 184,
+          "modes": {
+            "CAR": 64,
+            "MOTORBIKE": 120
+          },
+          "stationaryPickups": 17,
+          "reusedVehicles": 1,
+          "maxDeviationMeters": 7.278440859401595e-10,
+          "seekDeterministic": true,
+          "violations": [],
+          "passed": true,
+          "scope": "Stored OSRM geometry fidelity, not an independent legal/OSM topology certification"
+        },
+        "deterministicMetricsEqual": true,
+        "deterministicMetrics": {
+          "eventsProcessed": 63,
+          "peakEventQueue": 41,
+          "peakPending": 1,
+          "tableCandidates": 320,
+          "searchBudgetExhaustions": 0,
+          "dispatchAttempts": 20,
+          "dispatchVersion": "grid-fifo/v1"
+        }
+      }
+    ],
+    "persisted5000": {
+      "jobId": "088a063b0b0d46e1a8241fea277334a9",
+      "sha256": "7d4cf390d4514f28793167a70af7f322e7196109a3640c1bc7c2915ce6829312",
+      "unchanged": true
+    }
+  },
+  "limitations": [
+    "Historical ~1 Hz NOT reproduced, root cause unresolved.",
+    "Only embedded Chromium controlled; independent Chrome and real Meet NOT VERIFIED.",
+    "5-second browser captures are RAF cadence plus strict source/cluster oracle, not GPU/compositor traces or soak SLA.",
+    "Synthetic video640x360 at30Hz does not represent real RTC Meet cost.",
+    "Fresh1000 completed after owner Docker recovery; fresh5000 NOT RUN available3.89GiB<profiler reserve4GiB.",
+    "No clean before-Docker/after-each-service controlled boot sequence. Resume offline is a different session, not optimization savings.",
+    "No exhaustive repeated dashboard/fixture/selection/reload leak soak; short release/GC and six live runs only.",
+    "Final small physical floor0.5GiB explicitly requested by owner. Real constrained runs had>1.8GiB free;0.50/0.49 boundary unit-tested only, not a physical-low-RAM safety guarantee.",
+    "Original runtime processes not stopped; all were offline at resume. After Engine recovery the old HCM task container ID no longer exists; Hanoi owner containers untouched."
+  ],
+  "retainedFailures": [
+    "build/m4-performance/live-regressions.log: initial HCM unavailable; rerun later PASS",
+    "build/m4-performance/stop-owned.log: initial refusal of unexpected child, fixed and rerun PASS",
+    "build/m4-performance/ci-frontend-lint.log: ignored nested copy has no valid file scan",
+    "build/m4-performance/ci-frontend-replay.log: missing sealed package on source-only copy",
+    "Old IAB ERR_EMPTY_RESPONSE during HMR edits, PowerShell HTTP200 and new tab worked; cause unproven",
+    "baseline-processes.json: initial12s window shortened by CIM warmup; preserved; recorder fixed at resume",
+    "backend-low-memory-final.log: two old-boundary rejection fixtures failed after floor change; fixed to0.49 without removing assertions; rerun37PASS"
+  ],
+  "selectedLogCopies": {
+    "backend-focused-final.log": "backend-focused-final.txt",
+    "backend-focused-resume.log": "backend-focused-resume.txt",
+    "backend-full-resume.log": "backend-full-resume.txt",
+    "ci-backend-final.log": "ci-backend-final.txt",
+    "frontend-tests.log": "frontend-tests.txt",
+    "frontend-focused-final.log": "frontend-focused-final.txt",
+    "replay-verification.log": "replay-verification.txt",
+    "live-regressions-rerun.log": "live-regressions-rerun.txt",
+    "s0-final-resume.log": "s0-final-resume.txt",
+    "launcher-broken-docker.log": "launcher-broken-docker.txt",
+    "backend-low-memory-final.log": "backend-low-memory-final.txt",
+    "backend-low-memory-rerun.log": "backend-low-memory-rerun.txt",
+    "launcher-low-memory-final.log": "launcher-low-memory-final.txt"
+  },
+  "evidenceFiles": {
+    "after-constrained.json": "87055d7752e5fe23bc502835a348cd489bb9d5c22eed4848eac076ebcc598b52",
+    "api-cache-idle.json": "db1703190d11e7b3806f010cbdc17c6aa0b47fd33f02bcd34598f6fcbeed6f09",
+    "backend-focused-final.txt": "8a61e2be4e58c12e014d8629aa65481c2f9ad70342426981e0fe7b8026528fbc",
+    "backend-focused-resume.txt": "a9c421655da617f37753c5ad1de5ad6baa6efc9fa538bf23d586882bca6d46da",
+    "backend-full-resume.txt": "a26f82a362211b9033ae37f603a5f30991aa3d402adcfb536fb3c0593c08e27f",
+    "backend-low-memory-final.txt": "0aa10b169ecbf83e65e504b46e57826ddeb635c99819b6438d108751f010eb21",
+    "backend-low-memory-rerun.txt": "a5d22436fb400e46051e04cbdfbc58d581c73775ab779c87c4591fb6e11f58b4",
+    "before.json": "ccf603e7093d7ebb7435e290e001742d5f46143e83fea2fbdb6d467fb05e6998",
+    "browser-isolation-dev-matrix.json": "2a5a0fab604c8dda053a883a7fe4e8c790cfa3b4504a44e679c01d6f678475fd",
+    "browser-isolation-dev.json": "eee633d04af6c1662453ff5f914bb3d80cff5719478c49e2b2abd1d7fe549b85",
+    "browser-isolation-production.json": "140e50b496dc49d7b73576d7af61788334e63c61ce74446096eda4c10dd6885d",
+    "ci-backend-final.txt": "129453b8f4b80d4bf183cd826254af45ea6d421d14eb46d28db5ab6b20aa3f31",
+    "conditional-capacity.json": "e02d186c8eda07a0d72d4b747f66efb630fef44cc377eef7015b295dac13f71c",
+    "contract-10.json": "9796fe49e1cbddfc613c08f7cecab30878dc3c3441a3663bafe6f1eb104389d6",
+    "contract-100.json": "54525b67169b7031857d7feeca535637b8a93bdf5fbb7163a35ef136fc7a35b8",
+    "contract-1000.json": "0037955cd9638729ae17a85c7d9ad8d28c12ba7568665fdd7fa1e52ac559a2fc",
+    "contract-5000.json": "f2e0e39cdae91a7e72bfbcb3811e55dfb2fe68ab796465f50be2c926bc9b5a08",
+    "contract-low-memory-10.json": "34b38fc053a17237734c5e20c20da32b409156dc25f90d74f72e0ad6ed63825c",
+    "docker-probe-bounded.json": "1e5a5ce6538ee1804f8ac9112384de8bc8d6a2ca497d1f8ac51d749f0a85a1fc",
+    "docker-start-failure.json": "fcc7740e121531d14535cd1125fbdd7d577dbaf314e76f73ef2ebee856371f87",
+    "final-correctness.json": "bf3433eafdbae84ba1bf92f045fe65d9c1a2c47748bfca2c6cc304eab10c0c1f",
+    "fresh-1000-audit.json": "5f8f7607d1e21aed35286cd06cc2c58d4e89c9afb70c145e9cf0a0d44c3bf5bb",
+    "fresh-1000-copy.json": "b6c27a08ccd3e9ec7dd2ec6681a71f5bb32afe82da1cd578c94b868fd4ba9197",
+    "frontend-focused-final.txt": "b0c8021a1851ad3b11f746520e5a782379ca985ba52b63e0f6c08e973ded7b15",
+    "frontend-server-cold.json": "b37ae7f77a8c24cabf3214707afd734167bde686f97cca7c593e6eff83a1bea4",
+    "frontend-server-warm.json": "54561fb9de73db80e7118676973bf012fa0618363697c05a02432a2073a4ba94",
+    "frontend-tests.txt": "b5e6a7ec7629e6bf5f23310a335cbb5354fe4fda7b7f2df824bea270e689fc77",
+    "hcm-receipt-final-check.json": "adcc5c3a048e3d224446b2e83079585511ebbe5cdafeba4202248d4b047ddca3",
+    "launcher-broken-docker.txt": "048ca61d5591cc1244b7387c1deb129d8f6b7a8edfb69970975ed675e151d1fb",
+    "launcher-low-memory-final.txt": "f7296fac4dca00cb1242671770fe98a6140966ede9857a5d97f3ada188a0a60d",
+    "live-regressions-rerun.txt": "9da0da720c7628c6fafb01939efd868681fc2627118ead423d732f370faa7d1f",
+    "low-memory-live10.json": "6d9b69267dbcb29267bdc8bc84fde930e4010d946105c4db09f29c51ce2c63b8",
+    "low-memory-live10.png": "325b37e328f99426779f624c2a1ec7cda430c96cabde8419387e1f6f6b0f95fa",
+    "m2-regression.json": "b4187d178b4e02d27477e8de7d64855c313c3160f672d536df449be95e5cc305",
+    "meeting-100-inspector.png": "44fa91ba8285a2656dc341dc486f117812e9aac9008e19355498f7afc633d87f",
+    "meeting-persisted-5000.png": "ac77dbbe2a751c9d5d6c5cf4279efce12176f4c1e5f2eaa29ba1d28891b7edad",
+    "modes-resumed.json": "53664cd301fa9eab6a5a780d419c1acf6d6ef28260f245e375927180a3e8d6fb",
+    "paused-network.json": "7dab21c6e2a8d467f67caeaad93403fa74b4410adb452a9343b08ed49383c7d9",
+    "product-before-100.json": "f604f23f947eb010c3cc08062d21b84f0f76cdfc1e932ef30689dbea10139773",
+    "product-meeting-10.json": "2fede66f3fab1ce9a75600e9a963796109c13e43ba8c727288511c6db494364d",
+    "product-meeting-100-control.json": "6cb7e7473a89e1b5675cad091a11f02e0e64f63c868099b8afebca2a84c1cec9",
+    "product-meeting-100.json": "53839b4453819e9a5e3b91840412ec09cc6d12d406e1c497838b16c715f7ce97",
+    "product-meeting-persisted-5000.json": "60f26855e06c33942fe709e8722df73925a3304c0e2aedba05695c59c7424c48",
+    "product-paused-100.json": "6cab719c8c2c9b33b464e96b0a4c613810c266a8a341420bf83180ebe982bb86",
+    "product-standard-100.json": "e997f29ca8205b6f23281c75e871e0147c120492d5f1d248e3962ec33f064855",
+    "replay-verification.txt": "78262c5d78a7ad66c89c639acf5d520490b5037b324d90889292fef2110051f8",
+    "resume-100-inspector.png": "ddd5828e63c3c855e384065c3e58f98b0c9e19a1806b72a3c4e232c013036043",
+    "resume-large.json": "e0618709704e6f4466dfc2a7685c7be36c37edfd856d640c9ccf0e495085df57",
+    "runtime-low-memory.json": "a19cf39838fb533616f5442828aefb48c441d7076fad040c8d970b8e8351d5e3",
+    "s0-final-resume.txt": "133348f126fa330f806d3592973d1cb5be85ff8935e1cb1b237df8511abe6a25",
+    "s1-directed-summary.json": "00db54a0c1645e55e565171c0bb5e2bae31bd29ba77637d281ca9530fc09578e",
+    "synthetic-video-after-acceptance.json": "c483f6eeaab8bbf20dffaeece2fbf796fcc96c5302153dc89c8091069b0040e3",
+    "synthetic-video.json": "92766efba2a46488495dfaf8aeb0b9efe391f8df2f358a27e951b34ad7df79a5",
+    "windows-memory-summary.json": "4584270ff3b8b99830dfc4f76787befa7ea0ecd08d86e2d38138cf37beb93a75",
+    "wsl-settings-summary.json": "9e3a16e235f91f825e5acc1d8be15788a4573ec80c6e7a1ef7bb340fccf4a516"
+  }
+}

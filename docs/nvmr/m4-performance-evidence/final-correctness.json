@@ -1,0 +1,130 @@
+{
+  "status": "PASS",
+  "runs": [
+    {
+      "jobId": "08a6b84ce68847a398d67bb042d3ad2e",
+      "fleetSize": 10,
+      "semanticSha256": "f4101a1ff235f70074cf339892a35ffeab6981c9887ac3178144e5738fedb7aa",
+      "baselineSha256": "f4101a1ff235f70074cf339892a35ffeab6981c9887ac3178144e5738fedb7aa",
+      "matchesBaseline": true,
+      "counts": {
+        "requested": 20,
+        "assigned": 19,
+        "completed": 19,
+        "unserved": 1,
+        "pending": 0,
+        "activeTrips": 0
+      },
+      "audit": {
+        "schemaVersion": "gsm-route-fidelity-audit/v1",
+        "runId": "08a6b84ce68847a398d67bb042d3ad2e",
+        "config": {
+          "regionId": "nvmr-hanoi-core",
+          "seed": "m4-memory-10",
+          "fleetSize": 10,
+          "carCount": 4,
+          "bookingCount": 20,
+          "horizonSeconds": 900,
+          "maxWaitSeconds": 300,
+          "onlineFraction": 1.0,
+          "onlineSchedule": [],
+          "workload": "typical",
+          "initialCandidates": 16,
+          "maxCandidates": 128,
+          "gridCellDegrees": 0.005
+        },
+        "toleranceMeters": 0.02,
+        "method": "Haversine lengths; query-centered equirectangular segment distance; independent of cumulativeMeters",
+        "toleranceReason": "2 cm numeric allowance for full GeoJSON coordinates; not an allowance for road snapping/GPS error",
+        "sampledAssignments": 19,
+        "samples": 256,
+        "modes": {
+          "CAR": 168,
+          "MOTORBIKE": 88
+        },
+        "stationaryPickups": 6,
+        "reusedVehicles": 6,
+        "maxDeviationMeters": 7.59927361928493e-10,
+        "seekDeterministic": true,
+        "violations": [],
+        "passed": true,
+        "scope": "Stored OSRM geometry fidelity, not an independent legal/OSM topology certification"
+      },
+      "deterministicMetricsEqual": true,
+      "deterministicMetrics": {
+        "eventsProcessed": 72,
+        "peakEventQueue": 42,
+        "peakPending": 4,
+        "tableCandidates": 55,
+        "searchBudgetExhaustions": 0,
+        "dispatchAttempts": 21,
+        "dispatchVersion": "grid-fifo/v1"
+      }
+    },
+    {
+      "jobId": "6c958c86abed4e4ba1faf973ebe601eb",
+      "fleetSize": 100,
+      "semanticSha256": "91d3c406768af2ba8d7dcefc8541950ca2d69925f7f18a0ba281c19a4580152b",
+      "baselineSha256": "91d3c406768af2ba8d7dcefc8541950ca2d69925f7f18a0ba281c19a4580152b",
+      "matchesBaseline": true,
+      "counts": {
+        "requested": 20,
+        "assigned": 20,
+        "completed": 20,
+        "unserved": 0,
+        "pending": 0,
+        "activeTrips": 0
+      },
+      "audit": {
+        "schemaVersion": "gsm-route-fidelity-audit/v1",
+        "runId": "6c958c86abed4e4ba1faf973ebe601eb",
+        "config": {
+          "regionId": "nvmr-hanoi-core",
+          "seed": "m4-memory-100",
+          "fleetSize": 100,
+          "carCount": 40,
+          "bookingCount": 20,
+          "horizonSeconds": 900,
+          "maxWaitSeconds": 300,
+          "onlineFraction": 1.0,
+          "onlineSchedule": [],
+          "workload": "typical",
+          "initialCandidates": 16,
+          "maxCandidates": 128,
+          "gridCellDegrees": 0.005
+        },
+        "toleranceMeters": 0.02,
+        "method": "Haversine lengths; query-centered equirectangular segment distance; independent of cumulativeMeters",
+        "toleranceReason": "2 cm numeric allowance for full GeoJSON coordinates; not an allowance for road snapping/GPS error",
+        "sampledAssignments": 20,
+        "samples": 184,
+        "modes": {
+          "CAR": 64,
+          "MOTORBIKE": 120
+        },
+        "stationaryPickups": 17,
+        "reusedVehicles": 1,
+        "maxDeviationMeters": 7.278440859401595e-10,
+        "seekDeterministic": true,
+        "violations": [],
+        "passed": true,
+        "scope": "Stored OSRM geometry fidelity, not an independent legal/OSM topology certification"
+      },
+      "deterministicMetricsEqual": true,
+      "deterministicMetrics": {
+        "eventsProcessed": 63,
+        "peakEventQueue": 41,
+        "peakPending": 1,
+        "tableCandidates": 320,
+        "searchBudgetExhaustions": 0,
+        "dispatchAttempts": 20,
+        "dispatchVersion": "grid-fifo/v1"
+      }
+    }
+  ],
+  "persisted5000": {
+    "jobId": "088a063b0b0d46e1a8241fea277334a9",
+    "sha256": "7d4cf390d4514f28793167a70af7f322e7196109a3640c1bc7c2915ce6829312",
+    "unchanged": true
+  }
+}

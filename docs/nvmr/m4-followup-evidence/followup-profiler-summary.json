@@ -1,0 +1,126 @@
+[
+  {
+    "stage": "plain",
+    "at": "2026-10-18T02:15:31.424Z",
+    "fps": 60.000533041925166,
+    "p95GapMs": 16.900000000001455,
+    "maxGapMs": 17.200000000000728,
+    "viewport": [
+      1280,
+      720
+    ],
+    "canvas": null,
+    "dpr": 1.25,
+    "renderer": null,
+    "profileError": null,
+    "profileSampleIntervalMs": 16,
+    "sampleCount": 1700,
+    "frameCount": 6,
+    "samplesWithoutStack": 1665,
+    "topSampledFrames": [
+      [
+        "",
+        25
+      ],
+      [
+        "now",
+        4
+      ],
+      [
+        "v",
+        2
+      ],
+      [
+        "i",
+        2
+      ],
+      [
+        "requestAnimationFrame",
+        2
+      ]
+    ],
+    "resources": [
+      "http://127.0.0.1:5187/assets/performance-tfJYGjJU.js"
+    ],
+    "traceEventCount": 3302
+  },
+  {
+    "stage": "5000-play",
+    "at": "2026-10-18T02:16:30.473Z",
+    "fps": 59.999733482559265,
+    "p95GapMs": 16.90000000000873,
+    "maxGapMs": 17.20000000001164,
+    "viewport": [
+      1280,
+      720
+    ],
+    "canvas": [
+      764,
+      543
+    ],
+    "dpr": 1.25,
+    "renderer": "ANGLE (Intel, Intel(R) Iris(R) Xe Graphics (0x00009A49) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+    "profileError": null,
+    "profileSampleIntervalMs": 16,
+    "sampleCount": 1439,
+    "frameCount": 201,
+    "samplesWithoutStack": 1147,
+    "topSampledFrames": [
+      [
+        "",
+        43
+      ],
+      [
+        "set",
+        22
+      ],
+      [
+        "t",
+        13
+      ],
+      [
+        "wf",
+        13
+      ],
+      [
+        "hl",
+        12
+      ],
+      [
+        "upload",
+        11
+      ],
+      [
+        "l",
+        11
+      ],
+      [
+        "receive",
+        11
+      ],
+      [
+        "render",
+        9
+      ],
+      [
+        "dl",
+        8
+      ],
+      [
+        "draw",
+        8
+      ],
+      [
+        "bind",
+        8
+      ]
+    ],
+    "resources": [
+      "http://127.0.0.1:5187/assets/performance-tfJYGjJU.js",
+      "http://127.0.0.1:5187/assets/maplibre-gl-ynIxbGnO.js",
+      "http://127.0.0.1:5187/assets/simulation-Cz76a5hF.js",
+      "http://127.0.0.1:5187/assets/multimodal-D9t9fqb-.js"
+    ],
+    "traceEventCount": 3303
+  }
+]

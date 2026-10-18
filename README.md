@@ -10,6 +10,12 @@ GIF là bản xem trước 10 giây để GitHub hiển thị trực tiếp. [M�
 
 ## S0/S1 — Khởi động và theo dõi hai chặng
 
+**Cập nhật performance/memory 18/10/2026:** [báo cáo đầy đủ và PowerShell runbook](docs/nvmr/M4_PERFORMANCE_MEMORY_STABILIZATION.md), [evidence hiện tại](docs/nvmr/m4-performance-evidence/validation-summary.json). Launcher có `-Profile Standard|Meeting|Benchmark`, `-Routers HanoiCar|HanoiBoth|All|None` và `-StartRouters`. Meeting dùng production preview fresh build, snapshot tối đa 4 Hz, clock hiển thị 10 Hz; paused unchanged không poll snapshot. Ví dụ sau `npm.cmd run build` trong frontend: `./scripts/Start-GsmDev.ps1 -Profile Meeting -Routers HanoiBoth -StartRouters`. Docker Desktop phải chạy để serve OSRM. Với `-Routers None`, vẫn có thể mở completed job khi routers tắt. Nhớ dùng cùng API/store/ports khi mở job đã lưu.
+
+**Policy mới nhất sau follow-up18/10:** startup mọi profile0,5 GiB RAM trống. Light (≤1.000 xe/≤1.000 yêu cầu) dùng0,5 GiB physical/1 GiB commit; routine (tới5.000 xe/≤5.000 yêu cầu) dùng0,75/1,5 GiB. Cả hai giới hạn horizon≤3.600s, schedule≤8, candidates≤128; extended giữ2/2 GiB. API/worker/profiler cùng policy, không giảm ngầm counts/seed/routing. Fresh1.000/5.000 đã completed với250/1.250 requests; xem [FPS/resource follow-up](docs/nvmr/M4_FPS_RESOURCE_FOLLOWUP.md). Lỗi1FPS chưa tái lập/chốt nguyên nhân; Google Meet thật chưa kiểm thử. Commit/push chỉ được phép khi cả FPS/RAM tasks hoàn thành, nên chưa thực hiện.
+
+Checkpoint trước follow-up và raw evidence vẫn giữ trong stabilization report; fresh5.000 NOT RUN ở checkpoint đó đã được thay bằng successful run mới, không sửa historical capture. GitHub Actions workflow có source nhưng chưa push/chạy remote.
+
 Từ project root, PowerShell (Python/Node dependencies và GIS/graphs đã chuẩn bị):
 
 ```powershell
