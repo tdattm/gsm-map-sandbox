@@ -1,6 +1,19 @@
 # GSM Map Sandbox
 
-PoC mô phỏng hành trình, đội xe và voucher trên bản đồ OSM thật tại TP.HCM và Hanoi Core, dùng OSRM local. Hanoi hỗ trợ pilot CAR/MOTORBIKE với graph riêng; booking, giá cước, ETA và voucher là giả định nghiên cứu, không phải dữ liệu vận hành hay GPS thực tế của GSM.
+PoC mô phỏng hành trình, đội xe và voucher trên bản đồ OSM thật, dùng OSRM local. Ngoài TP.HCM và Hanoi Core, R1a bổ sung scenario thống nhất Hanoi + **Bắc Ninh Core technical pilot**, CAR/MOTORBIKE có graph riêng. Booking, phân bổ fleet, giá cước, ETA và voucher là giả định nghiên cứu, không phải dữ liệu vận hành hay GPS thực tế của GSM.
+
+## R1a — Hanoi + Bắc Ninh Core
+
+Từ **Mô phỏng quy mô lớn → Kịch bản mô phỏng**, chọn Hanoi legacy v3 hoặc NVMR hai vùng. Regional v4 có một job/store/worker, một clock, phân bổ tối đa **5.000 xe tổng qua hai vùng**, tổng và KPI theo vùng, overview extent, drill-down tải một basemap và immutable pickup/trip inspector. Bắc Ninh là vùng kỹ thuật thí điểm quanh đô thị cũ, **không phải toàn tỉnh sau hợp nhất năm 2025**. Không điều phối xuyên vùng hay đổi graph CAR/MOTORBIKE.
+
+Local CAR/MOTORBIKE Bắc Ninh đã build/verify; live regional20/100/500/5.000 PASS, gồm persist/reopen và independent counts/KPI/route audit. Run5.000 có2.000CAR+3.000MOTORBIKE/1.250requests,1.225completed/25unserved. Đây là bằng chứng backend trong workload đã đo. Browser capture5.000 tổng/2.500 xe vùng chi tiết có cluster oracle PASS nhưng RAF thấp (~1,9FPS trong capture ngắn); **chưa chứng nhận UI5.000 mượt, Meet thật hoặc production**. M4 profiling đã được owner đóng, không mở lại trong R1a.
+
+```powershell
+# Chỉ serve graph đã verify; không preprocess hoặc download lại.
+powershell -NoProfile -ExecutionPolicy Bypass -File scripts/Start-GsmDev.ps1 -Profile Meeting -Routers Regional -StartRouters -ApiPort 8021 -FrontendPort 5191 -Store build/r1a/jobs
+```
+
+Cần fresh `npm.cmd run build` trong frontend trước Meeting; API/worker cũ phải được restart tại đúng process của mình để nhận v4. Xem [runbook PowerShell](docs/nvmr/R1A_RUNBOOK.md), [báo cáo tích hợp chi tiết](docs/nvmr/R1A_IMPLEMENTATION.md), [GIS/provenance](docs/nvmr/R1A_GIS.md), [backend contract](docs/nvmr/R1A_BACKEND.md), [checkpoint phục hồi](docs/nvmr/R1A_PROGRESS.md) và [Git review-only](docs/nvmr/R1A_GIT_DELIVERY.md). Các số liệu M0–M4/S0/S1 bên dưới là lịch sử riêng.
 
 ## Video demo
 
@@ -10,7 +23,7 @@ GIF là bản xem trước 10 giây để GitHub hiển thị trực tiếp. [M�
 
 ## S0/S1 — Khởi động và theo dõi hai chặng
 
-**Cập nhật performance/memory 18/10/2026:** [báo cáo đầy đủ và PowerShell runbook](docs/nvmr/M4_PERFORMANCE_MEMORY_STABILIZATION.md), [evidence hiện tại](docs/nvmr/m4-performance-evidence/validation-summary.json). Launcher có `-Profile Standard|Meeting|Benchmark`, `-Routers HanoiCar|HanoiBoth|All|None` và `-StartRouters`. Meeting dùng production preview fresh build, snapshot tối đa 4 Hz, clock hiển thị 10 Hz; paused unchanged không poll snapshot. Ví dụ sau `npm.cmd run build` trong frontend: `./scripts/Start-GsmDev.ps1 -Profile Meeting -Routers HanoiBoth -StartRouters`. Docker Desktop phải chạy để serve OSRM. Với `-Routers None`, vẫn có thể mở completed job khi routers tắt. Nhớ dùng cùng API/store/ports khi mở job đã lưu.
+**Cập nhật performance/memory 18/10/2026:** [báo cáo đầy đủ và PowerShell runbook](docs/nvmr/M4_PERFORMANCE_MEMORY_STABILIZATION.md), [evidence hiện tại](docs/nvmr/m4-performance-evidence/validation-summary.json). Launcher có `-Profile Standard|Meeting|Benchmark`, `-Routers HanoiCar|HanoiBoth|Regional|All|None` và `-StartRouters`. Meeting dùng production preview fresh build, snapshot tối đa 4 Hz, clock hiển thị 10 Hz; paused unchanged không poll snapshot. Ví dụ sau `npm.cmd run build` trong frontend: `./scripts/Start-GsmDev.ps1 -Profile Meeting -Routers HanoiBoth -StartRouters`. Docker Desktop phải chạy để serve OSRM. Với `-Routers None`, vẫn có thể mở completed job khi routers tắt. Nhớ dùng cùng API/store/ports khi mở job đã lưu.
 
 **Policy mới nhất sau follow-up18/10:** startup mọi profile0,5 GiB RAM trống. Light (≤1.000 xe/≤1.000 yêu cầu) dùng0,5 GiB physical/1 GiB commit; routine (tới5.000 xe/≤5.000 yêu cầu) dùng0,75/1,5 GiB. Cả hai giới hạn horizon≤3.600s, schedule≤8, candidates≤128; extended giữ2/2 GiB. API/worker/profiler cùng policy, không giảm ngầm counts/seed/routing. Fresh1.000/5.000 đã completed với250/1.250 requests; xem [FPS/resource follow-up](docs/nvmr/M4_FPS_RESOURCE_FOLLOWUP.md). Lỗi1FPS chưa tái lập/chốt nguyên nhân; Google Meet thật chưa kiểm thử. Commit/push chỉ được phép khi cả FPS/RAM tasks hoàn thành, nên chưa thực hiện.
 
@@ -24,7 +37,7 @@ powershell -NoProfile -ExecutionPolicy Bypass -File scripts/Start-GsmDev.ps1 -St
 powershell -NoProfile -ExecutionPolicy Bypass -File scripts/Start-GsmDev.ps1
 ```
 
-Mặc định API **8013**, Vite **5183**, shared absolute store `build/m3/jobs`. Launcher kiểm RAM ≥2 GiB, prerequisites, PID đang listen, đúng application/workspace/store/proxy và OS worker lease; reuse dịch vụ đúng, chỉ start phần còn thiếu. Không kill process, start/recreate Docker container hoặc rebuild graph. API cũ chưa có `/api/v3/simulation/jobs/runtime` sẽ bị từ chối reuse trong chế độ start: Ctrl+C tại đúng terminal API của mình để nạp source mới, hoặc chọn cổng còn trống. Dùng `-StatusOnly` để xem lỗi mà không start service. Lease không thay cho heartbeat/progress health.
+Mặc định API **8013**, Vite **5183**, shared absolute store `build/m3/jobs`. Launcher kiểm RAM ≥0,5 GiB khi khởi động service; admission job theo workload riêng, prerequisites, PID đang listen, đúng application/workspace/store/proxy và OS worker lease; reuse dịch vụ đúng, chỉ start phần còn thiếu. Không kill process, start/recreate Docker container hoặc rebuild graph. API cũ chưa có `/api/v3/simulation/jobs/runtime` sẽ bị từ chối reuse trong chế độ start: Ctrl+C tại đúng terminal API của mình để nạp source mới, hoặc chọn cổng còn trống. Dùng `-StatusOnly` để xem lỗi mà không start service. Lease không thay cho heartbeat/progress health.
 
 Trong lượt kiểm chứng S0/S1, Owner giữ 8013/5183, nên bản mới chạy riêng:
 

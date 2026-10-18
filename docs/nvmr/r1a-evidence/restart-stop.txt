@@ -1,0 +1,7 @@
+PID identity changed; refusing to stop
+At D:\ThS\VinAI\Phase3_VRIC\gsm-map-sandbox\scripts\Stop-GsmDev.ps1:20 char:168
++ ...  $service.executable){throw 'PID identity changed; refusing to stop'}
++                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : OperationStopped: (PID identity changed; refusing to stop:String) [], RuntimeException
+    + FullyQualifiedErrorId : PID identity changed; refusing to stop
+ 

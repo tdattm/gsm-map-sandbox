@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "jobId": "febbd58d90de4112aa894b01775300d1",
+  "observedBeforeCancel": [
+    "QUEUED",
+    "RUNNING"
+  ],
+  "cancel": "CANCELLED",
+  "afterGrace": "CANCELLED",
+  "resultHttp": 409,
+  "resultFileExists": false,
+  "aggregate5001Http": 422,
+  "invalidCreatedJob": false,
+  "graceSeconds": 2,
+  "scope": "real API/worker cancellation during RUNNING, not a hard process crash test"
+}

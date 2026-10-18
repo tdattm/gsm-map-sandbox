@@ -1,5 +1,7 @@
 # M0 — Kế hoạch triển khai M1–M7
 
+> Checkpoint triển khai mới: [R1A_IMPLEMENTATION.md](R1A_IMPLEMENTATION.md), [runbook](R1A_RUNBOOK.md) và [recovery checkpoint](R1A_PROGRESS.md). R1a hai vùng có contract/API mới, giữ tương thích M0–M4; R1b và M5–M7 vẫn cần phạm vi/bằng chứng riêng. Kế hoạch15/10 bên dưới được giữ như lịch sử thiết kế.
+
 Ngày: 15/10/2026. **Kế hoạch đề xuất, chưa triển khai milestone tiếp theo.** Căn cứ: [audit source và verification](M0_ARCHITECTURE_ASSESSMENT.md), [kiến trúc mục tiêu](M0_TARGET_ARCHITECTURE.md). Kế hoạch dùng checkout hiện tại làm điểm xuất phát, không yêu cầu claim/ownership board, fixed SHA hay branch-specific gate.
 
 ## 1. Thứ tự đem lại end-to-end sớm

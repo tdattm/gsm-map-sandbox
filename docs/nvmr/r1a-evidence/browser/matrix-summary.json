@@ -1,0 +1,38 @@
+[
+  {
+    "file": "webgl-100-total-bac-ninh-50.json",
+    "detailedFleet": 50,
+    "fps": 1.8684254778414928,
+    "p95": 1016.5,
+    "updates": 7,
+    "heapBytes": 47095794,
+    "sourceCount": 10,
+    "layerCount": 20,
+    "oracle": true,
+    "renderer": "ANGLE (Intel, Intel(R) Iris(R) Xe Graphics (0x00009A49) Direct3D11 vs_5_0 ps_5_0, D3D11)"
+  },
+  {
+    "file": "webgl-500-total-bac-ninh-250.json",
+    "detailedFleet": 250,
+    "fps": 1.8554941180918543,
+    "p95": 1016.9000000000015,
+    "updates": 7,
+    "heapBytes": 50029043,
+    "sourceCount": 10,
+    "layerCount": 20,
+    "oracle": true,
+    "renderer": "ANGLE (Intel, Intel(R) Iris(R) Xe Graphics (0x00009A49) Direct3D11 vs_5_0 ps_5_0, D3D11)"
+  },
+  {
+    "file": "webgl-5000-total-bac-ninh-2500.json",
+    "detailedFleet": 2500,
+    "fps": 1.8884314688304988,
+    "p95": 1016.5,
+    "updates": 7,
+    "heapBytes": 66718273,
+    "sourceCount": 10,
+    "layerCount": 20,
+    "oracle": true,
+    "renderer": "ANGLE (Intel, Intel(R) Iris(R) Xe Graphics (0x00009A49) Direct3D11 vs_5_0 ps_5_0, D3D11)"
+  }
+]

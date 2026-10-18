@@ -1,0 +1,5 @@
+Exception: D:\ThS\VinAI\Phase3_VRIC\gsm-map-sandbox\scripts\Stop-GsmDev.ps1:23
+Line |
+  23 |  …  $service.executable){throw 'PID identity changed; refusing to stop'}
+     |                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     | PID identity changed; refusing to stop

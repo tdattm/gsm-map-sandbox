@@ -1,0 +1,92 @@
+Browser tab: 1, Title: "GSM Map Sandbox", URL: "http://127.0.0.1:5191/?scenario=regional".
+1 AXWebArea GSM Map Sandbox, URL: 127.0.0.1:5191/?scenario=regional
+	2 container root
+		3 container
+			4 button Mở menu chính
+			5 heading GSM Map Sandbox, Value: 1
+				6 text GSM Map Sandbox
+			7 button (expanded) Description: Mở hoặc ẩn bảng chi tiết, Secondary Actions: Collapse
+		8 container
+			9 container Cấu hình mô phỏng
+				10 container
+					11 text Cấu hình và chi tiết
+					12 button Đóng bảng chi tiết
+				13 container
+					14 button (expanded) Khu vực mô phỏng, Secondary Actions: Collapse
+					15 container
+						16 text Khu vực mô phỏng
+						17 pop up button (collapsed, settable) Description: Khu vực mô phỏng, Value: Trung tâm TP.HCM · Quận 1 cũ, Secondary Actions: Expand
+							18 menu
+								19 (selected) Trung tâm TP.HCM · Quận 1 cũ
+								20 Hà Nội · vùng lõi NVMR
+								21 Bắc Ninh Core · technical pilot
+					22 text Khu vực đã sẵn sàng cho mô phỏng trực tiếp.
+				23 container
+					24 button (expanded) Loại phương tiện, Secondary Actions: Collapse
+					25 container
+						26 text Loại dịch vụ
+						27 pop up button (collapsed, settable) Description: Loại dịch vụ, Value: CAR · Ô tô điện, Secondary Actions: Expand
+							28 menu
+								29 (selected) CAR · Ô tô điện
+								30 (disabled) MOTORBIKE · Mô tô điện
+					31 text CAR · định tuyến ô tô hiện có.
+				32 button (collapsed) Dữ liệu bản đồ, Secondary Actions: Expand
+				33 container
+					34 button (expanded) Thiết lập hành trình, Secondary Actions: Collapse
+					35 heading Thiết lập hành trình, Value: 2
+						36 text Thiết lập hành trình
+					37 text 01
+					38 text Nhấp trên bản đồ để chọn A, sau đó chọn B.
+					39 text A
+					40 text Điểm xuất phát
+					41 text Chưa chọn trên bản đồ
+					42 text B
+					43 text Điểm đến
+					44 text Chưa chọn trên bản đồ
+					45 text Quãng đường
+					46 text —
+					47 text Thời gian di chuyển dự kiến
+					48 text —
+					49 container
+						50 text Ước tính từ profile  CAR , không phải giao thông thời gian thực.
+					51 button (disabled) Xóa điểm A/B và chọn lại
+				52 text Chỉ chạy cục bộ WGS84 · [lon, lat]
+			53 container Bản đồ Trung tâm TP.HCM · Quận 1 cũ
+				54 text KHU VỰC NGHIÊN CỨU
+				55 heading Trung tâm TP.HCM · Quận 1 cũ, Value: 2
+					56 text Trung tâm TP.HCM · Quận 1 cũ
+				57 button Kiểm tra lại
+				58 container
+					59 container Bản đồ
+					60 container
+						61 text © OpenStreetMap contributors
+					62 container
+						63 button Phóng to
+						64 button Thu nhỏ
+						65 button Đưa hướng bản đồ về phía Bắc
+							66 image
+					67 text GeoJSON cục bộ · OSM Dữ liệu đường phố Chọn điểm A trên bản đồ
+				68 text © OpenStreetMap contributors · Geofabrik
+		69 container Điều khiển phát lại · Một hành trình
+			70 button (disabled) Phát
+			71 button (disabled) Tạm dừng
+			72 button (disabled) Về đầu
+			73 text Một hành trình
+			74 text 0,0  /  0,0  giây ·  0 %
+			75 container Description: Dòng thời gian mô phỏng, ID: base-ui-_r_s_
+				76 container
+					77 slider (disabled, settable, integer) Description: Dòng thời gian mô phỏng, Value: 0, ID: base-ui-_r_v_
+			78 container
+				79 stepper (disabled, settable, integer) Description: Thời điểm mô phỏng (giây), Value: 0
+				80 button (disabled) Đến thời điểm
+			81 checkbox (disabled) 1x, Value: 1
+			82 checkbox (disabled) 2x, Value: 0
+			83 checkbox (disabled) 4x, Value: 0
+			84 container
+				85 text Tốc độ tùy chỉnh
+				86 text field (disabled) Description: Tốc độ tùy chỉnh, Value: 1
+				87 button (disabled) Áp dụng
+			88 container Tốc độ đã áp dụng
+				89 text 1 x
+
+The focused UI element is 4 button Mở menu chính

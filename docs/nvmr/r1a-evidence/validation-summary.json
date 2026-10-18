@@ -1,0 +1,499 @@
+{
+  "schemaVersion": "gsm-r1a-verification-summary/v1",
+  "capturedUtc": "2026-10-18T07:31:49.009966+00:00",
+  "branch": "feature/nvmr-m0-architecture",
+  "head": "43a6d09be2252c44743f9e78a429a3ed700502c1",
+  "indexEmpty": true,
+  "gitActionsPerformed": {
+    "stage": false,
+    "commit": false,
+    "push": false,
+    "merge": false,
+    "rebase": false
+  },
+  "tests": {
+    "backendArtifactFree": {
+      "passed": 267,
+      "skipped": 6,
+      "seconds": 22.62,
+      "log": "backend-artifact-free-final.txt"
+    },
+    "backendOptInReal": {
+      "passed": 273,
+      "skipped": 0,
+      "seconds": 50.53,
+      "log": "backend-live-final.txt"
+    },
+    "frontend": {
+      "passed": 189,
+      "files": 23,
+      "seconds": 33.24,
+      "log": "frontend-tests-final.txt"
+    },
+    "typecheck": "PASS",
+    "build": "PASS (large MapLibre chunk warning)",
+    "lint": {
+      "errors": 0,
+      "warnings": 46
+    },
+    "savedVerifier": {
+      "status": "PASS",
+      "assets": 9
+    },
+    "remoteGithubActions": "NOT RUN"
+  },
+  "runtime": {
+    "schemaVersion": "gsm-dev-runtime/v1",
+    "application": "gsm-map-sandbox",
+    "workspace": "D:\\ThS\\VinAI\\Phase3_VRIC\\gsm-map-sandbox",
+    "store": "D:\\ThS\\VinAI\\Phase3_VRIC\\gsm-map-sandbox\\build\\r1a\\jobs",
+    "apiPid": 13940,
+    "worker": "locked",
+    "workerMeaning": "locked = OS worker lease held for this exact store; not a progress/health heartbeat",
+    "resultCache": {
+      "entries": 0,
+      "idleSeconds": 30.0
+    },
+    "resources": {
+      "availablePhysicalBytes": 3794935808,
+      "systemCommitAvailableBytes": 8829218816,
+      "systemCommitBytes": 16804188160,
+      "systemCommitLimitBytes": 25633406976,
+      "smallMinimumAvailableGiB": 0.5,
+      "admissionPolicy": {
+        "lightMinimumAvailableGiB": 0.5,
+        "routineMinimumAvailableGiB": 0.75,
+        "lightMinimumCommitGiB": 1.0,
+        "routineMinimumCommitGiB": 1.5,
+        "lightMaximumFleet": 1000,
+        "lightMaximumBookings": 1000,
+        "routineMaximumBookings": 5000,
+        "maximumHorizonSeconds": 3600,
+        "maximumSchedulePoints": 8,
+        "maximumCandidates": 128,
+        "extendedMinimumAvailableGiB": 2.0,
+        "extendedMinimumCommitGiB": 2.0
+      }
+    }
+  },
+  "regions": [
+    {
+      "id": "hcm-center",
+      "label": "Trung tâm TP.HCM · Quận 1 cũ",
+      "viewport": {
+        "center": [
+          106.69999999999999,
+          10.7725
+        ],
+        "zoom": 14.2,
+        "bounds": [
+          106.675,
+          10.75,
+          106.725,
+          10.795
+        ]
+      },
+      "coverage": {
+        "operating": [
+          106.675,
+          10.75,
+          106.725,
+          10.795
+        ],
+        "routing": [
+          106.66,
+          10.735,
+          106.74,
+          10.81
+        ],
+        "render": [
+          106.675,
+          10.75,
+          106.725,
+          10.795
+        ]
+      },
+      "ready": true,
+      "mapReady": true,
+      "state": "ready",
+      "reason": ""
+    },
+    {
+      "id": "nvmr-hanoi-core",
+      "label": "Hà Nội · vùng lõi NVMR",
+      "viewport": {
+        "center": [
+          105.83850000000001,
+          21.0285
+        ],
+        "zoom": 13.4,
+        "bounds": [
+          105.802,
+          21.002,
+          105.875,
+          21.055
+        ]
+      },
+      "coverage": {
+        "operating": [
+          105.815,
+          21.012,
+          105.855,
+          21.045
+        ],
+        "routing": [
+          105.762,
+          20.962,
+          105.915,
+          21.095
+        ],
+        "render": [
+          105.797,
+          20.997,
+          105.88,
+          21.06
+        ]
+      },
+      "ready": true,
+      "mapReady": true,
+      "state": "ready",
+      "reason": ""
+    },
+    {
+      "id": "nvmr-bac-ninh-core",
+      "label": "Bắc Ninh Core · technical pilot",
+      "viewport": {
+        "center": [
+          106.06,
+          21.18
+        ],
+        "zoom": 12.5,
+        "bounds": [
+          106.0,
+          21.13,
+          106.12,
+          21.23
+        ]
+      },
+      "coverage": {
+        "operating": [
+          106.02,
+          21.15,
+          106.1,
+          21.21
+        ],
+        "routing": [
+          105.96,
+          21.09,
+          106.16,
+          21.27
+        ],
+        "render": [
+          105.995,
+          21.125,
+          106.125,
+          21.235
+        ]
+      },
+      "ready": true,
+      "mapReady": true,
+      "state": "ready",
+      "reason": ""
+    }
+  ],
+  "modes": {
+    "nvmr-hanoi-core": {
+      "regionId": "nvmr-hanoi-core",
+      "modes": [
+        {
+          "vehicleType": "CAR",
+          "ready": true,
+          "reason": "",
+          "routingIdentity": {
+            "regionId": "nvmr-hanoi-core",
+            "vehicleType": "CAR",
+            "profile": "car",
+            "profileSha256": "cb3df0546318665609606b746a1297f3d65ca3c2ff825f8a6f3c57247d86a2d3",
+            "graphManifestSha256": "a24d4957a01ceeb04a0de1ad680fe4c5dd51732a7b381d9368e249a65c1b29b5",
+            "sourceSha256": "2fbd2ee6b4dc151eecf04fa6823cddf584b47423e190118b10fce8b6115e9d8a",
+            "extractSha256": "18fd3892f6d766387f2c3217d5d104e09a9319d3905a9172834b21c0064d6308",
+            "algorithm": "mld"
+          }
+        },
+        {
+          "vehicleType": "MOTORBIKE",
+          "ready": true,
+          "reason": "",
+          "routingIdentity": {
+            "regionId": "nvmr-hanoi-core",
+            "vehicleType": "MOTORBIKE",
+            "profile": "motorbike",
+            "profileSha256": "075ecdbc70a3e75c4338d2c6a41597c132a1837ec2d27f1c2fcdd824a788b209",
+            "graphManifestSha256": "fb97489d066397b11cb9178238cd56a5f52281bcf5711430bb7cf411496ca455",
+            "sourceSha256": "2fbd2ee6b4dc151eecf04fa6823cddf584b47423e190118b10fce8b6115e9d8a",
+            "extractSha256": "18fd3892f6d766387f2c3217d5d104e09a9319d3905a9172834b21c0064d6308",
+            "algorithm": "mld"
+          }
+        }
+      ]
+    },
+    "nvmr-bac-ninh-core": {
+      "regionId": "nvmr-bac-ninh-core",
+      "modes": [
+        {
+          "vehicleType": "CAR",
+          "ready": true,
+          "reason": "",
+          "routingIdentity": {
+            "regionId": "nvmr-bac-ninh-core",
+            "vehicleType": "CAR",
+            "profile": "car",
+            "profileSha256": "cb3df0546318665609606b746a1297f3d65ca3c2ff825f8a6f3c57247d86a2d3",
+            "graphManifestSha256": "4e393c9025c9b73a08d27d0aca7108071989d06e8913e7e37f534671375ddb9c",
+            "sourceSha256": "2fbd2ee6b4dc151eecf04fa6823cddf584b47423e190118b10fce8b6115e9d8a",
+            "extractSha256": "5b18bc568bb2afd3a4914b97b89084663e7a1e72a84364367cb42eac7f7c3ebb",
+            "algorithm": "mld"
+          }
+        },
+        {
+          "vehicleType": "MOTORBIKE",
+          "ready": true,
+          "reason": "",
+          "routingIdentity": {
+            "regionId": "nvmr-bac-ninh-core",
+            "vehicleType": "MOTORBIKE",
+            "profile": "motorbike",
+            "profileSha256": "075ecdbc70a3e75c4338d2c6a41597c132a1837ec2d27f1c2fcdd824a788b209",
+            "graphManifestSha256": "86d2f963d327875a59411b87b212b038f5dd222592e5c58e513c5edfc00ef4e0",
+            "sourceSha256": "2fbd2ee6b4dc151eecf04fa6823cddf584b47423e190118b10fce8b6115e9d8a",
+            "extractSha256": "5b18bc568bb2afd3a4914b97b89084663e7a1e72a84364367cb42eac7f7c3ebb",
+            "algorithm": "mld"
+          }
+        }
+      ]
+    }
+  },
+  "activeJobs": [],
+  "jobStatusCounts": {
+    "CANCELLED": 1,
+    "COMPLETED": 6,
+    "FAILED": 1
+  },
+  "currentReceipt": "build/s0-runtime/session-20261018-141504-780.json",
+  "website": "http://127.0.0.1:5191/?runtime=simulation&scenario=regional&profile=meeting",
+  "pythonVersion": "3.11.9",
+  "nodeVersion": "v24.18.0",
+  "memoryPointSample": {
+    "totalPhysicalBytes": 16948453376,
+    "availablePhysicalBytes": 4215746560,
+    "processRssBytes": 33955840,
+    "processPeakRssBytes": 33955840,
+    "processPagefileBytes": 23068672,
+    "processPrivateBytes": 23068672,
+    "systemCommitBytes": 16511451136,
+    "systemCommitLimitBytes": 25633406976,
+    "systemCommitAvailableBytes": 9121955840
+  },
+  "protectedFilesUnchanged": [
+    "backend/app/simulation.py",
+    "backend/app/voucher.py",
+    "backend/app/multimodal.py",
+    "config/regions/nvmr-hanoi-core.json",
+    "config/regions/nvmr-hanoi-core-motorbike.json",
+    "profiles/motorbike.lua",
+    "profiles/motorbike.json"
+  ],
+  "sourceSha256": {
+    "backend/app/booking.py": "82dee12897e747007eca85899c4890e1a0e8f9deeeb4db68b24caa612311a9a0",
+    "backend/app/dataset.py": "5f987f09c7c88dcc50a4ce175df772ed80ecb355310ce469a990209dc4b09563",
+    "backend/app/main.py": "a686c02c024bfcb9676f21fc8308036da5afb6478610b119295c0f27aac8b70b",
+    "backend/app/modes.py": "b2b15f323e8c2222f90e357f0bc67ca18f6539d0ccaceb90eba9455b775ac05a",
+    "backend/app/regional_jobs.py": "771a035f0eef1d64092138c8be751c323e07992846b99cced4c79a4b9877da1a",
+    "backend/app/regional_simulation.py": "cd9978c51ab7bdf2eb3546ae8e31a98f687593eb6ff77ac9288def9a38134aae",
+    "backend/app/regions.py": "949e69b0c8f4240904b159998df689bf0a120332cb3ac6e9e91f82f33811757f",
+    "backend/app/simulation_jobs.py": "540f7010f4af37e23bcecef359f70a9b1db450f1cccdd737a784d092dfc8c3a0",
+    "backend/app/simulation_worker.py": "bc69cd6ad0198cd8a5f153f4242384df92eac110433f689a76694e7005a12158",
+    "config/regions/nvmr-bac-ninh-core-motorbike.json": "2cb0aa6d548230a8196a00934f907088cc2537782b80485951d2f40f08dab15a",
+    "config/regions/nvmr-bac-ninh-core.json": "ab7834f92239589df511d568a0b978ad778e0a4d104d13b5ca1d4588a11b52d7",
+    "frontend/src/App.css": "fb7175996bace7b4ed6afabb8713585d4148db73559857b96059b28c126f2060",
+    "frontend/src/App.tsx": "75defd3c3b6c542b5e089b98f997a16f080b6ca8b1a887af24cefd3e2624563c",
+    "frontend/src/components/regional-overview.tsx": "70e868f9c0990cb6f070893a3c9252b23c298bd60740ca34659b4b80dec7719d",
+    "frontend/src/components/regional-workspace.tsx": "6f44dd9b5b3d0d1477ea5c331d464b9aa96a331f22454291940be0218075d4a5",
+    "frontend/src/components/simulation-map-health.tsx": "fcc15a0864c4b4b8ec00b50c4aef25d9b232c96f8b44f751261e21f368676010",
+    "frontend/src/components/simulation-workspace.tsx": "958ed9345774c4d8a08a2cbd67cb258b95409adb2a6f98f2cbbf599ace5e9be9",
+    "frontend/src/lib/regional-simulation.ts": "4c3379d675115571662d1c01eace0218cdaf414013b80d14613675f15c2f42f4",
+    "frontend/src/lib/use-regional-simulation.ts": "a5f4e4599e559616f83a3895572bc9788c2036202dc60f761b80036bce67cf14",
+    "frontend/tests/regional-overview.test.tsx": "f57cb89efcf28c1e3f877e44312b55b0b774942ac0cc724236a8b8950c605515",
+    "frontend/tests/regional-simulation.test.ts": "d50774e8a13550ad466e21cb11425eae686b5aa12ebea91f7a6f747084f58a32",
+    "scripts/Start-GsmDev.ps1": "70f90dab6ecfd35729489f4b2be89774878d4dd6d34d23aabadfb0577ce12314",
+    "scripts/Stop-GsmDev.ps1": "05f6291879a6c2c23428f22e3bebd7348290ca38e00d14ec9aa94a2759e99d98",
+    "scripts/capture_regional_gis.py": "d37ea0f023664ff91b7876632424dff72ce059c27dabb912a15ff036fb72b57f",
+    "scripts/motorbike_pipeline.py": "4f92262c2cc2eec19df75cb350956e4fcb66ac0149673cde34b02be4f2480216",
+    "scripts/pipeline.py": "c844d7f40384c26395f070be419f0a7416b4c94a78e3f677d6ed63f8f8c9a8b6",
+    "scripts/region_pipeline.py": "4638f4f80f987eb9910a7aaabd036b8a2cd2a42108ff2d860a741c1631111ebb",
+    "scripts/regional_resources.py": "9e1c4144be8967bbf855d48dd97ca49deb1cca163c90a2ff0c1cdbc45cca0575",
+    "scripts/validate_regional_api.py": "29619fbe232a74776553b1dee1a182242cfc388e6a55439139a917e9b9d07579",
+    "scripts/validate_regional_domain.py": "1d616e1aa02d7b0e48b9fbf5a676686c57c12e2e3fa17be876e1adabbf878028",
+    "scripts/validate_regional_routing.py": "5dd463a4409672a44b3cf036c9d252ab87d1c86448a424015e0b8826c95e4d23",
+    "tests/test_r1a_gis.py": "22d52fd112bcb4b8c713646735f3bce39bf8833421c9e415187d0ca8dedf6632",
+    "tests/test_regional_simulation.py": "162c62ae94d2074caa58408de0ea82a512fbba63e2ac6a61df4365700925d813",
+    "tests/test_regions.py": "a02b0d0cc71fa7f4fc9b7b3df91fd662de233ec5ddbf867953130f2b178c775a"
+  },
+  "historicalWorktrees": [
+    {
+      "path": "D:\\ThS\\VinAI\\Phase3_VRIC\\gsm-map-sandbox-m3",
+      "head": "455abebe177be42e07b88ed4f34d4fecbef29b75",
+      "status": [
+        "M backend/app/main.py",
+        "?? backend/app/simulation.py",
+        "?? backend/app/simulation_jobs.py",
+        "?? backend/app/simulation_worker.py",
+        "?? docs/nvmr/M3_IMPLEMENTATION.md",
+        "?? scripts/benchmark_simulation.py",
+        "?? scripts/benchmark_simulation_live.py",
+        "?? scripts/m3_fixture_travel.py",
+        "?? scripts/m3_resources.py",
+        "?? tests/fixtures/",
+        "?? tests/test_m3.py"
+      ],
+      "touchedByR1a": false
+    },
+    {
+      "path": "D:\\ThS\\VinAI\\Phase3_VRIC\\gsm-map-sandbox-m4",
+      "head": "455abebe177be42e07b88ed4f34d4fecbef29b75",
+      "status": [
+        "M frontend/src/App.css",
+        " M frontend/src/App.tsx",
+        "?? docs/nvmr/M4_IMPLEMENTATION.md",
+        "?? frontend/src/components/simulation-map.tsx",
+        "?? frontend/src/components/simulation-workspace.tsx",
+        "?? frontend/src/lib/simulation.ts",
+        "?? frontend/src/lib/use-simulation.ts",
+        "?? frontend/tests/simulation.test.ts",
+        "?? frontend/tests/use-simulation.test.ts"
+      ],
+      "touchedByR1a": false
+    }
+  ],
+  "liveMatrix": [
+    {
+      "file": "live-20.json",
+      "jobId": "cf7f7073fc974b2184181fe8ce58a36e",
+      "fleet": 20,
+      "requested": 24,
+      "completed": 20,
+      "unserved": 4,
+      "workerMilliseconds": 4566.085400001612,
+      "wallSeconds": 7.7493078999978025,
+      "resultBytes": 232389,
+      "peakWorkerRSS": 93462528,
+      "minAvailable": 6659719168,
+      "minCommit": 11243278336
+    },
+    {
+      "file": "live-100-retry.json",
+      "jobId": "9cca52e88d214266810f59788785b88b",
+      "fleet": 100,
+      "requested": 50,
+      "completed": 48,
+      "unserved": 2,
+      "workerMilliseconds": 5206.290100002661,
+      "wallSeconds": 8.5970410000009,
+      "resultBytes": 548752,
+      "peakWorkerRSS": 109240320,
+      "minAvailable": 5343113216,
+      "minCommit": 9923383296
+    },
+    {
+      "file": "live-500.json",
+      "jobId": "a099e68a5ed04741a26d44889470768c",
+      "fleet": 500,
+      "requested": 250,
+      "completed": 248,
+      "unserved": 2,
+      "workerMilliseconds": 7347.018400003435,
+      "wallSeconds": 11.006935800018255,
+      "resultBytes": 2402980,
+      "peakWorkerRSS": 80322560,
+      "minAvailable": 5630681088,
+      "minCommit": 10553262080
+    },
+    {
+      "file": "live-5000.json",
+      "jobId": "370d1b3f87f4465ab7446e23b8852ae4",
+      "fleet": 5000,
+      "requested": 1250,
+      "completed": 1225,
+      "unserved": 25,
+      "workerMilliseconds": 15829.191900003934,
+      "wallSeconds": 23.085699399991427,
+      "resultBytes": 11323043,
+      "peakWorkerRSS": 106143744,
+      "minAvailable": 5672755200,
+      "minCommit": 10622181376
+    }
+  ],
+  "browserMatrix": [
+    {
+      "file": "webgl-100-total-bac-ninh-50.json",
+      "detailedFleet": 50,
+      "fps": 1.8684254778414928,
+      "p95": 1016.5,
+      "updates": 7,
+      "heapBytes": 47095794,
+      "sourceCount": 10,
+      "layerCount": 20,
+      "oracle": true,
+      "renderer": "ANGLE (Intel, Intel(R) Iris(R) Xe Graphics (0x00009A49) Direct3D11 vs_5_0 ps_5_0, D3D11)"
+    },
+    {
+      "file": "webgl-500-total-bac-ninh-250.json",
+      "detailedFleet": 250,
+      "fps": 1.8554941180918543,
+      "p95": 1016.9000000000015,
+      "updates": 7,
+      "heapBytes": 50029043,
+      "sourceCount": 10,
+      "layerCount": 20,
+      "oracle": true,
+      "renderer": "ANGLE (Intel, Intel(R) Iris(R) Xe Graphics (0x00009A49) Direct3D11 vs_5_0 ps_5_0, D3D11)"
+    },
+    {
+      "file": "webgl-5000-total-bac-ninh-2500.json",
+      "detailedFleet": 2500,
+      "fps": 1.8884314688304988,
+      "p95": 1016.5,
+      "updates": 7,
+      "heapBytes": 66718273,
+      "sourceCount": 10,
+      "layerCount": 20,
+      "oracle": true,
+      "renderer": "ANGLE (Intel, Intel(R) Iris(R) Xe Graphics (0x00009A49) Direct3D11 vs_5_0 ps_5_0, D3D11)"
+    }
+  ],
+  "browserFinalConsole": [],
+  "recovery": "UI-created persisted run audit PASS after real task-stack restart; incorrect receipt test setup and initial Table failure retained separately",
+  "verdict": {
+    "functionalLocalMvp": "GO within documented two technical areas",
+    "laptopSmooth5000Ui": "CONDITIONAL / not accepted as smooth",
+    "production": "NO-GO",
+    "r1b": "GO for bounded development only; not implemented"
+  },
+  "limits": [
+    "Synthetic fleet/demand; static OSM/OSRM, not observed GSM operations",
+    "Intra-region same-mode dispatch only",
+    "Domain5000, liveOSRM5000 and detailed-region browser2500 are separate evidence",
+    "Short browser RAF about1.86-1.89FPS; no M4 profiling reopened",
+    "Independent Chrome/Meet/soak/full province coverage/production not certified"
+  ],
+  "handoffChecks": {
+    "sourceHashesCurrent": true,
+    "all109AllowlistedFilesExist": true,
+    "allowlistsMatchActualGitInventory": true,
+    "indexStillEmpty": true,
+    "gitDiffCheck": "PASS",
+    "gitCommandPowerShellBlocks": 5,
+    "gitCommandParseErrors": 0,
+    "credentialPatternReview": "Only OSRM waypoint hint strings matched the broad key-prefix pattern; no credentials identified"
+  }
+}

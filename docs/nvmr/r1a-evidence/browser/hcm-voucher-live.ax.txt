@@ -1,0 +1,32 @@
+Browser tab: 1, Title: "GSM Map Sandbox", URL: "http://127.0.0.1:5191/?scenario=regional&mode=voucher".
+The following is a diff from the previous accessibility tree with ~ and + representing changed and added elements, respectively. Removed elements are summarized by ID range.
+Removed element IDs: 33-94, 111
++				142 button (collapsed) Cấu hình thí nghiệm, Secondary Actions: Expand
+~					103 button Xem toàn vùng thí nghiệm
++					143 container
++						144 text Ngân sách ·  Treatment  · tới thời điểm hiện tại
++					145 container
++						146 text Ngân sách đang giữ trước  0 ₫
++						147 text Chi phí voucher đã sử dụng  0 ₫
++						148 text Ngân sách còn khả dụng  200.000 ₫
++					149 text Đã đề xuất  1  · đang giữ trước  0  · đã sử dụng  0  · đã giải phóng  0
++				150 button (collapsed) Chi tiết xe và yêu cầu đặt xe, Secondary Actions: Expand
++					151 container
++						152 container Bản đồ
++						153 button Description: Xe điều phối GSM-01, Help: GSM-01 · CAR
++						154 button Description: Xe điều phối GSM-02, Help: GSM-02 · CAR
++						155 button Description: Xe điều phối GSM-03, Help: GSM-03 · CAR
++						156 button Description: Xe điều phối GSM-04, Help: GSM-04 · CAR
++						157 button Description: Xe điều phối GSM-05, Help: GSM-05 · CAR
+~			122 button Phát
+~			124 button Về đầu
+~			126 text 0,0  /  2.115,2  giây ·  0 %
+~					129 slider (settable, integer) Description: Dòng thời gian mô phỏng, Value: 0, ID: base-ui-_r_27_
+~				131 stepper (settable, integer) Description: Thời điểm mô phỏng (giây), Value: 0
+~				132 button Đến thời điểm
+~			133 checkbox 1x, Value: 1
+~			134 checkbox 2x, Value: 0
+~			135 checkbox 4x, Value: 0
+~				138 text field (settable) Description: Tốc độ tùy chỉnh, Value: 1
+~				139 button Áp dụng
+The focused UI element is 1 AXWebArea GSM Map Sandbox, URL: 127.0.0.1:5191/?scenario=regional&mode=voucher

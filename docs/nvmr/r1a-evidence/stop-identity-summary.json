@@ -1,0 +1,8 @@
+{
+  "windowsPowerShellExit": 1,
+  "pwshExit": 1,
+  "receiptServiceCount": 3,
+  "stillAlive": 3,
+  "status": "PASS",
+  "scope": "deliberately mismatched2000UTC receipt rejected before any termination"
+}

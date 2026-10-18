@@ -1,0 +1,2785 @@
+{
+  "status": "PASS",
+  "profile_sha256": "075ecdbc70a3e75c4338d2c6a41597c132a1837ec2d27f1c2fcdd824a788b209",
+  "source_sha256": "5493736832277285f2c315d21e2b04fa1cc847eb4dc91ac8135c8cb51154837f",
+  "cases": [
+    {
+      "case": "ordinary",
+      "mode": "car",
+      "reverse": false,
+      "expectedRoutable": true,
+      "tags": {},
+      "status": "PASS",
+      "response": {
+        "code": "Ok",
+        "routes": [
+          {
+            "geometry": {
+              "coordinates": [
+                [
+                  105.0002,
+                  20
+                ],
+                [
+                  105.001,
+                  20
+                ],
+                [
+                  105.0018,
+                  20
+                ]
+              ],
+              "type": "LineString"
+            },
+            "legs": [
+              {
+                "steps": [],
+                "summary": "",
+                "weight": 24.1,
+                "duration": 24.1,
+                "annotation": {
+                  "nodes": [
+                    1,
+                    2,
+                    3
+                  ]
+                },
+                "distance": 167.5
+              }
+            ],
+            "weight_name": "routability",
+            "weight": 24.1,
+            "duration": 24.1,
+            "distance": 167.5
+          }
+        ],
+        "waypoints": [
+          {
+            "hint": "AAAAgAEAAIAeAAAAeQAAAAAAAACXAAAANnanQTZ2p0IAAAAAw1PRQh4AAAB5AAAAAAAAAJcAAAABAACACC1CBgAtMQEILUIGAC0xAQAArwUt42ip",
+            "distance": 0,
+            "name": "",
+            "location": [
+              105.0002,
+              20
+            ]
+          },
+          {
+            "hint": "AAAAgAEAAIB4AAAAHwAAAJcAAAAAAAAANnanQjZ2p0HDU9FCAAAAAHgAAAAfAAAAlwAAAAAAAAABAACASDNCBgAtMQFIM0IGAC0xAQEArwUt42ip",
+            "distance": 0,
+            "name": "",
+            "location": [
+              105.0018,
+              20
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "case": "motorcycle-no",
+      "mode": "car",
+      "reverse": false,
+      "expectedRoutable": true,
+      "tags": {
+        "motorcycle": "no"
+      },
+      "status": "PASS",
+      "response": {
+        "code": "Ok",
+        "routes": [
+          {
+            "geometry": {
+              "coordinates": [
+                [
+                  105.0102,
+                  20
+                ],
+                [
+                  105.011,
+                  20
+                ],
+                [
+                  105.0118,
+                  20
+                ]
+              ],
+              "type": "LineString"
+            },
+            "legs": [
+              {
+                "steps": [],
+                "summary": "",
+                "weight": 24.1,
+                "duration": 24.1,
+                "annotation": {
+                  "nodes": [
+                    5,
+                    6,
+                    7
+                  ]
+                },
+                "distance": 167.5
+              }
+            ],
+            "weight_name": "routability",
+            "weight": 24.1,
+            "duration": 24.1,
+            "distance": 167.5
+          }
+        ],
+        "waypoints": [
+          {
+            "hint": "AgAAgAMAAIAeAAAAeQAAAAAAAACXAAAANnanQTZ2p0IAAAAAw1PRQh4AAAB5AAAAAAAAAJcAAAACAACAGFRCBgAtMQEYVEIGAC0xAQAArwUt42ip",
+            "distance": 0,
+            "name": "",
+            "location": [
+              105.0102,
+              20
+            ]
+          },
+          {
+            "hint": "AgAAgAMAAIB4AAAAHwAAAJcAAAAAAAAANnanQjZ2p0HDU9FCAAAAAHgAAAAfAAAAlwAAAAAAAAACAACAWFpCBgAtMQFYWkIGAC0xAQEArwUt42ip",
+            "distance": 0,
+            "name": "",
+            "location": [
+              105.0118,
+              20
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "case": "hierarchy",
+      "mode": "car",
+      "reverse": false,
+      "expectedRoutable": false,
+      "tags": {
+        "access": "no",
+        "motor_vehicle": "no",
+        "motorcycle": "yes"
+      },
+      "status": "PASS",
+      "response": {
+        "message": "Could not find a matching segment for coordinate 0",
+        "code": "NoSegment"
+      }
+    },
+    {
+      "case": "vehicle-no",
+      "mode": "car",
+      "reverse": false,
+      "expectedRoutable": false,
+      "tags": {
+        "vehicle": "no"
+      },
+      "status": "PASS",
+      "response": {
+        "message": "Could not find a matching segment for coordinate 0",
+        "code": "NoSegment"
+      }
+    },
+    {
+      "case": "motor-vehicle-no",
+      "mode": "car",
+      "reverse": false,
+      "expectedRoutable": false,
+      "tags": {
+        "motor_vehicle": "no"
+      },
+      "status": "PASS",
+      "response": {
+        "message": "Could not find a matching segment for coordinate 0",
+        "code": "NoSegment"
+      }
+    },
+    {
+      "case": "private",
+      "mode": "car",
+      "reverse": false,
+      "expectedRoutable": true,
+      "tags": {
+        "access": "private"
+      },
+      "status": "PASS",
+      "response": {
+        "code": "Ok",
+        "routes": [
+          {
+            "geometry": {
+              "coordinates": [
+                [
+                  105.0502,
+                  20
+                ],
+                [
+                  105.051,
+                  20
+                ],
+                [
+                  105.0518,
+                  20
+                ]
+              ],
+              "type": "LineString"
+            },
+            "legs": [
+              {
+                "steps": [],
+                "summary": "",
+                "weight": 24.1,
+                "duration": 24.1,
+                "annotation": {
+                  "nodes": [
+                    21,
+                    22,
+                    23
+                  ]
+                },
+                "distance": 167.5
+              }
+            ],
+            "weight_name": "routability",
+            "weight": 24.1,
+            "duration": 24.1,
+            "distance": 167.5
+          }
+        ],
+        "waypoints": [
+          {
+            "hint": "BAAAgAUAAIAeAAAAeQAAAAAAAACXAAAANnanQTZ2p0IAAAAAw1PRQh4AAAB5AAAAAAAAAJcAAAADAACAWPBCBgAtMQFY8EIGAC0xAQAArwUt42ip",
+            "distance": 0,
+            "name": "",
+            "location": [
+              105.0502,
+              20
+            ]
+          },
+          {
+            "hint": "BAAAgAUAAIB4AAAAHwAAAJcAAAAAAAAANnanQjZ2p0HDU9FCAAAAAHgAAAAfAAAAlwAAAAAAAAADAACAmPZCBgAtMQGY9kIGAC0xAQEArwUt42ip",
+            "distance": 0,
+            "name": "",
+            "location": [
+              105.0518,
+              20
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "case": "ambiguous",
+      "mode": "car",
+      "reverse": false,
+      "expectedRoutable": true,
+      "tags": {
+        "access": "unknown"
+      },
+      "status": "PASS",
+      "response": {
+        "code": "Ok",
+        "routes": [
+          {
+            "geometry": {
+              "coordinates": [
+                [
+                  105.0602,
+                  20
+                ],
+                [
+                  105.061,
+                  20
+                ],
+                [
+                  105.0618,
+                  20
+                ]
+              ],
+              "type": "LineString"
+            },
+            "legs": [
+              {
+                "steps": [],
+                "summary": "",
+                "weight": 24.1,
+                "duration": 24.1,
+                "annotation": {
+                  "nodes": [
+                    25,
+                    26,
+                    27
+                  ]
+                },
+                "distance": 167.5
+              }
+            ],
+            "weight_name": "routability",
+            "weight": 24.1,
+            "duration": 24.1,
+            "distance": 167.5
+          }
+        ],
+        "waypoints": [
+          {
+            "hint": "BgAAgAcAAIAeAAAAeQAAAAAAAACXAAAANnanQTZ2p0IAAAAAw1PRQh4AAAB5AAAAAAAAAJcAAAAEAACAaBdDBgAtMQFoF0MGAC0xAQAArwUt42ip",
+            "distance": 0,
+            "name": "",
+            "location": [
+              105.0602,
+              20
+            ]
+          },
+          {
+            "hint": "BgAAgAcAAIB4AAAAHwAAAJcAAAAAAAAANnanQjZ2p0HDU9FCAAAAAHgAAAAfAAAAlwAAAAAAAAAEAACAqB1DBgAtMQGoHUMGAC0xAQEArwUt42ip",
+            "distance": 0,
+            "name": "",
+            "location": [
+              105.0618,
+              20
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "case": "conditional",
+      "mode": "car",
+      "reverse": false,
+      "expectedRoutable": true,
+      "tags": {
+        "motorcycle:conditional": "no @ (08:00-10:00)"
+      },
+      "status": "PASS",
+      "response": {
+        "code": "Ok",
+        "routes": [
+          {
+            "geometry": {
+              "coordinates": [
+                [
+                  105.0702,
+                  20
+                ],
+                [
+                  105.071,
+                  20
+                ],
+                [
+                  105.0718,
+                  20
+                ]
+              ],
+              "type": "LineString"
+            },
+            "legs": [
+              {
+                "steps": [],
+                "summary": "",
+                "weight": 24.1,
+                "duration": 24.1,
+                "annotation": {
+                  "nodes": [
+                    29,
+                    30,
+                    31
+                  ]
+                },
+                "distance": 167.5
+              }
+            ],
+            "weight_name": "routability",
+            "weight": 24.1,
+            "duration": 24.1,
+            "distance": 167.5
+          }
+        ],
+        "waypoints": [
+          {
+            "hint": "CAAAgAkAAIAeAAAAeQAAAAAAAACXAAAANnanQTZ2p0IAAAAAw1PRQh4AAAB5AAAAAAAAAJcAAAAFAACAeD5DBgAtMQF4PkMGAC0xAQAArwUt42ip",
+            "distance": 0,
+            "name": "",
+            "location": [
+              105.0702,
+              20
+            ]
+          },
+          {
+            "hint": "CAAAgAkAAIB4AAAAHwAAAJcAAAAAAAAANnanQjZ2p0HDU9FCAAAAAHgAAAAfAAAAlwAAAAAAAAAFAACAuERDBgAtMQG4REMGAC0xAQEArwUt42ip",
+            "distance": 0,
+            "name": "",
+            "location": [
+              105.0718,
+              20
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "case": "motorway",
+      "mode": "car",
+      "reverse": false,
+      "expectedRoutable": true,
+      "tags": {
+        "highway": "motorway"
+      },
+      "status": "PASS",
+      "response": {
+        "code": "Ok",
+        "routes": [
+          {
+            "geometry": {
+              "coordinates": [
+                [
+                  105.0802,
+                  20
+                ],
+                [
+                  105.081,
+                  20
+                ],
+                [
+                  105.0818,
+                  20
+                ]
+              ],
+              "type": "LineString"
+            },
+            "legs": [
+              {
+                "steps": [],
+                "summary": "",
+                "weight": 6.7,
+                "duration": 6.7,
+                "annotation": {
+                  "nodes": [
+                    33,
+                    34,
+                    35
+                  ]
+                },
+                "distance": 167.5
+              }
+            ],
+            "weight_name": "routability",
+            "weight": 6.7,
+            "duration": 6.7,
+            "distance": 167.5
+          }
+        ],
+        "waypoints": [
+          {
+            "hint": "CgAAgP___38IAAAAKgAAAAAAAAAqAAAANnanQTZ2p0IAAAAAw1PRQggAAAAqAAAAAAAAACoAAAAGAACAiGVDBgAtMQGIZUMGAC0xAQAArwUt42ip",
+            "distance": 0,
+            "name": "",
+            "location": [
+              105.0802,
+              20
+            ]
+          },
+          {
+            "hint": "CgAAgP___38hAAAAKgAAACoAAAAAAAAANnanQjZ2p0HDU9FCAAAAACEAAAAqAAAAKgAAAAAAAAAGAACAyGtDBgAtMQHIa0MGAC0xAQEArwUt42ip",
+            "distance": 0,
+            "name": "",
+            "location": [
+              105.0818,
+              20
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "case": "motorroad",
+      "mode": "car",
+      "reverse": false,
+      "expectedRoutable": true,
+      "tags": {
+        "motorroad": "yes"
+      },
+      "status": "PASS",
+      "response": {
+        "code": "Ok",
+        "routes": [
+          {
+            "geometry": {
+              "coordinates": [
+                [
+                  105.0902,
+                  20
+                ],
+                [
+                  105.091,
+                  20
+                ],
+                [
+                  105.0918,
+                  20
+                ]
+              ],
+              "type": "LineString"
+            },
+            "legs": [
+              {
+                "steps": [],
+                "summary": "",
+                "weight": 24.1,
+                "duration": 24.1,
+                "annotation": {
+                  "nodes": [
+                    37,
+                    38,
+                    39
+                  ]
+                },
+                "distance": 167.5
+              }
+            ],
+            "weight_name": "routability",
+            "weight": 24.1,
+            "duration": 24.1,
+            "distance": 167.5
+          }
+        ],
+        "waypoints": [
+          {
+            "hint": "CwAAgAwAAIAeAAAAeQAAAAAAAACXAAAANnanQTZ2p0IAAAAAw1PRQh4AAAB5AAAAAAAAAJcAAAAHAACAmIxDBgAtMQGYjEMGAC0xAQAArwUt42ip",
+            "distance": 0,
+            "name": "",
+            "location": [
+              105.0902,
+              20
+            ]
+          },
+          {
+            "hint": "CwAAgAwAAIB4AAAAHwAAAJcAAAAAAAAANnanQjZ2p0HDU9FCAAAAAHgAAAAfAAAAlwAAAAAAAAAHAACA2JJDBgAtMQHYkkMGAC0xAQEArwUt42ip",
+            "distance": 0,
+            "name": "",
+            "location": [
+              105.0918,
+              20
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "case": "moped-not-motorcycle",
+      "mode": "car",
+      "reverse": false,
+      "expectedRoutable": true,
+      "tags": {
+        "moped": "no"
+      },
+      "status": "PASS",
+      "response": {
+        "code": "Ok",
+        "routes": [
+          {
+            "geometry": {
+              "coordinates": [
+                [
+                  105.1002,
+                  20
+                ],
+                [
+                  105.101,
+                  20
+                ],
+                [
+                  105.1018,
+                  20
+                ]
+              ],
+              "type": "LineString"
+            },
+            "legs": [
+              {
+                "steps": [],
+                "summary": "",
+                "weight": 24.1,
+                "duration": 24.1,
+                "annotation": {
+                  "nodes": [
+                    41,
+                    42,
+                    43
+                  ]
+                },
+                "distance": 167.5
+              }
+            ],
+            "weight_name": "routability",
+            "weight": 24.1,
+            "duration": 24.1,
+            "distance": 167.5
+          }
+        ],
+        "waypoints": [
+          {
+            "hint": "DQAAgA4AAIAeAAAAeQAAAAAAAACXAAAANnanQTZ2p0IAAAAAw1PRQh4AAAB5AAAAAAAAAJcAAAAIAACAqLNDBgAtMQGos0MGAC0xAQAArwUt42ip",
+            "distance": 0,
+            "name": "",
+            "location": [
+              105.1002,
+              20
+            ]
+          },
+          {
+            "hint": "DQAAgA4AAIB4AAAAHwAAAJcAAAAAAAAANnanQjZ2p0HDU9FCAAAAAHgAAAAfAAAAlwAAAAAAAAAIAACA6LlDBgAtMQHouUMGAC0xAQEArwUt42ip",
+            "distance": 0,
+            "name": "",
+            "location": [
+              105.1018,
+              20
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "case": "explicit-path",
+      "mode": "car",
+      "reverse": false,
+      "expectedRoutable": false,
+      "tags": {
+        "highway": "path",
+        "motorcycle": "yes",
+        "motorcar": "no"
+      },
+      "status": "PASS",
+      "response": {
+        "message": "Could not find a matching segment for coordinate 0",
+        "code": "NoSegment"
+      }
+    },
+    {
+      "case": "untagged-path",
+      "mode": "car",
+      "reverse": false,
+      "expectedRoutable": false,
+      "tags": {
+        "highway": "path"
+      },
+      "status": "PASS",
+      "response": {
+        "message": "Could not find a matching segment for coordinate 0",
+        "code": "NoSegment"
+      }
+    },
+    {
+      "case": "oneway",
+      "mode": "car",
+      "reverse": false,
+      "expectedRoutable": true,
+      "tags": {
+        "oneway": "yes"
+      },
+      "status": "PASS",
+      "response": {
+        "code": "Ok",
+        "routes": [
+          {
+            "geometry": {
+              "coordinates": [
+                [
+                  105.1302,
+                  20
+                ],
+                [
+                  105.131,
+                  20
+                ],
+                [
+                  105.1318,
+                  20
+                ]
+              ],
+              "type": "LineString"
+            },
+            "legs": [
+              {
+                "steps": [],
+                "summary": "",
+                "weight": 24.1,
+                "duration": 24.1,
+                "annotation": {
+                  "nodes": [
+                    53,
+                    54,
+                    55
+                  ]
+                },
+                "distance": 167.5
+              }
+            ],
+            "weight_name": "routability",
+            "weight": 24.1,
+            "duration": 24.1,
+            "distance": 167.5
+          }
+        ],
+        "waypoints": [
+          {
+            "hint": "DwAAgP___38eAAAAlwAAAAAAAACXAAAANnanQTZ2p0IAAAAAw1PRQh4AAACXAAAAAAAAAJcAAAAJAACA2ChEBgAtMQHYKEQGAC0xAQAArwUt42ip",
+            "distance": 0,
+            "name": "",
+            "location": [
+              105.1302,
+              20
+            ]
+          },
+          {
+            "hint": "DwAAgP___394AAAAlwAAAJcAAAAAAAAANnanQjZ2p0HDU9FCAAAAAHgAAACXAAAAlwAAAAAAAAAJAACAGC9EBgAtMQEYL0QGAC0xAQEArwUt42ip",
+            "distance": 0,
+            "name": "",
+            "location": [
+              105.1318,
+              20
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "case": "oneway",
+      "mode": "car",
+      "reverse": true,
+      "expectedRoutable": false,
+      "tags": {
+        "oneway": "yes"
+      },
+      "status": "PASS",
+      "response": {
+        "message": "No route found between points",
+        "code": "NoRoute"
+      }
+    },
+    {
+      "case": "oneway-exception",
+      "mode": "car",
+      "reverse": false,
+      "expectedRoutable": true,
+      "tags": {
+        "oneway": "yes",
+        "oneway:motorcycle": "no"
+      },
+      "status": "PASS",
+      "response": {
+        "code": "Ok",
+        "routes": [
+          {
+            "geometry": {
+              "coordinates": [
+                [
+                  105.1402,
+                  20
+                ],
+                [
+                  105.141,
+                  20
+                ],
+                [
+                  105.1418,
+                  20
+                ]
+              ],
+              "type": "LineString"
+            },
+            "legs": [
+              {
+                "steps": [],
+                "summary": "",
+                "weight": 24.1,
+                "duration": 24.1,
+                "annotation": {
+                  "nodes": [
+                    57,
+                    58,
+                    59
+                  ]
+                },
+                "distance": 167.5
+              }
+            ],
+            "weight_name": "routability",
+            "weight": 24.1,
+            "duration": 24.1,
+            "distance": 167.5
+          }
+        ],
+        "waypoints": [
+          {
+            "hint": "EAAAgP___38eAAAAlwAAAAAAAACXAAAANnanQTZ2p0IAAAAAw1PRQh4AAACXAAAAAAAAAJcAAAAKAACA6E9EBgAtMQHoT0QGAC0xAQAArwUt42ip",
+            "distance": 0,
+            "name": "",
+            "location": [
+              105.1402,
+              20
+            ]
+          },
+          {
+            "hint": "EAAAgP___394AAAAlwAAAJcAAAAAAAAANnanQjZ2p0HDU9FCAAAAAHgAAACXAAAAlwAAAAAAAAAKAACAKFZEBgAtMQEoVkQGAC0xAQEArwUt42ip",
+            "distance": 0,
+            "name": "",
+            "location": [
+              105.1418,
+              20
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "case": "oneway-exception",
+      "mode": "car",
+      "reverse": true,
+      "expectedRoutable": false,
+      "tags": {
+        "oneway": "yes",
+        "oneway:motorcycle": "no"
+      },
+      "status": "PASS",
+      "response": {
+        "message": "No route found between points",
+        "code": "NoRoute"
+      }
+    },
+    {
+      "case": "reverse-oneway",
+      "mode": "car",
+      "reverse": false,
+      "expectedRoutable": false,
+      "tags": {
+        "oneway": "-1"
+      },
+      "status": "PASS",
+      "response": {
+        "message": "No route found between points",
+        "code": "NoRoute"
+      }
+    },
+    {
+      "case": "reverse-oneway",
+      "mode": "car",
+      "reverse": true,
+      "expectedRoutable": true,
+      "tags": {
+        "oneway": "-1"
+      },
+      "status": "PASS",
+      "response": {
+        "code": "Ok",
+        "routes": [
+          {
+            "geometry": {
+              "coordinates": [
+                [
+                  105.1518,
+                  20
+                ],
+                [
+                  105.151,
+                  20
+                ],
+                [
+                  105.1502,
+                  20
+                ]
+              ],
+              "type": "LineString"
+            },
+            "legs": [
+              {
+                "steps": [],
+                "summary": "",
+                "weight": 24.1,
+                "duration": 24.1,
+                "annotation": {
+                  "nodes": [
+                    63,
+                    62,
+                    61
+                  ]
+                },
+                "distance": 167.5
+              }
+            ],
+            "weight_name": "routability",
+            "weight": 24.1,
+            "duration": 24.1,
+            "distance": 167.5
+          }
+        ],
+        "waypoints": [
+          {
+            "hint": "EQAAgP___38eAAAAlwAAAAAAAACXAAAANnanQTZ2p0IAAAAAw1PRQh4AAACXAAAAAAAAAJcAAAALAACAOH1EBgAtMQE4fUQGAC0xAQAA7xAt42ip",
+            "distance": 0,
+            "name": "",
+            "location": [
+              105.1518,
+              20
+            ]
+          },
+          {
+            "hint": "EQAAgP___394AAAAlwAAAJcAAAAAAAAANnanQjZ2p0HDU9FCAAAAAHgAAACXAAAAlwAAAAAAAAALAACA-HZEBgAtMQH4dkQGAC0xAQEA7xAt42ip",
+            "distance": 0,
+            "name": "",
+            "location": [
+              105.1502,
+              20
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "case": "bridge",
+      "mode": "car",
+      "reverse": false,
+      "expectedRoutable": true,
+      "tags": {
+        "bridge": "yes"
+      },
+      "status": "PASS",
+      "response": {
+        "code": "Ok",
+        "routes": [
+          {
+            "geometry": {
+              "coordinates": [
+                [
+                  105.1602,
+                  20
+                ],
+                [
+                  105.161,
+                  20
+                ],
+                [
+                  105.1618,
+                  20
+                ]
+              ],
+              "type": "LineString"
+            },
+            "legs": [
+              {
+                "steps": [],
+                "summary": "",
+                "weight": 24.1,
+                "duration": 24.1,
+                "annotation": {
+                  "nodes": [
+                    65,
+                    66,
+                    67
+                  ]
+                },
+                "distance": 167.5
+              }
+            ],
+            "weight_name": "routability",
+            "weight": 24.1,
+            "duration": 24.1,
+            "distance": 167.5
+          }
+        ],
+        "waypoints": [
+          {
+            "hint": "EgAAgBMAAIAeAAAAeQAAAAAAAACXAAAANnanQTZ2p0IAAAAAw1PRQh4AAAB5AAAAAAAAAJcAAAAMAACACJ5EBgAtMQEInkQGAC0xAQAArwUt42ip",
+            "distance": 0,
+            "name": "",
+            "location": [
+              105.1602,
+              20
+            ]
+          },
+          {
+            "hint": "EgAAgBMAAIB4AAAAHwAAAJcAAAAAAAAANnanQjZ2p0HDU9FCAAAAAHgAAAAfAAAAlwAAAAAAAAAMAACASKREBgAtMQFIpEQGAC0xAQEArwUt42ip",
+            "distance": 0,
+            "name": "",
+            "location": [
+              105.1618,
+              20
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "case": "tunnel",
+      "mode": "car",
+      "reverse": false,
+      "expectedRoutable": true,
+      "tags": {
+        "tunnel": "yes"
+      },
+      "status": "PASS",
+      "response": {
+        "code": "Ok",
+        "routes": [
+          {
+            "geometry": {
+              "coordinates": [
+                [
+                  105.1702,
+                  20
+                ],
+                [
+                  105.171,
+                  20
+                ],
+                [
+                  105.1718,
+                  20
+                ]
+              ],
+              "type": "LineString"
+            },
+            "legs": [
+              {
+                "steps": [],
+                "summary": "",
+                "weight": 24.1,
+                "duration": 24.1,
+                "annotation": {
+                  "nodes": [
+                    69,
+                    70,
+                    71
+                  ]
+                },
+                "distance": 167.5
+              }
+            ],
+            "weight_name": "routability",
+            "weight": 24.1,
+            "duration": 24.1,
+            "distance": 167.5
+          }
+        ],
+        "waypoints": [
+          {
+            "hint": "FAAAgBUAAIAeAAAAeQAAAAAAAACXAAAANnanQTZ2p0IAAAAAw1PRQh4AAAB5AAAAAAAAAJcAAAANAACAGMVEBgAtMQEYxUQGAC0xAQAArwUt42ip",
+            "distance": 0,
+            "name": "",
+            "location": [
+              105.1702,
+              20
+            ]
+          },
+          {
+            "hint": "FAAAgBUAAIB4AAAAHwAAAJcAAAAAAAAANnanQjZ2p0HDU9FCAAAAAHgAAAAfAAAAlwAAAAAAAAANAACAWMtEBgAtMQFYy0QGAC0xAQEArwUt42ip",
+            "distance": 0,
+            "name": "",
+            "location": [
+              105.1718,
+              20
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "case": "barrier-bollard",
+      "mode": "car",
+      "reverse": false,
+      "expectedRoutable": false,
+      "tags": {
+        "barrier": "bollard"
+      },
+      "status": "PASS",
+      "response": {
+        "message": "Impossible route between points",
+        "code": "NoRoute"
+      }
+    },
+    {
+      "case": "barrier-gate",
+      "mode": "car",
+      "reverse": false,
+      "expectedRoutable": true,
+      "tags": {
+        "barrier": "gate"
+      },
+      "status": "PASS",
+      "response": {
+        "code": "Ok",
+        "routes": [
+          {
+            "geometry": {
+              "coordinates": [
+                [
+                  105.2102,
+                  20
+                ],
+                [
+                  105.211,
+                  20
+                ],
+                [
+                  105.2118,
+                  20
+                ]
+              ],
+              "type": "LineString"
+            },
+            "legs": [
+              {
+                "steps": [],
+                "summary": "",
+                "weight": 24.1,
+                "duration": 24.1,
+                "annotation": {
+                  "nodes": [
+                    77,
+                    78,
+                    79
+                  ]
+                },
+                "distance": 167.5
+              }
+            ],
+            "weight_name": "routability",
+            "weight": 24.1,
+            "duration": 24.1,
+            "distance": 167.5
+          }
+        ],
+        "waypoints": [
+          {
+            "hint": "GgAAgBsAAIAeAAAAeQAAAAAAAACXAAAANnanQTZ2p0IAAAAAw1PRQh4AAAB5AAAAAAAAAJcAAAAQAACAWGFFBgAtMQFYYUUGAC0xAQAArwUt42ip",
+            "distance": 0,
+            "name": "",
+            "location": [
+              105.2102,
+              20
+            ]
+          },
+          {
+            "hint": "GgAAgBsAAIB4AAAAHwAAAJcAAAAAAAAANnanQjZ2p0HDU9FCAAAAAHgAAAAfAAAAlwAAAAAAAAAQAACAmGdFBgAtMQGYZ0UGAC0xAQEArwUt42ip",
+            "distance": 0,
+            "name": "",
+            "location": [
+              105.2118,
+              20
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "case": "barrier-no",
+      "mode": "car",
+      "reverse": false,
+      "expectedRoutable": true,
+      "tags": {
+        "barrier": "no"
+      },
+      "status": "PASS",
+      "response": {
+        "code": "Ok",
+        "routes": [
+          {
+            "geometry": {
+              "coordinates": [
+                [
+                  105.2202,
+                  20
+                ],
+                [
+                  105.221,
+                  20
+                ],
+                [
+                  105.2218,
+                  20
+                ]
+              ],
+              "type": "LineString"
+            },
+            "legs": [
+              {
+                "steps": [],
+                "summary": "",
+                "weight": 24.1,
+                "duration": 24.1,
+                "annotation": {
+                  "nodes": [
+                    81,
+                    82,
+                    83
+                  ]
+                },
+                "distance": 167.5
+              }
+            ],
+            "weight_name": "routability",
+            "weight": 24.1,
+            "duration": 24.1,
+            "distance": 167.5
+          }
+        ],
+        "waypoints": [
+          {
+            "hint": "HAAAgB0AAIAeAAAAeQAAAAAAAACXAAAANnanQTZ2p0IAAAAAw1PRQh4AAAB5AAAAAAAAAJcAAAARAACAaIhFBgAtMQFoiEUGAC0xAQAArwUt42ip",
+            "distance": 0,
+            "name": "",
+            "location": [
+              105.2202,
+              20
+            ]
+          },
+          {
+            "hint": "HAAAgB0AAIB4AAAAHwAAAJcAAAAAAAAANnanQjZ2p0HDU9FCAAAAAHgAAAAfAAAAlwAAAAAAAAARAACAqI5FBgAtMQGojkUGAC0xAQEArwUt42ip",
+            "distance": 0,
+            "name": "",
+            "location": [
+              105.2218,
+              20
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "case": "turn-restriction",
+      "mode": "car",
+      "reverse": false,
+      "expectedRoutable": true,
+      "tags": {
+        "restriction": "no_straight_on"
+      },
+      "status": "PASS",
+      "response": {
+        "code": "Ok",
+        "routes": [
+          {
+            "geometry": {
+              "coordinates": [
+                [
+                  105.2502,
+                  20
+                ],
+                [
+                  105.251,
+                  20
+                ],
+                [
+                  105.251,
+                  20.001
+                ],
+                [
+                  105.252,
+                  20
+                ],
+                [
+                  105.2518,
+                  20
+                ]
+              ],
+              "type": "LineString"
+            },
+            "legs": [
+              {
+                "steps": [],
+                "summary": "",
+                "weight": 58.3,
+                "duration": 58.3,
+                "annotation": {
+                  "nodes": [
+                    85,
+                    86,
+                    88,
+                    87,
+                    86
+                  ]
+                },
+                "distance": 367.7
+              }
+            ],
+            "weight_name": "routability",
+            "weight": 58.3,
+            "duration": 58.3,
+            "distance": 367.7
+          }
+        ],
+        "waypoints": [
+          {
+            "hint": "HgAAgB8AAIAeAAAAeQAAAAAAAAAAAAAANnanQTZ2p0IAAAAAAAAAAB4AAAB5AAAAAAAAAAAAAAASAACAmP1FBgAtMQGY_UUGAC0xAQAArwUt42ip",
+            "distance": 0,
+            "name": "",
+            "location": [
+              105.2502,
+              20
+            ]
+          },
+          {
+            "hint": "IAAAgCIAAIB4AAAAHwAAAAAAAAAAAAAANnanQjZ2p0EAAAAAAAAAAHgAAAAfAAAAAAAAAAAAAAASAACA2ANGBgAtMQHYA0YGAC0xAQAArwUt42ip",
+            "distance": 0,
+            "name": "",
+            "location": [
+              105.2518,
+              20
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "case": "mode-turn",
+      "mode": "car",
+      "reverse": false,
+      "expectedRoutable": true,
+      "tags": {
+        "type": "restriction",
+        "restriction:motorcycle": "no_straight_on"
+      },
+      "status": "PASS",
+      "response": {
+        "code": "Ok",
+        "routes": [
+          {
+            "geometry": {
+              "coordinates": [
+                [
+                  105.2702,
+                  20
+                ],
+                [
+                  105.271,
+                  20
+                ],
+                [
+                  105.2718,
+                  20
+                ]
+              ],
+              "type": "LineString"
+            },
+            "legs": [
+              {
+                "steps": [],
+                "summary": "",
+                "weight": 24.1,
+                "duration": 24.1,
+                "annotation": {
+                  "nodes": [
+                    92,
+                    93,
+                    94
+                  ]
+                },
+                "distance": 167.5
+              }
+            ],
+            "weight_name": "routability",
+            "weight": 24.1,
+            "duration": 24.1,
+            "distance": 167.5
+          }
+        ],
+        "waypoints": [
+          {
+            "hint": "JgAAgCcAAIAeAAAAeQAAAAAAAAAAAAAANnanQTZ2p0IAAAAAAAAAAB4AAAB5AAAAAAAAAAAAAAATAACAuEtGBgAtMQG4S0YGAC0xAQAArwUt42ip",
+            "distance": 0,
+            "name": "",
+            "location": [
+              105.2702,
+              20
+            ]
+          },
+          {
+            "hint": "KAAAgCoAAIB4AAAAHwAAAAAAAAAAAAAANnanQjZ2p0EAAAAAAAAAAHgAAAAfAAAAAAAAAAAAAAATAACA-FFGBgAtMQH4UUYGAC0xAQAArwUt42ip",
+            "distance": 0,
+            "name": "",
+            "location": [
+              105.2718,
+              20
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "case": "except-motorcycle",
+      "mode": "car",
+      "reverse": false,
+      "expectedRoutable": true,
+      "tags": {
+        "type": "restriction",
+        "restriction": "no_straight_on",
+        "except": "motorcycle"
+      },
+      "status": "PASS",
+      "response": {
+        "code": "Ok",
+        "routes": [
+          {
+            "geometry": {
+              "coordinates": [
+                [
+                  105.2802,
+                  20
+                ],
+                [
+                  105.281,
+                  20
+                ],
+                [
+                  105.281,
+                  20.001
+                ],
+                [
+                  105.282,
+                  20
+                ],
+                [
+                  105.2818,
+                  20
+                ]
+              ],
+              "type": "LineString"
+            },
+            "legs": [
+              {
+                "steps": [],
+                "summary": "",
+                "weight": 58.3,
+                "duration": 58.3,
+                "annotation": {
+                  "nodes": [
+                    99,
+                    100,
+                    102,
+                    101,
+                    100
+                  ]
+                },
+                "distance": 367.7
+              }
+            ],
+            "weight_name": "routability",
+            "weight": 58.3,
+            "duration": 58.3,
+            "distance": 367.7
+          }
+        ],
+        "waypoints": [
+          {
+            "hint": "LgAAgC8AAIAeAAAAeQAAAAAAAAAAAAAANnanQTZ2p0IAAAAAAAAAAB4AAAB5AAAAAAAAAAAAAAAUAACAyHJGBgAtMQHIckYGAC0xAQAArwUt42ip",
+            "distance": 0,
+            "name": "",
+            "location": [
+              105.2802,
+              20
+            ]
+          },
+          {
+            "hint": "MAAAgDIAAIB4AAAAHwAAAAAAAAAAAAAANnanQjZ2p0EAAAAAAAAAAHgAAAAfAAAAAAAAAAAAAAAUAACACHlGBgAtMQEIeUYGAC0xAQAArwUt42ip",
+            "distance": 0,
+            "name": "",
+            "location": [
+              105.2818,
+              20
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "case": "disconnected",
+      "mode": "car",
+      "reverse": false,
+      "expectedRoutable": false,
+      "tags": {},
+      "status": "PASS",
+      "response": {
+        "message": "Impossible route between points",
+        "code": "NoRoute"
+      }
+    },
+    {
+      "case": "max-snap",
+      "mode": "car",
+      "reverse": false,
+      "expectedRoutable": false,
+      "tags": {},
+      "status": "PASS",
+      "response": {
+        "message": "Could not find a matching segment for coordinate 0",
+        "code": "NoSegment"
+      }
+    },
+    {
+      "case": "ordinary",
+      "mode": "motorbike",
+      "reverse": false,
+      "expectedRoutable": true,
+      "tags": {},
+      "status": "PASS",
+      "response": {
+        "code": "Ok",
+        "routes": [
+          {
+            "geometry": {
+              "coordinates": [
+                [
+                  105.0002,
+                  20
+                ],
+                [
+                  105.001,
+                  20
+                ],
+                [
+                  105.0018,
+                  20
+                ]
+              ],
+              "type": "LineString"
+            },
+            "legs": [
+              {
+                "steps": [],
+                "summary": "",
+                "weight": 30.1,
+                "duration": 30.1,
+                "annotation": {
+                  "nodes": [
+                    1,
+                    2,
+                    3
+                  ]
+                },
+                "distance": 167.5
+              }
+            ],
+            "weight_name": "duration",
+            "weight": 30.1,
+            "duration": 30.1,
+            "distance": 167.5
+          }
+        ],
+        "waypoints": [
+          {
+            "hint": "AAAAgAEAAIAlAAAAlwAAAAAAAAC8AAAANnanQTZ2p0IAAAAAw1PRQiUAAACXAAAAAAAAALwAAAABAACACC1CBgAtMQEILUIGAC0xAQAArwXjMrmv",
+            "distance": 0,
+            "name": "",
+            "location": [
+              105.0002,
+              20
+            ]
+          },
+          {
+            "hint": "AAAAgAEAAICWAAAAJgAAALwAAAAAAAAANnanQjZ2p0HDU9FCAAAAAJYAAAAmAAAAvAAAAAAAAAABAACASDNCBgAtMQFIM0IGAC0xAQEArwXjMrmv",
+            "distance": 0,
+            "name": "",
+            "location": [
+              105.0018,
+              20
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "case": "motorcycle-no",
+      "mode": "motorbike",
+      "reverse": false,
+      "expectedRoutable": false,
+      "tags": {
+        "motorcycle": "no"
+      },
+      "status": "PASS",
+      "response": {
+        "message": "Could not find a matching segment for coordinate 0",
+        "code": "NoSegment"
+      }
+    },
+    {
+      "case": "hierarchy",
+      "mode": "motorbike",
+      "reverse": false,
+      "expectedRoutable": true,
+      "tags": {
+        "access": "no",
+        "motor_vehicle": "no",
+        "motorcycle": "yes"
+      },
+      "status": "PASS",
+      "response": {
+        "code": "Ok",
+        "routes": [
+          {
+            "geometry": {
+              "coordinates": [
+                [
+                  105.0202,
+                  20
+                ],
+                [
+                  105.021,
+                  20
+                ],
+                [
+                  105.0218,
+                  20
+                ]
+              ],
+              "type": "LineString"
+            },
+            "legs": [
+              {
+                "steps": [],
+                "summary": "",
+                "weight": 30.1,
+                "duration": 30.1,
+                "annotation": {
+                  "nodes": [
+                    9,
+                    10,
+                    11
+                  ]
+                },
+                "distance": 167.5
+              }
+            ],
+            "weight_name": "duration",
+            "weight": 30.1,
+            "duration": 30.1,
+            "distance": 167.5
+          }
+        ],
+        "waypoints": [
+          {
+            "hint": "AgAAgAMAAIAlAAAAlwAAAAAAAAC8AAAANnanQTZ2p0IAAAAAw1PRQiUAAACXAAAAAAAAALwAAAACAACAKHtCBgAtMQEoe0IGAC0xAQAArwXjMrmv",
+            "distance": 0,
+            "name": "",
+            "location": [
+              105.0202,
+              20
+            ]
+          },
+          {
+            "hint": "AgAAgAMAAICWAAAAJgAAALwAAAAAAAAANnanQjZ2p0HDU9FCAAAAAJYAAAAmAAAAvAAAAAAAAAACAACAaIFCBgAtMQFogUIGAC0xAQEArwXjMrmv",
+            "distance": 0,
+            "name": "",
+            "location": [
+              105.0218,
+              20
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "case": "vehicle-no",
+      "mode": "motorbike",
+      "reverse": false,
+      "expectedRoutable": false,
+      "tags": {
+        "vehicle": "no"
+      },
+      "status": "PASS",
+      "response": {
+        "message": "Could not find a matching segment for coordinate 0",
+        "code": "NoSegment"
+      }
+    },
+    {
+      "case": "motor-vehicle-no",
+      "mode": "motorbike",
+      "reverse": false,
+      "expectedRoutable": false,
+      "tags": {
+        "motor_vehicle": "no"
+      },
+      "status": "PASS",
+      "response": {
+        "message": "Could not find a matching segment for coordinate 0",
+        "code": "NoSegment"
+      }
+    },
+    {
+      "case": "private",
+      "mode": "motorbike",
+      "reverse": false,
+      "expectedRoutable": false,
+      "tags": {
+        "access": "private"
+      },
+      "status": "PASS",
+      "response": {
+        "message": "Could not find a matching segment for coordinate 0",
+        "code": "NoSegment"
+      }
+    },
+    {
+      "case": "ambiguous",
+      "mode": "motorbike",
+      "reverse": false,
+      "expectedRoutable": false,
+      "tags": {
+        "access": "unknown"
+      },
+      "status": "PASS",
+      "response": {
+        "message": "Could not find a matching segment for coordinate 0",
+        "code": "NoSegment"
+      }
+    },
+    {
+      "case": "conditional",
+      "mode": "motorbike",
+      "reverse": false,
+      "expectedRoutable": false,
+      "tags": {
+        "motorcycle:conditional": "no @ (08:00-10:00)"
+      },
+      "status": "PASS",
+      "response": {
+        "message": "Could not find a matching segment for coordinate 0",
+        "code": "NoSegment"
+      }
+    },
+    {
+      "case": "motorway",
+      "mode": "motorbike",
+      "reverse": false,
+      "expectedRoutable": false,
+      "tags": {
+        "highway": "motorway"
+      },
+      "status": "PASS",
+      "response": {
+        "message": "Could not find a matching segment for coordinate 0",
+        "code": "NoSegment"
+      }
+    },
+    {
+      "case": "motorroad",
+      "mode": "motorbike",
+      "reverse": false,
+      "expectedRoutable": false,
+      "tags": {
+        "motorroad": "yes"
+      },
+      "status": "PASS",
+      "response": {
+        "message": "Could not find a matching segment for coordinate 0",
+        "code": "NoSegment"
+      }
+    },
+    {
+      "case": "moped-not-motorcycle",
+      "mode": "motorbike",
+      "reverse": false,
+      "expectedRoutable": true,
+      "tags": {
+        "moped": "no"
+      },
+      "status": "PASS",
+      "response": {
+        "code": "Ok",
+        "routes": [
+          {
+            "geometry": {
+              "coordinates": [
+                [
+                  105.1002,
+                  20
+                ],
+                [
+                  105.101,
+                  20
+                ],
+                [
+                  105.1018,
+                  20
+                ]
+              ],
+              "type": "LineString"
+            },
+            "legs": [
+              {
+                "steps": [],
+                "summary": "",
+                "weight": 30.1,
+                "duration": 30.1,
+                "annotation": {
+                  "nodes": [
+                    41,
+                    42,
+                    43
+                  ]
+                },
+                "distance": 167.5
+              }
+            ],
+            "weight_name": "duration",
+            "weight": 30.1,
+            "duration": 30.1,
+            "distance": 167.5
+          }
+        ],
+        "waypoints": [
+          {
+            "hint": "BAAAgAUAAIAlAAAAlwAAAAAAAAC8AAAANnanQTZ2p0IAAAAAw1PRQiUAAACXAAAAAAAAALwAAAADAACAqLNDBgAtMQGos0MGAC0xAQAArwXjMrmv",
+            "distance": 0,
+            "name": "",
+            "location": [
+              105.1002,
+              20
+            ]
+          },
+          {
+            "hint": "BAAAgAUAAICWAAAAJgAAALwAAAAAAAAANnanQjZ2p0HDU9FCAAAAAJYAAAAmAAAAvAAAAAAAAAADAACA6LlDBgAtMQHouUMGAC0xAQEArwXjMrmv",
+            "distance": 0,
+            "name": "",
+            "location": [
+              105.1018,
+              20
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "case": "explicit-path",
+      "mode": "motorbike",
+      "reverse": false,
+      "expectedRoutable": true,
+      "tags": {
+        "highway": "path",
+        "motorcycle": "yes",
+        "motorcar": "no"
+      },
+      "status": "PASS",
+      "response": {
+        "code": "Ok",
+        "routes": [
+          {
+            "geometry": {
+              "coordinates": [
+                [
+                  105.1102,
+                  20
+                ],
+                [
+                  105.111,
+                  20
+                ],
+                [
+                  105.1118,
+                  20
+                ]
+              ],
+              "type": "LineString"
+            },
+            "legs": [
+              {
+                "steps": [],
+                "summary": "",
+                "weight": 60.3,
+                "duration": 60.3,
+                "annotation": {
+                  "nodes": [
+                    45,
+                    46,
+                    47
+                  ]
+                },
+                "distance": 167.5
+              }
+            ],
+            "weight_name": "duration",
+            "weight": 60.3,
+            "duration": 60.3,
+            "distance": 167.5
+          }
+        ],
+        "waypoints": [
+          {
+            "hint": "BgAAgAcAAIBLAAAALgEAAAAAAAB5AQAANnanQTZ2p0IAAAAAw1PRQksAAAAuAQAAAAAAAHkBAAAEAACAuNpDBgAtMQG42kMGAC0xAQAArwXjMrmv",
+            "distance": 0,
+            "name": "",
+            "location": [
+              105.1102,
+              20
+            ]
+          },
+          {
+            "hint": "BgAAgAcAAIAtAQAATAAAAHkBAAAAAAAANnanQjZ2p0HDU9FCAAAAAC0BAABMAAAAeQEAAAAAAAAEAACA-OBDBgAtMQH44EMGAC0xAQEArwXjMrmv",
+            "distance": 0,
+            "name": "",
+            "location": [
+              105.1118,
+              20
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "case": "untagged-path",
+      "mode": "motorbike",
+      "reverse": false,
+      "expectedRoutable": false,
+      "tags": {
+        "highway": "path"
+      },
+      "status": "PASS",
+      "response": {
+        "message": "Could not find a matching segment for coordinate 0",
+        "code": "NoSegment"
+      }
+    },
+    {
+      "case": "oneway",
+      "mode": "motorbike",
+      "reverse": false,
+      "expectedRoutable": true,
+      "tags": {
+        "oneway": "yes"
+      },
+      "status": "PASS",
+      "response": {
+        "code": "Ok",
+        "routes": [
+          {
+            "geometry": {
+              "coordinates": [
+                [
+                  105.1302,
+                  20
+                ],
+                [
+                  105.131,
+                  20
+                ],
+                [
+                  105.1318,
+                  20
+                ]
+              ],
+              "type": "LineString"
+            },
+            "legs": [
+              {
+                "steps": [],
+                "summary": "",
+                "weight": 30.1,
+                "duration": 30.1,
+                "annotation": {
+                  "nodes": [
+                    53,
+                    54,
+                    55
+                  ]
+                },
+                "distance": 167.5
+              }
+            ],
+            "weight_name": "duration",
+            "weight": 30.1,
+            "duration": 30.1,
+            "distance": 167.5
+          }
+        ],
+        "waypoints": [
+          {
+            "hint": "CAAAgP___38lAAAAvAAAAAAAAAC8AAAANnanQTZ2p0IAAAAAw1PRQiUAAAC8AAAAAAAAALwAAAAFAACA2ChEBgAtMQHYKEQGAC0xAQAArwXjMrmv",
+            "distance": 0,
+            "name": "",
+            "location": [
+              105.1302,
+              20
+            ]
+          },
+          {
+            "hint": "CAAAgP___3-WAAAAvAAAALwAAAAAAAAANnanQjZ2p0HDU9FCAAAAAJYAAAC8AAAAvAAAAAAAAAAFAACAGC9EBgAtMQEYL0QGAC0xAQEArwXjMrmv",
+            "distance": 0,
+            "name": "",
+            "location": [
+              105.1318,
+              20
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "case": "oneway",
+      "mode": "motorbike",
+      "reverse": true,
+      "expectedRoutable": false,
+      "tags": {
+        "oneway": "yes"
+      },
+      "status": "PASS",
+      "response": {
+        "message": "No route found between points",
+        "code": "NoRoute"
+      }
+    },
+    {
+      "case": "oneway-exception",
+      "mode": "motorbike",
+      "reverse": false,
+      "expectedRoutable": true,
+      "tags": {
+        "oneway": "yes",
+        "oneway:motorcycle": "no"
+      },
+      "status": "PASS",
+      "response": {
+        "code": "Ok",
+        "routes": [
+          {
+            "geometry": {
+              "coordinates": [
+                [
+                  105.1402,
+                  20
+                ],
+                [
+                  105.141,
+                  20
+                ],
+                [
+                  105.1418,
+                  20
+                ]
+              ],
+              "type": "LineString"
+            },
+            "legs": [
+              {
+                "steps": [],
+                "summary": "",
+                "weight": 30.1,
+                "duration": 30.1,
+                "annotation": {
+                  "nodes": [
+                    57,
+                    58,
+                    59
+                  ]
+                },
+                "distance": 167.5
+              }
+            ],
+            "weight_name": "duration",
+            "weight": 30.1,
+            "duration": 30.1,
+            "distance": 167.5
+          }
+        ],
+        "waypoints": [
+          {
+            "hint": "CQAAgAoAAIAlAAAAlwAAAAAAAAC8AAAANnanQTZ2p0IAAAAAw1PRQiUAAACXAAAAAAAAALwAAAAGAACA6E9EBgAtMQHoT0QGAC0xAQAArwXjMrmv",
+            "distance": 0,
+            "name": "",
+            "location": [
+              105.1402,
+              20
+            ]
+          },
+          {
+            "hint": "CQAAgAoAAICWAAAAJgAAALwAAAAAAAAANnanQjZ2p0HDU9FCAAAAAJYAAAAmAAAAvAAAAAAAAAAGAACAKFZEBgAtMQEoVkQGAC0xAQEArwXjMrmv",
+            "distance": 0,
+            "name": "",
+            "location": [
+              105.1418,
+              20
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "case": "oneway-exception",
+      "mode": "motorbike",
+      "reverse": true,
+      "expectedRoutable": true,
+      "tags": {
+        "oneway": "yes",
+        "oneway:motorcycle": "no"
+      },
+      "status": "PASS",
+      "response": {
+        "code": "Ok",
+        "routes": [
+          {
+            "geometry": {
+              "coordinates": [
+                [
+                  105.1418,
+                  20
+                ],
+                [
+                  105.141,
+                  20
+                ],
+                [
+                  105.1402,
+                  20
+                ]
+              ],
+              "type": "LineString"
+            },
+            "legs": [
+              {
+                "steps": [],
+                "summary": "",
+                "weight": 30.1,
+                "duration": 30.1,
+                "annotation": {
+                  "nodes": [
+                    59,
+                    58,
+                    57
+                  ]
+                },
+                "distance": 167.5
+              }
+            ],
+            "weight_name": "duration",
+            "weight": 30.1,
+            "duration": 30.1,
+            "distance": 167.5
+          }
+        ],
+        "waypoints": [
+          {
+            "hint": "CQAAgAoAAICWAAAAJgAAALwAAAAAAAAANnanQjZ2p0HDU9FCAAAAAJYAAAAmAAAAvAAAAAAAAAAGAACAKFZEBgAtMQEoVkQGAC0xAQEArwXjMrmv",
+            "distance": 0,
+            "name": "",
+            "location": [
+              105.1418,
+              20
+            ]
+          },
+          {
+            "hint": "CQAAgAoAAIAlAAAAlwAAAAAAAAC8AAAANnanQTZ2p0IAAAAAw1PRQiUAAACXAAAAAAAAALwAAAAGAACA6E9EBgAtMQHoT0QGAC0xAQAArwXjMrmv",
+            "distance": 0,
+            "name": "",
+            "location": [
+              105.1402,
+              20
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "case": "reverse-oneway",
+      "mode": "motorbike",
+      "reverse": false,
+      "expectedRoutable": false,
+      "tags": {
+        "oneway": "-1"
+      },
+      "status": "PASS",
+      "response": {
+        "message": "No route found between points",
+        "code": "NoRoute"
+      }
+    },
+    {
+      "case": "reverse-oneway",
+      "mode": "motorbike",
+      "reverse": true,
+      "expectedRoutable": true,
+      "tags": {
+        "oneway": "-1"
+      },
+      "status": "PASS",
+      "response": {
+        "code": "Ok",
+        "routes": [
+          {
+            "geometry": {
+              "coordinates": [
+                [
+                  105.1518,
+                  20
+                ],
+                [
+                  105.151,
+                  20
+                ],
+                [
+                  105.1502,
+                  20
+                ]
+              ],
+              "type": "LineString"
+            },
+            "legs": [
+              {
+                "steps": [],
+                "summary": "",
+                "weight": 30.1,
+                "duration": 30.1,
+                "annotation": {
+                  "nodes": [
+                    63,
+                    62,
+                    61
+                  ]
+                },
+                "distance": 167.5
+              }
+            ],
+            "weight_name": "duration",
+            "weight": 30.1,
+            "duration": 30.1,
+            "distance": 167.5
+          }
+        ],
+        "waypoints": [
+          {
+            "hint": "CwAAgP___38lAAAAvAAAAAAAAAC8AAAANnanQTZ2p0IAAAAAw1PRQiUAAAC8AAAAAAAAALwAAAAHAACAOH1EBgAtMQE4fUQGAC0xAQAA7xDjMrmv",
+            "distance": 0,
+            "name": "",
+            "location": [
+              105.1518,
+              20
+            ]
+          },
+          {
+            "hint": "CwAAgP___3-WAAAAvAAAALwAAAAAAAAANnanQjZ2p0HDU9FCAAAAAJYAAAC8AAAAvAAAAAAAAAAHAACA-HZEBgAtMQH4dkQGAC0xAQEA7xDjMrmv",
+            "distance": 0,
+            "name": "",
+            "location": [
+              105.1502,
+              20
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "case": "bridge",
+      "mode": "motorbike",
+      "reverse": false,
+      "expectedRoutable": true,
+      "tags": {
+        "bridge": "yes"
+      },
+      "status": "PASS",
+      "response": {
+        "code": "Ok",
+        "routes": [
+          {
+            "geometry": {
+              "coordinates": [
+                [
+                  105.1602,
+                  20
+                ],
+                [
+                  105.161,
+                  20
+                ],
+                [
+                  105.1618,
+                  20
+                ]
+              ],
+              "type": "LineString"
+            },
+            "legs": [
+              {
+                "steps": [],
+                "summary": "",
+                "weight": 30.1,
+                "duration": 30.1,
+                "annotation": {
+                  "nodes": [
+                    65,
+                    66,
+                    67
+                  ]
+                },
+                "distance": 167.5
+              }
+            ],
+            "weight_name": "duration",
+            "weight": 30.1,
+            "duration": 30.1,
+            "distance": 167.5
+          }
+        ],
+        "waypoints": [
+          {
+            "hint": "DAAAgA0AAIAlAAAAlwAAAAAAAAC8AAAANnanQTZ2p0IAAAAAw1PRQiUAAACXAAAAAAAAALwAAAAIAACACJ5EBgAtMQEInkQGAC0xAQAArwXjMrmv",
+            "distance": 0,
+            "name": "",
+            "location": [
+              105.1602,
+              20
+            ]
+          },
+          {
+            "hint": "DAAAgA0AAICWAAAAJgAAALwAAAAAAAAANnanQjZ2p0HDU9FCAAAAAJYAAAAmAAAAvAAAAAAAAAAIAACASKREBgAtMQFIpEQGAC0xAQEArwXjMrmv",
+            "distance": 0,
+            "name": "",
+            "location": [
+              105.1618,
+              20
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "case": "tunnel",
+      "mode": "motorbike",
+      "reverse": false,
+      "expectedRoutable": true,
+      "tags": {
+        "tunnel": "yes"
+      },
+      "status": "PASS",
+      "response": {
+        "code": "Ok",
+        "routes": [
+          {
+            "geometry": {
+              "coordinates": [
+                [
+                  105.1702,
+                  20
+                ],
+                [
+                  105.171,
+                  20
+                ],
+                [
+                  105.1718,
+                  20
+                ]
+              ],
+              "type": "LineString"
+            },
+            "legs": [
+              {
+                "steps": [],
+                "summary": "",
+                "weight": 30.1,
+                "duration": 30.1,
+                "annotation": {
+                  "nodes": [
+                    69,
+                    70,
+                    71
+                  ]
+                },
+                "distance": 167.5
+              }
+            ],
+            "weight_name": "duration",
+            "weight": 30.1,
+            "duration": 30.1,
+            "distance": 167.5
+          }
+        ],
+        "waypoints": [
+          {
+            "hint": "DgAAgA8AAIAlAAAAlwAAAAAAAAC8AAAANnanQTZ2p0IAAAAAw1PRQiUAAACXAAAAAAAAALwAAAAJAACAGMVEBgAtMQEYxUQGAC0xAQAArwXjMrmv",
+            "distance": 0,
+            "name": "",
+            "location": [
+              105.1702,
+              20
+            ]
+          },
+          {
+            "hint": "DgAAgA8AAICWAAAAJgAAALwAAAAAAAAANnanQjZ2p0HDU9FCAAAAAJYAAAAmAAAAvAAAAAAAAAAJAACAWMtEBgAtMQFYy0QGAC0xAQEArwXjMrmv",
+            "distance": 0,
+            "name": "",
+            "location": [
+              105.1718,
+              20
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "case": "barrier-bollard",
+      "mode": "motorbike",
+      "reverse": false,
+      "expectedRoutable": false,
+      "tags": {
+        "barrier": "bollard"
+      },
+      "status": "PASS",
+      "response": {
+        "message": "Impossible route between points",
+        "code": "NoRoute"
+      }
+    },
+    {
+      "case": "barrier-gate",
+      "mode": "motorbike",
+      "reverse": false,
+      "expectedRoutable": false,
+      "tags": {
+        "barrier": "gate"
+      },
+      "status": "PASS",
+      "response": {
+        "message": "Impossible route between points",
+        "code": "NoRoute"
+      }
+    },
+    {
+      "case": "barrier-no",
+      "mode": "motorbike",
+      "reverse": false,
+      "expectedRoutable": true,
+      "tags": {
+        "barrier": "no"
+      },
+      "status": "PASS",
+      "response": {
+        "code": "Ok",
+        "routes": [
+          {
+            "geometry": {
+              "coordinates": [
+                [
+                  105.2202,
+                  20
+                ],
+                [
+                  105.221,
+                  20
+                ],
+                [
+                  105.2218,
+                  20
+                ]
+              ],
+              "type": "LineString"
+            },
+            "legs": [
+              {
+                "steps": [],
+                "summary": "",
+                "weight": 30.1,
+                "duration": 30.1,
+                "annotation": {
+                  "nodes": [
+                    81,
+                    82,
+                    83
+                  ]
+                },
+                "distance": 167.5
+              }
+            ],
+            "weight_name": "duration",
+            "weight": 30.1,
+            "duration": 30.1,
+            "distance": 167.5
+          }
+        ],
+        "waypoints": [
+          {
+            "hint": "GAAAgBkAAIAlAAAAlwAAAAAAAAC8AAAANnanQTZ2p0IAAAAAw1PRQiUAAACXAAAAAAAAALwAAAAOAACAaIhFBgAtMQFoiEUGAC0xAQAArwXjMrmv",
+            "distance": 0,
+            "name": "",
+            "location": [
+              105.2202,
+              20
+            ]
+          },
+          {
+            "hint": "GAAAgBkAAICWAAAAJgAAALwAAAAAAAAANnanQjZ2p0HDU9FCAAAAAJYAAAAmAAAAvAAAAAAAAAAOAACAqI5FBgAtMQGojkUGAC0xAQEArwXjMrmv",
+            "distance": 0,
+            "name": "",
+            "location": [
+              105.2218,
+              20
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "case": "turn-restriction",
+      "mode": "motorbike",
+      "reverse": false,
+      "expectedRoutable": true,
+      "tags": {
+        "restriction": "no_straight_on"
+      },
+      "status": "PASS",
+      "response": {
+        "code": "Ok",
+        "routes": [
+          {
+            "geometry": {
+              "coordinates": [
+                [
+                  105.2502,
+                  20
+                ],
+                [
+                  105.251,
+                  20
+                ],
+                [
+                  105.251,
+                  20.001
+                ],
+                [
+                  105.252,
+                  20
+                ],
+                [
+                  105.2518,
+                  20
+                ]
+              ],
+              "type": "LineString"
+            },
+            "legs": [
+              {
+                "steps": [],
+                "summary": "",
+                "weight": 71.5,
+                "duration": 71.5,
+                "annotation": {
+                  "nodes": [
+                    85,
+                    86,
+                    88,
+                    87,
+                    86
+                  ]
+                },
+                "distance": 367.7
+              }
+            ],
+            "weight_name": "duration",
+            "weight": 71.5,
+            "duration": 71.5,
+            "distance": 367.7
+          }
+        ],
+        "waypoints": [
+          {
+            "hint": "GgAAgBsAAIAlAAAAlwAAAAAAAAAAAAAANnanQTZ2p0IAAAAAAAAAACUAAACXAAAAAAAAAAAAAAAPAACAmP1FBgAtMQGY_UUGAC0xAQAArwXjMrmv",
+            "distance": 0,
+            "name": "",
+            "location": [
+              105.2502,
+              20
+            ]
+          },
+          {
+            "hint": "HAAAgB4AAICWAAAAJgAAAAAAAAAAAAAANnanQjZ2p0EAAAAAAAAAAJYAAAAmAAAAAAAAAAAAAAAPAACA2ANGBgAtMQHYA0YGAC0xAQAArwXjMrmv",
+            "distance": 0,
+            "name": "",
+            "location": [
+              105.2518,
+              20
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "case": "mode-turn",
+      "mode": "motorbike",
+      "reverse": false,
+      "expectedRoutable": true,
+      "tags": {
+        "type": "restriction",
+        "restriction:motorcycle": "no_straight_on"
+      },
+      "status": "PASS",
+      "response": {
+        "code": "Ok",
+        "routes": [
+          {
+            "geometry": {
+              "coordinates": [
+                [
+                  105.2702,
+                  20
+                ],
+                [
+                  105.271,
+                  20
+                ],
+                [
+                  105.271,
+                  20.001
+                ],
+                [
+                  105.272,
+                  20
+                ],
+                [
+                  105.2718,
+                  20
+                ]
+              ],
+              "type": "LineString"
+            },
+            "legs": [
+              {
+                "steps": [],
+                "summary": "",
+                "weight": 71.5,
+                "duration": 71.5,
+                "annotation": {
+                  "nodes": [
+                    92,
+                    93,
+                    95,
+                    94,
+                    93
+                  ]
+                },
+                "distance": 367.7
+              }
+            ],
+            "weight_name": "duration",
+            "weight": 71.5,
+            "duration": 71.5,
+            "distance": 367.7
+          }
+        ],
+        "waypoints": [
+          {
+            "hint": "IgAAgCMAAIAlAAAAlwAAAAAAAAAAAAAANnanQTZ2p0IAAAAAAAAAACUAAACXAAAAAAAAAAAAAAAQAACAuEtGBgAtMQG4S0YGAC0xAQAArwXjMrmv",
+            "distance": 0,
+            "name": "",
+            "location": [
+              105.2702,
+              20
+            ]
+          },
+          {
+            "hint": "JAAAgCYAAICWAAAAJgAAAAAAAAAAAAAANnanQjZ2p0EAAAAAAAAAAJYAAAAmAAAAAAAAAAAAAAAQAACA-FFGBgAtMQH4UUYGAC0xAQAArwXjMrmv",
+            "distance": 0,
+            "name": "",
+            "location": [
+              105.2718,
+              20
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "case": "except-motorcycle",
+      "mode": "motorbike",
+      "reverse": false,
+      "expectedRoutable": true,
+      "tags": {
+        "type": "restriction",
+        "restriction": "no_straight_on",
+        "except": "motorcycle"
+      },
+      "status": "PASS",
+      "response": {
+        "code": "Ok",
+        "routes": [
+          {
+            "geometry": {
+              "coordinates": [
+                [
+                  105.2802,
+                  20
+                ],
+                [
+                  105.281,
+                  20
+                ],
+                [
+                  105.2818,
+                  20
+                ]
+              ],
+              "type": "LineString"
+            },
+            "legs": [
+              {
+                "steps": [],
+                "summary": "",
+                "weight": 30.1,
+                "duration": 30.1,
+                "annotation": {
+                  "nodes": [
+                    99,
+                    100,
+                    101
+                  ]
+                },
+                "distance": 167.5
+              }
+            ],
+            "weight_name": "duration",
+            "weight": 30.1,
+            "duration": 30.1,
+            "distance": 167.5
+          }
+        ],
+        "waypoints": [
+          {
+            "hint": "KgAAgCsAAIAlAAAAlwAAAAAAAAAAAAAANnanQTZ2p0IAAAAAAAAAACUAAACXAAAAAAAAAAAAAAARAACAyHJGBgAtMQHIckYGAC0xAQAArwXjMrmv",
+            "distance": 0,
+            "name": "",
+            "location": [
+              105.2802,
+              20
+            ]
+          },
+          {
+            "hint": "LAAAgC4AAICWAAAAJgAAAAAAAAAAAAAANnanQjZ2p0EAAAAAAAAAAJYAAAAmAAAAAAAAAAAAAAARAACACHlGBgAtMQEIeUYGAC0xAQAArwXjMrmv",
+            "distance": 0,
+            "name": "",
+            "location": [
+              105.2818,
+              20
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "case": "disconnected",
+      "mode": "motorbike",
+      "reverse": false,
+      "expectedRoutable": false,
+      "tags": {},
+      "status": "PASS",
+      "response": {
+        "message": "Impossible route between points",
+        "code": "NoRoute"
+      }
+    },
+    {
+      "case": "max-snap",
+      "mode": "motorbike",
+      "reverse": false,
+      "expectedRoutable": false,
+      "tags": {},
+      "status": "PASS",
+      "response": {
+        "message": "Could not find a matching segment for coordinate 0",
+        "code": "NoSegment"
+      }
+    }
+  ]
+}

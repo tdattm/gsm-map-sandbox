@@ -1,0 +1,97 @@
+{
+  "kind": "browser-webgl-render-only",
+  "visibility": {
+    "atStart": "visible",
+    "atEnd": "visible",
+    "focusAtStart": true,
+    "focusAtEnd": true,
+    "hiddenFrames": 0,
+    "maxFrameGapMs": 1016.5
+  },
+  "cadenceDiagnostic": "LOW_RAF_CADENCE: compare plain RAF in Performance Lab; do not infer fleet/icon cause",
+  "rawFrameGapsMs": [
+    198.39999999404245,
+    16.5,
+    16.69999999999709,
+    16.599999999998545,
+    16.80000000000291,
+    1000.0999999999985,
+    999.9000000000015,
+    1000.1999999999971,
+    1016.5,
+    1000.0999999999985
+  ],
+  "sampleCondition": "warm in-page; no page/process restart",
+  "pageAgeMs": 66444.10000002384,
+  "sourceUpdatesBefore": 5,
+  "fixture": false,
+  "fleetSize": 2500,
+  "simulationTimeSeconds": 106.328,
+  "zoom": 10.882804188297282,
+  "browser": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36",
+  "viewport": [
+    675,
+    358
+  ],
+  "devicePixelRatio": 1.25,
+  "webglRenderer": "ANGLE (Intel, Intel(R) Iris(R) Xe Graphics (0x00009A49) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+  "durationMs": 5295.399999976158,
+  "frames": 10,
+  "fps": 1.8884314688304988,
+  "frameTimeP50Ms": 999.9000000000015,
+  "frameTimeP95Ms": 1016.5,
+  "longTaskSupported": true,
+  "longTasks": 0,
+  "longTaskTotalMs": 0,
+  "heap": {
+    "usedJSHeapSize": 66718273,
+    "totalJSHeapSize": 88388373,
+    "jsHeapSizeLimit": 4395630592
+  },
+  "domMarkerCount": 0,
+  "sourceCount": 10,
+  "layerCount": 20,
+  "setDataSubmissionP50Ms": 0.4000000059604645,
+  "setDataSubmissionP95Ms": 1.4000000059604645,
+  "sourceLoadedLagP95Ms": 55.29999998211861,
+  "dataUpdates": 7,
+  "selectionToNextFrameMs": 950,
+  "snapshotAgeMs": 2700.2999999821186,
+  "visibleClusterCount": 1,
+  "visibleVehicleCount": 0,
+  "visibleRepresentedVehicles": 2500,
+  "clusterOracle": {
+    "checked": 1,
+    "failures": [],
+    "representedLeafCount": 2500,
+    "uniqueLeafCount": 2500,
+    "scope": "all fleet represented in current viewport",
+    "passed": true,
+    "diagnostics": {
+      "center": [
+        106.06,
+        21.180008453350467
+      ],
+      "bounds": [
+        [
+          105.93432299591643,
+          21.117842617221243
+        ],
+        [
+          106.18567700408147,
+          21.242148165466844
+        ]
+      ],
+      "inputVehiclesInBounds": 2500,
+      "sourceFeatures": 2500,
+      "loaded": true
+    },
+    "snapshotSettled": true,
+    "renderSettled": true,
+    "postFreezeWaitMs": 2092.4000000059605,
+    "frozenTime": 106.328
+  },
+  "clusterScope": "viewport; duplicates removed; not full-source coverage assertion",
+  "pan": "continuous small jumpTo pan during capture; zoom fixed",
+  "mapLifetime": "0f711dcb-64b8-41d9-bb1e-a9f8901832d5"
+}

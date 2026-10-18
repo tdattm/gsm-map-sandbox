@@ -1,0 +1,84 @@
+{
+  "createdRun": "6920edfece7042dd9a98fa42c52edcf6",
+  "browser": "ChatGPT embedded browser",
+  "journeys": [
+    {
+      "region": "nvmr-bac-ninh-core",
+      "mode": "CAR",
+      "time": 100,
+      "text": "nvmr-bac-ninh-core:BK-000004 · CAR\n\nPickup [106.052501, 21.189249]\nDropoff [106.046809, 21.162646]\n\nĐến đón · nét đứt\n\n101.5 m · 14.5 s\n\nt=51.806 → 66.306 s\n\nChở khách · nét liền\n\n4782.8 m · 395.9 s\n\nt=66.306 → 462.206 s\n\nRouting identity và provenance"
+    },
+    {
+      "region": "nvmr-bac-ninh-core",
+      "mode": "MOTORBIKE",
+      "time": 100,
+      "text": "nvmr-bac-ninh-core:BK-000011 · MOTORBIKE\n\nPickup [106.065610, 21.162360]\nDropoff [106.068901, 21.162281]\n\nĐến đón · nét đứt\n\n1112.1 m · 143.4 s\n\nt=76.970 → 220.370 s\n\nChở khách · nét liền\n\n956.5 m · 152.2 s\n\nt=220.370 → 372.570 s\n\nRouting identity và provenance"
+    },
+    {
+      "region": "nvmr-hanoi-core",
+      "mode": "CAR",
+      "time": 100,
+      "text": "nvmr-hanoi-core:BK-000005 · CAR\n\nPickup [105.844094, 21.019367]\nDropoff [105.836284, 21.031713]\n\nĐến đón · nét đứt\n\n2418.9 m · 201.9 s\n\nt=32.825 → 234.725 s\n\nChở khách · nét liền\n\n2104.0 m · 200.9 s\n\nt=234.725 → 435.625 s\n\nRouting identity và provenance"
+    },
+    {
+      "region": "nvmr-hanoi-core",
+      "mode": "MOTORBIKE",
+      "time": 100,
+      "text": "nvmr-hanoi-core:BK-000003 · MOTORBIKE\n\nPickup [105.826979, 21.030213]\nDropoff [105.844003, 21.028523]\n\nĐến đón · nét đứt\n\n1021.1 m · 96.0 s\n\nt=42.072 → 138.072 s\n\nChở khách · nét liền\n\n2543.8 m · 225.0 s\n\nt=138.072 → 363.072 s\n\nRouting identity và provenance"
+    }
+  ],
+  "afterRegionSwitch": {
+    "lifetime": "bfe41854-6408-4b05-8c02-037d1e2a09dc",
+    "maps": 1,
+    "scrollWidth": 716,
+    "time": "100",
+    "width": 716
+  },
+  "overview5000": {
+    "canvas": {
+      "bottom": 900.0249938964844,
+      "height": 358.3999938964844,
+      "left": 12.800000190734863,
+      "right": 688.0000123977661,
+      "top": 541.625,
+      "width": 675.2000122070312,
+      "x": 12.800000190734863,
+      "y": 541.625
+    },
+    "containsBoth": "true",
+    "height": 659,
+    "width": 716
+  },
+  "largeCapture": {
+    "file": "webgl-5000-total-bac-ninh-2500.json",
+    "totalScenarioFleet": 5000,
+    "detailedRegionVehicles": 2500,
+    "clusterOraclePass": true,
+    "scope": "short embedded-browser capture; low RAF cadence observed, no M4 profiling reopened"
+  },
+  "recovery": {
+    "scrollWidth": 716,
+    "time": "106.42409999999404",
+    "width": 716
+  },
+  "legacyChecks": [
+    "HCM Single map ready",
+    "HCM Fleet5 generated with replay enabled",
+    "HCM Booking5/20 generated with replay enabled",
+    "HCM Voucher paired experiment prepared",
+    "Saved Replay demo loaded"
+  ],
+  "finalView": {
+    "containsBoth": "true",
+    "domMarkers": 0,
+    "height": 659,
+    "maps": 1,
+    "scrollWidth": 716,
+    "width": 716
+  },
+  "navigation": {
+    "legacy": "hanoi",
+    "back": "regional",
+    "forward": "hanoi"
+  }
+}

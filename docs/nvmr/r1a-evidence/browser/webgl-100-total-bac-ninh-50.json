@@ -1,0 +1,101 @@
+{
+  "kind": "browser-webgl-render-only",
+  "visibility": {
+    "atStart": "visible",
+    "atEnd": "visible",
+    "focusAtStart": true,
+    "focusAtEnd": true,
+    "hiddenFrames": 0,
+    "maxFrameGapMs": 1016.5
+  },
+  "cadenceDiagnostic": "LOW_RAF_CADENCE: compare plain RAF in Performance Lab; do not infer fleet/icon cause",
+  "rawFrameGapsMs": [
+    246.80000000596192,
+    16.5,
+    16.599999999998545,
+    16.599999999998545,
+    16.700000000004366,
+    1000.0999999999985,
+    1016.5,
+    1000.0999999999985,
+    1000.1999999999971,
+    1016.4000000000015
+  ],
+  "sampleCondition": "warm in-page; no page/process restart",
+  "pageAgeMs": 43364.59999999404,
+  "sourceUpdatesBefore": 4,
+  "fixture": false,
+  "fleetSize": 50,
+  "simulationTimeSeconds": 106.37,
+  "zoom": 10.882804188297436,
+  "browser": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36",
+  "viewport": [
+    675,
+    358
+  ],
+  "devicePixelRatio": 1.25,
+  "webglRenderer": "ANGLE (Intel, Intel(R) Iris(R) Xe Graphics (0x00009A49) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+  "durationMs": 5352.100000023842,
+  "frames": 10,
+  "fps": 1.8684254778414928,
+  "frameTimeP50Ms": 1000.0999999999985,
+  "frameTimeP95Ms": 1016.5,
+  "longTaskSupported": true,
+  "longTasks": 0,
+  "longTaskTotalMs": 0,
+  "heap": {
+    "usedJSHeapSize": 47095794,
+    "totalJSHeapSize": 50403190,
+    "jsHeapSizeLimit": 4395630592
+  },
+  "domMarkerCount": 0,
+  "sourceCount": 10,
+  "layerCount": 20,
+  "setDataSubmissionP50Ms": 0.09999999403953552,
+  "setDataSubmissionP95Ms": 0.30000001192092896,
+  "sourceLoadedLagP95Ms": 5,
+  "dataUpdates": 7,
+  "selectionToNextFrameMs": 1015.1000000238419,
+  "snapshotAgeMs": 2987,
+  "visibleClusterCount": 2,
+  "visibleVehicleCount": 0,
+  "visibleRepresentedVehicles": 50,
+  "clusterOracle": {
+    "checked": 2,
+    "failures": [],
+    "representedLeafCount": 50,
+    "uniqueLeafCount": 50,
+    "scope": "all fleet represented in current viewport",
+    "passed": true,
+    "diagnostics": {
+      "center": [
+        106.06,
+        21.18000845335048
+      ],
+      "bounds": [
+        [
+          105.93432299591814,
+          21.11784261722194
+        ],
+        [
+          106.18567700408312,
+          21.242148165467555
+        ]
+      ],
+      "inputVehiclesInBounds": 50,
+      "sourceFeatures": 50,
+      "loaded": true
+    },
+    "snapshotSettled": true,
+    "renderSettled": true,
+    "postFreezeWaitMs": 2015.5,
+    "frozenTime": 106.37019999998807
+  },
+  "clusterScope": "viewport; duplicates removed; not full-source coverage assertion",
+  "pan": "continuous small jumpTo pan during capture; zoom fixed",
+  "mapLifetime": "9ec60ac5-890e-4fd7-b9a1-f3236381bc92",
+  "regionalScenarioRunId": "9cca52e88d214266810f59788785b88b",
+  "totalScenarioFleet": 100,
+  "regionId": "nvmr-bac-ninh-core",
+  "presentationProfile": "meeting"
+}

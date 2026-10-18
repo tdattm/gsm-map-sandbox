@@ -1,0 +1,5 @@
+{"region": "nvmr-hanoi-core", "mode": "MOTORBIKE", "identity": {"region_id": "nvmr-hanoi-core", "config_sha256": "91c114a869a0eebe23d91df77641b9dd2f52afb7b7d09e941f249f78cfc9f05c", "pipeline_version": "hanoi-car-pilot/v1", "vehicle_type": "MOTORBIKE", "mode_config_sha256": "7bf195e08a48083ded012d8cd2ef594ca7dbf5e2cf6ced9ff7a340eff94f07e2", "profile_sha256": "075ecdbc70a3e75c4338d2c6a41597c132a1837ec2d27f1c2fcdd824a788b209", "assumptions_sha256": "fedfbb84ea7292118e92e9fa45bb3d0721511e830a9afb23c99f9b9e52d17af5", "version": "hanoi-electric-motorcycle/v1"}, "output": "D:\\ThS\\VinAI\\Phase3_VRIC\\gsm-map-sandbox\\data\\regions\\nvmr-hanoi-core\\routing\\motorbike"}
+docker image inspect ghcr.io/project-osrm/osrm-backend:v5.27.1 --format "{{json .RepoDigests}}"
+docker run --rm ghcr.io/project-osrm/osrm-backend@sha256:855614a38f464b0558a2ad6eaa7cb8c139f39887da9b38b485ce453c6e6e6124 sh -c "find /opt -type f -name '*.lua' -exec sha256sum {} + | sort"
+REUSE unchanged graph-specific MOTORBIKE router evidence
+Serving MOTORBIKE; NOT READY until independent validation.json passes
