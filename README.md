@@ -2,7 +2,15 @@
 
 PoC mô phỏng hành trình, đội xe và voucher trên bản đồ OSM thật, dùng OSRM local. Ngoài TP.HCM và Hanoi Core, R1a bổ sung scenario thống nhất Hanoi + **Bắc Ninh Core technical pilot**, CAR/MOTORBIKE có graph riêng. Booking, phân bổ fleet, giá cước, ETA và voucher là giả định nghiên cứu, không phải dữ liệu vận hành hay GPS thực tế của GSM.
 
-## R1a — Hanoi + Bắc Ninh Core
+## R1b — Unified Connected NVMR
+
+Kiến trúc mục tiêu hiện hành là **một miền Bắc liên thông**, thay cho kế hoạch mở rộng nhiều simulation tỉnh độc lập: một graph CAR, một graph MOTORBIKE riêng, một global fleet/booking/dispatch/event engine/clock và một bản đồ vector tiles offline. Phạm vi bản đồ liên tục bao phủ Hà Nội, Bắc Ninh, Hưng Yên, Phú Thọ và Thái Nguyên sau sáp nhập2025; operating zones là vùng kỹ thuật có phiên bản, không phải polygon hành chính chính thức. Địa phương lân cận nằm trong rectangle không tự được thêm vào nghiên cứu.
+
+Trong **Mô phỏng quy mô lớn → Kịch bản mô phỏng → Miền Bắc liên thông**, v5 có default5.000 xe tổng (2.000CAR+3.000MOTORBIKE), phân bổ4.000/250/250/250/250. Custom allocations và nhu cầu theo zone độc lập với fleet. Xe cùng mode được shortlist trên toàn vùng rồi kiểm ETA bằng OSRM; không bị loại chỉ vì khác zone. v3 Hanoi, v4 R1a và HCM/Saved Replay tiếp tục có contract riêng.
+
+Trạng thái triển khai, các bước đã chạy, blockers và quyết định GO/M5 nằm trong [báo cáo R1b](docs/nvmr/R1B_CONNECTED_IMPLEMENTATION.md), [runbook PowerShell](docs/nvmr/R1B_CONNECTED_RUNBOOK.md), [GIS/provenance](docs/nvmr/R1B_CONNECTED_GIS.md), [v5 contract](contracts/nvmr/CONNECTED_V1.md) và [checkpoint phục hồi](docs/nvmr/R1B_PROGRESS.md). Có source/UI không có nghĩa các graph và live acceptance đã READY; kiểm tra report/checkpoint trước khi demo. Không tải PBF mới khi snapshot cũ hợp lệ, không rebuild/overwrite artifact đã verify.
+
+## R1a — Hanoi + Bắc Ninh Core (historical, v4 compatibility)
 
 Từ **Mô phỏng quy mô lớn → Kịch bản mô phỏng**, chọn Hanoi legacy v3 hoặc NVMR hai vùng. Regional v4 có một job/store/worker, một clock, phân bổ tối đa **5.000 xe tổng qua hai vùng**, tổng và KPI theo vùng, overview extent, drill-down tải một basemap và immutable pickup/trip inspector. Bắc Ninh là vùng kỹ thuật thí điểm quanh đô thị cũ, **không phải toàn tỉnh sau hợp nhất năm 2025**. Không điều phối xuyên vùng hay đổi graph CAR/MOTORBIKE.
 
@@ -22,6 +30,8 @@ Cần fresh `npm.cmd run build` trong frontend trước Meeting; API/worker cũ 
 GIF là bản xem trước 10 giây để GitHub hiển thị trực tiếp. [Mở hoặc tải video đầy đủ (MP4)](docs/media/gsm-map-sandbox-demo.mp4).
 
 ## S0/S1 — Khởi động và theo dõi hai chặng
+
+Các kết quả và điều kiện delivery trong phần S0/S1–M4 dưới đây là **lịch sử**. Project Owner đã đóng milestone tối ưu FPS M4; R1b không mở lại milestone đó. Hướng dẫn Connected NVMR và quyết định hiện hành nằm ở các báo cáo R1b phía trên.
 
 **Cập nhật performance/memory 18/10/2026:** [báo cáo đầy đủ và PowerShell runbook](docs/nvmr/M4_PERFORMANCE_MEMORY_STABILIZATION.md), [evidence hiện tại](docs/nvmr/m4-performance-evidence/validation-summary.json). Launcher có `-Profile Standard|Meeting|Benchmark`, `-Routers HanoiCar|HanoiBoth|Regional|All|None` và `-StartRouters`. Meeting dùng production preview fresh build, snapshot tối đa 4 Hz, clock hiển thị 10 Hz; paused unchanged không poll snapshot. Ví dụ sau `npm.cmd run build` trong frontend: `./scripts/Start-GsmDev.ps1 -Profile Meeting -Routers HanoiBoth -StartRouters`. Docker Desktop phải chạy để serve OSRM. Với `-Routers None`, vẫn có thể mở completed job khi routers tắt. Nhớ dùng cùng API/store/ports khi mở job đã lưu.
 

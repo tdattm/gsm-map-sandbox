@@ -171,7 +171,12 @@ async def run_claimed(store, status, executor=None, stopping=lambda: False):
         import hashlib
         if hashlib.sha256(json.dumps(manifest['config'], sort_keys=True).encode()).hexdigest() != manifest['inputHash']:
             raise ValueError('Immutable run configuration modified')
-        if manifest['config'].get('schemaVersion') == 'gsm-nvmr-regional-scenario/v1':
+        if manifest['config'].get('schemaVersion') == 'gsm-nvmr-connected-scenario/v1':
+            from .connected_simulation import ConnectedScenarioConfig
+            from .connected_jobs import execute_connected_live
+            config = ConnectedScenarioConfig.model_validate(manifest['config'])
+            selected_executor = executor or execute_connected_live
+        elif manifest['config'].get('schemaVersion') == 'gsm-nvmr-regional-scenario/v1':
             from .regional_simulation import RegionalScenarioConfig
             from .regional_jobs import execute_regional_live
             config = RegionalScenarioConfig.model_validate(manifest['config'])

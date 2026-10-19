@@ -3,7 +3,7 @@
 param(
     [switch]$StatusOnly,
     [ValidateSet('Standard','Meeting','Benchmark')][string]$Profile='Standard',
-    [ValidateSet('HanoiCar','HanoiBoth','Regional','All','None')][string]$Routers='HanoiBoth',
+    [ValidateSet('HanoiCar','HanoiBoth','Regional','Connected','All','None')][string]$Routers='HanoiBoth',
     [switch]$StartRouters,
     [int]$ApiPort = 8013,
     [int]$FrontendPort = 5183,
@@ -87,6 +87,12 @@ try {
     }
     if($StartRouters -and -not $StatusOnly -and $Routers -ne 'None'){
         Require-StartupHeadroom
+        if($Routers -eq 'Connected'){
+            & $taskPython scripts/connected_gis.py serve --mode CAR
+            if($LASTEXITCODE -ne 0){throw 'Connected CAR serve failed; no graph rebuilt'}
+            & $taskPython scripts/connected_gis.py serve --mode MOTORBIKE
+            if($LASTEXITCODE -ne 0){throw 'Connected MOTORBIKE serve failed; no graph rebuilt'}
+        } else {
         if($Routers -eq 'All'){& $taskPython scripts/pipeline.py serve --detach;if($LASTEXITCODE -ne 0){throw 'HCM router serve failed'}}
         & $taskPython scripts/pipeline.py serve --region nvmr-hanoi-core --profile car --detach
         if($LASTEXITCODE -ne 0){throw 'Hanoi CAR serve failed; graph was not rebuilt'}
@@ -97,9 +103,10 @@ try {
             & $taskPython scripts/pipeline.py serve --region nvmr-bac-ninh-core --profile motorbike --detach
             if($LASTEXITCODE -ne 0){throw 'Bac Ninh MOTORBIKE serve failed; graph was not rebuilt'}
         }
+        }
     }
     # Readiness only. Never start/recreate an unverified Docker container here.
-    foreach ($router in @(@(5000,'HCM CAR'),@(5001,'Hanoi CAR'),@(5002,'Hanoi MOTORBIKE'),@(5003,'Bac Ninh CAR'),@(5004,'Bac Ninh MOTORBIKE'))) {
+    foreach ($router in @(@(5000,'HCM CAR'),@(5001,'Hanoi CAR'),@(5002,'Hanoi MOTORBIKE'),@(5003,'Bac Ninh CAR'),@(5004,'Bac Ninh MOTORBIKE'),@(5005,'Connected CAR'),@(5006,'Connected MOTORBIKE'))) {
         Write-Host "Router $($router[1]) :$($router[0]) listening=$(Port-Owned $router[0]) (mode API verifies graph identity)"
     }
     $runtime = Read-JsonUrl "$apiUrl/api/v3/simulation/jobs/runtime"
@@ -151,7 +158,8 @@ try {
         $assetPath=Join-Path $taskRoot "data/regions/nvmr-hanoi-core/render/$asset.geojson"
         Write-Host "Local render $asset : $(Test-Path -LiteralPath $assetPath)"
     }
-    Write-Host "Website: $siteUrl/?runtime=simulation&profile=$($Profile.ToLowerInvariant())"
+    $taskScenarioQuery = if($Routers -eq 'Connected'){'&scenario=connected'}else{''}
+    Write-Host "Website: $siteUrl/?runtime=simulation&profile=$($Profile.ToLowerInvariant())$taskScenarioQuery"
     Write-Host 'Router recovery (no rebuild): .\.venv\Scripts\python.exe scripts/pipeline.py serve --detach'
     Write-Host 'Hanoi: .\.venv\Scripts\python.exe scripts/pipeline.py serve --region nvmr-hanoi-core --profile car --detach'
     Write-Host 'Motorbike: .\.venv\Scripts\python.exe scripts/pipeline.py serve --region nvmr-hanoi-core --profile motorbike --detach'

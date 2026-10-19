@@ -1,0 +1,112 @@
+{
+  "schemaVersion": "connected-r1b-acceptance/v1",
+  "status": "PARTIAL",
+  "updatedLocal": "2026-10-19 Asia/Saigon",
+  "baselineHead": "cd0bd26abd5c2ff83843d15a4555ba89f9d83b3f",
+  "branch": "feature/nvmr-m0-architecture",
+  "sourceChecks": {
+    "backendArtifactFree": {
+      "status": "PASS_WITH_SKIPS",
+      "command": "RUN_REAL_DATA=0 .venv/Scripts/python.exe -m pytest -q -rs",
+      "passed": 315,
+      "skipped": 6,
+      "warnings": 1,
+      "wallSeconds": 89.76,
+      "log": "build/r1b-backend-tests-final.txt"
+    },
+    "frontendFull": {
+      "status": "PASS",
+      "passed": 209,
+      "files": 26,
+      "wallSeconds": 152.31,
+      "command": "npm.cmd test -- --maxWorkers=1",
+      "log": "build/r1b-frontend-tests-final.txt",
+      "note": "Full suite after browser-discovered initial-map error handling fix"
+    },
+    "frontendTypecheck": {
+      "status": "PASS",
+      "command": "npm.cmd run typecheck",
+      "log": "build/r1b-typecheck.txt"
+    },
+    "frontendLint": {
+      "status": "PASS_WITH_WARNINGS",
+      "errors": 0,
+      "warnings": 53,
+      "connectedWarnings": 7,
+      "log": "build/r1b-lint.txt"
+    },
+    "frontendBuild": {
+      "status": "PASS_WITH_WARNING",
+      "viteWallSeconds": 2.38,
+      "note": "Chunk size warning; no dependency change",
+      "log": "build/r1b-build.txt"
+    },
+    "replayVerifier": {
+      "status": "PASS_PACKAGE_ONLY",
+      "assets": 9,
+      "artifactDigest": "b4a87ee371f976f12f4da28791dffc66ebeb24352c1d664bf71851eb89c27433",
+      "browserExports": "NOT_RUN",
+      "log": "build/r1b-replay-verification.txt"
+    },
+    "historicalProtectedInputs": {
+      "status": "PASS",
+      "tests": 1,
+      "evidenceType": "Actual HCM protected source/GeoJSON checksum regression, no OSRM required",
+      "log": "build/r1b-hcm-protected-inputs.txt"
+    },
+    "historicalPersistedReplay": {
+      "status": "PASS",
+      "apiVersions": [
+        3,
+        4
+      ],
+      "fleetSizeEach": 5000,
+      "evidenceType": "Actual historical stored results via current in-process API with all router ports offline",
+      "path": "docs/nvmr/r1b-evidence/historical-replay.json"
+    }
+  },
+  "gis": {
+    "sourceAndExtract": "VERIFIED_REUSED",
+    "carGraphFileIntegrity": "PASS",
+    "motorbikeGraphFileIntegrity": "PASS",
+    "basemap": "PARTIAL_NATIVE_RENDER_IN_PROGRESS",
+    "liveRouting": "NOT_RUN",
+    "snappedAnchors": "NOT_RUN"
+  },
+  "domainBenchmarks": {
+    "status": "PASS",
+    "evidenceType": "DOMAIN FIXTURE ONLY; synthetic positions and route evidence; not local OSRM",
+    "path": "docs/nvmr/r1b-evidence/domain-benchmark.json",
+    "sizes": [
+      100,
+      500,
+      1000,
+      5000
+    ]
+  },
+  "liveBenchmarks": {
+    "status": "NOT_RUN",
+    "sizes": [
+      100,
+      500,
+      1000,
+      5000
+    ]
+  },
+  "browser": {
+    "status": "PARTIAL",
+    "navigation": "PASS",
+    "backForward": "PASS",
+    "defaultAllocationAndPreset": "PASS",
+    "missingRoutingProof": "PASS_ERROR",
+    "initialMapFailure": "PASS_AFTER_FIX",
+    "liveMapAndPlayback": "NOT_RUN",
+    "evidence": "docs/nvmr/r1b-evidence/browser/initial-smoke.json"
+  },
+  "R1b": "NO-GO_PENDING_ACCEPTANCE",
+  "M5": "NOT_READY_PENDING_ACCEPTANCE",
+  "limitations": [
+    "Source/fixture success is distinct from real local OSRM and browser evidence",
+    "Six artifact-free skips are not counted as passes"
+  ]
+}

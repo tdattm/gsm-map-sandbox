@@ -1,0 +1,124 @@
+{
+  "capturedUtc": "2026-10-19T02:20:13.318748+00:00",
+  "identity": {
+    "region_id": "nvmr-connected",
+    "config_sha256": "c815a2d299193161a19fff43b66bcc71a79dd78a912c165f5be6377f6a1a2aa1",
+    "pipeline_version": "connected-nvmr-gis/v1"
+  },
+  "source": {
+    "path": "data/raw/vietnam-latest.osm.pbf",
+    "sha256": "2fbd2ee6b4dc151eecf04fa6823cddf584b47423e190118b10fce8b6115e9d8a",
+    "timestamp": "2026-10-09T20:21:04Z",
+    "attribution": "© OpenStreetMap contributors",
+    "url": "https://download.geofabrik.de/asia/vietnam.html"
+  },
+  "artifacts": {
+    "coverage-evidence.json": {
+      "sha256": "5f309d5f0b5d4bb381528932696c65c7c594b698512f933aa5218d7eacadf425",
+      "sizeBytes": 2865
+    },
+    "source-verification.json": {
+      "sha256": "5470ae9bea9c314b0712037be370925f75eeb20ea645ff87c7f8fe0911267c16",
+      "sizeBytes": 3585
+    },
+    "extracted/coverage.osm.metadata.json": {
+      "sha256": "4994d561a7b5e77a793fd5144f864f3e2ce091995e39c9029d022d18d089dfbc",
+      "sizeBytes": 1412
+    },
+    "routing/car/manifest.json": {
+      "sha256": "ad52e520c72f8374ebbe8add5d219f5e48c533ac72cc2b23dfb73bb8e5c2528c",
+      "sizeBytes": 52491
+    },
+    "routing/car/build-resources.json": {
+      "sha256": "bc456d5e99866fd81add922b86f1d9e52399a4d0ee4fd39fa1280e2cef38d602",
+      "sizeBytes": 45951
+    },
+    "routing/motorbike/manifest.json": {
+      "sha256": "be9140840ce9293ddd747344e6b9d899d02d347ad0b1321143d5bc77eb5677f0",
+      "sizeBytes": 60003
+    },
+    "routing/motorbike/build-resources.json": {
+      "sha256": "cf42e3f8e2dacdd245b51c258cd5288b281ddfc8ca342f01490ec1ed2eb4ea9d",
+      "sizeBytes": 53346
+    }
+  },
+  "graphs": {
+    "CAR": {
+      "fileIntegrity": "PASS",
+      "manifestSha256": "ad52e520c72f8374ebbe8add5d219f5e48c533ac72cc2b23dfb73bb8e5c2528c",
+      "profileSha256": "cb3df0546318665609606b746a1297f3d65ca3c2ff825f8a6f3c57247d86a2d3",
+      "sizeBytes": 1710038464,
+      "stages": [
+        {
+          "stage": "osrm-extract",
+          "exitCode": 0,
+          "wallSeconds": 180.6852135999943,
+          "osrmReportedPeakBytes": 2148614144,
+          "hostMinimumPhysicalBytes": 1578266624,
+          "hostMinimumCommitHeadroomBytes": 5405577216,
+          "dockerSamples": 55
+        },
+        {
+          "stage": "osrm-partition",
+          "exitCode": 0,
+          "wallSeconds": 75.31379899999592,
+          "osrmReportedPeakBytes": 1138667520,
+          "hostMinimumPhysicalBytes": 2607779840,
+          "hostMinimumCommitHeadroomBytes": 5423259648,
+          "dockerSamples": 23
+        },
+        {
+          "stage": "osrm-customize",
+          "exitCode": 0,
+          "wallSeconds": 22.745632499980275,
+          "osrmReportedPeakBytes": 1096552448,
+          "hostMinimumPhysicalBytes": 2907275264,
+          "hostMinimumCommitHeadroomBytes": 6457966592,
+          "dockerSamples": 8
+        }
+      ]
+    },
+    "MOTORBIKE": {
+      "fileIntegrity": "PASS",
+      "manifestSha256": "be9140840ce9293ddd747344e6b9d899d02d347ad0b1321143d5bc77eb5677f0",
+      "profileSha256": "075ecdbc70a3e75c4338d2c6a41597c132a1837ec2d27f1c2fcdd824a788b209",
+      "sizeBytes": 1714422808,
+      "stages": [
+        {
+          "stage": "osrm-extract",
+          "exitCode": 0,
+          "wallSeconds": 249.8267721000011,
+          "osrmReportedPeakBytes": 2149134336,
+          "hostMinimumPhysicalBytes": 1515728896,
+          "hostMinimumCommitHeadroomBytes": 1621147648,
+          "dockerSamples": 72
+        },
+        {
+          "stage": "osrm-partition",
+          "exitCode": 0,
+          "wallSeconds": 68.32677750001312,
+          "osrmReportedPeakBytes": 1161097216,
+          "hostMinimumPhysicalBytes": 3741351936,
+          "hostMinimumCommitHeadroomBytes": 6769762304,
+          "dockerSamples": 21
+        },
+        {
+          "stage": "osrm-customize",
+          "exitCode": 0,
+          "wallSeconds": 21.592841000005137,
+          "osrmReportedPeakBytes": 1104101376,
+          "hostMinimumPhysicalBytes": 4271411200,
+          "hostMinimumCommitHeadroomBytes": 7547101184,
+          "dockerSamples": 7
+        }
+      ]
+    }
+  },
+  "render": {
+    "fileIntegrity": "NOT_VERIFIED",
+    "reason": "[Errno 2] No such file or directory: 'D:\\\\ThS\\\\VinAI\\\\Phase3_VRIC\\\\gsm-map-sandbox\\\\data\\\\regions\\\\nvmr-connected\\\\render\\\\manifest.json'"
+  },
+  "limitations": [
+    "Artifact hash verification is separate from OSRM HTTP/router proof and end-to-end simulation acceptance."
+  ]
+}

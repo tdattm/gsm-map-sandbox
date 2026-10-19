@@ -1,5 +1,7 @@
 # M0 — Kế hoạch triển khai M1–M7
 
+> **Historical / Superseded direction (R1b, 19/10/2026):** The current target is Unified Connected NVMR: one connected CAR graph, one independent MOTORBIKE graph, one global engine/fleet/dispatch/clock and unified viewport. Independent N-region R1b expansion is superseded. This historical document retains its original evidence, metrics and limitations; it does not establish cross-province dispatch. See [current implementation](R1B_CONNECTED_IMPLEMENTATION.md), [runbook](R1B_CONNECTED_RUNBOOK.md) and [recovery checkpoint](R1B_PROGRESS.md).
+
 > Checkpoint triển khai mới: [R1A_IMPLEMENTATION.md](R1A_IMPLEMENTATION.md), [runbook](R1A_RUNBOOK.md) và [recovery checkpoint](R1A_PROGRESS.md). R1a hai vùng có contract/API mới, giữ tương thích M0–M4; R1b và M5–M7 vẫn cần phạm vi/bằng chứng riêng. Kế hoạch15/10 bên dưới được giữ như lịch sử thiết kế.
 
 Ngày: 15/10/2026. **Kế hoạch đề xuất, chưa triển khai milestone tiếp theo.** Căn cứ: [audit source và verification](M0_ARCHITECTURE_ASSESSMENT.md), [kiến trúc mục tiêu](M0_TARGET_ARCHITECTURE.md). Kế hoạch dùng checkout hiện tại làm điểm xuất phát, không yêu cầu claim/ownership board, fixed SHA hay branch-specific gate.

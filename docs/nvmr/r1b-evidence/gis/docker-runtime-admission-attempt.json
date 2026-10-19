@@ -1,0 +1,21 @@
+{
+  "status": "RESOURCE_STOP",
+  "action": "normal docker desktop start then normal stop",
+  "before": {
+    "availablePhysicalBytes": 4419325952,
+    "systemCommitAvailableBytes": 8216977408
+  },
+  "afterStartup": {
+    "availablePhysicalBytes": 1304776704,
+    "systemCommitAvailableBytes": 4027641856,
+    "osType": "linux",
+    "runningContainers": []
+  },
+  "afterNormalStop": {
+    "availablePhysicalBytes": 3972665344,
+    "systemCommitAvailableBytes": 6492696576
+  },
+  "settingsChanged": false,
+  "unrelatedProcessesStopped": false,
+  "note": "Task-owned idle Desktop started for possible historical runtime checks; actual physical headroom fell below unchanged 2GiB floor, so no routers were started and Desktop was stopped normally. Native renderer remained active."
+}

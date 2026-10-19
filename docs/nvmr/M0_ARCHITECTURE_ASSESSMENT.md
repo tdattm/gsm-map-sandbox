@@ -1,5 +1,7 @@
 # M0 — Đánh giá kiến trúc hiện tại
 
+> **Historical / Superseded direction (R1b, 19/10/2026):** The current target is Unified Connected NVMR: one connected CAR graph, one independent MOTORBIKE graph, one global engine/fleet/dispatch/clock and unified viewport. Independent N-region R1b expansion is superseded. This historical document retains its original evidence, metrics and limitations; it does not establish cross-province dispatch. See [current implementation](R1B_CONNECTED_IMPLEMENTATION.md), [runbook](R1B_CONNECTED_RUNBOOK.md) and [recovery checkpoint](R1B_PROGRESS.md).
+
 Ngày khảo sát: **15/10/2026 (Asia/Saigon)**. Repository `gsm-map-sandbox`, checkout `feature/nvmr-m0-architecture`, HEAD quan sát `b77ca28240962ac8b6d395e9b522f930a617c80c`. SHA này mô tả snapshot, không phải điều kiện để thực hiện roadmap.
 
 Đọc tiếp: [kiến trúc mục tiêu](M0_TARGET_ARCHITECTURE.md), [kế hoạch M1–M7](M0_IMPLEMENTATION_PLAN.md). Các báo cáo [A1](../A1-report.md), [A2](../A2-report.md), [A3](../A3-report.md), [A4](../A4-report.md), [A5](../A5-report.md) là tài liệu lịch sử; kết quả kiểm tra mới ở mục 9 bên dưới.

@@ -1,5 +1,7 @@
 # M0 — Kiến trúc mục tiêu NVMR
 
+> **Historical / Superseded direction (R1b, 19/10/2026):** The current target is Unified Connected NVMR: one connected CAR graph, one independent MOTORBIKE graph, one global engine/fleet/dispatch/clock and unified viewport. Independent N-region R1b expansion is superseded. This historical document retains its original evidence, metrics and limitations; it does not establish cross-province dispatch. See [current implementation](R1B_CONNECTED_IMPLEMENTATION.md), [runbook](R1B_CONNECTED_RUNBOOK.md) and [recovery checkpoint](R1B_PROGRESS.md).
+
 > Cập nhật triển khai18/10/2026: [R1a Hanoi + Bắc Ninh Core](R1A_IMPLEMENTATION.md) đã bổ sung regional envelope v4, shared job/clock và local routing hai mode. Public Hanoi v3/scientific engine vẫn giữ nguyên. Nội dung M0 bên dưới là thiết kế lịch sử15/10, không thay cho evidence/giới hạn hiện tại; M5–M7 chưa được suy ra là hoàn thành.
 
 Ngày: 15/10/2026. **Toàn bộ thiết kế mới trong tài liệu này là ĐỀ XUẤT, chưa triển khai.** Bằng chứng kiến trúc đang có và kiểm thử: [assessment](M0_ARCHITECTURE_ASSESSMENT.md). Trình tự thực hiện: [implementation plan](M0_IMPLEMENTATION_PLAN.md).

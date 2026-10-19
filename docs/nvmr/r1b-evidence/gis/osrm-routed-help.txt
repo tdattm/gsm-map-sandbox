@@ -1,0 +1,35 @@
+osrm-routed <base.osrm> [<options>]:
+
+Options:
+  -v [ --version ]                      Show version
+  -h [ --help ]                         Show this help message
+  -l [ --verbosity ] arg (=INFO)        Log verbosity level: NONE, ERROR, 
+                                        WARNING, INFO, DEBUG
+  --trial [=arg(=1)]                    Quit after initialization
+
+Configuration:
+  -i [ --ip ] arg (=0.0.0.0)            IP address
+  -p [ --port ] arg (=5000)             TCP/IP port
+  -t [ --threads ] arg (=8)             Number of threads to use
+  -s [ --shared-memory ] [=arg(=1)] (=0)
+                                        Load data from shared memory
+  --memory_file arg                     DEPRECATED: Will behave the same as 
+                                        --mmap.
+  -m [ --mmap ] [=arg(=1)] (=0)         Map datafiles directly, do not use any 
+                                        additional memory.
+  --dataset-name arg                    Name of the shared memory dataset to 
+                                        connect to.
+  -a [ --algorithm ] arg (=CH)          Algorithm to use for the data. Can be 
+                                        CH, CoreCH, MLD.
+  --max-viaroute-size arg (=500)        Max. locations supported in viaroute 
+                                        query
+  --max-trip-size arg (=100)            Max. locations supported in trip query
+  --max-table-size arg (=100)           Max. locations supported in distance 
+                                        table query
+  --max-matching-size arg (=100)        Max. locations supported in map 
+                                        matching query
+  --max-nearest-size arg (=100)         Max. results supported in nearest query
+  --max-alternatives arg (=3)           Max. number of alternatives supported 
+                                        in the MLD route query
+  --max-matching-radius arg (=-1)       Max. radius size supported in map 
+                                        matching query. Default: unlimited.

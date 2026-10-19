@@ -1,0 +1,34 @@
+{
+  "recordedAt": "2026-10-19T02:55:12.762Z",
+  "status": "PARTIAL",
+  "browser": "Codex IAB",
+  "baseUrl": "http://127.0.0.1:5192",
+  "navigation": "PASS main menu to large fleet to Connected selector",
+  "back": [
+    "Browser tab: 1, Title: \"GSM Map Sandbox\", URL: \"http://127.0.0.1:5192/?runtime=simulation\".",
+    "1 AXWebArea GSM Map Sandbox, URL: 127.0.0.1:5192/?runtime=simulation",
+    "\t\t\t22 text Kịch bản mô phỏng",
+    "\t\t\t23 pop up button (collapsed, settable) Description: Kịch bản mô phỏng, Value: Hanoi Core · legacy v3, Secondary Actions: Expand",
+    "The focused UI element is 1 AXWebArea GSM Map Sandbox, URL: 127.0.0.1:5192/?runtime=simulation"
+  ],
+  "forward": [
+    "Browser tab: 1, Title: \"GSM Map Sandbox\", URL: \"http://127.0.0.1:5192/?runtime=simulation&scenario=connected\".",
+    "1 AXWebArea GSM Map Sandbox, URL: 127.0.0.1:5192/?runtime=simulation&scenario=connected",
+    "\t\t\t22 text Kịch bản mô phỏng",
+    "\t\t\t23 pop up button (collapsed, settable) Description: Kịch bản mô phỏng, Value: Miền Bắc liên thông · Connected NVMR v5, Secondary Actions: Expand",
+    "The focused UI element is 1 AXWebArea GSM Map Sandbox, URL: 127.0.0.1:5192/?runtime=simulation&scenario=connected"
+  ],
+  "defaultAllocation": "Observed 5000 total,2000 CAR,3000 MOTORBIKE,1600/2400 Hanoi and100/150 each satellite",
+  "preset100": "Observed80 Hanoi and5 each satellite,40CAR/60MOTORBIKE",
+  "missingRoutingProof": "Observed CONNECTED_NOT_READY HTTP503 with mode-specific causes, no job created",
+  "missingMap": "PASS explicit initial missing-manifest/503 error after regression fix",
+  "mapFailureScreenshot": "map-not-ready.jpg",
+  "remaining": [
+    "Successful tiles",
+    "Live global snapshot",
+    "Cluster/icon inspection",
+    "Selected journey",
+    "Playback/seek/reopen",
+    "Historical live flows"
+  ]
+}

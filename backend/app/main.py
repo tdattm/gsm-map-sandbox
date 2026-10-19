@@ -37,6 +37,10 @@ def create_app(settings: Settings | None = None, registry: RegionRegistry | None
     registry = registry or default_registry(settings)
     from .regional_jobs import create_regional_router
     app.include_router(create_regional_router(registry=registry))
+    from .connected_jobs import create_connected_router
+    app.include_router(create_connected_router())
+    from .connected_assets import create_connected_map_router
+    app.include_router(create_connected_map_router())
     settings = registry.resolve("hcm-center")  # Pin legacy requests to the same immutable HCM snapshot.
 
     @app.exception_handler(HTTPException)
@@ -46,8 +50,8 @@ def create_app(settings: Settings | None = None, registry: RegionRegistry | None
 
     @app.exception_handler(RequestValidationError)
     async def validation_error(request, exc):
-        if request.url.path.startswith('/api/v3/simulation/'):
-            return JSONResponse(status_code=422, content={"error": {"code": "INVALID_SIMULATION_CONFIG", "message": "Simulation config hoặc thời điểm snapshot ngoài giới hạn v3."}})
+        if request.url.path.startswith(('/api/v3/simulation/', '/api/v4/simulation/', '/api/v5/simulation/')):
+            return JSONResponse(status_code=422, content={"error": {"code": "INVALID_SIMULATION_CONFIG", "message": "Simulation config hoặc thời điểm snapshot ngoài giới hạn của contract."}})
         if request.url.path.endswith("/voucher-experiment/prepare"):
             return JSONResponse(status_code=422, content={"error": {"code": "INVALID_EXPERIMENT_CONFIG", "message": "Config fare, behavior, voucher hoặc scenario ngoài giới hạn PoC."}})
         if request.url.path.endswith("/booking-simulation/prepare"):

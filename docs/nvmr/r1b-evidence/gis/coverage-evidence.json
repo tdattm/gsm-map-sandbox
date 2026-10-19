@@ -1,0 +1,105 @@
+{
+  "schemaVersion": "connected-coverage-audit/v1",
+  "identity": {
+    "region_id": "nvmr-connected",
+    "config_sha256": "c815a2d299193161a19fff43b66bcc71a79dd78a912c165f5be6377f6a1a2aa1",
+    "pipeline_version": "connected-nvmr-gis/v1"
+  },
+  "sourceSha256": "2fbd2ee6b4dc151eecf04fa6823cddf584b47423e190118b10fce8b6115e9d8a",
+  "mapBbox": [
+    104.35,
+    20.06,
+    107.25,
+    22.85
+  ],
+  "routingBbox": [
+    104.25,
+    20.05,
+    107.35,
+    22.95
+  ],
+  "areas": [
+    {
+      "zoneId": "hanoi",
+      "relationId": 1903516,
+      "osmName": "Thành phố Hà Nội",
+      "osmNameEn": "Hà Nội",
+      "bbox": [
+        105.2889615,
+        20.5645154,
+        106.0200407,
+        21.3854176
+      ],
+      "boundaryWayCount": 174,
+      "fullyWithinMap": true,
+      "sourceUrl": "https://www.openstreetmap.org/relation/1903516"
+    },
+    {
+      "zoneId": "bac-ninh",
+      "relationId": 1902690,
+      "osmName": "Thành phố Bắc Ninh",
+      "osmNameEn": "Bắc Ninh City",
+      "bbox": [
+        105.8805752,
+        20.969332,
+        107.0335769,
+        21.6262727
+      ],
+      "boundaryWayCount": 108,
+      "fullyWithinMap": true,
+      "sourceUrl": "https://www.openstreetmap.org/relation/1902690"
+    },
+    {
+      "zoneId": "hung-yen",
+      "relationId": 1901032,
+      "osmName": "Tỉnh Hưng Yên",
+      "osmNameEn": "Hưng Yên Province",
+      "bbox": [
+        105.8953248,
+        20.0771551,
+        107.1192846,
+        21.0069902
+      ],
+      "boundaryWayCount": 171,
+      "fullyWithinMap": true,
+      "sourceUrl": "https://www.openstreetmap.org/relation/1901032"
+    },
+    {
+      "zoneId": "phu-tho",
+      "relationId": 1902930,
+      "osmName": "Tỉnh Phú Thọ",
+      "osmNameEn": "Phú Thọ Province",
+      "bbox": [
+        104.814289,
+        20.3053594,
+        105.8571482,
+        21.7196447
+      ],
+      "boundaryWayCount": 227,
+      "fullyWithinMap": true,
+      "sourceUrl": "https://www.openstreetmap.org/relation/1902930"
+    },
+    {
+      "zoneId": "thai-nguyen",
+      "relationId": 1902967,
+      "osmName": "Tỉnh Thái Nguyên",
+      "osmNameEn": "Thái Nguyên Province",
+      "bbox": [
+        105.4311192,
+        21.3264833,
+        106.2469976,
+        22.7413755
+      ],
+      "boundaryWayCount": 99,
+      "fullyWithinMap": true,
+      "sourceUrl": "https://www.openstreetmap.org/relation/1902967"
+    }
+  ],
+  "missingWays": [],
+  "missingNodes": [],
+  "allFiveContained": true,
+  "limitations": [
+    "OSM labels in this snapshot are inconsistent with official 2025 province names; IDs/extent are audited, legal polygon status NOT claimed",
+    "Current-zone membership uses versioned nonoverlapping technical operating zones, never these mutable OSM tags"
+  ]
+}

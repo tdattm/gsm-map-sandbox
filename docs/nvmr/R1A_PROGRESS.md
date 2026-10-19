@@ -1,5 +1,7 @@
 # R1a technical recovery checkpoint
 
+> **Historical / Superseded direction (R1b, 19/10/2026):** The current target is Unified Connected NVMR: one connected CAR graph, one independent MOTORBIKE graph, one global engine/fleet/dispatch/clock and unified viewport. Independent N-region R1b expansion is superseded. This historical document retains its original evidence, metrics and limitations; it does not establish cross-province dispatch. See [current implementation](R1B_CONNECTED_IMPLEMENTATION.md), [runbook](R1B_CONNECTED_RUNBOOK.md) and [recovery checkpoint](R1B_PROGRESS.md).
+
 Updated: 2026-10-18, Asia/Saigon. Final implementation/handoff checkpoint; this is not an ownership board.
 
 ## Goal and actual checkout

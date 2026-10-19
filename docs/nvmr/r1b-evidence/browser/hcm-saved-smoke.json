@@ -1,0 +1,24 @@
+{
+  "recordedAt": "2026-10-19T03:04:40.684Z",
+  "browser": "Codex IAB",
+  "status": "PASS_WITH_UNVERIFIED_EXPORT",
+  "runtime": "saved",
+  "region": "hcm-center",
+  "routerPorts": "Offline during demo/play/seek; no OSRM required",
+  "checks": {
+    "mainMenuVoucher": "PASS",
+    "savedMode": "PASS",
+    "sealedDemoLoad": "PASS displayed SHA-256 verified",
+    "play": "PASS time advanced to0.2s",
+    "seek": "PASS500.0/2115.2s,24percent",
+    "analytics": "PASS baseline/treatment at500s",
+    "fileImport": "PASS actual chooser loaded frontend/public/replay/demo-experiment.json",
+    "importResetsClock": "PASS0.0s after verified replacement",
+    "portableExport": "NOT_VERIFIED no captured IAB download event within15s, no new console error"
+  },
+  "screenshot": "hcm-saved-replay.jpg",
+  "limitations": [
+    "No byte-level browser export round trip established",
+    "Historical HCM model only; not Connected/M5 behavioral evidence"
+  ]
+}

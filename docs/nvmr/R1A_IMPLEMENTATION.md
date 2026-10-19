@@ -1,5 +1,7 @@
 # R1a — Hanoi + Bac Ninh Regional Foundation
 
+> **Historical / Superseded direction (R1b, 19/10/2026):** The current target is Unified Connected NVMR: one connected CAR graph, one independent MOTORBIKE graph, one global engine/fleet/dispatch/clock and unified viewport. Independent N-region R1b expansion is superseded. This historical document retains its original evidence, metrics and limitations; it does not establish cross-province dispatch. See [current implementation](R1B_CONNECTED_IMPLEMENTATION.md), [runbook](R1B_CONNECTED_RUNBOOK.md) and [recovery checkpoint](R1B_PROGRESS.md).
+
 Technical integration report, 18/10/2026, Asia/Saigon. This file is updated from executed evidence; the recovery checkpoint is [R1A_PROGRESS.md](R1A_PROGRESS.md). Domain details are in [R1A_BACKEND.md](R1A_BACKEND.md), GIS details in [R1A_GIS.md](R1A_GIS.md). Synthetic allocations, bookings and modeled durations are not observed GSM operational data.
 
 ## A. Current verified state

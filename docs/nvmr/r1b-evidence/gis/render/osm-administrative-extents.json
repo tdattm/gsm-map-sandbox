@@ -1,0 +1,79 @@
+{
+  "sourceSha256": "2fbd2ee6b4dc151eecf04fa6823cddf584b47423e190118b10fce8b6115e9d8a",
+  "extractSha256": "3243998cec519953323d369e4b569631edc7bef9a4fd4765c7b1e761c22a11f2",
+  "note": "OSM descriptive extents for coverage audit; not authoritative legal boundaries or operating membership",
+  "areas": [
+    {
+      "osmAreaId": 3802065,
+      "name": "Tỉnh Hưng Yên",
+      "nameEn": "Hưng Yên Province",
+      "bbox": [
+        105.8953248,
+        20.0771551,
+        107.1192846,
+        21.0069902
+      ],
+      "fullyWithinMap": true
+    },
+    {
+      "osmAreaId": 3807033,
+      "name": "Thành phố Hà Nội",
+      "nameEn": "Hà Nội",
+      "bbox": [
+        105.2889615,
+        20.5645154,
+        106.0200407,
+        21.3854176
+      ],
+      "fullyWithinMap": true
+    },
+    {
+      "osmAreaId": 11045193,
+      "name": "Tỉnh Lạng Sơn",
+      "nameEn": "Lạng Sơn Province",
+      "bbox": [
+        106.0953797,
+        21.3251504,
+        107.3640954,
+        22.4614571
+      ],
+      "fullyWithinMap": false
+    },
+    {
+      "osmAreaId": 3805381,
+      "name": "Thành phố Bắc Ninh",
+      "nameEn": "Bắc Ninh City",
+      "bbox": [
+        105.8805752,
+        20.969332,
+        107.0335769,
+        21.6262727
+      ],
+      "fullyWithinMap": true
+    },
+    {
+      "osmAreaId": 3805935,
+      "name": "Tỉnh Thái Nguyên",
+      "nameEn": "Thái Nguyên Province",
+      "bbox": [
+        105.4311192,
+        21.3264833,
+        106.2469976,
+        22.7413755
+      ],
+      "fullyWithinMap": true
+    },
+    {
+      "osmAreaId": 3805861,
+      "name": "Tỉnh Phú Thọ",
+      "nameEn": "Phú Thọ Province",
+      "bbox": [
+        104.814289,
+        20.3053594,
+        105.8571482,
+        21.7196447
+      ],
+      "fullyWithinMap": true
+    }
+  ]
+}

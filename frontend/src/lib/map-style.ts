@@ -31,6 +31,18 @@ export function regionMapStyle(regionId: string): StyleSpecification {
     [name, { type: 'geojson' as const, data: `/api/regions/${encodeURIComponent(regionId)}/map/${name}` }])) }
 }
 
+export const connectedBounds: [number,number,number,number] = [104.35,20.06,107.25,22.85]
+/** One viewport-loaded local MVT source; never downloads a region-wide GeoJSON. */
+export function connectedMapStyle(retry = 0): StyleSpecification {
+  const layers=localStyle.layers.filter(layer=>layer.id!=='buildings').map(layer=> {
+    if (!('source' in layer)) return {...layer}
+    const next={...layer,source:'connected-basemap','source-layer':layer.source as string}
+    if (next.id==='place-names') return {...next,minzoom:6,layout:{...next.layout,'text-size':['interpolate',['linear'],['zoom'],6,11,13,14]}} as typeof layer
+    return next
+  })
+  return {...localStyle,sources:{'connected-basemap':{type:'vector',tiles:[`/api/v5/connected/map/tiles/{z}/{x}/{y}.pbf${retry?`?retry=${retry}`:''}`],minzoom:6,maxzoom:13,bounds:connectedBounds,attribution:'© OpenStreetMap contributors · Geofabrik · ODbL 1.0'}},layers}
+}
+
 export function savedMapStyle(assets: ReplayAssets): StyleSpecification {
   const base=import.meta.env.BASE_URL
   const faces=localStyle['font-faces']!.Geist

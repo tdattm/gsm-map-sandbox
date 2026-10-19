@@ -98,9 +98,12 @@ class JobStore:
             id = uuid.uuid4().hex
             raw = config.model_dump()
             regional = raw.get('schemaVersion') == 'gsm-nvmr-regional-scenario/v1'
-            manifest = {'schemaVersion': 'gsm-nvmr-regional-job/v1' if regional else 'gsm-simulation-job/v1', 'id': id, 'config': raw,
+            connected = raw.get('schemaVersion') == 'gsm-nvmr-connected-scenario/v1'
+            manifest = {'schemaVersion': ('gsm-nvmr-connected-job/v1' if connected else
+                'gsm-nvmr-regional-job/v1' if regional else 'gsm-simulation-job/v1'), 'id': id, 'config': raw,
                 'inputHash': hashlib.sha256(json.dumps(raw, sort_keys=True).encode()).hexdigest(),
-                'createdAt': timestamp(), 'engineVersion': 'heap-grid-regional/v1' if regional else 'heap-grid/v1'}
+                'createdAt': timestamp(), 'engineVersion': ('heap-grid-connected/v1' if connected else
+                    'heap-grid-regional/v1' if regional else 'heap-grid/v1')}
             atomic_json(self.path(id)/'input.json', manifest)
             status = {'id': id, 'runId': id, 'status': 'QUEUED', 'progress': 0.,
                 'createdAt': manifest['createdAt'], 'updatedAt': timestamp(), 'config': raw, 'inputHash': manifest['inputHash']}
@@ -197,7 +200,7 @@ def create_router(store=None):
 
     def legacy_status(id):
         value = store.read(id)
-        if value['config'].get('schemaVersion') == 'gsm-nvmr-regional-scenario/v1':
+        if value['config'].get('schemaVersion') in ('gsm-nvmr-regional-scenario/v1', 'gsm-nvmr-connected-scenario/v1'):
             error('JOB_NOT_FOUND', 'No v3 simulation job with this identity', 404)
         return value
 

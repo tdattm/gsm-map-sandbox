@@ -1,0 +1,234 @@
+{
+  "$defs": {
+    "DistributionConfig": {
+      "additionalProperties": false,
+      "properties": {
+        "cellDegrees": {
+          "default": 0.025,
+          "exclusiveMinimum": 0,
+          "maximum": 0.2,
+          "title": "Celldegrees",
+          "type": "number"
+        },
+        "maximumVehiclesPerPosition": {
+          "default": 1,
+          "maximum": 100,
+          "minimum": 1,
+          "title": "Maximumvehiclesperposition",
+          "type": "integer"
+        },
+        "nearestNeighborSampleSize": {
+          "default": 128,
+          "maximum": 512,
+          "minimum": 0,
+          "title": "Nearestneighborsamplesize",
+          "type": "integer"
+        }
+      },
+      "title": "DistributionConfig",
+      "type": "object"
+    },
+    "FleetAllocation": {
+      "additionalProperties": false,
+      "properties": {
+        "zoneId": {
+          "enum": [
+            "hanoi",
+            "bac-ninh",
+            "hung-yen",
+            "phu-tho",
+            "thai-nguyen"
+          ],
+          "title": "Zoneid",
+          "type": "string"
+        },
+        "carCount": {
+          "maximum": 5000,
+          "minimum": 0,
+          "title": "Carcount",
+          "type": "integer"
+        },
+        "motorbikeCount": {
+          "maximum": 5000,
+          "minimum": 0,
+          "title": "Motorbikecount",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "zoneId",
+        "carCount",
+        "motorbikeCount"
+      ],
+      "title": "FleetAllocation",
+      "type": "object"
+    },
+    "OnlineSchedulePoint": {
+      "additionalProperties": false,
+      "properties": {
+        "timeSeconds": {
+          "minimum": 0,
+          "title": "Timeseconds",
+          "type": "number"
+        },
+        "onlineFraction": {
+          "maximum": 1,
+          "minimum": 0,
+          "title": "Onlinefraction",
+          "type": "number"
+        }
+      },
+      "required": [
+        "timeSeconds",
+        "onlineFraction"
+      ],
+      "title": "OnlineSchedulePoint",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "description": "New public contract; v3/v4 configurations retain their historical meaning.",
+  "properties": {
+    "regionId": {
+      "const": "nvmr-connected",
+      "default": "nvmr-connected",
+      "title": "Regionid",
+      "type": "string"
+    },
+    "seed": {
+      "default": "connected-nvmr-r1b",
+      "maxLength": 80,
+      "minLength": 1,
+      "title": "Seed",
+      "type": "string"
+    },
+    "fleetSize": {
+      "default": 5000,
+      "maximum": 5000,
+      "minimum": 1,
+      "title": "Fleetsize",
+      "type": "integer"
+    },
+    "carCount": {
+      "default": 2000,
+      "maximum": 5000,
+      "minimum": 0,
+      "title": "Carcount",
+      "type": "integer"
+    },
+    "bookingCount": {
+      "default": 20,
+      "maximum": 20000,
+      "minimum": 0,
+      "title": "Bookingcount",
+      "type": "integer"
+    },
+    "horizonSeconds": {
+      "default": 900,
+      "maximum": 86400,
+      "minimum": 1,
+      "title": "Horizonseconds",
+      "type": "integer"
+    },
+    "maxWaitSeconds": {
+      "default": 300,
+      "maximum": 3600,
+      "minimum": 0,
+      "title": "Maxwaitseconds",
+      "type": "integer"
+    },
+    "onlineFraction": {
+      "default": 0.8,
+      "maximum": 1,
+      "minimum": 0,
+      "title": "Onlinefraction",
+      "type": "number"
+    },
+    "onlineSchedule": {
+      "default": [],
+      "items": {
+        "$ref": "#/$defs/OnlineSchedulePoint"
+      },
+      "title": "Onlineschedule",
+      "type": "array"
+    },
+    "workload": {
+      "default": "typical",
+      "enum": [
+        "low",
+        "typical",
+        "burst"
+      ],
+      "title": "Workload",
+      "type": "string"
+    },
+    "initialCandidates": {
+      "default": 16,
+      "maximum": 128,
+      "minimum": 1,
+      "title": "Initialcandidates",
+      "type": "integer"
+    },
+    "maxCandidates": {
+      "default": 128,
+      "maximum": 512,
+      "minimum": 1,
+      "title": "Maxcandidates",
+      "type": "integer"
+    },
+    "gridCellDegrees": {
+      "default": 0.005,
+      "exclusiveMinimum": 0,
+      "maximum": 0.1,
+      "title": "Gridcelldegrees",
+      "type": "number"
+    },
+    "schemaVersion": {
+      "const": "gsm-nvmr-connected-scenario/v1",
+      "default": "gsm-nvmr-connected-scenario/v1",
+      "title": "Schemaversion",
+      "type": "string"
+    },
+    "fleetAllocations": {
+      "anyOf": [
+        {
+          "items": {
+            "$ref": "#/$defs/FleetAllocation"
+          },
+          "type": "array"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Fleetallocations"
+    },
+    "demandWeights": {
+      "additionalProperties": {
+        "type": "number"
+      },
+      "title": "Demandweights",
+      "type": "object"
+    },
+    "demandCarFraction": {
+      "default": 0.4,
+      "maximum": 1,
+      "minimum": 0,
+      "title": "Demandcarfraction",
+      "type": "number"
+    },
+    "crossZoneDemandFraction": {
+      "default": 0.25,
+      "maximum": 1,
+      "minimum": 0,
+      "title": "Crosszonedemandfraction",
+      "type": "number"
+    },
+    "distribution": {
+      "$ref": "#/$defs/DistributionConfig"
+    }
+  },
+  "title": "ConnectedScenarioConfig",
+  "type": "object"
+}

@@ -1,5 +1,7 @@
 # R1a — Regional simulation backend
 
+> **Historical / Superseded direction (R1b, 19/10/2026):** The current target is Unified Connected NVMR: one connected CAR graph, one independent MOTORBIKE graph, one global engine/fleet/dispatch/clock and unified viewport. Independent N-region R1b expansion is superseded. This historical document retains its original evidence, metrics and limitations; it does not establish cross-province dispatch. See [current implementation](R1B_CONNECTED_IMPLEMENTATION.md), [runbook](R1B_CONNECTED_RUNBOOK.md) and [recovery checkpoint](R1B_PROGRESS.md).
+
 Ngày: **18/10/2026**, Asia/Saigon. Phạm vi tài liệu này: contract, backend execution, persistence, API, fixture verification và live acceptance command. Trạng thái GIS/routing thật và browser thuộc báo cáo tích hợp [R1A_IMPLEMENTATION.md](R1A_IMPLEMENTATION.md); không suy ra từ fixture PASS dưới đây.
 
 ## 1. Current verified backend state
