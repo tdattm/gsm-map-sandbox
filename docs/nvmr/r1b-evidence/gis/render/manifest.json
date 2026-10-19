@@ -1,0 +1,62 @@
+{
+  "identity": {
+    "region_id": "nvmr-connected",
+    "config_sha256": "c815a2d299193161a19fff43b66bcc71a79dd78a912c165f5be6377f6a1a2aa1",
+    "pipeline_version": "connected-nvmr-gis/v1"
+  },
+  "source_sha256": "2fbd2ee6b4dc151eecf04fa6823cddf584b47423e190118b10fce8b6115e9d8a",
+  "extract_sha256": "3243998cec519953323d369e4b569631edc7bef9a4fd4765c7b1e761c22a11f2",
+  "map_bbox": [
+    104.35,
+    20.06,
+    107.25,
+    22.85
+  ],
+  "minzoom": 6,
+  "maxzoom": 13,
+  "source_layers": [
+    "streets",
+    "water",
+    "green",
+    "places"
+  ],
+  "format": "mvt",
+  "scheme": "tms",
+  "artifact_sha256": {
+    "tiles.mbtiles": "a27003b3bef79f2cc56d809e3874d1cbbf393962e3e986bf7fa1647056a34087"
+  },
+  "tile_counts": {
+    "6": 4,
+    "7": 4,
+    "8": 8,
+    "9": 23,
+    "10": 80,
+    "11": 283,
+    "12": 1054,
+    "13": 4047
+  },
+  "features": {
+    "places": 4849,
+    "streets": 1249448,
+    "water": 25775,
+    "green": 14815
+  },
+  "resources": {
+    "wallSeconds": 2164.999612499989,
+    "cpuSeconds": 2078.453125,
+    "cpuPercentOneCore": 96.00247099351435,
+    "peakRssBytesSampled": 135913472,
+    "processPeakRssBytes": 431554560,
+    "minimumAvailablePhysicalBytes": 927346688,
+    "peakPrivateBytesSampled": 355500032,
+    "minimumCommitHeadroomBytes": 3570343936,
+    "sampleIntervalSeconds": 0.5,
+    "sampleCount": 4262
+  },
+  "attribution": "© OpenStreetMap contributors",
+  "limitations": [
+    "OSM area assembly may skip invalid input areas; counters recorded",
+    "No buildings layer; all road classes available z12-13, detailed tiles overzoom above13",
+    "Technical operating rectangles are not administrative boundaries"
+  ]
+}

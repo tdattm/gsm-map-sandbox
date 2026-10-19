@@ -35,7 +35,7 @@ def connected_context(mode):
         map_path=PROJECT_ROOT/config['tiles']['archive'], routing_dir=directory,
         extracted_path=PROJECT_ROOT/'data/regions/nvmr-connected/extracted/coverage.osm.pbf',
         graph_basename='connected', osrm_base_url=routing['baseUrl'],
-        osrm_timeout_seconds=settings.osrm_timeout_seconds,
+        osrm_timeout_seconds=max(settings.osrm_timeout_seconds, 20),
         max_snap_meters=config['distribution']['maxSnapMeters'],
         artifact_config_sha256=hashlib.sha256(raw_bytes).hexdigest(), pipeline_version=config['pipelineVersion'])
     return ConnectedModeContext(base, mode, 'car' if mode == 'CAR' else 'motorbike')

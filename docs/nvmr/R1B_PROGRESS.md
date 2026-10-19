@@ -1,5 +1,55 @@
 # R1b Connected NVMR — recovery checkpoint
 
+## Checkpoint bàn giao — 19/10/2026 16:05 Asia/Saigon
+
+**R1b CONDITIONAL GO / M5 NOT READY.** Phần triển khai offline khả thi đã hoàn tất; blocker hiện tại là live scale và headroom, không phải M4/FPS. Những mục bên dưới là lịch sử tại thời điểm ghi, không phải trạng thái hiện hành.
+
+| Hạng mục | Trạng thái hiện hành | Bằng chứng / còn thiếu |
+|---|---|---|
+| Source/extract/coverage | DONE | Source hash đúng R1a, buffer/5relation extents; không tải/extract lại |
+| CAR/MOTORBIKE graphs | DONE |26files/mode, independent profiles/MLD/image identities, current hash audit |
+| Offline basemap | DONE |5.503detailtiles z6–13 +8overviewtiles z0–5, manifests/hashes; browser fullfit đã sửa và PASS |
+| Routing/anchors | DONE bounded acceptance |20directedhubpairs +5local/mode; realone-way/NoRoute/NoSegment; shared58case generatedoracle;39.677CAR/39.727MBanchors. Chưa exhaustively chứng nhận mọi realturn/access |
+| Global engine/fleet/demand | DONE source/fixture/real100 |Một world/queue/clock/globalmodepool; realcross-zone8assignments cả2modes.5000fixture+actualroadinput conservation PASS |
+| v5 contracts/persistence | DONE bounded acceptance |3completedruns audit lại với tất cảroutersOFFLINE; correct additiveKPIs/snapshots/selectedroutes; validall-unserved được giữ |
+| Cancellation/recovery | PARTIAL |Unitfailure/cancel/latepublication/Windowslock/lease recovery PASS; task-owned orphanqueue cancel proof; freshConnectedlive cancellation chưa chạy |
+| Frontend | DONE basic100 / PARTIAL5000 |1canvas/0DOMmarkers, realoverview/detail, cluster/icon/filter/globalID/inspector/twolegs/playseek/reopen; actualConnected5000browser chưa có |
+| Full regression | DONE |350backendPASS/6SKIP/1warning77,38s;210frontendPASS/26files49,51s;typecheck/lint/build/replaypackagePASS. Lint53warnings/0errors; browserPortableexportNOTVERIFIED |
+| Scale live | BLOCKED/PARTIAL |100maxWait900:9complete16unserved13,762s;100default300:0complete25unserved;500failed timeout/resource/interrupted;1000/5000successfulNOTRUN |
+| Docs/handoff | DONE |Implementation/GIS/runbook/progress/README/M5handoff +machine summary/logs/filelists; acceptance gaps disclosed |
+
+- Thay đổi tiếp từ resume: separate realOSMoverview builder+8tests, mapAPI/readiness/lowzoomstyle,6API-evidence tests,13recovery/timeout tests, real-roadinput audit, protocoloracle tests,5000frontend contract case, compact artifact/log capture và updateddocs. Existing six dirty files preserved; EOF whitespace cleanup only in existing oracle test.
+- Artifacts mới: `data/regions/nvmr-connected/render-overview/tiles.mbtiles`1.679.360bytes SHA `90e4d485a9c12aaf9b02a7fb42ac982f7bdaec7684b61f2ed07c08954827ec62`; manifestSHA `15af85e4ca45765875e008b606071fc3780fe209f66dc66ad1c521675cc68aa5`. OriginaldetailSHA `a27003b3bef79f2cc56d809e3874d1cbbf393962e3e986bf7fa1647056a34087` unchanged. Overview221,667s/peakRSS120.438.784bytes; no other heavy rebuild this resume.
+- Currentgraph manifestSHA CAR `ad52e520c72f8374ebbe8add5d219f5e48c533ac72cc2b23dfb73bb8e5c2528c`, MB `be9140840ce9293ddd747344e6b9d899d02d347ad0b1321143d5bc77eb5677f0`. AnchorcatalogSHA `2d917217a5299997859b10103f2576ccf17d5c1f8976af87aec1b71dd16253ae`.
+- Latest `resume-resource-admission.json`:~1,09GiBphysical available vs2GiBguard,4,82GiBcommit,38,44GBdisk, dockerps empty. Admission-only check BLOCKED; guard/settings untouched. Owner chose **offline first**. No Chrome/owner app stopped.
+- Current owned services: fresh API8022 + worker + Meetingpreview5192, shared absolute `D:\ThS\VinAI\Phase3_VRIC\gsm-map-sandbox\build\r1b\jobs`. Receipt `build/s0-runtime/session-20261019-155208-495.json`. No routers or heavy stage. Old owned stack stopped via exactreceipt before rebuild; no activequeued/runningConnected jobs. Browser demo tab left for review.
+- HEAD unchanged from resume `1f56c4958f9e4748e2f8c425ed639542a73ed363`; no stage/commit/push/merge/reset/worktree/branch operation. File lists/stat in `r1b-evidence/git-review.json`; `git status` authoritative. Large GIS/jobs/build remain ignored.
+- Evidence copied into `docs/nvmr/r1b-evidence/`: currentGISmanifests/proofs; actualreal100/targetcrosszone;3router-offaudits;failed500attemptledger;8checklogs;browsercaptures;actualroadinputaudit;machine `validation-summary.json`.
+
+### Next exact commands (không lặp lại phần DONE)
+
+1. Read currentGit/checkpoint/`validation-summary.json`. Inspect resource JSON, Docker/container identities and same absolute store. Do not rebuild graphs/base tiles or clear preserved interruptedmarkers.
+2. Demo now: `powershell -NoProfile -ExecutionPolicy Bypass -File scripts/Start-GsmDev.ps1 -Profile Meeting -Routers None -ApiPort 8022 -FrontendPort 5192 -Store build/r1b/jobs`; openConnectedURL, reopen `271d116d28f64d75a7a49b3f300d7b24`. Search `NVMR-CAR-hanoi-00027`, seek400/800s.
+3. Only after normalguard admits realheadroom: `.\.venv\Scripts\python.exe scripts/connected_gis.py serve --mode CAR`, thensame `--mode MOTORBIKE`. No preprocessing. Check memory after each; no settingchanges or ownerprocesskill.
+4. Run sequential live500/125requests→1000/250→5000/1250, maxWait300 and fixedseed, newtimestampedoutputpaths per runbook. Preserve failedstatus/logs; no duplicatePOST on timeout. Verify current worker status before creating anotherjob.
+5. Add freshConnectedlivecancel+result409 proof; completedreopenwithroutersoff; actual5000browser conservation/filter/search/seek/selectedjourney. Update R1b/M5 decision only from these results. No M4FPS/redeployment gate.
+6. Stop only this stack if desired: `powershell -NoProfile -ExecutionPolicy Bypass -File scripts/Stop-GsmDev.ps1 -ReceiptPath build/s0-runtime/session-20261019-155208-495.json`, after checking no activejob. No stage/commit command is required.
+
+## Latest resume — 19/10/2026 afternoon Asia/Saigon
+
+This section supersedes status tables below; older entries remain historical.
+
+- Actual branch `feature/nvmr-m0-architecture`, HEAD `1f56c4958f9e4748e2f8c425ed639542a73ed363` (`wip(nvmr): checkpoint unified connected region implementation`, existing checkpoint at 10:48). No commit/stage/reset/branch/worktree operation by this resumed run. Existing six dirty source/test files preserved.
+- DONE: source/extract, both independent graphs, routing proofs, snapped anchors and detailed z6–13 basemap verified against current artifacts. No extraction, graph or detailed tile rebuild. CAR/MB manifests `ad52e520c72f8374ebbe8add5d219f5e48c533ac72cc2b23dfb73bb8e5c2528c` / `be9140840ce9293ddd747344e6b9d899d02d347ad0b1321143d5bc77eb5677f0`; detailed archive `a27003b3bef79f2cc56d809e3874d1cbbf393962e3e986bf7fa1647056a34087`.
+- DONE: recovered actual live100 proof (job `271d116d28f64d75a7a49b3f300d7b24`, maxWait900,9completed/16unserved) and targeted cross-zone proof (`e001951cb0594c979c49d6d621eaace0`,20vehicles,8completed/12unserved, both modes dispatch Bac Ninh→Hanoi). Copied original evidence without rewriting run metrics. Completed replay and route inspector work with all routers stopped.
+- DONE: actual-road input preparation100/500/1000/5000, exact5000 allocation4000/250/250/250/250 and2000CAR/3000MB,5000unique coordinates/0duplicates/888cells. `real-road-inputs.json` is INPUT PREPARATION, not a live5000 benchmark.
+- DONE: recovered orphan job `1424699159f6451098b4f8ddf306533d` QUEUED in historical `build/m3/jobs`, safely cancelled only that task-owned job; evidence `recovered-job-store.json`. Earlier live500 attempts failed timeout/resource pressure; no successful500/1000/5000 live proof.
+- DONE: browser offline real map/100vehicle conservation, filtering/search, CAR+MB selected routes, seek/play/pause and native icon click. Evidence under `r1b-evidence/browser/connected-offline-*`. Found real full-region-fit regression: zoom5.46 below detailed source minzoom6.
+- DONE artifact / PARTIAL integration: added separate real-OSM overview z0–5 archive (8tiles,1,679,360bytes), SHA `90e4d485a9c12aaf9b02a7fb42ac982f7bdaec7684b61f2ed07c08954827ec62`, manifest `15af85e4ca45765875e008b606071fc3780fe209f66dc66ad1c521675cc68aa5`. Build221.667s/peakRSS120,438,784bytes, guard admitted2,158,776,320physical bytes, minimum1,725,198,336. Original detailed archive/config/graphs unchanged. New script/test plus API/style integration;8overview tests and17asset/recovery tests PASS. Final combined checks/build/browser overview pending.
+- DONE:13focused Windows I/O/recovery/timeout tests. Bounded PermissionError retry preserves fail-closed results; persistent status lock can still require lease recovery.
+- Current owned stack: API8022/preview5192/worker, absolute store `build/r1b/jobs`, receipt `build/s0-runtime/session-20261019-153048-968.json`; no connected routers. Docker Desktop/WSL running. User chose **offline work first** because RAM guard blocked router start; no owner applications stopped or guard reduced.
+- NEXT: finish API verifier distinction between legitimate all-unserved outcome and required mode-journey proof; run final combined regressions/build; restart only owned stack; browser prove full-region overview; update implementation/runbook/M5 handoff and final evidence. Live scales remain unverified unless normal resource guards admit them later.
+
 ## Latest verified state — 19/10/2026 09:46 Asia/Saigon
 
 This section supersedes earlier in-progress state descriptions, while preserving their evidence below.

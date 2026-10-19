@@ -1,0 +1,29 @@
+{
+  "status": "PASS_BOUNDED_100_VEHICLE_REPLAY",
+  "recordedUtc": "2026-10-19T08:53:36.835Z",
+  "url": "http://127.0.0.1:5192/?runtime=simulation&scenario=connected&profile=meeting",
+  "runId": "271d116d28f64d75a7a49b3f300d7b24",
+  "routers": "ALL_OFFLINE",
+  "checks": {
+    "fullRegionOverview": "PASS real roads/water/place labels at default fit after separate overview fix",
+    "globalConservation": "100/100",
+    "nativeCluster": "100 at default full fit",
+    "zoneModeFilter": "Bac Ninh CAR2visible/global100",
+    "globalSearch": "HN CAR selection clearsfilters;100visible",
+    "seek": "400s CAR ASSIGNED",
+    "selectedRoute": "PASS pickup3720.8m350.5s;trip55351.7m3004.5s",
+    "detailMap": "PASS streets/water/green/place names",
+    "canvasCount": 1,
+    "domVehicleMarkers": 0,
+    "consoleErrors": 0
+  },
+  "screenshots": [
+    "connected-offline-overview-fixed.jpg",
+    "connected-final-route.jpg"
+  ],
+  "limitations": [
+    "5000vehicle live/browser run not established",
+    "Earlier connected-offline-smoke.json covers motorbike/nativeclick/playpause",
+    "No FPS optimization/research reopened"
+  ]
+}

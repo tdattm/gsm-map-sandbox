@@ -37,10 +37,12 @@ export function connectedMapStyle(retry = 0): StyleSpecification {
   const layers=localStyle.layers.filter(layer=>layer.id!=='buildings').map(layer=> {
     if (!('source' in layer)) return {...layer}
     const next={...layer,source:'connected-basemap','source-layer':layer.source as string}
-    if (next.id==='place-names') return {...next,minzoom:6,layout:{...next.layout,'text-size':['interpolate',['linear'],['zoom'],6,11,13,14]}} as typeof layer
+    if (next.id==='place-names') return {...next,minzoom:4,layout:{...next.layout,'text-size':['interpolate',['linear'],['zoom'],4,10,6,11,13,14]}} as typeof layer
     return next
   })
-  return {...localStyle,sources:{'connected-basemap':{type:'vector',tiles:[`/api/v5/connected/map/tiles/{z}/{x}/{y}.pbf${retry?`?retry=${retry}`:''}`],minzoom:6,maxzoom:13,bounds:connectedBounds,attribution:'© OpenStreetMap contributors · Geofabrik · ODbL 1.0'}},layers}
+  // Whole-region fit can be below6 in a laptop map pane. A separate real-OSM
+  // overview archive covers0–5; the verified detailed6–13 archive is preserved.
+  return {...localStyle,sources:{'connected-basemap':{type:'vector',tiles:[`/api/v5/connected/map/tiles/{z}/{x}/{y}.pbf${retry?`?retry=${retry}`:''}`],minzoom:0,maxzoom:13,bounds:connectedBounds,attribution:'© OpenStreetMap contributors · Geofabrik · ODbL 1.0'}},layers}
 }
 
 export function savedMapStyle(assets: ReplayAssets): StyleSpecification {

@@ -6,6 +6,12 @@ Prepared 19/10/2026 (Asia/Saigon). Read the final decision in
 document describes available interfaces and remaining M5 work; it does not claim
 that a behavioral or voucher model has already been implemented.
 
+**Acceptance19/10 chiều: R1b CONDITIONAL GO / M5 NOT READY.** Connected routing,
+cross-zone dispatch bothmodes, real100execution, router-off replay và basicUI đã
+có proof. SuccessfulConnected500/1000/5000, livecancellation và browser5000 còn
+thiếu vì headroom runtime; interfaces sẵn để review/phát triển, chưa sign-off
+toàn bộ research infrastructure. Đây không phải gateFPS/production/M4.
+
 ## Reusable R1b infrastructure
 
 Connected v5 has one world, event queue, clock, global mode-specific dispatch pool,
@@ -96,5 +102,5 @@ retain resource guards and incomplete markers.
 
 The exact runnable demo, tests, local run IDs, graph/tiles hashes, limitations and
 GO/M5 decision belong to the final R1b report/runbook. Until those live acceptance
-sections are finalized, **M5 acceptance remains pending** despite the available
-source interfaces and fixture tests.
+sections establish the remaining live-scale evidence, **M5 remains NOT READY**
+despite the available source interfaces, real100/cross-zone proofs and fixture tests.

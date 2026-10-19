@@ -40,6 +40,30 @@ describe('Connected global contracts and allocation',()=>{
     expect(s.vehicles).toHaveLength(100);expect(s.counts.total).toBe(100)
     expect(validateConnectedSnapshot(s,'run').zoneCounts.hanoi.total).toBe(80)
   })
+  it('preserves a 5000-vehicle global projection across zone/mode filters and outside-zone travel',()=>{
+    // Contract fixture only: this does not certify a live OSRM or browser benchmark.
+    const templates=fixtureSnapshot(5000,0).vehicles
+    const counts=(total:number)=>({total,online:total,offline:0,idle:total,assigned:0,onTrip:0,moving:0})
+    let index=0
+    const vehicles=defaultAllocations().flatMap(row=>(['CAR','MOTORBIKE'] as const).flatMap(mode=>
+      Array.from({length:mode==='CAR'?row.carCount:row.motorbikeCount},()=>{
+        const i=index++
+        return {...templates[i],id:`NVMR-${mode}-${row.zoneId}-${i}`,vehicleType:mode,serviceState:'IDLE' as const,
+          isMoving:false,homeZoneId:row.zoneId,currentZoneId:row.zoneId}
+      })))
+    const snapshot:ConnectedSnapshot={...projection(),vehicles,counts:counts(5000),
+      zoneCounts:Object.fromEntries(defaultAllocations().map(row=>[row.zoneId,counts(row.carCount+row.motorbikeCount)]))}
+    expect(validateConnectedSnapshot(snapshot,'run',5000).vehicles).toHaveLength(5000)
+    expect(new Set(vehicles.map(v=>v.id)).size).toBe(5000)
+    expect(filterConnectedSnapshot(snapshot,'','CAR')?.counts.total).toBe(2000)
+    expect(filterConnectedSnapshot(snapshot,'bac-ninh','MOTORBIKE')?.counts.total).toBe(150)
+    snapshot.vehicles[0].currentZoneId='outside-operating-zones'
+    snapshot.zoneCounts.hanoi=counts(3999)
+    snapshot.zoneCounts['outside-operating-zones']=counts(1)
+    expect(validateConnectedSnapshot(snapshot,'run',5000).counts.total).toBe(5000)
+    expect(filterConnectedSnapshot(snapshot,'outside-operating-zones','')?.counts.total).toBe(1)
+    expect(snapshot.vehicles.filter(v=>v.homeZoneId==='hanoi')).toHaveLength(4000)
+  })
   it('rejects negative offsets, swapped zone categories and undeclared current zone or bucket',()=>{
     const mutations=[
       (s:ConnectedSnapshot)=>{s.zoneCounts.hanoi.offline=-1;s.zoneCounts['bac-ninh'].offline=1},
@@ -59,7 +83,7 @@ describe('Connected global contracts and allocation',()=>{
     const style=connectedMapStyle(),source=style.sources['connected-basemap']
     expect(Object.keys(style.sources)).toHaveLength(1)
     expect(source.type).toBe('vector')
-    if(source.type==='vector'){expect(source.tiles).toEqual(['/api/v5/connected/map/tiles/{z}/{x}/{y}.pbf']);expect(source.bounds).toEqual([104.35,20.06,107.25,22.85]);expect(source.maxzoom).toBe(13)}
+    if(source.type==='vector'){expect(source.tiles).toEqual(['/api/v5/connected/map/tiles/{z}/{x}/{y}.pbf']);expect(source.bounds).toEqual([104.35,20.06,107.25,22.85]);expect(source.minzoom).toBe(0);expect(source.maxzoom).toBe(13)}
     expect(style.layers.filter(l=>'source' in l).every(l=>'source-layer' in l)).toBe(true)
     expect(JSON.stringify(style)).not.toMatch(/https?:/)
   })

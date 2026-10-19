@@ -40,3 +40,19 @@ def test_snap_misses_are_domain_rejections_but_service_failures_abort(status,cod
             assert module.snap_candidate(client,anchor)==(anchor,{'code':code})
         else:
             with pytest.raises(httpx.HTTPStatusError):module.snap_candidate(client,anchor)
+
+
+def test_http10_keepalive_reuses_only_explicit_bounded_keepalive_responses():
+    import h11
+    with module.http10_keepalive():
+        conn=h11.Connection(h11.CLIENT)
+        conn.send(h11.Request(method='GET',target='/nearest/v1/driving/105,21',headers=[('host','127.0.0.1'),('connection','keep-alive')]))
+        conn.send(h11.EndOfMessage())
+        conn.receive_data(b'HTTP/1.0 200 OK\r\nConnection: keep-alive\r\nContent-Length: 13\r\n\r\n{"code":"Ok"}')
+        events=[conn.next_event(),conn.next_event(),conn.next_event()]
+        assert isinstance(events[-1],h11.EndOfMessage)
+        assert conn.states=={h11.CLIENT:h11.DONE,h11.SERVER:h11.DONE}
+        conn.start_next_cycle()
+        conn.send(h11.Request(method='GET',target='/nearest/v1/driving/105,21',headers=[('host','127.0.0.1'),('connection','close')]))
+        conn.send(h11.EndOfMessage())
+        assert conn.states[h11.CLIENT] is h11.MUST_CLOSE

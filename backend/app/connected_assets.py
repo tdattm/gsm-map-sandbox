@@ -25,19 +25,22 @@ def map_status(root=PROJECT_ROOT):
         manifest = json.loads(manifest_path.read_text(encoding='utf-8'))
         # The pipeline's complete identity is verified before serving any bytes.
         from scripts.connected_gis import verify_render
+        from scripts.connected_overview_tiles import verify_overview
         # Avoid duplicate cold checksum reads from simultaneous viewport tiles.
         with _verification_lock:
             verify_render(root=root)
+            overview = verify_overview(root=root)
         ready, reason = True, ''
     except (OSError, ValueError, KeyError, RuntimeError, sqlite3.Error) as exc:
         reason = str(exc)
     return {'schemaVersion': 'gsm-nvmr-connected-map/v1', 'ready': ready,
         'reason': reason, 'bounds': config['mapBbox'],
-        'minZoom': config['tiles']['minZoom'], 'maxZoom': config['tiles']['maxZoom'],
+        'minZoom': 0, 'detailMinZoom': config['tiles']['minZoom'], 'maxZoom': config['tiles']['maxZoom'],
         'tileUrl': config['tiles']['urlTemplate'], 'sourceLayers': config['tiles']['sourceLayers'],
         'attribution': config['source']['attribution'],
         'sourceSha256': config['source']['sha256'], 'configSha256': digest(config_path),
-        'manifest': manifest if ready else None}
+        'manifest': manifest if ready else None,
+        'overviewManifest': overview if ready else None}
 
 
 def create_connected_map_router(root=PROJECT_ROOT):
@@ -60,7 +63,8 @@ def create_connected_map_router(root=PROJECT_ROOT):
             if not state['minZoom'] <= z <= state['maxZoom']:
                 return None, None
             config = json.loads((root/'config/connected-nvmr.json').read_text(encoding='utf-8'))
-            archive = root/config['tiles']['archive']
+            archive = (root/'data/regions/nvmr-connected/render-overview/tiles.mbtiles'
+                       if z < config['tiles']['minZoom'] else root/config['tiles']['archive'])
             # Read-only SQLite connection per request; XYZ -> MBTiles TMS row.
             try:
                 with closing(sqlite3.connect(archive.resolve().as_uri()+'?mode=ro', uri=True)) as database:

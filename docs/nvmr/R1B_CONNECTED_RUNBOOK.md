@@ -6,6 +6,11 @@ every prerequisite has passed. Read [implementation](R1B_CONNECTED_IMPLEMENTATIO
 [GIS report](R1B_CONNECTED_GIS.md) and [checkpoint](R1B_PROGRESS.md) for executed evidence.
 Inputs represent synthetic research fleet/demand, not actual GSM operations.
 
+**Trạng thái19/10 chiều:** R1b CONDITIONAL GO; M5 NOT READY cho acceptance toàn bộ
+scale. Demo replay100 và proof xuyên vùng đã có; successful live500/1000/5000 và
+Connected live cancellation còn thiếu. Owner chọn offline trước khi RAM dưới guard.
+Không chạy lại extract/graphs/detail tiles: artifacts hiện tại đã verify.
+
 ## 1. Inspect resources and existing artifacts
 
 ```powershell
@@ -51,6 +56,7 @@ the exact recovery commands in the GIS report.
 .\.venv\Scripts\python.exe -X utf8 scripts/connected_gis.py routing --mode CAR
 .\.venv\Scripts\python.exe -X utf8 scripts/connected_gis.py routing --mode MOTORBIKE
 .\.venv\Scripts\python.exe -X utf8 scripts/connected_gis.py render
+.\.venv\Scripts\python.exe -X utf8 -m scripts.connected_overview_tiles
 .\.venv\Scripts\python.exe -X utf8 scripts/connected_gis.py anchors
 .\.venv\Scripts\python.exe -X utf8 scripts/validate_connected_routing.py --prepare-synthetic
 .\.venv\Scripts\python.exe -X utf8 scripts/connected_gis.py serve --mode CAR
@@ -63,6 +69,16 @@ Stop a command sequence on a nonzero exit. All data is under
 `data/regions/nvmr-connected/`; HCM/Hanoi/Bac Ninh artifacts are retained.
 Connected ports are CAR5005 and MOTORBIKE5006. A fresh Git clone contains source
 and configuration but not ignored PBF/graphs/MBTiles/job stores.
+
+Hai archive bắt buộc: `render/tiles.mbtiles` z6–13 và
+`render-overview/tiles.mbtiles` z0–5. Archive sau là overview OSM thật, sửa blank
+map khi fit toàn vùng dướizoom6; không cần đổi config hoặc rebuild graph/detail.
+Lệnh overview có guard/lock/reuse và `.incomplete` riêng. Kiểm tra nhẹ, không
+start container hoặc build:
+
+```powershell
+.\.venv\Scripts\python.exe -c "from scripts.connected_gis import verify_render,verify_graph; from scripts.connected_overview_tiles import verify_overview; verify_graph('CAR'); verify_graph('MOTORBIKE'); verify_render(); verify_overview(); print('Current artifacts verified')"
+```
 
 `--prepare-synthetic` runs the small generated access/one-way/turn oracle before
 the full graph routers occupy memory. The final validator reuses this oracle only
@@ -105,6 +121,21 @@ For completed replay with routers off, use `-Routers None` and omit
 Missing artifacts, graph identity failures, router unavailable and explicit
 NoRoute/NoSegment remain errors; no public map/router fallback is used.
 
+Demo offline hiện đã kiểm chứng (không cần chờ router headroom):
+
+```powershell
+powershell -NoProfile -ExecutionPolicy Bypass -File scripts/Start-GsmDev.ps1 -Profile Meeting -Routers None -ApiPort 8022 -FrontendPort 5192 -Store build/r1b/jobs
+```
+
+Mở URL Connected phía trên, **Mở run v5 đã lưu**, nhập
+`271d116d28f64d75a7a49b3f300d7b24` rồi **Mở run liên thông**. Run100xe/25requests,
+maxWait900,9completed/16unserved. Search `NVMR-CAR-hanoi-00027`, seek400s để xem
+pickup và800s để xem trip; **Xem toàn hành trình** hiển thị đường đã lưu.
+Run xuyên vùng: `e001951cb0594c979c49d6d621eaace0` (20xe khởi tạo Bắc Ninh,
+20requests Hà Nội,8assignments cả2modes); các IDs chỉ có trên local store này.
+Clone Git không mang theo completed jobs. Chỉ reuse stack khi source/build/store
+identity đúng; receipt hiện hành là `build/s0-runtime/session-20261019-155208-495.json`.
+
 ## 4. API and live acceptance
 
 ```powershell
@@ -123,6 +154,30 @@ ready. These commands are examples until reported as executed:
 .\.venv\Scripts\python.exe -X utf8 scripts/validate_connected_api.py --fleet 5000 --bookings 1250 --output build/r1b/live-5000.json
 .\.venv\Scripts\python.exe -X utf8 scripts/validate_connected_api.py --fleet 20 --bookings 20 --horizon 120 --seed connected-cross-zone/v1 --cross-zone-proof --output build/r1b/live-cross-zone.json
 ```
+
+Không overwrite các report đã có ở trên khi làm acceptance bổ sung. Khi guard
+admit cả2routers, chạy tuần tự với tên mới; không đổi seed/wait để tăng served:
+
+```powershell
+$evidenceStamp = Get-Date -Format 'yyyyMMdd-HHmmss'
+.\.venv\Scripts\python.exe -X utf8 scripts/validate_connected_api.py --fleet 500 --bookings 125 --max-wait 300 --output "build/r1b/live-500-$evidenceStamp.json"
+# Chỉ tiếp tục sau exit0 và kiểm tra headroom.
+.\.venv\Scripts\python.exe -X utf8 scripts/validate_connected_api.py --fleet 1000 --bookings 250 --max-wait 300 --output "build/r1b/live-1000-$evidenceStamp.json"
+.\.venv\Scripts\python.exe -X utf8 scripts/validate_connected_api.py --fleet 5000 --bookings 1250 --max-wait 300 --output "build/r1b/live-5000-$evidenceStamp.json"
+```
+
+Audit completed run không gọi lại OSRM:
+
+```powershell
+.\.venv\Scripts\python.exe -X utf8 scripts/validate_connected_api.py --job-id 271d116d28f64d75a7a49b3f300d7b24 --require-mode-journeys --output build/r1b/replay-review.json
+.\.venv\Scripts\python.exe -X utf8 -m scripts.validate_connected_inputs
+```
+
+Lệnh inputs là **offline real-road input preparation**, không phải live
+benchmark. Valid all-unserved run được phép PASS invariants; từngmode báo
+`NO_ASSIGNMENT`. `--require-mode-journeys` và targetedcross-zone vẫn buộc có
+selectedroute thật cảCAR/MB. Resource scope của completed audit không chứng minh
+historical workerRSS; PID cũ không được sample.
 
 Reaudit/reopen an existing run with `--job-id <id>` instead of generating a
 duplicate. Failed/queued/running jobs are retained; a timeout does not cancel or
@@ -158,3 +213,15 @@ The launcher prints a task-owned receipt under `build/s0-runtime/`. To stop only
 that stack, pass its exact receipt to `scripts/Stop-GsmDev.ps1 -ReceiptPath ...`;
 first inspect queued/running jobs. Do not kill by generic process name. No command
 in this runbook stages, commits, pushes or merges.
+
+Review cả checkpoint đã có và phần unstaged mới, không stage tự động:
+
+```powershell
+git diff --check
+git diff --stat
+git diff --name-only
+git ls-files --others --exclude-standard
+git diff cd0bd26abd5c2ff83843d15a4555ba89f9d83b3f --stat
+git diff -- backend/app/connected_assets.py backend/app/connected_context.py backend/app/connected_jobs.py backend/app/simulation_jobs.py scripts/validate_connected_api.py scripts/validate_connected_routing.py frontend/src/lib/map-style.ts
+git status --short
+```

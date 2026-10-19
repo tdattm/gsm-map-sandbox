@@ -28,6 +28,7 @@ def timestamp():
 
 
 def atomic_json(path, value):
+    import time
     path = Path(path)
     path.parent.mkdir(parents=True, exist_ok=True)
     temporary = path.with_name(f'.{path.name}.{uuid.uuid4().hex}.tmp')
@@ -36,7 +37,14 @@ def atomic_json(path, value):
             json.dump(value, stream, ensure_ascii=False, allow_nan=False, separators=(',', ':'))
             stream.flush()
             os.fsync(stream.fileno())
-        os.replace(temporary, path)
+        for attempt in range(20):
+            try:
+                os.replace(temporary, path)
+                break
+            except PermissionError:
+                if attempt == 19:
+                    raise
+                time.sleep(.005)
     finally:
         temporary.unlink(missing_ok=True)
 
@@ -83,10 +91,17 @@ class JobStore:
         return self.root/id
 
     def read(self, id):
-        try:
-            return json.loads((self.path(id)/'status.json').read_text(encoding='utf-8'))
-        except FileNotFoundError:
-            error('JOB_NOT_FOUND', 'Unknown simulation job', 404)
+        import time
+        target = self.path(id)/'status.json'
+        for attempt in range(20):
+            try:
+                return json.loads(target.read_text(encoding='utf-8'))
+            except FileNotFoundError:
+                error('JOB_NOT_FOUND', 'Unknown simulation job', 404)
+            except PermissionError:
+                if attempt == 19:
+                    raise
+                time.sleep(.005)
 
     def statuses(self):
         return [self.read(p.parent.name) for p in sorted(self.root.glob('*/status.json'), key=lambda p: p.parent.name)]

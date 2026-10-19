@@ -161,7 +161,7 @@ async def execute_connected_live(config, run_id, cancelled=None, progress=None, 
     pools, provenance = await asyncio.to_thread(read_anchor_catalog, identities)
     vehicles, bookings, vmeta, bmeta = await asyncio.to_thread(connected_inputs, config, pools, zones)
     from .simulation_worker import RegionalInstrumentedTravel
-    async with httpx.AsyncClient(timeout=Settings().osrm_timeout_seconds, trust_env=False,
+    async with httpx.AsyncClient(timeout=max(Settings().osrm_timeout_seconds, 20), trust_env=False,
                                  limits=httpx.Limits(max_connections=2)) as client:
         travels = {mode: RegionalInstrumentedTravel(context, client) for mode, context in contexts.items()}
         if not provenance['preSnapped']:

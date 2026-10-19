@@ -10,6 +10,17 @@ Trong **Mô phỏng quy mô lớn → Kịch bản mô phỏng → Miền Bắc 
 
 Trạng thái triển khai, các bước đã chạy, blockers và quyết định GO/M5 nằm trong [báo cáo R1b](docs/nvmr/R1B_CONNECTED_IMPLEMENTATION.md), [runbook PowerShell](docs/nvmr/R1B_CONNECTED_RUNBOOK.md), [GIS/provenance](docs/nvmr/R1B_CONNECTED_GIS.md), [v5 contract](contracts/nvmr/CONNECTED_V1.md) và [checkpoint phục hồi](docs/nvmr/R1B_PROGRESS.md). Có source/UI không có nghĩa các graph và live acceptance đã READY; kiểm tra report/checkpoint trước khi demo. Không tải PBF mới khi snapshot cũ hợp lệ, không rebuild/overwrite artifact đã verify.
 
+**Kiểm chứng19/10:** basemap offline z0–13, CAR/MOTORBIKE graphs và20directed hub OD/mode đã PASS; global dispatch Bắc Ninh→Hà Nội cả2modes và completedrun100xe replay/inspector/router-off đã kiểm tra. **R1b CONDITIONAL GO / M5 NOT READY**: successfullive500/1.000/5.000 và browser5000 còn thiếu; RAM hiện dưới routerguard, không hạ guard hoặc thu hẹp vùng.
+
+Demo replay ngay với artifacts/store hiện tại (không cần OSRM chạy):
+
+```powershell
+Set-Location 'D:\ThS\VinAI\Phase3_VRIC\gsm-map-sandbox'
+powershell -NoProfile -ExecutionPolicy Bypass -File scripts/Start-GsmDev.ps1 -Profile Meeting -Routers None -ApiPort 8022 -FrontendPort 5192 -Store build/r1b/jobs
+```
+
+Mở <http://127.0.0.1:5192/?runtime=simulation&scenario=connected&profile=meeting>, chọn **Mở run v5 đã lưu** và nhập `271d116d28f64d75a7a49b3f300d7b24`. Tìm `NVMR-CAR-hanoi-00027`, seek400s/800s, **Xem toàn hành trình**. Run này có100xe,9completed/16unserved với maxWait900. Jobstore và GIS là local artifacts, không đi kèm cloneGit. Freshbuild khi source thay đổi: `npm.cmd run build` trong `frontend`; xem runbook để start hai router đã verify khi đủ RAM.
+
 ## R1a — Hanoi + Bắc Ninh Core (historical, v4 compatibility)
 
 Từ **Mô phỏng quy mô lớn → Kịch bản mô phỏng**, chọn Hanoi legacy v3 hoặc NVMR hai vùng. Regional v4 có một job/store/worker, một clock, phân bổ tối đa **5.000 xe tổng qua hai vùng**, tổng và KPI theo vùng, overview extent, drill-down tải một basemap và immutable pickup/trip inspector. Bắc Ninh là vùng kỹ thuật thí điểm quanh đô thị cũ, **không phải toàn tỉnh sau hợp nhất năm 2025**. Không điều phối xuyên vùng hay đổi graph CAR/MOTORBIKE.

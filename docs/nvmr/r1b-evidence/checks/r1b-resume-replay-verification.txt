@@ -1,0 +1,10 @@
+
+> gsm-map-sandbox-frontend@0.1.0 verify:replay
+> node scripts/verify-replay.mjs
+
+{
+  "package": "PASS",
+  "artifactDigest": "b4a87ee371f976f12f4da28791dffc66ebeb24352c1d664bf71851eb89c27433",
+  "assets": 9,
+  "browserExports": "NOT_RUN"
+}

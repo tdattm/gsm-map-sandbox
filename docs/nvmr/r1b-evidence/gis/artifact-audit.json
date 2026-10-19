@@ -1,5 +1,5 @@
 {
-  "capturedUtc": "2026-10-19T02:20:13.318748+00:00",
+  "capturedUtc": "2026-10-19T08:50:08.793729+00:00",
   "identity": {
     "region_id": "nvmr-connected",
     "config_sha256": "c815a2d299193161a19fff43b66bcc71a79dd78a912c165f5be6377f6a1a2aa1",
@@ -25,9 +25,49 @@
       "sha256": "4994d561a7b5e77a793fd5144f864f3e2ce091995e39c9029d022d18d089dfbc",
       "sizeBytes": 1412
     },
+    "render/manifest.json": {
+      "sha256": "09b696b9b8204d70be912147290b37432110970faa12f77d4547f904a222deff",
+      "sizeBytes": 1718
+    },
+    "render/features-manifest.json": {
+      "sha256": "e468a183612715dd3a01e5b0007c0782883a89c4be0e75a7315f451818ffdcac",
+      "sizeBytes": 915
+    },
+    "render/software-provenance.json": {
+      "sha256": "17290678f25388f80b158914d2fbfb3eec3691bbd4e2859322d7ff00ffe09a27",
+      "sizeBytes": 676
+    },
+    "render/osm-administrative-extents.json": {
+      "sha256": "dc27be1336a860ec24655cd88183e35ba435c99cfcaf89438e2a5cffbd46516f",
+      "sizeBytes": 1891
+    },
+    "anchors/manifest.json": {
+      "sha256": "fbb61322ffd7d472f7057d8160e77f9cb4c450007bc4d665f9fe684dc773c128",
+      "sizeBytes": 601
+    },
+    "validation/summary.json": {
+      "sha256": "37e19b1b783f0f06ed31186aced71ea48611730282d2007965ed59ce1d2eff87",
+      "sizeBytes": 201
+    },
     "routing/car/manifest.json": {
       "sha256": "ad52e520c72f8374ebbe8add5d219f5e48c533ac72cc2b23dfb73bb8e5c2528c",
       "sizeBytes": 52491
+    },
+    "routing/car/router-evidence.json": {
+      "sha256": "40b747d72864874f1732bcde2f6784a506d0cc2f9de81c53ce44e27441c1d7b9",
+      "sizeBytes": 2199
+    },
+    "routing/car/validation.json": {
+      "sha256": "05ae12a5c1c07d13c5cd620336267e32a61523f7f04343f7a90fce3830a46403",
+      "sizeBytes": 469
+    },
+    "routing/car/routing-validation.json": {
+      "sha256": "6fdd819a151655066d129463ae26e996e056b03c253bb10c71bd900ac2954050",
+      "sizeBytes": 3829593
+    },
+    "routing/car/synthetic-validation.json": {
+      "sha256": "e8ffb93803a7bc888abd2efb48b68f3713b47439f452af808c8ba12ad4efb73a",
+      "sizeBytes": 71192
     },
     "routing/car/build-resources.json": {
       "sha256": "bc456d5e99866fd81add922b86f1d9e52399a4d0ee4fd39fa1280e2cef38d602",
@@ -37,9 +77,29 @@
       "sha256": "be9140840ce9293ddd747344e6b9d899d02d347ad0b1321143d5bc77eb5677f0",
       "sizeBytes": 60003
     },
+    "routing/motorbike/router-evidence.json": {
+      "sha256": "9f10aa33910ad0615738e7481f85d8a80f29d1d2998c060eb7204a60b75c5aa9",
+      "sizeBytes": 2205
+    },
+    "routing/motorbike/validation.json": {
+      "sha256": "b57a7badcefc4632818b20e2b15a222b830d11617c5aa5384f6f73a8a4847844",
+      "sizeBytes": 469
+    },
+    "routing/motorbike/routing-validation.json": {
+      "sha256": "31feab161aaf2c81af87937f4b3b5db7597b201e5b327227c40c083bca5a62fb",
+      "sizeBytes": 4228664
+    },
+    "routing/motorbike/synthetic-validation.json": {
+      "sha256": "e8ffb93803a7bc888abd2efb48b68f3713b47439f452af808c8ba12ad4efb73a",
+      "sizeBytes": 71192
+    },
     "routing/motorbike/build-resources.json": {
       "sha256": "cf42e3f8e2dacdd245b51c258cd5288b281ddfc8ca342f01490ec1ed2eb4ea9d",
       "sizeBytes": 53346
+    },
+    "render-overview/manifest.json": {
+      "sha256": "15af85e4ca45765875e008b606071fc3780fe209f66dc66ad1c521675cc68aa5",
+      "sizeBytes": 2030
     }
   },
   "graphs": {
@@ -115,10 +175,64 @@
     }
   },
   "render": {
-    "fileIntegrity": "NOT_VERIFIED",
-    "reason": "[Errno 2] No such file or directory: 'D:\\\\ThS\\\\VinAI\\\\Phase3_VRIC\\\\gsm-map-sandbox\\\\data\\\\regions\\\\nvmr-connected\\\\render\\\\manifest.json'"
+    "fileIntegrity": "PASS",
+    "archiveSha256": "a27003b3bef79f2cc56d809e3874d1cbbf393962e3e986bf7fa1647056a34087",
+    "archiveSizeBytes": 136577024,
+    "tileCounts": {
+      "6": 4,
+      "7": 4,
+      "8": 8,
+      "9": 23,
+      "10": 80,
+      "11": 283,
+      "12": 1054,
+      "13": 4047
+    },
+    "features": {
+      "places": 4849,
+      "streets": 1249448,
+      "water": 25775,
+      "green": 14815
+    },
+    "resources": {
+      "wallSeconds": 2164.999612499989,
+      "cpuSeconds": 2078.453125,
+      "cpuPercentOneCore": 96.00247099351435,
+      "peakRssBytesSampled": 135913472,
+      "processPeakRssBytes": 431554560,
+      "minimumAvailablePhysicalBytes": 927346688,
+      "peakPrivateBytesSampled": 355500032,
+      "minimumCommitHeadroomBytes": 3570343936,
+      "sampleIntervalSeconds": 0.5,
+      "sampleCount": 4262
+    }
   },
   "limitations": [
     "Artifact hash verification is separate from OSRM HTTP/router proof and end-to-end simulation acceptance."
-  ]
+  ],
+  "overview": {
+    "fileIntegrity": "PASS",
+    "archiveSha256": "90e4d485a9c12aaf9b02a7fb42ac982f7bdaec7684b61f2ed07c08954827ec62",
+    "archiveSizeBytes": 1679360,
+    "tileCounts": {
+      "0": 1,
+      "1": 1,
+      "2": 1,
+      "3": 1,
+      "4": 2,
+      "5": 2
+    },
+    "resources": {
+      "wallSeconds": 221.66734750004252,
+      "cpuSeconds": 214.9375,
+      "cpuPercentOneCore": 96.96398789630429,
+      "peakRssBytesSampled": 120303616,
+      "processPeakRssBytes": 120438784,
+      "minimumAvailablePhysicalBytes": 1725198336,
+      "peakPrivateBytesSampled": 340635648,
+      "minimumCommitHeadroomBytes": 5512507392,
+      "sampleIntervalSeconds": 0.5,
+      "sampleCount": 438
+    }
+  }
 }

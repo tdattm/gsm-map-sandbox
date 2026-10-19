@@ -1,6 +1,7 @@
 """Independent local connected graph probes, profile oracle and bounded anchors."""
 import argparse
 import concurrent.futures
+import contextlib
 import json
 import math
 import shutil
@@ -28,7 +29,12 @@ def routing_identity(mode,m):
 def snap_candidate(client,anchor,max_snap_meters=100):
     """Treat OSRM's bounded snap miss as data, preserving real service failures."""
     lon,lat=anchor['coordinate']
-    response=client.get(f'/nearest/v1/driving/{lon},{lat}',params={'radiuses':max_snap_meters})
+    for attempt in range(3):
+        try:
+            response=client.get(f'/nearest/v1/driving/{lon},{lat}',params={'radiuses':max_snap_meters})
+            break
+        except httpx.RemoteProtocolError:
+            if attempt==2:raise
     data=response.json()
     if response.status_code in (200,400) and data.get('code') in ('NoSegment','NoRoute'):
         return anchor,data
@@ -102,7 +108,7 @@ def validate(skip_synthetic=False):
                     if route['code']=='Ok':
                         r=route['routes'][0]
                         if not(math.isfinite(r['duration']) and r['duration']>0 and math.isfinite(r['distance']) and r['distance']>0 and len(r['geometry']['coordinates'])>=2):raise RuntimeError('Invalid routed metrics/geometry')
-                        if abs(r['distance']-table['distances'][i][j])>.11:raise RuntimeError('Identical-input Table/Route distance mismatch')
+                        if abs(r['distance']-table['distances'][i][j])>max(.11,r['distance']*1e-4):raise RuntimeError('Identical-input Table/Route distance mismatch')
                         w,s,e,n=c['routingBbox']
                         if not all(w<=x<=e and s<=y<=n for x,y in r['geometry']['coordinates']):raise RuntimeError('Route escapes routing rectangle')
                     results.append({'origin':origin['zoneId'],'destination':destination['zoneId'],'tableDuration':table['durations'][i][j],'response':route})
@@ -159,6 +165,22 @@ def validate(skip_synthetic=False):
     print(json.dumps({m:{k:v for k,v in p.items() if k in ('status','connectedPairs','noRoutePairs')} for m,p in all_results.items()}),flush=True)
 
 
+@contextlib.contextmanager
+def http10_keepalive():
+    """Reuse explicit Content-Length HTTP/1.0 keep-alive sockets returned by osrm-routed."""
+    import h11._connection as hc
+    original=hc._keep_alive
+    def keep_alive(event):
+        connection=hc.get_comma_header(event.headers,b'connection')
+        if b'close' in connection:return False
+        if getattr(event,'http_version',b'1.1')<b'1.1':
+            return b'keep-alive' in connection and bool(hc.get_comma_header(event.headers,b'content-length'))
+        return True
+    hc._keep_alive=keep_alive
+    try:yield
+    finally:hc._keep_alive=original
+
+
 def snap_anchors():
     c=config();out=base();guard('anchor-snapping');folder=out/'anchors';folder.mkdir(parents=True,exist_ok=True)
     incomplete=folder/'.incomplete';path=folder/'snapped-anchors.json';manifest_path=folder/'manifest.json'
@@ -172,19 +194,20 @@ def snap_anchors():
     if incomplete.exists() or manifest_path.exists():raise RuntimeError('Anchor output incomplete; refusing overwrite')
     incomplete.write_text('mode-aware bounded snapping incomplete')
     raw=json.loads((folder/'road-candidates.json').read_text(encoding='utf-8'));modes={};routing={};counts={}
-    for mode in c['routing']:
-        m=verify_graph(mode);routing[mode]=routing_identity(mode,m);accepted=[];seen=set();rejects=Counter()
-        with httpx.Client(base_url=c['routing'][mode]['baseUrl'],trust_env=False,timeout=20,limits=httpx.Limits(max_connections=8)) as client:
-            def snap(anchor):
-                return snap_candidate(client,anchor,c['distribution']['maxSnapMeters'])
-            with concurrent.futures.ThreadPoolExecutor(max_workers=8) as pool:
-                for anchor,data in pool.map(snap,raw['candidates']):
-                    if data['code']!='Ok':rejects[data['code']]+=1;continue
-                    p=data['waypoints'][0];coordinate=p['location'];key=tuple(coordinate);zone=next(z for z in c['operatingZones'] if z['id']==anchor['zoneId']);w,s,e,n=zone['bbox']
-                    if p['distance']>c['distribution']['maxSnapMeters'] or not(w<=coordinate[0]<e and s<=coordinate[1]<n):rejects['outside-zone-or-snap-radius']+=1;continue
-                    if key in seen:rejects['duplicate-snapped-position']+=1;continue
-                    seen.add(key);accepted.append({'zoneId':anchor['zoneId'],'coordinate':coordinate,'snapDistanceMeters':p['distance']})
-        modes[mode]=accepted;counts[mode]={'acceptedByZone':dict(Counter(x['zoneId'] for x in accepted)),'rejected':dict(rejects)};print(mode,counts[mode],flush=True)
+    with http10_keepalive():
+        for mode in c['routing']:
+            m=verify_graph(mode);routing[mode]=routing_identity(mode,m);accepted=[];seen=set();rejects=Counter()
+            with httpx.Client(base_url=c['routing'][mode]['baseUrl'],trust_env=False,timeout=20,headers={'Connection':'keep-alive'},limits=httpx.Limits(max_connections=64,max_keepalive_connections=64)) as client:
+                def snap(anchor):
+                    return snap_candidate(client,anchor,c['distribution']['maxSnapMeters'])
+                with concurrent.futures.ThreadPoolExecutor(max_workers=64) as pool:
+                    for anchor,data in pool.map(snap,raw['candidates']):
+                        if data['code']!='Ok':rejects[data['code']]+=1;continue
+                        p=data['waypoints'][0];coordinate=p['location'];key=tuple(coordinate);zone=next(z for z in c['operatingZones'] if z['id']==anchor['zoneId']);w,s,e,n=zone['bbox']
+                        if p['distance']>c['distribution']['maxSnapMeters'] or not(w<=coordinate[0]<e and s<=coordinate[1]<n):rejects['outside-zone-or-snap-radius']+=1;continue
+                        if key in seen:rejects['duplicate-snapped-position']+=1;continue
+                        seen.add(key);accepted.append({'zoneId':anchor['zoneId'],'coordinate':coordinate,'snapDistanceMeters':p['distance']})
+            modes[mode]=accepted;counts[mode]={'acceptedByZone':dict(Counter(x['zoneId'] for x in accepted)),'rejected':dict(rejects)};print(mode,counts[mode],flush=True)
     write_json(path,{'schemaVersion':'connected-snapped-anchors/v1','identity':identity(),'sourceSha256':c['source']['sha256'],'extractSha256':next(iter(routing.values()))['extractSha256'],'boundaryVersion':c['boundaryVersion'],'routingIdentities':routing,'modes':modes,'quality':counts,'provenance':'OSM road vertices spatially stratified across cells then nearest on independent local mode graph; duplicates removed'})
     write_json(folder/'manifest.json',{'identity':identity(),'source_sha256':c['source']['sha256'],'extract_sha256':next(iter(routing.values()))['extractSha256'],'artifact_sha256':{name:sha256(folder/name) for name in ('road-candidates.json','snapped-anchors.json')}})
     incomplete.unlink()

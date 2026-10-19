@@ -2,6 +2,7 @@
 import json
 import re
 import shutil
+import sqlite3
 import platform
 import importlib.metadata
 from datetime import datetime,timezone
@@ -37,6 +38,16 @@ def capture():
             if json.loads(sidecar.read_text(encoding='utf-8'))!=software:raise RuntimeError('Render software provenance differs; refusing overwrite')
         else:write_json(sidecar,software)
     except (OSError,ValueError,KeyError,RuntimeError) as exc:audit['render']={'fileIntegrity':'NOT_VERIFIED','reason':str(exc)}
+    try:
+        from scripts.connected_overview_tiles import verify_overview
+        overview=verify_overview()
+        archive=base()/'render-overview/tiles.mbtiles'
+        audit['overview']={'fileIntegrity':'PASS','archiveSha256':sha256(archive),
+            'archiveSizeBytes':archive.stat().st_size,'tileCounts':overview['tile_counts'],
+            'resources':overview['resources']}
+        paths.append('render-overview/manifest.json')
+    except (OSError,ValueError,KeyError,RuntimeError,sqlite3.Error) as exc:
+        audit['overview']={'fileIntegrity':'NOT_VERIFIED','reason':str(exc)}
     for relative in paths:
         source=base()/relative
         if not source.exists():continue

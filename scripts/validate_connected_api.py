@@ -71,18 +71,24 @@ def audit(result):
     return cfg
 
 
-def validate(client, base, job_id, timeout):
+def validate(client, base, job_id, timeout, require_mode_journeys=False):
     prefix = base+'/api/v5/simulation/jobs/'+job_id
     deadline, samples, systems = time.monotonic()+timeout, [], []
+    observed_statuses, sampled_pids = [], set()
     while True:
         response = client.get(prefix)
         response.raise_for_status()
         status = response.json()
+        if not observed_statuses or observed_statuses[-1] != status['status']:
+            observed_statuses.append(status['status'])
         systems.append(memory())
-        if status.get('workerPid'):
+        # Completed status retains the historical worker PID. Never probe it:
+        # the worker may have exited, or that PID may now belong to another app.
+        if status['status'] == 'RUNNING' and status.get('workerPid'):
             sample = process_memory(status['workerPid'])
             if sample:
                 samples.append(sample)
+                sampled_pids.add(status['workerPid'])
         if status['status'] == 'COMPLETED':
             break
         if status['status'] in ('FAILED', 'CANCELLED', 'INTERRUPTED'):
@@ -107,11 +113,13 @@ def validate(client, base, job_id, timeout):
         if snap != connected_snapshot(result, now) or snap['counts']['total'] != cfg.fleetSize:
             raise ValueError('Immutable snapshot/fleet mismatch')
         snapshots.append({'time': now, 'counts': snap['counts'], 'zoneCounts': snap['zoneCounts']})
-    selected = []
+    selected, mode_journeys = [], {}
     for mode in ('CAR', 'MOTORBIKE'):
         assignment = next((a for a in result['assignments'] if a['vehicleType'] == mode), None)
         if assignment is None:
-            if any(v['vehicleType'] == mode for v in result['vehicles']) and any(b['serviceType'] == mode for b in result['bookings']):
+            mode_journeys[mode] = {'status': 'NO_ASSIGNMENT',
+                'reason': 'No persisted assignment for this mode; journey evidence unavailable, not fabricated'}
+            if require_mode_journeys:
                 raise ValueError(f'No {mode} assignment: selected journey live acceptance not established')
             continue
         detail = client.get(prefix+'/bookings/'+assignment['bookingId'])
@@ -120,6 +128,8 @@ def validate(client, base, job_id, timeout):
         for leg in ('pickupLeg', 'tripLeg'):
             ref = detail.json()[leg]['routeRef']
             if ref is None:
+                if leg == 'tripLeg':
+                    raise ValueError('Selected assignment lacks immutable trip route evidence')
                 continue
             fetched = client.get(prefix+'/routes/'+ref)
             fetched.raise_for_status()
@@ -128,6 +138,8 @@ def validate(client, base, job_id, timeout):
                 raise ValueError('Selected immutable route mismatch')
             route_refs.append(ref)
         selected.append({'vehicleType': mode, 'vehicleId': assignment['vehicleId'], 'bookingId': assignment['bookingId'], 'routeRefs': route_refs})
+        mode_journeys[mode] = {'status': 'PASS', 'bookingId': assignment['bookingId'],
+            'vehicleId': assignment['vehicleId'], 'routeRefs': route_refs}
     docker_stats = {'available': False, 'samples': [], 'reason': ''}
     try:
         stats = subprocess.run(['docker', 'stats', '--no-stream', '--format', '{{json .}}'],
@@ -137,6 +149,9 @@ def validate(client, base, job_id, timeout):
     except (OSError, subprocess.TimeoutExpired) as exc:
         docker_stats['reason'] = str(exc)
     return {'status': 'PASS', 'evidenceKind': 'real-local-OSRM-v5', 'jobId': job_id,
+        'auditScope': ('RUNNING execution observed plus immutable result/replay audit' if 'RUNNING' in observed_statuses
+            else 'Immutable result/replay audit; no RUNNING execution observed'),
+        'requireModeJourneys': require_mode_journeys, 'modeJourneyEvidence': mode_journeys,
         'fleetSize': cfg.fleetSize, 'counts': result['counts'], 'metrics': result['metrics'],
         'crossZoneDispatchExamples': [{key: a[key] for key in ('vehicleId', 'bookingId', 'vehicleType',
             'vehicleZoneAtAssignment', 'pickupZoneId', 'estimatedPickupEtaSeconds', 'pickupRouteRef')}
@@ -144,6 +159,11 @@ def validate(client, base, job_id, timeout):
         'distributionQuality': result['distributionQuality'], 'routingIdentities': result['routingIdentities'],
         'resultBytes': len(raw.content), 'snapshots': snapshots, 'selected': selected,
         'resources': {'workerPeakRssSampledBytes': max((s['rssBytes'] for s in samples), default=None),
+            'workerMemoryScope': ('Samples only while API status was RUNNING; sampled maximum is not a per-run peak'
+                if samples else 'No RUNNING worker memory sample; execution peak unavailable, including completed-run reopening'),
+            'systemMemoryScope': 'During validator polling only; completed replay polling does not measure historical execution',
+            'observedStatuses': observed_statuses, 'workerSampleCount': len(samples),
+            'sampledWorkerPids': sorted(sampled_pids),
             'workerLifetimePeakRssBytes': max((s['lifetimePeakRssBytes'] for s in samples
                 if isinstance(s.get('lifetimePeakRssBytes'), (int, float))), default=None),
             'minimumAvailablePhysicalBytes': min(s['availablePhysicalBytes'] for s in systems),
@@ -162,7 +182,10 @@ def main():
     parser.add_argument('--bookings', type=int, default=25)
     parser.add_argument('--seed', default='connected-live/v1')
     parser.add_argument('--horizon', type=int, default=900)
+    parser.add_argument('--max-wait', type=int, default=300)
     parser.add_argument('--timeout', type=int, default=1200)
+    parser.add_argument('--require-mode-journeys', action='store_true',
+        help='Require immutable selected journey evidence for both CAR and MOTORBIKE; all-unserved runs otherwise remain valid')
     parser.add_argument('--cross-zone-proof', action='store_true',
         help='Place the entire fleet in Bac Ninh and demand in Hanoi; max wait3600s, intra-Hanoi trips')
     parser.add_argument('--output', type=Path, default=ROOT/'build/r1b/live.json')
@@ -176,7 +199,8 @@ def main():
             job_id = args.job_id
             if job_id is None:
                 cfg = ConnectedScenarioConfig(fleetSize=args.fleet, carCount=round(args.fleet*.4),
-                    bookingCount=args.bookings, seed=args.seed, horizonSeconds=args.horizon, onlineFraction=1.)
+                    bookingCount=args.bookings, seed=args.seed, horizonSeconds=args.horizon,
+                    maxWaitSeconds=args.max_wait, onlineFraction=1.)
                 if args.cross_zone_proof:
                     raw_config = cfg.model_dump()
                     raw_config.update(fleetAllocations=[{'zoneId': zone, 'carCount': cfg.carCount if zone == 'bac-ninh' else 0,
@@ -189,7 +213,8 @@ def main():
                 job_id = created.json()['id']
                 report['jobId'] = job_id
                 atomic_json(args.output, {**report, 'status': 'RUNNING'})
-            report.update(validate(client, args.base_url, job_id, args.timeout))
+            report.update(validate(client, args.base_url, job_id, args.timeout,
+                require_mode_journeys=args.require_mode_journeys or args.cross_zone_proof))
             if args.cross_zone_proof and not any(a['vehicleZoneAtAssignment'] == 'bac-ninh' and
                 a['pickupZoneId'] == 'hanoi' for a in report['crossZoneDispatchExamples']):
                 raise ValueError('Targeted Bac Ninh -> Hanoi dispatch has not been established')
