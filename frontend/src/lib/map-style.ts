@@ -1,3 +1,4 @@
+import connectedConfig from '../../../config/connected-nvmr.json'
 import type { StyleSpecification, ExpressionSpecification } from 'maplibre-gl'
 import latin from '@fontsource-variable/geist/files/geist-latin-wght-normal.woff2?url'
 import vietnamese from '@fontsource-variable/geist/files/geist-vietnamese-wght-normal.woff2?url'
@@ -31,6 +32,10 @@ export function regionMapStyle(regionId: string): StyleSpecification {
     [name, { type: 'geojson' as const, data: `/api/regions/${encodeURIComponent(regionId)}/map/${name}` }])) }
 }
 
+const hanoiBounds=connectedConfig.operatingZones.find(zone=>zone.id==='hanoi')!.bbox
+export const connectedInitialCamera: {center:[number,number];zoom:number} = {
+  center:[(hanoiBounds[0]+hanoiBounds[2])/2,(hanoiBounds[1]+hanoiBounds[3])/2],zoom:11,
+}
 export const connectedBounds: [number,number,number,number] = [104.35,20.06,107.25,22.85]
 /** One viewport-loaded local MVT source; never downloads a region-wide GeoJSON. */
 export function connectedMapStyle(retry = 0): StyleSpecification {
@@ -42,7 +47,7 @@ export function connectedMapStyle(retry = 0): StyleSpecification {
   })
   // Whole-region fit can be below6 in a laptop map pane. A separate real-OSM
   // overview archive covers0–5; the verified detailed6–13 archive is preserved.
-  return {...localStyle,sources:{'connected-basemap':{type:'vector',tiles:[`/api/v5/connected/map/tiles/{z}/{x}/{y}.pbf${retry?`?retry=${retry}`:''}`],minzoom:0,maxzoom:13,bounds:connectedBounds,attribution:'© OpenStreetMap contributors · Geofabrik · ODbL 1.0'}},layers}
+  return {...localStyle,sources:{'connected-basemap':{type:'vector',tiles:[`/api/v5/connected/map/tiles/{z}/{x}/{y}.pbf${retry?`?retry=${retry}`:''}`],minzoom:0,maxzoom:13,bounds:connectedBounds,attribution:'© <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">OpenStreetMap contributors</a> · <a href="https://www.geofabrik.de" target="_blank" rel="noopener noreferrer">Geofabrik</a> · <a href="https://opendatacommons.org/licenses/odbl/1-0/" target="_blank" rel="noopener noreferrer">ODbL 1.0</a>'}},layers}
 }
 
 export function savedMapStyle(assets: ReplayAssets): StyleSpecification {

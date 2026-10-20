@@ -1,3 +1,5 @@
+import { beforeEach } from 'vitest'
+beforeEach(()=>window.history.replaceState(null,'','/?mode=single'))
 import { act, fireEvent, render, screen, waitFor } from '@testing-library/react'
 import { describe, expect, it, vi } from 'vitest'
 import App from '../src/App'

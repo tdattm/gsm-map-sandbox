@@ -3,7 +3,8 @@ import { modeFromUrl, modeUrl } from '../src/lib/navigation'
 
 describe('GSM navigation and backward compatible deep links', () => {
   it('restores simulation, Saved v1, legacy modes and safe unknown mode', () => {
-    expect(modeFromUrl('')).toBe('single')
+    expect(modeFromUrl('')).toBe('simulation')
+    expect(modeFromUrl('?mode=single')).toBe('single')
     expect(modeFromUrl('?runtime=simulation')).toBe('simulation')
     expect(modeFromUrl('?runtime=saved&mode=booking')).toBe('voucher')
     expect(modeFromUrl('?mode=booking')).toBe('booking')
@@ -15,6 +16,7 @@ describe('GSM navigation and backward compatible deep links', () => {
     expect(next).toBe('/?audit=1&mode=booking')
     expect(modeFromUrl(new URL(next,'http://localhost').search)).toBe('booking')
     expect(modeUrl(href,'voucher','saved')).toBe('/?audit=1&runtime=saved')
+    expect(modeUrl(href,'single')).toBe('/?audit=1&mode=single')
     expect(modeUrl(href,'simulation')).toBe('/?audit=1&runtime=simulation')
   })
 })

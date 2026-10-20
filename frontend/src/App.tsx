@@ -4,7 +4,7 @@ import { lazy, Suspense, useCallback, useEffect, useMemo, useRef, useState } fro
 import { ArrowUpRight, Check, ChevronRight, Database, FileBox, FolderOpen, Layers, MapPin, Navigation, RefreshCw, Route as RouteIcon, Server, Trash2 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
-import { modeFromUrl, modeUrl, type AppMode } from '@/lib/navigation'
+import { connectedPresentation, modeFromUrl, modeUrl, type AppMode } from '@/lib/navigation'
 import { PrimaryNavigation } from '@/components/primary-navigation'
 import { InspectorSection } from '@/components/inspector-section'
 import { PlaybackDock, ClockDock } from '@/components/playback-dock'
@@ -29,7 +29,21 @@ const SimulationWorkspace = lazy(() => import('@/components/simulation-workspace
 const coordinateText = (point: Coordinate | null) => point ? point.map(v => v.toFixed(6)).join(', ') : 'Chưa chọn trên bản đồ'
 const pbfLabels: Record<string, string> = { not_prepared: 'Chưa chuẩn bị dữ liệu khu vực', missing_pbf: 'Chưa có file PBF', present_unverified: 'Đã có file · chưa xác minh', invalid_extension: 'Sai phần mở rộng', unreadable_pbf: 'Không đọc được file', empty_pbf: 'File PBF rỗng' }
 
+const ConnectedWorkspace = lazy(() => import('@/components/connected-workspace'))
+
 export default function App() {
+  const [search, setSearch] = useState(() => window.location.search)
+  useEffect(() => {
+    const sync = () => setSearch(window.location.search)
+    window.addEventListener('popstate', sync)
+    return () => window.removeEventListener('popstate', sync)
+  }, [])
+  return connectedPresentation(search)
+    ? <Suspense fallback={<p role="status">Đang tải Connected NVMR…</p>}><ConnectedWorkspace/></Suspense>
+    : <LegacyApp/>
+}
+
+function LegacyApp() {
   const [mapError, setMapError] = useState('')
   const [routeError, setRouteError] = useState('')
   const [start, setStart] = useState<Coordinate | null>(null)

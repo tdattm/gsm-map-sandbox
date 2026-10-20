@@ -1,6 +1,7 @@
 import { act, render } from '@testing-library/react'
 import { beforeEach, expect, it, vi } from 'vitest'
 import { ConnectedCamera, ConnectedMapHealth } from '../src/components/connected-map'
+import { connectedInitialCamera } from '../src/lib/map-style'
 import { api } from '../src/lib/api'
 
 const state=vi.hoisted(()=>({map:null as unknown,loaded:true}))
@@ -47,8 +48,22 @@ it('explicit retry remount rereads artifact readiness and recovers a previous mi
   expect(mocked).toHaveBeenCalledTimes(2)
   expect(onChange).toHaveBeenLastCalledWith(expect.objectContaining({state:'ready'}))
 })
-it('fits continuous coverage once without refitting on ordinary rerenders',()=>{
+it('starts at configured Hanoi area and never refits on rerenders or load changes',()=>{
   const {map}=setup();vi.stubGlobal('requestAnimationFrame',(callback:FrameRequestCallback)=>{callback(0);return 1});vi.stubGlobal('cancelAnimationFrame',vi.fn())
   const {rerender}=render(<ConnectedCamera/>);rerender(<ConnectedCamera/>)
-  expect(map.fitBounds).toHaveBeenCalledExactlyOnceWith([[104.35,20.06],[107.25,22.85]],{padding:35,duration:0})
+  state.loaded=false;rerender(<ConnectedCamera/>);state.loaded=true;rerender(<ConnectedCamera/>)
+  expect(connectedInitialCamera.center[0]).toBeCloseTo(105.8)
+  expect(connectedInitialCamera.center[1]).toBeCloseTo(21.015)
+  expect(connectedInitialCamera.zoom).toBe(11)
+  expect(map.fitBounds).not.toHaveBeenCalled()
+})
+
+it('resizes the existing map on layout changes without issuing camera commands',()=>{
+  const {map}=setup();const callbacks:ResizeObserverCallback[]=[],disconnect=vi.fn()
+  vi.stubGlobal('ResizeObserver',class {constructor(callback:ResizeObserverCallback){callbacks.push(callback)}observe(){}disconnect=disconnect})
+  const {unmount}=render(<ConnectedCamera/>)
+  act(()=>{callbacks[0]([],{} as ResizeObserver);callbacks[0]([],{} as ResizeObserver)})
+  expect(map.resize).toHaveBeenCalledTimes(2)
+  expect(map.fitBounds).not.toHaveBeenCalled()
+  unmount();expect(disconnect).toHaveBeenCalledOnce()
 })

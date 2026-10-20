@@ -45,8 +45,8 @@ const fixtureCatalog = {candidates:[{id:'a',coordinate:[106.69,10.77]},{id:'b',c
   datasetFingerprint:'deliberately-same-fixture-fingerprint',provenance:{display_bbox:hcm.viewport.bounds,max_snap_meters:100}}
 const fetchStatus = (url:string) => response(url==='/api/regions'?{regions:[hcm,hanoi]}:status(url.includes('nvmr-hanoi-core')?hanoi:hcm))
 
-beforeEach(() => { window.history.replaceState({},'', '/'); mocks.assets.mockResolvedValue({manifest,layers:{}}) })
-afterEach(() => { window.history.replaceState({},'', '/') })
+beforeEach(() => { window.history.replaceState({},'', '/?mode=single'); mocks.assets.mockResolvedValue({manifest,layers:{}}) })
+afterEach(() => { window.history.replaceState({},'', '/?mode=single') })
 
 describe('M1a region integration', () => {
   it('switches HCM → Hanoi → HCM, clears the route, preserves map DOM and ignores a late HCM route', async () => {

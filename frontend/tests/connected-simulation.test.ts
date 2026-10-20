@@ -85,7 +85,10 @@ describe('Connected global contracts and allocation',()=>{
     expect(source.type).toBe('vector')
     if(source.type==='vector'){expect(source.tiles).toEqual(['/api/v5/connected/map/tiles/{z}/{x}/{y}.pbf']);expect(source.bounds).toEqual([104.35,20.06,107.25,22.85]);expect(source.minzoom).toBe(0);expect(source.maxzoom).toBe(13)}
     expect(style.layers.filter(l=>'source' in l).every(l=>'source-layer' in l)).toBe(true)
-    expect(JSON.stringify(style)).not.toMatch(/https?:/)
+    // Legal attribution links are navigation, never tile/font resources.
+    const {attribution,...localSource}=source
+    expect(attribution).toContain('https://www.openstreetmap.org/copyright')
+    expect(JSON.stringify({...style,sources:{'connected-basemap':localSource}})).not.toMatch(/https?:/)
   })
 })
 describe('Connected session concurrency and immutable playback',()=>{

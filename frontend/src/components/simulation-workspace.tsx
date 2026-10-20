@@ -22,7 +22,8 @@ export default function SimulationWorkspace({previousRegion}:{previousRegion:str
   const currentScenario=()=>{const value=new URLSearchParams(window.location.search).get('scenario');return value==='regional'||value==='connected'?value:'hanoi'}
   const [scenario,setScenario]=useState(currentScenario)
   useEffect(()=>{const sync=()=>setScenario(currentScenario());window.addEventListener('popstate',sync);return ()=>window.removeEventListener('popstate',sync)},[])
-  const select=(value:string)=>{const url=new URL(window.location.href);if(value==='hanoi')url.searchParams.delete('scenario');else url.searchParams.set('scenario',value);window.history.pushState(null,'',url);setScenario(value)}
+  const select=(value:string)=>{const url=new URL(window.location.href);if(value==='hanoi')url.searchParams.delete('scenario');else url.searchParams.set('scenario',value);window.history.pushState(null,'',url);setScenario(value);window.dispatchEvent(new PopStateEvent('popstate'))}
+  if (scenario==='connected') return <ConnectedWorkspace/>
   return <div className="simulation-container"><div className="simulation-scenario-selector"><label>Kịch bản mô phỏng<select aria-label="Kịch bản mô phỏng" value={scenario} onChange={e=>select(e.target.value)}><option value="connected">Miền Bắc liên thông · Connected NVMR v5</option><option value="hanoi">Hanoi Core · legacy v3</option><option value="regional">Hanoi + Bắc Ninh Core · historical v4</option></select></label><p className="small-note">Lưu mã run trước khi đổi kịch bản. Job đã gửi vẫn được worker xử lý.</p></div>{scenario==='connected'?<ConnectedWorkspace/>:scenario==='regional'?<RegionalWorkspace/>:<HanoiSimulationWorkspace previousRegion={previousRegion}/>}</div>
 }
 function HanoiSimulationWorkspace({previousRegion}:{previousRegion:string}){

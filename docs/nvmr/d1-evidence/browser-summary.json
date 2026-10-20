@@ -1,0 +1,106 @@
+[
+  {
+    "viewport": [
+      1920,
+      1080
+    ],
+    "state": "A",
+    "canvasCount": 1,
+    "overlayBoundsPass": true,
+    "noOverlayPlaybackIntersection": true,
+    "noLegendAttributionIntersection": true,
+    "noDocumentOverflow": true,
+    "kpiCorrect": true
+  },
+  {
+    "viewport": [
+      1920,
+      1080
+    ],
+    "state": "B",
+    "canvasCount": 1,
+    "overlayBoundsPass": true,
+    "noOverlayPlaybackIntersection": true,
+    "noLegendAttributionIntersection": true,
+    "noDocumentOverflow": true,
+    "kpiCorrect": true
+  },
+  {
+    "viewport": [
+      1366,
+      768
+    ],
+    "state": "A",
+    "canvasCount": 1,
+    "overlayBoundsPass": true,
+    "noOverlayPlaybackIntersection": true,
+    "noLegendAttributionIntersection": true,
+    "noDocumentOverflow": true,
+    "kpiCorrect": true
+  },
+  {
+    "viewport": [
+      1366,
+      768
+    ],
+    "state": "B",
+    "canvasCount": 1,
+    "overlayBoundsPass": true,
+    "noOverlayPlaybackIntersection": true,
+    "noLegendAttributionIntersection": true,
+    "noDocumentOverflow": true,
+    "kpiCorrect": true
+  },
+  {
+    "viewport": [
+      1024,
+      768
+    ],
+    "state": "A",
+    "canvasCount": 1,
+    "overlayBoundsPass": true,
+    "noOverlayPlaybackIntersection": true,
+    "noLegendAttributionIntersection": true,
+    "noDocumentOverflow": true,
+    "kpiCorrect": true
+  },
+  {
+    "viewport": [
+      1024,
+      768
+    ],
+    "state": "B",
+    "canvasCount": 1,
+    "overlayBoundsPass": true,
+    "noOverlayPlaybackIntersection": true,
+    "noLegendAttributionIntersection": true,
+    "noDocumentOverflow": true,
+    "kpiCorrect": true
+  },
+  {
+    "viewport": [
+      390,
+      844
+    ],
+    "state": "A",
+    "canvasCount": 1,
+    "overlayBoundsPass": true,
+    "noOverlayPlaybackIntersection": true,
+    "noLegendAttributionIntersection": true,
+    "noDocumentOverflow": true,
+    "kpiCorrect": true
+  },
+  {
+    "viewport": [
+      390,
+      844
+    ],
+    "state": "B",
+    "canvasCount": 1,
+    "overlayBoundsPass": true,
+    "noOverlayPlaybackIntersection": true,
+    "noLegendAttributionIntersection": true,
+    "noDocumentOverflow": true,
+    "kpiCorrect": true
+  }
+]

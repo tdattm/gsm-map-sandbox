@@ -402,3 +402,44 @@ button:focus-visible, input:focus-visible, select:focus-visible, summary:focus-v
   .regional-workspace .simulation-panel { order: 1; overflow: visible; border-right: 0; }
   .regional-workspace .playback-dock { order: -1; }
 }
+/* Connected presentation: exactly map-first / analytics-open. */
+.connected-workspace { height:100dvh; overflow:hidden; background:#fff; }
+.connected-header { flex:none; min-height:60px; padding:10px 18px; display:flex; align-items:center; justify-content:space-between; gap:12px; border-bottom:1px solid #dde5df; }
+.connected-brand { display:flex; align-items:baseline; gap:12px; min-width:0; }
+.connected-brand strong { font-size:17px; font-weight:650; }.connected-brand span { font-size:11px; color:#607568; white-space:nowrap; }
+.connected-header-actions { display:flex; gap:8px; }
+.connected-kpi-strip { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:12px; padding:10px 20px; margin:0; border-bottom:1px solid #dde5df; flex:none; }
+.connected-kpi-strip>div { display:flex; gap:12px; align-items:baseline; }.connected-kpi-strip dt { font-size:11px; color:#607568; }.connected-kpi-strip dd { margin:0; font-size:19px; font-weight:650; font-variant-numeric:tabular-nums; }
+.connected-layout { display:grid; grid-template-columns:minmax(0,1fr); flex:1; min-height:0; min-width:0; position:relative; overflow:hidden; }
+.analytics-open .connected-layout,.connected-developer .connected-layout { grid-template-columns:minmax(0,2fr) minmax(0,3fr); }
+.connected-analytics[hidden] { display:none; }.connected-analytics { grid-column:1; grid-row:1; padding:16px; overflow:auto; overscroll-behavior:contain; }
+.connected-workspace .simulation-card { border:0; border-radius:0; padding:0 0 16px; margin:0 0 16px; border-bottom:1px solid #dde5df; background:transparent; }
+.connected-workspace .simulation-map-area { padding:0; position:relative; overflow:hidden; min-width:0; min-height:0; }
+.connected-workspace .simulation-map { border:0; border-radius:0; flex:1; height:100%; min-height:0; }
+.connected-filters { position:absolute; top:10px; left:10px; right:55px; z-index:4; display:flex; gap:6px; pointer-events:none; }
+.connected-filters label { min-width:0; pointer-events:auto; }.connected-filters select { max-width:100%; font-size:11px; background:#fffffff2; border:1px solid #c9d3ca; border-radius:5px; padding:7px; }
+.connected-workspace .simulation-legend { position:absolute; left:10px; right:auto; bottom:36px; max-width:calc(100% - 65px); margin:0; padding:5px 8px; gap:10px; }
+.connected-workspace .maplibregl-ctrl-bottom-right { right:4px; bottom:3px; max-width:calc(100% - 14px); }.connected-workspace .maplibregl-ctrl-attrib { max-width:100%; font-size:10px; overflow-wrap:anywhere; }
+.connected-workspace .simulation-map-notice { top:55px; right:55px; max-height:calc(100% - 130px); overflow:auto; }
+.connected-empty { position:absolute; top:60px; left:12px; font-size:12px; padding:6px 10px; background:#fffffff0; border-radius:4px; pointer-events:none; }.connected-workspace .simulation-map-notice~.connected-empty { display:none; }
+.connected-error { flex:none; max-height:100px; overflow:auto; padding:6px 16px; font-size:12px; background:#fff3e7; }
+.connected-comparison { overflow-x:auto; margin-top:16px; }.connected-comparison table { width:100%; border-collapse:collapse; font-size:11px; }.connected-comparison th,.connected-comparison td { padding:7px 4px; border-bottom:1px solid #dde5df; text-align:right; }.connected-comparison th:first-child { text-align:left; }
+.connected-workspace .playback-dock { flex:none; order:initial; padding:7px 12px; gap:8px; }.connected-workspace .dock-timeline strong { display:none; }.connected-workspace .dock-speed { flex-wrap:wrap; }.connected-workspace .dock-speed label { font-size:10px; }
+.connected-close-analytics { display:none; }
+.connected-run-dialog { position:fixed; left:50%; top:50%; transform:translate(-50%,-50%); z-index:60; width:min(400px,calc(100vw - 32px)); padding:24px; background:white; border:1px solid #c9d3ca; border-radius:10px; }.connected-run-dialog h2 { margin:0 0 18px; font-weight:650; }.connected-run-dialog label { display:block; font-size:12px; }.connected-run-dialog input { display:block; width:100%; padding:9px; border:1px solid #c9d3ca; border-radius:5px; margin:6px 0 16px; }.connected-run-dialog button { margin-right:8px; }
+@media(max-width:1100px) { .connected-workspace .dock-seek { display:none; }.connected-workspace .dock-speed form { display:none; } }
+@media(max-width:760px) {
+ .connected-header { padding:8px 10px; min-height:56px; gap:6px; }.connected-brand { display:block; }.connected-brand strong { display:block; font-size:13px; }.connected-brand span { font-size:10px; }.connected-header-actions { gap:4px; }.connected-header-actions button { font-size:11px; padding:7px; }
+ .connected-kpi-strip { padding:8px 12px; gap:6px; }.connected-kpi-strip>div { display:block; }.connected-kpi-strip dd { font-size:17px; }
+ .analytics-open .connected-layout,.connected-developer .connected-layout { grid-template-columns:minmax(0,1fr); }
+ .connected-analytics { position:absolute; inset:0 auto 0 0; width:min(88%,420px); z-index:6; background:#fafcf9; box-shadow:5px 0 18px #183d3026; }.connected-close-analytics { display:inline-flex; }
+ .connected-workspace .simulation-map-area { grid-column:1; grid-row:1; height:100%; }.connected-workspace .simulation-map { height:100%; min-height:0; flex:1; }
+ .connected-workspace .playback-dock { display:flex; flex-wrap:wrap; gap:5px 10px; padding:6px 10px max(6px,env(safe-area-inset-bottom)); }.connected-workspace .dock-buttons { gap:4px; }.connected-workspace .dock-buttons button { font-size:10px; padding:5px 7px; }.connected-workspace .dock-timeline { flex:1; min-width:120px; }.connected-workspace .dock-timeline>div { font-size:10px; }.connected-workspace .dock-speed { flex:0; min-width:0; }.connected-workspace .dock-speed>span { display:none; }
+ .connected-filters { gap:4px; }.connected-filters label { flex:1; }.connected-filters select { width:100%; font-size:10px; padding:6px 3px; }
+}
+@media(max-width:760px) {
+ .connected-workspace .dock-speed { flex:0 0 auto; width:auto; }
+ .connected-workspace .dock-timeline { order:3; flex:1 0 100%; }
+ .connected-analytics { bottom:82px; }
+ .connected-close-analytics { position:sticky; top:0; z-index:1; background:white; }
+}

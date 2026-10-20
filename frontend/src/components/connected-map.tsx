@@ -1,18 +1,17 @@
 import { useEffect } from 'react'
 import { useMap } from './ui/map'
 import type { MapHealth } from './simulation-map-health'
-import { connectedBounds } from '@/lib/map-style'
 import { api } from '@/lib/api'
 
 export function ConnectedCamera() {
-  const {map,isLoaded}=useMap()
+  // Initial Hanoi camera is supplied to the Map constructor. Resizing must never refit.
+  const {map}=useMap()
   useEffect(()=> {
-    if (!map || !isLoaded) return
-    const [w,s,e,n]=connectedBounds
-    // Fit once per map/style lifetime, never on playback or vehicle filter updates.
-    const frame=requestAnimationFrame(()=>{map.resize();map.fitBounds([[w,s],[e,n]],{padding:35,duration:0})})
-    return ()=>cancelAnimationFrame(frame)
-  },[map,isLoaded])
+    if (!map) return
+    const observer=new ResizeObserver(()=>map.resize())
+    observer.observe(map.getContainer())
+    return ()=>observer.disconnect()
+  },[map])
   return null
 }
 export function ConnectedMapHealth({onChange}:{onChange:(health:MapHealth)=>void}) {
@@ -32,10 +31,9 @@ export function ConnectedMapHealth({onChange}:{onChange:(health:MapHealth)=>void
     const error=(event:{error?:{message:string};sourceId?:string})=> {failure=`Không tải được dữ liệu bản đồ${event.sourceId?` (${event.sourceId})`:''}: ${event.error?.message??'Kiểm tra artifact tiles, API và WebGL.'}`;publish()}
     const lost=()=>{failure='Mất ngữ cảnh WebGL. Kiểm tra GPU/RAM rồi tải lại bản đồ.';publish()}
     void api<{ready:boolean;reason?:string}>('/api/v5/connected/map/status',{signal:controller.signal}).then(status=>{if (!controller.signal.aborted) {artifactReady=status.ready;if (!status.ready) failure=`Bản đồ Connected NVMR chưa sẵn sàng: ${status.reason??'Thiếu artifact/manifest hợp lệ.'}`;publish()}}).catch(e=>{if (!controller.signal.aborted) {failure=`Không đọc được trạng thái basemap: ${String(e)}`;publish()}})
-    const observer=new ResizeObserver(()=>map.resize());observer.observe(map.getContainer())
     const timeout=window.setTimeout(()=>{if (!failure&&(!map.getSource('connected-basemap')||!map.isSourceLoaded('connected-basemap'))) {failure='Vector tiles tải quá 20 giây. Kiểm tra basemap manifest và API tiles cục bộ.';publish()}},20000)
     map.on('sourcedata',publish);map.on('styledata',publish);map.on('error',error);map.getCanvas().addEventListener('webglcontextlost',lost);publish()
-    return ()=>{controller.abort();clearTimeout(timeout);observer.disconnect();map.off('sourcedata',publish);map.off('styledata',publish);map.off('error',error);map.getCanvas().removeEventListener('webglcontextlost',lost)}
+    return ()=>{controller.abort();clearTimeout(timeout);map.off('sourcedata',publish);map.off('styledata',publish);map.off('error',error);map.getCanvas().removeEventListener('webglcontextlost',lost)}
   },[map,isLoaded,onChange])
   return null
 }
