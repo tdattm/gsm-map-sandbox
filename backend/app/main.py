@@ -27,7 +27,7 @@ def meters(a, b):
     return 6371008.8 * 2 * math.asin(math.sqrt(min(1, h)))
 
 
-def create_app(settings: Settings | None = None, registry: RegionRegistry | None = None):
+def create_app(settings: Settings | None = None, registry: RegionRegistry | None = None, connected_map_root=None):
     settings = settings or Settings()
     settings.region  # Fail early for invalid configuration, never for a missing PBF.
     app = FastAPI(title="GSM Map Sandbox", version="0.1.0")
@@ -40,7 +40,7 @@ def create_app(settings: Settings | None = None, registry: RegionRegistry | None
     from .connected_jobs import create_connected_router
     app.include_router(create_connected_router())
     from .connected_assets import create_connected_map_router
-    app.include_router(create_connected_map_router())
+    app.include_router(create_connected_map_router() if connected_map_root is None else create_connected_map_router(connected_map_root, portable=True))
     settings = registry.resolve("hcm-center")  # Pin legacy requests to the same immutable HCM snapshot.
 
     @app.exception_handler(HTTPException)

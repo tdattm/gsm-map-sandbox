@@ -41,6 +41,20 @@ Base: `/api/v5/simulation/jobs`.
 | GET | `/{id}/vehicles/{vehicleId}?timeSeconds=t` | Selected vehicle and optional booking |
 | GET | `/{id}/bookings/{bookingId}` | Immutable selected pickup/trip detail |
 | GET | `/{id}/routes/{ref}` | One selected persisted geometry |
+| GET | `/{id}/analytics/fleet-states` | Selected real checkpoints (historical default) |
+| GET | `/{id}/analytics/fleet-states?aggregation=time-weighted` | 120 equal half-open time buckets; mean concurrent vehicles integrated over ALL persisted transitions |
+
+Time-weighted chart values may be fractional. `timeSeconds`/`endSeconds` bound
+each interval; the final duplicate at duration closes the area, with zero measure.
+The step area represents interval averages, not an exact instantaneous trajectory.
+Every bucket conserves fleet size, and its area conserves the original timeline's
+vehicle-seconds for each state. Raw events/timelines and default checkpoint readers
+are unchanged. Positive simulation duration is required for weighted aggregation.
+
+Portable research replay: `scripts.connected_replay:create_app --factory` uses
+`GSM_REPLAY_BUNDLE` and the existing API with its restored `jobs/` store, blocking
+all write methods. It requires verified detail/overview map bytes and identities,
+but no build PBF, feature database, OSRM graph, router or simulation worker.
 
 Job IDs from v5 are rejected by v3/v4 endpoints. The existing single bounded
 queue, worker OS lease, atomic completion and cancellation/restart behavior are

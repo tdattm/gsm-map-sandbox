@@ -3,6 +3,7 @@ import { Dialog } from '@base-ui/react/dialog'
 import { ApplicationBrand, ApplicationMenuButton } from './application-shell'
 import { ConnectedRunDialog } from './connected-run-dialog'
 import { ConnectedFleetChart } from './connected-fleet-chart'
+import { ConnectedReplayDiagnostics } from './connected-replay-diagnostics'
 import { Button } from './ui/button'
 import { Map, MapControls } from './ui/map'
 import { PlaybackDock } from './playback-dock'
@@ -78,6 +79,7 @@ export default function ConnectedWorkspace() {
         {session.detailLoading&&<p role="status">Đang đọc tuyến đã lưu…</p>}{session.routeError&&<p role="alert">{session.routeError}<Button onClick={session.retry}>Thử lại chi tiết</Button></p>}
         {detail&&<div data-testid="connected-journey"><h3>{detail.bookingId} · {detail.serviceType}</h3>{[detail.pickupLeg,detail.tripLeg].map(leg=><div key={leg.phase}><strong>{leg.phase==='pickup'?'Đến đón · nét đứt':'Chở khách · nét liền'}</strong><p>{leg.distance.toFixed(1)} m · {leg.duration.toFixed(1)} s</p><progress aria-label={`Connected ${leg.phase} progress`} max={1} value={legProgress(leg,session.snapshot?.simulationTimeSeconds??0)}/></div>)}</div>}
       </section>
+      {new URLSearchParams(window.location.search).get('audit')==='1'&&<ConnectedReplayDiagnostics session={session} telemetry={telemetry} closeAnalytics={()=>setAnalytics(false)}/>}
     </aside>
     <section className="simulation-map-area" aria-label="Bản đồ miền Bắc liên thông">
       <div className="connected-filters"><label><span className="sr-only">Lọc operating zone</span><select aria-label="Lọc operating zone" value={zone} onChange={e=>setZone(e.target.value)}><option value="">Toàn vùng</option>{zoneIds.map(id=><option key={id} value={id}>{zoneLabel(id)}</option>)}<option value="outside-operating-zones">Ngoài operating zones</option></select></label><label><span className="sr-only">Lọc loại xe</span><select aria-label="Lọc loại xe connected" value={mode} onChange={e=>setMode(e.target.value)}><option value="">CAR + MOTORBIKE</option><option value="CAR">CAR</option><option value="MOTORBIKE">MOTORBIKE</option></select></label></div>

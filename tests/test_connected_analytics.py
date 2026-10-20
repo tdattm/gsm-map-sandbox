@@ -48,6 +48,11 @@ def test_endpoint_completed_only_cached_and_independent_snapshot_oracle(tmp_path
     series=client.get(prefix+'/analytics/fleet-states').json()
     assert client.get(prefix+'/analytics/fleet-states').json()==series
     assert calls==[run_id]
+    weighted=client.get(prefix+'/analytics/fleet-states?aggregation=time-weighted').json()
+    assert weighted['aggregation']=='time-weighted-mean/v1'
+    assert weighted['bucketCount']==120 and len(weighted['points'])==121
+    assert all(sum(row[s] for s in STATES)==pytest.approx(20) for row in weighted['points'])
+    assert client.get(prefix+'/analytics/fleet-states?aggregation=unknown').status_code==422
     assert not {'routes','vehicles','timelines','moving'} & series.keys()
     for row in series['points']:
         expected=connected_snapshot(result,row['timeSeconds'])['counts']

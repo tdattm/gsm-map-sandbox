@@ -18,7 +18,7 @@ from .connected_simulation import (SCHEMA, RESULT_SCHEMA, REGION_ID, ConnectedSc
 from .modes import routing_identity
 from .integrity import digest
 from .simulation_cache import IdleResultCache
-from .connected_analytics import fleet_state_series
+from .connected_analytics import fleet_state_series, fleet_state_buckets
 from .simulation_details import booking_detail
 from .simulation_jobs import JobStore, error
 from .simulation_resources import require_simulation_headroom
@@ -249,10 +249,10 @@ def create_connected_router(store=None, registry=None, readiness=connected_readi
         return connected_snapshot(result(id), timeSeconds)
 
     @router.get('/{id}/analytics/fleet-states')
-    def fleet_states(id: str):
+    def fleet_states(id: str, aggregation: str = Query(default='checkpoints', pattern='^(checkpoints|time-weighted)$')):
         status(id)  # Keep the same identity/lifecycle errors as persisted replay.
         try:
-            return analytics_cache.get(id, lambda: fleet_state_series(result(id)))
+            return analytics_cache.get(id + ':' + aggregation, lambda: fleet_state_buckets(result(id)) if aggregation == 'time-weighted' else fleet_state_series(result(id)))
         except (ValueError, KeyError, TypeError, IndexError) as exc:
             error('CONNECTED_ANALYTICS_UNAVAILABLE', str(exc), 422)
 

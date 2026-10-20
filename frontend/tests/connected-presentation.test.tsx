@@ -10,7 +10,7 @@ const mocked=vi.mocked(api)
 const areas=vi.hoisted(()=>vi.fn())
 vi.mock('../src/components/ui/chart',()=>({ChartContainer:({children}:{children:React.ReactNode})=><div data-testid="chart-container">{children}</div>,ChartTooltip:()=>null,ChartTooltipContent:()=>null,ChartLegend:()=>null,ChartLegendContent:()=>null}))
 vi.mock('recharts',()=>({AreaChart:({data,children}:{data:unknown;children:React.ReactNode})=><div data-testid="area-chart" data-series={JSON.stringify(data)}>{children}</div>,Area:(p:unknown)=>{areas(p);return null},CartesianGrid:()=>null,XAxis:()=>null,YAxis:()=>null}))
-const raw=(id:string)=>({runId:id,fleetSize:2,durationSeconds:20,transitionPointCount:2,sampled:false,points:[{timeSeconds:0,OFFLINE:1,IDLE:1,ASSIGNED:0,ON_TRIP:0},{timeSeconds:20,OFFLINE:0,IDLE:1,ASSIGNED:0,ON_TRIP:1}]})
+const raw=(id:string)=>({runId:id,fleetSize:2,durationSeconds:20,transitionPointCount:2,sampled:false,aggregation:'time-weighted-mean/v1',bucketCount:120,points:Array.from({length:121},(_,i)=>({timeSeconds:20*i/120,endSeconds:20*Math.min(i+1,120)/120,OFFLINE:.25,IDLE:1.5,ASSIGNED:0,ON_TRIP:.25}))})
 beforeEach(()=>{vi.clearAllMocks()})
 const dialog=(open=vi.fn())=>render(<Dialog.Root open><Dialog.Portal><ConnectedRunDialog busy={false} onOpen={open} onClose={()=>{}}/></Dialog.Portal></Dialog.Root>)
 it('lists completed Connected runs and opens a selection without enqueueing',async()=>{
@@ -39,7 +39,8 @@ it('uses a bounded aggregate once per run, conserved state series and nonanimate
  view.rerender(<ConnectedFleetChart runId="chart-cache" fleetSize={2} duration={20}/>);view.unmount()
  render(<ConnectedFleetChart runId="chart-cache" fleetSize={2} duration={20}/>)
  expect(screen.getByTestId('area-chart')).toBeVisible();expect(mocked).toHaveBeenCalledTimes(1)
- expect(mocked.mock.calls[0][0]).toBe('/api/v5/simulation/jobs/chart-cache/analytics/fleet-states')
+ expect(mocked.mock.calls[0][0]).toBe('/api/v5/simulation/jobs/chart-cache/analytics/fleet-states?aggregation=time-weighted')
+ expect(screen.getByText(/không phải trạng thái tức thời/)).toBeVisible()
 })
 it('does not render invented chart data for invalid or missing timelines',async()=>{
  mocked.mockResolvedValue({...raw('bad-chart'),points:[]})

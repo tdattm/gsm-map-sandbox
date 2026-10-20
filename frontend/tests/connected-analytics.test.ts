@@ -15,3 +15,15 @@ it('rejects missing points, wrong totals, wrong identity, duplicate and fabricat
 it('formats simulation time including runs longer than one hour',()=>{
  expect(simulationTimestamp(65)).toBe('01:05');expect(simulationTimestamp(19465.5)).toBe('5:24:25')
 })
+
+it('accepts fractional time-weighted means only with contiguous declared intervals',()=>{
+ const weighted:FleetStateSeries={runId:'persisted',fleetSize:2,durationSeconds:60,transitionPointCount:3,sampled:false,aggregation:'time-weighted-mean/v1',bucketCount:120,
+  points:Array.from({length:121},(_,i)=>({timeSeconds:i/2,endSeconds:Math.min(i+1,120)/2,OFFLINE:.25,IDLE:1.5,ASSIGNED:.25,ON_TRIP:0}))}
+ expect(validateFleetStateSeries(weighted,'persisted',2,60)).toBe(weighted)
+ const gap=structuredClone(weighted);gap.points[20].endSeconds!+=1
+ expect(()=>validateFleetStateSeries(gap,'persisted',2,60)).toThrow()
+ const negative=structuredClone(weighted);negative.points[3].OFFLINE=-.1
+ expect(()=>validateFleetStateSeries(negative,'persisted',2,60)).toThrow()
+ const corrupted=structuredClone(weighted);corrupted.points[3].IDLE=1.6
+ expect(()=>validateFleetStateSeries(corrupted,'persisted',2,60)).toThrow()
+})

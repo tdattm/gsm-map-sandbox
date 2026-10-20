@@ -50,3 +50,33 @@ def fleet_state_series(result, limit=120):
     return {'runId': result['runId'], 'fleetSize': fleet_size,
             'durationSeconds': duration, 'transitionPointCount': original_count,
             'sampled': original_count > limit, 'points': points}
+
+
+def fleet_state_buckets(result, limit=120):
+    """Exact vehicle-seconds over equal half-open intervals, using ALL transitions.
+
+    Fractions are average concurrent vehicles, never instantaneous synthetic states.
+    An endpoint change has zero measure. The original checkpoint API stays intact.
+    """
+    series = fleet_state_series(result, limit=sum(map(len, result['timelines'].values())) + 2)
+    duration = series['durationSeconds']
+    if duration <= 0:
+        raise ValueError('Time-weighted chart requires positive duration')
+    points, rows, index = series['points'], [], 0
+    for bucket in range(limit):
+        start, end = duration * bucket / limit, duration * (bucket + 1) / limit
+        cursor, area = start, dict.fromkeys(STATES, 0.)
+        while index + 1 < len(points) and points[index + 1]['timeSeconds'] <= start:
+            index += 1
+        while cursor < end:
+            boundary = min(end, points[index + 1]['timeSeconds'] if index + 1 < len(points) else end)
+            for state in STATES:
+                area[state] += points[index][state] * (boundary - cursor)
+            cursor = boundary
+            if index + 1 < len(points) and points[index + 1]['timeSeconds'] <= cursor:
+                index += 1
+        rows.append({'timeSeconds': start, 'endSeconds': end,
+                     **{state: area[state] / (end - start) for state in STATES}})
+    # Duplicate the final bucket at its end to terminate the step area accurately.
+    return {**series, 'aggregation': 'time-weighted-mean/v1', 'sampled': False,
+            'bucketCount': limit, 'points': rows + [{**rows[-1], 'timeSeconds': duration}]}

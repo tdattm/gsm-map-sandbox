@@ -14,7 +14,7 @@ from .integrity import digest
 _verification_lock = threading.Lock()
 
 
-def map_status(root=PROJECT_ROOT):
+def map_status(root=PROJECT_ROOT, portable=False):
     root = Path(root)
     config_path = root/'config/connected-nvmr.json'
     config = json.loads(config_path.read_text(encoding='utf-8'))
@@ -24,12 +24,16 @@ def map_status(root=PROJECT_ROOT):
     try:
         manifest = json.loads(manifest_path.read_text(encoding='utf-8'))
         # The pipeline's complete identity is verified before serving any bytes.
-        from scripts.connected_gis import verify_render
-        from scripts.connected_overview_tiles import verify_overview
-        # Avoid duplicate cold checksum reads from simultaneous viewport tiles.
         with _verification_lock:
-            verify_render(root=root)
-            overview = verify_overview(root=root)
+            if portable:
+                from .replay_bundle import portable_map_status
+                _, maps, _ = portable_map_status(root)
+                manifest, overview = maps
+            else:
+                from scripts.connected_gis import verify_render
+                from scripts.connected_overview_tiles import verify_overview
+                verify_render(root=root)
+                overview = verify_overview(root=root)
         ready, reason = True, ''
     except (OSError, ValueError, KeyError, RuntimeError, sqlite3.Error) as exc:
         reason = str(exc)
@@ -43,13 +47,13 @@ def map_status(root=PROJECT_ROOT):
         'overviewManifest': overview if ready else None}
 
 
-def create_connected_map_router(root=PROJECT_ROOT):
+def create_connected_map_router(root=PROJECT_ROOT, portable=False):
     root = Path(root)
     router = APIRouter(prefix='/api/v5/connected/map', tags=['Connected offline map'])
 
     @router.get('/status')
     async def status():
-        return await asyncio.to_thread(map_status, root)
+        return await asyncio.to_thread(map_status, root, portable)
 
     @router.get('/tiles/{z}/{x}/{y}.pbf')
     async def tile(z: int, x: int, y: int):
@@ -57,7 +61,7 @@ def create_connected_map_router(root=PROJECT_ROOT):
             raise HTTPException(404, {'code': 'TILE_OUTSIDE_RANGE', 'message': 'Invalid XYZ tile.'})
 
         def read():
-            state = map_status(root)
+            state = map_status(root, portable)
             if not state['ready']:
                 raise HTTPException(503, {'code': 'CONNECTED_MAP_NOT_READY', 'message': state['reason']})
             if not state['minZoom'] <= z <= state['maxZoom']:
