@@ -13,7 +13,7 @@ export function modeUrl(href: string, mode: AppMode, runtime: 'live' | 'saved' =
   const url = new URL(href)
   // Preserve unrelated URL options; fixture controls belong only to Simulation.
   for (const name of ['runtime', 'mode', 'fixture', 'fleet', 'zoom', 'scenario', 'dev']) url.searchParams.delete(name)
-  if (mode === 'simulation') url.searchParams.set('runtime', 'simulation')
+  if (mode === 'simulation') { url.searchParams.set('runtime', 'simulation'); url.searchParams.set('scenario', 'connected') }
   else if (mode === 'voucher' && runtime === 'saved') url.searchParams.set('runtime', 'saved')
   else url.searchParams.set('mode', mode)
   return url.pathname + url.search + url.hash

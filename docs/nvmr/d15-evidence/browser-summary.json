@@ -1,0 +1,94 @@
+[
+  {
+    "label": "1920 A",
+    "canvasOne": true,
+    "oneHeader": true,
+    "noDocumentOverflow": true,
+    "kpiOnlyA": true,
+    "chartOnlyB": true,
+    "overlaysInsideMap": true,
+    "noOverlayPlaybackOverlap": true,
+    "legendAttributionSeparate": true
+  },
+  {
+    "label": "1920 B",
+    "canvasOne": true,
+    "oneHeader": true,
+    "noDocumentOverflow": true,
+    "kpiOnlyA": true,
+    "chartOnlyB": true,
+    "overlaysInsideMap": true,
+    "noOverlayPlaybackOverlap": true,
+    "legendAttributionSeparate": true,
+    "chartFiniteAndResized": true
+  },
+  {
+    "label": "1366 A",
+    "canvasOne": true,
+    "oneHeader": true,
+    "noDocumentOverflow": true,
+    "kpiOnlyA": true,
+    "chartOnlyB": true,
+    "overlaysInsideMap": true,
+    "noOverlayPlaybackOverlap": true,
+    "legendAttributionSeparate": true
+  },
+  {
+    "label": "1366 B",
+    "canvasOne": true,
+    "oneHeader": true,
+    "noDocumentOverflow": true,
+    "kpiOnlyA": true,
+    "chartOnlyB": true,
+    "overlaysInsideMap": true,
+    "noOverlayPlaybackOverlap": true,
+    "legendAttributionSeparate": true,
+    "chartFiniteAndResized": true
+  },
+  {
+    "label": "1024 A",
+    "canvasOne": true,
+    "oneHeader": true,
+    "noDocumentOverflow": true,
+    "kpiOnlyA": true,
+    "chartOnlyB": true,
+    "overlaysInsideMap": true,
+    "noOverlayPlaybackOverlap": true,
+    "legendAttributionSeparate": true
+  },
+  {
+    "label": "1024 B",
+    "canvasOne": true,
+    "oneHeader": true,
+    "noDocumentOverflow": true,
+    "kpiOnlyA": true,
+    "chartOnlyB": true,
+    "overlaysInsideMap": true,
+    "noOverlayPlaybackOverlap": true,
+    "legendAttributionSeparate": true,
+    "chartFiniteAndResized": true
+  },
+  {
+    "label": "390 A",
+    "canvasOne": true,
+    "oneHeader": true,
+    "noDocumentOverflow": true,
+    "kpiOnlyA": true,
+    "chartOnlyB": true,
+    "overlaysInsideMap": true,
+    "noOverlayPlaybackOverlap": true,
+    "legendAttributionSeparate": true
+  },
+  {
+    "label": "390 B",
+    "canvasOne": true,
+    "oneHeader": true,
+    "noDocumentOverflow": true,
+    "kpiOnlyA": true,
+    "chartOnlyB": true,
+    "overlaysInsideMap": true,
+    "noOverlayPlaybackOverlap": true,
+    "legendAttributionSeparate": true,
+    "chartFiniteAndResized": true
+  }
+]

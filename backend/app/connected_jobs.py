@@ -18,6 +18,7 @@ from .connected_simulation import (SCHEMA, RESULT_SCHEMA, REGION_ID, ConnectedSc
 from .modes import routing_identity
 from .integrity import digest
 from .simulation_cache import IdleResultCache
+from .connected_analytics import fleet_state_series
 from .simulation_details import booking_detail
 from .simulation_jobs import JobStore, error
 from .simulation_resources import require_simulation_headroom
@@ -204,6 +205,7 @@ def create_connected_router(store=None, registry=None, readiness=connected_readi
     store = store or JobStore()
     router = APIRouter(prefix='/api/v5/simulation/jobs', tags=['Connected NVMR global simulation'])
     cache = IdleResultCache()
+    analytics_cache = IdleResultCache(idle_seconds=300.)
 
     def status(id):
         value = store.read(id)
@@ -245,6 +247,14 @@ def create_connected_router(store=None, registry=None, readiness=connected_readi
     @router.get('/{id}/snapshot')
     def current(id: str, timeSeconds: float = Query(default=0, ge=0, allow_inf_nan=False)):
         return connected_snapshot(result(id), timeSeconds)
+
+    @router.get('/{id}/analytics/fleet-states')
+    def fleet_states(id: str):
+        status(id)  # Keep the same identity/lifecycle errors as persisted replay.
+        try:
+            return analytics_cache.get(id, lambda: fleet_state_series(result(id)))
+        except (ValueError, KeyError, TypeError, IndexError) as exc:
+            error('CONNECTED_ANALYTICS_UNAVAILABLE', str(exc), 422)
 
     @router.get('/{id}/routes/{ref}')
     def route(id: str, ref: str):

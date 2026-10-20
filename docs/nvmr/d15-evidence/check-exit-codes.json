@@ -1,0 +1,7 @@
+{
+  "lint": 0,
+  "test": 0,
+  "typecheck": 0,
+  "verify:replay": 0,
+  "build": 0
+}

@@ -443,3 +443,45 @@ button:focus-visible, input:focus-visible, select:focus-visible, summary:focus-v
  .connected-analytics { bottom:82px; }
  .connected-close-analytics { position:sticky; top:0; z-index:1; background:white; }
 }
+/* D1.5 shared shell, bounded analytics and concise playback. */
+.application-root { min-width:0; min-height:0; }
+.connected-header-identity { display:flex; align-items:center; gap:8px; min-width:0; }
+.connected-brand h1 { font-size:16px; font-weight:650; line-height:1.35; margin:0; }
+.connected-brand .brand-subtitle { display:block; font-size:11px; color:#708078; }
+.connected-workspace .connected-header { padding:8px 16px; min-height:62px; }
+.connected-workspace .simulation-kpis { gap:6px; }
+.connected-workspace .simulation-kpis>div { background:#f5f8f6; border-radius:6px; padding:9px 10px; }
+.connected-workspace .simulation-kpis dd { font-size:21px; letter-spacing:-.4px; }
+.connected-workspace .simulation-panel h2 { margin-bottom:10px; font-size:13px; }
+.connected-section-heading { display:flex; align-items:baseline; justify-content:space-between; gap:8px; }
+.connected-section-heading>span { font-size:10px; color:#75847d; white-space:nowrap; }
+.connected-workspace .connected-fleet-chart { height:230px; width:100%; aspect-ratio:auto; min-width:0; }
+.connected-fleet-chart [data-slot=chart-legend] { gap:12px; flex-wrap:wrap; }
+.connected-fleet-chart .recharts-legend-wrapper { font-size:10px; }
+.connected-workspace .connected-comparison { margin-top:0; }
+.connected-workspace .connected-comparison+ .connected-comparison { margin-top:18px; }
+.connected-current-fleet>summary { margin-bottom:6px; }
+.connected-workspace .connected-current-fleet { padding-bottom:10px; }
+.connected-workspace .compact-playback { display:flex; flex-wrap:nowrap; gap:14px; min-height:52px; padding:6px 14px max(6px,env(safe-area-inset-bottom)); }
+.compact-playback-buttons { display:flex; gap:3px; flex:none; }
+.compact-timestamp { font-size:13px; font-weight:650; font-variant-numeric:tabular-nums; white-space:nowrap; flex:none; }
+.compact-timestamp span { color:#7c8982; font-size:11px; font-weight:450; }
+.compact-timeline { flex:1; min-width:0; }
+.compact-playback select { font-size:12px; padding:6px; background:#f6f9f7; border:1px solid #dce6df; border-radius:6px; flex:none; }
+.connected-run-dialog { width:min(500px,calc(100vw - 32px)); max-height:calc(100dvh - 48px); overflow:auto; padding:20px; }
+.connected-run-dialog .connected-section-heading { align-items:center; margin-bottom:12px; }.connected-run-dialog h2 { margin:0; font-size:16px; }
+.connected-run-dialog p,.connected-run-error { font-size:12px; color:#62776a; margin:12px 0; }
+.connected-run-list { list-style:none; margin:0; padding:0; max-height:42dvh; overflow:auto; }
+.connected-run-list li+li { border-top:1px solid #e2eae5; }
+.connected-run-list button { display:block; text-align:left; width:100%; margin:0; padding:12px 8px; border-radius:6px; cursor:pointer; }.connected-run-list button:hover,.connected-run-list button:focus-visible { background:#eef5f0; outline:2px solid #9bbbaa; }
+.connected-run-list button>span { display:flex; justify-content:space-between; gap:8px; font-size:12px; }.connected-run-list button>span>span { color:#6c7e73; }.connected-run-list small { display:block; font-size:10px; color:#748379; margin-top:3px; overflow-wrap:anywhere; }
+.connected-run-manual { border-top:1px solid #dde6df; margin-top:14px; padding-top:16px; }.connected-run-manual input { margin-bottom:10px; }
+@media(max-width:760px) {
+ .connected-workspace .connected-header { padding:7px 8px; gap:4px; }.connected-header-identity { gap:2px; }.connected-brand h1 { font-size:12px; }.connected-brand .brand-subtitle { font-size:9px; max-width:170px; overflow:hidden; text-overflow:ellipsis; }
+ .connected-workspace .compact-playback { display:grid; grid-template-columns:auto minmax(0,1fr) auto; gap:2px 8px; padding:5px 10px max(5px,env(safe-area-inset-bottom)); }
+ .compact-timestamp { justify-self:center; font-size:13px; }.compact-timestamp span { font-size:10px; }.compact-timeline { grid-column:1/-1; padding:3px 2px; }
+ .compact-playback select { grid-column:3; grid-row:1; }.compact-playback-buttons button { width:30px; height:30px; }
+ .connected-workspace .connected-fleet-chart { height:210px; }
+}
+.application-menu { inset:66px auto auto 12px; width:min(300px,calc(100vw - 24px)); max-height:calc(100dvh - 155px); border:1px solid #dce6df; border-radius:10px; box-shadow:0 12px 40px #183d3026; padding:18px 14px; }
+.application-menu p { margin-bottom:12px; }.application-menu nav { gap:3px; }

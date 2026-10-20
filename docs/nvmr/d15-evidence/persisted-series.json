@@ -1,0 +1,205 @@
+{
+  "runId": "271d116d28f64d75a7a49b3f300d7b24",
+  "fleetSize": 100,
+  "durationSeconds": 19465.491,
+  "transitionPointCount": 28,
+  "sampled": false,
+  "points": [
+    {
+      "timeSeconds": 0,
+      "OFFLINE": 0,
+      "IDLE": 100,
+      "ASSIGNED": 0,
+      "ON_TRIP": 0
+    },
+    {
+      "timeSeconds": 261.075,
+      "OFFLINE": 0,
+      "IDLE": 99,
+      "ASSIGNED": 1,
+      "ON_TRIP": 0
+    },
+    {
+      "timeSeconds": 294.822,
+      "OFFLINE": 0,
+      "IDLE": 98,
+      "ASSIGNED": 2,
+      "ON_TRIP": 0
+    },
+    {
+      "timeSeconds": 327.598,
+      "OFFLINE": 0,
+      "IDLE": 97,
+      "ASSIGNED": 3,
+      "ON_TRIP": 0
+    },
+    {
+      "timeSeconds": 492.991,
+      "OFFLINE": 0,
+      "IDLE": 96,
+      "ASSIGNED": 4,
+      "ON_TRIP": 0
+    },
+    {
+      "timeSeconds": 581.26,
+      "OFFLINE": 0,
+      "IDLE": 95,
+      "ASSIGNED": 5,
+      "ON_TRIP": 0
+    },
+    {
+      "timeSeconds": 611.575,
+      "OFFLINE": 0,
+      "IDLE": 95,
+      "ASSIGNED": 4,
+      "ON_TRIP": 1
+    },
+    {
+      "timeSeconds": 614.211,
+      "OFFLINE": 0,
+      "IDLE": 94,
+      "ASSIGNED": 5,
+      "ON_TRIP": 1
+    },
+    {
+      "timeSeconds": 616.023,
+      "OFFLINE": 0,
+      "IDLE": 93,
+      "ASSIGNED": 6,
+      "ON_TRIP": 1
+    },
+    {
+      "timeSeconds": 753.258,
+      "OFFLINE": 0,
+      "IDLE": 92,
+      "ASSIGNED": 7,
+      "ON_TRIP": 1
+    },
+    {
+      "timeSeconds": 821.547,
+      "OFFLINE": 0,
+      "IDLE": 91,
+      "ASSIGNED": 8,
+      "ON_TRIP": 1
+    },
+    {
+      "timeSeconds": 1005.023,
+      "OFFLINE": 0,
+      "IDLE": 91,
+      "ASSIGNED": 7,
+      "ON_TRIP": 2
+    },
+    {
+      "timeSeconds": 1054.022,
+      "OFFLINE": 0,
+      "IDLE": 91,
+      "ASSIGNED": 6,
+      "ON_TRIP": 3
+    },
+    {
+      "timeSeconds": 1071.511,
+      "OFFLINE": 0,
+      "IDLE": 91,
+      "ASSIGNED": 5,
+      "ON_TRIP": 4
+    },
+    {
+      "timeSeconds": 1152.698,
+      "OFFLINE": 0,
+      "IDLE": 91,
+      "ASSIGNED": 4,
+      "ON_TRIP": 5
+    },
+    {
+      "timeSeconds": 1234.56,
+      "OFFLINE": 0,
+      "IDLE": 91,
+      "ASSIGNED": 3,
+      "ON_TRIP": 6
+    },
+    {
+      "timeSeconds": 1288.791,
+      "OFFLINE": 0,
+      "IDLE": 91,
+      "ASSIGNED": 2,
+      "ON_TRIP": 7
+    },
+    {
+      "timeSeconds": 1345.847,
+      "OFFLINE": 0,
+      "IDLE": 91,
+      "ASSIGNED": 1,
+      "ON_TRIP": 8
+    },
+    {
+      "timeSeconds": 1485.758,
+      "OFFLINE": 0,
+      "IDLE": 91,
+      "ASSIGNED": 0,
+      "ON_TRIP": 9
+    },
+    {
+      "timeSeconds": 3289.6580000000004,
+      "OFFLINE": 0,
+      "IDLE": 92,
+      "ASSIGNED": 0,
+      "ON_TRIP": 8
+    },
+    {
+      "timeSeconds": 3390.723,
+      "OFFLINE": 0,
+      "IDLE": 93,
+      "ASSIGNED": 0,
+      "ON_TRIP": 7
+    },
+    {
+      "timeSeconds": 3437.898,
+      "OFFLINE": 0,
+      "IDLE": 94,
+      "ASSIGNED": 0,
+      "ON_TRIP": 6
+    },
+    {
+      "timeSeconds": 3439.922,
+      "OFFLINE": 0,
+      "IDLE": 95,
+      "ASSIGNED": 0,
+      "ON_TRIP": 5
+    },
+    {
+      "timeSeconds": 3616.075,
+      "OFFLINE": 0,
+      "IDLE": 96,
+      "ASSIGNED": 0,
+      "ON_TRIP": 4
+    },
+    {
+      "timeSeconds": 4241.111,
+      "OFFLINE": 0,
+      "IDLE": 97,
+      "ASSIGNED": 0,
+      "ON_TRIP": 3
+    },
+    {
+      "timeSeconds": 4250.747,
+      "OFFLINE": 0,
+      "IDLE": 98,
+      "ASSIGNED": 0,
+      "ON_TRIP": 2
+    },
+    {
+      "timeSeconds": 13097.76,
+      "OFFLINE": 0,
+      "IDLE": 99,
+      "ASSIGNED": 0,
+      "ON_TRIP": 1
+    },
+    {
+      "timeSeconds": 19465.491,
+      "OFFLINE": 0,
+      "IDLE": 100,
+      "ASSIGNED": 0,
+      "ON_TRIP": 0
+    }
+  ]
+}

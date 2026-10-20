@@ -5,6 +5,7 @@ import { ArrowUpRight, Check, ChevronRight, Database, FileBox, FolderOpen, Layer
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
 import { connectedPresentation, modeFromUrl, modeUrl, type AppMode } from '@/lib/navigation'
+import { ApplicationShell, ApplicationBrand, useApplicationShell } from '@/components/application-shell'
 import { PrimaryNavigation } from '@/components/primary-navigation'
 import { InspectorSection } from '@/components/inspector-section'
 import { PlaybackDock, ClockDock } from '@/components/playback-dock'
@@ -38,12 +39,14 @@ export default function App() {
     window.addEventListener('popstate', sync)
     return () => window.removeEventListener('popstate', sync)
   }, [])
-  return connectedPresentation(search)
+  const navigate=(mode:AppMode)=>{window.history.pushState(null,'',modeUrl(window.location.href,mode));window.dispatchEvent(new PopStateEvent('popstate'))}
+  return <ApplicationShell mode={modeFromUrl(search)} onMode={navigate}>{connectedPresentation(search)
     ? <Suspense fallback={<p role="status">Đang tải Connected NVMR…</p>}><ConnectedWorkspace/></Suspense>
-    : <LegacyApp/>
+    : <OperationalWorkspace/>}</ApplicationShell>
 }
 
-function LegacyApp() {
+function OperationalWorkspace() {
+  const shell=useApplicationShell()
   const [mapError, setMapError] = useState('')
   const [routeError, setRouteError] = useState('')
   const [start, setStart] = useState<Coordinate | null>(null)
@@ -57,7 +60,6 @@ function LegacyApp() {
   const region = useRegion(saved, refreshKey)
   const { dataset, connectionError, regionId } = region
   const [navigationSize, setNavigationSize] = useState<'expanded' | 'collapsed' | 'hidden'>('expanded')
-  const [mobileMenu, setMobileMenu] = useState(false)
   const [inspectorOpen, setInspectorOpen] = useState(true)
   const [mobileView, setMobileView] = useState<'map' | 'analytics'>('map')
   const [bookingFocus, setBookingFocus] = useState<BookingFocus | null>(null)
@@ -74,7 +76,7 @@ function LegacyApp() {
   const replayStyle=useMemo(()=>{if(!saved || !voucher.replayAssets) return undefined; const style=savedMapStyle(voucher.replayAssets); return {light:style,dark:style}},[saved,voucher.replayAssets])
   const voucherReady=saved ? !!voucher.artifact && !!voucher.replayAssets && !mapError : ready
   const focusVehicle = (id: string, kind: FleetFocus['kind']) => { fleet.setSelectedVehicleId(id); setFleetFocus({ id, kind, sequence: performance.now() }) }
-  const changeMode = (next: AppMode, fromHistory = false) => { if (next === mode) return; playback.pause(); clear(); fleet.clear(); booking.clear(); voucher.clear(); setFleetFocus(null); setBookingFocus(null); if(next==='single' && service==='MIXED')setService('CAR'); setMapError(''); setMode(next); if(!fromHistory)window.history.pushState(null,'',modeUrl(window.location.href,next,voucherRuntime)) }
+  const changeMode = (next: AppMode, fromHistory = false) => { if (next === 'simulation' && !fromHistory) {window.history.pushState(null,'',modeUrl(window.location.href,next));window.dispatchEvent(new PopStateEvent('popstate'));return}; if (next === mode) return; playback.pause(); clear(); fleet.clear(); booking.clear(); voucher.clear(); setFleetFocus(null); setBookingFocus(null); if(next==='single' && service==='MIXED')setService('CAR'); setMapError(''); setMode(next); if(!fromHistory){window.history.pushState(null,'',modeUrl(window.location.href,next,voucherRuntime));window.dispatchEvent(new PopStateEvent('popstate'))} }
   useEffect(()=>{const pop=()=>{const runtime=new URLSearchParams(window.location.search).get('runtime');setVoucherRuntime(runtime==='saved'?'saved':'live');changeMode(modeFromUrl(window.location.search),true)};window.addEventListener('popstate',pop);return ()=>window.removeEventListener('popstate',pop)},[mode,voucherRuntime,service])
   const mapReady = saved ? !!replayStyle : !!dataset?.artifacts.map_ready
   const pbfPresent = ['present_unverified', 'present_verified'].includes(dataset?.pbf.state ?? '')
@@ -116,8 +118,8 @@ function LegacyApp() {
   return <div className={`app-shell nav-${navigationSize} ${inspectorOpen ? "inspector-open" : "inspector-closed"} mode-${mode} view-${mobileView}`}>
     {(import.meta.env.DEV || new URLSearchParams(window.location.search).get('audit')==='1') && <RuntimeAudit />}
     <header className="app-header">
-      <Button variant="outline" aria-label="Mở menu chính" onClick={() => { if (window.matchMedia('(max-width: 900px)').matches) setMobileMenu(true); else setNavigationSize(navigationSize === 'hidden' ? 'expanded' : 'hidden') }}><Navigation size={18}/></Button>
-      <div className="brand"><span className="brand-icon"><Navigation size={24} /></span><div><h1>GSM Map Sandbox</h1><span className="brand-subtitle">{mode === 'simulation' ? 'Mô phỏng quy mô lớn' : mode === 'voucher' ? "Phòng thí nghiệm voucher" : mode === 'booking' ? "Đặt xe và điều phối" : mode === 'fleet' ? "Mô phỏng đội xe" : "Một hành trình"}</span></div></div>
+      <Button variant="outline" aria-label="Mở menu chính" onClick={() => { if (window.matchMedia('(max-width: 900px)').matches) shell?.openMenu(); else setNavigationSize(navigationSize === 'hidden' ? 'expanded' : 'hidden') }}><Navigation size={18}/></Button>
+      <ApplicationBrand subtitle={mode === 'simulation' ? 'Mô phỏng quy mô lớn' : mode === 'voucher' ? 'Phòng thí nghiệm voucher' : mode === 'booking' ? 'Đặt xe và điều phối' : mode === 'fleet' ? 'Mô phỏng đội xe' : 'Một hành trình'}/>
       {mode !== 'simulation' && <Button variant="outline" aria-label="Mở hoặc ẩn bảng chi tiết" aria-expanded={inspectorOpen} onClick={() => setInspectorOpen(!inspectorOpen)}>Chi tiết</Button>}
       {mode === 'voucher' && <div className="workspace-view" role="group" aria-label="Chế độ hiển thị"><Button size="sm" variant={mobileView === 'map' ? 'secondary' : 'outline'} onClick={() => setMobileView('map')}>Bản đồ</Button><Button size="sm" variant={mobileView === 'analytics' ? 'secondary' : 'outline'} onClick={() => setMobileView('analytics')}>Phân tích</Button></div>}
       <Badge variant="outline" className="local-badge"><span className="status-dot green" />Mô phỏng cục bộ</Badge>
@@ -125,7 +127,7 @@ function LegacyApp() {
       {mode === 'simulation' ? <div className="header-status">NVMR · CAR + MOTORBIKE · phát lại mô hình</div> : <div className="header-status"><span><span className={mapReady && (saved || !connectionError) ? 'status-dot green' : 'status-dot amber'} />{mapReady ? 'Bản đồ cục bộ' : 'Chờ dữ liệu bản đồ'}</span><span><span className={dataset?.osrm.state === 'connected' && !connectionError ? 'status-dot green' : 'status-dot'} />{saved ? "Phát lại đã lưu · không cần tính tuyến trực tiếp" : 'OSRM'} {!saved && (dataset?.osrm.state === 'connected' && !connectionError ? 'kết nối' : 'chưa kết nối')}</span></div>}
     </header>
     <main className="workspace">
-      <PrimaryNavigation mode={mode} size={navigationSize} onMode={next=>changeMode(next)} onSize={setNavigationSize} mobileOpen={mobileMenu} onMobileOpen={setMobileMenu}/>
+      <PrimaryNavigation mode={mode} size={navigationSize} onMode={next=>changeMode(next)} onSize={setNavigationSize} mobileOpen={false} onMobileOpen={()=>{}} desktopOnly/>
       {mode === 'simulation' ? <Suspense fallback={<p role="status">Đang tải mô phỏng quy mô lớn…</p>}><SimulationWorkspace previousRegion={region.metadata?.label ?? regionId}/></Suspense> : <>
       <aside className="sidebar inspector" hidden={!inspectorOpen} aria-label="Cấu hình mô phỏng"><div className="inspector-toolbar"><strong>Cấu hình và chi tiết</strong><Button variant="ghost" size="sm" aria-label="Đóng bảng chi tiết" onClick={() => setInspectorOpen(false)}>×</Button></div>
         <InspectorSection title="Khu vực mô phỏng" defaultOpen>

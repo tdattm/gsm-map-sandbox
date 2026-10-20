@@ -1,4 +1,4 @@
-import { act, fireEvent, render, screen } from '@testing-library/react'
+import { act, fireEvent, render, screen, waitFor } from '@testing-library/react'
 import { beforeEach, expect, it, vi } from 'vitest'
 import App from '../src/App'
 import ConnectedWorkspace from '../src/components/connected-workspace'
@@ -96,7 +96,7 @@ it('empty root has no invented fleet or booking counts and never creates a job',
   expect(screen.getByTestId('connected-kpi-strip').querySelectorAll('dd')).toHaveLength(4)
   expect(screen.getByTestId('connected-kpi-strip').textContent).not.toMatch(/5[.,]?000/)
   expect([...screen.getByTestId('connected-kpi-strip').querySelectorAll('dd')].map(n=>n.textContent)).toEqual(['—','—','—','—'])
-  expect(screen.getByRole('status')).toHaveTextContent('Chưa mở run v5')
+  expect(screen.getByText('Chưa mở run v5')).toBeVisible()
   expect(mocks.create).not.toHaveBeenCalled()
 })
 it('uses loaded result counts independently of filters, preserves selection and clock on snapshot updates',()=>{
@@ -114,4 +114,35 @@ it('uses loaded result counts independently of filters, preserves selection and 
   expect(screen.getByLabelText('Lọc operating zone')).toHaveValue('bac-ninh')
   expect(document.querySelector('.playback-dock')).toHaveAttribute('data-dock-time','43')
   expect(mocks.seek).not.toHaveBeenCalled()
+})
+
+it('uses shared navigation and opens Connected from the large-scale menu with a single header',async()=>{
+  render(<App/>);await screen.findByTestId('connected-workspace')
+  expect(screen.getByTestId('application-shell')).toBeInTheDocument()
+  expect(document.querySelectorAll('header')).toHaveLength(1)
+  const map=screen.getByTestId('one-map')
+  fireEvent.click(screen.getByRole('button',{name:'Mở menu chính'}))
+  expect(screen.getByRole('button',{name:'Mô phỏng quy mô lớn'})).toHaveAttribute('aria-current','page')
+  fireEvent.click(screen.getByRole('button',{name:'Một hành trình'}))
+  expect(await screen.findByTestId('legacy-map')).toBeInTheDocument()
+  fireEvent.click(screen.getByRole('button',{name:'Mô phỏng quy mô lớn'}))
+  expect(await screen.findByTestId('connected-workspace')).toBeInTheDocument()
+  expect(window.location.search).toBe('?runtime=simulation&scenario=connected')
+  expect(document.querySelectorAll('header')).toHaveLength(1)
+  const connectedMap=screen.getByTestId('one-map')
+  fireEvent.click(screen.getByRole('button',{name:'Mở menu chính'}))
+  fireEvent.click(screen.getByRole('button',{name:'Đóng menu'}))
+  expect(screen.getByTestId('one-map')).toBe(connectedMap)
+  expect(map).not.toBe(connectedMap) // Switching engine creates a session; opening menus does not.
+  expect(mocks.create).not.toHaveBeenCalled()
+})
+
+it('removes the saved-run dialog backdrop before returning to analytics interaction',async()=>{
+ render(<ConnectedWorkspace/>);fireEvent.click(screen.getByRole('button',{name:'Mở run'}))
+ fireEvent.change(screen.getByLabelText('Mã run Connected NVMR'),{target:{value:'saved-id'}})
+ fireEvent.click(screen.getByRole('button',{name:'Mở run liên thông'}))
+ await waitFor(()=>expect(document.querySelector('.sheet-backdrop')).toBeNull())
+ fireEvent.click(screen.getByRole('button',{name:'Analytics'}))
+ expect(screen.getByRole('button',{name:'Analytics'})).toHaveAttribute('aria-expanded','true')
+ expect(mocks.open).toHaveBeenCalledWith('saved-id')
 })
