@@ -42,6 +42,32 @@ it('opens immutable v5 history by ID',()=>{
   expect(mocks.open).toHaveBeenCalledWith('connected-previous')
 })
 
+it('map selection preserves State A or B, clears filters and keeps the same map and playback',()=>{
+  mocks.clockSnapshot.simulationTimeSeconds=42
+  const view=render(<ConnectedWorkspace/>)
+  const map=screen.getByTestId('one-map'),analytics=screen.getByRole('button',{name:'Analytics'})
+  fireEvent.change(screen.getByLabelText('Lọc loại xe connected'),{target:{value:'MOTORBIKE'}})
+  act(()=>mocks.map.mock.lastCall?.[0].onSelect('GLOBAL-HANOI'))
+  expect(analytics).toHaveAttribute('aria-expanded','false')
+  expect(screen.getByTestId('connected-kpi-strip')).toBeVisible()
+  expect(mocks.select).toHaveBeenLastCalledWith('GLOBAL-HANOI')
+  expect(screen.getByLabelText('Lọc loại xe connected')).toHaveValue('')
+  // The real hook publishes the selected identity; ensure it reaches the same map.
+  mocks.selectedId='GLOBAL-HANOI';view.rerender(<ConnectedWorkspace/>)
+  expect(mocks.map.mock.lastCall?.[0].selectedId).toBe('GLOBAL-HANOI')
+  fireEvent.click(analytics)
+  fireEvent.change(screen.getByLabelText('Lọc operating zone'),{target:{value:'hanoi'}})
+  act(()=>mocks.map.mock.lastCall?.[0].onSelect('GLOBAL-BACNINH'))
+  expect(analytics).toHaveAttribute('aria-expanded','true')
+  expect(screen.getByRole('complementary',{name:'Analytics Connected NVMR'})).toBeVisible()
+  expect(mocks.select).toHaveBeenLastCalledWith('GLOBAL-BACNINH')
+  expect(screen.getByLabelText('Lọc operating zone')).toHaveValue('')
+  expect(screen.getByTestId('one-map')).toBe(map)
+  expect(document.querySelector('.playback-dock')).toHaveAttribute('data-dock-time','42')
+  expect(mocks.seek).not.toHaveBeenCalled()
+  expect(mocks.create).not.toHaveBeenCalled()
+})
+
 it('honors launcher meeting URL and updates presentation cadence without a new simulation',()=>{
   window.history.replaceState(null,'','/?runtime=simulation&scenario=connected&profile=meeting&dev=1')
   render(<ConnectedWorkspace/>)

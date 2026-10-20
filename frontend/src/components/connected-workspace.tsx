@@ -37,7 +37,7 @@ export default function ConnectedWorkspace() {
   const vehicle=session.vehicle,detail=session.journey?.detail
   const allocationValid=totals.fleetSize>=1&&totals.fleetSize<=5000&&allocations.every(r=>Number.isInteger(r.carCount)&&r.carCount>=0&&Number.isInteger(r.motorbikeCount)&&r.motorbikeCount>=0)
   const update=(index:number,key:'carCount'|'motorbikeCount',value:number)=>setAllocations(rows=>rows.map((r,i)=>i===index?{...r,[key]:value}:r))
-  const select=(id:string)=>{setZone('');setMode('');session.selectVehicle(id);setAnalytics(true)}
+  const select=(id:string)=>{setZone('');setMode('');session.selectVehicle(id)}
   const loadedConfig=session.result?.config??session.job?.config
   const loadedTotal=typeof loadedConfig?.fleetSize==='number'?loadedConfig.fleetSize:session.snapshot?.counts.total
   const loadedCars=typeof loadedConfig?.carCount==='number'?loadedConfig.carCount:(session.snapshot?session.snapshot.vehicles.filter(v=>v.vehicleType==='CAR').length:undefined)
