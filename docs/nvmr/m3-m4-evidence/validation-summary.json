@@ -1,0 +1,678 @@
+{
+  "baselineHead": "455abebe177be42e07b88ed4f34d4fecbef29b75",
+  "branch": "feature/nvmr-m0-architecture",
+  "integratedCheckout": "D:\\ThS\\VinAI\\Phase3_VRIC\\gsm-map-sandbox",
+  "status": "PASS within measured scopes; see readiness table",
+  "commands": {
+    "backend": {
+      "command": "RUN_REAL_DATA=1 .venv/Scripts/python.exe -X utf8 -m pytest -q",
+      "passed": 189,
+      "skipped": 0,
+      "seconds": 47.4,
+      "warnings": 1
+    },
+    "frontend": {
+      "command": "npm.cmd test -- --maxWorkers=2",
+      "passed": 167,
+      "files": 17,
+      "seconds": 14.85
+    },
+    "lint": {
+      "exit": 0,
+      "warnings": 29
+    },
+    "typecheck": {
+      "exit": 0
+    },
+    "build": {
+      "exit": 0,
+      "warning": "main chunk >500kB"
+    },
+    "savedVerifier": {
+      "exit": 0,
+      "assets": 9,
+      "browserExports": "NOT_RUN"
+    },
+    "mixedExportVerifier": {
+      "exit": 0
+    },
+    "domain": {
+      "runs": 75,
+      "status": "PASS"
+    },
+    "liveOSRM": {
+      "configs": 15,
+      "seedsPerConfig": 1,
+      "status": "PASS"
+    },
+    "webgl": {
+      "samples": 15,
+      "scales": [
+        100,
+        500,
+        1000,
+        3000,
+        5000
+      ],
+      "zooms": [
+        11,
+        13,
+        16
+      ],
+      "status": "PASS"
+    },
+    "largeUI": {
+      "fleet": 5000,
+      "requests": 1250,
+      "completed": 1250,
+      "status": "PASS"
+    },
+    "hanoiCarVoucher": {
+      "repeats": 2,
+      "status": "PASS"
+    }
+  },
+  "dirtySourceSha256": {
+    "backend/app/main.py": "e126da7c0777e004aa53338de3c86dd6b3fe5d31b882f81f3075d24ed68e9bf3",
+    "frontend/src/App.css": "6284fc3d2e26a8f76d08b828bffc2516955449855288714c91f97982719050c8",
+    "frontend/src/App.tsx": "df37aed9dc643f5c39e482eea5f69105f02f32e7a3752491a72cc3954f2a3321",
+    "backend/app/simulation.py": "3d3b7cfe8a59614f7a91725039d766a123787c320dabb33a6015d7f92cc46427",
+    "backend/app/simulation_jobs.py": "a610166a64f26dc9bd24dbdf577a1f52d2272dc60efce71c76ac5b9d25cb9ec7",
+    "backend/app/simulation_worker.py": "0cef76632443dce2d0f53f45422a1337ffe162499bfd5d9868ff1e0e321e5cdd",
+    "frontend/scripts/verify-simulation.mjs": "6387a190a490444cff0286ab168f7582a05ff433a7fac89171aff6b8b0d0e791",
+    "frontend/src/components/simulation-map.tsx": "0463f9869e04b2148771262e7e035ca8c918342f69a33bf4b32f32b456c28f45",
+    "frontend/src/components/simulation-workspace.tsx": "b7a66e0e0d522304c055e36d99038b8ab08782c6d4b4dedeb03308049735152f",
+    "frontend/src/lib/simulation.ts": "0f8f7ab4fe967b53b2d5d0de553707e9eba64fb1b563dbb89d2b1538cf80e0e9",
+    "frontend/src/lib/use-simulation.ts": "fa6c45b765b333af2bf6c8d728ad924e03c0a5630664cc0ebdabb65602df20c6",
+    "frontend/tests/simulation.test.ts": "9e3506b66c91af3e0005e9eca913d0cdc1d30ee3a9a57a5de036d06d5ed9a87a",
+    "frontend/tests/use-simulation.test.ts": "8ccabbf4eb259cad9b9ba3e71897773e563e2408aa1d7dd8ec87ae3a064f11cc",
+    "scripts/benchmark_simulation.py": "6e9ac2929be984eb387409eebb7c97be29f443a6cd1bff9d750ede20df6e8d88",
+    "scripts/benchmark_simulation_live.py": "871435418689786098ed3f0fa516ced77452d6b2388f9b3536841a2d8c18543b",
+    "scripts/m3_fixture_travel.py": "dae9fd89d95101b69bc963e488ec8aa99f9c522293c636505e994a86a1ff260b",
+    "scripts/m3_resources.py": "79880ee06971ae0db4595cab3ee87ae9bf5d4d1fefff3b54139c073e9b7d9e8b",
+    "scripts/validate_simulation_api.py": "a4d70d5c226501d0280a80b1f3f889e92d8233846bc4d2d43933645cb9899bf8",
+    "tests/fixtures/m3/legacy-golden.json": "8368477f4962ed981b84238dc74bb7dd65ecb02fac5cdb3e4c49977529bf863f",
+    "tests/fixtures/m3/travel-matrix.json": "b92b087ae40c1d5dfad3ffad1b2126377e2f7304ee0f1850d141799628fcc6e1",
+    "tests/test_m3.py": "51cc914b9e51926a3bfe2973dada42be161c85022f82eadf17533eb7caaa717e"
+  },
+  "protectedTrackedPathsUnchanged": [
+    "backend/app/booking.py",
+    "backend/app/voucher.py",
+    "backend/app/multimodal.py",
+    "backend/app/modes.py",
+    "backend/app/schemas.py",
+    "profiles",
+    "config",
+    "contracts",
+    "docs/nvmr/m2-evidence"
+  ],
+  "stagedFiles": [],
+  "resourceSnapshots": {
+    "resource-browser-1000-sample": {
+      "scope": "available system RAM during browser capture; sampler RSS is not browser RSS",
+      "minimumAvailablePhysicalBytes": 2976006144,
+      "sampleCount": 295,
+      "sampleIntervalSeconds": 0.05
+    },
+    "resource-browser-1000": {
+      "phase": "before-browser-1000",
+      "time": "2026-10-17T14:24:26.5402216+07:00",
+      "availableBytes": 2849038336
+    },
+    "resource-browser-3000-sample": {
+      "scope": "system headroom during browser capture",
+      "minimumAvailablePhysicalBytes": 2743934976,
+      "sampleCount": 292,
+      "sampleIntervalSeconds": 0.05
+    },
+    "resource-browser-3000": {
+      "phase": "before-browser-3000",
+      "time": "2026-10-17T14:25:18.0281826+07:00",
+      "availableBytes": 3164950528
+    },
+    "resource-browser-500": {
+      "phase": "before-browser-500",
+      "time": "2026-10-17T14:23:28.9759160+07:00",
+      "availableBytes": 3055702016,
+      "processes": [
+        {
+          "Id": 5800,
+          "ProcessName": "chrome",
+          "WorkingSet64": 71974912
+        },
+        {
+          "Id": 7012,
+          "ProcessName": "chrome",
+          "WorkingSet64": 34168832
+        },
+        {
+          "Id": 8580,
+          "ProcessName": "chrome",
+          "WorkingSet64": 27996160
+        },
+        {
+          "Id": 9636,
+          "ProcessName": "chrome",
+          "WorkingSet64": 196313088
+        },
+        {
+          "Id": 10148,
+          "ProcessName": "chrome",
+          "WorkingSet64": 24281088
+        },
+        {
+          "Id": 12832,
+          "ProcessName": "chrome",
+          "WorkingSet64": 119975936
+        },
+        {
+          "Id": 13192,
+          "ProcessName": "chrome",
+          "WorkingSet64": 62341120
+        },
+        {
+          "Id": 14060,
+          "ProcessName": "chrome",
+          "WorkingSet64": 29028352
+        },
+        {
+          "Id": 14180,
+          "ProcessName": "chrome",
+          "WorkingSet64": 97058816
+        },
+        {
+          "Id": 15676,
+          "ProcessName": "chrome",
+          "WorkingSet64": 43405312
+        },
+        {
+          "Id": 15952,
+          "ProcessName": "chrome",
+          "WorkingSet64": 232660992
+        },
+        {
+          "Id": 16868,
+          "ProcessName": "chrome",
+          "WorkingSet64": 44208128
+        },
+        {
+          "Id": 16940,
+          "ProcessName": "chrome",
+          "WorkingSet64": 157421568
+        },
+        {
+          "Id": 17752,
+          "ProcessName": "chrome",
+          "WorkingSet64": 287379456
+        },
+        {
+          "Id": 20104,
+          "ProcessName": "chrome",
+          "WorkingSet64": 10256384
+        },
+        {
+          "Id": 21636,
+          "ProcessName": "chrome",
+          "WorkingSet64": 65241088
+        },
+        {
+          "Id": 21836,
+          "ProcessName": "chrome",
+          "WorkingSet64": 552615936
+        },
+        {
+          "Id": 22764,
+          "ProcessName": "chrome",
+          "WorkingSet64": 354717696
+        },
+        {
+          "Id": 24024,
+          "ProcessName": "chrome",
+          "WorkingSet64": 82595840
+        },
+        {
+          "Id": 24772,
+          "ProcessName": "chrome",
+          "WorkingSet64": 27258880
+        },
+        {
+          "Id": 25952,
+          "ProcessName": "chrome",
+          "WorkingSet64": 99164160
+        },
+        {
+          "Id": 27680,
+          "ProcessName": "chrome",
+          "WorkingSet64": 182284288
+        },
+        {
+          "Id": 30376,
+          "ProcessName": "chrome",
+          "WorkingSet64": 184143872
+        },
+        {
+          "Id": 2848,
+          "ProcessName": "msedge",
+          "WorkingSet64": 28921856
+        },
+        {
+          "Id": 7236,
+          "ProcessName": "msedge",
+          "WorkingSet64": 13033472
+        },
+        {
+          "Id": 9744,
+          "ProcessName": "msedge",
+          "WorkingSet64": 20852736
+        },
+        {
+          "Id": 12408,
+          "ProcessName": "msedge",
+          "WorkingSet64": 34816000
+        },
+        {
+          "Id": 13004,
+          "ProcessName": "msedge",
+          "WorkingSet64": 48107520
+        },
+        {
+          "Id": 13500,
+          "ProcessName": "msedge",
+          "WorkingSet64": 48152576
+        },
+        {
+          "Id": 15772,
+          "ProcessName": "msedge",
+          "WorkingSet64": 36167680
+        },
+        {
+          "Id": 16692,
+          "ProcessName": "msedge",
+          "WorkingSet64": 166592512
+        },
+        {
+          "Id": 24840,
+          "ProcessName": "msedge",
+          "WorkingSet64": 87752704
+        },
+        {
+          "Id": 25292,
+          "ProcessName": "msedge",
+          "WorkingSet64": 82059264
+        },
+        {
+          "Id": 1628,
+          "ProcessName": "node",
+          "WorkingSet64": 86474752
+        },
+        {
+          "Id": 3024,
+          "ProcessName": "node",
+          "WorkingSet64": 95625216
+        },
+        {
+          "Id": 4840,
+          "ProcessName": "node",
+          "WorkingSet64": 104595456
+        },
+        {
+          "Id": 5000,
+          "ProcessName": "node",
+          "WorkingSet64": 44773376
+        },
+        {
+          "Id": 6956,
+          "ProcessName": "node",
+          "WorkingSet64": 90853376
+        },
+        {
+          "Id": 7204,
+          "ProcessName": "node",
+          "WorkingSet64": 47890432
+        },
+        {
+          "Id": 8436,
+          "ProcessName": "node",
+          "WorkingSet64": 103682048
+        },
+        {
+          "Id": 9228,
+          "ProcessName": "node",
+          "WorkingSet64": 59887616
+        },
+        {
+          "Id": 9640,
+          "ProcessName": "node",
+          "WorkingSet64": 94277632
+        },
+        {
+          "Id": 16780,
+          "ProcessName": "node",
+          "WorkingSet64": 53321728
+        },
+        {
+          "Id": 17180,
+          "ProcessName": "node",
+          "WorkingSet64": 113258496
+        },
+        {
+          "Id": 19592,
+          "ProcessName": "node",
+          "WorkingSet64": 189394944
+        },
+        {
+          "Id": 19760,
+          "ProcessName": "node",
+          "WorkingSet64": 52617216
+        },
+        {
+          "Id": 21052,
+          "ProcessName": "node",
+          "WorkingSet64": 93229056
+        },
+        {
+          "Id": 21876,
+          "ProcessName": "node",
+          "WorkingSet64": 62480384
+        },
+        {
+          "Id": 22928,
+          "ProcessName": "node",
+          "WorkingSet64": 88776704
+        },
+        {
+          "Id": 23580,
+          "ProcessName": "node",
+          "WorkingSet64": 105213952
+        },
+        {
+          "Id": 23604,
+          "ProcessName": "node",
+          "WorkingSet64": 60686336
+        },
+        {
+          "Id": 24120,
+          "ProcessName": "node",
+          "WorkingSet64": 40022016
+        },
+        {
+          "Id": 26708,
+          "ProcessName": "node",
+          "WorkingSet64": 44388352
+        },
+        {
+          "Id": 27112,
+          "ProcessName": "node",
+          "WorkingSet64": 87240704
+        },
+        {
+          "Id": 28168,
+          "ProcessName": "node",
+          "WorkingSet64": 51806208
+        },
+        {
+          "Id": 29264,
+          "ProcessName": "node",
+          "WorkingSet64": 88383488
+        },
+        {
+          "Id": 30516,
+          "ProcessName": "node",
+          "WorkingSet64": 94568448
+        }
+      ]
+    },
+    "resource-browser-5000-sample": {
+      "scope": "system headroom during browser capture",
+      "minimumAvailablePhysicalBytes": 2645872640,
+      "sampleCount": 305,
+      "sampleIntervalSeconds": 0.05
+    },
+    "resource-browser-5000": {
+      "phase": "before-browser-5000",
+      "time": "2026-10-17T14:26:30.0516964+07:00",
+      "availableBytes": 2934550528
+    },
+    "resource-browser-final-100": {
+      "minimumAvailablePhysicalBytes": 2773762048,
+      "sampleCount": 293
+    },
+    "resource-browser-final-1000": {
+      "minimumAvailablePhysicalBytes": 2755571712,
+      "sampleCount": 285
+    },
+    "resource-browser-final-3000": {
+      "minimumAvailablePhysicalBytes": 3240816640,
+      "sampleCount": 290
+    },
+    "resource-browser-final-500": {
+      "minimumAvailablePhysicalBytes": 2789007360,
+      "sampleCount": 301
+    },
+    "resource-browser-final-5000": {
+      "minimumAvailablePhysicalBytes": 2868912128,
+      "sampleCount": 288
+    }
+  },
+  "ignoredLogIdentity": {
+    "api-integration.log": {
+      "sha256": "dffec9ec5eb870b18a885938566a69ca092a4d573b9521a4ceeac43c8bf0b5c3",
+      "bytes": 388
+    },
+    "baseline-backend-live.log": {
+      "sha256": "a7018153323ba4bbcba279adfd0d92fc647837cdd4c1002cbeeba98923599631",
+      "bytes": 757
+    },
+    "baseline-backend.log": {
+      "sha256": "b566324be19aab0b8ef46512d1257dc2df62fddd4fec74a75006dfd585660532",
+      "bytes": 768
+    },
+    "baseline-frontend.log": {
+      "sha256": "01342b648f2241464ddc8affe9d81ae84c36e8166afa37ce126f7f0b0aeefc82",
+      "bytes": 617
+    },
+    "contract-verification-5000.log": {
+      "sha256": "3af06e96e0914363680c4b50667bcc41d384223d9957eef871a68562b04ed72e",
+      "bytes": 2991
+    },
+    "contract-verification.log": {
+      "sha256": "edb597ca0bc520568161c96d13a07e8cff21b874495814bdf7830eb2eb884e27",
+      "bytes": 2948
+    },
+    "domain-benchmark.log": {
+      "sha256": "6d8bb24b08c7f8d79415c04fc07125b4315c7458894355899518ebc0c8c68d42",
+      "bytes": 14707
+    },
+    "final-backend-live.log": {
+      "sha256": "df7cf62a6679ada86a227e52cdc7f570fb098af8609de52a7103453b257c9210",
+      "bytes": 757
+    },
+    "final-frontend-build.log": {
+      "sha256": "6d1ef81c5467c205908406890d0bd44e4bdf7560eb0a4f5cf87d0770c31df327",
+      "bytes": 2154
+    },
+    "final-frontend-lint.log": {
+      "sha256": "48dafa1ceae54e5295adb587baf91ed1c52c7d1f50a08602e532dbaa7a9da7af",
+      "bytes": 9636
+    },
+    "final-frontend-tests.log": {
+      "sha256": "3e0c0aec4f3ef9fad51a8e31c9a838399c78a82e276a47441cf511869cafbcdd",
+      "bytes": 617
+    },
+    "final-frontend-typecheck.log": {
+      "sha256": "ce47ca57861e4fa3aa21c4ee091eccdf3e660ef66243377ebaaed3616baa0b88",
+      "bytes": 58
+    },
+    "final-multimodal.log": {
+      "sha256": "b560f2709fcd0d123a69ca2148764842e6b6bc3a1d4a1a8bb11cc61593fe2fc4",
+      "bytes": 304
+    },
+    "final-replay.log": {
+      "sha256": "78262c5d78a7ad66c89c639acf5d520490b5037b324d90889292fef2110051f8",
+      "bytes": 250
+    },
+    "hanoi-voucher-regression.log": {
+      "sha256": "707742d18194852fe0e9138b0ca5693ebd0656b288c3ea70de7a3555eae96cd1",
+      "bytes": 1694
+    },
+    "integrated-frontend-build.log": {
+      "sha256": "672fe0d60758c31f1e20cde5db6b2d6b75429d1ebd60feab11ee835de8b476ef",
+      "bytes": 2154
+    },
+    "integrated-frontend-lint.log": {
+      "sha256": "d732da78626ea9eb230307d6dffaa46d338d8e2a3eeafc304c448acfb673fcf9",
+      "bytes": 9637
+    },
+    "integrated-frontend-tests.log": {
+      "sha256": "527186c4e5148ab07268b9c704808609fa9801ad51e368efe457d95344726529",
+      "bytes": 617
+    },
+    "integrated-frontend-typecheck.log": {
+      "sha256": "ce47ca57861e4fa3aa21c4ee091eccdf3e660ef66243377ebaaed3616baa0b88",
+      "bytes": 58
+    },
+    "integrated-m3-focused.log": {
+      "sha256": "093f83b785073053085295d91ae3a02ec7eea1bffd65f809c04892f339071cd2",
+      "bytes": 593
+    },
+    "live-100-burst.log": {
+      "sha256": "602acfe7b2389d7811908498efb5e82bc5e638e8c3ce263d24adab20cbbff75f",
+      "bytes": 30
+    },
+    "live-100-low.log": {
+      "sha256": "98423d422a0363971c9844f84e1b508c7049bda69a4014ba4feae564f28fd8b7",
+      "bytes": 28
+    },
+    "live-100-typical.log": {
+      "sha256": "021bf7d658b9a0c5320f3a0b000afc32c2c44fa7564ad9ddeb60786f546be866",
+      "bytes": 32
+    },
+    "live-1000-burst.log": {
+      "sha256": "ab0064e52b765abde8e82bc7ddc796a0426573424d78b3e574a33cd3402400e2",
+      "bytes": 31
+    },
+    "live-1000-low.log": {
+      "sha256": "8bae7f5abab63fab3332e112fd905eef928819b362dc533557d0484dd2fefef3",
+      "bytes": 29
+    },
+    "live-1000-typical.log": {
+      "sha256": "89eefe0a92e6a2037dee9fe80d17f36a06547a74359b72bc8751147d2d375b4b",
+      "bytes": 33
+    },
+    "live-3000-burst.log": {
+      "sha256": "1783680a0e95fb335382d910a782d4dcbdaa12badabc2c72530545a7146351f7",
+      "bytes": 31
+    },
+    "live-3000-low.log": {
+      "sha256": "c34c2944c7a44e655708ca0258003850da49a032328e4b5280fed4becae2b473",
+      "bytes": 29
+    },
+    "live-3000-typical.log": {
+      "sha256": "eeaffa359f2dabb047e41d44370ad5c30dd08d311bffe4c4b5d5d7db941683f3",
+      "bytes": 33
+    },
+    "live-500-burst.log": {
+      "sha256": "6cafe7896231dd06e12a84075c81e7826e6e6e277057792b1b3aac6a3c1a3416",
+      "bytes": 30
+    },
+    "live-500-low.log": {
+      "sha256": "8d4a6f882a4df33e454ab32be40c5c91f3fa4605bb859a67fd9c791dfc5d17ea",
+      "bytes": 28
+    },
+    "live-500-typical.log": {
+      "sha256": "708b15a75943f1f8ab5185bbdf66f33511cc55cbe2e7b5ebc056d22633689496",
+      "bytes": 32
+    },
+    "live-5000-burst.log": {
+      "sha256": "84d90b3b80d4a4ade1b759f330ba560f2acd73ac880a4b5a9602a3d070f1a277",
+      "bytes": 31
+    },
+    "live-5000-low.log": {
+      "sha256": "2c51f8c957a156e6febf2df721746fba5042bb4cb7ed8243149234fe70f13fce",
+      "bytes": 29
+    },
+    "live-5000-typical.log": {
+      "sha256": "2737ddb8ef6d14ec423d2f1985049e53f8b63356c47a6ffc3003aad2004d0d92",
+      "bytes": 33
+    },
+    "map-diagnostic-build.log": {
+      "sha256": "4ac330e8b253b64003312a4a822b408a15386512a99a8902a833a223447e11c1",
+      "bytes": 2154
+    },
+    "map-final-build.log": {
+      "sha256": "ced89dfc222b2393505a6dcb286f8acb0b08599645753bcf2dc6232f15fc7074",
+      "bytes": 2154
+    },
+    "map-label-build.log": {
+      "sha256": "e03b00a7207b9f7e968e795a20137470a1f1d901a9bbd110e053e78567463c97",
+      "bytes": 2154
+    }
+  },
+  "notVerified": [
+    "live exhaustive oracle",
+    "live capacity variance across5seeds/config",
+    "soak/cold-start/memory leak certification",
+    "browser file chooser import/export roundtrip",
+    "mobile390",
+    "public deployment",
+    "whole real-job hard-crash fault injection"
+  ],
+  "serviceCleanup": "Only task API8013, worker, frontend5184 and QA tab stopped; original OSRM containers preserved",
+  "lastPresentationChange": "Final outcome label made explicit after browser/full unit run; build/typecheck rerun PASS. Rendering/domain logic unchanged.",
+  "proposedCommitGroups": {
+    "M2": [
+      "docs/nvmr/M2_IMPLEMENTATION.md"
+    ],
+    "M3": [
+      "backend/app/main.py",
+      "backend/app/simulation.py",
+      "backend/app/simulation_jobs.py",
+      "backend/app/simulation_worker.py",
+      "scripts/benchmark_simulation.py",
+      "scripts/benchmark_simulation_live.py",
+      "scripts/m3_fixture_travel.py",
+      "scripts/m3_resources.py",
+      "tests/test_m3.py",
+      "tests/fixtures/m3/legacy-golden.json",
+      "tests/fixtures/m3/travel-matrix.json",
+      "docs/nvmr/M3_IMPLEMENTATION.md"
+    ],
+    "M4": [
+      "frontend/src/App.tsx",
+      "frontend/src/App.css",
+      "frontend/src/components/simulation-map.tsx",
+      "frontend/src/components/simulation-workspace.tsx",
+      "frontend/src/lib/simulation.ts",
+      "frontend/src/lib/use-simulation.ts",
+      "frontend/tests/simulation.test.ts",
+      "frontend/tests/use-simulation.test.ts",
+      "docs/nvmr/M4_IMPLEMENTATION.md"
+    ],
+    "integration": [
+      "README.md",
+      "scripts/validate_simulation_api.py",
+      "frontend/scripts/verify-simulation.mjs",
+      "docs/nvmr/M3_M4_INTEGRATION_REVIEW.md",
+      "docs/nvmr/m3-m4-evidence/api-integration.json",
+      "docs/nvmr/m3-m4-evidence/browser-benchmark.json",
+      "docs/nvmr/m3-m4-evidence/browser-initial-invalid.json",
+      "docs/nvmr/m3-m4-evidence/browser-integrated-5000.json",
+      "docs/nvmr/m3-m4-evidence/browser-live-100-summary.json",
+      "docs/nvmr/m3-m4-evidence/browser-live-5000-job.json",
+      "docs/nvmr/m3-m4-evidence/browser-live-5000-summary.json",
+      "docs/nvmr/m3-m4-evidence/clusters-5000.jpg",
+      "docs/nvmr/m3-m4-evidence/contract-verification-5000.json",
+      "docs/nvmr/m3-m4-evidence/contract-verification.json",
+      "docs/nvmr/m3-m4-evidence/domain-summary.json",
+      "docs/nvmr/m3-m4-evidence/hanoi-car-voucher-regression.json",
+      "docs/nvmr/m3-m4-evidence/integration-summary.json",
+      "docs/nvmr/m3-m4-evidence/live-car-5000.jpg",
+      "docs/nvmr/m3-m4-evidence/live-motorbike-inspector.jpg",
+      "docs/nvmr/m3-m4-evidence/live-summary.json",
+      "docs/nvmr/m3-m4-evidence/native-inspector-5000.jpg",
+      "docs/nvmr/m3-m4-evidence/saved-api-off.jpg",
+      "docs/nvmr/m3-m4-evidence/validation-summary.json"
+    ]
+  },
+  "unrelatedChangesDetected": []
+}

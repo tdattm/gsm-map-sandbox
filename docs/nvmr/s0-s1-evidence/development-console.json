@@ -1,0 +1,56 @@
+[
+  {
+    "level": "error",
+    "message": "React has detected a change in the order of Hooks called by %s. This will lead to bugs and errors if not fixed. For more information, read the Rules of Hooks: https://react.dev/link/rules-of-hooks\n\n   Previous render            Next render\n   ------------------------------------------------------\n%s   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n SimulationWorkspace 1. useState                   useState\n2. useState                   useState\n3. useState                   useState\n4. useState                   useState\n5. useState                   useState\n6. useState                   useState\n7. useState                   useState\n8. useState                   useState\n9. useState                   useState\n10. useState                  useState\n11. useState                  useState\n12. useState                  useState\n13. useState                  useState\n14. useRef                    useState\n",
+    "timestamp": "2026-10-17T10:07:22.763Z",
+    "url": "http://127.0.0.1:5186/@vite/client"
+  },
+  {
+    "level": "error",
+    "message": "Error: Should have a queue. You are likely calling Hooks conditionally, which is not allowed. (https://react.dev/link/invalid-hook-call)\n    at updateReducerImpl (http://127.0.0.1:5186/node_modules/.vite/deps/react-dom_client.js?v=9673256c:4612:30)\n    at updateReducer (http://127.0.0.1:5186/node_modules/.vite/deps/react-dom_client.js?v=9673256c:4608:11)\n    at Object.useState (http://127.0.0.1:5186/node_modules/.vite/deps/react-dom_client.js?v=9673256c:14576:13)\n    at exports.useState (http://127.0.0.1:5186/node_modules/.vite/deps/react.js?v=7c0e5a1e:769:31)\n    at useSimulation (http://127.0.0.1:5186/src/lib/use-simulation.ts?t=1792231642634:18:40)\n    at SimulationWorkspace (http://127.0.0.1:5186/src/components/simulation-workspace.tsx?t=1792231642634:48:18)\n    at Object.react_stack_bottom_frame (http://127.0.0.1:5186/node_modules/.vite/deps/react-dom_client.js?v=9673256c:14142:12)\n    at renderWithHooks (http://127.0.0.1:5186/node_modules/.vite/deps/react-dom_client.js?v=9673256c:4400:19)\n    at updateFunctionComponent (http://127.0.0.1:5186/node_modules/.vite/deps/react-dom_client.js?v=9673256c:5775:16)\n    at beginWork (http://127.0.0.1:5186/node_modules/.vite/deps/react-dom_client.js?v=9673256c:6391:20)",
+    "timestamp": "2026-10-17T10:07:22.774Z",
+    "url": "http://127.0.0.1:5186/node_modules/.vite/deps/react-dom_client.js?v=9673256c"
+  },
+  {
+    "level": "warn",
+    "message": "%s\n\n%s\n An error occurred in the <SimulationWorkspace> component. Consider adding an error boundary to your tree to customize error handling behavior.\nVisit https://react.dev/link/error-boundaries to learn more about error boundaries.",
+    "timestamp": "2026-10-17T10:07:22.774Z",
+    "url": "http://127.0.0.1:5186/@vite/client"
+  },
+  {
+    "level": "error",
+    "message": "TypeError: Cannot read properties of undefined (reading 'getImage')\n    at UP.hasImage (http://127.0.0.1:5186/node_modules/.vite/deps/maplibre-gl.js?v=003ac2c3:36224:27)\n    at http://127.0.0.1:5186/src/components/simulation-map.tsx:535:42\n    at Object.react_stack_bottom_frame (http://127.0.0.1:5186/node_modules/.vite/deps/react-dom_client.js?v=9673256c:14182:5)\n    at runWithFiberInDEV (http://127.0.0.1:5186/node_modules/.vite/deps/react-dom_client.js?v=9673256c:944:66)\n    at commitHookEffectListUnmount (http://127.0.0.1:5186/node_modules/.vite/deps/react-dom_client.js?v=9673256c:6926:149)\n    at commitHookPassiveUnmountEffects (http://127.0.0.1:5186/node_modules/.vite/deps/react-dom_client.js?v=9673256c:6939:55)\n    at commitPassiveUnmountEffectsInsideOfDeletedTree_begin (http://127.0.0.1:5186/node_modules/.vite/deps/react-dom_client.js?v=9673256c:8574:7)\n    at recursivelyTraversePassiveUnmountEffects (http://127.0.0.1:5186/node_modules/.vite/deps/react-dom_client.js?v=9673256c:8493:6)\n    at commitPassiveUnmountOnFiber (http://127.0.0.1:5186/node_modules/.vite/deps/react-dom_client.js?v=9673256c:8512:6)\n    at flushPassiveEffects (http://127.0.0.1:5186/node_modules/.vite/deps/react-dom_client.js?v=9673256c:9579:5)",
+    "timestamp": "2026-10-17T10:07:22.811Z",
+    "url": "http://127.0.0.1:5186/node_modules/.vite/deps/maplibre-gl.js?v=003ac2c3"
+  },
+  {
+    "level": "warn",
+    "message": "%s\n\n%s\n An error occurred in the <SimulationMap> component. Consider adding an error boundary to your tree to customize error handling behavior.\nVisit https://react.dev/link/error-boundaries to learn more about error boundaries.",
+    "timestamp": "2026-10-17T10:07:22.811Z",
+    "url": "http://127.0.0.1:5186/@vite/client"
+  },
+  {
+    "level": "error",
+    "message": "Error: Should have a queue. You are likely calling Hooks conditionally, which is not allowed. (https://react.dev/link/invalid-hook-call)\n    at updateReducerImpl (http://127.0.0.1:5186/node_modules/.vite/deps/react-dom_client.js?v=9673256c:4612:30)\n    at updateReducer (http://127.0.0.1:5186/node_modules/.vite/deps/react-dom_client.js?v=9673256c:4608:11)\n    at Object.useState (http://127.0.0.1:5186/node_modules/.vite/deps/react-dom_client.js?v=9673256c:14576:13)\n    at exports.useState (http://127.0.0.1:5186/node_modules/.vite/deps/react.js?v=7c0e5a1e:769:31)\n    at useSimulation (http://127.0.0.1:5186/src/lib/use-simulation.ts?t=1792231743813:19:48)\n    at SimulationWorkspace (http://127.0.0.1:5186/src/components/simulation-workspace.tsx?t=1792231743813:48:18)\n    at Object.react_stack_bottom_frame (http://127.0.0.1:5186/node_modules/.vite/deps/react-dom_client.js?v=9673256c:14142:12)\n    at renderWithHooks (http://127.0.0.1:5186/node_modules/.vite/deps/react-dom_client.js?v=9673256c:4400:19)\n    at updateFunctionComponent (http://127.0.0.1:5186/node_modules/.vite/deps/react-dom_client.js?v=9673256c:5775:16)\n    at beginWork (http://127.0.0.1:5186/node_modules/.vite/deps/react-dom_client.js?v=9673256c:6391:20)",
+    "timestamp": "2026-10-17T10:09:03.906Z",
+    "url": "http://127.0.0.1:5186/node_modules/.vite/deps/react-dom_client.js?v=9673256c"
+  },
+  {
+    "level": "warn",
+    "message": "%s\n\n%s\n An error occurred in the <SimulationWorkspace> component. Consider adding an error boundary to your tree to customize error handling behavior.\nVisit https://react.dev/link/error-boundaries to learn more about error boundaries.",
+    "timestamp": "2026-10-17T10:09:03.907Z",
+    "url": "http://127.0.0.1:5186/@vite/client"
+  },
+  {
+    "level": "error",
+    "message": "TypeError: Cannot read properties of undefined (reading 'getImage')\n    at UP.hasImage (http://127.0.0.1:5186/node_modules/.vite/deps/maplibre-gl.js?v=003ac2c3:36224:27)\n    at http://127.0.0.1:5186/src/components/simulation-map.tsx:535:42\n    at Object.react_stack_bottom_frame (http://127.0.0.1:5186/node_modules/.vite/deps/react-dom_client.js?v=9673256c:14182:5)\n    at runWithFiberInDEV (http://127.0.0.1:5186/node_modules/.vite/deps/react-dom_client.js?v=9673256c:944:66)\n    at commitHookEffectListUnmount (http://127.0.0.1:5186/node_modules/.vite/deps/react-dom_client.js?v=9673256c:6926:149)\n    at commitHookPassiveUnmountEffects (http://127.0.0.1:5186/node_modules/.vite/deps/react-dom_client.js?v=9673256c:6939:55)\n    at commitPassiveUnmountEffectsInsideOfDeletedTree_begin (http://127.0.0.1:5186/node_modules/.vite/deps/react-dom_client.js?v=9673256c:8574:7)\n    at recursivelyTraversePassiveUnmountEffects (http://127.0.0.1:5186/node_modules/.vite/deps/react-dom_client.js?v=9673256c:8493:6)\n    at commitPassiveUnmountOnFiber (http://127.0.0.1:5186/node_modules/.vite/deps/react-dom_client.js?v=9673256c:8512:6)\n    at flushPassiveEffects (http://127.0.0.1:5186/node_modules/.vite/deps/react-dom_client.js?v=9673256c:9579:5)",
+    "timestamp": "2026-10-17T10:09:03.918Z",
+    "url": "http://127.0.0.1:5186/node_modules/.vite/deps/maplibre-gl.js?v=003ac2c3"
+  },
+  {
+    "level": "warn",
+    "message": "%s\n\n%s\n An error occurred in the <SimulationMap> component. Consider adding an error boundary to your tree to customize error handling behavior.\nVisit https://react.dev/link/error-boundaries to learn more about error boundaries.",
+    "timestamp": "2026-10-17T10:09:03.918Z",
+    "url": "http://127.0.0.1:5186/@vite/client"
+  }
+]

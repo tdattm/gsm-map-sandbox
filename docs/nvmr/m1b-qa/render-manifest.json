@@ -1,0 +1,60 @@
+{
+  "source": "Geofabrik Vietnam / OpenStreetMap",
+  "attribution": "© OpenStreetMap contributors",
+  "extract_sha256": "18fd3892f6d766387f2c3217d5d104e09a9319d3905a9172834b21c0064d6308",
+  "display_bbox": [
+    105.797,
+    20.997,
+    105.88,
+    21.06
+  ],
+  "render_bbox": [
+    105.797,
+    20.997,
+    105.88,
+    21.06
+  ],
+  "osmium_image": "iboates/osmium@sha256:a67987f7d822d951ae1979de656ab7bd8051605f79d2751ea4800cc6057124be",
+  "exported_features": 335235,
+  "duplicate_features_removed": 0,
+  "outside_features_removed": 198929,
+  "layers": {
+    "streets.geojson": {
+      "features": 23763,
+      "size_bytes": 6363853,
+      "sha256": "7230c17749cf16b4d09751ead369ab52b418b32c866f15599f1ccf0897f61244"
+    },
+    "water.geojson": {
+      "features": 267,
+      "size_bytes": 295078,
+      "sha256": "b963620aac958ab1f3a4533db13426308b9630e8a3e65b247a2355c661164f70"
+    },
+    "green.geojson": {
+      "features": 1300,
+      "size_bytes": 595529,
+      "sha256": "f8b04a357e55f921cbf3e8bac8eddc29ddf40e7989dd4d8aa8b610ee4308816a"
+    },
+    "buildings.geojson": {
+      "features": 50717,
+      "size_bytes": 14485299,
+      "sha256": "3949f91f16767936a439b3c66ea0b7062ae62d1783c46e7bde2c4974ad893a96"
+    },
+    "places.geojson": {
+      "features": 168,
+      "size_bytes": 27231,
+      "sha256": "e35b4999ad22b1663df29de38eb7076057359bf4f9536b048d78e19770160707"
+    }
+  },
+  "identity": {
+    "region_id": "nvmr-hanoi-core",
+    "config_sha256": "91c114a869a0eebe23d91df77641b9dd2f52afb7b7d09e941f249f78cfc9f05c",
+    "pipeline_version": "hanoi-car-pilot/v1"
+  },
+  "region_id": "nvmr-hanoi-core",
+  "geometry_export_policy": "skip invalid OSM areas with --show-errors; never invent geometry",
+  "geometry_error_log": {
+    "file": "geometry-errors.log",
+    "sha256": "d395cae82cca45597d841cb90309f0b8d92dba69fadb62f3d8f298ff374ade41",
+    "text": "Geometry error: Could not build area geometry\n"
+  }
+}

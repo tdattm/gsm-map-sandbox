@@ -1,0 +1,218 @@
+Browser tab: 2, Title: "GSM Map Sandbox", URL: "http://127.0.0.1:5191/?runtime=simulation&scenario=regional&profile=meeting".
+0 AXWebArea GSM Map Sandbox, URL: 127.0.0.1:5191/?runtime=simulation&scenario=regional&profile=meeting
+	1 container root
+		2 container
+			3 button Mở menu chính
+			4 heading GSM Map Sandbox, Value: 1
+				5 text GSM Map Sandbox
+		7 container
+			8 text Kịch bản mô phỏng
+			9 pop up button (collapsed, settable) Description: Kịch bản mô phỏng, Value: NVMR · Hanoi + Bắc Ninh Core pilot, Secondary Actions: Expand
+				10 menu
+					11 Hanoi Core · legacy v3
+					12 (selected) NVMR · Hanoi + Bắc Ninh Core pilot
+			13 text Lưu mã run trước khi đổi kịch bản. Job đã gửi vẫn được worker xử lý. R1a · NVMR REGIONAL
+			14 heading Hà Nội + Bắc Ninh Core, Value: 1
+				15 text Hà Nội + Bắc Ninh Core
+			16 text Một kịch bản, hai vùng, một đồng hồ phát lại. Fleet và nhu cầu synthetic; điều phối chỉ trong cùng vùng và cùng loại xe.
+			17 container Cấu hình regional simulation
+				18 container
+					19 heading Thiết lập mô phỏng mới, Value: 2
+						20 text Thiết lập mô phỏng mới
+					21 text Phân bổ dưới đây dùng tạo run mới. Cấu hình run đang mở nằm ở Tiến trình. Preset synthetic 20 xe · seed r1a-synthetic-20-v1 · 5 CAR + 5 MOTORBIKE mỗi vùng; không phải số liệu vận hành GSM.
+					22 container
+						23 text Chế độ sử dụng
+						24 pop up button (collapsed, settable) Description: Chế độ regional, Value: Meeting · tiết kiệm cập nhật, Secondary Actions: Expand
+							25 menu
+								26 Standard
+								27 (selected) Meeting · tiết kiệm cập nhật
+								28 Benchmark
+					29 container Hanoi Core
+						30 text Hanoi Core
+						31 container
+							32 text Tổng xe
+							33 stepper (settable, integer) Description: nvmr-hanoi-core tổng xe, Value: 10
+						34 container
+							35 text CAR
+							36 stepper (settable, integer) Description: nvmr-hanoi-core CAR, Value: 5
+						37 container
+							38 text 5  MOTORBIKE
+						39 container
+							40 text Yêu cầu
+							41 stepper (settable, integer) Description: nvmr-hanoi-core yêu cầu, Value: 12
+						42 container
+							43 text Tỷ lệ online
+							44 stepper (settable, integer) Description: nvmr-hanoi-core online, Value: 1
+					45 container Bắc Ninh Core · pilot
+						46 text Bắc Ninh Core · pilot
+						47 container
+							48 text Tổng xe
+							49 stepper (settable, integer) Description: nvmr-bac-ninh-core tổng xe, Value: 10
+						50 container
+							51 text CAR
+							52 stepper (settable, integer) Description: nvmr-bac-ninh-core CAR, Value: 5
+						53 container
+							54 text 5  MOTORBIKE
+						55 container
+							56 text Yêu cầu
+							57 stepper (settable, integer) Description: nvmr-bac-ninh-core yêu cầu, Value: 12
+						58 container
+							59 text Tỷ lệ online
+							60 stepper (settable, integer) Description: nvmr-bac-ninh-core online, Value: 1
+					61 container
+						62 text 20 /5.000 xe tổng  ·  10  CAR +  10  MOTORBIKE ·  24  yêu cầu
+					63 container
+						64 text Seed
+						65 text field (settable) Description: Regional seed, Value: r1a-synthetic-20-v1
+					66 container
+						67 text Thời gian sinh yêu cầu (s)
+						68 stepper (settable, integer) Description: Regional horizon, Value: 900
+					69 container
+						70 text Chờ đón tối đa (s)
+						71 stepper (settable, integer) Chờ đón tối đa (s), Value: 300
+					72 button Tạo mô phỏng hai vùng
+					73 button (expanded) Mở regional run đã lưu, Secondary Actions: Collapse
+						74 text Mở regional run đã lưu
+					75 container
+						76 text Mã regional run
+						77 text field (settable) Description: Mã regional run, Value: 370d1b3f87f4465ab7446e23b8852ae4
+						78 button Mở regional run
+				79 container
+					80 heading Tiến trình và readiness, Value: 2
+						81 text Tiến trình và readiness
+					82 text FastAPI đã kết nối · Worker giữ lease đúng store (không phải heartbeat) RAM khả dụng 4.96 GiB · commit headroom 9.68 GiB. Tác vụ thường: ≤1000 xe/≤1000 yêu cầu cần 0.5 GiB RAM / 1 GiB commit; tới 5.000 xe/≤5000 yêu cầu cần 0.75 / 1.5 GiB. Horizon ≤3600s, schedule ≤8, candidates ≤128; ngoài phạm vi cần 2 / 2 GiB. Đây là ảnh chụp, không phải reservation.
+					83 button Kiểm tra lại kết nối
+					84 text Chỉ kiểm tra GET, không gửi lại job. QUEUED cũng có thể do worker đang bận. Đã tính xong · COMPLETED
+					85 progress indicator Description: Tiến trình regional, Value: 1
+					142 text 370d1b3f87f4465ab7446e23b8852ae4  ·  100 %
+					86 button (collapsed) Cấu hình đã lưu, Secondary Actions: Expand
+						143 text Cấu hình đã lưu
+					87 button Kiểm tra / tải lại dữ liệu
+					88 text Mỗi vùng/mode phải có graph và local router đúng identity. Không tự gửi lại POST khi mất kết nối. Job chưa hoàn tất không có kết quả phát lại. Hanoi Core :  CAR sẵn sàng  · bản đồ  sẵn sàng Bắc Ninh Core · pilot :  CAR sẵn sàng  · bản đồ  sẵn sàng
+				89 container
+					90 heading Toàn scenario, Value: 2
+						91 text Toàn scenario
+					144 definition list
+						145 container Tổng đội xe
+							146 text Tổng đội xe
+						147 text 5.000
+						148 container Offline
+							149 text Offline
+						150 text 0
+						151 container Online
+							152 text Online
+						153 text 5.000
+						154 container Rảnh
+							155 text Rảnh
+						156 text 5.000
+						157 container Đến đón
+							158 text Đến đón
+						159 text 0
+						160 container Chở khách
+							161 text Chở khách
+						162 text 0
+						163 container Di chuyển
+							164 text Di chuyển
+						165 text 0
+					166 text 2000  CAR +  3000  MOTORBIKE trong run đang mở 1250  yêu cầu ·  1225  hoàn tất ·  25  không phục vụ Kết quả cuối run; không đổi theo viewport.
+					167 button (collapsed) KPI, routing và provenance, Secondary Actions: Expand
+						168 text KPI, routing và provenance
+					93 heading Theo vùng tại cùng thời điểm, Value: 3
+						94 text Theo vùng tại cùng thời điểm
+					169 button Bắc Ninh Core · pilot
+					170 definition list
+						171 container Tổng đội xe
+							172 text Tổng đội xe
+						173 text 2.500
+						174 container Offline
+							175 text Offline
+						176 text 0
+						177 container Online
+							178 text Online
+						179 text 2.500
+						180 container Rảnh
+							181 text Rảnh
+						182 text 2.500
+						183 container Đến đón
+							184 text Đến đón
+						185 text 0
+						186 container Chở khách
+							187 text Chở khách
+						188 text 0
+						189 container Di chuyển
+							190 text Di chuyển
+						191 text 0
+					192 text 1000  CAR ·  1500  MOTORBIKE Kết quả cuối vùng:  625  yêu cầu ·  600  đã gán ·  600  hoàn tất ·  25  không phục vụ
+					193 button Hanoi Core
+					194 definition list
+						195 container Tổng đội xe
+							196 text Tổng đội xe
+						197 text 2.500
+						198 container Offline
+							199 text Offline
+						200 text 0
+						201 container Online
+							202 text Online
+						203 text 2.500
+						204 container Rảnh
+							205 text Rảnh
+						206 text 2.500
+						207 container Đến đón
+							208 text Đến đón
+						209 text 0
+						210 container Chở khách
+							211 text Chở khách
+						212 text 0
+						213 container Di chuyển
+							214 text Di chuyển
+						215 text 0
+					216 text 1000  CAR ·  1500  MOTORBIKE Kết quả cuối vùng:  625  yêu cầu ·  625  đã gán ·  625  hoàn tất ·  0  không phục vụ
+				95 container
+					96 heading Xe và hành trình, Value: 2
+						97 text Xe và hành trình
+					98 text Tìm global vehicle ID
+					99 text field (settable) Tìm global vehicle ID
+					100 checkbox (settable, integer) Description: Chỉ xe đến đón / chở khách, Value: 1
+					101 text 0  xe khớp trên cả hai vùng · hiển thị tối đa 12
+			102 container Bản đồ NVMR regional
+				103 text OSM CỤC BỘ · TECHNICAL PILOT
+				104 heading NVMR overview, Value: 2
+					105 text NVMR overview
+				106 container
+					107 text Vùng hiển thị
+					108 pop up button (collapsed, settable) Description: Vùng hiển thị, Value: NVMR overview, Secondary Actions: Expand
+						109 menu
+							110 (selected) NVMR overview
+							111 Hanoi Core
+							112 Bắc Ninh Core · pilot
+				113 text Extent nét đứt là operating area kỹ thuật, không phải ranh giới hành chính. Nhấp vùng để xem bản đồ chi tiết. Khoảng trống giữa hai vùng chưa có dữ liệu đường.
+				114 container
+					115 container Map
+					116 text © OpenStreetMap contributors · Geofabrik · ODbL 1.0
+					117 button Phóng to
+					118 button Thu nhỏ
+					119 button Đưa hướng bản đồ về phía Bắc
+						120 image
+			121 container Điều khiển phát lại · Phát lại đồng bộ hai vùng
+				122 button Phát
+				123 button (disabled) Tạm dừng
+				124 button Về đầu
+				125 text Phát lại đồng bộ hai vùng
+				126 text 0,0  /  884,3  giây ·  0 %
+				127 container Description: Dòng thời gian mô phỏng, ID: base-ui-_r_1_
+					128 container
+						129 slider (settable, integer) Description: Dòng thời gian mô phỏng, Value: 0, ID: base-ui-_r_4_
+				130 container
+					131 stepper (settable, integer) Description: Thời điểm mô phỏng (giây), Value: 0
+					132 button Đến thời điểm
+				133 checkbox 1x, Value: 1
+				134 checkbox 2x, Value: 0
+				135 checkbox 4x, Value: 0
+				136 container
+					137 text Tốc độ tùy chỉnh
+					138 text field (settable) Description: Tốc độ tùy chỉnh, Value: 1
+					139 button Áp dụng
+				140 container Tốc độ đã áp dụng
+					141 text 1 x
+
+The focused UI element is 0 AXWebArea GSM Map Sandbox, URL: 127.0.0.1:5191/?runtime=simulation&scenario=regional&profile=meeting

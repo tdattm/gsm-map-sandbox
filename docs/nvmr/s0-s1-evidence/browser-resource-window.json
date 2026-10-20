@@ -1,0 +1,11 @@
+{
+  "wallSeconds": 884.127561900008,
+  "cpuSeconds": 1.6875,
+  "cpuPercentOneCore": 0.19086612302567837,
+  "peakRssBytesSampled": 19828736,
+  "processPeakRssBytes": 19828736,
+  "minimumAvailablePhysicalBytes": 2403893248,
+  "sampleIntervalSeconds": 0.2,
+  "sampleCount": 4263,
+  "scope": "System available RAM sampled across browser captures; process RSS/CPU are the sampler, not browser"
+}

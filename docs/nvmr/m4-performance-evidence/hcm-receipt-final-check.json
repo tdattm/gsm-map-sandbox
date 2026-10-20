@@ -1,0 +1,6 @@
+{
+  "status": "current read-only inspection",
+  "exitCode": 1,
+  "stdout": "",
+  "stderr": "error: no such object: 5ad07b57ce4f7f582a551d9789ff40ddd76d7ec16792f7b97280199b3711cdb9"
+}

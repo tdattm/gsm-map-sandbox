@@ -1,0 +1,36 @@
+{
+  "identity": {
+    "region_id": "nvmr-connected",
+    "config_sha256": "c815a2d299193161a19fff43b66bcc71a79dd78a912c165f5be6377f6a1a2aa1",
+    "pipeline_version": "connected-nvmr-gis/v1"
+  },
+  "source_sha256": "2fbd2ee6b4dc151eecf04fa6823cddf584b47423e190118b10fce8b6115e9d8a",
+  "extract_sha256": "3243998cec519953323d369e4b569631edc7bef9a4fd4765c7b1e761c22a11f2",
+  "routing_bbox": [
+    104.25,
+    20.05,
+    107.35,
+    22.95
+  ],
+  "resources": {
+    "wallSeconds": 21.978435100027127,
+    "cpuSeconds": 0.0625,
+    "cpuPercentOneCore": 0.2843696546890313,
+    "peakRssBytesSampled": 49999872,
+    "processPeakRssBytes": 51544064,
+    "minimumAvailablePhysicalBytes": 26218496,
+    "peakPrivateBytesSampled": 38744064,
+    "minimumCommitHeadroomBytes": 1843888128,
+    "sampleIntervalSeconds": 0.5,
+    "sampleCount": 45
+  },
+  "configuration_migration": {
+    "previous_identity": {
+      "region_id": "nvmr-connected",
+      "config_sha256": "3b3204d0f2c1fff08ba4677b1e39ecdc453781d55e6065dc05bfe15d96cc7372",
+      "pipeline_version": "connected-nvmr-gis/v1"
+    },
+    "reason": "Expand only basemap/viewport south20.15->20.06 after audited merged HungYen OSM marine extent20.0771551; routing_bbox unchanged, source/extract bytes independently rehashed unchanged",
+    "preserved_previous_proof": "audit\\map-coverage-correction\\coverage.osm.metadata.json"
+  }
+}

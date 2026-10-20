@@ -1,0 +1,119 @@
+{
+  "evidenceType": "Historical persisted real-run API regression; in-process HTTP, no OSRM routers listening",
+  "routerPortsListening": {
+    "5000": false,
+    "5001": false,
+    "5002": false,
+    "5003": false,
+    "5004": false,
+    "5005": false,
+    "5006": false
+  },
+  "runs": [
+    {
+      "status": "PASS",
+      "apiVersion": 3,
+      "jobId": "77bae3c7611849eeac7a9ab4dd375cc6",
+      "store": "build/m4-performance/jobs",
+      "fleetSize": 5000,
+      "resultSha256": "39b91cc1029ea7785892e4035badec153bb3f2f40a26cdc51363d5fb407edecb",
+      "resultBytes": 6809115,
+      "counts": {
+        "requested": 1250,
+        "assigned": 1250,
+        "completed": 1250,
+        "unserved": 0,
+        "pending": 0,
+        "activeTrips": 0
+      },
+      "snapshotCounts": [
+        {
+          "total": 5000,
+          "offline": 0,
+          "online": 5000,
+          "idle": 5000,
+          "assigned": 0,
+          "onTrip": 0,
+          "moving": 0
+        },
+        {
+          "total": 5000,
+          "offline": 0,
+          "online": 5000,
+          "idle": 4750,
+          "assigned": 3,
+          "onTrip": 247,
+          "moving": 250
+        },
+        {
+          "total": 5000,
+          "offline": 0,
+          "online": 5000,
+          "idle": 5000,
+          "assigned": 0,
+          "onTrip": 0,
+          "moving": 0
+        }
+      ],
+      "selectedBookingId": "BK-000132",
+      "selectedRouteRefs": [
+        "7601cbe6953e65077238c5cb1c25fb306c6d839bdb9f38882b8da1debf0211d3"
+      ],
+      "v5RejectsHistoricalId": true,
+      "immutableResultUnchanged": true
+    },
+    {
+      "status": "PASS",
+      "apiVersion": 4,
+      "jobId": "370d1b3f87f4465ab7446e23b8852ae4",
+      "store": "build/r1a/jobs",
+      "fleetSize": 5000,
+      "resultSha256": "b319e615db3e1b40252b070dca06e898760d8701a03a5b8c9a4a27f1cd9093f9",
+      "resultBytes": 11323043,
+      "counts": {
+        "requested": 1250,
+        "assigned": 1225,
+        "completed": 1225,
+        "unserved": 25,
+        "pending": 0,
+        "activeTrips": 0
+      },
+      "snapshotCounts": [
+        {
+          "total": 5000,
+          "offline": 0,
+          "online": 5000,
+          "idle": 5000,
+          "assigned": 0,
+          "onTrip": 0,
+          "moving": 0
+        },
+        {
+          "total": 5000,
+          "offline": 0,
+          "online": 5000,
+          "idle": 4716,
+          "assigned": 0,
+          "onTrip": 284,
+          "moving": 284
+        },
+        {
+          "total": 5000,
+          "offline": 0,
+          "online": 5000,
+          "idle": 5000,
+          "assigned": 0,
+          "onTrip": 0,
+          "moving": 0
+        }
+      ],
+      "selectedBookingId": "nvmr-bac-ninh-core:BK-000447",
+      "selectedRouteRefs": [
+        "cfc11d722810a242f983c2bad88e7bab096527354084e1d3787c94db2e96408a"
+      ],
+      "v5RejectsHistoricalId": true,
+      "immutableResultUnchanged": true
+    }
+  ],
+  "status": "PASS"
+}

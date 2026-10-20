@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "modes": {
+    "CAR": {
+      "connectedPairs": 20,
+      "noRoutePairs": 0
+    },
+    "MOTORBIKE": {
+      "connectedPairs": 20,
+      "noRoutePairs": 0
+    }
+  }
+}

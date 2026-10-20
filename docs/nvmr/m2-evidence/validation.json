@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "manifest_sha256": "fb97489d066397b11cb9178238cd56a5f52281bcf5711430bb7cf411496ca455",
+  "validator_sha256": "3922a56f778daaebd21dff6dce91359c558357c658f292bef1492c8026949fc2",
+  "synthetic_sha256": "e8ffb93803a7bc888abd2efb48b68f3713b47439f452af808c8ba12ad4efb73a",
+  "real_oneway_sha256": "ccffd597bcec564877833c2c6859f335b2ecf7c154dbe755c83ea134a98c1731",
+  "directed_cases_sha256": "f02584624ce7bf68185d378fac3ef6dd1b1fd3289c19690a7e3ede8575280e58",
+  "scope": "static source-tag pilot; conditional restrictions, physical signage and ETA calibration UNKNOWN"
+}

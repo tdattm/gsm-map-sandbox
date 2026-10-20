@@ -1,0 +1,13 @@
+{
+  "identity": {
+    "region_id": "nvmr-connected",
+    "config_sha256": "c815a2d299193161a19fff43b66bcc71a79dd78a912c165f5be6377f6a1a2aa1",
+    "pipeline_version": "connected-nvmr-gis/v1"
+  },
+  "source_sha256": "2fbd2ee6b4dc151eecf04fa6823cddf584b47423e190118b10fce8b6115e9d8a",
+  "extract_sha256": "3243998cec519953323d369e4b569631edc7bef9a4fd4765c7b1e761c22a11f2",
+  "artifact_sha256": {
+    "road-candidates.json": "1413a5284af96d67a81cbbdcad300a0c39b5f1a61896ab5cd93484efe1a21826",
+    "snapped-anchors.json": "2d917217a5299997859b10103f2576ccf17d5c1f8976af87aec1b71dd16253ae"
+  }
+}

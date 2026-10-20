@@ -1,0 +1,28 @@
+{
+  "identity": {
+    "region_id": "nvmr-connected",
+    "config_sha256": "c815a2d299193161a19fff43b66bcc71a79dd78a912c165f5be6377f6a1a2aa1",
+    "pipeline_version": "connected-nvmr-gis/v1"
+  },
+  "extract_sha256": "3243998cec519953323d369e4b569631edc7bef9a4fd4765c7b1e761c22a11f2",
+  "sha256": "d5257bbd866c85c57f0b3115a2e70026e858da18f40dcbabbdf07aa8018058e5",
+  "counts": {
+    "places": 4849,
+    "streets": 1249448,
+    "water": 25775,
+    "green": 14815
+  },
+  "errors": {},
+  "resources": {
+    "wallSeconds": 1151.4723629000073,
+    "cpuSeconds": 1139.265625,
+    "cpuPercentOneCore": 98.93990179067221,
+    "peakRssBytesSampled": 431554560,
+    "processPeakRssBytes": 431554560,
+    "minimumAvailablePhysicalBytes": 2778583040,
+    "peakPrivateBytesSampled": 393048064,
+    "minimumCommitHeadroomBytes": 7642562560,
+    "sampleIntervalSeconds": 0.5,
+    "sampleCount": 2265
+  }
+}

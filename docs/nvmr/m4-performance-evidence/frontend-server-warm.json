@@ -1,0 +1,37 @@
+{
+  "dev": {
+    "application": "gsm-map-sandbox-vite",
+    "pid": 21116,
+    "workspace": "D:\\ThS\\VinAI\\Phase3_VRIC\\gsm-map-sandbox\\",
+    "proxy": "http://127.0.0.1:8016",
+    "kind": "development"
+  },
+  "stage": "fresh-dev-after-client-load",
+  "processes": [
+    {
+      "Id": 21116,
+      "WorkingSet64": 150638592,
+      "PrivateMemorySize64": 228487168,
+      "PeakWorkingSet64": 254885888
+    },
+    {
+      "Id": 24472,
+      "WorkingSet64": 99270656,
+      "PrivateMemorySize64": 118919168,
+      "PeakWorkingSet64": 108703744
+    },
+    {
+      "Id": 27928,
+      "WorkingSet64": 537931776,
+      "PrivateMemorySize64": 1162125312,
+      "PeakWorkingSet64": 647274496
+    }
+  ],
+  "preview": {
+    "application": "gsm-map-sandbox-vite",
+    "pid": 24472,
+    "workspace": "D:\\ThS\\VinAI\\Phase3_VRIC\\gsm-map-sandbox\\",
+    "proxy": "http://127.0.0.1:8016",
+    "kind": "preview"
+  }
+}

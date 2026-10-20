@@ -1,0 +1,31 @@
+{
+  "recordedUtc": "2026-10-18T06:52:28.450973+00:00",
+  "regionId": "nvmr-bac-ninh-core",
+  "vehicleType": "CAR",
+  "routingIdentity": {
+    "regionId": "nvmr-bac-ninh-core",
+    "vehicleType": "CAR",
+    "profile": "car",
+    "profileSha256": "cb3df0546318665609606b746a1297f3d65ca3c2ff825f8a6f3c57247d86a2d3",
+    "graphManifestSha256": "4e393c9025c9b73a08d27d0aca7108071989d06e8913e7e37f534671375ddb9c",
+    "sourceSha256": "2fbd2ee6b4dc151eecf04fa6823cddf584b47423e190118b10fce8b6115e9d8a",
+    "extractSha256": "5b18bc568bb2afd3a4914b97b89084663e7a1e72a84364367cb42eac7f7c3ebb",
+    "algorithm": "mld"
+  },
+  "candidateSource": "backend.app.fleet.candidate_catalog; same24 source-vertex raw coordinates as regional-routing.json",
+  "requestOptions": {
+    "Table": {
+      "annotations": "duration,distance",
+      "radiuses": "100 per coordinate"
+    },
+    "Route": {
+      "radiuses": "100;100",
+      "overview": "false"
+    }
+  },
+  "executedComparison": {
+    "directedNonDiagonalPairs": 552,
+    "durationOrReachabilityMismatches": 0
+  },
+  "scope": "Recovery read-only local HTTP check, no preprocessing and no timing benchmark. Full per-pair responses were not retained. Does not compare all geometries or distances. Earlier interrupted-session discrepancy had no precise pair and its cause remains unconfirmed."
+}

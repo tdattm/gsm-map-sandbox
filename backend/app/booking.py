@@ -241,7 +241,7 @@ class LocalTravel:
         try:
             async def query(client):
                 return await client.get(f"{self.settings.osrm_base_url}/{name}/v1/driving/{coordinates}",
-                    params={**params, "radiuses": ";".join(str(self.settings.max_snap_meters) for _ in points)})
+                    params={"radiuses": ";".join(str(self.settings.max_snap_meters) for _ in points), **params})
             if self.client is not None:
                 response = await query(self.client)
             else:
@@ -263,7 +263,7 @@ class LocalTravel:
 
     def snap(self, raw, original):
         point = SnapPoint.model_validate(raw)
-        w, s, e, n = self.settings.region.display_bbox
+        w, s, e, n = getattr(self.settings, "operating_bbox", self.settings.region.display_bbox)
         if (point.distance > self.settings.max_snap_meters or
                 self.distance(original, point.location) > self.settings.max_snap_meters + 1 or
                 not (w <= point.location[0] <= e and s <= point.location[1] <= n)):
@@ -305,9 +305,10 @@ class LocalTravel:
             return self.cache[key]
         self.counts["route"] += 1
         route = await self.fetch_route(RouteRequest(start=start, end=end))
-        w, s, e, n = self.settings.region.display_bbox
+        w, s, e, n = getattr(self.settings, "route_validation_bbox", self.settings.region.display_bbox)
         if any(not (w <= lon <= e and s <= lat <= n) for lon, lat in route.coordinates):
-            raise HTTPException(422, {"code": "ROUTE_OUTSIDE_DISPLAY", "message": "Tuyến vượt render coverage."})
+            legacy = getattr(self.settings, "id", "hcm-center") == "hcm-center"
+            raise HTTPException(422, {"code": "ROUTE_OUTSIDE_DISPLAY" if legacy else "ROUTE_OUTSIDE_REGION", "message": "Tuyến vượt render coverage." if legacy else "Tuyến vượt coverage định tuyến đã xác minh."})
         self.cache[key] = route
         return route
 
@@ -317,7 +318,8 @@ def recoverable(exc):
 
 
 async def build_plan(catalog, config, travel, cancelled=None, *, inputs=None, initial=None,
-                     arrival_decider=None, outcome_observer=None):
+                     arrival_decider=None, outcome_observer=None, vehicle_modes=None, booking_modes=None,
+                     mode_travel=None):
     begun = time.perf_counter()
     if inputs is None:
         initial, demand = demand_inputs(catalog, config)
@@ -325,7 +327,8 @@ async def build_plan(catalog, config, travel, cancelled=None, *, inputs=None, in
         demand = inputs
         initial = [v.model_copy(deep=True) for v in initial]
     for vehicle in initial:
-        vehicle.initialPosition = await travel.nearest(vehicle.initialPosition)
+        selected = mode_travel[vehicle_modes[vehicle.id]] if mode_travel else travel
+        vehicle.initialPosition = await selected.nearest(vehicle.initialPosition)
     accepted = []
     vehicles = {v.id: {"position": v.initialPosition, "active": None} for v in initial}
     pending, assignments, events, invalid = {}, [], [], {}
@@ -338,18 +341,21 @@ async def build_plan(catalog, config, travel, cancelled=None, *, inputs=None, in
             outcome_observer(kind, timestamp, booking_id)
 
     async def dispatch_pending(now):
+        # M2 uses the same queue/lifecycle, with isolated travel and compatible idle vehicles.
         for booking in sorted(list(pending.values()), key=lambda b: (b.requestTimeSeconds, b.id)):
+            selected = mode_travel[booking_modes[booking.id]] if mode_travel else travel
             if cancelled and await cancelled():
                 raise HTTPException(499, {"code": "PREPARATION_CANCELLED", "message": "Client đã hủy scenario."})
             deadline = booking.requestTimeSeconds + config.maxWaitSeconds
             if booking.id in invalid:
                 continue
-            idle = sorted(id for id, v in vehicles.items() if v["active"] is None)
+            idle = sorted(id for id, v in vehicles.items() if v["active"] is None and
+                          (not mode_travel or vehicle_modes[id] == booking_modes[booking.id]))
             if not idle or now > deadline:
                 continue
             try:
-                trip = await travel.route(booking.pickup, booking.dropoff)
-                etas = await travel.table([vehicles[id]["position"] for id in idle], trip.coordinates[0])
+                trip = await selected.route(booking.pickup, booking.dropoff)
+                etas = await selected.table([vehicles[id]["position"] for id in idle], trip.coordinates[0])
             except HTTPException as exc:
                 if not recoverable(exc):
                     raise
@@ -362,7 +368,7 @@ async def build_plan(catalog, config, travel, cancelled=None, *, inputs=None, in
                 position = vehicles[vehicle_id]["position"]
                 try:
                     # An idle car already AT the pickup requires no invented zero-length road route.
-                    pickup = None if travel.distance(position, trip.coordinates[0]) < .1 else await travel.route(position, trip.coordinates[0])
+                    pickup = None if selected.distance(position, trip.coordinates[0]) < .1 else await selected.route(position, trip.coordinates[0])
                     pickup_duration = pickup.duration if pickup else 0
                     if pickup and (travel.distance(pickup.coordinates[0], position) > 1 or
                                    travel.distance(pickup.coordinates[-1], trip.coordinates[0]) > 1):

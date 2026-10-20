@@ -1,0 +1,32 @@
+{
+  "status": "PASS",
+  "jobId": "786e10e8382540fc8de15ccbf87bff9e",
+  "counts": {
+    "requested": 20,
+    "assigned": 19,
+    "completed": 19,
+    "unserved": 1,
+    "pending": 0,
+    "activeTrips": 0
+  },
+  "config": {
+    "regionId": "nvmr-hanoi-core",
+    "seed": "m4-memory-10",
+    "fleetSize": 10,
+    "carCount": 4,
+    "bookingCount": 20,
+    "horizonSeconds": 900,
+    "maxWaitSeconds": 300,
+    "onlineFraction": 1.0,
+    "onlineSchedule": [],
+    "workload": "typical",
+    "initialCandidates": 16,
+    "maxCandidates": 128,
+    "gridCellDegrees": 0.005
+  },
+  "semanticSha256": "f4101a1ff235f70074cf339892a35ffeab6981c9887ac3178144e5738fedb7aa",
+  "baselineSha256": "f4101a1ff235f70074cf339892a35ffeab6981c9887ac3178144e5738fedb7aa",
+  "matchesBaseline": true,
+  "smallPhysicalFloorGiB": 0.5,
+  "actualFreeRam": "Around4GiB, NOT a physical0.5GiB stress test"
+}

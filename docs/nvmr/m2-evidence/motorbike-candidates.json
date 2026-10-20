@@ -1,0 +1,1505 @@
+{
+  "count": 24,
+  "maxSnapMeters": 0,
+  "directedNonSelfPairs": 552,
+  "unreachablePairs": 0,
+  "nearest": [
+    {
+      "code": "Ok",
+      "waypoints": [
+        {
+          "hint": "lGECgP___38IAAAACAAAAAQAAAAAAAAA7tAHQQAAAAAkApBAAAAAAAgAAAAIAAAABAAAAAAAAAAIAQAAiMdOBnzBQAGIx04GfMFAAQEA7xLf0CBj",
+          "nodes": [
+            6661055814,
+            6677293471
+          ],
+          "distance": 0,
+          "name": "Đường La Thành",
+          "location": [
+            105.826184,
+            21.021052
+          ]
+        }
+      ]
+    },
+    {
+      "code": "Ok",
+      "waypoints": [
+        {
+          "hint": "0jECgIEyAoAAAAAALAAAAAAAAAAAAAAAAAAAAE_akkEAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAAIAQAAqr5OBhzbQAGqvk4GHNtAAQAAXxTf0CBj",
+          "nodes": [
+            13589634423,
+            2053897915
+          ],
+          "distance": 0,
+          "name": "",
+          "location": [
+            105.823914,
+            21.027612
+          ]
+        }
+      ]
+    },
+    {
+      "code": "Ok",
+      "waypoints": [
+        {
+          "hint": "dDYAgAM2AIAIAAAAAAAAAAAAAAAPAAAA_TkNQQAAAAAAAAAAf8KMQQgAAAAAAAAAAAAAAA8AAAAIAQAAo8pOBkXlQAGjyk4GReVAAQAAjxXf0CBj",
+          "nodes": [
+            10171584196,
+            98032857
+          ],
+          "distance": 0,
+          "name": "Phố Giang Văn Minh",
+          "location": [
+            105.826979,
+            21.030213
+          ]
+        }
+      ]
+    },
+    {
+      "code": "Ok",
+      "waypoints": [
+        {
+          "hint": "9G8CgPZvAoABAAAAAAAAAB0AAAAAAAAA3akKPwAAAADiZ0BBAAAAAAEAAAAAAAAAHQAAAAAAAAAIAQAAzsZOBtv7QAHOxk4G2_tAAQMADwnf0CBj",
+          "nodes": [
+            2564039259,
+            14128420975
+          ],
+          "distance": 0,
+          "name": "Ngách 31 Ngõ 135 Đội Cấn",
+          "location": [
+            105.825998,
+            21.035995
+          ]
+        }
+      ]
+    },
+    {
+      "code": "Ok",
+      "waypoints": [
+        {
+          "hint": "GDsAgJI6AIA_AAAAAAAAAFcAAAAAAAAAwj4MQgAAAABATEFCAAAAAD8AAAAAAAAAVwAAAAAAAAAIAQAA89FOBv7EQAHz0U4G_sRAAQIAbwzf0CBj",
+          "nodes": [
+            2105175576,
+            2105175569
+          ],
+          "distance": 0,
+          "name": "Ngõ Quan Thổ 1",
+          "location": [
+            105.828851,
+            21.02195
+          ]
+        }
+      ]
+    },
+    {
+      "code": "Ok",
+      "waypoints": [
+        {
+          "hint": "3DICgP___38BAAAAAQAAAAsAAAAAAAAAVOLePwAAAADK6ndBAAAAAAEAAAABAAAACwAAAAAAAAAIAQAAa81OBvjXQAFrzU4G-NdAAQYAPw_f0CBj",
+          "nodes": [
+            12899459185,
+            12899459191
+          ],
+          "distance": 0,
+          "name": "Phố Hào Nam",
+          "location": [
+            105.827691,
+            21.026808
+          ]
+        }
+      ]
+    },
+    {
+      "code": "Ok",
+      "waypoints": [
+        {
+          "hint": "uzQCgCg1AoAAAAAAAwAAAAAAAAAIAAAAAAAAAM-2O0AAAAAApP0TQQAAAAADAAAAAAAAAAgAAAAIAQAAastOBqvjQAFqy04Gq-NAAQAArxTf0CBj",
+          "nodes": [
+            10172943698,
+            6647118938
+          ],
+          "distance": 0,
+          "name": "Phố Giang Văn Minh",
+          "location": [
+            105.827178,
+            21.029803
+          ]
+        }
+      ]
+    },
+    {
+      "code": "Ok",
+      "waypoints": [
+        {
+          "hint": "MDACgI8wAoAAAAAADAAAABkAAAAAAAAAAAAAAGarW0EuVeBBAAAAAAAAAAAMAAAAGQAAAAAAAAAIAQAAXMtOBrryQAFcy04GuvJAAQEADwDf0CBj",
+          "nodes": [
+            12009350515,
+            12064155026
+          ],
+          "distance": 0,
+          "name": "Phố Giang Văn Minh",
+          "location": [
+            105.827164,
+            21.033658
+          ]
+        }
+      ]
+    },
+    {
+      "code": "Ok",
+      "waypoints": [
+        {
+          "hint": "up0CgNadAoAAAAAAGAAAAAAAAAA3AAAAAAAAAEwM0kEAAAAAvIt0QgAAAAAYAAAAAAAAADcAAAAIAQAA7t5OBga7QAHu3k4GBrtAAQAA3wXf0CBj",
+          "nodes": [
+            6689655520,
+            81806532
+          ],
+          "distance": 0,
+          "name": "Phố Khâm Thiên",
+          "location": [
+            105.832174,
+            21.019398
+          ]
+        }
+      ]
+    },
+    {
+      "code": "Ok",
+      "waypoints": [
+        {
+          "hint": "nS0CgP___38OAAAADgAAAAAAAAAAAAAANFiaQQAAAAAAAAAAAAAAAA4AAAAOAAAAAAAAAAAAAAAIAQAAMuROBsjVQAEy5E4GyNVAAQAAbwHf0CBj",
+          "nodes": [
+            0,
+            6406176270
+          ],
+          "distance": 0,
+          "name": "Phố Tôn Đức Thắng",
+          "location": [
+            105.833522,
+            21.026248
+          ]
+        }
+      ]
+    },
+    {
+      "code": "Ok",
+      "waypoints": [
+        {
+          "hint": "VzUCgLg1AoAQAAAAAAAAAAAAAACSAAAAfTiRQQAAAAAAAAAAh8kMQxAAAAAAAAAAAAAAAJIAAAAIAQAA6OZOBu_sQAHo5k4G7-xAAQAArwDf0CBj",
+          "nodes": [
+            10157074135,
+            438172280
+          ],
+          "distance": 0,
+          "name": "Đường Hùng Vương",
+          "location": [
+            105.834216,
+            21.032175
+          ]
+        }
+      ]
+    },
+    {
+      "code": "Ok",
+      "waypoints": [
+        {
+          "hint": "kDYAgLc1AoAKAAAAAAAAAAAAAABJAAAA7H0qQQAAAAAAAAAAzn9rQgoAAAAAAAAAAAAAAEkAAAAIAQAAXehOBtjzQAFd6E4G2PNAAQAADwzf0CBj",
+          "nodes": [
+            10161188142,
+            104833841
+          ],
+          "distance": 0,
+          "name": "Đường Hùng Vương",
+          "location": [
+            105.834589,
+            21.033944
+          ]
+        }
+      ]
+    },
+    {
+      "code": "Ok",
+      "waypoints": [
+        {
+          "hint": "UaACgMJAAIAAAAAAdAAAAAAAAAB1AAAAAAAAAATWQEIAAAAATUxCQgAAAAB0AAAAAAAAAHUAAAAIAQAAkPJOBh_LQAGQ8k4GH8tAAQAArxLf0CBj",
+          "nodes": [
+            7799727243,
+            7799727242
+          ],
+          "distance": 0,
+          "name": "Ngách 46 Ngõ Linh Quang",
+          "location": [
+            105.8372,
+            21.023519
+          ]
+        }
+      ]
+    },
+    {
+      "code": "Ok",
+      "waypoints": [
+        {
+          "hint": "_58CgPSgAoAAAAAAQgAAAAAAAAAAAAAAAAAAALQE3EEAAAAAAAAAAAAAAABCAAAAAAAAAAAAAAAIAQAAE_NOBmfMQAET804GZ8xAAQAALxLf0CBj",
+          "nodes": [
+            13300863340,
+            1000087264
+          ],
+          "distance": 0,
+          "name": "Ngách 36 Ngõ Linh Quang",
+          "location": [
+            105.837331,
+            21.023847
+          ]
+        }
+      ]
+    },
+    {
+      "code": "Ok",
+      "waypoints": [
+        {
+          "hint": "LjUCgLo1AoAAAAAAJQAAAAkAAABEAAAAAAAAAKBCJEJbYBpBbf-WQgAAAAAlAAAACQAAAEQAAAAIAQAA_O5OBiHrQAH87k4GIetAAQEAnwDf0CBj",
+          "nodes": [
+            5700935270,
+            10157074182
+          ],
+          "distance": 0,
+          "name": "Phố Chu Văn An",
+          "location": [
+            105.836284,
+            21.031713
+          ]
+        }
+      ]
+    },
+    {
+      "code": "Ok",
+      "waypoints": [
+        {
+          "hint": "QTUCgLs1AoAAAAAAUAAAAA0AAAAAAAAAAAAAALn1sUIhdmJBAAAAAAAAAABQAAAADQAAAAAAAAAIAQAAPPBOBknyQAE88E4GSfJAAQIA3wvf0CBj",
+          "nodes": [
+            11267216146,
+            10157074266
+          ],
+          "distance": 0,
+          "name": "Phố Chu Văn An",
+          "location": [
+            105.836604,
+            21.033545
+          ]
+        }
+      ]
+    },
+    {
+      "code": "Ok",
+      "waypoints": [
+        {
+          "hint": "loYAgP___38ZAAAAGQAAAAAAAAAAAAAACfcGQgAAAAAAAAAAAAAAABkAAAAZAAAAAAAAAAAAAAAIAQAA-AZPBs27QAH4Bk8GzbtAAQAALwHf0CBj",
+          "nodes": [
+            0,
+            102995229
+          ],
+          "distance": 0,
+          "name": "Phố Yết Kiêu",
+          "location": [
+            105.842424,
+            21.019597
+          ]
+        }
+      ]
+    },
+    {
+      "code": "Ok",
+      "waypoints": [
+        {
+          "hint": "2AkAgM0HAIBVAAAAAAAAAAAAAAAAAAAAaRs9QgAAAAAAAAAAAAAAAFUAAAAAAAAAAAAAAAAAAAAIAQAAtPtOBgjOQAG0-04GCM5AAQAADwDf0CBj",
+          "nodes": [
+            317968979,
+            317968911
+          ],
+          "distance": 0,
+          "name": "Ngõ 88 Trần Quý Cáp",
+          "location": [
+            105.83954,
+            21.024264
+          ]
+        }
+      ]
+    },
+    {
+      "code": "Ok",
+      "waypoints": [
+        {
+          "hint": "_4gAgP___38PAAAADwAAAEgAAAAAAAAA4H6eQQAAAADizL1CAAAAAA8AAAAPAAAASAAAAAAAAAAIAQAA2_5OBg_qQAHb_k4GD-pAAQIAzwvf0CBj",
+          "nodes": [
+            6661176016,
+            6661176018
+          ],
+          "distance": 0,
+          "name": "Đường Nguyễn Tri Phương",
+          "location": [
+            105.840347,
+            21.031439
+          ]
+        }
+      ]
+    },
+    {
+      "code": "Ok",
+      "waypoints": [
+        {
+          "hint": "pYgAgP___39xAAAAcQAAAAAAAAAAAAAAVpkWQwAAAAAAAAAAAAAAAHEAAABxAAAAAAAAAAAAAAAIAQAACQFPBs_0QAEJAU8Gz_RAAQAAjwDf0CBj",
+          "nodes": [
+            0,
+            104827478
+          ],
+          "distance": 0,
+          "name": "Đường Nguyễn Tri Phương",
+          "location": [
+            105.840905,
+            21.034191
+          ]
+        }
+      ]
+    },
+    {
+      "code": "Ok",
+      "waypoints": [
+        {
+          "hint": "mYYAgJ2GAIAAAAAADgAAADwBAAAAAAAAAAAAAB7x9UCxdS9DAAAAAAAAAAAOAAAAPAEAAAAAAAAIAQAAfg1PBue6QAF-DU8G57pAAQIAPwbf0CBj",
+          "nodes": [
+            102996041,
+            8194665210
+          ],
+          "distance": 0,
+          "name": "Phố Thiền Quang",
+          "location": [
+            105.844094,
+            21.019367
+          ]
+        }
+      ]
+    },
+    {
+      "code": "Ok",
+      "waypoints": [
+        {
+          "hint": "wg8AgGYPAIAZAAAAAAAAABUAAAAMAAAA9BPgQQAAAAA9GbxBgWlPQRkAAAAAAAAAFQAAAAwAAAAIAQAA-BJPBmzWQAH4Ek8GbNZAAQEAvwbf0CBj",
+          "nodes": [
+            14233411964,
+            14233411965
+          ],
+          "distance": 0,
+          "name": "Phố Hai Bà Trưng",
+          "location": [
+            105.845496,
+            21.026412
+          ]
+        }
+      ]
+    },
+    {
+      "code": "Ok",
+      "waypoints": [
+        {
+          "hint": "vQ8AgP___38AAAAABgAAACkAAAAAAAAAAAAAAKSw-0DCZlpCAAAAAAAAAAAGAAAAKQAAAAAAAAAIAQAAIw1PBqveQAEjDU8Gq95AAQEArxXf0CBj",
+          "nodes": [
+            92383107,
+            6647148047
+          ],
+          "distance": 0,
+          "name": "Phố Thợ Nhuộm",
+          "location": [
+            105.844003,
+            21.028523
+          ]
+        }
+      ]
+    },
+    {
+      "code": "Ok",
+      "waypoints": [
+        {
+          "hint": "b4cAgIOHAIBtAAAAAAAAABEAAAAAAAAA9KLyQgAAAADLFptBAAAAAG0AAAAAAAAAEQAAAAAAAAAIAQAAgRRPBg7zQAGBFE8GDvNAAQIA_w7f0CBj",
+          "nodes": [
+            84783436,
+            6659194065
+          ],
+          "distance": 0,
+          "name": "Phố Nhà Hoả",
+          "location": [
+            105.845889,
+            21.033742
+          ]
+        }
+      ]
+    }
+  ],
+  "table": {
+    "code": "Ok",
+    "destinations": [
+      {
+        "hint": "lGECgP___38IAAAACAAAAAQAAAAAAAAA7tAHQQAAAAAkApBAAAAAAAgAAAAIAAAABAAAAAAAAAAIAQAAiMdOBnzBQAGIx04GfMFAAQEA7xLf0CBjkmECgP___38AAAAACgAAAAAAAAA9AAAAAAAAAFEDqUAAAAAAHR4HQgAAAAAKAAAAAAAAAD0AAAAIAQAAiMdOBnzBQAGIx04GfMFAAQAA7xTf0CBjkWECgP___38AAAAABwAAAAAAAAAjAAAAAAAAAJGh_kAAAAAARZCEQQAAAAAHAAAAAAAAACMAAAAIAQAAiMdOBnzBQAGIx04GfMFAAQAAnxLf0CBj",
+        "distance": 0,
+        "name": "Đường La Thành / Đường La Thành",
+        "location": [
+          105.826184,
+          21.021052
+        ]
+      },
+      {
+        "hint": "0jECgIEyAoAAAAAALAAAAAAAAAAAAAAAAAAAAE_akkEAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAAIAQAAqr5OBhzbQAGqvk4GHNtAAQAAXxTf0CBj0TECgPIxAoAAAAAAKAAAAAAAAAAAAAAAAAAAAPz-sUEAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAAIAQAAqr5OBhzbQAGqvk4GHNtAAQAAbw7f0CBj0zECgIkyAoAAAAAAGAAAAAAAAAAAAAAAAAAAAHokIEEAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAAIAQAAqr5OBhzbQAGqvk4GHNtAAQAAfwjf0CBj",
+        "distance": 0,
+        "name": "Ngõ 1 Phố Trần Huy Liệu / Ngõ 140 Phố Giảng Võ",
+        "location": [
+          105.823914,
+          21.027612
+        ]
+      },
+      {
+        "hint": "dDYAgAM2AIAIAAAAAAAAAAAAAAAPAAAA_TkNQQAAAAAAAAAAf8KMQQgAAAAAAAAAAAAAAA8AAAAIAQAAo8pOBkXlQAGjyk4GReVAAQAAjxXf0CBj",
+        "distance": 0,
+        "name": "Phố Giang Văn Minh",
+        "location": [
+          105.826979,
+          21.030213
+        ]
+      },
+      {
+        "hint": "9G8CgPZvAoABAAAAAAAAAB0AAAAAAAAA3akKPwAAAADiZ0BBAAAAAAEAAAAAAAAAHQAAAAAAAAAIAQAAzsZOBtv7QAHOxk4G2_tAAQMADwnf0CBjem8CgPVvAoABAAAAAAAAAGgBAAAAAAAAE2IXPwAAAAAA10dDAAAAAAEAAAAAAAAAaAEAAAAAAAAIAQAAzsZOBtv7QAHOxk4G2_tAARMAPxXf0CBj",
+        "distance": 0,
+        "name": "Ngách 31 Ngõ 135 Đội Cấn / Ngách 135/31 Phố Đội Cấn",
+        "location": [
+          105.825998,
+          21.035995
+        ]
+      },
+      {
+        "hint": "GDsAgJI6AIA_AAAAAAAAAFcAAAAAAAAAwj4MQgAAAABATEFCAAAAAD8AAAAAAAAAVwAAAAAAAAAIAQAA89FOBv7EQAHz0U4G_sRAAQIAbwzf0CBjlDoAgDdeAoAAAAAALwAAAAAAAAAAAAAAAAAAAEutnEEAAAAAAAAAAAAAAAAvAAAAAAAAAAAAAAAIAQAA89FOBv7EQAHz0U4G_sRAAQAArxHf0CBjkzoAgP1dAoAAAAAAEwAAAAAAAABCAAAAAAAAABJOJkEAAAAAf6oUQgAAAAATAAAAAAAAAEIAAAAIAQAA89FOBv7EQAHz0U4G_sRAAQAA3wbf0CBj",
+        "distance": 0,
+        "name": "Ngõ Quan Thổ 1 / Ngõ Quan Thổ 1",
+        "location": [
+          105.828851,
+          21.02195
+        ]
+      },
+      {
+        "hint": "3DICgP___38BAAAAAQAAAAsAAAAAAAAAVOLePwAAAADK6ndBAAAAAAEAAAABAAAACwAAAAAAAAAIAQAAa81OBvjXQAFrzU4G-NdAAQYAPw_f0CBjzDICgP___38AAAAAAgAAAAAAAAAQAAAAAAAAAKvoHUAAAAAAYymhQQAAAAACAAAAAAAAABAAAAAIAQAAa81OBvjXQAFrzU4G-NdAAQAA3w7f0CBjyzICgBQzAoAAAAAAFgAAAAAAAAA1AAAAAAAAAJDJwEEAAAAAg2BtQgAAAAAWAAAAAAAAADUAAAAIAQAAa81OBvjXQAFrzU4G-NdAAQAAPxbf0CBj",
+        "distance": 0,
+        "name": "Phố Hào Nam / Phố Hào Nam / Phố Hào Nam",
+        "location": [
+          105.827691,
+          21.026808
+        ]
+      },
+      {
+        "hint": "uzQCgCg1AoAAAAAAAwAAAAAAAAAIAAAAAAAAAM-2O0AAAAAApP0TQQAAAAADAAAAAAAAAAgAAAAIAQAAastOBqvjQAFqy04Gq-NAAQAArxTf0CBjujQCgP___38AAAAAGQAAAAAAAABCAAAAAAAAACXhX0EAAAAAq6wTQgAAAAAZAAAAAAAAAEIAAAAIAQAAastOBqvjQAFqy04Gq-NAAQAAjwrf0CBjizQCgP___38cAAAAHAAAAAAAAAAAAAAAj038QQAAAAAAAAAAAAAAABwAAAAcAAAAAAAAAAAAAAAIAQAAastOBqvjQAFqy04Gq-NAAQAAXxTf0CBj",
+        "distance": 0,
+        "name": "Phố Giang Văn Minh / Phố Giang Văn Minh",
+        "location": [
+          105.827178,
+          21.029803
+        ]
+      },
+      {
+        "hint": "MDACgI8wAoAZAAAAAAAAAAAAAAAMAAAALlXgQQAAAAAAAAAAZqtbQRkAAAAAAAAAAAAAAAwAAAAIAQAAXMtOBrryQAFcy04GuvJAAQAALxbf0CBj",
+        "distance": 0,
+        "name": "Phố Giang Văn Minh",
+        "location": [
+          105.827164,
+          21.033658
+        ]
+      },
+      {
+        "hint": "up0CgNadAoAAAAAAGAAAAAAAAAA3AAAAAAAAAEwM0kEAAAAAvIt0QgAAAAAYAAAAAAAAADcAAAAIAQAA7t5OBga7QAHu3k4GBrtAAQAA3wXf0CBju50CgCmeAoAAAAAADQAAAAAAAAAhAAAAAAAAADPkrUAAAAAA2adeQQAAAAANAAAAAAAAACEAAAAIAQAA7t5OBga7QAHu3k4GBrtAAQAAPwDf0CBjvJ0CgAyeAoAAAAAAAwAAAAAAAAAIAAAAAAAAAK-6TkAAAAAAcJMPQQAAAAADAAAAAAAAAAgAAAAIAQAA7t5OBga7QAHu3k4GBrtAAQAAHxHf0CBj",
+        "distance": 0,
+        "name": "Phố Khâm Thiên / Ngõ Kiến Thiết / Phố Khâm Thiên",
+        "location": [
+          105.832174,
+          21.019398
+        ]
+      },
+      {
+        "hint": "nS0CgP___38OAAAADgAAAAAAAAAAAAAANFiaQQAAAAAAAAAAAAAAAA4AAAAOAAAAAAAAAAAAAAAIAQAAMuROBsjVQAEy5E4GyNVAAQAAbwHf0CBjbC0CgKgtAoAAAAAACwAAAAAAAAA8AAAAAAAAAHHexkAAAAAAmv8FQgAAAAALAAAAAAAAADwAAAAIAQAAMuROBsjVQAEy5E4GyNVAAQAAHwff0CBjbS0CgP___38AAAAAFwAAAAAAAAALAAAAAAAAABfu9UEAAAAATaxsQQAAAAAXAAAAAAAAAAsAAAAIAQAAMuROBsjVQAEy5E4GyNVAAQAAfwHf0CBj",
+        "distance": 0,
+        "name": "Phố Tôn Đức Thắng / Ngõ Thông Phong / Phố Tôn Đức Thắng",
+        "location": [
+          105.833522,
+          21.026248
+        ]
+      },
+      {
+        "hint": "VzUCgLg1AoAQAAAAAAAAAAAAAACSAAAAfTiRQQAAAAAAAAAAh8kMQxAAAAAAAAAAAAAAAJIAAAAIAQAA6OZOBu_sQAHo5k4G7-xAAQAArwDf0CBj",
+        "distance": 0,
+        "name": "Đường Hùng Vương",
+        "location": [
+          105.834216,
+          21.032175
+        ]
+      },
+      {
+        "hint": "kDYAgLc1AoAKAAAAAAAAAAAAAABJAAAA7H0qQQAAAAAAAAAAzn9rQgoAAAAAAAAAAAAAAEkAAAAIAQAAXehOBtjzQAFd6E4G2PNAAQAADwzf0CBj",
+        "distance": 0,
+        "name": "Đường Hùng Vương",
+        "location": [
+          105.834589,
+          21.033944
+        ]
+      },
+      {
+        "hint": "UaACgMJAAIAAAAAAdAAAAAAAAAB1AAAAAAAAAATWQEIAAAAATUxCQgAAAAB0AAAAAAAAAHUAAAAIAQAAkPJOBh_LQAGQ8k4GH8tAAQAArxLf0CBjA6ACgFCgAoARAAAAAAAAAAcAAAAAAAAAK9kZQQAAAAAlRYJAAAAAABEAAAAAAAAABwAAAAAAAAAIAQAAkPJOBh_LQAGQ8k4GH8tAAQEArwzf0CBjCqACgE-gAoARAAAAAAAAAAAAAAAAAAAAZp3cQAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAAAAAAAIAQAAkPJOBh_LQAGQ8k4GH8tAAQAAnwHf0CBjTqACgFKgAoBWAAAAAAAAAAkAAAAAAAAA5QJAQgAAAABeo5dAAAAAAFYAAAAAAAAACQAAAAAAAAAIAQAAkPJOBh_LQAGQ8k4GH8tAAQEAHxPf0CBj",
+        "distance": 0,
+        "name": "Ngách 46 Ngõ Linh Quang / Ngõ Linh Quang / Ngõ Linh Quang / Ngách 59 Ngõ Linh Quang",
+        "location": [
+          105.8372,
+          21.023519
+        ]
+      },
+      {
+        "hint": "_58CgPSgAoAAAAAAQgAAAAAAAAAAAAAAAAAAALQE3EEAAAAAAAAAAAAAAABCAAAAAAAAAAAAAAAIAQAAE_NOBmfMQAET804GZ8xAAQAALxLf0CBj_Z8CgJygAoAAAAAAJwAAAAAAAAAAAAAAAAAAAFGerUEAAAAAAAAAAAAAAAAnAAAAAAAAAAAAAAAIAQAAE_NOBmfMQAET804GZ8xAAQAAPwHf0CBj_J8CgAWgAoAAAAAAEAAAAAAAAAAeAAAAAAAAAOJMC0EAAAAAUrWDQQAAAAAQAAAAAAAAAB4AAAAIAQAAE_NOBmfMQAET804GZ8xAAQAA3wzf0CBj-58CgGigAoAAAAAADwAAAAAAAAAEAgAAAAAAABo0y0AAAAAANo9WQwAAAAAPAAAAAAAAAAQCAAAIAQAAE_NOBmfMQAET804GZ8xAAQAAzwbf0CBj_p8CgAShAoAAAAAALQAAAAAAAAAsAAAAAAAAAOPFlUEAAAAAFq6SQQAAAAAtAAAAAAAAACwAAAAIAQAAE_NOBmfMQAET804GZ8xAAQAAHwDf0CBj",
+        "distance": 0,
+        "name": "Ngách 36 Ngõ Linh Quang / Ngõ Linh Quang / Ngách 51 Ngõ Linh Quang / Ngõ Linh Quang",
+        "location": [
+          105.837331,
+          21.023847
+        ]
+      },
+      {
+        "hint": "LjUCgLo1AoAJAAAAAAAAAAAAAABpAAAAW2AaQQAAAAAAAAAAviDpQgkAAAAAAAAAAAAAAGkAAAAIAQAA_O5OBiHrQAH87k4GIetAAQAAnwDf0CBj",
+        "distance": 0,
+        "name": "Phố Chu Văn An",
+        "location": [
+          105.836284,
+          21.031713
+        ]
+      },
+      {
+        "hint": "QTUCgLs1AoADAAAAAAAAAAoAAABQAAAAazxmQAAAAAAG5yhBufWxQgMAAAAAAAAACgAAAFAAAAAIAQAAPPBOBknyQAE88E4GSfJAAQEA3wvf0CBj",
+        "distance": 0,
+        "name": "Phố Chu Văn An",
+        "location": [
+          105.836604,
+          21.033545
+        ]
+      },
+      {
+        "hint": "loYAgP___38ZAAAAGQAAAAAAAAAAAAAACfcGQgAAAAAAAAAAAAAAABkAAAAZAAAAAAAAAAAAAAAIAQAA-AZPBs27QAH4Bk8GzbtAAQAALwHf0CBjmYYAgJ2GAIAAAAAADAAAAAAAAAA-AQAAAAAAAA9ozUAAAAAA-rkwQwAAAAAMAAAAAAAAAD4BAAAIAQAA-AZPBs27QAH4Bk8GzbtAAQAALwbf0CBjmIYAgP___38AAAAAFgAAAAAAAAAAAAAAAAAAAAWX5UEAAAAAAAAAAAAAAAAWAAAAAAAAAAAAAAAIAQAA-AZPBs27QAH4Bk8GzbtAAQAALwHf0CBj",
+        "distance": 0,
+        "name": "Phố Yết Kiêu / Phố Thiền Quang / Phố Yết Kiêu",
+        "location": [
+          105.842424,
+          21.019597
+        ]
+      },
+      {
+        "hint": "2AkAgM0HAIBVAAAAAAAAAAAAAAAAAAAAaRs9QgAAAAAAAAAAAAAAAFUAAAAAAAAAAAAAAAAAAAAIAQAAtPtOBgjOQAG0-04GCM5AAQAADwDf0CBjzgcAgPcvAoAAAAAACwAAAAAAAAAAAAAAAAAAAAgmwkAAAAAAAAAAAAAAAAALAAAAAAAAAAAAAAAIAQAAtPtOBgjOQAG0-04GCM5AAQAAvxPf0CBjaS8CgM8HAIAHAAAAAAAAAC0AAAAAAAAAfSOAQAAAAABqqcdBAAAAAAcAAAAAAAAALQAAAAAAAAAIAQAAtPtOBgjOQAG0-04GCM5AAQIAHw_f0CBj",
+        "distance": 0,
+        "name": "Ngõ 88 Trần Quý Cáp / Ngách 88/4 Phố Trần Quý Cáp / Ngõ 88 Trần Quý Cáp",
+        "location": [
+          105.83954,
+          21.024264
+        ]
+      },
+      {
+        "hint": "_4gAgP___38PAAAADwAAAEgAAAAAAAAA4H6eQQAAAADizL1CAAAAAA8AAAAPAAAASAAAAAAAAAAIAQAA2_5OBg_qQAHb_k4GD-pAAQIAzwvf0CBjIgAAgEMBAIAAAAAAOQAAAAAAAAAFAAAAAAAAAJuCmEIAAAAA3k3dQAAAAAA5AAAAAAAAAAUAAAAIAQAA2_5OBg_qQAHb_k4GD-pAAQAA3xPf0CBjIQAAgMaIAIAAAAAACwAAAAAAAAAAAAAAAAAAABltZUEAAAAAAAAAAAAAAAALAAAAAAAAAAAAAAAIAQAA2_5OBg_qQAHb_k4GD-pAAQAA3wjf0CBjm4kAgP___38AAAAACwAAAAAAAAAAAAAAAAAAABltZUEAAAAAAAAAAAAAAAALAAAAAAAAAAAAAAAIAQAA2_5OBg_qQAHb_k4GD-pAAQAA3wjf0CBj",
+        "distance": 0,
+        "name": "Đường Nguyễn Tri Phương / Đường Điện Biên Phủ / Đường Điện Biên Phủ / Đường Điện Biên Phủ",
+        "location": [
+          105.840347,
+          21.031439
+        ]
+      },
+      {
+        "hint": "pYgAgP___39xAAAAcQAAAAAAAAAAAAAAVpkWQwAAAAAAAAAAAAAAAHEAAABxAAAAAAAAAAAAAAAIAQAACQFPBs_0QAEJAU8Gz_RAAQAAjwDf0CBjs4gAgHoPAIAAAAAAGgAAAAAAAAAAAAAAAAAAAIuqKkEAAAAAAAAAAAAAAAAaAAAAAAAAAAAAAAAIAQAACQFPBs_0QAEJAU8Gz_RAAQAAjxHf0CBjeA8AgP___38AAAAAdwAAAAAAAADuAAAAAAAAAMoaHkMAAAAAbFKeQwAAAAB3AAAAAAAAAO4AAAAIAQAACQFPBs_0QAEJAU8Gz_RAAQAAjwDf0CBj",
+        "distance": 0,
+        "name": "Đường Nguyễn Tri Phương / Đường Nguyễn Tri Phương",
+        "location": [
+          105.840905,
+          21.034191
+        ]
+      },
+      {
+        "hint": "mYYAgJ2GAIAwAQAAAAAAAAwAAAAOAAAAcQopQwAAAAAPaM1AHvH1QDABAAAAAAAADAAAAA4AAAAIAQAAfg1PBue6QAF-DU8G57pAAQEALwbf0CBj",
+        "distance": 0,
+        "name": "Phố Thiền Quang",
+        "location": [
+          105.844094,
+          21.019367
+        ]
+      },
+      {
+        "hint": "wg8AgGYPAIAZAAAAAAAAABUAAAAMAAAA9BPgQQAAAAA9GbxBgWlPQRkAAAAAAAAAFQAAAAwAAAAIAQAA-BJPBmzWQAH4Ek8GbNZAAQEAvwbf0CBj",
+        "distance": 0,
+        "name": "Phố Hai Bà Trưng",
+        "location": [
+          105.845496,
+          21.026412
+        ]
+      },
+      {
+        "hint": "vQ8AgP___38pAAAAKQAAAAAAAAAGAAAAwmZaQgAAAAAAAAAApLD7QCkAAAApAAAAAAAAAAYAAAAIAQAAIw1PBqveQAEjDU8Gq95AAQAAHxXf0CBj",
+        "distance": 0,
+        "name": "Phố Thợ Nhuộm",
+        "location": [
+          105.844003,
+          21.028523
+        ]
+      },
+      {
+        "hint": "b4cAgIOHAIBtAAAAAAAAABEAAAAAAAAA9KLyQgAAAADLFptBAAAAAG0AAAAAAAAAEQAAAAAAAAAIAQAAgRRPBg7zQAGBFE8GDvNAAQIA_w7f0CBjXYcAgIKHAIAMAAAAAAAAAAAAAAAAAAAAm7JaQQAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAAAAAAAIAQAAgRRPBg7zQAGBFE8GDvNAAQAAPxXf0CBjhIcAgMyHAIAAAAAACAAAAAAAAABRAAAAAAAAAMz8E0EAAAAAM1y0QgAAAAAIAAAAAAAAAFEAAAAIAQAAgRRPBg7zQAGBFE8GDvNAAQAAzxXf0CBj",
+        "distance": 0,
+        "name": "Phố Nhà Hoả / Phố Đường Thành / Phố Đường Thành",
+        "location": [
+          105.845889,
+          21.033742
+        ]
+      }
+    ],
+    "durations": [
+      [
+        0,
+        146.4,
+        102.4,
+        230.7,
+        100.3,
+        62.6,
+        97.9,
+        138.6,
+        197.4,
+        167.8,
+        170.7,
+        190.6,
+        242.5,
+        235.5,
+        179.2,
+        197.7,
+        292.8,
+        244.7,
+        240.9,
+        273.2,
+        316.5,
+        267.4,
+        287.3,
+        307.8
+      ],
+      [
+        180.4,
+        0,
+        99,
+        227.3,
+        201.7,
+        100.5,
+        94.5,
+        135.2,
+        280.1,
+        190.8,
+        186.1,
+        206,
+        265.5,
+        258.5,
+        202.2,
+        220.7,
+        343,
+        267.7,
+        256.9,
+        289.2,
+        342.4,
+        283.4,
+        303.3,
+        323.8
+      ],
+      [
+        179.6,
+        55.1,
+        0,
+        128.3,
+        200.9,
+        83.5,
+        4.5,
+        36.2,
+        253.2,
+        155.9,
+        107.8,
+        124.3,
+        236.7,
+        229.7,
+        124,
+        142.5,
+        264.7,
+        225.8,
+        178.6,
+        210.9,
+        264.1,
+        205.1,
+        225,
+        245.5
+      ],
+      [
+        303.1,
+        178.6,
+        123.5,
+        0,
+        314.2,
+        207,
+        128,
+        87.3,
+        332.8,
+        235.5,
+        154.2,
+        134.3,
+        324.5,
+        317.5,
+        172.1,
+        153.6,
+        333,
+        294.1,
+        191.5,
+        223.8,
+        332.4,
+        271.8,
+        292.4,
+        285.5
+      ],
+      [
+        93.5,
+        204,
+        160,
+        288.3,
+        0,
+        120.2,
+        155.5,
+        196.2,
+        113.3,
+        102.8,
+        176.6,
+        196.5,
+        227.6,
+        220.6,
+        157.8,
+        176.3,
+        216.4,
+        229.8,
+        219.5,
+        251.8,
+        240.1,
+        246,
+        265.9,
+        286.4
+      ],
+      [
+        95.7,
+        79.4,
+        35.4,
+        163.7,
+        117,
+        0,
+        30.9,
+        71.6,
+        208.7,
+        111.4,
+        114.3,
+        134.2,
+        186.1,
+        179.1,
+        122.8,
+        141.3,
+        270.6,
+        188.3,
+        184.5,
+        216.8,
+        270,
+        211,
+        230.9,
+        251.4
+      ],
+      [
+        175.1,
+        50.6,
+        4.5,
+        132.8,
+        196.4,
+        79,
+        0,
+        40.7,
+        254.8,
+        157.5,
+        112.3,
+        128.8,
+        232.2,
+        225.2,
+        128.5,
+        147,
+        269.2,
+        230.3,
+        183.1,
+        215.4,
+        268.6,
+        209.6,
+        229.5,
+        250
+      ],
+      [
+        215.8,
+        91.3,
+        36.2,
+        92.1,
+        236.4,
+        119.7,
+        40.7,
+        0,
+        255,
+        157.7,
+        108,
+        88.1,
+        242.4,
+        235.4,
+        125.8,
+        107.4,
+        266.5,
+        227.6,
+        145.3,
+        177.6,
+        265.9,
+        206.9,
+        226.8,
+        239.3
+      ],
+      [
+        69.2,
+        215.6,
+        171.6,
+        299.9,
+        93,
+        131.8,
+        167.1,
+        207.8,
+        0,
+        91.9,
+        165.7,
+        185.6,
+        171,
+        178.7,
+        146.9,
+        165.4,
+        103.1,
+        170.8,
+        208.6,
+        240.9,
+        126.8,
+        201.8,
+        222.8,
+        275.5
+      ],
+      [
+        142.7,
+        130.2,
+        92.9,
+        221.2,
+        115.4,
+        105.8,
+        88.4,
+        129.1,
+        134,
+        0,
+        73.8,
+        93.7,
+        124.8,
+        117.8,
+        55,
+        73.5,
+        202.8,
+        127,
+        116.7,
+        149,
+        202.2,
+        143.2,
+        163.1,
+        183.6
+      ],
+      [
+        187.3,
+        145.3,
+        96,
+        160.2,
+        160,
+        112.9,
+        100.5,
+        79.3,
+        178.6,
+        81.3,
+        0,
+        19.9,
+        170.3,
+        163.3,
+        53.7,
+        45.3,
+        194.4,
+        155.5,
+        83.2,
+        115.5,
+        193.8,
+        134.8,
+        154.7,
+        175.2
+      ],
+      [
+        207.2,
+        165.2,
+        115.9,
+        141.7,
+        179.9,
+        132.8,
+        120.4,
+        97,
+        198.5,
+        101.2,
+        19.9,
+        0,
+        190.2,
+        183.2,
+        43.9,
+        25.4,
+        204.8,
+        165.9,
+        63.3,
+        95.6,
+        204.2,
+        143.6,
+        164.2,
+        157.3
+      ],
+      [
+        233.8,
+        218.3,
+        181,
+        309.3,
+        225.7,
+        193.9,
+        176.5,
+        217.2,
+        164.6,
+        135.1,
+        170.1,
+        190,
+        0,
+        7,
+        151.3,
+        169.8,
+        177.3,
+        86.7,
+        181.1,
+        204.1,
+        201,
+        197.7,
+        217.6,
+        238.1
+      ],
+      [
+        244,
+        211.3,
+        174,
+        302.3,
+        218.7,
+        186.9,
+        169.5,
+        210.2,
+        174.8,
+        140,
+        163.1,
+        183,
+        7,
+        0,
+        144.3,
+        162.8,
+        187.5,
+        77.9,
+        174.1,
+        197.1,
+        211.2,
+        190.7,
+        210.6,
+        231.1
+      ],
+      [
+        178.7,
+        150.6,
+        113.3,
+        178.3,
+        151.4,
+        126.2,
+        108.8,
+        97.4,
+        170,
+        72.7,
+        25.4,
+        45.3,
+        154.7,
+        147.7,
+        0,
+        18.5,
+        178.8,
+        139.9,
+        63.2,
+        95.5,
+        178.2,
+        119.2,
+        139.1,
+        157.2
+      ],
+      [
+        197.2,
+        169.1,
+        131.8,
+        163,
+        169.9,
+        144.7,
+        127.3,
+        115.9,
+        188.5,
+        91.2,
+        43.9,
+        34,
+        173.2,
+        166.2,
+        18.5,
+        0,
+        186.2,
+        147.3,
+        44.7,
+        77,
+        185.6,
+        125,
+        145.6,
+        138.7
+      ],
+      [
+        208,
+        302.1,
+        264.8,
+        359.3,
+        231.8,
+        270.6,
+        260.3,
+        287.9,
+        138.8,
+        230.7,
+        215.9,
+        230.3,
+        210.2,
+        217,
+        196.3,
+        209.7,
+        0,
+        169.3,
+        161.5,
+        184.5,
+        31.6,
+        98.7,
+        119.7,
+        180.7
+      ],
+      [
+        237,
+        226.1,
+        188.8,
+        317.1,
+        233.5,
+        201.7,
+        184.3,
+        225,
+        167.8,
+        154.8,
+        177.8,
+        192.5,
+        82.1,
+        75.3,
+        158.2,
+        171.9,
+        175.7,
+        0,
+        123.7,
+        146.7,
+        199.3,
+        140.3,
+        160.2,
+        180.7
+      ],
+      [
+        226.6,
+        198.5,
+        154.2,
+        197.8,
+        199.3,
+        171.1,
+        156.7,
+        137.5,
+        209.8,
+        120.6,
+        65.5,
+        68.8,
+        157.3,
+        150.3,
+        45.9,
+        48.2,
+        141.5,
+        102.6,
+        0,
+        32.3,
+        140.9,
+        80.3,
+        100.9,
+        94
+      ],
+      [
+        283.1,
+        255,
+        213.6,
+        235.5,
+        255.8,
+        230.5,
+        213.2,
+        190.8,
+        274.4,
+        177.1,
+        124.9,
+        106.5,
+        227.4,
+        220.4,
+        104.4,
+        85.9,
+        232.5,
+        193.6,
+        31.4,
+        0,
+        231.9,
+        171.3,
+        191.9,
+        177.5
+      ],
+      [
+        220.1,
+        331.9,
+        294.6,
+        364.1,
+        243.9,
+        282.7,
+        290.1,
+        292.7,
+        150.9,
+        242.8,
+        220.7,
+        235.1,
+        222.3,
+        230,
+        201.1,
+        214.5,
+        31.6,
+        199.1,
+        166.3,
+        189.3,
+        0,
+        101.6,
+        124.5,
+        185.5
+      ],
+      [
+        270.5,
+        235.8,
+        198.5,
+        262.5,
+        243.2,
+        211.4,
+        194,
+        191.1,
+        214.7,
+        164.5,
+        119.1,
+        133.5,
+        157.7,
+        150.7,
+        99.5,
+        112.9,
+        146.4,
+        103,
+        64.7,
+        87.7,
+        145.8,
+        0,
+        22.9,
+        83.9
+      ],
+      [
+        258.9,
+        224.2,
+        186.9,
+        248.7,
+        231.6,
+        199.8,
+        182.4,
+        177.3,
+        204.8,
+        152.9,
+        105.3,
+        119.7,
+        146.1,
+        139.1,
+        85.7,
+        99.1,
+        136.5,
+        91.4,
+        50.9,
+        73.9,
+        135.9,
+        57.5,
+        0,
+        61
+      ],
+      [
+        314.4,
+        286.3,
+        242,
+        296.9,
+        287.1,
+        258.9,
+        244.5,
+        225.3,
+        268.1,
+        208.4,
+        153.3,
+        167.9,
+        209.4,
+        202.4,
+        133.7,
+        147.3,
+        199.8,
+        154.7,
+        99.1,
+        122.1,
+        199.2,
+        86.4,
+        81.8,
+        0
+      ]
+    ],
+    "sources": [
+      {
+        "hint": "lGECgP___38IAAAACAAAAAQAAAAAAAAA7tAHQQAAAAAkApBAAAAAAAgAAAAIAAAABAAAAAAAAAAIAQAAiMdOBnzBQAGIx04GfMFAAQEA7xLf0CBjkmECgP___38AAAAACgAAAAAAAAA9AAAAAAAAAFEDqUAAAAAAHR4HQgAAAAAKAAAAAAAAAD0AAAAIAQAAiMdOBnzBQAGIx04GfMFAAQAA7xTf0CBjkWECgP___38AAAAABwAAAAAAAAAjAAAAAAAAAJGh_kAAAAAARZCEQQAAAAAHAAAAAAAAACMAAAAIAQAAiMdOBnzBQAGIx04GfMFAAQAAnxLf0CBj",
+        "distance": 0,
+        "name": "Đường La Thành / Đường La Thành",
+        "location": [
+          105.826184,
+          21.021052
+        ]
+      },
+      {
+        "hint": "0jECgIEyAoAAAAAALAAAAAAAAAAAAAAAAAAAAE_akkEAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAAIAQAAqr5OBhzbQAGqvk4GHNtAAQAAXxTf0CBj0TECgPIxAoAAAAAAKAAAAAAAAAAAAAAAAAAAAPz-sUEAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAAIAQAAqr5OBhzbQAGqvk4GHNtAAQAAbw7f0CBj0zECgIkyAoAAAAAAGAAAAAAAAAAAAAAAAAAAAHokIEEAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAAIAQAAqr5OBhzbQAGqvk4GHNtAAQAAfwjf0CBj",
+        "distance": 0,
+        "name": "Ngõ 1 Phố Trần Huy Liệu / Ngõ 140 Phố Giảng Võ",
+        "location": [
+          105.823914,
+          21.027612
+        ]
+      },
+      {
+        "hint": "dDYAgAM2AIAIAAAAAAAAAAAAAAAPAAAA_TkNQQAAAAAAAAAAf8KMQQgAAAAAAAAAAAAAAA8AAAAIAQAAo8pOBkXlQAGjyk4GReVAAQAAjxXf0CBj",
+        "distance": 0,
+        "name": "Phố Giang Văn Minh",
+        "location": [
+          105.826979,
+          21.030213
+        ]
+      },
+      {
+        "hint": "9G8CgPZvAoABAAAAAAAAAB0AAAAAAAAA3akKPwAAAADiZ0BBAAAAAAEAAAAAAAAAHQAAAAAAAAAIAQAAzsZOBtv7QAHOxk4G2_tAAQMADwnf0CBjem8CgPVvAoABAAAAAAAAAGgBAAAAAAAAE2IXPwAAAAAA10dDAAAAAAEAAAAAAAAAaAEAAAAAAAAIAQAAzsZOBtv7QAHOxk4G2_tAARMAPxXf0CBj",
+        "distance": 0,
+        "name": "Ngách 31 Ngõ 135 Đội Cấn / Ngách 135/31 Phố Đội Cấn",
+        "location": [
+          105.825998,
+          21.035995
+        ]
+      },
+      {
+        "hint": "GDsAgJI6AIA_AAAAAAAAAFcAAAAAAAAAwj4MQgAAAABATEFCAAAAAD8AAAAAAAAAVwAAAAAAAAAIAQAA89FOBv7EQAHz0U4G_sRAAQIAbwzf0CBjlDoAgDdeAoAAAAAALwAAAAAAAAAAAAAAAAAAAEutnEEAAAAAAAAAAAAAAAAvAAAAAAAAAAAAAAAIAQAA89FOBv7EQAHz0U4G_sRAAQAArxHf0CBjkzoAgP1dAoAAAAAAEwAAAAAAAABCAAAAAAAAABJOJkEAAAAAf6oUQgAAAAATAAAAAAAAAEIAAAAIAQAA89FOBv7EQAHz0U4G_sRAAQAA3wbf0CBj",
+        "distance": 0,
+        "name": "Ngõ Quan Thổ 1 / Ngõ Quan Thổ 1",
+        "location": [
+          105.828851,
+          21.02195
+        ]
+      },
+      {
+        "hint": "3DICgP___38BAAAAAQAAAAsAAAAAAAAAVOLePwAAAADK6ndBAAAAAAEAAAABAAAACwAAAAAAAAAIAQAAa81OBvjXQAFrzU4G-NdAAQYAPw_f0CBjzDICgP___38AAAAAAgAAAAAAAAAQAAAAAAAAAKvoHUAAAAAAYymhQQAAAAACAAAAAAAAABAAAAAIAQAAa81OBvjXQAFrzU4G-NdAAQAA3w7f0CBjyzICgBQzAoAAAAAAFgAAAAAAAAA1AAAAAAAAAJDJwEEAAAAAg2BtQgAAAAAWAAAAAAAAADUAAAAIAQAAa81OBvjXQAFrzU4G-NdAAQAAPxbf0CBj",
+        "distance": 0,
+        "name": "Phố Hào Nam / Phố Hào Nam / Phố Hào Nam",
+        "location": [
+          105.827691,
+          21.026808
+        ]
+      },
+      {
+        "hint": "uzQCgCg1AoAAAAAAAwAAAAAAAAAIAAAAAAAAAM-2O0AAAAAApP0TQQAAAAADAAAAAAAAAAgAAAAIAQAAastOBqvjQAFqy04Gq-NAAQAArxTf0CBjujQCgP___38AAAAAGQAAAAAAAABCAAAAAAAAACXhX0EAAAAAq6wTQgAAAAAZAAAAAAAAAEIAAAAIAQAAastOBqvjQAFqy04Gq-NAAQAAjwrf0CBjizQCgP___38cAAAAHAAAAAAAAAAAAAAAj038QQAAAAAAAAAAAAAAABwAAAAcAAAAAAAAAAAAAAAIAQAAastOBqvjQAFqy04Gq-NAAQAAXxTf0CBj",
+        "distance": 0,
+        "name": "Phố Giang Văn Minh / Phố Giang Văn Minh",
+        "location": [
+          105.827178,
+          21.029803
+        ]
+      },
+      {
+        "hint": "MDACgI8wAoAZAAAAAAAAAAAAAAAMAAAALlXgQQAAAAAAAAAAZqtbQRkAAAAAAAAAAAAAAAwAAAAIAQAAXMtOBrryQAFcy04GuvJAAQAALxbf0CBj",
+        "distance": 0,
+        "name": "Phố Giang Văn Minh",
+        "location": [
+          105.827164,
+          21.033658
+        ]
+      },
+      {
+        "hint": "up0CgNadAoAAAAAAGAAAAAAAAAA3AAAAAAAAAEwM0kEAAAAAvIt0QgAAAAAYAAAAAAAAADcAAAAIAQAA7t5OBga7QAHu3k4GBrtAAQAA3wXf0CBju50CgCmeAoAAAAAADQAAAAAAAAAhAAAAAAAAADPkrUAAAAAA2adeQQAAAAANAAAAAAAAACEAAAAIAQAA7t5OBga7QAHu3k4GBrtAAQAAPwDf0CBjvJ0CgAyeAoAAAAAAAwAAAAAAAAAIAAAAAAAAAK-6TkAAAAAAcJMPQQAAAAADAAAAAAAAAAgAAAAIAQAA7t5OBga7QAHu3k4GBrtAAQAAHxHf0CBj",
+        "distance": 0,
+        "name": "Phố Khâm Thiên / Ngõ Kiến Thiết / Phố Khâm Thiên",
+        "location": [
+          105.832174,
+          21.019398
+        ]
+      },
+      {
+        "hint": "nS0CgP___38OAAAADgAAAAAAAAAAAAAANFiaQQAAAAAAAAAAAAAAAA4AAAAOAAAAAAAAAAAAAAAIAQAAMuROBsjVQAEy5E4GyNVAAQAAbwHf0CBjbC0CgKgtAoAAAAAACwAAAAAAAAA8AAAAAAAAAHHexkAAAAAAmv8FQgAAAAALAAAAAAAAADwAAAAIAQAAMuROBsjVQAEy5E4GyNVAAQAAHwff0CBjbS0CgP___38AAAAAFwAAAAAAAAALAAAAAAAAABfu9UEAAAAATaxsQQAAAAAXAAAAAAAAAAsAAAAIAQAAMuROBsjVQAEy5E4GyNVAAQAAfwHf0CBj",
+        "distance": 0,
+        "name": "Phố Tôn Đức Thắng / Ngõ Thông Phong / Phố Tôn Đức Thắng",
+        "location": [
+          105.833522,
+          21.026248
+        ]
+      },
+      {
+        "hint": "VzUCgLg1AoAQAAAAAAAAAAAAAACSAAAAfTiRQQAAAAAAAAAAh8kMQxAAAAAAAAAAAAAAAJIAAAAIAQAA6OZOBu_sQAHo5k4G7-xAAQAArwDf0CBj",
+        "distance": 0,
+        "name": "Đường Hùng Vương",
+        "location": [
+          105.834216,
+          21.032175
+        ]
+      },
+      {
+        "hint": "kDYAgLc1AoAKAAAAAAAAAAAAAABJAAAA7H0qQQAAAAAAAAAAzn9rQgoAAAAAAAAAAAAAAEkAAAAIAQAAXehOBtjzQAFd6E4G2PNAAQAADwzf0CBj",
+        "distance": 0,
+        "name": "Đường Hùng Vương",
+        "location": [
+          105.834589,
+          21.033944
+        ]
+      },
+      {
+        "hint": "UaACgMJAAIAAAAAAdAAAAAAAAAB1AAAAAAAAAATWQEIAAAAATUxCQgAAAAB0AAAAAAAAAHUAAAAIAQAAkPJOBh_LQAGQ8k4GH8tAAQAArxLf0CBjA6ACgFCgAoARAAAAAAAAAAcAAAAAAAAAK9kZQQAAAAAlRYJAAAAAABEAAAAAAAAABwAAAAAAAAAIAQAAkPJOBh_LQAGQ8k4GH8tAAQEArwzf0CBjCqACgE-gAoARAAAAAAAAAAAAAAAAAAAAZp3cQAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAAAAAAAIAQAAkPJOBh_LQAGQ8k4GH8tAAQAAnwHf0CBjTqACgFKgAoBWAAAAAAAAAAkAAAAAAAAA5QJAQgAAAABeo5dAAAAAAFYAAAAAAAAACQAAAAAAAAAIAQAAkPJOBh_LQAGQ8k4GH8tAAQEAHxPf0CBj",
+        "distance": 0,
+        "name": "Ngách 46 Ngõ Linh Quang / Ngõ Linh Quang / Ngõ Linh Quang / Ngách 59 Ngõ Linh Quang",
+        "location": [
+          105.8372,
+          21.023519
+        ]
+      },
+      {
+        "hint": "_58CgPSgAoAAAAAAQgAAAAAAAAAAAAAAAAAAALQE3EEAAAAAAAAAAAAAAABCAAAAAAAAAAAAAAAIAQAAE_NOBmfMQAET804GZ8xAAQAALxLf0CBj_Z8CgJygAoAAAAAAJwAAAAAAAAAAAAAAAAAAAFGerUEAAAAAAAAAAAAAAAAnAAAAAAAAAAAAAAAIAQAAE_NOBmfMQAET804GZ8xAAQAAPwHf0CBj_J8CgAWgAoAAAAAAEAAAAAAAAAAeAAAAAAAAAOJMC0EAAAAAUrWDQQAAAAAQAAAAAAAAAB4AAAAIAQAAE_NOBmfMQAET804GZ8xAAQAA3wzf0CBj-58CgGigAoAAAAAADwAAAAAAAAAEAgAAAAAAABo0y0AAAAAANo9WQwAAAAAPAAAAAAAAAAQCAAAIAQAAE_NOBmfMQAET804GZ8xAAQAAzwbf0CBj_p8CgAShAoAAAAAALQAAAAAAAAAsAAAAAAAAAOPFlUEAAAAAFq6SQQAAAAAtAAAAAAAAACwAAAAIAQAAE_NOBmfMQAET804GZ8xAAQAAHwDf0CBj",
+        "distance": 0,
+        "name": "Ngách 36 Ngõ Linh Quang / Ngõ Linh Quang / Ngách 51 Ngõ Linh Quang / Ngõ Linh Quang",
+        "location": [
+          105.837331,
+          21.023847
+        ]
+      },
+      {
+        "hint": "LjUCgLo1AoAJAAAAAAAAAAAAAABpAAAAW2AaQQAAAAAAAAAAviDpQgkAAAAAAAAAAAAAAGkAAAAIAQAA_O5OBiHrQAH87k4GIetAAQAAnwDf0CBj",
+        "distance": 0,
+        "name": "Phố Chu Văn An",
+        "location": [
+          105.836284,
+          21.031713
+        ]
+      },
+      {
+        "hint": "QTUCgLs1AoADAAAAAAAAAAoAAABQAAAAazxmQAAAAAAG5yhBufWxQgMAAAAAAAAACgAAAFAAAAAIAQAAPPBOBknyQAE88E4GSfJAAQEA3wvf0CBj",
+        "distance": 0,
+        "name": "Phố Chu Văn An",
+        "location": [
+          105.836604,
+          21.033545
+        ]
+      },
+      {
+        "hint": "loYAgP___38ZAAAAGQAAAAAAAAAAAAAACfcGQgAAAAAAAAAAAAAAABkAAAAZAAAAAAAAAAAAAAAIAQAA-AZPBs27QAH4Bk8GzbtAAQAALwHf0CBjmYYAgJ2GAIAAAAAADAAAAAAAAAA-AQAAAAAAAA9ozUAAAAAA-rkwQwAAAAAMAAAAAAAAAD4BAAAIAQAA-AZPBs27QAH4Bk8GzbtAAQAALwbf0CBjmIYAgP___38AAAAAFgAAAAAAAAAAAAAAAAAAAAWX5UEAAAAAAAAAAAAAAAAWAAAAAAAAAAAAAAAIAQAA-AZPBs27QAH4Bk8GzbtAAQAALwHf0CBj",
+        "distance": 0,
+        "name": "Phố Yết Kiêu / Phố Thiền Quang / Phố Yết Kiêu",
+        "location": [
+          105.842424,
+          21.019597
+        ]
+      },
+      {
+        "hint": "2AkAgM0HAIBVAAAAAAAAAAAAAAAAAAAAaRs9QgAAAAAAAAAAAAAAAFUAAAAAAAAAAAAAAAAAAAAIAQAAtPtOBgjOQAG0-04GCM5AAQAADwDf0CBjzgcAgPcvAoAAAAAACwAAAAAAAAAAAAAAAAAAAAgmwkAAAAAAAAAAAAAAAAALAAAAAAAAAAAAAAAIAQAAtPtOBgjOQAG0-04GCM5AAQAAvxPf0CBjaS8CgM8HAIAHAAAAAAAAAC0AAAAAAAAAfSOAQAAAAABqqcdBAAAAAAcAAAAAAAAALQAAAAAAAAAIAQAAtPtOBgjOQAG0-04GCM5AAQIAHw_f0CBj",
+        "distance": 0,
+        "name": "Ngõ 88 Trần Quý Cáp / Ngách 88/4 Phố Trần Quý Cáp / Ngõ 88 Trần Quý Cáp",
+        "location": [
+          105.83954,
+          21.024264
+        ]
+      },
+      {
+        "hint": "_4gAgP___38PAAAADwAAAEgAAAAAAAAA4H6eQQAAAADizL1CAAAAAA8AAAAPAAAASAAAAAAAAAAIAQAA2_5OBg_qQAHb_k4GD-pAAQIAzwvf0CBjIgAAgEMBAIAAAAAAOQAAAAAAAAAFAAAAAAAAAJuCmEIAAAAA3k3dQAAAAAA5AAAAAAAAAAUAAAAIAQAA2_5OBg_qQAHb_k4GD-pAAQAA3xPf0CBjIQAAgMaIAIAAAAAACwAAAAAAAAAAAAAAAAAAABltZUEAAAAAAAAAAAAAAAALAAAAAAAAAAAAAAAIAQAA2_5OBg_qQAHb_k4GD-pAAQAA3wjf0CBjm4kAgP___38AAAAACwAAAAAAAAAAAAAAAAAAABltZUEAAAAAAAAAAAAAAAALAAAAAAAAAAAAAAAIAQAA2_5OBg_qQAHb_k4GD-pAAQAA3wjf0CBj",
+        "distance": 0,
+        "name": "Đường Nguyễn Tri Phương / Đường Điện Biên Phủ / Đường Điện Biên Phủ / Đường Điện Biên Phủ",
+        "location": [
+          105.840347,
+          21.031439
+        ]
+      },
+      {
+        "hint": "pYgAgP___39xAAAAcQAAAAAAAAAAAAAAVpkWQwAAAAAAAAAAAAAAAHEAAABxAAAAAAAAAAAAAAAIAQAACQFPBs_0QAEJAU8Gz_RAAQAAjwDf0CBjs4gAgHoPAIAAAAAAGgAAAAAAAAAAAAAAAAAAAIuqKkEAAAAAAAAAAAAAAAAaAAAAAAAAAAAAAAAIAQAACQFPBs_0QAEJAU8Gz_RAAQAAjxHf0CBjeA8AgP___38AAAAAdwAAAAAAAADuAAAAAAAAAMoaHkMAAAAAbFKeQwAAAAB3AAAAAAAAAO4AAAAIAQAACQFPBs_0QAEJAU8Gz_RAAQAAjwDf0CBj",
+        "distance": 0,
+        "name": "Đường Nguyễn Tri Phương / Đường Nguyễn Tri Phương",
+        "location": [
+          105.840905,
+          21.034191
+        ]
+      },
+      {
+        "hint": "mYYAgJ2GAIAwAQAAAAAAAAwAAAAOAAAAcQopQwAAAAAPaM1AHvH1QDABAAAAAAAADAAAAA4AAAAIAQAAfg1PBue6QAF-DU8G57pAAQEALwbf0CBj",
+        "distance": 0,
+        "name": "Phố Thiền Quang",
+        "location": [
+          105.844094,
+          21.019367
+        ]
+      },
+      {
+        "hint": "wg8AgGYPAIAZAAAAAAAAABUAAAAMAAAA9BPgQQAAAAA9GbxBgWlPQRkAAAAAAAAAFQAAAAwAAAAIAQAA-BJPBmzWQAH4Ek8GbNZAAQEAvwbf0CBj",
+        "distance": 0,
+        "name": "Phố Hai Bà Trưng",
+        "location": [
+          105.845496,
+          21.026412
+        ]
+      },
+      {
+        "hint": "vQ8AgP___38pAAAAKQAAAAAAAAAGAAAAwmZaQgAAAAAAAAAApLD7QCkAAAApAAAAAAAAAAYAAAAIAQAAIw1PBqveQAEjDU8Gq95AAQAAHxXf0CBj",
+        "distance": 0,
+        "name": "Phố Thợ Nhuộm",
+        "location": [
+          105.844003,
+          21.028523
+        ]
+      },
+      {
+        "hint": "b4cAgIOHAIBtAAAAAAAAABEAAAAAAAAA9KLyQgAAAADLFptBAAAAAG0AAAAAAAAAEQAAAAAAAAAIAQAAgRRPBg7zQAGBFE8GDvNAAQIA_w7f0CBjXYcAgIKHAIAMAAAAAAAAAAAAAAAAAAAAm7JaQQAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAAAAAAAIAQAAgRRPBg7zQAGBFE8GDvNAAQAAPxXf0CBjhIcAgMyHAIAAAAAACAAAAAAAAABRAAAAAAAAAMz8E0EAAAAAM1y0QgAAAAAIAAAAAAAAAFEAAAAIAQAAgRRPBg7zQAGBFE8GDvNAAQAAzxXf0CBj",
+        "distance": 0,
+        "name": "Phố Nhà Hoả / Phố Đường Thành / Phố Đường Thành",
+        "location": [
+          105.845889,
+          21.033742
+        ]
+      }
+    ]
+  }
+}

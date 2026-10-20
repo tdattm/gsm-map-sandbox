@@ -1,0 +1,9 @@
+{
+  "schemaVersion": "gsm-dev-runtime/v1",
+  "application": "gsm-map-sandbox",
+  "workspace": "D:\\ThS\\VinAI\\Phase3_VRIC\\gsm-map-sandbox",
+  "store": "D:\\ThS\\VinAI\\Phase3_VRIC\\gsm-map-sandbox\\build\\s0-s1\\runtime test jobs",
+  "apiPid": 25764,
+  "worker": "offline",
+  "workerMeaning": "locked = OS worker lease held for this exact store; not a progress/health heartbeat"
+}

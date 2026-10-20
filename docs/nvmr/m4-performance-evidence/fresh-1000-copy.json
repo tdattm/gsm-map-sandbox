@@ -1,0 +1,21 @@
+{
+  "jobId": "e2caced02db64a02a56300050544690b",
+  "files": [
+    {
+      "name": "input.json",
+      "sha256": "24e9059329a8f35776de3ca58e82854e8b9db7ca522786abdecb3853f779124e"
+    },
+    {
+      "name": "status.json",
+      "sha256": "4317f766318ad05d23554c32a448f2fd831a964ea43282b4ab8327cf453707c7"
+    },
+    {
+      "name": "event-log.json",
+      "sha256": "4c132bae741c29d44ec7ac42bb1866c71e351c79aa1c7cec6fbd27d292aec1a7"
+    },
+    {
+      "name": "result.json",
+      "sha256": "965afcc492f106061cdc109b2f65f1d308132deeb76e9bcda55823dbfbbaee68"
+    }
+  ]
+}

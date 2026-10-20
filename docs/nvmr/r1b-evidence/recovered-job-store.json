@@ -1,0 +1,136 @@
+{
+  "reason": "Prior live500 report pointed to a Connected job left QUEUED in build/m3/jobs while intended store is build/r1b/jobs; preserve inputs and cancel only this task-owned orphan to prevent later unintended execution. No result existed.",
+  "before": {
+    "id": "1424699159f6451098b4f8ddf306533d",
+    "runId": "1424699159f6451098b4f8ddf306533d",
+    "status": "QUEUED",
+    "progress": 0.0,
+    "createdAt": "2026-10-19T06:36:02.279866+00:00",
+    "updatedAt": "2026-10-19T06:36:02.279866+00:00",
+    "config": {
+      "regionId": "nvmr-connected",
+      "seed": "connected-live-500/v1",
+      "fleetSize": 500,
+      "carCount": 200,
+      "bookingCount": 125,
+      "horizonSeconds": 900,
+      "maxWaitSeconds": 300,
+      "onlineFraction": 1.0,
+      "onlineSchedule": [],
+      "workload": "typical",
+      "initialCandidates": 16,
+      "maxCandidates": 128,
+      "gridCellDegrees": 0.005,
+      "schemaVersion": "gsm-nvmr-connected-scenario/v1",
+      "fleetAllocations": [
+        {
+          "zoneId": "hanoi",
+          "carCount": 160,
+          "motorbikeCount": 240
+        },
+        {
+          "zoneId": "bac-ninh",
+          "carCount": 10,
+          "motorbikeCount": 15
+        },
+        {
+          "zoneId": "hung-yen",
+          "carCount": 10,
+          "motorbikeCount": 15
+        },
+        {
+          "zoneId": "phu-tho",
+          "carCount": 10,
+          "motorbikeCount": 15
+        },
+        {
+          "zoneId": "thai-nguyen",
+          "carCount": 10,
+          "motorbikeCount": 15
+        }
+      ],
+      "demandWeights": {
+        "hanoi": 1.0,
+        "bac-ninh": 1.0,
+        "hung-yen": 1.0,
+        "phu-tho": 1.0,
+        "thai-nguyen": 1.0
+      },
+      "demandCarFraction": 0.4,
+      "crossZoneDemandFraction": 0.25,
+      "distribution": {
+        "cellDegrees": 0.025,
+        "maximumVehiclesPerPosition": 1,
+        "nearestNeighborSampleSize": 128
+      }
+    },
+    "inputHash": "ae9b031e16aeaedbada3a2599c92d1a1358f213b1f549b0bb2a67f30126fcf55"
+  },
+  "after": {
+    "id": "1424699159f6451098b4f8ddf306533d",
+    "runId": "1424699159f6451098b4f8ddf306533d",
+    "status": "CANCELLED",
+    "progress": 0.0,
+    "createdAt": "2026-10-19T06:36:02.279866+00:00",
+    "updatedAt": "2026-10-19T08:41:21.765483+00:00",
+    "config": {
+      "regionId": "nvmr-connected",
+      "seed": "connected-live-500/v1",
+      "fleetSize": 500,
+      "carCount": 200,
+      "bookingCount": 125,
+      "horizonSeconds": 900,
+      "maxWaitSeconds": 300,
+      "onlineFraction": 1.0,
+      "onlineSchedule": [],
+      "workload": "typical",
+      "initialCandidates": 16,
+      "maxCandidates": 128,
+      "gridCellDegrees": 0.005,
+      "schemaVersion": "gsm-nvmr-connected-scenario/v1",
+      "fleetAllocations": [
+        {
+          "zoneId": "hanoi",
+          "carCount": 160,
+          "motorbikeCount": 240
+        },
+        {
+          "zoneId": "bac-ninh",
+          "carCount": 10,
+          "motorbikeCount": 15
+        },
+        {
+          "zoneId": "hung-yen",
+          "carCount": 10,
+          "motorbikeCount": 15
+        },
+        {
+          "zoneId": "phu-tho",
+          "carCount": 10,
+          "motorbikeCount": 15
+        },
+        {
+          "zoneId": "thai-nguyen",
+          "carCount": 10,
+          "motorbikeCount": 15
+        }
+      ],
+      "demandWeights": {
+        "hanoi": 1.0,
+        "bac-ninh": 1.0,
+        "hung-yen": 1.0,
+        "phu-tho": 1.0,
+        "thai-nguyen": 1.0
+      },
+      "demandCarFraction": 0.4,
+      "crossZoneDemandFraction": 0.25,
+      "distribution": {
+        "cellDegrees": 0.025,
+        "maximumVehiclesPerPosition": 1,
+        "nearestNeighborSampleSize": 128
+      }
+    },
+    "inputHash": "ae9b031e16aeaedbada3a2599c92d1a1358f213b1f549b0bb2a67f30126fcf55"
+  },
+  "intendedStore": "build/r1b/jobs"
+}

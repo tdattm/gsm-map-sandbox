@@ -1,0 +1,26 @@
+{
+  "runtime": "Vite dev, IAB WebGL, 1280x720",
+  "hanoi": {
+    "singleTrip": "PASS: 0.90 km / 86.4 s; real CAR",
+    "fleet": "PASS: 5 vehicles, play/pause",
+    "booking": "PASS: prepare + seek 500 s",
+    "voucher": "PASS: prepare, seek/play/pause, final KPI 8/10, raw JSON + 5 CSV exports",
+    "switching": "PASS: HCM → Hanoi → HCM, one canvas, prepared state/markers cleared"
+  },
+  "saved": {
+    "backendQaPort8001": "STOPPED before load",
+    "apiCallsBefore": 9,
+    "apiCallsAfter": 9,
+    "canvases": 1,
+    "clock": "500.5200999999996",
+    "selectedRegion": "hcm-center",
+    "selectorDisabled": true,
+    "routerServices": "left running; Saved made no API calls and did not use OSRM"
+  },
+  "consoleLogs": [],
+  "limitations": [
+    "Dev runtime, not performance/production browser benchmark",
+    "Unit tests cover map instance/clock identity; browser observed one canvas",
+    "One automation selector timeout was recovered by using the actual button control"
+  ]
+}

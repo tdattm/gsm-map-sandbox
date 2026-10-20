@@ -1,0 +1,15 @@
+{
+  "label": "Hà Nội · vùng lõi NVMR",
+  "viewport_bbox": [105.802, 21.002, 105.875, 21.055],
+  "viewport_zoom": 13.4,
+  "operating_bbox": [105.815, 21.012, 105.855, 21.045],
+  "routing_bbox": [105.762, 20.962, 105.915, 21.095],
+  "render_bbox": [105.797, 20.997, 105.880, 21.060],
+  "routing_buffer_degrees": 0.04,
+  "osrm_base_url": "http://127.0.0.1:5001",
+  "container_name": "gsm-map-osrm-hanoi-car",
+  "graph_basename": "hanoi-core",
+  "profile": "car",
+  "enabled": true,
+  "note": "Bbox kỹ thuật pilot đô thị lõi Hà Nội, không phải địa giới hành chính. OSM/OSRM CAR tĩnh; nhu cầu và phản ứng giá synthetic. Readiness yêu cầu manifest, artifact và router đúng identity."
+}

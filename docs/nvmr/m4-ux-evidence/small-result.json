@@ -1,0 +1,113 @@
+{
+  "schemaVersion": "gsm-simulation-result/v1",
+  "runId": "2b6e2e4e7d6a41c98360695734d2184a",
+  "regionId": "nvmr-hanoi-core",
+  "config": {
+    "regionId": "nvmr-hanoi-core",
+    "seed": "m4-ux-pilot",
+    "fleetSize": 10,
+    "carCount": 5,
+    "bookingCount": 20,
+    "horizonSeconds": 900,
+    "maxWaitSeconds": 300,
+    "onlineFraction": 1.0,
+    "onlineSchedule": [],
+    "workload": "typical",
+    "initialCandidates": 16,
+    "maxCandidates": 128,
+    "gridCellDegrees": 0.005
+  },
+  "simulationDurationSeconds": 1262.691,
+  "counts": {
+    "requested": 20,
+    "assigned": 20,
+    "completed": 20,
+    "unserved": 0,
+    "pending": 0,
+    "activeTrips": 0
+  },
+  "routingIdentities": {
+    "CAR": {
+      "regionId": "nvmr-hanoi-core",
+      "vehicleType": "CAR",
+      "profile": "car",
+      "profileSha256": "cb3df0546318665609606b746a1297f3d65ca3c2ff825f8a6f3c57247d86a2d3",
+      "graphManifestSha256": "a24d4957a01ceeb04a0de1ad680fe4c5dd51732a7b381d9368e249a65c1b29b5",
+      "sourceSha256": "2fbd2ee6b4dc151eecf04fa6823cddf584b47423e190118b10fce8b6115e9d8a",
+      "extractSha256": "18fd3892f6d766387f2c3217d5d104e09a9319d3905a9172834b21c0064d6308",
+      "algorithm": "mld"
+    },
+    "MOTORBIKE": {
+      "regionId": "nvmr-hanoi-core",
+      "vehicleType": "MOTORBIKE",
+      "profile": "motorbike",
+      "profileSha256": "075ecdbc70a3e75c4338d2c6a41597c132a1837ec2d27f1c2fcdd824a788b209",
+      "graphManifestSha256": "fb97489d066397b11cb9178238cd56a5f52281bcf5711430bb7cf411496ca455",
+      "sourceSha256": "2fbd2ee6b4dc151eecf04fa6823cddf584b47423e190118b10fce8b6115e9d8a",
+      "extractSha256": "18fd3892f6d766387f2c3217d5d104e09a9319d3905a9172834b21c0064d6308",
+      "algorithm": "mld"
+    }
+  },
+  "assumptions": {
+    "demandVersion": "m3-demand/v1",
+    "dispatchVersion": "grid-fifo/v1",
+    "shortlist": {
+      "initial": 16,
+      "maximum": 128,
+      "cellDegrees": 0.005
+    },
+    "heuristic": "First feasible expansion; ETA minimum only within that expansion, not global optimum",
+    "sameTimestamp": "completion,schedule,arrival,pickup,FIFO dispatch,inclusive expiration",
+    "offlineSchedule": "Busy vehicles complete current service before going offline",
+    "travel": "OSRM static duration; constant distance progress; synthetic demand; no traffic observations"
+  },
+  "metrics": {
+    "eventsProcessed": 77,
+    "peakEventQueue": 45,
+    "peakPending": 1,
+    "tableCandidates": 51,
+    "searchBudgetExhaustions": 0,
+    "dispatchAttempts": 20,
+    "dispatchVersion": "grid-fifo/v1",
+    "preparationMilliseconds": 1559.7619000036502,
+    "totalMilliseconds": 2037.2417000035057,
+    "routing": {
+      "CAR": {
+        "requests": {
+          "nearest": 4,
+          "table": 11,
+          "route": 21,
+          "routeCacheHits": 0,
+          "tableCacheHits": 0
+        },
+        "requestFailures": 0,
+        "latencyMilliseconds": {
+          "count": 36,
+          "p50": 7.29539999156259,
+          "p95": 11.850800001411699,
+          "total": 283.0633000121452
+        },
+        "routeCacheSize": 21,
+        "tableCacheSize": 11
+      },
+      "MOTORBIKE": {
+        "requests": {
+          "nearest": 4,
+          "table": 9,
+          "route": 16,
+          "routeCacheHits": 0,
+          "tableCacheHits": 0
+        },
+        "requestFailures": 0,
+        "latencyMilliseconds": {
+          "count": 29,
+          "p50": 7.050500003970228,
+          "p95": 12.415500008501112,
+          "total": 224.0556000469951
+        },
+        "routeCacheSize": 16,
+        "tableCacheSize": 9
+      }
+    }
+  }
+}

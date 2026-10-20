@@ -1,0 +1,27 @@
+{
+  "status": "PASS",
+  "before": [
+    {
+      "path": "data/regions/nvmr-hanoi-core/routing/motorbike/router-evidence.json",
+      "sha256": "30747C76A803C43E7DBE34FE77559564EBED4A06C3AF05FCE51B24AF495A2473",
+      "mtime": "2026-10-18T07:20:02.2128241Z"
+    },
+    {
+      "path": "data/regions/nvmr-bac-ninh-core/routing/motorbike/router-evidence.json",
+      "sha256": "207C89DCF69929B007BF0BDB1CA33E801BC858CBE35BE65A3C0366C3502BD0E0",
+      "mtime": "2026-10-18T07:20:13.6062276Z"
+    }
+  ],
+  "after": [
+    {
+      "path": "data/regions/nvmr-hanoi-core/routing/motorbike/router-evidence.json",
+      "sha256": "30747C76A803C43E7DBE34FE77559564EBED4A06C3AF05FCE51B24AF495A2473",
+      "mtime": "2026-10-18T07:20:02.2128241Z"
+    },
+    {
+      "path": "data/regions/nvmr-bac-ninh-core/routing/motorbike/router-evidence.json",
+      "sha256": "207C89DCF69929B007BF0BDB1CA33E801BC858CBE35BE65A3C0366C3502BD0E0",
+      "mtime": "2026-10-18T07:20:13.6062276Z"
+    }
+  ]
+}

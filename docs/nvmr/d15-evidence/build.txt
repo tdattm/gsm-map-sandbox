@@ -1,0 +1,48 @@
+
+> gsm-map-sandbox-frontend@0.1.0 prebuild
+> node scripts/copy-map-worker.mjs
+
+
+> gsm-map-sandbox-frontend@0.1.0 build
+> tsc -b && vite build && node scripts/build-identity.mjs
+
+vite v8.3.4 building client environment for production...
+transforming...
+✓ 2744 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                                                1.64 kB │ gzip:   0.68 kB
+dist/performance.html                                          2.19 kB │ gzip:   1.16 kB
+dist/assets/geist-cyrillic-ext-wght-normal-DjL33-gN.woff2      7.42 kB
+dist/assets/geist-vietnamese-wght-normal-6IgcOCM7.woff2        8.00 kB
+dist/assets/geist-cyrillic-wght-normal-BEAKL7Jp.woff2         15.08 kB
+dist/assets/geist-latin-ext-wght-normal-DC-KSUi6.woff2        16.51 kB
+dist/assets/geist-latin-wght-normal-BgDaEnEv.woff2            29.40 kB
+dist/assets/maplibre-gl-B8-mEBLf.css                          82.96 kB │ gzip:  10.72 kB
+dist/assets/main-CvHF8xPm.css                                 88.70 kB │ gzip:  17.57 kB
+dist/assets/maplibre-gl-nn6L3951.js                            0.07 kB │ gzip:   0.09 kB
+dist/assets/mobility-icon-D5BpKT5O.js                          0.60 kB │ gzip:   0.41 kB
+dist/assets/rolldown-runtime-hePW80VL.js                       0.71 kB │ gzip:   0.42 kB
+dist/assets/simulation-map-icons-B507qOkb.js                   0.85 kB │ gzip:   0.57 kB
+dist/assets/preload-helper-CFijIu3R.js                         2.19 kB │ gzip:   1.06 kB
+dist/assets/simulation-Cz76a5hF.js                             5.44 kB │ gzip:   2.10 kB
+dist/assets/voucher-analytics--UYv9mx-.js                      5.69 kB │ gzip:   1.85 kB
+dist/assets/map-style-Crx55tvb.js                              6.76 kB │ gzip:   2.77 kB
+dist/assets/voucher-6QGE5MKW.js                                7.62 kB │ gzip:   2.95 kB
+dist/assets/performance-C--StJS5.js                            7.70 kB │ gzip:   3.66 kB
+dist/assets/multimodal-D9t9fqb-.js                            21.49 kB │ gzip:   7.98 kB
+dist/assets/voucher-dashboard-CeMwnPjb.js                     21.55 kB │ gzip:   7.88 kB
+dist/assets/batch-analysis-CkM5jbmP.js                        24.83 kB │ gzip:   9.05 kB
+dist/assets/chart-viewport-CrxxkFEg.js                        28.15 kB │ gzip:   8.59 kB
+dist/assets/simulation-workspace-BAjJl-QJ.js                  58.09 kB │ gzip:  15.50 kB
+dist/assets/connected-workspace-D3M2nf-3.js                   63.84 kB │ gzip:  21.20 kB
+dist/assets/chart-Co0uiK5w.js                                332.06 kB │ gzip:  99.22 kB
+dist/assets/main-ZA5FJ13M.js                                 453.56 kB │ gzip: 145.85 kB
+dist/assets/maplibre-gl-ynIxbGnO.js                        1,075.37 kB │ gzip: 289.30 kB
+
+[plugin builtin:vite-reporter]
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rolldownOptions.output.codeSplitting to improve chunking: https://rolldown.rs/reference/OutputOptions.codeSplitting
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+✓ built in 630ms

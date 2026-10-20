@@ -1,0 +1,1646 @@
+{
+  "capturedUtc": "2026-10-18T06:52:29.049303+00:00",
+  "regionId": "nvmr-bac-ninh-core",
+  "memoryPointSample": {
+    "totalPhysicalBytes": 16948453376,
+    "availablePhysicalBytes": 6272212992,
+    "processRssBytes": 48345088,
+    "processPeakRssBytes": 48345088,
+    "processPagefileBytes": 37777408,
+    "processPrivateBytes": 37777408,
+    "systemCommitBytes": 14778933248,
+    "systemCommitLimitBytes": 25633406976,
+    "systemCommitAvailableBytes": 10854473728
+  },
+  "coverage": {
+    "operating_bbox": [
+      106.02,
+      21.15,
+      106.1,
+      21.21
+    ],
+    "routing_bbox": [
+      105.96,
+      21.09,
+      106.16,
+      21.27
+    ],
+    "render_bbox": [
+      105.995,
+      21.125,
+      106.125,
+      21.235
+    ]
+  },
+  "viewport_bbox": [
+    106.0,
+    21.13,
+    106.12,
+    21.23
+  ],
+  "administrativeBoundary": false,
+  "boundaryVersion": "technical-rectangle/2026-10-18",
+  "source": {
+    "identity": {
+      "region_id": "nvmr-bac-ninh-core",
+      "config_sha256": "ab7834f92239589df511d568a0b978ad778e0a4d104d13b5ca1d4588a11b52d7",
+      "pipeline_version": "nvmr-regional-car-pilot/v1"
+    },
+    "path": "D:\\ThS\\VinAI\\Phase3_VRIC\\gsm-map-sandbox\\data\\raw\\vietnam-latest.osm.pbf",
+    "size_bytes": 330248138,
+    "mtime_ns": 1791725198527966700,
+    "sha256": "2fbd2ee6b4dc151eecf04fa6823cddf584b47423e190118b10fce8b6115e9d8a",
+    "format_verified": true,
+    "fileinfo": {
+      "file": {
+        "name": "/input/data/raw/vietnam-latest.osm.pbf",
+        "format": "PBF",
+        "compression": "none",
+        "size": 330248138
+      },
+      "header": {
+        "boxes": [
+          [
+            102.095945,
+            7.382239,
+            114.642323,
+            23.402135
+          ]
+        ],
+        "with_history": false,
+        "option": {
+          "generator": "osmium/1.16.0",
+          "osmosis_replication_base_url": "https://download.geofabrik.de/asia/vietnam-updates",
+          "osmosis_replication_sequence_number": "4934",
+          "osmosis_replication_timestamp": "2026-10-09T20:21:04Z",
+          "pbf_dense_nodes": "true",
+          "pbf_optional_feature_0": "Sort.Type_then_ID",
+          "sorting": "Type_then_ID",
+          "timestamp": "2026-10-09T20:21:04Z"
+        }
+      },
+      "data": {
+        "bbox": [
+          100.6067931,
+          6.2183523,
+          114.6407887,
+          23.5024689
+        ],
+        "timestamp": {
+          "first": "2007-10-16T12:57:06Z",
+          "last": "2026-10-09T19:10:51Z"
+        },
+        "objects_ordered": true,
+        "multiple_versions": false,
+        "crc32": "4758abea",
+        "count": {
+          "changesets": 0,
+          "nodes": 46394305,
+          "ways": 4730057,
+          "relations": 26680
+        },
+        "minid": {
+          "changesets": 0,
+          "nodes": 74099711,
+          "ways": 9566396,
+          "relations": 13422
+        },
+        "maxid": {
+          "changesets": 0,
+          "nodes": 14268541229,
+          "ways": 1566865559,
+          "relations": 21599296
+        },
+        "buffers": {
+          "count": 61388,
+          "size": 3907395912,
+          "capacity": 4026597376
+        },
+        "metadata": {
+          "all_objects": {
+            "version": true,
+            "timestamp": true,
+            "changeset": false,
+            "user": false,
+            "uid": false
+          },
+          "some_objects": {
+            "version": true,
+            "timestamp": true,
+            "changeset": false,
+            "user": false,
+            "uid": false
+          }
+        }
+      }
+    },
+    "osmium_image": "iboates/osmium@sha256:a67987f7d822d951ae1979de656ab7bd8051605f79d2751ea4800cc6057124be",
+    "source_url": "https://download.geofabrik.de/asia/vietnam.html",
+    "attribution": "© OpenStreetMap contributors",
+    "created_utc": "2026-10-18T03:00:57.951235+00:00"
+  },
+  "artifacts": {
+    "extracted": {
+      "coverage.osm.metadata.json": {
+        "sizeBytes": 2527,
+        "sha256": "c324a68430b33653a3b2b988d51b98a2955cab11505f40dc26598f485ea96d85"
+      },
+      "coverage.osm.pbf": {
+        "sizeBytes": 3229117,
+        "sha256": "5b18bc568bb2afd3a4914b97b89084663e7a1e72a84364367cb42eac7f7c3ebb"
+      }
+    },
+    "render": {
+      "buildings.geojson": {
+        "sizeBytes": 5337179,
+        "sha256": "9764f3aff5d2d310852a526d97853ad95a255e8ba5b8f86f0b8d87b1cfa7b06a"
+      },
+      "export.geojson": {
+        "sizeBytes": 29924710,
+        "sha256": "70d30a4d178eb045a63f3dcffae8f3a58e6ca866258c3f42ce71ff98dc89ad28"
+      },
+      "geometry-errors.log": {
+        "sizeBytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "green.geojson": {
+        "sizeBytes": 236347,
+        "sha256": "bed3c5688c2412f91b16713be36ac5c1c55f5d968bb7f447ec37dd314c15ad6d"
+      },
+      "manifest.json": {
+        "sizeBytes": 1951,
+        "sha256": "9e650e02cacd76bfa65582590164d2a73b10938de1b987dda750bbd2a680aa75"
+      },
+      "places.geojson": {
+        "sizeBytes": 8719,
+        "sha256": "cfcf467c27fa6a6cf8541fb791f840625b87f56301cf000fd42e387649a82a26"
+      },
+      "render-input.osm.pbf": {
+        "sizeBytes": 2616226,
+        "sha256": "a63e1f5e3263345b725fce731f9683c56246dcf1adcc24250ed2fcc8cc866052"
+      },
+      "streets.geojson": {
+        "sizeBytes": 5260362,
+        "sha256": "f80508f96061409041b57a0bbcc7b29eeb220d9603af9c9118d3aeb73bb6ac26"
+      },
+      "water.geojson": {
+        "sizeBytes": 652610,
+        "sha256": "ffd6818bb66da8814741207a2ebc242e2a1330649b2d88effbdc0b959d1210fe"
+      }
+    },
+    "routing/car": {
+      "bac-ninh-core.osm.pbf": {
+        "sizeBytes": 3229117,
+        "sha256": "5b18bc568bb2afd3a4914b97b89084663e7a1e72a84364367cb42eac7f7c3ebb"
+      },
+      "bac-ninh-core.osrm.cells": {
+        "sizeBytes": 87552,
+        "sha256": "fd58a8d102e8946cd98d8cea1ce7fad5004ab4d7b9a65294c5e9536403278e27"
+      },
+      "bac-ninh-core.osrm.cell_metrics": {
+        "sizeBytes": 7787520,
+        "sha256": "155708fa881bac818ae42425be5eba94a54d42bed8c0837786846d1c25a0a229"
+      },
+      "bac-ninh-core.osrm.cnbg": {
+        "sizeBytes": 747520,
+        "sha256": "c98e8b76f7aec9b15b8300755c99ad57cc0c6495bb26c8b238424d3720c1ec2d"
+      },
+      "bac-ninh-core.osrm.cnbg_to_ebg": {
+        "sizeBytes": 747520,
+        "sha256": "4b465eee9f58a8b421587173a92c8d48d6b9526278693425aaecf157510ef7fe"
+      },
+      "bac-ninh-core.osrm.datasource_names": {
+        "sizeBytes": 69632,
+        "sha256": "8e097fe309fdaeb27068825ec5671cce19d616e9e983a5e6ea99835748d114a7"
+      },
+      "bac-ninh-core.osrm.ebg": {
+        "sizeBytes": 4242432,
+        "sha256": "acdf8b37b6dc385b2f429272031c4c9a6b522c1335f298009a40001e7425a279"
+      },
+      "bac-ninh-core.osrm.ebg_nodes": {
+        "sizeBytes": 1099264,
+        "sha256": "ce7eada4f32605ad8b1ecab485e80046c95bea78ac1af6538d270f759ac9d9a5"
+      },
+      "bac-ninh-core.osrm.edges": {
+        "sizeBytes": 1248256,
+        "sha256": "7437143ac096a294a13a564eb218f470ea1e847b3983cdfdfc9d0de590b68754"
+      },
+      "bac-ninh-core.osrm.enw": {
+        "sizeBytes": 1084928,
+        "sha256": "bbf8f371cf2be619268cebf46ae58552aa5c493294ef3023ca51cc8634de4d67"
+      },
+      "bac-ninh-core.osrm.fileIndex": {
+        "sizeBytes": 2667120,
+        "sha256": "3bebf18cb20d46f26909a2def878cfe4d5f59767f3009c096e90c9f9597b3c1e"
+      },
+      "bac-ninh-core.osrm.geometry": {
+        "sizeBytes": 3268608,
+        "sha256": "ccdde85bae7c6ed051d0030c9863c6ecf0409c36b0234f4c480df876070b3d56"
+      },
+      "bac-ninh-core.osrm.icd": {
+        "sizeBytes": 521728,
+        "sha256": "affc7e1a4da7d849e5df1a3ad266ca2836700e52669d39823404d0bdff98a176"
+      },
+      "bac-ninh-core.osrm.maneuver_overrides": {
+        "sizeBytes": 5120,
+        "sha256": "ce01cf98b2c75491b05b4d6a246df759375114f88d3749ee83fdce07acb7d5f4"
+      },
+      "bac-ninh-core.osrm.mldgr": {
+        "sizeBytes": 4400640,
+        "sha256": "8e8afe527a978e2821455146f04cb5db219efd9d815a0eb9583053a0c87e5ca4"
+      },
+      "bac-ninh-core.osrm.names": {
+        "sizeBytes": 64512,
+        "sha256": "b7928620e9d95f1b5d7cf9fbd9c02d0d4f2cd252e7520314c11eac8157708213"
+      },
+      "bac-ninh-core.osrm.nbg_nodes": {
+        "sizeBytes": 1525760,
+        "sha256": "a7066363f3b98fb05be11ddd2141b0c945ac94230738ba1e2ede305399a411cd"
+      },
+      "bac-ninh-core.osrm.partition": {
+        "sizeBytes": 726528,
+        "sha256": "88f9d7533ddfa757c1ca0db4d03c7bbe8171fc9c86d0a6d6da87e627c347a473"
+      },
+      "bac-ninh-core.osrm.properties": {
+        "sizeBytes": 6144,
+        "sha256": "402961b1e62bc71c29e8931fffe7d317539e65fc7035d0ad0dadf922d31e17d2"
+      },
+      "bac-ninh-core.osrm.ramIndex": {
+        "sizeBytes": 16384,
+        "sha256": "0eb6116eef9c92c72b8538bca66fe40339c094b16ea7876516d7884d75e82dd2"
+      },
+      "bac-ninh-core.osrm.restrictions": {
+        "sizeBytes": 4096,
+        "sha256": "6a4ec500bf8efe04b338a895d3f23b81998480ea972462453f494ecc36bc4ee9"
+      },
+      "bac-ninh-core.osrm.timestamp": {
+        "sizeBytes": 3584,
+        "sha256": "5ff1041daa89e98fef75bd3999c6ada0bedaa24fc2e89334f0f5a16d75d5c5e3"
+      },
+      "bac-ninh-core.osrm.tld": {
+        "sizeBytes": 4096,
+        "sha256": "d58f4e968a2c6e35b53a0177359954b06db8f3a5c17d8716cefaa353fa5af89d"
+      },
+      "bac-ninh-core.osrm.tls": {
+        "sizeBytes": 6144,
+        "sha256": "6ecd9b8eac9744692ba5f7b754151c28f053eccf4406226f56f2c2f0dfbff51f"
+      },
+      "bac-ninh-core.osrm.turn_duration_penalties": {
+        "sizeBytes": 356864,
+        "sha256": "89a97d020bee61f27436b2b3b6c484dc4b09b99c26ca2103204b57c1bfe82dab"
+      },
+      "bac-ninh-core.osrm.turn_penalties_index": {
+        "sizeBytes": 2121216,
+        "sha256": "58114ceffbe2a0e2d795acbbcdcf4ff5c27f4c2135c03d536d4493fa1579ba8c"
+      },
+      "bac-ninh-core.osrm.turn_weight_penalties": {
+        "sizeBytes": 356864,
+        "sha256": "a13e9c2dc9c1b5919c61f8812999fc0c55f61a257d1083817fd94f295bb54b77"
+      },
+      "manifest.json": {
+        "sizeBytes": 7388,
+        "sha256": "4e393c9025c9b73a08d27d0aca7108071989d06e8913e7e37f534671375ddb9c"
+      },
+      "router-evidence.json": {
+        "sizeBytes": 1378,
+        "sha256": "ccdd59bcc33820ceb7237d29d4c1d39f510c5362e66735b9e41a830ff32936e6"
+      }
+    },
+    "routing/motorbike": {
+      "bac-ninh-motorbike.osm.pbf": {
+        "sizeBytes": 3229117,
+        "sha256": "5b18bc568bb2afd3a4914b97b89084663e7a1e72a84364367cb42eac7f7c3ebb"
+      },
+      "bac-ninh-motorbike.osrm.cells": {
+        "sizeBytes": 96256,
+        "sha256": "cc0fb14c7eee88077c439c8c3c57f6071f2a00e5e971a6f95cbb3f2af434ea1a"
+      },
+      "bac-ninh-motorbike.osrm.cell_metrics": {
+        "sizeBytes": 8868864,
+        "sha256": "cecab83101be949bb75c7115790b016846f054765bc1c9ca821c271fc954bcf5"
+      },
+      "bac-ninh-motorbike.osrm.cnbg": {
+        "sizeBytes": 796160,
+        "sha256": "1218a9fe23afd0499306b8875ab8bc2d7496150d8e51f190d8853febda8ddfec"
+      },
+      "bac-ninh-motorbike.osrm.cnbg_to_ebg": {
+        "sizeBytes": 796160,
+        "sha256": "c461c89de24e78b9c59095644ca3211c60620a137d10a868c355a37a53b59e1d"
+      },
+      "bac-ninh-motorbike.osrm.datasource_names": {
+        "sizeBytes": 69632,
+        "sha256": "9a5a82ff851741fd7b3a5f25287ab63138a491b0431ecfe9c9ad56459c2bb0e2"
+      },
+      "bac-ninh-motorbike.osrm.ebg": {
+        "sizeBytes": 4575744,
+        "sha256": "43f51f16e7b8879b4fe138cbabd325c0d96fe8a88a157e38876b77bea40c1472"
+      },
+      "bac-ninh-motorbike.osrm.ebg_nodes": {
+        "sizeBytes": 1178624,
+        "sha256": "3d5a19eb8ee7e72b878b4bd7e31928a064d4b2a8176e8b8dc39b1efb68e25527"
+      },
+      "bac-ninh-motorbike.osrm.edges": {
+        "sizeBytes": 1345024,
+        "sha256": "952c8a298df628cb6f9b3b8909c313a64a3790ca5f2d3f844ba7daa3dbb25e3f"
+      },
+      "bac-ninh-motorbike.osrm.enw": {
+        "sizeBytes": 1161728,
+        "sha256": "b95d22a22cf4c01a6d65718b66c120d9aa3ad8a76d92aae68edeb642f3a6ccf6"
+      },
+      "bac-ninh-motorbike.osrm.fileIndex": {
+        "sizeBytes": 2674720,
+        "sha256": "372624216238af238510befb4aa103824eac49a6ac1715da44623698b0612082"
+      },
+      "bac-ninh-motorbike.osrm.geometry": {
+        "sizeBytes": 3340288,
+        "sha256": "9a7ee1d30ffec05a29ebcfe1170a74120c80c4d2f5a15178390a246473bcb55f"
+      },
+      "bac-ninh-motorbike.osrm.icd": {
+        "sizeBytes": 517632,
+        "sha256": "5cc1f24668dbee98830debdd6266f36d268d9c90ab31f374d246c7067b6238ec"
+      },
+      "bac-ninh-motorbike.osrm.maneuver_overrides": {
+        "sizeBytes": 5120,
+        "sha256": "ce01cf98b2c75491b05b4d6a246df759375114f88d3749ee83fdce07acb7d5f4"
+      },
+      "bac-ninh-motorbike.osrm.mldgr": {
+        "sizeBytes": 4742144,
+        "sha256": "7aab9ada41c1292aeeaca07b0ba07f368bfcc37c01118c8dfb55864d009a1132"
+      },
+      "bac-ninh-motorbike.osrm.names": {
+        "sizeBytes": 74240,
+        "sha256": "4002471bc5209c19dec7113b0009ae24b6a4e72b7992270a8c1d732715a62fd1"
+      },
+      "bac-ninh-motorbike.osrm.nbg_nodes": {
+        "sizeBytes": 1513984,
+        "sha256": "6c562f3c582b0f865efc02f7077b5753e62bdd5bf03bd1977f7d93724d8c14f9"
+      },
+      "bac-ninh-motorbike.osrm.partition": {
+        "sizeBytes": 777728,
+        "sha256": "399d47808841173dc435564cf8b718f0244c5464c0650f3209cf593a2979fca9"
+      },
+      "bac-ninh-motorbike.osrm.properties": {
+        "sizeBytes": 6144,
+        "sha256": "26d46984098fa353a4b4f573597074f409af22535027e318b99ee0521dd7d9c7"
+      },
+      "bac-ninh-motorbike.osrm.ramIndex": {
+        "sizeBytes": 16384,
+        "sha256": "ec4d09f61d821787e6cc5823efcc2be5efcddef79b40e0d66220dc70f4363173"
+      },
+      "bac-ninh-motorbike.osrm.restrictions": {
+        "sizeBytes": 4096,
+        "sha256": "6a4ec500bf8efe04b338a895d3f23b81998480ea972462453f494ecc36bc4ee9"
+      },
+      "bac-ninh-motorbike.osrm.timestamp": {
+        "sizeBytes": 3584,
+        "sha256": "5ff1041daa89e98fef75bd3999c6ada0bedaa24fc2e89334f0f5a16d75d5c5e3"
+      },
+      "bac-ninh-motorbike.osrm.tld": {
+        "sizeBytes": 4096,
+        "sha256": "2dfc9a19a5073cc79500783c4fb42dab97579c5cdea7b11da77b832d9d21a5fe"
+      },
+      "bac-ninh-motorbike.osrm.tls": {
+        "sizeBytes": 6144,
+        "sha256": "6ecd9b8eac9744692ba5f7b754151c28f053eccf4406226f56f2c2f0dfbff51f"
+      },
+      "bac-ninh-motorbike.osrm.turn_duration_penalties": {
+        "sizeBytes": 384512,
+        "sha256": "598d41cc2a0e5d51f0f9ee4818d951d8444d2180b82823d6b18b8c4d00270c5f"
+      },
+      "bac-ninh-motorbike.osrm.turn_penalties_index": {
+        "sizeBytes": 2287616,
+        "sha256": "589381daee294a3ae95d3ca861ef7c135df589524b85f4ea105ba9e9f9dd5091"
+      },
+      "bac-ninh-motorbike.osrm.turn_weight_penalties": {
+        "sizeBytes": 384512,
+        "sha256": "759d26d239a59f5c0623ee56a9f9c8ac5d7e9267fd9b25ae6d916d5f9323ca25"
+      },
+      "manifest.json": {
+        "sizeBytes": 7957,
+        "sha256": "86d2f963d327875a59411b87b212b038f5dd222592e5c58e513c5edfc00ef4e0"
+      },
+      "router-evidence.json": {
+        "sizeBytes": 1701,
+        "sha256": "207c89dcf69929b007bf0bdb1ca33e801bc858cbe35be65a3c0366c3502bd0e0"
+      },
+      "validation.json": {
+        "sizeBytes": 594,
+        "sha256": "0b697d7eb742336fc83b5195572172adaaca20af254d9268a467f4895aa48be0"
+      }
+    }
+  },
+  "modes": {
+    "CAR": {
+      "status": {
+        "regionId": "nvmr-bac-ninh-core",
+        "state": "ready",
+        "ready": true,
+        "readinessReason": "",
+        "viewport": {
+          "center": [
+            106.06,
+            21.18
+          ],
+          "zoom": 12.5,
+          "bounds": [
+            106.0,
+            21.13,
+            106.12,
+            21.23
+          ]
+        },
+        "coverage": {
+          "operating": [
+            106.02,
+            21.15,
+            106.1,
+            21.21
+          ],
+          "routing": [
+            105.96,
+            21.09,
+            106.16,
+            21.27
+          ],
+          "render": [
+            105.995,
+            21.125,
+            106.125,
+            21.235
+          ]
+        },
+        "pbf": {
+          "state": "present_verified",
+          "size_bytes": 330248138,
+          "format_verified": true,
+          "osmium_available": false
+        },
+        "artifacts": {
+          "map_ready": true,
+          "graph_ready": true,
+          "extracted_ready": true
+        },
+        "osrm": {
+          "state": "connected"
+        },
+        "region": {
+          "name": "Bắc Ninh Core · technical pilot",
+          "display_bbox": [
+            106.0,
+            21.13,
+            106.12,
+            21.23
+          ],
+          "routing_bbox": [
+            105.96,
+            21.09,
+            106.16,
+            21.27
+          ],
+          "source": "Geofabrik Vietnam / OpenStreetMap",
+          "attribution": "© OpenStreetMap contributors",
+          "boundary_note": "Bbox kỹ thuật quanh đô thị Bắc Ninh cũ và đường lân cận; không phải địa giới hành chính và không bao phủ toàn tỉnh Bắc Ninh sau hợp nhất Bắc Giang năm 2025. Operating, viewport, render và routing buffer độc lập. OSM/OSRM tĩnh; nhu cầu synthetic, không phải dữ liệu vận hành GSM."
+        }
+      },
+      "routingIdentity": {
+        "regionId": "nvmr-bac-ninh-core",
+        "vehicleType": "CAR",
+        "profile": "car",
+        "profileSha256": "cb3df0546318665609606b746a1297f3d65ca3c2ff825f8a6f3c57247d86a2d3",
+        "graphManifestSha256": "4e393c9025c9b73a08d27d0aca7108071989d06e8913e7e37f534671375ddb9c",
+        "sourceSha256": "2fbd2ee6b4dc151eecf04fa6823cddf584b47423e190118b10fce8b6115e9d8a",
+        "extractSha256": "5b18bc568bb2afd3a4914b97b89084663e7a1e72a84364367cb42eac7f7c3ebb",
+        "algorithm": "mld"
+      }
+    },
+    "MOTORBIKE": {
+      "status": {
+        "regionId": "nvmr-bac-ninh-core",
+        "state": "ready",
+        "ready": true,
+        "readinessReason": "",
+        "viewport": {
+          "center": [
+            106.06,
+            21.18
+          ],
+          "zoom": 12.5,
+          "bounds": [
+            106.0,
+            21.13,
+            106.12,
+            21.23
+          ]
+        },
+        "coverage": {
+          "operating": [
+            106.02,
+            21.15,
+            106.1,
+            21.21
+          ],
+          "routing": [
+            105.96,
+            21.09,
+            106.16,
+            21.27
+          ],
+          "render": [
+            105.995,
+            21.125,
+            106.125,
+            21.235
+          ]
+        },
+        "pbf": {
+          "state": "present_verified",
+          "size_bytes": 330248138,
+          "format_verified": true,
+          "osmium_available": false
+        },
+        "artifacts": {
+          "map_ready": true,
+          "graph_ready": true,
+          "extracted_ready": true
+        },
+        "osrm": {
+          "state": "connected"
+        },
+        "region": {
+          "name": "Bắc Ninh Core · technical pilot",
+          "display_bbox": [
+            106.0,
+            21.13,
+            106.12,
+            21.23
+          ],
+          "routing_bbox": [
+            105.96,
+            21.09,
+            106.16,
+            21.27
+          ],
+          "source": "Geofabrik Vietnam / OpenStreetMap",
+          "attribution": "© OpenStreetMap contributors",
+          "boundary_note": "Bbox kỹ thuật quanh đô thị Bắc Ninh cũ và đường lân cận; không phải địa giới hành chính và không bao phủ toàn tỉnh Bắc Ninh sau hợp nhất Bắc Giang năm 2025. Operating, viewport, render và routing buffer độc lập. OSM/OSRM tĩnh; nhu cầu synthetic, không phải dữ liệu vận hành GSM."
+        }
+      },
+      "routingIdentity": {
+        "regionId": "nvmr-bac-ninh-core",
+        "vehicleType": "MOTORBIKE",
+        "profile": "motorbike",
+        "profileSha256": "075ecdbc70a3e75c4338d2c6a41597c132a1837ec2d27f1c2fcdd824a788b209",
+        "graphManifestSha256": "86d2f963d327875a59411b87b212b038f5dd222592e5c58e513c5edfc00ef4e0",
+        "sourceSha256": "2fbd2ee6b4dc151eecf04fa6823cddf584b47423e190118b10fce8b6115e9d8a",
+        "extractSha256": "5b18bc568bb2afd3a4914b97b89084663e7a1e72a84364367cb42eac7f7c3ebb",
+        "algorithm": "mld"
+      }
+    }
+  },
+  "stageLogs": {
+    "r1a-gis-boundary-validation.log": {
+      "sha256": "a995ebbd0292d08a595321133cffc73d02978dc61b7d5bf1ef71dcfb22360343",
+      "sizeBytes": 5751,
+      "preflights": [
+        {
+          "regionId": "nvmr-bac-ninh-core",
+          "action": "independent-validation",
+          "memory": {
+            "totalPhysicalBytes": 16948453376,
+            "availablePhysicalBytes": 6932115456,
+            "processRssBytes": 49381376,
+            "processPeakRssBytes": 50388992,
+            "processPagefileBytes": 38428672,
+            "processPrivateBytes": 38428672,
+            "systemCommitBytes": 13936459776,
+            "systemCommitLimitBytes": 25633406976,
+            "systemCommitAvailableBytes": 11696947200
+          },
+          "source": "D:\\ThS\\VinAI\\Phase3_VRIC\\gsm-map-sandbox\\data\\raw\\vietnam-latest.osm.pbf",
+          "output": "D:\\ThS\\VinAI\\Phase3_VRIC\\gsm-map-sandbox\\data\\regions\\nvmr-bac-ninh-core",
+          "containers": [
+            {
+              "Command": "\"osrm-routed --algor…\"",
+              "CreatedAt": "2026-10-18 13:49:12 +0700 +07",
+              "HealthStatus": "none",
+              "ID": "1b195caea3b6",
+              "Image": "855614a38f46",
+              "Labels": "desktop.docker.io/mounts/0/Source=D:\\ThS\\VinAI\\Phase3_VRIC\\gsm-map-sandbox\\data\\regions\\nvmr-bac-ninh-core\\routing\\motorbike,desktop.docker.io/mounts/0/SourceKind=hostFile,desktop.docker.io/mounts/0/Target=/data,desktop.docker.io/ports.scheme=v2,desktop.docker.io/ports/5000/tcp=127.0.0.1:5004,gsm-map-sandbox=true,nvmr-mode=MOTORBIKE,nvmr-region=nvmr-bac-ninh-core",
+              "LocalVolumes": "0",
+              "Mounts": "/run/desktop/m…",
+              "Names": "gsm-map-osrm-bac-ninh-motorbike",
+              "Networks": "bridge",
+              "Platform": {
+                "architecture": "amd64",
+                "os": "linux"
+              },
+              "Ports": "127.0.0.1:5004->5000/tcp",
+              "RunningFor": "About a minute ago",
+              "Size": "8.19kB (virtual 161MB)",
+              "State": "running",
+              "Status": "Up About a minute"
+            },
+            {
+              "Command": "\"osrm-routed --algor…\"",
+              "CreatedAt": "2026-10-18 10:03:40 +0700 +07",
+              "HealthStatus": "none",
+              "ID": "5a847965466d",
+              "Image": "855614a38f46",
+              "Labels": "desktop.docker.io/mounts/0/Source=D:\\ThS\\VinAI\\Phase3_VRIC\\gsm-map-sandbox\\data\\regions\\nvmr-bac-ninh-core\\routing\\car,desktop.docker.io/mounts/0/SourceKind=hostFile,desktop.docker.io/mounts/0/Target=/data,desktop.docker.io/ports.scheme=v2,desktop.docker.io/ports/5000/tcp=127.0.0.1:5003,gsm-map-sandbox=true,nvmr-region=nvmr-bac-ninh-core",
+              "LocalVolumes": "0",
+              "Mounts": "/run/desktop/m…",
+              "Names": "gsm-map-osrm-bac-ninh-car",
+              "Networks": "bridge",
+              "Platform": {
+                "architecture": "amd64",
+                "os": "linux"
+              },
+              "Ports": "127.0.0.1:5003->5000/tcp",
+              "RunningFor": "4 hours ago",
+              "Size": "8.19kB (virtual 161MB)",
+              "State": "running",
+              "Status": "Up 5 minutes"
+            },
+            {
+              "Command": "\"osrm-routed --algor…\"",
+              "CreatedAt": "2026-10-16 11:39:55 +0700 +07",
+              "HealthStatus": "none",
+              "ID": "af5f68c19008",
+              "Image": "855614a38f46",
+              "Labels": "desktop.docker.io/mounts/0/Source=D:\\ThS\\VinAI\\Phase3_VRIC\\gsm-map-sandbox\\data\\regions\\nvmr-hanoi-core\\routing\\motorbike,desktop.docker.io/mounts/0/SourceKind=hostFile,desktop.docker.io/mounts/0/Target=/data,desktop.docker.io/ports.scheme=v2,desktop.docker.io/ports/5000/tcp=127.0.0.1:5002,gsm-map-sandbox=true,nvmr-mode=MOTORBIKE",
+              "LocalVolumes": "0",
+              "Mounts": "/run/desktop/m…",
+              "Names": "gsm-map-osrm-hanoi-motorbike",
+              "Networks": "bridge",
+              "Platform": {
+                "architecture": "amd64",
+                "os": "linux"
+              },
+              "Ports": "127.0.0.1:5002->5000/tcp",
+              "RunningFor": "2 days ago",
+              "Size": "8.19kB (virtual 161MB)",
+              "State": "running",
+              "Status": "Up 5 minutes"
+            },
+            {
+              "Command": "\"osrm-routed --algor…\"",
+              "CreatedAt": "2026-10-16 10:45:51 +0700 +07",
+              "HealthStatus": "none",
+              "ID": "343e1ee656e4",
+              "Image": "855614a38f46",
+              "Labels": "desktop.docker.io/mounts/0/Source=D:\\ThS\\VinAI\\Phase3_VRIC\\gsm-map-sandbox\\data\\regions\\nvmr-hanoi-core\\routing\\car,desktop.docker.io/mounts/0/SourceKind=hostFile,desktop.docker.io/mounts/0/Target=/data,desktop.docker.io/ports.scheme=v2,desktop.docker.io/ports/5000/tcp=127.0.0.1:5001,gsm-map-sandbox=true,nvmr-region=nvmr-hanoi-core",
+              "LocalVolumes": "0",
+              "Mounts": "/run/desktop/m…",
+              "Names": "gsm-map-osrm-hanoi-car",
+              "Networks": "bridge",
+              "Platform": {
+                "architecture": "amd64",
+                "os": "linux"
+              },
+              "Ports": "127.0.0.1:5001->5000/tcp",
+              "RunningFor": "2 days ago",
+              "Size": "8.19kB (virtual 161MB)",
+              "State": "running",
+              "Status": "Up 5 minutes"
+            }
+          ],
+          "dockerStats": [
+            {
+              "BlockIO": "0B / 0B",
+              "CPUPerc": "0.00%",
+              "Container": "1b195caea3b65a0b40f3f3ef0713d9bf2914e1d41fd2549e13e1c58f26095a56",
+              "ID": "1b195caea3b6",
+              "MemPerc": "3.05%",
+              "MemUsage": "31.18MiB / 1GiB",
+              "Name": "gsm-map-osrm-bac-ninh-motorbike",
+              "NetIO": "42.2kB / 81.5kB",
+              "PIDs": "10"
+            },
+            {
+              "BlockIO": "0B / 0B",
+              "CPUPerc": "0.00%",
+              "Container": "5a847965466db7003fb64393f613cdef2767ae157095732b80ee7336a5f573e2",
+              "ID": "5a847965466d",
+              "MemPerc": "3.80%",
+              "MemUsage": "38.95MiB / 1GiB",
+              "Name": "gsm-map-osrm-bac-ninh-car",
+              "NetIO": "481kB / 785kB",
+              "PIDs": "10"
+            },
+            {
+              "BlockIO": "0B / 0B",
+              "CPUPerc": "0.00%",
+              "Container": "af5f68c19008785d15d820556a286d9814114cfb87449d940b126e9fefec3911",
+              "ID": "af5f68c19008",
+              "MemPerc": "4.01%",
+              "MemUsage": "41.09MiB / 1GiB",
+              "Name": "gsm-map-osrm-hanoi-motorbike",
+              "NetIO": "2.65kB / 126B",
+              "PIDs": "10"
+            },
+            {
+              "BlockIO": "0B / 0B",
+              "CPUPerc": "0.00%",
+              "Container": "343e1ee656e4a30c2645352268b7c22bd9b57d76c9914d88aea767764b6dc1df",
+              "ID": "343e1ee656e4",
+              "MemPerc": "3.18%",
+              "MemUsage": "32.57MiB / 1GiB",
+              "Name": "gsm-map-osrm-hanoi-car",
+              "NetIO": "2.57kB / 126B",
+              "PIDs": "10"
+            }
+          ]
+        }
+      ],
+      "osrmToolPeakRamBytes": [],
+      "resourceStops": []
+    },
+    "r1a-gis-car-audit-final.log": {
+      "sha256": "bf8a3f1c98d017547bbf7dc7568662f482c3f8fb3c2edb36b9aa5bd1ad965c89",
+      "sizeBytes": 571,
+      "preflights": [],
+      "osrmToolPeakRamBytes": [],
+      "resourceStops": []
+    },
+    "r1a-gis-car-audit.log": {
+      "sha256": "0c1f68775e21f4fbe61851b392a479a7ade701d2ed02be6bee9ca885c6f1bfd8",
+      "sizeBytes": 835,
+      "preflights": [],
+      "osrmToolPeakRamBytes": [],
+      "resourceStops": []
+    },
+    "r1a-gis-car-serve.log": {
+      "sha256": "d49b8c5bbd40272628edca95122ae2cdccc907959ceb7d2004989228fc4c1e0d",
+      "sizeBytes": 4389,
+      "preflights": [
+        {
+          "regionId": "nvmr-bac-ninh-core",
+          "action": "serve",
+          "memory": {
+            "totalPhysicalBytes": 16948453376,
+            "availablePhysicalBytes": 2242011136,
+            "processRssBytes": 49020928,
+            "processPeakRssBytes": 49020928,
+            "processPagefileBytes": 38359040,
+            "processPrivateBytes": 38359040,
+            "systemCommitBytes": 20974964736,
+            "systemCommitLimitBytes": 25778737152,
+            "systemCommitAvailableBytes": 4803772416
+          },
+          "source": "D:\\ThS\\VinAI\\Phase3_VRIC\\gsm-map-sandbox\\data\\raw\\vietnam-latest.osm.pbf",
+          "output": "D:\\ThS\\VinAI\\Phase3_VRIC\\gsm-map-sandbox\\data\\regions\\nvmr-bac-ninh-core",
+          "containers": [
+            {
+              "Command": "\"osrm-routed --algor…\"",
+              "CreatedAt": "2026-10-16 11:39:55 +0700 +07",
+              "HealthStatus": "none",
+              "ID": "af5f68c19008",
+              "Image": "855614a38f46",
+              "Labels": "desktop.docker.io/mounts/0/Source=D:\\ThS\\VinAI\\Phase3_VRIC\\gsm-map-sandbox\\data\\regions\\nvmr-hanoi-core\\routing\\motorbike,desktop.docker.io/mounts/0/SourceKind=hostFile,desktop.docker.io/mounts/0/Target=/data,desktop.docker.io/ports.scheme=v2,desktop.docker.io/ports/5000/tcp=127.0.0.1:5002,gsm-map-sandbox=true,nvmr-mode=MOTORBIKE",
+              "LocalVolumes": "0",
+              "Mounts": "/run/desktop/m…",
+              "Names": "gsm-map-osrm-hanoi-motorbike",
+              "Networks": "bridge",
+              "Platform": {
+                "architecture": "amd64",
+                "os": "linux"
+              },
+              "Ports": "127.0.0.1:5002->5000/tcp",
+              "RunningFor": "46 hours ago",
+              "Size": "8.19kB (virtual 161MB)",
+              "State": "running",
+              "Status": "Up About an hour"
+            },
+            {
+              "Command": "\"osrm-routed --algor…\"",
+              "CreatedAt": "2026-10-16 10:45:51 +0700 +07",
+              "HealthStatus": "none",
+              "ID": "343e1ee656e4",
+              "Image": "855614a38f46",
+              "Labels": "desktop.docker.io/mounts/0/Source=D:\\ThS\\VinAI\\Phase3_VRIC\\gsm-map-sandbox\\data\\regions\\nvmr-hanoi-core\\routing\\car,desktop.docker.io/mounts/0/SourceKind=hostFile,desktop.docker.io/mounts/0/Target=/data,desktop.docker.io/ports.scheme=v2,desktop.docker.io/ports/5000/tcp=127.0.0.1:5001,gsm-map-sandbox=true,nvmr-region=nvmr-hanoi-core",
+              "LocalVolumes": "0",
+              "Mounts": "/run/desktop/m…",
+              "Names": "gsm-map-osrm-hanoi-car",
+              "Networks": "bridge",
+              "Platform": {
+                "architecture": "amd64",
+                "os": "linux"
+              },
+              "Ports": "127.0.0.1:5001->5000/tcp",
+              "RunningFor": "47 hours ago",
+              "Size": "8.19kB (virtual 161MB)",
+              "State": "running",
+              "Status": "Up About an hour"
+            }
+          ],
+          "dockerStats": [
+            {
+              "BlockIO": "0B / 0B",
+              "CPUPerc": "0.00%",
+              "Container": "af5f68c19008785d15d820556a286d9814114cfb87449d940b126e9fefec3911",
+              "ID": "af5f68c19008",
+              "MemPerc": "5.01%",
+              "MemUsage": "51.27MiB / 1GiB",
+              "Name": "gsm-map-osrm-hanoi-motorbike",
+              "NetIO": "1.16MB / 1.94MB",
+              "PIDs": "10"
+            },
+            {
+              "BlockIO": "0B / 0B",
+              "CPUPerc": "0.00%",
+              "Container": "343e1ee656e4a30c2645352268b7c22bd9b57d76c9914d88aea767764b6dc1df",
+              "ID": "343e1ee656e4",
+              "MemPerc": "3.64%",
+              "MemUsage": "37.25MiB / 1GiB",
+              "Name": "gsm-map-osrm-hanoi-car",
+              "NetIO": "942kB / 1.56MB",
+              "PIDs": "10"
+            }
+          ]
+        }
+      ],
+      "osrmToolPeakRamBytes": [],
+      "resourceStops": []
+    },
+    "r1a-gis-car.log": {
+      "sha256": "e4ab19c7aa2fe9b601f3e61a4a53a1903eac438235a27d21a717ffee0ce742eb",
+      "sizeBytes": 20233,
+      "preflights": [
+        {
+          "regionId": "nvmr-bac-ninh-core",
+          "action": "routing",
+          "memory": {
+            "totalPhysicalBytes": 16948453376,
+            "availablePhysicalBytes": 2565390336,
+            "processRssBytes": 49061888,
+            "processPeakRssBytes": 49061888,
+            "processPagefileBytes": 38440960,
+            "processPrivateBytes": 38440960,
+            "systemCommitBytes": 20618002432,
+            "systemCommitLimitBytes": 25778737152,
+            "systemCommitAvailableBytes": 5160734720
+          },
+          "source": "D:\\ThS\\VinAI\\Phase3_VRIC\\gsm-map-sandbox\\data\\raw\\vietnam-latest.osm.pbf",
+          "output": "D:\\ThS\\VinAI\\Phase3_VRIC\\gsm-map-sandbox\\data\\regions\\nvmr-bac-ninh-core",
+          "containers": [
+            {
+              "Command": "\"osrm-routed --algor…\"",
+              "CreatedAt": "2026-10-16 11:39:55 +0700 +07",
+              "HealthStatus": "none",
+              "ID": "af5f68c19008",
+              "Image": "855614a38f46",
+              "Labels": "desktop.docker.io/mounts/0/Source=D:\\ThS\\VinAI\\Phase3_VRIC\\gsm-map-sandbox\\data\\regions\\nvmr-hanoi-core\\routing\\motorbike,desktop.docker.io/mounts/0/SourceKind=hostFile,desktop.docker.io/mounts/0/Target=/data,desktop.docker.io/ports.scheme=v2,desktop.docker.io/ports/5000/tcp=127.0.0.1:5002,gsm-map-sandbox=true,nvmr-mode=MOTORBIKE",
+              "LocalVolumes": "0",
+              "Mounts": "/run/desktop/m…",
+              "Names": "gsm-map-osrm-hanoi-motorbike",
+              "Networks": "bridge",
+              "Platform": {
+                "architecture": "amd64",
+                "os": "linux"
+              },
+              "Ports": "127.0.0.1:5002->5000/tcp",
+              "RunningFor": "46 hours ago",
+              "Size": "8.19kB (virtual 161MB)",
+              "State": "running",
+              "Status": "Up About an hour"
+            },
+            {
+              "Command": "\"osrm-routed --algor…\"",
+              "CreatedAt": "2026-10-16 10:45:51 +0700 +07",
+              "HealthStatus": "none",
+              "ID": "343e1ee656e4",
+              "Image": "855614a38f46",
+              "Labels": "desktop.docker.io/mounts/0/Source=D:\\ThS\\VinAI\\Phase3_VRIC\\gsm-map-sandbox\\data\\regions\\nvmr-hanoi-core\\routing\\car,desktop.docker.io/mounts/0/SourceKind=hostFile,desktop.docker.io/mounts/0/Target=/data,desktop.docker.io/ports.scheme=v2,desktop.docker.io/ports/5000/tcp=127.0.0.1:5001,gsm-map-sandbox=true,nvmr-region=nvmr-hanoi-core",
+              "LocalVolumes": "0",
+              "Mounts": "/run/desktop/m…",
+              "Names": "gsm-map-osrm-hanoi-car",
+              "Networks": "bridge",
+              "Platform": {
+                "architecture": "amd64",
+                "os": "linux"
+              },
+              "Ports": "127.0.0.1:5001->5000/tcp",
+              "RunningFor": "47 hours ago",
+              "Size": "8.19kB (virtual 161MB)",
+              "State": "running",
+              "Status": "Up About an hour"
+            }
+          ],
+          "dockerStats": [
+            {
+              "BlockIO": "0B / 0B",
+              "CPUPerc": "0.00%",
+              "Container": "af5f68c19008785d15d820556a286d9814114cfb87449d940b126e9fefec3911",
+              "ID": "af5f68c19008",
+              "MemPerc": "4.73%",
+              "MemUsage": "48.48MiB / 1GiB",
+              "Name": "gsm-map-osrm-hanoi-motorbike",
+              "NetIO": "1.16MB / 1.94MB",
+              "PIDs": "10"
+            },
+            {
+              "BlockIO": "0B / 0B",
+              "CPUPerc": "0.00%",
+              "Container": "343e1ee656e4a30c2645352268b7c22bd9b57d76c9914d88aea767764b6dc1df",
+              "ID": "343e1ee656e4",
+              "MemPerc": "3.64%",
+              "MemUsage": "37.25MiB / 1GiB",
+              "Name": "gsm-map-osrm-hanoi-car",
+              "NetIO": "941kB / 1.56MB",
+              "PIDs": "10"
+            }
+          ]
+        }
+      ],
+      "osrmToolPeakRamBytes": [
+        138063872,
+        49811456,
+        34967552
+      ],
+      "resourceStops": []
+    },
+    "r1a-gis-display.log": {
+      "sha256": "1f485f7ae247dbb9f9f284cbe02bec1e4c272aec980f97b67bcaff77d7fa6ab2",
+      "sizeBytes": 4662,
+      "preflights": [
+        {
+          "regionId": "nvmr-bac-ninh-core",
+          "action": "display",
+          "memory": {
+            "totalPhysicalBytes": 16948453376,
+            "availablePhysicalBytes": 3293786112,
+            "processRssBytes": 49029120,
+            "processPeakRssBytes": 49029120,
+            "processPagefileBytes": 38412288,
+            "processPrivateBytes": 38412288,
+            "systemCommitBytes": 19971997696,
+            "systemCommitLimitBytes": 25778737152,
+            "systemCommitAvailableBytes": 5806739456
+          },
+          "source": "D:\\ThS\\VinAI\\Phase3_VRIC\\gsm-map-sandbox\\data\\raw\\vietnam-latest.osm.pbf",
+          "output": "D:\\ThS\\VinAI\\Phase3_VRIC\\gsm-map-sandbox\\data\\regions\\nvmr-bac-ninh-core",
+          "containers": [
+            {
+              "Command": "\"osrm-routed --algor…\"",
+              "CreatedAt": "2026-10-16 11:39:55 +0700 +07",
+              "HealthStatus": "none",
+              "ID": "af5f68c19008",
+              "Image": "855614a38f46",
+              "Labels": "desktop.docker.io/mounts/0/Source=D:\\ThS\\VinAI\\Phase3_VRIC\\gsm-map-sandbox\\data\\regions\\nvmr-hanoi-core\\routing\\motorbike,desktop.docker.io/mounts/0/SourceKind=hostFile,desktop.docker.io/mounts/0/Target=/data,desktop.docker.io/ports.scheme=v2,desktop.docker.io/ports/5000/tcp=127.0.0.1:5002,gsm-map-sandbox=true,nvmr-mode=MOTORBIKE",
+              "LocalVolumes": "0",
+              "Mounts": "/run/desktop/m…",
+              "Names": "gsm-map-osrm-hanoi-motorbike",
+              "Networks": "bridge",
+              "Platform": {
+                "architecture": "amd64",
+                "os": "linux"
+              },
+              "Ports": "127.0.0.1:5002->5000/tcp",
+              "RunningFor": "46 hours ago",
+              "Size": "8.19kB (virtual 161MB)",
+              "State": "running",
+              "Status": "Up About an hour"
+            },
+            {
+              "Command": "\"osrm-routed --algor…\"",
+              "CreatedAt": "2026-10-16 10:45:51 +0700 +07",
+              "HealthStatus": "none",
+              "ID": "343e1ee656e4",
+              "Image": "855614a38f46",
+              "Labels": "desktop.docker.io/mounts/0/Source=D:\\ThS\\VinAI\\Phase3_VRIC\\gsm-map-sandbox\\data\\regions\\nvmr-hanoi-core\\routing\\car,desktop.docker.io/mounts/0/SourceKind=hostFile,desktop.docker.io/mounts/0/Target=/data,desktop.docker.io/ports.scheme=v2,desktop.docker.io/ports/5000/tcp=127.0.0.1:5001,gsm-map-sandbox=true,nvmr-region=nvmr-hanoi-core",
+              "LocalVolumes": "0",
+              "Mounts": "/run/desktop/m…",
+              "Names": "gsm-map-osrm-hanoi-car",
+              "Networks": "bridge",
+              "Platform": {
+                "architecture": "amd64",
+                "os": "linux"
+              },
+              "Ports": "127.0.0.1:5001->5000/tcp",
+              "RunningFor": "47 hours ago",
+              "Size": "8.19kB (virtual 161MB)",
+              "State": "running",
+              "Status": "Up About an hour"
+            }
+          ],
+          "dockerStats": [
+            {
+              "BlockIO": "0B / 0B",
+              "CPUPerc": "0.00%",
+              "Container": "af5f68c19008785d15d820556a286d9814114cfb87449d940b126e9fefec3911",
+              "ID": "af5f68c19008",
+              "MemPerc": "4.73%",
+              "MemUsage": "48.48MiB / 1GiB",
+              "Name": "gsm-map-osrm-hanoi-motorbike",
+              "NetIO": "1.16MB / 1.94MB",
+              "PIDs": "10"
+            },
+            {
+              "BlockIO": "0B / 0B",
+              "CPUPerc": "0.00%",
+              "Container": "343e1ee656e4a30c2645352268b7c22bd9b57d76c9914d88aea767764b6dc1df",
+              "ID": "343e1ee656e4",
+              "MemPerc": "3.64%",
+              "MemUsage": "37.25MiB / 1GiB",
+              "Name": "gsm-map-osrm-hanoi-car",
+              "NetIO": "941kB / 1.56MB",
+              "PIDs": "10"
+            }
+          ]
+        }
+      ],
+      "osrmToolPeakRamBytes": [],
+      "resourceStops": []
+    },
+    "r1a-gis-extract.log": {
+      "sha256": "99ece7850515d5175a573c3fcc1034fcf5463c93179f341bd14285f3270a1fcb",
+      "sizeBytes": 4756,
+      "preflights": [
+        {
+          "regionId": "nvmr-bac-ninh-core",
+          "action": "extract",
+          "memory": {
+            "totalPhysicalBytes": 16948453376,
+            "availablePhysicalBytes": 3415175168,
+            "processRssBytes": 49070080,
+            "processPeakRssBytes": 49070080,
+            "processPagefileBytes": 38363136,
+            "processPrivateBytes": 38363136,
+            "systemCommitBytes": 19417124864,
+            "systemCommitLimitBytes": 25778737152,
+            "systemCommitAvailableBytes": 6361612288
+          },
+          "source": "D:\\ThS\\VinAI\\Phase3_VRIC\\gsm-map-sandbox\\data\\raw\\vietnam-latest.osm.pbf",
+          "output": "D:\\ThS\\VinAI\\Phase3_VRIC\\gsm-map-sandbox\\data\\regions\\nvmr-bac-ninh-core",
+          "containers": [
+            {
+              "Command": "\"osrm-routed --algor…\"",
+              "CreatedAt": "2026-10-16 11:39:55 +0700 +07",
+              "HealthStatus": "none",
+              "ID": "af5f68c19008",
+              "Image": "855614a38f46",
+              "Labels": "desktop.docker.io/mounts/0/Source=D:\\ThS\\VinAI\\Phase3_VRIC\\gsm-map-sandbox\\data\\regions\\nvmr-hanoi-core\\routing\\motorbike,desktop.docker.io/mounts/0/SourceKind=hostFile,desktop.docker.io/mounts/0/Target=/data,desktop.docker.io/ports.scheme=v2,desktop.docker.io/ports/5000/tcp=127.0.0.1:5002,gsm-map-sandbox=true,nvmr-mode=MOTORBIKE",
+              "LocalVolumes": "0",
+              "Mounts": "/run/desktop/m…",
+              "Names": "gsm-map-osrm-hanoi-motorbike",
+              "Networks": "bridge",
+              "Platform": {
+                "architecture": "amd64",
+                "os": "linux"
+              },
+              "Ports": "127.0.0.1:5002->5000/tcp",
+              "RunningFor": "46 hours ago",
+              "Size": "8.19kB (virtual 161MB)",
+              "State": "running",
+              "Status": "Up About an hour"
+            },
+            {
+              "Command": "\"osrm-routed --algor…\"",
+              "CreatedAt": "2026-10-16 10:45:51 +0700 +07",
+              "HealthStatus": "none",
+              "ID": "343e1ee656e4",
+              "Image": "855614a38f46",
+              "Labels": "desktop.docker.io/mounts/0/Source=D:\\ThS\\VinAI\\Phase3_VRIC\\gsm-map-sandbox\\data\\regions\\nvmr-hanoi-core\\routing\\car,desktop.docker.io/mounts/0/SourceKind=hostFile,desktop.docker.io/mounts/0/Target=/data,desktop.docker.io/ports.scheme=v2,desktop.docker.io/ports/5000/tcp=127.0.0.1:5001,gsm-map-sandbox=true,nvmr-region=nvmr-hanoi-core",
+              "LocalVolumes": "0",
+              "Mounts": "/run/desktop/m…",
+              "Names": "gsm-map-osrm-hanoi-car",
+              "Networks": "bridge",
+              "Platform": {
+                "architecture": "amd64",
+                "os": "linux"
+              },
+              "Ports": "127.0.0.1:5001->5000/tcp",
+              "RunningFor": "47 hours ago",
+              "Size": "8.19kB (virtual 161MB)",
+              "State": "running",
+              "Status": "Up About an hour"
+            }
+          ],
+          "dockerStats": [
+            {
+              "BlockIO": "0B / 0B",
+              "CPUPerc": "0.00%",
+              "Container": "af5f68c19008785d15d820556a286d9814114cfb87449d940b126e9fefec3911",
+              "ID": "af5f68c19008",
+              "MemPerc": "4.73%",
+              "MemUsage": "48.48MiB / 1GiB",
+              "Name": "gsm-map-osrm-hanoi-motorbike",
+              "NetIO": "1.16MB / 1.94MB",
+              "PIDs": "10"
+            },
+            {
+              "BlockIO": "0B / 0B",
+              "CPUPerc": "0.00%",
+              "Container": "343e1ee656e4a30c2645352268b7c22bd9b57d76c9914d88aea767764b6dc1df",
+              "ID": "343e1ee656e4",
+              "MemPerc": "3.64%",
+              "MemUsage": "37.25MiB / 1GiB",
+              "Name": "gsm-map-osrm-hanoi-car",
+              "NetIO": "941kB / 1.56MB",
+              "PIDs": "10"
+            }
+          ]
+        }
+      ],
+      "osrmToolPeakRamBytes": [],
+      "resourceStops": []
+    },
+    "r1a-gis-independent-validation.log": {
+      "sha256": "f045e42c8355e576cf53fa6be3d913f29471f3f2e084a864b71868246959f8b4",
+      "sizeBytes": 33779,
+      "preflights": [
+        {
+          "regionId": "nvmr-bac-ninh-core",
+          "action": "independent-validation",
+          "memory": {
+            "totalPhysicalBytes": 16948453376,
+            "availablePhysicalBytes": 6815535104,
+            "processRssBytes": 49332224,
+            "processPeakRssBytes": 50343936,
+            "processPagefileBytes": 38285312,
+            "processPrivateBytes": 38285312,
+            "systemCommitBytes": 13863460864,
+            "systemCommitLimitBytes": 25633406976,
+            "systemCommitAvailableBytes": 11769946112
+          },
+          "source": "D:\\ThS\\VinAI\\Phase3_VRIC\\gsm-map-sandbox\\data\\raw\\vietnam-latest.osm.pbf",
+          "output": "D:\\ThS\\VinAI\\Phase3_VRIC\\gsm-map-sandbox\\data\\regions\\nvmr-bac-ninh-core",
+          "containers": [
+            {
+              "Command": "\"osrm-routed --algor…\"",
+              "CreatedAt": "2026-10-18 13:49:12 +0700 +07",
+              "HealthStatus": "none",
+              "ID": "1b195caea3b6",
+              "Image": "855614a38f46",
+              "Labels": "desktop.docker.io/mounts/0/Source=D:\\ThS\\VinAI\\Phase3_VRIC\\gsm-map-sandbox\\data\\regions\\nvmr-bac-ninh-core\\routing\\motorbike,desktop.docker.io/mounts/0/SourceKind=hostFile,desktop.docker.io/mounts/0/Target=/data,desktop.docker.io/ports.scheme=v2,desktop.docker.io/ports/5000/tcp=127.0.0.1:5004,gsm-map-sandbox=true,nvmr-mode=MOTORBIKE,nvmr-region=nvmr-bac-ninh-core",
+              "LocalVolumes": "0",
+              "Mounts": "/run/desktop/m…",
+              "Names": "gsm-map-osrm-bac-ninh-motorbike",
+              "Networks": "bridge",
+              "Platform": {
+                "architecture": "amd64",
+                "os": "linux"
+              },
+              "Ports": "127.0.0.1:5004->5000/tcp",
+              "RunningFor": "18 seconds ago",
+              "Size": "8.19kB (virtual 161MB)",
+              "State": "running",
+              "Status": "Up 17 seconds"
+            },
+            {
+              "Command": "\"osrm-routed --algor…\"",
+              "CreatedAt": "2026-10-18 10:03:40 +0700 +07",
+              "HealthStatus": "none",
+              "ID": "5a847965466d",
+              "Image": "855614a38f46",
+              "Labels": "desktop.docker.io/mounts/0/Source=D:\\ThS\\VinAI\\Phase3_VRIC\\gsm-map-sandbox\\data\\regions\\nvmr-bac-ninh-core\\routing\\car,desktop.docker.io/mounts/0/SourceKind=hostFile,desktop.docker.io/mounts/0/Target=/data,desktop.docker.io/ports.scheme=v2,desktop.docker.io/ports/5000/tcp=127.0.0.1:5003,gsm-map-sandbox=true,nvmr-region=nvmr-bac-ninh-core",
+              "LocalVolumes": "0",
+              "Mounts": "/run/desktop/m…",
+              "Names": "gsm-map-osrm-bac-ninh-car",
+              "Networks": "bridge",
+              "Platform": {
+                "architecture": "amd64",
+                "os": "linux"
+              },
+              "Ports": "127.0.0.1:5003->5000/tcp",
+              "RunningFor": "4 hours ago",
+              "Size": "8.19kB (virtual 161MB)",
+              "State": "running",
+              "Status": "Up 4 minutes"
+            },
+            {
+              "Command": "\"osrm-routed --algor…\"",
+              "CreatedAt": "2026-10-16 11:39:55 +0700 +07",
+              "HealthStatus": "none",
+              "ID": "af5f68c19008",
+              "Image": "855614a38f46",
+              "Labels": "desktop.docker.io/mounts/0/Source=D:\\ThS\\VinAI\\Phase3_VRIC\\gsm-map-sandbox\\data\\regions\\nvmr-hanoi-core\\routing\\motorbike,desktop.docker.io/mounts/0/SourceKind=hostFile,desktop.docker.io/mounts/0/Target=/data,desktop.docker.io/ports.scheme=v2,desktop.docker.io/ports/5000/tcp=127.0.0.1:5002,gsm-map-sandbox=true,nvmr-mode=MOTORBIKE",
+              "LocalVolumes": "0",
+              "Mounts": "/run/desktop/m…",
+              "Names": "gsm-map-osrm-hanoi-motorbike",
+              "Networks": "bridge",
+              "Platform": {
+                "architecture": "amd64",
+                "os": "linux"
+              },
+              "Ports": "127.0.0.1:5002->5000/tcp",
+              "RunningFor": "2 days ago",
+              "Size": "8.19kB (virtual 161MB)",
+              "State": "running",
+              "Status": "Up 4 minutes"
+            },
+            {
+              "Command": "\"osrm-routed --algor…\"",
+              "CreatedAt": "2026-10-16 10:45:51 +0700 +07",
+              "HealthStatus": "none",
+              "ID": "343e1ee656e4",
+              "Image": "855614a38f46",
+              "Labels": "desktop.docker.io/mounts/0/Source=D:\\ThS\\VinAI\\Phase3_VRIC\\gsm-map-sandbox\\data\\regions\\nvmr-hanoi-core\\routing\\car,desktop.docker.io/mounts/0/SourceKind=hostFile,desktop.docker.io/mounts/0/Target=/data,desktop.docker.io/ports.scheme=v2,desktop.docker.io/ports/5000/tcp=127.0.0.1:5001,gsm-map-sandbox=true,nvmr-region=nvmr-hanoi-core",
+              "LocalVolumes": "0",
+              "Mounts": "/run/desktop/m…",
+              "Names": "gsm-map-osrm-hanoi-car",
+              "Networks": "bridge",
+              "Platform": {
+                "architecture": "amd64",
+                "os": "linux"
+              },
+              "Ports": "127.0.0.1:5001->5000/tcp",
+              "RunningFor": "2 days ago",
+              "Size": "8.19kB (virtual 161MB)",
+              "State": "running",
+              "Status": "Up 4 minutes"
+            }
+          ],
+          "dockerStats": [
+            {
+              "BlockIO": "0B / 0B",
+              "CPUPerc": "0.00%",
+              "Container": "1b195caea3b65a0b40f3f3ef0713d9bf2914e1d41fd2549e13e1c58f26095a56",
+              "ID": "1b195caea3b6",
+              "MemPerc": "2.78%",
+              "MemUsage": "28.51MiB / 1GiB",
+              "Name": "gsm-map-osrm-bac-ninh-motorbike",
+              "NetIO": "3.12kB / 3.18kB",
+              "PIDs": "10"
+            },
+            {
+              "BlockIO": "0B / 0B",
+              "CPUPerc": "0.00%",
+              "Container": "5a847965466db7003fb64393f613cdef2767ae157095732b80ee7336a5f573e2",
+              "ID": "5a847965466d",
+              "MemPerc": "3.43%",
+              "MemUsage": "35.16MiB / 1GiB",
+              "Name": "gsm-map-osrm-bac-ninh-car",
+              "NetIO": "442kB / 708kB",
+              "PIDs": "10"
+            },
+            {
+              "BlockIO": "0B / 0B",
+              "CPUPerc": "0.00%",
+              "Container": "af5f68c19008785d15d820556a286d9814114cfb87449d940b126e9fefec3911",
+              "ID": "af5f68c19008",
+              "MemPerc": "4.01%",
+              "MemUsage": "41.09MiB / 1GiB",
+              "Name": "gsm-map-osrm-hanoi-motorbike",
+              "NetIO": "2.11kB / 126B",
+              "PIDs": "10"
+            },
+            {
+              "BlockIO": "0B / 0B",
+              "CPUPerc": "0.00%",
+              "Container": "343e1ee656e4a30c2645352268b7c22bd9b57d76c9914d88aea767764b6dc1df",
+              "ID": "343e1ee656e4",
+              "MemPerc": "3.18%",
+              "MemUsage": "32.57MiB / 1GiB",
+              "Name": "gsm-map-osrm-hanoi-car",
+              "NetIO": "2.02kB / 126B",
+              "PIDs": "10"
+            }
+          ]
+        }
+      ],
+      "osrmToolPeakRamBytes": [
+        41111552,
+        17920000,
+        15884288,
+        38977536,
+        17604608,
+        17760256
+      ],
+      "resourceStops": []
+    },
+    "r1a-gis-motorbike-resume.log": {
+      "sha256": "7f9e4c119b655338a235bb45480a2ce8a5332af552dd71bb57a7a67dec08b7ea",
+      "sizeBytes": 20528,
+      "preflights": [
+        {
+          "regionId": "nvmr-bac-ninh-core",
+          "action": "routing",
+          "memory": {
+            "totalPhysicalBytes": 16948453376,
+            "availablePhysicalBytes": 6542790656,
+            "processRssBytes": 49385472,
+            "processPeakRssBytes": 50290688,
+            "processPagefileBytes": 38899712,
+            "processPrivateBytes": 38899712,
+            "systemCommitBytes": 13798125568,
+            "systemCommitLimitBytes": 25633406976,
+            "systemCommitAvailableBytes": 11835281408
+          },
+          "source": "D:\\ThS\\VinAI\\Phase3_VRIC\\gsm-map-sandbox\\data\\raw\\vietnam-latest.osm.pbf",
+          "output": "D:\\ThS\\VinAI\\Phase3_VRIC\\gsm-map-sandbox\\data\\regions\\nvmr-bac-ninh-core",
+          "containers": [
+            {
+              "Command": "\"osrm-routed --algor…\"",
+              "CreatedAt": "2026-10-18 10:03:40 +0700 +07",
+              "HealthStatus": "none",
+              "ID": "5a847965466d",
+              "Image": "855614a38f46",
+              "Labels": "desktop.docker.io/mounts/0/Source=D:\\ThS\\VinAI\\Phase3_VRIC\\gsm-map-sandbox\\data\\regions\\nvmr-bac-ninh-core\\routing\\car,desktop.docker.io/mounts/0/SourceKind=hostFile,desktop.docker.io/mounts/0/Target=/data,desktop.docker.io/ports.scheme=v2,desktop.docker.io/ports/5000/tcp=127.0.0.1:5003,gsm-map-sandbox=true,nvmr-region=nvmr-bac-ninh-core",
+              "LocalVolumes": "0",
+              "Mounts": "/run/desktop/m…",
+              "Names": "gsm-map-osrm-bac-ninh-car",
+              "Networks": "bridge",
+              "Platform": {
+                "architecture": "amd64",
+                "os": "linux"
+              },
+              "Ports": "127.0.0.1:5003->5000/tcp",
+              "RunningFor": "4 hours ago",
+              "Size": "8.19kB (virtual 161MB)",
+              "State": "running",
+              "Status": "Up 3 minutes"
+            },
+            {
+              "Command": "\"osrm-routed --algor…\"",
+              "CreatedAt": "2026-10-16 11:39:55 +0700 +07",
+              "HealthStatus": "none",
+              "ID": "af5f68c19008",
+              "Image": "855614a38f46",
+              "Labels": "desktop.docker.io/mounts/0/Source=D:\\ThS\\VinAI\\Phase3_VRIC\\gsm-map-sandbox\\data\\regions\\nvmr-hanoi-core\\routing\\motorbike,desktop.docker.io/mounts/0/SourceKind=hostFile,desktop.docker.io/mounts/0/Target=/data,desktop.docker.io/ports.scheme=v2,desktop.docker.io/ports/5000/tcp=127.0.0.1:5002,gsm-map-sandbox=true,nvmr-mode=MOTORBIKE",
+              "LocalVolumes": "0",
+              "Mounts": "/run/desktop/m…",
+              "Names": "gsm-map-osrm-hanoi-motorbike",
+              "Networks": "bridge",
+              "Platform": {
+                "architecture": "amd64",
+                "os": "linux"
+              },
+              "Ports": "127.0.0.1:5002->5000/tcp",
+              "RunningFor": "2 days ago",
+              "Size": "8.19kB (virtual 161MB)",
+              "State": "running",
+              "Status": "Up 3 minutes"
+            },
+            {
+              "Command": "\"osrm-routed --algor…\"",
+              "CreatedAt": "2026-10-16 10:45:51 +0700 +07",
+              "HealthStatus": "none",
+              "ID": "343e1ee656e4",
+              "Image": "855614a38f46",
+              "Labels": "desktop.docker.io/mounts/0/Source=D:\\ThS\\VinAI\\Phase3_VRIC\\gsm-map-sandbox\\data\\regions\\nvmr-hanoi-core\\routing\\car,desktop.docker.io/mounts/0/SourceKind=hostFile,desktop.docker.io/mounts/0/Target=/data,desktop.docker.io/ports.scheme=v2,desktop.docker.io/ports/5000/tcp=127.0.0.1:5001,gsm-map-sandbox=true,nvmr-region=nvmr-hanoi-core",
+              "LocalVolumes": "0",
+              "Mounts": "/run/desktop/m…",
+              "Names": "gsm-map-osrm-hanoi-car",
+              "Networks": "bridge",
+              "Platform": {
+                "architecture": "amd64",
+                "os": "linux"
+              },
+              "Ports": "127.0.0.1:5001->5000/tcp",
+              "RunningFor": "2 days ago",
+              "Size": "8.19kB (virtual 161MB)",
+              "State": "running",
+              "Status": "Up 3 minutes"
+            }
+          ],
+          "dockerStats": [
+            {
+              "BlockIO": "0B / 0B",
+              "CPUPerc": "0.00%",
+              "Container": "5a847965466db7003fb64393f613cdef2767ae157095732b80ee7336a5f573e2",
+              "ID": "5a847965466d",
+              "MemPerc": "2.99%",
+              "MemUsage": "30.58MiB / 1GiB",
+              "Name": "gsm-map-osrm-bac-ninh-car",
+              "NetIO": "441kB / 708kB",
+              "PIDs": "10"
+            },
+            {
+              "BlockIO": "0B / 0B",
+              "CPUPerc": "0.00%",
+              "Container": "af5f68c19008785d15d820556a286d9814114cfb87449d940b126e9fefec3911",
+              "ID": "af5f68c19008",
+              "MemPerc": "4.01%",
+              "MemUsage": "41.09MiB / 1GiB",
+              "Name": "gsm-map-osrm-hanoi-motorbike",
+              "NetIO": "1.6kB / 126B",
+              "PIDs": "10"
+            },
+            {
+              "BlockIO": "0B / 0B",
+              "CPUPerc": "0.00%",
+              "Container": "343e1ee656e4a30c2645352268b7c22bd9b57d76c9914d88aea767764b6dc1df",
+              "ID": "343e1ee656e4",
+              "MemPerc": "3.18%",
+              "MemUsage": "32.57MiB / 1GiB",
+              "Name": "gsm-map-osrm-hanoi-car",
+              "NetIO": "1.52kB / 126B",
+              "PIDs": "10"
+            }
+          ]
+        }
+      ],
+      "osrmToolPeakRamBytes": [
+        142897152,
+        55648256,
+        38129664
+      ],
+      "resourceStops": []
+    },
+    "r1a-gis-motorbike-retry.log": {
+      "sha256": "b1e862e4772d0470a344b49c4bc14c7058cd9847c798d64b8336b13f33f9e02e",
+      "sizeBytes": 807,
+      "preflights": [],
+      "osrmToolPeakRamBytes": [],
+      "resourceStops": [
+        "DỪNG: RESOURCE_STOP: regional GIS requires >=2 GiB available RAM and commit headroom; do not lower guards"
+      ]
+    },
+    "r1a-gis-motorbike-serve.log": {
+      "sha256": "b8a5067ba3336c78205706cfc1ab3f86be685289be356afe948cf287c6d63bca",
+      "sizeBytes": 5580,
+      "preflights": [
+        {
+          "regionId": "nvmr-bac-ninh-core",
+          "action": "serve",
+          "memory": {
+            "totalPhysicalBytes": 16948453376,
+            "availablePhysicalBytes": 6807744512,
+            "processRssBytes": 49094656,
+            "processPeakRssBytes": 49995776,
+            "processPagefileBytes": 38453248,
+            "processPrivateBytes": 38453248,
+            "systemCommitBytes": 13970587648,
+            "systemCommitLimitBytes": 25633406976,
+            "systemCommitAvailableBytes": 11662819328
+          },
+          "source": "D:\\ThS\\VinAI\\Phase3_VRIC\\gsm-map-sandbox\\data\\raw\\vietnam-latest.osm.pbf",
+          "output": "D:\\ThS\\VinAI\\Phase3_VRIC\\gsm-map-sandbox\\data\\regions\\nvmr-bac-ninh-core",
+          "containers": [
+            {
+              "Command": "\"osrm-routed --algor…\"",
+              "CreatedAt": "2026-10-18 10:03:40 +0700 +07",
+              "HealthStatus": "none",
+              "ID": "5a847965466d",
+              "Image": "855614a38f46",
+              "Labels": "desktop.docker.io/mounts/0/Source=D:\\ThS\\VinAI\\Phase3_VRIC\\gsm-map-sandbox\\data\\regions\\nvmr-bac-ninh-core\\routing\\car,desktop.docker.io/mounts/0/SourceKind=hostFile,desktop.docker.io/mounts/0/Target=/data,desktop.docker.io/ports.scheme=v2,desktop.docker.io/ports/5000/tcp=127.0.0.1:5003,gsm-map-sandbox=true,nvmr-region=nvmr-bac-ninh-core",
+              "LocalVolumes": "0",
+              "Mounts": "/run/desktop/m…",
+              "Names": "gsm-map-osrm-bac-ninh-car",
+              "Networks": "bridge",
+              "Platform": {
+                "architecture": "amd64",
+                "os": "linux"
+              },
+              "Ports": "127.0.0.1:5003->5000/tcp",
+              "RunningFor": "4 hours ago",
+              "Size": "8.19kB (virtual 161MB)",
+              "State": "running",
+              "Status": "Up 3 minutes"
+            },
+            {
+              "Command": "\"osrm-routed --algor…\"",
+              "CreatedAt": "2026-10-16 11:39:55 +0700 +07",
+              "HealthStatus": "none",
+              "ID": "af5f68c19008",
+              "Image": "855614a38f46",
+              "Labels": "desktop.docker.io/mounts/0/Source=D:\\ThS\\VinAI\\Phase3_VRIC\\gsm-map-sandbox\\data\\regions\\nvmr-hanoi-core\\routing\\motorbike,desktop.docker.io/mounts/0/SourceKind=hostFile,desktop.docker.io/mounts/0/Target=/data,desktop.docker.io/ports.scheme=v2,desktop.docker.io/ports/5000/tcp=127.0.0.1:5002,gsm-map-sandbox=true,nvmr-mode=MOTORBIKE",
+              "LocalVolumes": "0",
+              "Mounts": "/run/desktop/m…",
+              "Names": "gsm-map-osrm-hanoi-motorbike",
+              "Networks": "bridge",
+              "Platform": {
+                "architecture": "amd64",
+                "os": "linux"
+              },
+              "Ports": "127.0.0.1:5002->5000/tcp",
+              "RunningFor": "2 days ago",
+              "Size": "8.19kB (virtual 161MB)",
+              "State": "running",
+              "Status": "Up 3 minutes"
+            },
+            {
+              "Command": "\"osrm-routed --algor…\"",
+              "CreatedAt": "2026-10-16 10:45:51 +0700 +07",
+              "HealthStatus": "none",
+              "ID": "343e1ee656e4",
+              "Image": "855614a38f46",
+              "Labels": "desktop.docker.io/mounts/0/Source=D:\\ThS\\VinAI\\Phase3_VRIC\\gsm-map-sandbox\\data\\regions\\nvmr-hanoi-core\\routing\\car,desktop.docker.io/mounts/0/SourceKind=hostFile,desktop.docker.io/mounts/0/Target=/data,desktop.docker.io/ports.scheme=v2,desktop.docker.io/ports/5000/tcp=127.0.0.1:5001,gsm-map-sandbox=true,nvmr-region=nvmr-hanoi-core",
+              "LocalVolumes": "0",
+              "Mounts": "/run/desktop/m…",
+              "Names": "gsm-map-osrm-hanoi-car",
+              "Networks": "bridge",
+              "Platform": {
+                "architecture": "amd64",
+                "os": "linux"
+              },
+              "Ports": "127.0.0.1:5001->5000/tcp",
+              "RunningFor": "2 days ago",
+              "Size": "8.19kB (virtual 161MB)",
+              "State": "running",
+              "Status": "Up 3 minutes"
+            }
+          ],
+          "dockerStats": [
+            {
+              "BlockIO": "0B / 0B",
+              "CPUPerc": "0.00%",
+              "Container": "5a847965466db7003fb64393f613cdef2767ae157095732b80ee7336a5f573e2",
+              "ID": "5a847965466d",
+              "MemPerc": "3.43%",
+              "MemUsage": "35.14MiB / 1GiB",
+              "Name": "gsm-map-osrm-bac-ninh-car",
+              "NetIO": "442kB / 708kB",
+              "PIDs": "10"
+            },
+            {
+              "BlockIO": "0B / 0B",
+              "CPUPerc": "0.00%",
+              "Container": "af5f68c19008785d15d820556a286d9814114cfb87449d940b126e9fefec3911",
+              "ID": "af5f68c19008",
+              "MemPerc": "4.01%",
+              "MemUsage": "41.09MiB / 1GiB",
+              "Name": "gsm-map-osrm-hanoi-motorbike",
+              "NetIO": "1.9kB / 126B",
+              "PIDs": "10"
+            },
+            {
+              "BlockIO": "0B / 0B",
+              "CPUPerc": "0.00%",
+              "Container": "343e1ee656e4a30c2645352268b7c22bd9b57d76c9914d88aea767764b6dc1df",
+              "ID": "343e1ee656e4",
+              "MemPerc": "3.18%",
+              "MemUsage": "32.57MiB / 1GiB",
+              "Name": "gsm-map-osrm-hanoi-car",
+              "NetIO": "1.81kB / 126B",
+              "PIDs": "10"
+            }
+          ]
+        }
+      ],
+      "osrmToolPeakRamBytes": [],
+      "resourceStops": []
+    },
+    "r1a-gis-motorbike.log": {
+      "sha256": "3a7366d6447b8dfd7109e1d455cbb7da240c13661fc748bf68ac2c9ce1c37f60",
+      "sizeBytes": 807,
+      "preflights": [],
+      "osrmToolPeakRamBytes": [],
+      "resourceStops": [
+        "DỪNG: RESOURCE_STOP: regional GIS requires >=2 GiB available RAM and commit headroom; do not lower guards"
+      ]
+    },
+    "r1a-gis-resume-tests.log": {
+      "sha256": "164c63da279b8d4ba9a9eb55a3aac8223894a356cfb790df6868670561bffa22",
+      "sizeBytes": 593,
+      "preflights": [],
+      "osrmToolPeakRamBytes": [],
+      "resourceStops": []
+    },
+    "r1a-gis-tests-final.log": {
+      "sha256": "d340c67f035fcffd8917782151e3dd2525213a97a97a6108e32fc5f6860f4c56",
+      "sizeBytes": 605,
+      "preflights": [],
+      "osrmToolPeakRamBytes": [],
+      "resourceStops": []
+    },
+    "r1a-gis-tests.log": {
+      "sha256": "220ac122ef2cd1fed692267dd0bd3dbab0389fa4117a2ff74a6ff5004f5b9b7d",
+      "sizeBytes": 2302,
+      "preflights": [],
+      "osrmToolPeakRamBytes": [],
+      "resourceStops": []
+    }
+  },
+  "historicalArtifactPostCapture": {
+    "data/regions/nvmr-hanoi-core/render/manifest.json": {
+      "sha256": "c20afdb03869c9ff44d2f7f97d84cb5ef1747e9089139fd3aff8a5b04df77ad3",
+      "mtimeNs": 1792122425111142700
+    },
+    "data/regions/nvmr-hanoi-core/routing/car/manifest.json": {
+      "sha256": "a24d4957a01ceeb04a0de1ad680fe4c5dd51732a7b381d9368e249a65c1b29b5",
+      "mtimeNs": 1792122332362536700
+    },
+    "data/regions/nvmr-hanoi-core/routing/motorbike/manifest.json": {
+      "sha256": "fb97489d066397b11cb9178238cd56a5f52281bcf5711430bb7cf411496ca455",
+      "mtimeNs": 1792125536560765000
+    },
+    "data/regions/nvmr-hanoi-core/routing/motorbike/validation.json": {
+      "sha256": "cbaac3531dcb8966f7336bf8dc287d538b162c6d7450d9260eb9216c16ef5972",
+      "mtimeNs": 1792203785412399000
+    },
+    "data/routing/manifest.json": {
+      "sha256": "b69ee6bec7b0ed29c70d269813779a4d72ef469e6ac596d88bb7b5c4bab8785a",
+      "mtimeNs": 1791731311701078000
+    },
+    "config/regions/nvmr-hanoi-core-motorbike.json": {
+      "sha256": "7bf195e08a48083ded012d8cd2ef594ca7dbf5e2cf6ced9ff7a340eff94f07e2",
+      "mtimeNs": 1792125418769846700
+    },
+    "config/regions/nvmr-hanoi-core.json": {
+      "sha256": "91c114a869a0eebe23d91df77641b9dd2f52afb7b7d09e941f249f78cfc9f05c",
+      "mtimeNs": 1792122169879068200
+    },
+    "profiles/motorbike.json": {
+      "sha256": "fedfbb84ea7292118e92e9fa45bb3d0721511e830a9afb23c99f9b9e52d17af5",
+      "mtimeNs": 1792125418769846700
+    },
+    "profiles/motorbike.lua": {
+      "sha256": "075ecdbc70a3e75c4338d2c6a41597c132a1837ec2d27f1c2fcdd824a788b209",
+      "mtimeNs": 1792125418769846700
+    }
+  },
+  "preservationScope": "Hanoi configuration/profile/validator files checked against Git; existing runtime artifacts were read only. Post-capture hashes support later audits; no pre-task full ignored-artifact hash inventory was taken by GIS agent.",
+  "gitChecks": 0
+}

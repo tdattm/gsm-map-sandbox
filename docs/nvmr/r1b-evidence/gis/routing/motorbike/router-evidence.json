@@ -1,0 +1,82 @@
+{
+  "identity": {
+    "region_id": "nvmr-connected",
+    "config_sha256": "c815a2d299193161a19fff43b66bcc71a79dd78a912c165f5be6377f6a1a2aa1",
+    "pipeline_version": "connected-nvmr-gis/v1"
+  },
+  "manifest_sha256": "be9140840ce9293ddd747344e6b9d899d02d347ad0b1321143d5bc77eb5677f0",
+  "container": "gsm-map-osrm-connected-motorbike",
+  "image_digest": "ghcr.io/project-osrm/osrm-backend@sha256:855614a38f464b0558a2ad6eaa7cb8c139f39887da9b38b485ce453c6e6e6124",
+  "command": [
+    "osrm-routed",
+    "--algorithm",
+    "mld",
+    "--mmap=1",
+    "/data/connected.osrm",
+    "--max-table-size",
+    "256"
+  ],
+  "memoryMappedReadOnly": true,
+  "probes": [
+    {
+      "point": [
+        105.841,
+        21.028
+      ],
+      "location": [
+        105.840802,
+        21.028008
+      ],
+      "hint": "wugfgD_pH4BTAAAAAAAAAAAAAABHAAAAZRMLQgAAAAAAAAAAianrQVMAAAAAAAAAAAAAAEcAAABvAgAAogBPBqjcQAFoAU8GoNxAAQAAbwBMi_Y-",
+      "zoneId": "hanoi"
+    },
+    {
+      "point": [
+        106.06,
+        21.18
+      ],
+      "location": [
+        106.059968,
+        21.180106
+      ],
+      "hint": "08opgP___38dAAAALQAAAAcAAAAAAAAAigkDQrUIikHswftAAAAAAB0AAAAtAAAABwAAAAAAAABvAgAAwFhSBsouQwHgWFIGYC5DAQEA7w9Mi_Y-",
+      "zoneId": "bac-ninh"
+    },
+    {
+      "point": [
+        106.05,
+        20.65
+      ],
+      "location": [
+        106.049648,
+        20.649982
+      ],
+      "hint": "px4AgKT0AIAdAQAAJAAAAAAAAAAlAAAACDweQ0LOnkEAAAAASmqlQR0BAAAkAAAAAAAAACUAAABvAgAAcDBSBv4XOwHQMVIGEBg7AQAATxZMi_Y-",
+      "zoneId": "hung-yen"
+    },
+    {
+      "point": [
+        105.4,
+        21.32
+      ],
+      "location": [
+        105.399836,
+        21.320013
+      ],
+      "hint": "PuJAgEjiQIAAAAAABgAAAEIAAAA-AQAAAAAAABJTUUAKURJCYRwwQwAAAAAGAAAAQgAAAD4BAABvAgAAHEZIBk1RRQHARkgGQFFFAQMA3xVMi_Y-",
+      "zoneId": "phu-tho"
+    },
+    {
+      "point": [
+        105.84,
+        21.59
+      ],
+      "location": [
+        105.839971,
+        21.590028
+      ],
+      "hint": "u9IxgHLTMYBoAAAAJQAAAAAAAAAAAAAAnmFoQrlboEEAAAAAAAAAAGgAAAAlAAAAAAAAAAAAAABvAgAAY_1OBgxwSQGA_U4G8G9JAQAA7wJMi_Y-",
+      "zoneId": "thai-nguyen"
+    }
+  ]
+}

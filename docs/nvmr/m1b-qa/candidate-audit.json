@@ -1,0 +1,242 @@
+{
+  "datasetFingerprint": "eb6e3288f8346294b07fcff49992d82bffe0e830784b02283772302d93810ae3",
+  "snaps": [
+    {
+      "candidateId": "w1191703477:105.8261838,21.0210523",
+      "location": [
+        105.826184,
+        21.021052
+      ],
+      "distance": 0
+    },
+    {
+      "candidateId": "w194875324:105.8239138,21.0276116",
+      "location": [
+        105.823914,
+        21.027612
+      ],
+      "distance": 0
+    },
+    {
+      "candidateId": "w11008413:105.8269793,21.0302125",
+      "location": [
+        105.826979,
+        21.030213
+      ],
+      "distance": 0
+    },
+    {
+      "candidateId": "w156593653:105.8259982,21.0359947",
+      "location": [
+        105.825998,
+        21.035995
+      ],
+      "distance": 0
+    },
+    {
+      "candidateId": "w1214455905:105.8288513,21.0219498",
+      "location": [
+        105.828851,
+        21.02195
+      ],
+      "distance": 0
+    },
+    {
+      "candidateId": "w1040753543:105.8276909,21.0268084",
+      "location": [
+        105.827691,
+        21.026808
+      ],
+      "distance": 0
+    },
+    {
+      "candidateId": "w11008413:105.8271781,21.0298033",
+      "location": [
+        105.827178,
+        21.029803
+      ],
+      "distance": 0
+    },
+    {
+      "candidateId": "w1258541042:105.8271637,21.0336577",
+      "location": [
+        105.827164,
+        21.033658
+      ],
+      "distance": 0
+    },
+    {
+      "candidateId": "w1180597073:105.832174,21.0193976",
+      "location": [
+        105.832174,
+        21.019398
+      ],
+      "distance": 0
+    },
+    {
+      "candidateId": "w1208678363:105.8335221,21.0262479",
+      "location": [
+        105.833522,
+        21.026248
+      ],
+      "distance": 0
+    },
+    {
+      "candidateId": "w11009654:105.8342161,21.0321754",
+      "location": [
+        105.834216,
+        21.032175
+      ],
+      "distance": 0
+    },
+    {
+      "candidateId": "w11009654:105.8345887,21.0339437",
+      "location": [
+        105.834589,
+        21.033944
+      ],
+      "distance": 0
+    },
+    {
+      "candidateId": "w1053649162:105.8371995,21.0235194",
+      "location": [
+        105.8372,
+        21.023519
+      ],
+      "distance": 0
+    },
+    {
+      "candidateId": "w1191172261:105.8373314,21.0238467",
+      "location": [
+        105.837331,
+        21.023847
+      ],
+      "distance": 0
+    },
+    {
+      "candidateId": "w11009780:105.836284,21.0317132",
+      "location": [
+        105.836284,
+        21.031713
+      ],
+      "distance": 0
+    },
+    {
+      "candidateId": "w11009780:105.8366044,21.0335448",
+      "location": [
+        105.836604,
+        21.033545
+      ],
+      "distance": 0
+    },
+    {
+      "candidateId": "w11551681:105.8424236,21.0195967",
+      "location": [
+        105.842424,
+        21.019597
+      ],
+      "distance": 0
+    },
+    {
+      "candidateId": "w1043320633:105.8395402,21.0242642",
+      "location": [
+        105.83954,
+        21.024264
+      ],
+      "distance": 0
+    },
+    {
+      "candidateId": "w1107657693:105.8403466,21.0314387",
+      "location": [
+        105.840347,
+        21.031439
+      ],
+      "distance": 0
+    },
+    {
+      "candidateId": "w1234572269:105.8409049,21.0341906",
+      "location": [
+        105.840905,
+        21.034191
+      ],
+      "distance": 0
+    },
+    {
+      "candidateId": "w11551681:105.8440936,21.0193667",
+      "location": [
+        105.844094,
+        21.019367
+      ],
+      "distance": 0
+    },
+    {
+      "candidateId": "w1053605852:105.8454958,21.0264123",
+      "location": [
+        105.845496,
+        21.026412
+      ],
+      "distance": 0
+    },
+    {
+      "candidateId": "w1053605853:105.8440027,21.0285228",
+      "location": [
+        105.844003,
+        21.028523
+      ],
+      "distance": 0
+    },
+    {
+      "candidateId": "w10230481:105.8458888,21.0337422",
+      "location": [
+        105.845889,
+        21.033742
+      ],
+      "distance": 0
+    }
+  ],
+  "directedTablePairs": 552,
+  "nullPairs": 0,
+  "provenance": {
+    "extract_sha256": "18fd3892f6d766387f2c3217d5d104e09a9319d3905a9172834b21c0064d6308",
+    "streets_sha256": "7230c17749cf16b4d09751ead369ab52b418b32c866f15599f1ccf0897f61244",
+    "image_digest": "ghcr.io/project-osrm/osrm-backend@sha256:855614a38f464b0558a2ad6eaa7cb8c139f39887da9b38b485ce453c6e6e6124",
+    "profile_sha256": "cb3df0546318665609606b746a1297f3d65ca3c2ff825f8a6f3c57247d86a2d3",
+    "profile": "car",
+    "algorithm": "mld",
+    "router_url": "http://127.0.0.1:5001",
+    "max_snap_meters": 100.0,
+    "display_bbox": [
+      105.802,
+      21.002,
+      105.875,
+      21.055
+    ],
+    "sampling_bbox": [
+      105.823,
+      21.0186,
+      105.84700000000001,
+      21.038400000000003
+    ],
+    "candidate_version": 2,
+    "region_id": "nvmr-hanoi-core",
+    "routing_bbox": [
+      105.762,
+      20.962,
+      105.915,
+      21.095
+    ],
+    "route_validation_bbox": [
+      105.762,
+      20.962,
+      105.915,
+      21.095
+    ],
+    "artifact_identity": {
+      "region_id": "nvmr-hanoi-core",
+      "config_sha256": "91c114a869a0eebe23d91df77641b9dd2f52afb7b7d09e941f249f78cfc9f05c",
+      "pipeline_version": "hanoi-car-pilot/v1"
+    },
+    "source_sha256": "2fbd2ee6b4dc151eecf04fa6823cddf584b47423e190118b10fce8b6115e9d8a",
+    "graph_manifest_sha256": "a24d4957a01ceeb04a0de1ad680fe4c5dd51732a7b381d9368e249a65c1b29b5"
+  }
+}

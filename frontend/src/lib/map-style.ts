@@ -1,3 +1,4 @@
+import connectedConfig from '../../../config/connected-nvmr.json'
 import type { StyleSpecification, ExpressionSpecification } from 'maplibre-gl'
 import latin from '@fontsource-variable/geist/files/geist-latin-wght-normal.woff2?url'
 import vietnamese from '@fontsource-variable/geist/files/geist-vietnamese-wght-normal.woff2?url'
@@ -24,6 +25,29 @@ export const localStyle: StyleSpecification = {
     { id: 'road-names', type: 'symbol', source: 'streets', minzoom: 14.2, filter: ['has', 'name'], layout: { 'symbol-placement': 'line', 'text-field': ['get', 'name'], 'text-font': ['Geist'], 'text-size': ['interpolate', ['linear'], ['zoom'], 14, 10, 18, 13], 'symbol-spacing': 250 }, paint: { 'text-color': '#687267', 'text-halo-color': '#fffef9', 'text-halo-width': 1.5 } },
     { id: 'place-names', type: 'symbol', source: 'places', minzoom: 13.5, layout: { 'text-field': ['get', 'name'], 'text-font': ['Geist'], 'text-size': 12, 'text-max-width': 12 }, paint: { 'text-color': '#486d53', 'text-halo-color': '#ffffff', 'text-halo-width': 2 } },
   ],
+}
+
+export function regionMapStyle(regionId: string): StyleSpecification {
+  return { ...localStyle, sources: Object.fromEntries(['streets', 'water', 'green', 'buildings', 'places'].map(name =>
+    [name, { type: 'geojson' as const, data: `/api/regions/${encodeURIComponent(regionId)}/map/${name}` }])) }
+}
+
+const hanoiBounds=connectedConfig.operatingZones.find(zone=>zone.id==='hanoi')!.bbox
+export const connectedInitialCamera: {center:[number,number];zoom:number} = {
+  center:[(hanoiBounds[0]+hanoiBounds[2])/2,(hanoiBounds[1]+hanoiBounds[3])/2],zoom:11,
+}
+export const connectedBounds: [number,number,number,number] = [104.35,20.06,107.25,22.85]
+/** One viewport-loaded local MVT source; never downloads a region-wide GeoJSON. */
+export function connectedMapStyle(retry = 0): StyleSpecification {
+  const layers=localStyle.layers.filter(layer=>layer.id!=='buildings').map(layer=> {
+    if (!('source' in layer)) return {...layer}
+    const next={...layer,source:'connected-basemap','source-layer':layer.source as string}
+    if (next.id==='place-names') return {...next,minzoom:4,layout:{...next.layout,'text-size':['interpolate',['linear'],['zoom'],4,10,6,11,13,14]}} as typeof layer
+    return next
+  })
+  // Whole-region fit can be below6 in a laptop map pane. A separate real-OSM
+  // overview archive covers0–5; the verified detailed6–13 archive is preserved.
+  return {...localStyle,sources:{'connected-basemap':{type:'vector',tiles:[`/api/v5/connected/map/tiles/{z}/{x}/{y}.pbf${retry?`?retry=${retry}`:''}`],minzoom:0,maxzoom:13,bounds:connectedBounds,attribution:'© <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">OpenStreetMap contributors</a> · <a href="https://www.geofabrik.de" target="_blank" rel="noopener noreferrer">Geofabrik</a> · <a href="https://opendatacommons.org/licenses/odbl/1-0/" target="_blank" rel="noopener noreferrer">ODbL 1.0</a>'}},layers}
 }
 
 export function savedMapStyle(assets: ReplayAssets): StyleSpecification {

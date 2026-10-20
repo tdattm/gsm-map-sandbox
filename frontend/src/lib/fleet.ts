@@ -2,6 +2,7 @@ import type { Coordinate, Route } from './api'
 
 export type VehicleStatus = 'scheduled' | 'moving' | 'completed'
 export interface Vehicle {
+  vehicleType?: 'CAR' | 'MOTORBIKE'
   id: string; label: string; status: VehicleStatus; start: Coordinate; end: Coordinate; route: Route
   distanceMeters: number; durationSeconds: number; departureOffsetSeconds: number
   progress: number; currentPosition: Coordinate; headingDegrees: number | null
@@ -72,7 +73,7 @@ export function scenarioInputs(catalog: CandidateCatalog, seed: string, count: n
   return pairs.slice(0, count).map((pair, i) => ({ ...pair, id: `GSM-${String(i+1).padStart(2, '0')}`, departureOffsetSeconds: i === 0 ? 0 : Math.floor(random()*45) }))
 }
 export function validateFleetRoute(route: Route, catalog: CandidateCatalog) {
-  const bbox = catalog.provenance.display_bbox as number[]
+  const bbox = (catalog.provenance.route_validation_bbox ?? catalog.provenance.display_bbox) as number[]
   if (!Array.isArray(bbox) || bbox.length !== 4 || !route || !Number.isFinite(route.duration) || route.duration <= 0 || !Number.isFinite(route.distance) || route.distance <= 0 || !Array.isArray(route.coordinates) || route.coordinates.length < 2 || route.snap_points?.length !== 2) throw new Error('INVALID_FLEET_ROUTE: thiếu geometry/metrics/snaps.')
   if (route.coordinates.some(p => !Array.isArray(p) || p.length !== 2 || !p.every(Number.isFinite) || p[0] < bbox[0] || p[0] > bbox[2] || p[1] < bbox[1] || p[1] > bbox[3]) || new Set(route.coordinates.map(p => p.join(','))).size < 2) throw new Error('ROUTE_OUTSIDE_DISPLAY: tuyến không đủ coverage hiển thị hoặc geometry sai.')
   if (route.snap_points.some(point => !Number.isFinite(point.distance) || point.distance < 0 || point.distance > Number(catalog.provenance.max_snap_meters ?? 100) || !Array.isArray(point.location) || point.location.length !== 2 || !point.location.every(Number.isFinite))) throw new Error('INVALID_FLEET_SNAP: điểm snap không hợp lệ.')

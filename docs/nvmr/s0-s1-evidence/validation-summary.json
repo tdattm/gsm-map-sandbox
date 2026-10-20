@@ -1,0 +1,476 @@
+{
+  "schemaVersion": "gsm-s0-s1-validation/v1",
+  "createdAt": "2026-10-17T14:10:01.340743+00:00",
+  "branch": "feature/nvmr-m0-architecture",
+  "head": "455abebe177be42e07b88ed4f34d4fecbef29b75",
+  "indexEmpty": true,
+  "sourcePaths": 49,
+  "documentationPaths": 163,
+  "inherited": {
+    "total": 99,
+    "changed": 13,
+    "unchanged": 86,
+    "missing": []
+  },
+  "protectedUnchanged": [
+    "backend/app/simulation.py",
+    "backend/app/simulation_worker.py",
+    "tests/test_m3.py",
+    "docs/nvmr/M2_IMPLEMENTATION.md",
+    "docs/nvmr/M3_IMPLEMENTATION.md"
+  ],
+  "historicalEvidenceUnchangedCount": 64,
+  "checks": {
+    "backend": {
+      "status": "PASS",
+      "passed": 194,
+      "warnings": 1,
+      "seconds": 43.88,
+      "runRealData": true,
+      "timing": "Before quota interruption; backend scientific source unchanged since this suite"
+    },
+    "frontend": {
+      "status": "PASS",
+      "passed": 181,
+      "files": 21,
+      "seconds": 25.12
+    },
+    "typecheck": "PASS",
+    "lint": {
+      "status": "PASS",
+      "warnings": 39,
+      "errors": 0
+    },
+    "build": {
+      "status": "PASS",
+      "limitation": "Chunk >500 kB warning"
+    },
+    "savedVerifier": {
+      "status": "PASS",
+      "assets": 9,
+      "artifactDigest": "b4a87ee371f976f12f4da28791dffc66ebeb24352c1d664bf71851eb89c27433"
+    },
+    "m2Live": "PASS before interruption; evidence m2-live-regression.json",
+    "geometry": "PASS independent sampled small/large and directed CAR/MOTORBIKE audits; tolerance 0.02m",
+    "largeFleetPerformance": "Unstable after resume. Retain all captures; no guarantee of >=30 FPS or cluster/render-settled acceptance in this environment."
+  },
+  "currentServices": {
+    "health": {
+      "status": "ok",
+      "backend_ready": true,
+      "version": "0.1.0"
+    },
+    "runtime": {
+      "schemaVersion": "gsm-dev-runtime/v1",
+      "application": "gsm-map-sandbox",
+      "workspace": "D:\\ThS\\VinAI\\Phase3_VRIC\\gsm-map-sandbox",
+      "store": "D:\\ThS\\VinAI\\Phase3_VRIC\\gsm-map-sandbox\\build\\m3\\jobs",
+      "apiPid": 4928,
+      "worker": "locked",
+      "workerMeaning": "locked = OS worker lease held for this exact store; not a progress/health heartbeat"
+    },
+    "frontend": {
+      "application": "gsm-map-sandbox-vite",
+      "pid": 27928,
+      "workspace": "D:\\ThS\\VinAI\\Phase3_VRIC\\gsm-map-sandbox\\",
+      "proxy": "http://127.0.0.1:8015"
+    },
+    "hcm": {
+      "state": "artifacts_pending",
+      "ready": false,
+      "pbf": {
+        "state": "present_verified",
+        "path": "D:\\ThS\\VinAI\\Phase3_VRIC\\gsm-map-sandbox\\data\\raw\\vietnam-latest.osm.pbf",
+        "size_bytes": 330248138,
+        "format_verified": true,
+        "verification": {
+          "path": "D:\\ThS\\VinAI\\Phase3_VRIC\\gsm-map-sandbox\\data\\raw\\vietnam-latest.osm.pbf",
+          "size_bytes": 330248138,
+          "mtime_ns": 1791725198527966700,
+          "sha256": "2fbd2ee6b4dc151eecf04fa6823cddf584b47423e190118b10fce8b6115e9d8a",
+          "format_verified": true,
+          "osmium_image": "iboates/osmium@sha256:a67987f7d822d951ae1979de656ab7bd8051605f79d2751ea4800cc6057124be",
+          "fileinfo": {
+            "file": {
+              "name": "/data/raw/vietnam-latest.osm.pbf",
+              "format": "PBF",
+              "compression": "none",
+              "size": 330248138
+            },
+            "header": {
+              "boxes": [
+                [
+                  102.095945,
+                  7.382239,
+                  114.642323,
+                  23.402135
+                ]
+              ],
+              "with_history": false,
+              "option": {
+                "generator": "osmium/1.16.0",
+                "osmosis_replication_base_url": "https://download.geofabrik.de/asia/vietnam-updates",
+                "osmosis_replication_sequence_number": "4934",
+                "osmosis_replication_timestamp": "2026-10-09T20:21:04Z",
+                "pbf_dense_nodes": "true",
+                "pbf_optional_feature_0": "Sort.Type_then_ID",
+                "sorting": "Type_then_ID",
+                "timestamp": "2026-10-09T20:21:04Z"
+              }
+            },
+            "data": {
+              "bbox": [
+                100.6067931,
+                6.2183523,
+                114.6407887,
+                23.5024689
+              ],
+              "timestamp": {
+                "first": "2007-10-16T12:57:06Z",
+                "last": "2026-10-09T19:10:51Z"
+              },
+              "objects_ordered": true,
+              "multiple_versions": false,
+              "crc32": "4758abea",
+              "count": {
+                "changesets": 0,
+                "nodes": 46394305,
+                "ways": 4730057,
+                "relations": 26680
+              },
+              "minid": {
+                "changesets": 0,
+                "nodes": 74099711,
+                "ways": 9566396,
+                "relations": 13422
+              },
+              "maxid": {
+                "changesets": 0,
+                "nodes": 14268541229,
+                "ways": 1566865559,
+                "relations": 21599296
+              },
+              "buffers": {
+                "count": 61388,
+                "size": 3907395912,
+                "capacity": 4026597376
+              },
+              "metadata": {
+                "all_objects": {
+                  "version": true,
+                  "timestamp": true,
+                  "changeset": false,
+                  "user": false,
+                  "uid": false
+                },
+                "some_objects": {
+                  "version": true,
+                  "timestamp": true,
+                  "changeset": false,
+                  "user": false,
+                  "uid": false
+                }
+              }
+            }
+          }
+        },
+        "osmium_available": false,
+        "osmium_transport": "docker"
+      },
+      "artifacts": {
+        "map_ready": true,
+        "map_manifest": {
+          "source": "Geofabrik Vietnam / OpenStreetMap",
+          "attribution": "© OpenStreetMap contributors",
+          "extract_sha256": "3a939d15ac7b775aba3f5a0324064ceb3d1b19ab0d176f2b10b94448c36afda0",
+          "display_bbox": [
+            106.675,
+            10.75,
+            106.725,
+            10.795
+          ],
+          "render_bbox": [
+            106.67,
+            10.745,
+            106.72999999999999,
+            10.8
+          ],
+          "osmium_image": "iboates/osmium@sha256:a67987f7d822d951ae1979de656ab7bd8051605f79d2751ea4800cc6057124be",
+          "exported_features": 73701,
+          "duplicate_features_removed": 0,
+          "outside_features_removed": 27467,
+          "layers": {
+            "streets.geojson": {
+              "features": 15281,
+              "size_bytes": 4124871,
+              "sha256": "1b66f9b6876b7f09646f8a5bb893938b993a5556723a21e4c6d2afd5b2f5d2b6"
+            },
+            "water.geojson": {
+              "features": 124,
+              "size_bytes": 229554,
+              "sha256": "f03d16e445b9ccc777b47597ccdb07f43f8ba2bd79708821909ac1452fdc1dcd"
+            },
+            "green.geojson": {
+              "features": 471,
+              "size_bytes": 256391,
+              "sha256": "7374ae3cb563e0c2e98ed95dd01c59b5f01890ce232890a6812efa86598172b0"
+            },
+            "buildings.geojson": {
+              "features": 12785,
+              "size_bytes": 3642002,
+              "sha256": "52b49177126d332bda571243d5e998aee7a6326f4720244d5fc7d7e54a53726e"
+            },
+            "places.geojson": {
+              "features": 93,
+              "size_bytes": 16117,
+              "sha256": "5d0b0bc71eff58ab46854ca3693a7e72f05c48745675714fedfc2019c77d0343"
+            }
+          }
+        },
+        "graph_ready": false,
+        "routing_manifest": {
+          "algorithm": "mld",
+          "profile": "car",
+          "profile_path": "/opt/car.lua",
+          "image": "ghcr.io/project-osrm/osrm-backend:v5.27.1",
+          "image_digest": "ghcr.io/project-osrm/osrm-backend@sha256:855614a38f464b0558a2ad6eaa7cb8c139f39887da9b38b485ce453c6e6e6124",
+          "osrm_version": "v5.27.1",
+          "routing_bbox": [
+            106.66,
+            10.735,
+            106.74,
+            10.81
+          ],
+          "attribution": "© OpenStreetMap contributors",
+          "input_path": "D:\\ThS\\VinAI\\Phase3_VRIC\\gsm-map-sandbox\\data\\routing\\hcm-center.osm.pbf",
+          "extract_path": "D:\\ThS\\VinAI\\Phase3_VRIC\\gsm-map-sandbox\\data\\extracted\\hcm-center.osm.pbf",
+          "extract_sha256": "3a939d15ac7b775aba3f5a0324064ceb3d1b19ab0d176f2b10b94448c36afda0",
+          "input_sha256": "3a939d15ac7b775aba3f5a0324064ceb3d1b19ab0d176f2b10b94448c36afda0",
+          "created_utc": "2026-10-11T14:52:21.992965+00:00",
+          "artifact_sizes": {
+            "hcm-center.osrm.cells": 61952,
+            "hcm-center.osrm.cell_metrics": 4721664,
+            "hcm-center.osrm.cnbg": 542208,
+            "hcm-center.osrm.cnbg_to_ebg": 543232,
+            "hcm-center.osrm.datasource_names": 69632,
+            "hcm-center.osrm.ebg": 2718208,
+            "hcm-center.osrm.ebg_nodes": 798208,
+            "hcm-center.osrm.edges": 803840,
+            "hcm-center.osrm.enw": 740864,
+            "hcm-center.osrm.fileIndex": 1426160,
+            "hcm-center.osrm.geometry": 1951232,
+            "hcm-center.osrm.icd": 284672,
+            "hcm-center.osrm.maneuver_overrides": 5120,
+            "hcm-center.osrm.mldgr": 2880512,
+            "hcm-center.osrm.names": 220672,
+            "hcm-center.osrm.nbg_nodes": 805888,
+            "hcm-center.osrm.partition": 496640,
+            "hcm-center.osrm.properties": 6144,
+            "hcm-center.osrm.ramIndex": 11776,
+            "hcm-center.osrm.restrictions": 4096,
+            "hcm-center.osrm.timestamp": 3584,
+            "hcm-center.osrm.tld": 4096,
+            "hcm-center.osrm.tls": 6144,
+            "hcm-center.osrm.turn_duration_penalties": 229888,
+            "hcm-center.osrm.turn_penalties_index": 1358848,
+            "hcm-center.osrm.turn_weight_penalties": 229888
+          },
+          "profile_sha256": "cb3df0546318665609606b746a1297f3d65ca3c2ff825f8a6f3c57247d86a2d3"
+        },
+        "extracted_ready": true,
+        "graph_built": true
+      },
+      "osrm": {
+        "state": "unavailable",
+        "url": "http://127.0.0.1:5000"
+      },
+      "region": {
+        "name": "Trung tâm TP.HCM · Quận 1 cũ",
+        "display_bbox": [
+          106.675,
+          10.75,
+          106.725,
+          10.795
+        ],
+        "routing_buffer_degrees": 0.015,
+        "extract_strategy": "smart",
+        "complete_relation_types": "multipolygon,restriction",
+        "source": "Geofabrik Vietnam / OpenStreetMap",
+        "source_url": "https://download.geofabrik.de/asia/vietnam.html",
+        "attribution": "© OpenStreetMap contributors",
+        "boundary_note": "Bounding box kỹ thuật thử nghiệm, không phải ranh giới hành chính.",
+        "routing_bbox": [
+          106.66,
+          10.735,
+          106.74,
+          10.81
+        ]
+      }
+    }
+  },
+  "sourceSha256": {
+    "backend/app/main.py": "e126da7c0777e004aa53338de3c86dd6b3fe5d31b882f81f3075d24ed68e9bf3",
+    "backend/app/simulation.py": "3d3b7cfe8a59614f7a91725039d766a123787c320dabb33a6015d7f92cc46427",
+    "backend/app/simulation_details.py": "00c274620f9bc4e2a0a3b88025705db80e9910a6567c80ca0337d291fd6198aa",
+    "backend/app/simulation_jobs.py": "e3c1eca27df7eae015787e095dbc6b37a119c898abab4e087836dec1af67eb8d",
+    "backend/app/simulation_worker.py": "0cef76632443dce2d0f53f45422a1337ffe162499bfd5d9868ff1e0e321e5cdd",
+    "frontend/public/icons/gsm/car.svg": "a35adea3204f4a4c8560c1ab1a013be59dbc797b083351b529b1569c5e9416b7",
+    "frontend/public/icons/gsm/dropoff.svg": "cc4ddde3ef599cbc7ede37aceb6d6198d848a6552524a0e53099d1cce725eef2",
+    "frontend/public/icons/gsm/motorbike.svg": "67b2db81d0c7c25c144990e0037b70b6ed7a10ec0d2b6f575b940f9108fa4846",
+    "frontend/public/icons/gsm/passenger.svg": "bd4c67ce5782131602866624c3a53f4c89a19129647096a7b4a1a0c6a3abeea6",
+    "frontend/public/icons/gsm/pickup.svg": "77d5da618a780a227420a3089061c58cc377fe911dfdb4b4f7a8b84926a3d078",
+    "frontend/scripts/verify-simulation.mjs": "1181e0acb5a7e45491d62614a78033d0adab0ea76d296cb255a747b56e0dcff3",
+    "frontend/src/App.css": "21bd2fff8f67f8aefea03e8d4cd171215fb2eeeae60b07d0371a32033b4fde36",
+    "frontend/src/App.tsx": "1c9a73f564b07d105057a9b8613c4e21e6d6a845cb907768c2db5e622efd3e8c",
+    "frontend/src/components/booking-map.tsx": "654a44bfc08f84dfaab8ce7e4ad2549a1267c4679cedd1bbadefe86d51838b0b",
+    "frontend/src/components/fleet-map.tsx": "0dffe8eee181711ede2a40e75e351e8fea055a5b0c196cdb3e90742ca65190a2",
+    "frontend/src/components/mobility-icon.tsx": "cbe409f21f3283aaa9b6b91ddcbf73a4fff06157eeccd53584d2113209515531",
+    "frontend/src/components/primary-navigation.tsx": "a5f4b0692b49f368974f562fabac01bd53ea49464d984ebf50da2ac12f02ead4",
+    "frontend/src/components/sandbox-map.tsx": "54ba813a57d73d3ef8572cab0e628084d190c7f62dd7e7aee1afb5d5ac6dd21f",
+    "frontend/src/components/simulation-map-health.tsx": "ff7207c3cba3fa52365d34dfe056c39372695e265e7d022283337d4702d8cf6f",
+    "frontend/src/components/simulation-map.tsx": "58c553f92d356bc5061687c67ee9fd1db1369d05ef9584206094e138b9828756",
+    "frontend/src/components/simulation-runtime.tsx": "23578637f1b6ece61e4cd313efd3f32eb09fad88dfe2731eb23dd9f05c682268",
+    "frontend/src/components/simulation-workspace.tsx": "dc8bf4cb6065e34fe9a4c2825d7ef2ee9fd2af33cc2466b1d28c72667d8003a7",
+    "frontend/src/lib/api.ts": "e664cc19b163082b02aad9a63b4666c6f7db66a8972edf4e38a28a1e79b0afc3",
+    "frontend/src/lib/navigation.ts": "cae38d950e68521238a1503fcda2ac994a38d59dbbdcf2b28679726c3cdd89da",
+    "frontend/src/lib/simulation-map-icons.ts": "1a2c7ce15a751b104040b7d125168821c5214dd81e655d9b41aaabf1b2119352",
+    "frontend/src/lib/simulation.ts": "3d452244d7c1aa427ce992e47a5165bda5f5bf70bf277e1241509b5e5b924278",
+    "frontend/src/lib/use-simulation.ts": "99014751a9b5f80c7de1390c9c62bdf2ce998087af836faca5e18dec69e1046a",
+    "frontend/src/test-setup.ts": "dba8c6391ceb020e06231f54551c288862e5b0b81dab96a475842b6f6a397217",
+    "frontend/tests/navigation.test.ts": "72623769bc0fce6a6de62be71856de8277d73d94d207028371269e67a74aa65a",
+    "frontend/tests/s0-s1-contract.test.ts": "fc6714d58be9ce21d4373b3e6e0f1342f4712923e4fe06eb123e09f38881f217",
+    "frontend/tests/s0-s1-map.test.tsx": "b6a1b002268f23d4b239a87686d57a036495d016caa30be529882c8ea650a062",
+    "frontend/tests/simulation-map-health.test.tsx": "85c9b7a0e2b98e339c98f8394ba3cba6d109fbe84ccba5a8b25526a112dc14e5",
+    "frontend/tests/simulation.test.ts": "276fb1da84df458145d4383c02680092530bd23e0b576446182ff6070930e236",
+    "frontend/tests/use-simulation.test.ts": "f742ebcd175a22a830e34a3f3b95d72d220bba829c0efbe43956a0c7ecd8374b",
+    "frontend/tests/workspace.test.tsx": "370183c199f2a14971fb1df67c75da363c84b58df0736f87e090dfcf5dc3d052",
+    "frontend/vite.config.ts": "2ea3c456e606d3de5353d4cdd738747ed7fcdb07723a4363b8650255a6b8c596",
+    "scripts/Start-GsmDev.ps1": "56a32c866b52b26cdbad5711abb568847aa45242bd51ddc6557f9d24b6e0a3dd",
+    "scripts/audit_route_fidelity.py": "d96afa8e7fe8e7d9345fe01538b040da2843a97327257756ef1f7d65888a26ac",
+    "scripts/benchmark_simulation.py": "6e9ac2929be984eb387409eebb7c97be29f443a6cd1bff9d750ede20df6e8d88",
+    "scripts/benchmark_simulation_live.py": "871435418689786098ed3f0fa516ced77452d6b2388f9b3536841a2d8c18543b",
+    "scripts/m3_fixture_travel.py": "dae9fd89d95101b69bc963e488ec8aa99f9c522293c636505e994a86a1ff260b",
+    "scripts/m3_resources.py": "79880ee06971ae0db4595cab3ee87ae9bf5d4d1fefff3b54139c073e9b7d9e8b",
+    "scripts/serve_ux_fault_proxy.py": "4ae4e1c18c6d55a7938b4a3d9343a7114f8f1756a0630528346b9fbccb22d81c",
+    "scripts/validate_s0_s1_live.py": "65b4e1986091ab8e57769d13b9c5b3b7f72f1ece70c36d7b310571d4c348629b",
+    "scripts/validate_simulation_api.py": "a4d70d5c226501d0280a80b1f3f889e92d8233846bc4d2d43933645cb9899bf8",
+    "tests/fixtures/m3/legacy-golden.json": "8368477f4962ed981b84238dc74bb7dd65ecb02fac5cdb3e4c49977529bf863f",
+    "tests/fixtures/m3/travel-matrix.json": "b92b087ae40c1d5dfad3ffad1b2126377e2f7304ee0f1850d141799628fcc6e1",
+    "tests/test_m3.py": "51cc914b9e51926a3bfe2973dada42be161c85022f82eadf17533eb7caaa717e",
+    "tests/test_s0_s1.py": "2134dc37606d6559694909f6fb709ca91b5d61bdba8b2a485109a3761d14f21f"
+  },
+  "logSha256": {
+    "build/s0-s1/backend-tests.log": "cd1177e92e9274a5101477f8585233cddfc6e3073880d072ee69b3944988a482",
+    "build/s0-s1/focused-final.log": "349ef1f27480aebdc5772aa2f9bb7f9f95323bcf8d075c7c645fb9b0ea911ebc",
+    "build/s0-s1/frontend-final.log": "9dc132c90f9abf80e25ede22ef739b7609acba4aefc106484eb04f4c8ea08f6c",
+    "build/s0-s1/typecheck-final.log": "ce47ca57861e4fa3aa21c4ee091eccdf3e660ef66243377ebaaed3616baa0b88",
+    "build/s0-s1/lint-final.log": "11f3474a3e5eb8b094271bbaf961b880f1ba6aa5f187e7693916fbd6129a1e11",
+    "build/s0-s1/build-final.log": "6043f3e8e05bfcfd6a1c39b51319efecdd05daeda4f1633c6e351b0bbd7275bf",
+    "build/s0-s1/replay-final.log": "78262c5d78a7ad66c89c639acf5d520490b5037b324d90889292fef2110051f8",
+    "build/s0-s1/m2-live-regression.log": "5992d0f1082eda560c8ba5e60c978bffb40ac3505b0cd1d784c6c5a7ada7aa81"
+  },
+  "evidenceSha256": {
+    "docs/nvmr/s0-s1-evidence/actual-api-offline.jpg": "05ac716edd1a2954b05b2d17d6476d8ebcd04312ac7845292f14fde1fa389895",
+    "docs/nvmr/s0-s1-evidence/actual-api-offline.txt": "90a87d4e0a161ac079543aefac2c3e566a8f0a627cfb5fdf3814793d2103eca0",
+    "docs/nvmr/s0-s1-evidence/actual-api-recovered.jpg": "9e55ca0409c444efbe14ec51b24f3b118141bce0d5e406e644592949a4a7f2e3",
+    "docs/nvmr/s0-s1-evidence/actual-api-recovered.txt": "8f630defb932b32bbc7e80cb8229b82695ad519abce1a0bc4918af78905c1691",
+    "docs/nvmr/s0-s1-evidence/audit-before.json": "b7f86a7a8dca39e44fe75b5ac7644c416ae5171b32675484683326185f9f2305",
+    "docs/nvmr/s0-s1-evidence/audit-live-large.json": "f3d3a23714ddcb3719e4f3404257f985b26314e066dca4fa509cb82d7af2553c",
+    "docs/nvmr/s0-s1-evidence/audit-live-small.json": "dcc2fbaebfd55cb0b36d217b066d659d80ffdbce395da47eafe7ef06b057b7ba",
+    "docs/nvmr/s0-s1-evidence/browser-environment.json": "162b925234e0a4352d13cad3506584b22a0f2159ec378117b2e14f5c732d8d8b",
+    "docs/nvmr/s0-s1-evidence/browser-resource-window.json": "7bc928d4680d59cc51d7440a63318ebb92ef10937851d743e36cb363cdf1e21b",
+    "docs/nvmr/s0-s1-evidence/change-classification.json": "d2edb9008c2a68c04be5522b6d2c20b4d44507ba140170edaabc7e0f53ac9667",
+    "docs/nvmr/s0-s1-evidence/cluster-after.jpg": "20a42a4ab27d54bb6a1d721de7a89d288923b87e85d9a01dbbc2bd4cb167bbec",
+    "docs/nvmr/s0-s1-evidence/cluster-before.jpg": "20a42a4ab27d54bb6a1d721de7a89d288923b87e85d9a01dbbc2bd4cb167bbec",
+    "docs/nvmr/s0-s1-evidence/contract-large-resumed.json": "f2e0e39cdae91a7e72bfbcb3811e55dfb2fe68ab796465f50be2c926bc9b5a08",
+    "docs/nvmr/s0-s1-evidence/contract-large.json": "f2e0e39cdae91a7e72bfbcb3811e55dfb2fe68ab796465f50be2c926bc9b5a08",
+    "docs/nvmr/s0-s1-evidence/contract-small-resumed.json": "ab30a54ca3951de0dfa0848457c1d7d343bbcd25b24c453bef305e8c9c476e07",
+    "docs/nvmr/s0-s1-evidence/contract-small.json": "ab30a54ca3951de0dfa0848457c1d7d343bbcd25b24c453bef305e8c9c476e07",
+    "docs/nvmr/s0-s1-evidence/development-console.json": "3f4e4a5604dc95694eaafcfe92fedfaae68b5b222c3be84e4be9331214950c78",
+    "docs/nvmr/s0-s1-evidence/directed-live-summary.json": "c7058a08790de416dd3e016d46cbbce6747e0ce28528c510a6d51a7611799cdd",
+    "docs/nvmr/s0-s1-evidence/fixture-100-handoff-diagnostic.json": "1b60d0444f409ebfe51442d558cea6a88a184b5b4d546e1a0422656565c67807",
+    "docs/nvmr/s0-s1-evidence/fixture-100-symbols-final.json": "d126169decadd44bb56f67452832bb8ec771e54e6f8232ff6a47674ceb76b425",
+    "docs/nvmr/s0-s1-evidence/fixture-100-symbols.json": "363bc7c3f955db7c40558019c9104531c2f202b1a8259ba35b04cd1be1d4a8a4",
+    "docs/nvmr/s0-s1-evidence/fixture-5000-ascii-badge-smoke.json": "b27d4c6cb54cc67f42f8eb31186d5300a9b41a81d4a7cecafcb57b510550a449",
+    "docs/nvmr/s0-s1-evidence/fixture-5000-ascii-badges.jpg": "880e9dfab408661ae1fdc0575d234d6bfa81ebd30cdcad14109225c15818025e",
+    "docs/nvmr/s0-s1-evidence/fixture-5000-settled-zoom13.json": "7b52e05430d26fe2b628fa7597e7540e4818d8c090b598d78a00177f1a270be1",
+    "docs/nvmr/s0-s1-evidence/fixture-5000-symbols-final.jpg": "ce1257995cb8de044f5285e5946dd24cc7a575a3e2066dce63261125c94f719e",
+    "docs/nvmr/s0-s1-evidence/fixture-5000-symbols-final.json": "54a0f0eeb1b32210139fa7d591ae5fb9a220675591a6c2b40a1b602db105f781",
+    "docs/nvmr/s0-s1-evidence/fixture-5000-symbols-pre-settle-fix.json": "bb107a9c616e81142a9640c53a0c0075ef781c772f7a0ed876507a6b318eef5d",
+    "docs/nvmr/s0-s1-evidence/fixture-5000-symbols.jpg": "576fe77d0059370f0411665a3ba6c3aeafce570f74d7a3458959500f832a985e",
+    "docs/nvmr/s0-s1-evidence/fixture-warning-final.jpg": "3784685f117b2923e91205da25d16ff03d53c64e7395ec6bdbc890313639d718",
+    "docs/nvmr/s0-s1-evidence/fixture-warning-final.txt": "547815353c0f4681f3cfd6f6414242756f2cbb49f4524bc2f18f00183e4ed875",
+    "docs/nvmr/s0-s1-evidence/git-allowlists.json": "2dac31a9ac353d89e3d47925f8b5b19bedbc5158a6a040c53f7acf0bde84aa4e",
+    "docs/nvmr/s0-s1-evidence/handoff-car-pickup-desktop.jpg": "dc40b3e2356e4a7bb3985fdc5267a15ba7d2582a87d0f07dcc94751b5180473a",
+    "docs/nvmr/s0-s1-evidence/handoff-car-pickup-desktop.txt": "a0eec6d8e43e3e4419ed906a2a09e036eda6d07c8f653325ca4e963fec39b5a4",
+    "docs/nvmr/s0-s1-evidence/handoff-console-final.json": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "docs/nvmr/s0-s1-evidence/handoff-console.json": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "docs/nvmr/s0-s1-evidence/handoff-mobile-car.jpg": "e905c80ed84fb0f7b648caee9942f17b3336ac982da3fffd387250e90fcf485f",
+    "docs/nvmr/s0-s1-evidence/handoff-mobile-layout.json": "935a175609ed95dd960b11afdece8b2fb7d2b0fad306bb589167f2afe3222417",
+    "docs/nvmr/s0-s1-evidence/handoff-mobile-map.jpg": "4251656db65c98042ea71297792f8a2823a8275894dd17384416a28ac293e8cc",
+    "docs/nvmr/s0-s1-evidence/handoff-motorbike-pickup-desktop.jpg": "0f055b829cb0c01cc598397d29b872499834d0ea34c18262dcce05979f32d206",
+    "docs/nvmr/s0-s1-evidence/handoff-motorbike-pickup-desktop.txt": "ca881df01eeaa10cbb30c5058dad2ec7e522372f8c616d8b3965759af453d073",
+    "docs/nvmr/s0-s1-evidence/hcm-booking.jpg": "b316ed0f8ef2c00aadc3317b66c6986810bbcafcd7108522aaca2bc91b378023",
+    "docs/nvmr/s0-s1-evidence/hcm-booking.txt": "c8f6f4a3846fc2378e42b6b56a2fecee55cd920b24455bf1e3782cf1aeae4b53",
+    "docs/nvmr/s0-s1-evidence/hcm-fleet.jpg": "ca56c8f2c8b204f5a19aa5867d7436165ca8f10429c0dbb577d1804c280c7a2a",
+    "docs/nvmr/s0-s1-evidence/hcm-fleet.txt": "317cfa44ccb84165d9d628adc1c84238c1eb3e5a00ced618db8aa45d236bdb59",
+    "docs/nvmr/s0-s1-evidence/hcm-passenger-semantics.json": "e52511c28d4218149d9de430e72899442c0f9bcc24030f143c5dfa063c7c9ae5",
+    "docs/nvmr/s0-s1-evidence/hcm-single.jpg": "4b1330439f2d114a5dbafab643a59caf6f0cd81cf851bcb1794508ab818ddd14",
+    "docs/nvmr/s0-s1-evidence/hcm-single.txt": "4b293f750622ae709cee616072d2cf0a401cfb046a6a394cfb9a8befb007815e",
+    "docs/nvmr/s0-s1-evidence/hcm-voucher-live.jpg": "bad3590d8e4a4a4c5a428d63d9fbf0ddc708d94ee05230e10301fdf9690ebc1a",
+    "docs/nvmr/s0-s1-evidence/hcm-voucher-live.txt": "c6be1b01bae6f453a771408e920542aa759716ee4efde5657aec7b7fe26bd0a3",
+    "docs/nvmr/s0-s1-evidence/injected-mode-not-ready.jpg": "a218b0a771932f16f616bd9013cd6efbb235e036dbc5aeedde4bf597d142f8aa",
+    "docs/nvmr/s0-s1-evidence/injected-mode-not-ready.txt": "5a573da2a2cd09d31abe1adeef3ed1284a36c8495cfa60c55396cf576faea062",
+    "docs/nvmr/s0-s1-evidence/isolated-worker-cleanup.json": "6a1fd461f942f811236fc6120f9e3c896fb104483e8c25e43efa26416e641a9c",
+    "docs/nvmr/s0-s1-evidence/isolated-worker-offline.json": "be38914d0ba10c561bf2268836f8036ae7b9caf72848f6eef0e7dc88eea410bd",
+    "docs/nvmr/s0-s1-evidence/isolated-worker-owned.json": "428eae0818630f5e7ad33d637bd87b5c8d58700871aaed1b8216f471c2be62e8",
+    "docs/nvmr/s0-s1-evidence/large-detail-latency.txt": "30a9b9418a0ae400874ec734a809a0d70741f0bee2405a185637bc8ef7232294",
+    "docs/nvmr/s0-s1-evidence/launcher-reuse.txt": "fc25d402283e8be3f827a6c973f69f5618f5f9dadfc04dfc0044ff77c9550a0a",
+    "docs/nvmr/s0-s1-evidence/launcher-status-final.txt": "5aff57880fafd277347bcb3e58111c931996dddcb49022b48e5a443258695557",
+    "docs/nvmr/s0-s1-evidence/launcher-status-resumed.txt": "ecc1b44656bfcc76ef650727b4a0afb0066030907014bdc62e023a31e41e19b2",
+    "docs/nvmr/s0-s1-evidence/launcher-status.txt": "ea17a099a5c1d61154f4a2b1754e70359e49dee868efc096635230894417305e",
+    "docs/nvmr/s0-s1-evidence/live-5000-handoff-first-zoom16.json": "6b92c25b0120e12cc7807ef322366a4f09f707e989ae00b4c677f5dfedc88f01",
+    "docs/nvmr/s0-s1-evidence/live-5000-handoff-instrumented-zoom16.json": "cda212606d10e478b20bc81cd6535f1c919765a2c154188c4e5249a1f7853ade",
+    "docs/nvmr/s0-s1-evidence/live-5000-handoff-repeat-zoom16.json": "77e83a75eba7ac4a625289c9bc1171610bda2dc3384f1b4e4f734426c072c2ec",
+    "docs/nvmr/s0-s1-evidence/live-5000-motorbike-pickup.jpg": "07972575eb6fc62850022c360a9b3314fb98118dc60268e849faba2f5d04eab9",
+    "docs/nvmr/s0-s1-evidence/live-5000-motorbike-pickup.txt": "e6f3fd144fe0ca032767d2835da8e6ed8af5dd2bfbb780d853826b864bdbe120",
+    "docs/nvmr/s0-s1-evidence/live-5000-symbols-zoom11.json": "abb6b77ea1e74d2582424512d34b3beb929a164105976cf2d055423a8e518f0d",
+    "docs/nvmr/s0-s1-evidence/live-5000-symbols-zoom16.json": "1ff4cc3bf6da1be46f741bb7badffb17cba2c8bb652308469484cf27f5849fd9",
+    "docs/nvmr/s0-s1-evidence/m2-live-regression.json": "d0077e0f0c651b654a47c7bf41732ac266055bb0f366371b86ce851e6651c38f",
+    "docs/nvmr/s0-s1-evidence/mobile-inspector.jpg": "54d25d80831df0c946ab7083a776244ca7b944f78f267421d6d05e885dc4f623",
+    "docs/nvmr/s0-s1-evidence/mobile-layout.json": "0bca3aac732a8681a2db072900533899f0655be3ce5e01fcba6c8293546458ca",
+    "docs/nvmr/s0-s1-evidence/mobile-map-final.jpg": "c4a16f17027f8c22458911bddd9675ef8901c793cb696765a98736e5a493209a",
+    "docs/nvmr/s0-s1-evidence/mobile-map.jpg": "36214a9fe236aacaef1c375e0b4e10974609059b98386bdf28d60e1e9463849f",
+    "docs/nvmr/s0-s1-evidence/native-car-click.txt": "7bec04727635bb685c77afaebba7e4e3a847ad1c433ecbc011729737d76ff7cf",
+    "docs/nvmr/s0-s1-evidence/native-motorbike-click.txt": "2ed2baf63764b5be58ca01f6e4cadda0403d5f371fca5a71b1fdbb65382e177f",
+    "docs/nvmr/s0-s1-evidence/overlap-after-fix.jpg": "1ad72f1c64e455a74a2308017c432877d6da842f50628bd5d82fdc5381e7ff5c",
+    "docs/nvmr/s0-s1-evidence/overlap-after-fix.txt": "9c75a2ba3f0fd71361132e72a3ae1edd8a65f915aa21344ec28bbde662853b0c",
+    "docs/nvmr/s0-s1-evidence/saved-api-offline-proof.json": "06352332018ac8c4c264f01c6192f0dbebc82e9fb4735bbfc0ec6a0a03513ecf",
+    "docs/nvmr/s0-s1-evidence/saved-hcm-api-offline.jpg": "13a8164ae1a8d99f166e2c7d135812512823bbcfdc657cc89b3f45422f7db069",
+    "docs/nvmr/s0-s1-evidence/saved-hcm-api-offline.txt": "bfe233a3f2622c70afedff01e1224d95a7f4965b1efd581828263d6ee9e32a95",
+    "docs/nvmr/s0-s1-evidence/saved-task-api-stop.json": "5cb45828b58579974ec905c1093ef88698e4f5a9f44754037ac41f0906fc4e22",
+    "docs/nvmr/s0-s1-evidence/small-car-on-trip.jpg": "996c5b8027d050e5c2549f4b09c2f478d6d61f11bc2b858e97b4f0f49e81c572",
+    "docs/nvmr/s0-s1-evidence/small-car-on-trip.txt": "656aa6ef247aefd1f221b61a8bc9cef01b8a1e5f14f1237b151c6c2fc9f198f6",
+    "docs/nvmr/s0-s1-evidence/small-car-pickup-final.jpg": "fa330de887ee2ee440557056fa7695a826357ab79b83efe1bef4d7bcd14b12ec",
+    "docs/nvmr/s0-s1-evidence/small-car-pickup-final.txt": "4e74441a25e4fbc0e2e786d236fd0256c41b6ce2ec8f58c22169364fc13bca17",
+    "docs/nvmr/s0-s1-evidence/small-car-pickup.jpg": "f2aae8f707c8d33cb8882de11743e7dbeb1785298016483692749dd8b8e27abd",
+    "docs/nvmr/s0-s1-evidence/small-car-pickup.txt": "fd14d28b7bb918dfa51916c32694838091432395d61ed28502c50503611ca901",
+    "docs/nvmr/s0-s1-evidence/small-motorbike-on-trip.jpg": "97c1bf325f228bd88650855b591e96156a3aac2b514b281b446732674fd54e61",
+    "docs/nvmr/s0-s1-evidence/small-motorbike-on-trip.txt": "e7970de11c524af52a5d82bcd3784b8b99495c4b02a5487e87bba322a02c2fab",
+    "docs/nvmr/s0-s1-evidence/small-motorbike-pickup.jpg": "2e02478fff5b0958c520af066d2d4759cb3cc536c2cc4398fc5d244257069ccc",
+    "docs/nvmr/s0-s1-evidence/small-motorbike-pickup.txt": "da9208e99b57239fd87da7948a23c4a8efe0b4d359bc521630ab33c8910bfa3a",
+    "docs/nvmr/s0-s1-evidence/worker-offline-queued.jpg": "cdf2d71556e262beb322e4b5838ef9c9780a8ca836607b688fe8885e2986fb6a",
+    "docs/nvmr/s0-s1-evidence/worker-offline-queued.txt": "d1b8eab46ba08be318007bccd54e5fa48e9408d06d2b621f5e4247366241f664"
+  },
+  "reportSha256": "9bd9c1e560ba26a1b5d4d1c49a8adfc24f9edaa6568bbbfbbe75d2386082faaa",
+  "jobResultSha256": {
+    "d944b4be727e46ae8a6a580ad66430cb": "12f30b92881e58c32e14217bed7e74bc2b1c39f972106d4bb62a10c7701a004a",
+    "088a063b0b0d46e1a8241fea277334a9": "7d4cf390d4514f28793167a70af7f322e7196109a3640c1bc7c2915ce6829312"
+  },
+  "limitations": [
+    "Docker Engine/OSRM are offline after session interruption; earlier real-router tests were not rerun as current-live proof.",
+    "No pre-task hashes for entire ignored job store.",
+    "No browser chooser export/import roundtrip, grayscale emulation, production supervision or long soak.",
+    "No stage/commit/push/merge/rebase/reset performed."
+  ]
+}

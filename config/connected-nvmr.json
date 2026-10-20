@@ -1,0 +1,158 @@
+{
+  "schemaVersion": "connected-nvmr-config/v1",
+  "regionId": "nvmr-connected",
+  "label": "Connected Northern Vietnam Mobility Region",
+  "pipelineVersion": "connected-nvmr-gis/v1",
+  "mapBbox": [
+    104.35,
+    20.06,
+    107.25,
+    22.85
+  ],
+  "routingBbox": [
+    104.25,
+    20.05,
+    107.35,
+    22.95
+  ],
+  "viewportBbox": [
+    104.35,
+    20.06,
+    107.25,
+    22.85
+  ],
+  "boundaryVersion": "technical-operating-zones/2026-10-18-v1",
+  "boundaryNote": "Nonoverlapping technical research zones; NOT official administrative province polygons. Map rectangle contains adjacent provinces without adding them to study allocation. Current-zone outside operating zones is unassigned.",
+  "source": {
+    "path": "data/raw/vietnam-latest.osm.pbf",
+    "sha256": "2fbd2ee6b4dc151eecf04fa6823cddf584b47423e190118b10fce8b6115e9d8a",
+    "timestamp": "2026-10-09T20:21:04Z",
+    "attribution": "© OpenStreetMap contributors",
+    "url": "https://download.geofabrik.de/asia/vietnam.html"
+  },
+  "tiles": {
+    "format": "mvt",
+    "minZoom": 6,
+    "maxZoom": 13,
+    "sourceLayers": [
+      "streets",
+      "water",
+      "green",
+      "places"
+    ],
+    "urlTemplate": "/api/v5/connected/map/tiles/{z}/{x}/{y}.pbf",
+    "archive": "data/regions/nvmr-connected/render/tiles.mbtiles"
+  },
+  "routing": {
+    "CAR": {
+      "baseUrl": "http://127.0.0.1:5005",
+      "containerName": "gsm-map-osrm-connected-car",
+      "profilePath": "/opt/car.lua",
+      "manifest": "data/regions/nvmr-connected/routing/car/manifest.json"
+    },
+    "MOTORBIKE": {
+      "baseUrl": "http://127.0.0.1:5006",
+      "containerName": "gsm-map-osrm-connected-motorbike",
+      "profilePath": "/profiles/motorbike.lua",
+      "manifest": "data/regions/nvmr-connected/routing/motorbike/manifest.json"
+    }
+  },
+  "operatingZones": [
+    {
+      "id": "hanoi",
+      "label": "Hà Nội · technical zone",
+      "bbox": [
+        105.65,
+        20.9,
+        105.95,
+        21.13
+      ],
+      "boundaryKind": "technical-operating-zone",
+      "probe": [
+        105.841,
+        21.028
+      ]
+    },
+    {
+      "id": "bac-ninh",
+      "label": "Bắc Ninh · technical zone",
+      "bbox": [
+        106.0,
+        21.13,
+        106.35,
+        21.37
+      ],
+      "boundaryKind": "technical-operating-zone",
+      "probe": [
+        106.06,
+        21.18
+      ]
+    },
+    {
+      "id": "hung-yen",
+      "label": "Hưng Yên · technical zone",
+      "bbox": [
+        106.0,
+        20.4,
+        106.4,
+        20.85
+      ],
+      "boundaryKind": "technical-operating-zone",
+      "probe": [
+        106.05,
+        20.65
+      ]
+    },
+    {
+      "id": "phu-tho",
+      "label": "Phú Thọ · technical zone",
+      "bbox": [
+        105.05,
+        21.15,
+        105.65,
+        21.5
+      ],
+      "boundaryKind": "technical-operating-zone",
+      "probe": [
+        105.4,
+        21.32
+      ]
+    },
+    {
+      "id": "thai-nguyen",
+      "label": "Thái Nguyên · technical zone",
+      "bbox": [
+        105.65,
+        21.45,
+        106.05,
+        22.6
+      ],
+      "boundaryKind": "technical-operating-zone",
+      "probe": [
+        105.84,
+        21.59
+      ]
+    }
+  ],
+  "anchorCatalog": "data/regions/nvmr-connected/anchors/road-candidates.json",
+  "snappedAnchorCatalog": "data/regions/nvmr-connected/anchors/snapped-anchors.json",
+  "distribution": {
+    "cellDegrees": 0.005,
+    "maxAnchorsPerCell": 100,
+    "maxSnapMeters": 100
+  },
+  "defaultFleetWeights": {
+    "hanoi": 80,
+    "bac-ninh": 5,
+    "hung-yen": 5,
+    "phu-tho": 5,
+    "thai-nguyen": 5
+  },
+  "defaultDemandWeights": {
+    "hanoi": 20,
+    "bac-ninh": 20,
+    "hung-yen": 20,
+    "phu-tho": 20,
+    "thai-nguyen": 20
+  }
+}

@@ -1,0 +1,4 @@
+# Bytes used as routing/validation provenance must survive Windows checkouts.
+/profiles/* text eol=lf
+/config/regions/nvmr-hanoi-core-motorbike.json text eol=lf
+/scripts/validate_motorbike.py text eol=lf

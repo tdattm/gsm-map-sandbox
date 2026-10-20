@@ -1,0 +1,8 @@
+{
+  "vehicleType": "MOTORBIKE",
+  "profile": "motorbike",
+  "artifactVersion": "hanoi-electric-motorcycle/v1",
+  "osrm_base_url": "http://127.0.0.1:5002",
+  "container_name": "gsm-map-osrm-hanoi-motorbike",
+  "graph_basename": "hanoi-motorbike"
+}

@@ -1,0 +1,27 @@
+{
+  "schemaVersion": "gsm-nvmr-connected-scenario/v1",
+  "regionId": "nvmr-connected",
+  "seed": "nvmr-connected-5k-hanoi-centric-v1",
+  "fleetSize": 5000,
+  "carCount": 2000,
+  "bookingCount": 1750,
+  "fleetAllocations": [
+    {"zoneId": "hanoi", "carCount": 1400, "motorbikeCount": 2100},
+    {"zoneId": "bac-ninh", "carCount": 150, "motorbikeCount": 225},
+    {"zoneId": "hung-yen", "carCount": 150, "motorbikeCount": 225},
+    {"zoneId": "phu-tho", "carCount": 150, "motorbikeCount": 225},
+    {"zoneId": "thai-nguyen", "carCount": 150, "motorbikeCount": 225}
+  ],
+  "demandWeights": {"hanoi": 6, "bac-ninh": 1, "hung-yen": 1, "phu-tho": 1, "thai-nguyen": 1},
+  "horizonSeconds": 900,
+  "maxWaitSeconds": 300,
+  "onlineFraction": 0.8,
+  "onlineSchedule": [],
+  "workload": "typical",
+  "demandCarFraction": 0.4,
+  "crossZoneDemandFraction": 0.25,
+  "initialCandidates": 16,
+  "maxCandidates": 128,
+  "gridCellDegrees": 0.005,
+  "distribution": {"cellDegrees": 0.025, "maximumVehiclesPerPosition": 1, "nearestNeighborSampleSize": 128}
+}

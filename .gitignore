@@ -27,3 +27,4 @@ build/
 frontend/public/replay/
 frontend/.replay-tools/
 config/*.local.*
+data/regions/

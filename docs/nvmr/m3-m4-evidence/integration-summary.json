@@ -1,0 +1,73 @@
+{
+  "status": "PASS",
+  "scope": "completed-result playback, worker completes before position playback; not live streaming",
+  "uiSmallJobId": "6489980be41f4f9e86902bbdf488ae69",
+  "uiLargeJobId": "785785b614414b36b51fe2c381590061",
+  "persistedLargeJobSeconds": 10.643615,
+  "largeFleet": 5000,
+  "largeBookings": 1250,
+  "largeCompleted": 1250,
+  "checkpoint100Seconds": {
+    "total": 5000,
+    "offline": 1000,
+    "online": 4000,
+    "idle": 3882,
+    "assigned": 0,
+    "onTrip": 118,
+    "moving": 118
+  },
+  "browser": {
+    "fps": 60.046281519346266,
+    "frameP95Ms": 16.800000000046566,
+    "sourceLagP95Ms": 39.3999999910593,
+    "updates": 23,
+    "durationMs": 5012.79999999702,
+    "snapshotUpdatesPerSecond": 4.588254069584599,
+    "clusterOracle": {
+      "checked": 14,
+      "failures": [],
+      "representedLeafCount": 4997,
+      "uniqueLeafCount": 4997,
+      "scope": "all fleet represented in current viewport",
+      "passed": true,
+      "diagnostics": {
+        "center": [
+          105.83500789096632,
+          21.030751292510047
+        ],
+        "bounds": [
+          [
+            105.7955257742671,
+            21.004391676664767
+          ],
+          [
+            105.87449000766532,
+            21.057106246568495
+          ]
+        ],
+        "inputVehiclesInBounds": 5000,
+        "sourceFeatures": 5000,
+        "loaded": true
+      }
+    },
+    "domMarkers": 0
+  },
+  "routesInspected": {
+    "small": "GSM-00051 MOTORBIKE ON_TRIP BK-000020 motorbike graph fb97489d...",
+    "large": "GSM-00001 CAR ON_TRIP BK-000804 car graph a24d4957..."
+  },
+  "savedHcmV1": {
+    "productionBuild": true,
+    "taskApi8013ConnectionFailureConfirmed": true,
+    "sampleChecksumAndAssets": true,
+    "seekSeconds": 500,
+    "playAdvancedToSeconds": 505.2,
+    "browserFileChooserRoundtrip": "NOT VERIFIED"
+  },
+  "limits": [
+    "one seed live workload; no soak/cold-start certification",
+    "selected route network latency not a measured SLO",
+    "no worker+browser concurrent stress capability claim",
+    "mobile390 responsive QA not rerun"
+  ]
+}

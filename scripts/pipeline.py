@@ -20,7 +20,7 @@ def execute(command, dry_run=False, capture=False):
         return ""
     result = subprocess.run([str(x) for x in command], check=True, text=True,
                             encoding="utf-8", capture_output=capture)
-    return result.stdout if capture else ""
+    return (result.stdout + (result.stderr if capture == "combined" else "")) if capture else ""
 
 
 def sha256(path):
@@ -86,8 +86,20 @@ def main(argv=None):
     parser.add_argument("--pbf", help="Override OSM_PBF_PATH, relative to project root")
     parser.add_argument("--region-config", help="Override REGION_CONFIG_PATH")
     parser.add_argument("--detach", action="store_true", help="Run router in background")
+    parser.add_argument("--region", choices=["hcm-center", "nvmr-hanoi-core", "nvmr-bac-ninh-core"], default="hcm-center")
+    parser.add_argument("--profile", choices=["car", "motorbike"], default="car")
     args = parser.parse_args(argv)
     settings = Settings(**{k: v for k, v in {"osm_pbf_path": args.pbf, "region_config_path": args.region_config}.items() if v})
+    if args.profile == 'motorbike':
+        if args.region not in ('nvmr-hanoi-core','nvmr-bac-ninh-core') or args.region_config:
+            raise RuntimeError('MOTORBIKE requires an allowlisted pilot configuration')
+        from scripts.motorbike_pipeline import run
+        return run(settings,args)
+    if args.region != "hcm-center":
+        if args.region_config:
+            raise RuntimeError("Region mới sử dụng allowlist config server, không dùng --region-config.")
+        from scripts.region_pipeline import run
+        return run(settings, args)
     region, dry = settings.region, args.dry_run
     extracted = ROOT / "data/extracted/hcm-center.osm.pbf"
     metadata_path = extracted.with_suffix(".metadata.json")
@@ -211,6 +223,6 @@ if __name__ == "__main__":
             stream.reconfigure(encoding="utf-8")
     try:
         sys.exit(main())
-    except (RuntimeError, OSError, ValueError, subprocess.CalledProcessError) as exc:
+    except (RuntimeError, OSError, ValueError, KeyError, TypeError, subprocess.CalledProcessError) as exc:
         print(f"DỪNG: {exc}", file=sys.stderr)
         sys.exit(1)

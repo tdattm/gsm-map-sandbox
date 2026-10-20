@@ -1,0 +1,173 @@
+{
+  "schemaVersion": "gsm-m4-followup/v1",
+  "at": "2026-10-18T02:25:57.625090+00:00",
+  "sourceBaseline": "3ef9160940e6129c911889add7d8aed0d6022bd1",
+  "sourceSha256": {
+    ".github/workflows/source-checks.yml": "15f34a3f3de14d5f86592980defe8533fb40fbd82c2db489fc802303bb4d9c43",
+    "backend/app/simulation_cache.py": "bbc6ee211ab844d607a398236425bea486540c42c252e1d6a6ea512a17ecd3da",
+    "backend/app/simulation_jobs.py": "5b2332662139e5c600d64e54e92d920bf2e0b64b591c60f768067fa0f788a336",
+    "backend/app/simulation_resources.py": "72d5cf6440d9682c8d30373278b2dde7a2a685ac5617f9b300397ffab3efe6ce",
+    "backend/app/simulation_worker.py": "dd471acca1c5544c1c44c13895bbfed65cbcdb21a36b09b5ab826deeab73d880",
+    "frontend/package.json": "413880cc9d65d90e0f0a1ca197a2d06c374870e1838851591dcc3b3672871b66",
+    "frontend/performance.html": "6807c92cc835534eaea8caf09db78734106661f9f287da10640084f85ae4adb7",
+    "frontend/scripts/build-identity.mjs": "e1b310f176c09fbee3235638f8bb5f6e09de337d04f3753da0b0a2c828e80206",
+    "frontend/scripts/verify-replay.mjs": "c83e722c94e51a1f3c5da3c832fc53e4dfaaa7764250863f7464b3ff18ef3991",
+    "frontend/src/components/simulation-map.tsx": "82649d171878b40428a77854e27782c5dc4ba0fc0f6d8cdf97b5c42dc2574cbb",
+    "frontend/src/components/simulation-runtime.tsx": "a6802d9733fbe7bdf2f3dfa541273a2c24d51b0fb879017433ccd893666fd46f",
+    "frontend/src/components/simulation-workspace.tsx": "9c145d204d01a93be3b9f16ffb29e0c912138f1f4434ea5fbad60a5e58da0047",
+    "frontend/src/lib/fleet-clock.ts": "8c5c106a8944a53e50c5c176cd239eb681f8e3d6d59ad62356d5de4430537716",
+    "frontend/src/lib/simulation-profile.ts": "51835294ca94127fe1c91e883c4e2678103a28d0883794aead954642e578c28a",
+    "frontend/src/lib/use-simulation.ts": "80e3baadfdaab1cfde5d2e3e3f3512553110f17a5f39f5c3b2dfe3ae5fd6b998",
+    "frontend/src/performance-lab.ts": "0e486e77d3054f8012864b75be9938d8b3a3ab14fb6da21ef18e94cf5e972e82",
+    "frontend/tests/use-simulation.test.ts": "0125be876b968490bbd6c516f4609825f22d041eec86e1893499a6ad5c83dc7d",
+    "frontend/vite.config.ts": "5e4491d201c341724b4831ea05e965dadd63e01ce846393284e58c24cff8c55c",
+    "scripts/GsmDockerProbe.ps1": "0749e01defa66941e642b9134725d5d05a133e5e322c03d61b7e8b4b1a91e4cc",
+    "scripts/Profile-GsmMemory.ps1": "6d823ce05533a3cba4678b1652020d766a1f532954b8e46510ab316664ac2289",
+    "scripts/Start-GsmDev.ps1": "1ccebf5d3605933b343ce42dc7f8574611da70c65106f087afe62ec61dce7efd",
+    "scripts/Stop-GsmDev.ps1": "73eda760860b2e36a1d2db07ad7fc5f9a48c11e673102fc73cf8befea46a89ab",
+    "scripts/m3_resources.py": "68e3f50b52d6379cbd106c46480d7726ada202e41e2459f581b32b03b5379f75",
+    "scripts/profile_simulation_memory.py": "a2a79003f70fcd3378033d895497b3a2ab6bccbe73be760f0f7315fd306e8ae9",
+    "tests/test_memory_performance.py": "8d15cb8d96a844a0e4be450ab2947015571b70a8746da4ddef78804cd7d3223b"
+  },
+  "status": {
+    "fps": "NOT_REPRODUCED; historical root cause UNRESOLVED, owner currently sees no error",
+    "memory": "PASS ordinary1000/5000 live completed with shared0.5/0.75GiB admission",
+    "git": "NOT STAGED/COMMITTED/PUSHED: user explicitly conditioned this on FPS and memory tasks both completed",
+    "githubActions": "NOT RUN; conditional push has not happened"
+  },
+  "validation": {
+    "backend": {
+      "passed": 203,
+      "skipped": 6,
+      "warnings": 1,
+      "seconds": 72.7
+    },
+    "focused": {
+      "passed": 45,
+      "warnings": 1
+    },
+    "vitest": {
+      "passed": 182,
+      "files": 21,
+      "seconds": 134.89,
+      "maxWorkers": 1
+    },
+    "lint": {
+      "warnings": 39,
+      "errors": 0
+    },
+    "typecheck": "PASS",
+    "build": "PASS",
+    "live5000HttpTsContracts": "PASS"
+  },
+  "runtime": {
+    "schemaVersion": "gsm-dev-runtime/v1",
+    "application": "gsm-map-sandbox",
+    "workspace": "D:\\ThS\\VinAI\\Phase3_VRIC\\gsm-map-sandbox",
+    "store": "D:\\ThS\\VinAI\\Phase3_VRIC\\gsm-map-sandbox\\build\\m4-performance\\jobs",
+    "apiPid": 12044,
+    "worker": "locked",
+    "workerMeaning": "locked = OS worker lease held for this exact store; not a progress/health heartbeat",
+    "resultCache": {
+      "entries": 0,
+      "idleSeconds": 30.0
+    },
+    "resources": {
+      "availablePhysicalBytes": 3255033856,
+      "systemCommitAvailableBytes": 6974672896,
+      "systemCommitBytes": 18804064256,
+      "systemCommitLimitBytes": 25778737152,
+      "smallMinimumAvailableGiB": 0.5,
+      "admissionPolicy": {
+        "lightMinimumAvailableGiB": 0.5,
+        "routineMinimumAvailableGiB": 0.75,
+        "lightMinimumCommitGiB": 1.0,
+        "routineMinimumCommitGiB": 1.5,
+        "lightMaximumFleet": 1000,
+        "lightMaximumBookings": 1000,
+        "routineMaximumBookings": 5000,
+        "maximumHorizonSeconds": 3600,
+        "maximumSchedulePoints": 8,
+        "maximumCandidates": 128,
+        "extendedMinimumAvailableGiB": 2.0,
+        "extendedMinimumCommitGiB": 2.0
+      }
+    }
+  },
+  "modes": {
+    "regionId": "nvmr-hanoi-core",
+    "modes": [
+      {
+        "vehicleType": "CAR",
+        "ready": true,
+        "reason": "",
+        "routingIdentity": {
+          "regionId": "nvmr-hanoi-core",
+          "vehicleType": "CAR",
+          "profile": "car",
+          "profileSha256": "cb3df0546318665609606b746a1297f3d65ca3c2ff825f8a6f3c57247d86a2d3",
+          "graphManifestSha256": "a24d4957a01ceeb04a0de1ad680fe4c5dd51732a7b381d9368e249a65c1b29b5",
+          "sourceSha256": "2fbd2ee6b4dc151eecf04fa6823cddf584b47423e190118b10fce8b6115e9d8a",
+          "extractSha256": "18fd3892f6d766387f2c3217d5d104e09a9319d3905a9172834b21c0064d6308",
+          "algorithm": "mld"
+        }
+      },
+      {
+        "vehicleType": "MOTORBIKE",
+        "ready": true,
+        "reason": "",
+        "routingIdentity": {
+          "regionId": "nvmr-hanoi-core",
+          "vehicleType": "MOTORBIKE",
+          "profile": "motorbike",
+          "profileSha256": "075ecdbc70a3e75c4338d2c6a41597c132a1837ec2d27f1c2fcdd824a788b209",
+          "graphManifestSha256": "fb97489d066397b11cb9178238cd56a5f52281bcf5711430bb7cf411496ca455",
+          "sourceSha256": "2fbd2ee6b4dc151eecf04fa6823cddf584b47423e190118b10fce8b6115e9d8a",
+          "extractSha256": "18fd3892f6d766387f2c3217d5d104e09a9319d3905a9172834b21c0064d6308",
+          "algorithm": "mld"
+        }
+      }
+    ]
+  },
+  "receipt": "build/s0-runtime/session-20261018-091422-578.json",
+  "traceScope": "Own-page JS sampling API and RAF/timer/longtask timeline. No Chrome compositor/GPU trace; internal tracing URL blocked by browser policy, no bypass used.",
+  "rawTraceSha256": {
+    "followup-plain-profile.json": "0a1590a514d9c36bd600f342ee83e09f61681dd9c21c940a2991955fb0b8caba",
+    "followup-5000-profile.json": "57071fea09211042d117e99c141d3ca4982472108700264009d48490fbbb55ce",
+    "followup-large-processes.json": "728c4f86997093be4bd5fe63a88709ee8b8f98bda57be669cae7729292ea0c1e"
+  },
+  "logCopyPolicy": "Selected .txt copies normalize line endings/trailing whitespace only. Original .log bytes remain in ignored build with hashes below.",
+  "rawLogSha256": {
+    "followup-guard-tests.log": "e8e4690f2fcf44a405f5741001f8d37524ac3eb060d90faabdc76cd9c30979ab",
+    "followup-backend-full.log": "61825cdcfdb801497a2ea1bf736dbfb81ee3fa64d6618baf1098f00547263e30",
+    "followup-frontend-tests.log": "468c04b216a85ea460aaff95b9fd31aba33e40cb9849f14c09372f523ba51744",
+    "followup-lint.log": "1c52474bac9cca3749bbd496becbf3aaa4209a200d82261467ee3a44f4439d26",
+    "followup-build-final.log": "d152d349b527516bc2d5b3cb072387551a680ff64c522c47e504a798e176d5f5"
+  },
+  "limitations": [
+    "No reproduction of historical1FPS so no causal closure.",
+    "Profiler sampleInterval16ms, best-effort, minified production symbols, no GPU/compositor or cross-process scheduling trace.",
+    "Light floor0.5GiB boundary unit-tested; real1000 start0.93GiB/min0.76GiB.5000 start1.11GiB, not an exact0.75GiB stress test.",
+    "System paging counters are global, not GSM attribution. No real Meet or independent Chrome test.",
+    "Product canvas410x279 differs from lab764x543; no cross-capture FPS before/after claim."
+  ],
+  "files": {
+    "followup-5000-profile.selfprofile.json": "ba2b6fe787d2ad65d76b5d5096a4c7cccc67eb9543ad5558677d55bed2e338a1",
+    "followup-5000-profile.timeline.json": "c120493427a8bb84c86200230a5464b499211e7a87b2ac04203a90d2e3c77155",
+    "followup-backend-full.txt": "61825cdcfdb801497a2ea1bf736dbfb81ee3fa64d6618baf1098f00547263e30",
+    "followup-build-final.txt": "740e277a0842c82230d2a678a08ed56ad1bc5a7190a9371d3aee9d134c90dfff",
+    "followup-contract-5000.json": "abe412a9686e9e655b7fd95e52ed5da07d52e7d36bdb43be92ff3badf3065cf3",
+    "followup-current-5000.png": "681fc986d141436067887c5dde2c0e179c851b52430f849f7cb8c42a5efad991",
+    "followup-frontend-tests.txt": "468c04b216a85ea460aaff95b9fd31aba33e40cb9849f14c09372f523ba51744",
+    "followup-guard-tests.txt": "e8e4690f2fcf44a405f5741001f8d37524ac3eb060d90faabdc76cd9c30979ab",
+    "followup-large-audits.json": "2bba49ca756d8dfb46b48c198dbf9745f39f2ab11b6620710449b996a191f62b",
+    "followup-large.json": "bee94e5d96282da7a405793c8ed11d101c2554d85d25d48d3f25893b64a6ca8d",
+    "followup-lint.txt": "1c52474bac9cca3749bbd496becbf3aaa4209a200d82261467ee3a44f4439d26",
+    "followup-paging-summary.json": "f7208a7908a2f1f5b346b30feb1159094e22c0ec69e89aa956e0b09fc0aec76e",
+    "followup-plain-profile.selfprofile.json": "6001d200dd04c6047b84bb580f5214e4abf1941da5fefebc75017bd8548a79af",
+    "followup-plain-profile.timeline.json": "d6d0a9593ae64679bd2cf2dc2dc3b7e5ee74a6a614cba5e29dea40cfbe265129",
+    "followup-product-5000.json": "afd8eeb0e1c145e3a69241d0e4cf454c529254c8b194c506fb075c93a84cb57d",
+    "followup-product-5000.png": "aec42bffdbb4cde157589c60301e48ea551425ba188534f22c3e767a36e522f2",
+    "followup-profiler-summary.json": "94472d6ff34e1d854c0252813be773c36524dbc1fe97839c20c8664f0a99aa8c"
+  }
+}

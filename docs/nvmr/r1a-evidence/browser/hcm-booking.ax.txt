@@ -1,0 +1,117 @@
+Browser tab: 1, Title: "GSM Map Sandbox", URL: "http://127.0.0.1:5191/?scenario=regional&mode=booking".
+The following is a diff from the previous accessibility tree with ~ and + representing changed and added elements, respectively. Removed elements are summarized by ID range.
+Removed element IDs: 34-96, 109
++				140 button (collapsed) Cấu hình đặt xe, Secondary Actions: Expand
+~					101 button Xem toàn vùng kịch bản
++				141 container
++					142 button (expanded) Chỉ số tại thời điểm hiện tại, Secondary Actions: Collapse
++					143 heading Chỉ số tới thời điểm hiện tại, Value: 2
++						144 text Chỉ số tới thời điểm hiện tại
++					145 text Đã yêu cầu
++					146 text 1
++					147 text Đã phân công xe
++					148 text 1
++					149 text Hoàn tất
++					150 text 0
++					151 text Không được phục vụ
++					152 text 0
++					153 definition list
++						154 container Đã đón / đã yêu cầu
++							155 text Đã đón / đã yêu cầu
++						156 text 0,0%
++						157 container Hoàn tất / đã yêu cầu
++							158 text Hoàn tất / đã yêu cầu
++						159 text 0,0%
++						160 container Chờ TB · đã đón
++							161 text Chờ TB · đã đón
++						162 text —
++						163 container Chuyến TB · hoàn tất
++							164 text Chuyến TB · hoàn tất
++						165 text —
++						166 container ETA đón TB · đã gán
++							167 text ETA đón TB · đã gán
++						168 text 267,4 giây
++						169 container Quãng đường rỗng
++							170 text Quãng đường rỗng
++						171 text 0,0 km
++						172 container Quãng đường chở khách
++							173 text Quãng đường chở khách
++						174 text 0,0 km
++						175 container Mức sử dụng đội xe · thời gian bận / tổng thời gian xe
++							176 text Mức sử dụng đội xe · thời gian bận / tổng thời gian xe
++						177 text Không áp dụng
++					178 text Thời gian chờ và mức sử dụng đội xe là chỉ số mô phỏng; thời gian và quãng đường theo cấu hình OSRM, không phản ánh giao thông trực tiếp. Số đã phân công gồm mọi yêu cầu từng được gán xe.
++					179 button (collapsed) Kết quả cuối kịch bản, Secondary Actions: Expand
++						180 text Kết quả cuối kịch bản
++				181 container
++					182 button (expanded) Yêu cầu đặt xe, Secondary Actions: Collapse
++					183 heading Yêu cầu đặt xe, Value: 2
++						184 text Yêu cầu đặt xe
++					185 container
++						186 text Lọc trạng thái
++						187 pop up button (collapsed, settable) Description: Lọc trạng thái đặt xe, Value: Đang hoạt động, Secondary Actions: Expand
++							188 menu
++								189 (selected) Đang hoạt động
++								190 Tất cả (gồm tương lai)
++								191 Không được phục vụ
++								192 Hoàn tất
++					193 checkbox Description: Chọn yêu cầu đặt xe BK-001, Value: 0
++						194 text BK-001
++						195 text Đã phân công xe
++						196 container
++							197 text Yêu cầu + 0,0 giây  ·  GSM-02  · chờ  0,0 giây
++				198 container
++					199 button (expanded) Đội xe điều phối, Secondary Actions: Collapse
++					200 heading Đội xe điều phối, Value: 2
++						201 text Đội xe điều phối
++					202 button Quan sát xe điều phối GSM-01
++						203 text GSM-01
++						204 text Đang rảnh
++						205 container
++							206 text Không có yêu cầu đặt xe  ·  0  chuyến hoàn tất
++							207 text Rỗng  0,0 km  · chở khách  0,0 km
++					208 button Quan sát xe điều phối GSM-02
++						209 text GSM-02
++						210 text Đang đến đón khách
++						211 container
++							212 text BK-001  ·  0  chuyến hoàn tất
++							213 text Rỗng  0,0 km  · chở khách  0,0 km
++					214 button Quan sát xe điều phối GSM-03
++						215 text GSM-03
++						216 text Đang rảnh
++						217 container
++							218 text Không có yêu cầu đặt xe  ·  0  chuyến hoàn tất
++							219 text Rỗng  0,0 km  · chở khách  0,0 km
++					220 button Quan sát xe điều phối GSM-04
++						221 text GSM-04
++						222 text Đang rảnh
++						223 container
++							224 text Không có yêu cầu đặt xe  ·  0  chuyến hoàn tất
++							225 text Rỗng  0,0 km  · chở khách  0,0 km
++					226 button Quan sát xe điều phối GSM-05
++						227 text GSM-05
++						228 text Đang rảnh
++						229 container
++							230 text Không có yêu cầu đặt xe  ·  0  chuyến hoàn tất
++							231 text Rỗng  0,0 km  · chở khách  0,0 km
++				232 button (collapsed) Dòng thời gian sự kiện, Secondary Actions: Expand
++					233 container
++						234 container Bản đồ
++						235 button Description: Xe điều phối GSM-01, Help: GSM-01 · CAR
++						236 button Description: Xe điều phối GSM-02, Help: GSM-02 · CAR
++						237 button Description: Xe điều phối GSM-03, Help: GSM-03 · CAR
++						238 button Description: Xe điều phối GSM-04, Help: GSM-04 · CAR
++						239 button Description: Xe điều phối GSM-05, Help: GSM-05 · CAR
++						240 button Điểm đón BK-001
+~			120 button Phát
+~			122 button Về đầu
+~			124 text 0,0  /  2.092,4  giây ·  0 %
+~					127 slider (settable, integer) Description: Dòng thời gian mô phỏng, Value: 0, ID: base-ui-_r_1o_
+~				129 stepper (settable, integer) Description: Thời điểm mô phỏng (giây), Value: 0
+~				130 button Đến thời điểm
+~			131 checkbox 1x, Value: 1
+~			132 checkbox 2x, Value: 0
+~			133 checkbox 4x, Value: 0
+~				136 text field (settable) Description: Tốc độ tùy chỉnh, Value: 1
+~				137 button Áp dụng
+The focused UI element is 1 AXWebArea GSM Map Sandbox, URL: 127.0.0.1:5191/?scenario=regional&mode=booking

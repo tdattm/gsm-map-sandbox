@@ -1,0 +1,102 @@
+Browser tab: 1, Title: "GSM Map Sandbox", URL: "http://127.0.0.1:5191/?scenario=regional&mode=fleet".
+The following is a diff from the previous accessibility tree with ~ and + representing changed and added elements, respectively. Removed elements are summarized by ID range.
+Removed element IDs: 34-59, 84
++				115 button (collapsed) Cấu hình đội xe, Secondary Actions: Expand
+~						66 text 5
+~						68 text 4
+~						70 text 1
+~						74 text Kế hoạch:  13,59 km  · Đã đi mô phỏng:  0,00 km
++				116 container
++					117 button (expanded) Danh sách xe, Secondary Actions: Collapse
++					118 heading Danh sách xe, Value: 2
++						119 text Danh sách xe
++					120 checkbox Description: Chọn GSM-01, Value: 1
++						121 text GSM-01
++						122 text Đang di chuyển
++						123 text 1,33 km
++						124 text  · 
++						125 text 129,1
++						126 text  giây · xuất phát +
++						127 text 0
++						128 text  giây
++						129 text 0
++						130 text %
++					131 button Quan sát GSM-01
++					132 checkbox Description: Chọn GSM-02, Value: 0
++						133 text GSM-02
++						134 text Chưa bắt đầu
++						135 text 3,12 km
++						136 text  · 
++						137 text 275,4
++						138 text  giây · xuất phát +
++						139 text 32
++						140 text  giây
++						141 text 0
++						142 text %
++					143 button Quan sát GSM-02
++					144 checkbox Description: Chọn GSM-03, Value: 0
++						145 text GSM-03
++						146 text Chưa bắt đầu
++						147 text 0,96 km
++						148 text  · 
++						149 text 67,8
++						150 text  giây · xuất phát +
++						151 text 38
++						152 text  giây
++						153 text 0
++						154 text %
++					155 button Quan sát GSM-03
++					156 checkbox Description: Chọn GSM-04, Value: 0
++						157 text GSM-04
++						158 text Chưa bắt đầu
++						159 text 3,35 km
++						160 text  · 
++						161 text 283,7
++						162 text  giây · xuất phát +
++						163 text 14
++						164 text  giây
++						165 text 0
++						166 text %
++					167 button Quan sát GSM-04
++					168 checkbox Description: Chọn GSM-05, Value: 0
++						169 text GSM-05
++						170 text Chưa bắt đầu
++						171 text 4,82 km
++						172 text  · 
++						173 text 384,1
++						174 text  giây · xuất phát +
++						175 text 32
++						176 text  giây
++						177 text 0
++						178 text %
++					179 button Quan sát GSM-05
++				180 container
++					181 button (expanded) Chi tiết phương tiện, Secondary Actions: Collapse
++					182 heading GSM-01 · Đang di chuyển, Value: 2
++						183 text GSM-01  ·  Đang di chuyển
++					184 text 106.695208, 10.767980
++					185 container
++						186 text Tiến độ  0,0 % · còn  129,1  giây
++					187 container
++						188 text Độ lệch điểm A/B trên đường:  0,0 m / 0,0 m
++					189 button Quan sát xe
++					190 button Xem toàn tuyến
++					191 container
++						192 container Bản đồ
++						193 checkbox Description: Xe GSM-01, Help: GSM-01 · Đang di chuyển · 0%, Value: 1
++						194 checkbox Description: Xe GSM-02, Help: GSM-02 · Chưa bắt đầu · 0%, Value: 0
++						195 checkbox Description: Xe GSM-03, Help: GSM-03 · Chưa bắt đầu · 0%, Value: 0
++						196 checkbox Description: Xe GSM-04, Help: GSM-04 · Chưa bắt đầu · 0%, Value: 0
++						197 checkbox Description: Xe GSM-05, Help: GSM-05 · Chưa bắt đầu · 0%, Value: 0
+~			95 button Phát
+~			97 button Về đầu
+~			99 text 0,0  /  416,1  giây ·  0 %
+~					102 slider (settable, integer) Description: Dòng thời gian mô phỏng, Value: 0, ID: base-ui-_r_18_
+~				104 stepper (settable, integer) Description: Thời điểm mô phỏng (giây), Value: 0
+~				105 button Đến thời điểm
+~			106 checkbox 1x, Value: 1
+~			107 checkbox 2x, Value: 0
+~			108 checkbox 4x, Value: 0
+~				111 text field (settable) Description: Tốc độ tùy chỉnh, Value: 1
+~				112 button Áp dụng
+The focused UI element is 1 AXWebArea GSM Map Sandbox, URL: 127.0.0.1:5191/?scenario=regional&mode=fleet

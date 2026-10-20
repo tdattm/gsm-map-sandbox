@@ -1,0 +1,40 @@
+[
+  {
+    "fleet": 1000,
+    "start": "2026-10-18T02:12:21.079451+00:00",
+    "end": "2026-10-18T02:12:36.946549+00:00",
+    "samples": 7,
+    "pageReadsMedian": 7,
+    "pageReadsMax": 317,
+    "cpuMax": 57,
+    "minimumAvailableGiB": 0.7651290893554688,
+    "pagefiles": [
+      [
+        {
+          "AllocatedBaseSize": 8421,
+          "CurrentUsage": 775,
+          "PeakUsage": 2793
+        }
+      ]
+    ]
+  },
+  {
+    "fleet": 5000,
+    "start": "2026-10-18T02:12:37.421941+00:00",
+    "end": "2026-10-18T02:12:57.553570+00:00",
+    "samples": 10,
+    "pageReadsMedian": 3.0,
+    "pageReadsMax": 43,
+    "cpuMax": 65,
+    "minimumAvailableGiB": 1.10479736328125,
+    "pagefiles": [
+      [
+        {
+          "AllocatedBaseSize": 8421,
+          "CurrentUsage": 775,
+          "PeakUsage": 2793
+        }
+      ]
+    ]
+  }
+]

@@ -1,0 +1,18 @@
+{
+  "label": "Bắc Ninh Core · technical pilot",
+  "viewport_bbox": [106.00, 21.13, 106.12, 21.23],
+  "viewport_zoom": 12.5,
+  "operating_bbox": [106.02, 21.15, 106.10, 21.21],
+  "routing_bbox": [105.96, 21.09, 106.16, 21.27],
+  "render_bbox": [105.995, 21.125, 106.125, 21.235],
+  "routing_buffer_degrees": 0.04,
+  "osrm_base_url": "http://127.0.0.1:5003",
+  "container_name": "gsm-map-osrm-bac-ninh-car",
+  "graph_basename": "bac-ninh-core",
+  "profile": "car",
+  "pipeline_version": "nvmr-regional-car-pilot/v1",
+  "probe_points": [[106.06,21.18],[106.045,21.18],[106.075,21.195]],
+  "boundary_version": "technical-rectangle/2026-10-18",
+  "enabled": true,
+  "note": "Bbox kỹ thuật quanh đô thị Bắc Ninh cũ và đường lân cận; không phải địa giới hành chính và không bao phủ toàn tỉnh Bắc Ninh sau hợp nhất Bắc Giang năm 2025. Operating, viewport, render và routing buffer độc lập. OSM/OSRM tĩnh; nhu cầu synthetic, không phải dữ liệu vận hành GSM."
+}

@@ -1,0 +1,74 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<osm version="0.6" generator="osmium/1.19.0">
+  <bounds minlat="20.962" minlon="105.762" maxlat="21.095" maxlon="105.915"/>
+  <node id="75621001" version="11" timestamp="2018-06-27T04:12:37Z" lat="21.0397556" lon="105.8656403"/>
+  <node id="317968620" version="4" timestamp="2023-10-01T15:46:54Z" lat="21.0366868" lon="105.8531408"/>
+  <node id="317968632" version="3" timestamp="2023-10-01T15:46:54Z" lat="21.0360386" lon="105.8529476"/>
+  <node id="6603790704" version="1" timestamp="2019-07-10T20:07:07Z" lat="21.0356406" lon="105.8552806"/>
+  <node id="6603790705" version="2" timestamp="2020-11-18T14:31:20Z" lat="21.0355451" lon="105.855188"/>
+  <node id="9580345408" version="1" timestamp="2022-03-15T10:50:37Z" lat="21.0361941" lon="105.8566741"/>
+  <node id="10943481563" version="4" timestamp="2025-02-21T09:18:01Z" lat="21.0366153" lon="105.7806712"/>
+  <node id="10943481564" version="4" timestamp="2025-02-21T09:18:01Z" lat="21.0377062" lon="105.7807873"/>
+  <node id="12606538045" version="2" timestamp="2026-09-25T06:23:11Z" lat="21.0355474" lon="105.7804978"/>
+  <way id="9656730" version="50" timestamp="2026-10-01T08:46:18Z">
+    <nd ref="75621001"/>
+    <nd ref="9580345408"/>
+    <nd ref="6603790704"/>
+    <nd ref="6603790705"/>
+    <tag k="bicycle" v="no"/>
+    <tag k="bridge" v="yes"/>
+    <tag k="bus:conditional" v="no @ (seatings&gt;=9)"/>
+    <tag k="construction_date" v="1983-10"/>
+    <tag k="fixme" v="Surface of this road is CONCRETE, not ASPHALT!"/>
+    <tag k="foot" v="no"/>
+    <tag k="goods" v="no"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lanes" v="1"/>
+    <tag k="layer" v="2"/>
+    <tag k="lit" v="yes"/>
+    <tag k="loc_name" v="Quốc lộ 1A cũ"/>
+    <tag k="maxspeed" v="50"/>
+    <tag k="maxweightrating:hgv" v="0.5"/>
+    <tag k="motorcycle" v="yes"/>
+    <tag k="name" v="Cầu Chương Dương"/>
+    <tag k="name:en" v="Chuong Duong Bridge"/>
+    <tag k="name:ko" v="쯔엉즈엉교"/>
+    <tag k="name:vi" v="Cầu Chương Dương"/>
+    <tag k="name:zh" v="章阳桥"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="smoothness" v="excellent"/>
+    <tag k="start_date" v="1985-06"/>
+    <tag k="surface" v="concrete"/>
+    <tag k="taxi" v="no"/>
+  </way>
+  <way id="28924657" version="10" timestamp="2026-05-04T04:44:59Z">
+    <nd ref="317968620"/>
+    <nd ref="317968632"/>
+    <tag k="bicycle" v="yes"/>
+    <tag k="highway" v="service"/>
+    <tag k="motorcar" v="no"/>
+    <tag k="motorcycle" v="yes"/>
+    <tag k="name" v="Phố Đông Thái"/>
+    <tag k="name:en" v="Dong Thai Street"/>
+    <tag k="service" v="alley"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="35978226" version="46" timestamp="2025-12-08T14:22:47Z">
+    <nd ref="12606538045"/>
+    <nd ref="10943481563"/>
+    <nd ref="10943481564"/>
+    <tag k="bridge" v="yes"/>
+    <tag k="highway" v="motorway"/>
+    <tag k="lanes" v="2"/>
+    <tag k="layer" v="2"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="80"/>
+    <tag k="moped" v="no"/>
+    <tag k="motorcycle" v="no"/>
+    <tag k="name" v="Đường cao tốc Vành đai 3 TP. Hà Nội"/>
+    <tag k="name:en" v="Ring Road 3 Expressway (Hanoi)"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="ref" v="CT.37"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+</osm>

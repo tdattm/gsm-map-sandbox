@@ -1,0 +1,17 @@
+{
+  "schemaVersion": "nvmr-research-preset-manifest/v1",
+  "presetId": "nvmr-connected-5k-hanoi-centric-v1",
+  "version": 1,
+  "requestFile": "nvmr-connected-5k-hanoi-centric-v1.json",
+  "presetSha256": "a37a44637fd829d25d7d494a520c5797e4857c996f53104d76f779decf1092df",
+  "description": "Synthetic Connected v5 research inputs: 5000 vehicles, 1750 potential bookings; technical operating zones, not official administrative boundaries.",
+  "provenance": {
+    "contract": "contracts/nvmr/CONNECTED_V1.md",
+    "schema": "contracts/nvmr/connected-scenario-v1.schema.json",
+    "regionConfig": "config/connected-nvmr.json",
+    "regionConfigSha256": "c815a2d299193161a19fff43b66bcc71a79dd78a912c165f5be6377f6a1a2aa1",
+    "inputGenerator": "backend/app/connected_simulation.py",
+    "inputGeneratorSha256": "15d3593d05cbe1b5324c5bec8b80cbf5dbf6e8c6c8eb794d52d969024abfe9cc"
+  },
+  "freezePolicy": "Frozen before D2b outcomes. Do not retune timing, seed, wait, allocation or other parameters to improve observed KPIs; any future scientific variant needs a new preset version and explicit rationale."
+}

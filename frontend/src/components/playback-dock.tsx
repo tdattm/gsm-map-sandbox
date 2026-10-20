@@ -1,14 +1,15 @@
+import { simulationTimestamp } from '@/lib/connected-analytics'
 import { numberText } from '@/lib/vi'
 import { useEffect, useState } from 'react'
 import { Play, Pause, RotateCcw } from 'lucide-react'
 import { Button } from './ui/button'
 import { Slider } from './ui/slider'
-import { normalizeSimulationSpeed } from '@/lib/simulation-speed'
+import { normalizeSimulationSpeed, simulationSpeeds } from '@/lib/simulation-speed'
 import { useFleetClock } from '@/lib/use-fleet'
 import type { FleetClock } from '@/lib/fleet-clock'
 
 interface PlaybackControls {
-  time: number; duration: number; speed: number; status: string; enabled: boolean; label: string
+  compact?: boolean; time: number; duration: number; speed: number; status: string; enabled: boolean; label: string
   play: () => void; pause: () => void; reset: () => void; seek: (time: number) => void; setSpeed: (speed: number) => void
 }
 export function ClockDock({ clock, duration, enabled, label }: { clock: FleetClock; duration: number; enabled: boolean; label: string }) {
@@ -25,6 +26,12 @@ export function PlaybackDock(props: PlaybackControls) {
     setError(''); setCustomSpeed(String(normalized)); props.setSpeed(normalized)
   }
   const playing = status === 'playing'
+  if(props.compact) return <section className="playback-dock compact-playback" aria-label={`Điều khiển phát lại · ${label}`} data-dock-time={time} data-dock-duration={duration} data-dock-speed={speed} data-dock-state={status}>
+    <div className="compact-playback-buttons"><Button size="icon" disabled={!enabled} aria-label={playing?'Tạm dừng':'Phát'} title={playing?'Tạm dừng':'Phát'} onClick={playing?props.pause:props.play}>{playing?<Pause size={16}/>:<Play size={16}/>}</Button><Button size="icon" variant="ghost" disabled={!enabled} aria-label="Về đầu" title="Về đầu" onClick={props.reset}><RotateCcw size={16}/></Button></div>
+    <output className="compact-timestamp" aria-label="Thời gian phát lại" title={`${time.toFixed(3)} / ${duration.toFixed(3)} giây`}>{simulationTimestamp(time)} <span>/ {simulationTimestamp(duration)}</span></output>
+    <div className="compact-timeline"><Slider aria-label="Dòng thời gian mô phỏng" disabled={!enabled} min={0} max={duration||1} step={.1} value={[time]} onValueChange={value=>props.seek(typeof value==='number'?value:value[0])}/></div>
+    <select aria-label="Tốc độ phát lại" title="Tốc độ phát lại" disabled={!enabled} value={speed} onChange={e=>props.setSpeed(+e.target.value)}>{simulationSpeeds.map(value=><option key={value} value={value}>{value}×</option>)}</select>
+  </section>
   return <section className="playback-dock" aria-label={`Điều khiển phát lại · ${label}`} data-dock-time={time} data-dock-duration={duration} data-dock-speed={speed} data-dock-state={status}>
     <div className="dock-buttons"><Button disabled={!enabled || playing} onClick={props.play}><Play size={15}/>{time > 0 && status === 'paused' ? "Tiếp tục" : "Phát"}</Button><Button variant="outline" disabled={!enabled || !playing} onClick={props.pause}><Pause size={15}/>Tạm dừng</Button><Button variant="outline" disabled={!enabled} aria-label="Về đầu" onClick={props.reset}><RotateCcw size={16}/></Button></div>
     <div className="dock-timeline"><div><strong>{label}</strong><span>{numberText(time, 1)} / {numberText(duration, 1)} giây · {duration ? Math.round(time/duration*100) : 0}%</span></div><Slider aria-label="Dòng thời gian mô phỏng" disabled={!enabled} min={0} max={duration || 1} step={.1} value={[time]} onValueChange={value => props.seek(typeof value === 'number' ? value : value[0])}/></div>

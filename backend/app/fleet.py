@@ -32,7 +32,7 @@ def _read_candidates(path, mtime_ns, size, bbox):
 
 def candidate_catalog(settings):
     stat = settings.map_path.stat()
-    w, s, e, n = settings.region.display_bbox
+    w, s, e, n = getattr(settings, "operating_bbox", settings.region.display_bbox)
     # Keep demo OD points away from the extraction/render edge. This does not
     # change the display/routing bbox and does not assert graph connectivity.
     sampling_bbox = (w+(e-w)*.2, s+(n-s)*.2, e-(e-w)*.2, n-(n-s)*.2)
@@ -44,6 +44,13 @@ def candidate_catalog(settings):
                   "profile": manifest["profile"], "algorithm": manifest["algorithm"],
                   "router_url": settings.osrm_base_url, "max_snap_meters": settings.max_snap_meters,
                   "display_bbox": list(settings.region.display_bbox), "sampling_bbox": list(sampling_bbox), "candidate_version": 2}
+    if getattr(settings, "id", "hcm-center") != "hcm-center":
+        provenance.update(region_id=settings.id, routing_bbox=list(settings.routing_bbox),
+                          route_validation_bbox=list(settings.route_validation_bbox))
+        if getattr(settings, 'artifact_identity', None):
+            from .integrity import digest
+            provenance.update(artifact_identity=settings.artifact_identity, source_sha256=manifest['source_sha256'],
+                              graph_manifest_sha256=digest(settings.routing_dir/'manifest.json'))
     fingerprint = hashlib.sha256(json.dumps(provenance, sort_keys=True).encode()).hexdigest()
     return {"candidates": candidates, "datasetFingerprint": fingerprint, "provenance": provenance,
             "routingSource": "OSRM local / car / MLD", "candidateSource": "Local OSM streets vertices; car snapping unverified"}

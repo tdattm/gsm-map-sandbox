@@ -1,0 +1,4 @@
+docker info --format {{.OSType}}
+docker image inspect ghcr.io/project-osrm/osrm-backend:v5.27.1 --format "{{json .RepoDigests}}"
+docker run --rm --detach --name gsm-map-osrm --label gsm-map-sandbox=true --memory 1g --cpus 2 -p 127.0.0.1:5000:5000 --mount type=bind,source=D:\ThS\VinAI\Phase3_VRIC\gsm-map-sandbox\data\routing,target=/data,readonly ghcr.io/project-osrm/osrm-backend@sha256:855614a38f464b0558a2ad6eaa7cb8c139f39887da9b38b485ce453c6e6e6124 osrm-routed --algorithm mld /data/hcm-center.osrm
+544a24faa956e6342e256671783562f9d78ee4f41db228cc168eed6837897981

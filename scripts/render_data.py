@@ -34,9 +34,11 @@ def prepare_display(settings, extracted, osmium, dry):
     from scripts.pipeline import refuse_existing, sha256, write_json
     output = settings.map_path.parent
     manifest_path = output / "manifest.json"
+    identity = getattr(settings, "artifact_identity", None)
     if not dry and manifest_path.exists():
         old = json.loads(manifest_path.read_text(encoding="utf-8"))
-        if old.get("extract_sha256") == sha256(extracted) and all(sha256(output / name) == entry["sha256"] for name, entry in old.get("layers", {}).items()):
+        if (old.get("extract_sha256") == sha256(extracted) and (identity is None or old.get("identity") == identity)
+                and len(old.get("layers", {})) == 5 and all((output / name).is_file() and sha256(output / name) == entry["sha256"] for name, entry in old.get("layers", {}).items())):
             print("REUSE verified render layers")
             return
     if not dry:
@@ -45,8 +47,11 @@ def prepare_display(settings, extracted, osmium, dry):
     osmium.run(["tags-filter", extracted, "w/highway", "wr/natural=water", "w/waterway",
                 "wr/leisure=park,garden", "wr/landuse=grass,forest,recreation_ground", "wr/building",
                 "n/tourism=attraction,museum", "n/historic", "n/amenity=marketplace", "-o", filtered], output)
-    osmium.run(["export", filtered, "--geometry-types=linestring,polygon,point", "--add-unique-id=type_id",
-                "--stop-on-error", "-o", exported], output)
+    export_args = ["export", filtered, "--geometry-types=linestring,polygon,point", "--add-unique-id=type_id"]
+    export_log = osmium.run(export_args + (["--show-errors"] if identity else ["--stop-on-error"]) + ["-o", exported],
+                           output, capture="combined" if identity else False)
+    if identity and not dry:
+        (output / 'geometry-errors.log').write_text(export_log, encoding='utf-8')
     if dry:
         return
     source = json.loads(exported.read_text(encoding="utf-8"))
@@ -57,6 +62,8 @@ def prepare_display(settings, extracted, osmium, dry):
     w, s, e, n = settings.region.display_bbox
     # Small render buffer for pan continuity, independent of the untouched routing PBF.
     w, s, e, n = w - .005, s - .005, e + .005, n + .005
+    if getattr(settings, "render_bbox", None):
+        w, s, e, n = settings.render_bbox
     for feature in source["features"]:
         geometry, props = feature["geometry"], feature.get("properties", {})
         points = validate_geometry(geometry)
@@ -93,6 +100,13 @@ def prepare_display(settings, extracted, osmium, dry):
                 "render_bbox": [w, s, e, n], "osmium_image": osmium.image,
                 "exported_features": len(source["features"]), "duplicate_features_removed": duplicates,
                 "outside_features_removed": outside, "layers": {}}
+    if identity is not None:
+        metadata.update(identity=identity, region_id=settings.id)
+        metadata['geometry_export_policy'] = 'skip invalid OSM areas with --show-errors; never invent geometry'
+        metadata['geometry_error_log'] = {'file': 'geometry-errors.log', 'sha256': sha256(output/'geometry-errors.log'),
+                                          'text': export_log}
+        # Existing HCM manifest convention is untouched; new regions advertise actual render coverage.
+        metadata["display_bbox"] = list(settings.render_bbox)
     for name, features in layers.items():
         path = output / f"{name}.geojson"
         refuse_existing([path])

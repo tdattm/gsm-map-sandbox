@@ -1,0 +1,84 @@
+[
+  {
+    "fleet": 1000,
+    "jobId": "e4fb6f14ffb34d7fa6fc67c8df044417",
+    "audit": {
+      "schemaVersion": "gsm-route-fidelity-audit/v1",
+      "runId": "e4fb6f14ffb34d7fa6fc67c8df044417",
+      "config": {
+        "regionId": "nvmr-hanoi-core",
+        "seed": "m4-memory-1000",
+        "fleetSize": 1000,
+        "carCount": 400,
+        "bookingCount": 250,
+        "horizonSeconds": 900,
+        "maxWaitSeconds": 300,
+        "onlineFraction": 1.0,
+        "onlineSchedule": [],
+        "workload": "typical",
+        "initialCandidates": 16,
+        "maxCandidates": 128,
+        "gridCellDegrees": 0.005
+      },
+      "toleranceMeters": 0.02,
+      "method": "Haversine lengths; query-centered equirectangular segment distance; independent of cumulativeMeters",
+      "toleranceReason": "2 cm numeric allowance for full GeoJSON coordinates; not an allowance for road snapping/GPS error",
+      "sampledAssignments": 40,
+      "samples": 320,
+      "modes": {
+        "CAR": 160,
+        "MOTORBIKE": 160
+      },
+      "stationaryPickups": 250,
+      "reusedVehicles": 63,
+      "maxDeviationMeters": 7.433581755608728e-10,
+      "seekDeterministic": true,
+      "violations": [],
+      "passed": true,
+      "scope": "Stored OSRM geometry fidelity, not an independent legal/OSM topology certification"
+    },
+    "resultSha256": "39d7e3b3c5d9c429b376f0735607b13121538785a51dbbf61432de836a154044",
+    "same1000SemanticBaseline": true
+  },
+  {
+    "fleet": 5000,
+    "jobId": "77bae3c7611849eeac7a9ab4dd375cc6",
+    "audit": {
+      "schemaVersion": "gsm-route-fidelity-audit/v1",
+      "runId": "77bae3c7611849eeac7a9ab4dd375cc6",
+      "config": {
+        "regionId": "nvmr-hanoi-core",
+        "seed": "m4-memory-5000",
+        "fleetSize": 5000,
+        "carCount": 2000,
+        "bookingCount": 1250,
+        "horizonSeconds": 900,
+        "maxWaitSeconds": 300,
+        "onlineFraction": 1.0,
+        "onlineSchedule": [],
+        "workload": "typical",
+        "initialCandidates": 16,
+        "maxCandidates": 128,
+        "gridCellDegrees": 0.005
+      },
+      "toleranceMeters": 0.02,
+      "method": "Haversine lengths; query-centered equirectangular segment distance; independent of cumulativeMeters",
+      "toleranceReason": "2 cm numeric allowance for full GeoJSON coordinates; not an allowance for road snapping/GPS error",
+      "sampledAssignments": 40,
+      "samples": 528,
+      "modes": {
+        "CAR": 208,
+        "MOTORBIKE": 320
+      },
+      "stationaryPickups": 1209,
+      "reusedVehicles": 331,
+      "maxDeviationMeters": 7.341269960420141e-10,
+      "seekDeterministic": true,
+      "violations": [],
+      "passed": true,
+      "scope": "Stored OSRM geometry fidelity, not an independent legal/OSM topology certification"
+    },
+    "resultSha256": "39b91cc1029ea7785892e4035badec153bb3f2f40a26cdc51363d5fb407edecb",
+    "same1000SemanticBaseline": null
+  }
+]

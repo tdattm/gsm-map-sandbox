@@ -1,18 +1,23 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
-import { api } from './api'
+import { api, regionApi, assertRegionProvenance } from './api'
 import { FleetClock } from './fleet-clock'
 import { validateExperiment, type Experiment, type ExperimentConfig, type ArmName } from './voucher'
 import { importArtifact, importLimits, sameData, type ExperimentArtifact } from './artifact'
 import { loadReplayAssets, type ReplayAssets } from './replay-assets'
 
-export function useVoucher(active: boolean, ready: boolean, runtime: 'live'|'saved'='live') {
+export function useVoucher(active: boolean, ready: boolean, runtime: 'live'|'saved'='live', regionId?: string) {
   const [clock] = useState(() => new FleetClock()), [experiment, setExperiment] = useState<Experiment | null>(null)
   const [arm, setArm] = useState<ArmName>('treatment'), [loading, setLoading] = useState(false), [error, setError] = useState('')
   const [selectedVehicleId, setSelectedVehicleId] = useState<string | null>(null), [selectedBookingId, setSelectedBookingId] = useState<string | null>(null)
   const request = useRef<AbortController | null>(null)
   const [replayAssets,setReplayAssets]=useState<ReplayAssets|null>(null), [artifact,setArtifact]=useState<ExperimentArtifact|null>(null)
   const clear = useCallback(() => { request.current?.abort(); clock.configure(0); setExperiment(null); setReplayAssets(null); setArtifact(null); setError(''); setLoading(false); setSelectedVehicleId(null); setSelectedBookingId(null) }, [clock])
-  useEffect(() => { if (!active || (runtime==='live' && !ready)) clear() }, [active, ready, runtime, clear])
+  const liveScope = runtime === 'live' ? regionId : undefined
+  const previousScope = useRef(liveScope)
+  useEffect(() => {
+    const changed = previousScope.current !== liveScope; previousScope.current = liveScope
+    if (!active || (runtime === 'live' && (!ready || changed))) clear()
+  }, [active, ready, runtime, liveScope, clear])
   useEffect(() => { clear() }, [runtime,clear])
   useEffect(() => () => { request.current?.abort(); clock.dispose() }, [clock])
   const selectArm = (next: ArmName) => { setArm(next); setSelectedBookingId(null); setSelectedVehicleId(null) }
@@ -20,8 +25,8 @@ export function useVoucher(active: boolean, ready: boolean, runtime: 'live'|'sav
     if (!active || !ready || runtime!=='live') return
     clear(); const controller = new AbortController(); request.current = controller; setLoading(true)
     try {
-      const data = await api<Experiment>('/api/voucher-experiment/prepare', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(config), signal: controller.signal })
-      controller.signal.throwIfAborted(); validateExperiment(data); setExperiment(data); clock.configure(data.simulationDurationSeconds)
+      const data = await api<Experiment>(regionApi(regionId, '/voucher-experiment/prepare'), { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(config), signal: controller.signal })
+      controller.signal.throwIfAborted(); assertRegionProvenance(regionId, data.provenance); validateExperiment(data); setExperiment(data); clock.configure(data.simulationDurationSeconds)
     } catch (e) { if (!controller.signal.aborted) setError(e instanceof Error ? e.message : String(e)) }
     finally { if (!controller.signal.aborted) setLoading(false) }
   }
@@ -39,7 +44,7 @@ export function useVoucher(active: boolean, ready: boolean, runtime: 'live'|'sav
     } catch(e) { if(!controller.signal.aborted) setError(e instanceof Error?e.message:String(e)) }
     finally {if(!controller.signal.aborted) setLoading(false)}
   }
-  return { experiment, clock, arm, selectArm, clear, generate, loadSaved, runtime, replayAssets, artifact, loading, error, selectedBookingId, selectedVehicleId, setSelectedBookingId, setSelectedVehicleId,
+  return { regionId, experiment, clock, arm, selectArm, clear, generate, loadSaved, runtime, replayAssets, artifact, loading, error, selectedBookingId, selectedVehicleId, setSelectedBookingId, setSelectedVehicleId,
     mapSession: { clock, plan: experiment?.[arm].plan ?? null, selectedBookingId, selectedVehicleId, setSelectedBookingId, setSelectedVehicleId } }
 }
 export type VoucherSession = ReturnType<typeof useVoucher>

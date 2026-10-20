@@ -1,0 +1,18 @@
+{
+  "query": "SELECT f.id,f.layer,f.geometry,f.properties FROM features f JOIN bounds b ON f.id=b.id WHERE f.minzoom<=? AND b.minx<=? AND b.maxx>=? AND b.miny<=? AND b.maxy>=?",
+  "plan": [
+    [
+      3,
+      0,
+      0,
+      "SCAN b VIRTUAL TABLE INDEX 2:B0D1B2D3"
+    ],
+    [
+      11,
+      0,
+      0,
+      "SEARCH f USING INTEGER PRIMARY KEY (rowid=?)"
+    ]
+  ],
+  "interpretation": "Spatial Rtree bounds index first, then primary-key feature lookup; no full feature scan per tile."
+}

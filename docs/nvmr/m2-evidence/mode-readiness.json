@@ -1,0 +1,35 @@
+{
+  "regionId": "nvmr-hanoi-core",
+  "modes": [
+    {
+      "vehicleType": "CAR",
+      "ready": true,
+      "reason": "",
+      "routingIdentity": {
+        "regionId": "nvmr-hanoi-core",
+        "vehicleType": "CAR",
+        "profile": "car",
+        "profileSha256": "cb3df0546318665609606b746a1297f3d65ca3c2ff825f8a6f3c57247d86a2d3",
+        "graphManifestSha256": "a24d4957a01ceeb04a0de1ad680fe4c5dd51732a7b381d9368e249a65c1b29b5",
+        "sourceSha256": "2fbd2ee6b4dc151eecf04fa6823cddf584b47423e190118b10fce8b6115e9d8a",
+        "extractSha256": "18fd3892f6d766387f2c3217d5d104e09a9319d3905a9172834b21c0064d6308",
+        "algorithm": "mld"
+      }
+    },
+    {
+      "vehicleType": "MOTORBIKE",
+      "ready": true,
+      "reason": "",
+      "routingIdentity": {
+        "regionId": "nvmr-hanoi-core",
+        "vehicleType": "MOTORBIKE",
+        "profile": "motorbike",
+        "profileSha256": "075ecdbc70a3e75c4338d2c6a41597c132a1837ec2d27f1c2fcdd824a788b209",
+        "graphManifestSha256": "fb97489d066397b11cb9178238cd56a5f52281bcf5711430bb7cf411496ca455",
+        "sourceSha256": "2fbd2ee6b4dc151eecf04fa6823cddf584b47423e190118b10fce8b6115e9d8a",
+        "extractSha256": "18fd3892f6d766387f2c3217d5d104e09a9319d3905a9172834b21c0064d6308",
+        "algorithm": "mld"
+      }
+    }
+  ]
+}

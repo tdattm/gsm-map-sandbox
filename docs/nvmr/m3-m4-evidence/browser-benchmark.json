@@ -1,0 +1,1082 @@
+[
+  {
+    "kind": "browser-webgl-render-only",
+    "sampleCondition": "warm in-page; no page/process restart",
+    "pageAgeMs": 10919.39999999106,
+    "sourceUpdatesBefore": 9,
+    "fixture": true,
+    "fleetSize": 100,
+    "simulationTimeSeconds": 5.73309999999404,
+    "zoom": 11,
+    "browser": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36",
+    "viewport": [
+      920,
+      658
+    ],
+    "devicePixelRatio": 1.0000000149011612,
+    "webglRenderer": "ANGLE (Intel, Intel(R) Iris(R) Xe Graphics (0x00009A49) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+    "durationMs": 5020.5,
+    "frames": 301,
+    "fps": 59.95418782989742,
+    "frameTimeP50Ms": 16.699999999999818,
+    "frameTimeP95Ms": 17,
+    "longTaskSupported": true,
+    "longTasks": 0,
+    "longTaskTotalMs": 0,
+    "heap": {
+      "usedJSHeapSize": 31415267,
+      "totalJSHeapSize": 64125911,
+      "jsHeapSizeLimit": 4395630592
+    },
+    "domMarkerCount": 0,
+    "sourceCount": 3,
+    "layerCount": 7,
+    "setDataSubmissionP50Ms": 0.09999999403953552,
+    "setDataSubmissionP95Ms": 0.20000000298023224,
+    "sourceLoadedLagP95Ms": 5.200000002980232,
+    "dataUpdates": 51,
+    "selectionToNextFrameMs": 4.299999997019768,
+    "snapshotAgeMs": 265.1000000089407,
+    "visibleClusterCount": 23,
+    "visibleVehicleCount": 10,
+    "visibleRepresentedVehicles": 100,
+    "clusterOracle": {
+      "checked": 23,
+      "failures": [],
+      "representedLeafCount": 90,
+      "uniqueLeafCount": 90,
+      "scope": "all fleet represented in current viewport",
+      "passed": true,
+      "diagnostics": {
+        "center": [
+          105.84,
+          21.04
+        ],
+        "bounds": [
+          [
+            105.68207153320304,
+            20.93454014473319
+          ],
+          [
+            105.9979284667973,
+            21.14538524009359
+          ]
+        ],
+        "inputVehiclesInBounds": 100,
+        "sourceFeatures": 100,
+        "loaded": true
+      }
+    },
+    "clusterScope": "viewport; duplicates removed; not full-source coverage assertion",
+    "pan": "continuous small jumpTo pan during capture; zoom fixed",
+    "mapLifetime": "4e7fd573-e89f-4a33-9424-ab719ffd808c"
+  },
+  {
+    "kind": "browser-webgl-render-only",
+    "sampleCondition": "warm in-page; no page/process restart",
+    "pageAgeMs": 16912.39999999106,
+    "sourceUpdatesBefore": 66,
+    "fixture": true,
+    "fleetSize": 100,
+    "simulationTimeSeconds": 11.44989999999106,
+    "zoom": 13,
+    "browser": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36",
+    "viewport": [
+      920,
+      658
+    ],
+    "devicePixelRatio": 1.0000000149011612,
+    "webglRenderer": "ANGLE (Intel, Intel(R) Iris(R) Xe Graphics (0x00009A49) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+    "durationMs": 5016.20000000298,
+    "frames": 301,
+    "fps": 60.005581914561056,
+    "frameTimeP50Ms": 16.69999999999891,
+    "frameTimeP95Ms": 17,
+    "longTaskSupported": true,
+    "longTasks": 0,
+    "longTaskTotalMs": 0,
+    "heap": {
+      "usedJSHeapSize": 47812102,
+      "totalJSHeapSize": 89848494,
+      "jsHeapSizeLimit": 4395630592
+    },
+    "domMarkerCount": 0,
+    "sourceCount": 3,
+    "layerCount": 7,
+    "setDataSubmissionP50Ms": 0,
+    "setDataSubmissionP95Ms": 0.10000000894069672,
+    "sourceLoadedLagP95Ms": 4.0999999940395355,
+    "dataUpdates": 51,
+    "selectionToNextFrameMs": 0.699999988079071,
+    "snapshotAgeMs": 266.40000000596046,
+    "visibleClusterCount": 4,
+    "visibleVehicleCount": 18,
+    "visibleRepresentedVehicles": 26,
+    "clusterOracle": {
+      "checked": 4,
+      "failures": [],
+      "representedLeafCount": 8,
+      "uniqueLeafCount": 8,
+      "scope": "visible viewport clusters only",
+      "passed": true,
+      "diagnostics": {
+        "center": [
+          105.84,
+          21.04
+        ],
+        "bounds": [
+          [
+            105.80051788329854,
+            21.013642019473608
+          ],
+          [
+            105.87948211669686,
+            21.066353317071588
+          ]
+        ],
+        "inputVehiclesInBounds": 25,
+        "sourceFeatures": 100,
+        "loaded": true
+      }
+    },
+    "clusterScope": "viewport; duplicates removed; not full-source coverage assertion",
+    "pan": "continuous small jumpTo pan during capture; zoom fixed",
+    "mapLifetime": "4e7fd573-e89f-4a33-9424-ab719ffd808c"
+  },
+  {
+    "kind": "browser-webgl-render-only",
+    "sampleCondition": "warm in-page; no page/process restart",
+    "pageAgeMs": 22886,
+    "sourceUpdatesBefore": 123,
+    "fixture": true,
+    "fleetSize": 100,
+    "simulationTimeSeconds": 17.156899999991058,
+    "zoom": 16,
+    "browser": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36",
+    "viewport": [
+      920,
+      658
+    ],
+    "devicePixelRatio": 1.0000000149011612,
+    "webglRenderer": "ANGLE (Intel, Intel(R) Iris(R) Xe Graphics (0x00009A49) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+    "durationMs": 5005.20000000298,
+    "frames": 301,
+    "fps": 60.137457044637735,
+    "frameTimeP50Ms": 16.700000000000728,
+    "frameTimeP95Ms": 16.900000000001455,
+    "longTaskSupported": true,
+    "longTasks": 0,
+    "longTaskTotalMs": 0,
+    "heap": {
+      "usedJSHeapSize": 52318225,
+      "totalJSHeapSize": 89625781,
+      "jsHeapSizeLimit": 4395630592
+    },
+    "domMarkerCount": 0,
+    "sourceCount": 3,
+    "layerCount": 7,
+    "setDataSubmissionP50Ms": 0,
+    "setDataSubmissionP95Ms": 0.10000000894069672,
+    "sourceLoadedLagP95Ms": 4.899999991059303,
+    "dataUpdates": 51,
+    "selectionToNextFrameMs": 0.5999999940395355,
+    "snapshotAgeMs": 232.40000000596046,
+    "visibleClusterCount": 0,
+    "visibleVehicleCount": 1,
+    "visibleRepresentedVehicles": 1,
+    "clusterOracle": {
+      "checked": 0,
+      "failures": [],
+      "representedLeafCount": 0,
+      "uniqueLeafCount": 0,
+      "scope": "visible viewport clusters only",
+      "passed": true,
+      "diagnostics": {
+        "center": [
+          105.80424799341354,
+          20.999779058393763
+        ],
+        "bounds": [
+          [
+            105.79931272882618,
+            20.996483677027683
+          ],
+          [
+            105.80918325800053,
+            21.003074367004515
+          ]
+        ],
+        "inputVehiclesInBounds": 1,
+        "sourceFeatures": 100,
+        "loaded": true
+      }
+    },
+    "clusterScope": "viewport; duplicates removed; not full-source coverage assertion",
+    "pan": "continuous small jumpTo pan during capture; zoom fixed",
+    "mapLifetime": "4e7fd573-e89f-4a33-9424-ab719ffd808c"
+  },
+  {
+    "kind": "browser-webgl-render-only",
+    "sampleCondition": "warm in-page; no page/process restart",
+    "pageAgeMs": 51769,
+    "sourceUpdatesBefore": 182,
+    "fixture": true,
+    "fleetSize": 500,
+    "simulationTimeSeconds": 5.713899999991059,
+    "zoom": 11,
+    "browser": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36",
+    "viewport": [
+      920,
+      658
+    ],
+    "devicePixelRatio": 1.0000000149011612,
+    "webglRenderer": "ANGLE (Intel, Intel(R) Iris(R) Xe Graphics (0x00009A49) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+    "durationMs": 5013.4000000059605,
+    "frames": 301,
+    "fps": 60.03909522472616,
+    "frameTimeP50Ms": 16.69999999999709,
+    "frameTimeP95Ms": 16.900000000001455,
+    "longTaskSupported": true,
+    "longTasks": 0,
+    "longTaskTotalMs": 0,
+    "heap": {
+      "usedJSHeapSize": 42008121,
+      "totalJSHeapSize": 61886513,
+      "jsHeapSizeLimit": 4395630592
+    },
+    "domMarkerCount": 0,
+    "sourceCount": 3,
+    "layerCount": 7,
+    "setDataSubmissionP50Ms": 0.09999999403953552,
+    "setDataSubmissionP95Ms": 0.20000000298023224,
+    "sourceLoadedLagP95Ms": 12.899999991059303,
+    "dataUpdates": 51,
+    "selectionToNextFrameMs": 16.600000008940697,
+    "snapshotAgeMs": 290.40000000596046,
+    "visibleClusterCount": 35,
+    "visibleVehicleCount": 2,
+    "visibleRepresentedVehicles": 500,
+    "clusterOracle": {
+      "checked": 35,
+      "failures": [],
+      "representedLeafCount": 498,
+      "uniqueLeafCount": 498,
+      "scope": "all fleet represented in current viewport",
+      "passed": true,
+      "diagnostics": {
+        "center": [
+          105.80424799341354,
+          20.999779058393763
+        ],
+        "bounds": [
+          [
+            105.64631952661557,
+            20.89429081992948
+          ],
+          [
+            105.96217646020983,
+            21.105192797778088
+          ]
+        ],
+        "inputVehiclesInBounds": 500,
+        "sourceFeatures": 500,
+        "loaded": true
+      }
+    },
+    "clusterScope": "viewport; duplicates removed; not full-source coverage assertion",
+    "pan": "continuous small jumpTo pan during capture; zoom fixed",
+    "mapLifetime": "4e7fd573-e89f-4a33-9424-ab719ffd808c"
+  },
+  {
+    "kind": "browser-webgl-render-only",
+    "sampleCondition": "warm in-page; no page/process restart",
+    "pageAgeMs": 57756.39999999106,
+    "sourceUpdatesBefore": 239,
+    "fixture": true,
+    "fleetSize": 500,
+    "simulationTimeSeconds": 11.4344999999851,
+    "zoom": 13,
+    "browser": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36",
+    "viewport": [
+      920,
+      658
+    ],
+    "devicePixelRatio": 1.0000000149011612,
+    "webglRenderer": "ANGLE (Intel, Intel(R) Iris(R) Xe Graphics (0x00009A49) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+    "durationMs": 5017.29999999702,
+    "frames": 301,
+    "fps": 59.99242620536519,
+    "frameTimeP50Ms": 16.69999999999709,
+    "frameTimeP95Ms": 17,
+    "longTaskSupported": true,
+    "longTasks": 0,
+    "longTaskTotalMs": 0,
+    "heap": {
+      "usedJSHeapSize": 38660587,
+      "totalJSHeapSize": 77246435,
+      "jsHeapSizeLimit": 4395630592
+    },
+    "domMarkerCount": 0,
+    "sourceCount": 3,
+    "layerCount": 7,
+    "setDataSubmissionP50Ms": 0.09999999403953552,
+    "setDataSubmissionP95Ms": 0.20000000298023224,
+    "sourceLoadedLagP95Ms": 11.299999997019768,
+    "dataUpdates": 52,
+    "selectionToNextFrameMs": 0.20000000298023224,
+    "snapshotAgeMs": 169.20000000298023,
+    "visibleClusterCount": 27,
+    "visibleVehicleCount": 35,
+    "visibleRepresentedVehicles": 102,
+    "clusterOracle": {
+      "checked": 27,
+      "failures": [],
+      "representedLeafCount": 67,
+      "uniqueLeafCount": 67,
+      "scope": "visible viewport clusters only",
+      "passed": true,
+      "diagnostics": {
+        "center": [
+          105.80424799341354,
+          20.999779058393763
+        ],
+        "bounds": [
+          [
+            105.76476587671357,
+            20.973413971165087
+          ],
+          [
+            105.84373011011184,
+            21.026139489421595
+          ]
+        ],
+        "inputVehiclesInBounds": 97,
+        "sourceFeatures": 500,
+        "loaded": true
+      }
+    },
+    "clusterScope": "viewport; duplicates removed; not full-source coverage assertion",
+    "pan": "continuous small jumpTo pan during capture; zoom fixed",
+    "mapLifetime": "4e7fd573-e89f-4a33-9424-ab719ffd808c"
+  },
+  {
+    "kind": "browser-webgl-render-only",
+    "sampleCondition": "warm in-page; no page/process restart",
+    "pageAgeMs": 63738.39999999106,
+    "sourceUpdatesBefore": 297,
+    "fixture": true,
+    "fleetSize": 500,
+    "simulationTimeSeconds": 17.14839999999106,
+    "zoom": 16,
+    "browser": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36",
+    "viewport": [
+      920,
+      658
+    ],
+    "devicePixelRatio": 1.0000000149011612,
+    "webglRenderer": "ANGLE (Intel, Intel(R) Iris(R) Xe Graphics (0x00009A49) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+    "durationMs": 5013.199999988079,
+    "frames": 301,
+    "fps": 60.041490465314716,
+    "frameTimeP50Ms": 16.69999999999709,
+    "frameTimeP95Ms": 17,
+    "longTaskSupported": true,
+    "longTasks": 0,
+    "longTaskTotalMs": 0,
+    "heap": {
+      "usedJSHeapSize": 47289958,
+      "totalJSHeapSize": 88165602,
+      "jsHeapSizeLimit": 4395630592
+    },
+    "domMarkerCount": 0,
+    "sourceCount": 3,
+    "layerCount": 7,
+    "setDataSubmissionP50Ms": 0.09999999403953552,
+    "setDataSubmissionP95Ms": 0.20000000298023224,
+    "sourceLoadedLagP95Ms": 6.799999997019768,
+    "dataUpdates": 51,
+    "selectionToNextFrameMs": 0.7000000029802322,
+    "snapshotAgeMs": 261.59999999403954,
+    "visibleClusterCount": 0,
+    "visibleVehicleCount": 4,
+    "visibleRepresentedVehicles": 4,
+    "clusterOracle": {
+      "checked": 0,
+      "failures": [],
+      "representedLeafCount": 0,
+      "uniqueLeafCount": 0,
+      "scope": "visible viewport clusters only",
+      "passed": true,
+      "diagnostics": {
+        "center": [
+          105.80424824273496,
+          20.999778997429793
+        ],
+        "bounds": [
+          [
+            105.79931297815023,
+            20.996483616063514
+          ],
+          [
+            105.80918350732452,
+            21.003074306043032
+          ]
+        ],
+        "inputVehiclesInBounds": 4,
+        "sourceFeatures": 500,
+        "loaded": true
+      }
+    },
+    "clusterScope": "viewport; duplicates removed; not full-source coverage assertion",
+    "pan": "continuous small jumpTo pan during capture; zoom fixed",
+    "mapLifetime": "4e7fd573-e89f-4a33-9424-ab719ffd808c"
+  },
+  {
+    "kind": "browser-webgl-render-only",
+    "sampleCondition": "warm in-page; no page/process restart",
+    "pageAgeMs": 90119,
+    "sourceUpdatesBefore": 356,
+    "fixture": true,
+    "fleetSize": 1000,
+    "simulationTimeSeconds": 5.734800000011921,
+    "zoom": 11,
+    "browser": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36",
+    "viewport": [
+      920,
+      658
+    ],
+    "devicePixelRatio": 1.0000000149011612,
+    "webglRenderer": "ANGLE (Intel, Intel(R) Iris(R) Xe Graphics (0x00009A49) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+    "durationMs": 5022.399999991059,
+    "frames": 301,
+    "fps": 59.93150684942176,
+    "frameTimeP50Ms": 16.69999999999709,
+    "frameTimeP95Ms": 16.90000000000873,
+    "longTaskSupported": true,
+    "longTasks": 0,
+    "longTaskTotalMs": 0,
+    "heap": {
+      "usedJSHeapSize": 39616126,
+      "totalJSHeapSize": 62939338,
+      "jsHeapSizeLimit": 4395630592
+    },
+    "domMarkerCount": 0,
+    "sourceCount": 3,
+    "layerCount": 7,
+    "setDataSubmissionP50Ms": 0.19999998807907104,
+    "setDataSubmissionP95Ms": 0.3999999910593033,
+    "sourceLoadedLagP95Ms": 29.5,
+    "dataUpdates": 52,
+    "selectionToNextFrameMs": 11.700000002980232,
+    "snapshotAgeMs": 212.70000000298023,
+    "visibleClusterCount": 34,
+    "visibleVehicleCount": 1,
+    "visibleRepresentedVehicles": 1000,
+    "clusterOracle": {
+      "checked": 34,
+      "failures": [],
+      "representedLeafCount": 999,
+      "uniqueLeafCount": 999,
+      "scope": "all fleet represented in current viewport",
+      "passed": true,
+      "diagnostics": {
+        "center": [
+          105.80424824273496,
+          20.999778997429793
+        ],
+        "bounds": [
+          [
+            105.64631977594087,
+            20.89429075892137
+          ],
+          [
+            105.96217670953513,
+            21.10519273685614
+          ]
+        ],
+        "inputVehiclesInBounds": 1000,
+        "sourceFeatures": 1000,
+        "loaded": true
+      }
+    },
+    "clusterScope": "viewport; duplicates removed; not full-source coverage assertion",
+    "pan": "continuous small jumpTo pan during capture; zoom fixed",
+    "mapLifetime": "4e7fd573-e89f-4a33-9424-ab719ffd808c"
+  },
+  {
+    "kind": "browser-webgl-render-only",
+    "sampleCondition": "warm in-page; no page/process restart",
+    "pageAgeMs": 96103,
+    "sourceUpdatesBefore": 415,
+    "fixture": true,
+    "fleetSize": 1000,
+    "simulationTimeSeconds": 11.450300000011921,
+    "zoom": 13,
+    "browser": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36",
+    "viewport": [
+      920,
+      658
+    ],
+    "devicePixelRatio": 1.0000000149011612,
+    "webglRenderer": "ANGLE (Intel, Intel(R) Iris(R) Xe Graphics (0x00009A49) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+    "durationMs": 5003.5,
+    "frames": 301,
+    "fps": 60.15788947736585,
+    "frameTimeP50Ms": 16.69999999999709,
+    "frameTimeP95Ms": 17,
+    "longTaskSupported": true,
+    "longTasks": 0,
+    "longTaskTotalMs": 0,
+    "heap": {
+      "usedJSHeapSize": 53640380,
+      "totalJSHeapSize": 85218688,
+      "jsHeapSizeLimit": 4395630592
+    },
+    "domMarkerCount": 0,
+    "sourceCount": 3,
+    "layerCount": 7,
+    "setDataSubmissionP50Ms": 0.10000000894069672,
+    "setDataSubmissionP95Ms": 0.29999999701976776,
+    "sourceLoadedLagP95Ms": 12,
+    "dataUpdates": 51,
+    "selectionToNextFrameMs": 0.6000000089406967,
+    "snapshotAgeMs": 205.6000000089407,
+    "visibleClusterCount": 58,
+    "visibleVehicleCount": 31,
+    "visibleRepresentedVehicles": 219,
+    "clusterOracle": {
+      "checked": 58,
+      "failures": [],
+      "representedLeafCount": 188,
+      "uniqueLeafCount": 188,
+      "scope": "visible viewport clusters only",
+      "passed": true,
+      "diagnostics": {
+        "center": [
+          105.80424824273496,
+          20.999778997429793
+        ],
+        "bounds": [
+          [
+            105.76476612603767,
+            20.973413910191496
+          ],
+          [
+            105.84373035943594,
+            21.026139428469534
+          ]
+        ],
+        "inputVehiclesInBounds": 210,
+        "sourceFeatures": 1000,
+        "loaded": true
+      }
+    },
+    "clusterScope": "viewport; duplicates removed; not full-source coverage assertion",
+    "pan": "continuous small jumpTo pan during capture; zoom fixed",
+    "mapLifetime": "4e7fd573-e89f-4a33-9424-ab719ffd808c"
+  },
+  {
+    "kind": "browser-webgl-render-only",
+    "sampleCondition": "warm in-page; no page/process restart",
+    "pageAgeMs": 102105.39999999106,
+    "sourceUpdatesBefore": 473,
+    "fixture": true,
+    "fleetSize": 1000,
+    "simulationTimeSeconds": 17.181800000011922,
+    "zoom": 16,
+    "browser": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36",
+    "viewport": [
+      920,
+      658
+    ],
+    "devicePixelRatio": 1.0000000149011612,
+    "webglRenderer": "ANGLE (Intel, Intel(R) Iris(R) Xe Graphics (0x00009A49) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+    "durationMs": 5015.70000000298,
+    "frames": 301,
+    "fps": 60.0115636899777,
+    "frameTimeP50Ms": 16.69999999999709,
+    "frameTimeP95Ms": 17,
+    "longTaskSupported": true,
+    "longTasks": 0,
+    "longTaskTotalMs": 0,
+    "heap": {
+      "usedJSHeapSize": 40262317,
+      "totalJSHeapSize": 93416085,
+      "jsHeapSizeLimit": 4395630592
+    },
+    "domMarkerCount": 0,
+    "sourceCount": 3,
+    "layerCount": 7,
+    "setDataSubmissionP50Ms": 0.10000000894069672,
+    "setDataSubmissionP95Ms": 0.20000000298023224,
+    "sourceLoadedLagP95Ms": 15,
+    "dataUpdates": 51,
+    "selectionToNextFrameMs": 0.29999999701976776,
+    "snapshotAgeMs": 203.59999999403954,
+    "visibleClusterCount": 0,
+    "visibleVehicleCount": 5,
+    "visibleRepresentedVehicles": 5,
+    "clusterOracle": {
+      "checked": 0,
+      "failures": [],
+      "representedLeafCount": 0,
+      "uniqueLeafCount": 0,
+      "scope": "visible viewport clusters only",
+      "passed": true,
+      "diagnostics": {
+        "center": [
+          105.80424798693808,
+          20.99977905997895
+        ],
+        "bounds": [
+          [
+            105.79931272235365,
+            20.99648367861336
+          ],
+          [
+            105.80918325152794,
+            21.003074368590106
+          ]
+        ],
+        "inputVehiclesInBounds": 5,
+        "sourceFeatures": 1000,
+        "loaded": true
+      }
+    },
+    "clusterScope": "viewport; duplicates removed; not full-source coverage assertion",
+    "pan": "continuous small jumpTo pan during capture; zoom fixed",
+    "mapLifetime": "4e7fd573-e89f-4a33-9424-ab719ffd808c"
+  },
+  {
+    "kind": "browser-webgl-render-only",
+    "sampleCondition": "warm in-page; no page/process restart",
+    "pageAgeMs": 156217.09999999404,
+    "sourceUpdatesBefore": 532,
+    "fixture": true,
+    "fleetSize": 3000,
+    "simulationTimeSeconds": 5.710100000008941,
+    "zoom": 11,
+    "browser": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36",
+    "viewport": [
+      920,
+      658
+    ],
+    "devicePixelRatio": 1.0000000149011612,
+    "webglRenderer": "ANGLE (Intel, Intel(R) Iris(R) Xe Graphics (0x00009A49) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+    "durationMs": 5004.5,
+    "frames": 300,
+    "fps": 59.94604855629933,
+    "frameTimeP50Ms": 16.699999999982538,
+    "frameTimeP95Ms": 17,
+    "longTaskSupported": true,
+    "longTasks": 0,
+    "longTaskTotalMs": 0,
+    "heap": {
+      "usedJSHeapSize": 52847374,
+      "totalJSHeapSize": 92389174,
+      "jsHeapSizeLimit": 4395630592
+    },
+    "domMarkerCount": 0,
+    "sourceCount": 3,
+    "layerCount": 7,
+    "setDataSubmissionP50Ms": 0.29999999701976776,
+    "setDataSubmissionP95Ms": 0.7000000029802322,
+    "sourceLoadedLagP95Ms": 36.6000000089407,
+    "dataUpdates": 52,
+    "selectionToNextFrameMs": 5.200000002980232,
+    "snapshotAgeMs": 196.80000001192093,
+    "visibleClusterCount": 38,
+    "visibleVehicleCount": 1,
+    "visibleRepresentedVehicles": 3000,
+    "clusterOracle": {
+      "checked": 38,
+      "failures": [],
+      "representedLeafCount": 2999,
+      "uniqueLeafCount": 2999,
+      "scope": "all fleet represented in current viewport",
+      "passed": true,
+      "diagnostics": {
+        "center": [
+          105.80424798693808,
+          20.99977905997895
+        ],
+        "bounds": [
+          [
+            105.6463195201406,
+            20.8942908215151
+          ],
+          [
+            105.96217645373486,
+            21.105192799361447
+          ]
+        ],
+        "inputVehiclesInBounds": 3000,
+        "sourceFeatures": 3000,
+        "loaded": true
+      }
+    },
+    "clusterScope": "viewport; duplicates removed; not full-source coverage assertion",
+    "pan": "continuous small jumpTo pan during capture; zoom fixed",
+    "mapLifetime": "4e7fd573-e89f-4a33-9424-ab719ffd808c"
+  },
+  {
+    "kind": "browser-webgl-render-only",
+    "sampleCondition": "warm in-page; no page/process restart",
+    "pageAgeMs": 162237.39999999106,
+    "sourceUpdatesBefore": 591,
+    "fixture": true,
+    "fleetSize": 3000,
+    "simulationTimeSeconds": 11.458800000011921,
+    "zoom": 13,
+    "browser": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36",
+    "viewport": [
+      920,
+      658
+    ],
+    "devicePixelRatio": 1.0000000149011612,
+    "webglRenderer": "ANGLE (Intel, Intel(R) Iris(R) Xe Graphics (0x00009A49) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+    "durationMs": 5015.20000000298,
+    "frames": 303,
+    "fps": 60.41633434355957,
+    "frameTimeP50Ms": 16.699999999982538,
+    "frameTimeP95Ms": 16.900000000023283,
+    "longTaskSupported": true,
+    "longTasks": 0,
+    "longTaskTotalMs": 0,
+    "heap": {
+      "usedJSHeapSize": 47839294,
+      "totalJSHeapSize": 98781082,
+      "jsHeapSizeLimit": 4395630592
+    },
+    "domMarkerCount": 0,
+    "sourceCount": 3,
+    "layerCount": 7,
+    "setDataSubmissionP50Ms": 0.29999999701976776,
+    "setDataSubmissionP95Ms": 0.5,
+    "sourceLoadedLagP95Ms": 28.600000008940697,
+    "dataUpdates": 51,
+    "selectionToNextFrameMs": 0.3999999910593033,
+    "snapshotAgeMs": 218.5,
+    "visibleClusterCount": 102,
+    "visibleVehicleCount": 15,
+    "visibleRepresentedVehicles": 652,
+    "clusterOracle": {
+      "checked": 102,
+      "failures": [],
+      "representedLeafCount": 637,
+      "uniqueLeafCount": 637,
+      "scope": "visible viewport clusters only",
+      "passed": true,
+      "diagnostics": {
+        "center": [
+          105.80424798693808,
+          20.99977905997895
+        ],
+        "bounds": [
+          [
+            105.76476587024229,
+            20.97341397275099
+          ],
+          [
+            105.84373010364055,
+            21.02613949100693
+          ]
+        ],
+        "inputVehiclesInBounds": 609,
+        "sourceFeatures": 3000,
+        "loaded": true
+      }
+    },
+    "clusterScope": "viewport; duplicates removed; not full-source coverage assertion",
+    "pan": "continuous small jumpTo pan during capture; zoom fixed",
+    "mapLifetime": "4e7fd573-e89f-4a33-9424-ab719ffd808c"
+  },
+  {
+    "kind": "browser-webgl-render-only",
+    "sampleCondition": "warm in-page; no page/process restart",
+    "pageAgeMs": 168226.79999999702,
+    "sourceUpdatesBefore": 649,
+    "fixture": true,
+    "fleetSize": 3000,
+    "simulationTimeSeconds": 17.17410000000894,
+    "zoom": 16,
+    "browser": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36",
+    "viewport": [
+      920,
+      658
+    ],
+    "devicePixelRatio": 1.0000000149011612,
+    "webglRenderer": "ANGLE (Intel, Intel(R) Iris(R) Xe Graphics (0x00009A49) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+    "durationMs": 5012.199999988079,
+    "frames": 301,
+    "fps": 60.05346953447905,
+    "frameTimeP50Ms": 16.699999999982538,
+    "frameTimeP95Ms": 16.89999999999418,
+    "longTaskSupported": true,
+    "longTasks": 0,
+    "longTaskTotalMs": 0,
+    "heap": {
+      "usedJSHeapSize": 58618793,
+      "totalJSHeapSize": 97614589,
+      "jsHeapSizeLimit": 4395630592
+    },
+    "domMarkerCount": 0,
+    "sourceCount": 3,
+    "layerCount": 7,
+    "setDataSubmissionP50Ms": 0.20000000298023224,
+    "setDataSubmissionP95Ms": 0.5,
+    "sourceLoadedLagP95Ms": 35.900000005960464,
+    "dataUpdates": 51,
+    "selectionToNextFrameMs": 0.20000000298023224,
+    "snapshotAgeMs": 208.5,
+    "visibleClusterCount": 0,
+    "visibleVehicleCount": 19,
+    "visibleRepresentedVehicles": 19,
+    "clusterOracle": {
+      "checked": 0,
+      "failures": [],
+      "representedLeafCount": 0,
+      "uniqueLeafCount": 0,
+      "scope": "visible viewport clusters only",
+      "passed": true,
+      "diagnostics": {
+        "center": [
+          105.80424784933948,
+          20.99977909368454
+        ],
+        "bounds": [
+          [
+            105.79931258475312,
+            20.996483712319034
+          ],
+          [
+            105.80918311392742,
+            21.00307440229429
+          ]
+        ],
+        "inputVehiclesInBounds": 19,
+        "sourceFeatures": 3000,
+        "loaded": true
+      }
+    },
+    "clusterScope": "viewport; duplicates removed; not full-source coverage assertion",
+    "pan": "continuous small jumpTo pan during capture; zoom fixed",
+    "mapLifetime": "4e7fd573-e89f-4a33-9424-ab719ffd808c"
+  },
+  {
+    "kind": "browser-webgl-render-only",
+    "sampleCondition": "warm in-page; no page/process restart",
+    "pageAgeMs": 211032.89999999106,
+    "sourceUpdatesBefore": 709,
+    "fixture": true,
+    "fleetSize": 5000,
+    "simulationTimeSeconds": 5.72540000000596,
+    "zoom": 11,
+    "browser": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36",
+    "viewport": [
+      920,
+      658
+    ],
+    "devicePixelRatio": 1.0000000149011612,
+    "webglRenderer": "ANGLE (Intel, Intel(R) Iris(R) Xe Graphics (0x00009A49) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+    "durationMs": 5008,
+    "frames": 300,
+    "fps": 59.90415335463259,
+    "frameTimeP50Ms": 16.699999999982538,
+    "frameTimeP95Ms": 16.89999999999418,
+    "longTaskSupported": true,
+    "longTasks": 0,
+    "longTaskTotalMs": 0,
+    "heap": {
+      "usedJSHeapSize": 49820095,
+      "totalJSHeapSize": 97153563,
+      "jsHeapSizeLimit": 4395630592
+    },
+    "domMarkerCount": 0,
+    "sourceCount": 3,
+    "layerCount": 7,
+    "setDataSubmissionP50Ms": 0.3999999910593033,
+    "setDataSubmissionP95Ms": 0.8999999910593033,
+    "sourceLoadedLagP95Ms": 51.400000005960464,
+    "dataUpdates": 51,
+    "selectionToNextFrameMs": 7.700000002980232,
+    "snapshotAgeMs": 245.70000000298023,
+    "visibleClusterCount": 38,
+    "visibleVehicleCount": 0,
+    "visibleRepresentedVehicles": 5000,
+    "clusterOracle": {
+      "checked": 38,
+      "failures": [],
+      "representedLeafCount": 5000,
+      "uniqueLeafCount": 5000,
+      "scope": "all fleet represented in current viewport",
+      "passed": true,
+      "diagnostics": {
+        "center": [
+          105.80424784933948,
+          20.99977909368454
+        ],
+        "bounds": [
+          [
+            105.64631938254502,
+            20.89429085524381
+          ],
+          [
+            105.96217631613928,
+            21.10519283304255
+          ]
+        ],
+        "inputVehiclesInBounds": 5000,
+        "sourceFeatures": 5000,
+        "loaded": true
+      }
+    },
+    "clusterScope": "viewport; duplicates removed; not full-source coverage assertion",
+    "pan": "continuous small jumpTo pan during capture; zoom fixed",
+    "mapLifetime": "4e7fd573-e89f-4a33-9424-ab719ffd808c"
+  },
+  {
+    "kind": "browser-webgl-render-only",
+    "sampleCondition": "warm in-page; no page/process restart",
+    "pageAgeMs": 217065.89999999106,
+    "sourceUpdatesBefore": 767,
+    "fixture": true,
+    "fleetSize": 5000,
+    "simulationTimeSeconds": 11.44220000000298,
+    "zoom": 13,
+    "browser": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36",
+    "viewport": [
+      920,
+      658
+    ],
+    "devicePixelRatio": 1.0000000149011612,
+    "webglRenderer": "ANGLE (Intel, Intel(R) Iris(R) Xe Graphics (0x00009A49) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+    "durationMs": 5015,
+    "frames": 301,
+    "fps": 60.01994017946162,
+    "frameTimeP50Ms": 16.699999999982538,
+    "frameTimeP95Ms": 16.89999999999418,
+    "longTaskSupported": true,
+    "longTasks": 0,
+    "longTaskTotalMs": 0,
+    "heap": {
+      "usedJSHeapSize": 73363164,
+      "totalJSHeapSize": 112329700,
+      "jsHeapSizeLimit": 4395630592
+    },
+    "domMarkerCount": 0,
+    "sourceCount": 3,
+    "layerCount": 7,
+    "setDataSubmissionP50Ms": 0.3999999910593033,
+    "setDataSubmissionP95Ms": 0.5,
+    "sourceLoadedLagP95Ms": 49.79999999701977,
+    "dataUpdates": 51,
+    "selectionToNextFrameMs": 4.299999997019768,
+    "snapshotAgeMs": 278.40000000596046,
+    "visibleClusterCount": 112,
+    "visibleVehicleCount": 11,
+    "visibleRepresentedVehicles": 1082,
+    "clusterOracle": {
+      "checked": 112,
+      "failures": [],
+      "representedLeafCount": 1071,
+      "uniqueLeafCount": 1071,
+      "scope": "visible viewport clusters only",
+      "passed": true,
+      "diagnostics": {
+        "center": [
+          105.80424784933948,
+          20.99977909368454
+        ],
+        "bounds": [
+          [
+            105.7647657326417,
+            20.973414006461894
+          ],
+          [
+            105.84372996604003,
+            21.026139524705954
+          ]
+        ],
+        "inputVehiclesInBounds": 1039,
+        "sourceFeatures": 5000,
+        "loaded": true
+      }
+    },
+    "clusterScope": "viewport; duplicates removed; not full-source coverage assertion",
+    "pan": "continuous small jumpTo pan during capture; zoom fixed",
+    "mapLifetime": "4e7fd573-e89f-4a33-9424-ab719ffd808c"
+  },
+  {
+    "kind": "browser-webgl-render-only",
+    "sampleCondition": "warm in-page; no page/process restart",
+    "pageAgeMs": 223082.59999999404,
+    "sourceUpdatesBefore": 824,
+    "fixture": true,
+    "fleetSize": 5000,
+    "simulationTimeSeconds": 17.17960000000894,
+    "zoom": 16,
+    "browser": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36",
+    "viewport": [
+      920,
+      658
+    ],
+    "devicePixelRatio": 1.0000000149011612,
+    "webglRenderer": "ANGLE (Intel, Intel(R) Iris(R) Xe Graphics (0x00009A49) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+    "durationMs": 5024,
+    "frames": 301,
+    "fps": 59.91242038216561,
+    "frameTimeP50Ms": 16.699999999982538,
+    "frameTimeP95Ms": 16.89999999999418,
+    "longTaskSupported": true,
+    "longTasks": 0,
+    "longTaskTotalMs": 0,
+    "heap": {
+      "usedJSHeapSize": 68254119,
+      "totalJSHeapSize": 112163643,
+      "jsHeapSizeLimit": 4395630592
+    },
+    "domMarkerCount": 0,
+    "sourceCount": 3,
+    "layerCount": 7,
+    "setDataSubmissionP50Ms": 0.3999999910593033,
+    "setDataSubmissionP95Ms": 0.5,
+    "sourceLoadedLagP95Ms": 42.70000000298023,
+    "dataUpdates": 52,
+    "selectionToNextFrameMs": 3,
+    "snapshotAgeMs": 195.70000000298023,
+    "visibleClusterCount": 0,
+    "visibleVehicleCount": 28,
+    "visibleRepresentedVehicles": 28,
+    "clusterOracle": {
+      "checked": 0,
+      "failures": [],
+      "representedLeafCount": 0,
+      "uniqueLeafCount": 0,
+      "scope": "visible viewport clusters only",
+      "passed": true,
+      "diagnostics": {
+        "center": [
+          105.80424811807035,
+          20.99977902789578
+        ],
+        "bounds": [
+          [
+            105.7993128534842,
+            20.996483646530535
+          ],
+          [
+            105.80918338265849,
+            21.003074336508718
+          ]
+        ],
+        "inputVehiclesInBounds": 28,
+        "sourceFeatures": 5000,
+        "loaded": true
+      }
+    },
+    "clusterScope": "viewport; duplicates removed; not full-source coverage assertion",
+    "pan": "continuous small jumpTo pan during capture; zoom fixed",
+    "mapLifetime": "4e7fd573-e89f-4a33-9424-ab719ffd808c"
+  }
+]

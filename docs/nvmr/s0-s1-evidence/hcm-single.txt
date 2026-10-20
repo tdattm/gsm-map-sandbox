@@ -1,0 +1,100 @@
+- banner:
+  - button "Mở menu chính":
+  - heading "GSM Map Sandbox" [level=1]
+  - text: Một hành trình
+  - button "Mở hoặc ẩn bảng chi tiết" [expanded]: Chi tiết
+  - generic: Mô phỏng cục bộ
+  - generic: Bản đồ cục bộ
+  - generic: OSRM kết nối
+- main:
+  - complementary "Menu chính":
+    - paragraph: CHẾ ĐỘ MÔ PHỎNG
+    - navigation "Menu chính":
+      - button "Một hành trình":
+        - generic: Một hành trình
+      - button "Mô phỏng đội xe":
+        - generic: Mô phỏng đội xe
+      - button "Đặt xe và điều phối":
+        - generic: Đặt xe và điều phối
+      - button "Phòng thí nghiệm voucher":
+        - generic: Phòng thí nghiệm voucher
+      - button "Mô phỏng quy mô lớn":
+        - generic: Mô phỏng quy mô lớn
+    - button "Thu gọn menu":
+    - button "Ẩn menu":
+    - text: Mô phỏng cục bộ
+    - text: OSM · OSRM
+  - complementary "Cấu hình mô phỏng":
+    - strong: Cấu hình và chi tiết
+    - button "Đóng bảng chi tiết": ×
+    - button "Khu vực mô phỏng" [expanded]:
+      - text: Khu vực mô phỏng
+    - text: Khu vực mô phỏng
+    - combobox "Khu vực mô phỏng":
+      - option "Trung tâm TP.HCM · Quận 1 cũ" [selected]
+      - option "Hà Nội · vùng lõi NVMR"
+    - paragraph: Khu vực đã sẵn sàng cho mô phỏng trực tiếp.
+    - button "Loại phương tiện" [expanded]:
+      - text: Loại phương tiện
+    - text: Loại dịch vụ
+    - combobox "Loại dịch vụ":
+      - option "CAR · Ô tô điện" [selected]
+      - option "MOTORBIKE · Mô tô điện" [disabled]
+    - paragraph: CAR · định tuyến ô tô hiện có.
+    - button "Dữ liệu bản đồ":
+      - text: Dữ liệu bản đồ
+    - button "Thiết lập hành trình" [expanded]:
+      - text: Thiết lập hành trình
+    - heading "Thiết lập hành trình" [level=2]
+    - generic: "01"
+    - paragraph: Nhấp trên bản đồ để chọn A, sau đó chọn B.
+    - generic: A
+    - text: Điểm xuất phát
+    - paragraph: 106.699372, 10.770914
+    - generic: B
+    - text: Điểm đến
+    - paragraph: 106.703333, 10.776713
+    - generic: Quãng đường
+    - strong: 1,19 km
+    - generic: Thời gian di chuyển dự kiến
+    - strong: 2,0 phút
+    - paragraph: Ước tính từ profile CAR, không phải giao thông thời gian thực.
+    - paragraph: "Độ lệch điểm A/B trên đường: 1,8 m / 28,3 m"
+    - generic "Điểm đã khớp với đường"
+    - button "Xóa điểm A/B và chọn lại":
+      - text: Xóa điểm A/B và chọn lại
+    - text: Chỉ chạy cục bộ
+    - generic: WGS84 · [lon, lat]
+  - region "Bản đồ Trung tâm TP.HCM · Quận 1 cũ":
+    - generic: KHU VỰC NGHIÊN CỨU
+    - heading "Trung tâm TP.HCM · Quận 1 cũ" [level=2]
+    - button "Kiểm tra lại":
+      - text: Kiểm tra lại
+    - region "Bản đồ"
+    - generic "Một xe GSM mô phỏng trên tuyến OSRM":
+    - generic: © OpenStreetMap contributors
+    - button "Phóng to":
+    - button "Thu nhỏ":
+    - button "Đưa hướng bản đồ về phía Bắc":
+    - text: GeoJSON cục bộ · OSM Dữ liệu đường phố
+    - generic: Nhấp để bắt đầu hành trình mới
+    - generic: © OpenStreetMap contributors · Geofabrik
+- region "Điều khiển phát lại · Một hành trình":
+  - button "Tiếp tục":
+    - text: Tiếp tục
+  - button "Tạm dừng" [disabled]:
+    - text: Tạm dừng
+  - button "Về đầu":
+  - strong: Một hành trình
+  - generic: 60,0 / 119,3 giây · 50%
+  - group "Dòng thời gian mô phỏng":
+    - slider "Dòng thời gian mô phỏng": "60"
+  - spinbutton "Thời điểm mô phỏng (giây)": "60"
+  - button "Đến thời điểm" [active]
+  - button "1x" [pressed]
+  - button "2x"
+  - button "4x"
+  - text: Tốc độ tùy chỉnh
+  - textbox "Tốc độ tùy chỉnh": "1"
+  - button "Áp dụng"
+  - generic "Tốc độ đã áp dụng": 1x

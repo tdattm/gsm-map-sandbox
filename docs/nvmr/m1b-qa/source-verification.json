@@ -1,0 +1,99 @@
+{
+  "identity": {
+    "region_id": "nvmr-hanoi-core",
+    "config_sha256": "91c114a869a0eebe23d91df77641b9dd2f52afb7b7d09e941f249f78cfc9f05c",
+    "pipeline_version": "hanoi-car-pilot/v1"
+  },
+  "path": "D:\\ThS\\VinAI\\Phase3_VRIC\\gsm-map-sandbox\\data\\raw\\vietnam-latest.osm.pbf",
+  "size_bytes": 330248138,
+  "mtime_ns": 1791725198527966700,
+  "sha256": "2fbd2ee6b4dc151eecf04fa6823cddf584b47423e190118b10fce8b6115e9d8a",
+  "format_verified": true,
+  "fileinfo": {
+    "file": {
+      "name": "/input/data/raw/vietnam-latest.osm.pbf",
+      "format": "PBF",
+      "compression": "none",
+      "size": 330248138
+    },
+    "header": {
+      "boxes": [
+        [
+          102.095945,
+          7.382239,
+          114.642323,
+          23.402135
+        ]
+      ],
+      "with_history": false,
+      "option": {
+        "generator": "osmium/1.16.0",
+        "osmosis_replication_base_url": "https://download.geofabrik.de/asia/vietnam-updates",
+        "osmosis_replication_sequence_number": "4934",
+        "osmosis_replication_timestamp": "2026-10-09T20:21:04Z",
+        "pbf_dense_nodes": "true",
+        "pbf_optional_feature_0": "Sort.Type_then_ID",
+        "sorting": "Type_then_ID",
+        "timestamp": "2026-10-09T20:21:04Z"
+      }
+    },
+    "data": {
+      "bbox": [
+        100.6067931,
+        6.2183523,
+        114.6407887,
+        23.5024689
+      ],
+      "timestamp": {
+        "first": "2007-10-16T12:57:06Z",
+        "last": "2026-10-09T19:10:51Z"
+      },
+      "objects_ordered": true,
+      "multiple_versions": false,
+      "crc32": "4758abea",
+      "count": {
+        "changesets": 0,
+        "nodes": 46394305,
+        "ways": 4730057,
+        "relations": 26680
+      },
+      "minid": {
+        "changesets": 0,
+        "nodes": 74099711,
+        "ways": 9566396,
+        "relations": 13422
+      },
+      "maxid": {
+        "changesets": 0,
+        "nodes": 14268541229,
+        "ways": 1566865559,
+        "relations": 21599296
+      },
+      "buffers": {
+        "count": 61388,
+        "size": 3907395912,
+        "capacity": 4026597376
+      },
+      "metadata": {
+        "all_objects": {
+          "version": true,
+          "timestamp": true,
+          "changeset": false,
+          "user": false,
+          "uid": false
+        },
+        "some_objects": {
+          "version": true,
+          "timestamp": true,
+          "changeset": false,
+          "user": false,
+          "uid": false
+        }
+      }
+    }
+  },
+  "osmium_image": "iboates/osmium@sha256:a67987f7d822d951ae1979de656ab7bd8051605f79d2751ea4800cc6057124be",
+  "source_url": "https://download.geofabrik.de/asia/vietnam.html",
+  "attribution": "© OpenStreetMap contributors",
+  "created_utc": "2026-10-16T03:44:01.728154+00:00"
+}

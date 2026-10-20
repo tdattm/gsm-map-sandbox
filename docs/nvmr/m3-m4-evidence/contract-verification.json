@@ -1,0 +1,127 @@
+{
+  "status": "PASS",
+  "kind": "real-worker-HTTP-to-product-TypeScript-validator",
+  "jobId": "3fd5598c43094e4f9f4caea306b4b370",
+  "config": {
+    "regionId": "nvmr-hanoi-core",
+    "seed": "m3-m4-integration",
+    "fleetSize": 100,
+    "carCount": 40,
+    "bookingCount": 20,
+    "horizonSeconds": 900,
+    "maxWaitSeconds": 300,
+    "onlineFraction": 0.8,
+    "onlineSchedule": [],
+    "workload": "typical",
+    "initialCandidates": 16,
+    "maxCandidates": 128,
+    "gridCellDegrees": 0.005
+  },
+  "counts": {
+    "requested": 20,
+    "assigned": 20,
+    "completed": 20,
+    "unserved": 0,
+    "pending": 0,
+    "activeTrips": 0
+  },
+  "snapshotSamples": [
+    {
+      "time": 0,
+      "sequence": 0,
+      "counts": {
+        "total": 100,
+        "offline": 20,
+        "online": 80,
+        "idle": 80,
+        "assigned": 0,
+        "onTrip": 0,
+        "moving": 0
+      }
+    },
+    {
+      "time": 110.847,
+      "sequence": 110847000,
+      "counts": {
+        "total": 100,
+        "offline": 20,
+        "online": 80,
+        "idle": 78,
+        "assigned": 0,
+        "onTrip": 2,
+        "moving": 2
+      }
+    },
+    {
+      "time": 170.46200000000002,
+      "sequence": 170462000,
+      "counts": {
+        "total": 100,
+        "offline": 20,
+        "online": 80,
+        "idle": 76,
+        "assigned": 0,
+        "onTrip": 4,
+        "moving": 4
+      }
+    },
+    {
+      "time": 274.87874999999997,
+      "sequence": 274878749,
+      "counts": {
+        "total": 100,
+        "offline": 20,
+        "online": 80,
+        "idle": 74,
+        "assigned": 1,
+        "onTrip": 5,
+        "moving": 6
+      }
+    },
+    {
+      "time": 549.7574999999999,
+      "sequence": 549757499,
+      "counts": {
+        "total": 100,
+        "offline": 20,
+        "online": 80,
+        "idle": 77,
+        "assigned": 0,
+        "onTrip": 3,
+        "moving": 3
+      }
+    },
+    {
+      "time": 1099.5149999999999,
+      "sequence": 1099514999,
+      "counts": {
+        "total": 100,
+        "offline": 20,
+        "online": 80,
+        "idle": 80,
+        "assigned": 0,
+        "onTrip": 0,
+        "moving": 0
+      }
+    }
+  ],
+  "selectedRoutes": [
+    {
+      "vehicleType": "CAR",
+      "vehicleId": "GSM-00030",
+      "routeRef": "5eb3066a5494afa149bdbe7710fea6a0551434499dd4babb109ffffa309ae584",
+      "graph": "a24d4957a01ceeb04a0de1ad680fe4c5dd51732a7b381d9368e249a65c1b29b5",
+      "points": 86
+    },
+    {
+      "vehicleType": "MOTORBIKE",
+      "vehicleId": "GSM-00061",
+      "routeRef": "bf3c17d6806bf2942200b1264e8badec3f40f14338ee478a818f905552ffadba",
+      "graph": "fb97489d066397b11cb9178238cd56a5f52281bcf5711430bb7cf411496ca455",
+      "points": 71
+    }
+  ],
+  "summaryWithoutHistory": true,
+  "duplicateSnapshotsRejected": true,
+  "savedV1": "separate contract; untouched"
+}

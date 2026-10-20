@@ -1,0 +1,1108 @@
+{
+  "job": {
+    "id": "088a063b0b0d46e1a8241fea277334a9",
+    "runId": "088a063b0b0d46e1a8241fea277334a9",
+    "status": "COMPLETED",
+    "progress": 1,
+    "createdAt": "2026-10-17T08:44:40.232993+00:00",
+    "updatedAt": "2026-10-17T08:44:52.620050+00:00",
+    "config": {
+      "regionId": "nvmr-hanoi-core",
+      "seed": "m4-ux-5000",
+      "fleetSize": 5000,
+      "carCount": 2000,
+      "bookingCount": 1250,
+      "horizonSeconds": 900,
+      "maxWaitSeconds": 300,
+      "onlineFraction": 0.8,
+      "onlineSchedule": [],
+      "workload": "typical",
+      "initialCandidates": 16,
+      "maxCandidates": 128,
+      "gridCellDegrees": 0.005
+    },
+    "inputHash": "d6b0523c8aa34136d64031077db9bdb7645f66f8c1884f79920e9b4bde26f193",
+    "workerPid": 24676,
+    "summary": {
+      "simulationDurationSeconds": 1270.61,
+      "counts": {
+        "requested": 1250,
+        "assigned": 1250,
+        "completed": 1250,
+        "unserved": 0,
+        "pending": 0,
+        "activeTrips": 0
+      },
+      "routingIdentities": {
+        "CAR": {
+          "regionId": "nvmr-hanoi-core",
+          "vehicleType": "CAR",
+          "profile": "car",
+          "profileSha256": "cb3df0546318665609606b746a1297f3d65ca3c2ff825f8a6f3c57247d86a2d3",
+          "graphManifestSha256": "a24d4957a01ceeb04a0de1ad680fe4c5dd51732a7b381d9368e249a65c1b29b5",
+          "sourceSha256": "2fbd2ee6b4dc151eecf04fa6823cddf584b47423e190118b10fce8b6115e9d8a",
+          "extractSha256": "18fd3892f6d766387f2c3217d5d104e09a9319d3905a9172834b21c0064d6308",
+          "algorithm": "mld"
+        },
+        "MOTORBIKE": {
+          "regionId": "nvmr-hanoi-core",
+          "vehicleType": "MOTORBIKE",
+          "profile": "motorbike",
+          "profileSha256": "075ecdbc70a3e75c4338d2c6a41597c132a1837ec2d27f1c2fcdd824a788b209",
+          "graphManifestSha256": "fb97489d066397b11cb9178238cd56a5f52281bcf5711430bb7cf411496ca455",
+          "sourceSha256": "2fbd2ee6b4dc151eecf04fa6823cddf584b47423e190118b10fce8b6115e9d8a",
+          "extractSha256": "18fd3892f6d766387f2c3217d5d104e09a9319d3905a9172834b21c0064d6308",
+          "algorithm": "mld"
+        }
+      }
+    }
+  },
+  "result": {
+    "schemaVersion": "gsm-simulation-result/v1",
+    "runId": "088a063b0b0d46e1a8241fea277334a9",
+    "regionId": "nvmr-hanoi-core",
+    "config": {
+      "regionId": "nvmr-hanoi-core",
+      "seed": "m4-ux-5000",
+      "fleetSize": 5000,
+      "carCount": 2000,
+      "bookingCount": 1250,
+      "horizonSeconds": 900,
+      "maxWaitSeconds": 300,
+      "onlineFraction": 0.8,
+      "onlineSchedule": [],
+      "workload": "typical",
+      "initialCandidates": 16,
+      "maxCandidates": 128,
+      "gridCellDegrees": 0.005
+    },
+    "simulationDurationSeconds": 1270.61,
+    "counts": {
+      "requested": 1250,
+      "assigned": 1250,
+      "completed": 1250,
+      "unserved": 0,
+      "pending": 0,
+      "activeTrips": 0
+    },
+    "routingIdentities": {
+      "CAR": {
+        "regionId": "nvmr-hanoi-core",
+        "vehicleType": "CAR",
+        "profile": "car",
+        "profileSha256": "cb3df0546318665609606b746a1297f3d65ca3c2ff825f8a6f3c57247d86a2d3",
+        "graphManifestSha256": "a24d4957a01ceeb04a0de1ad680fe4c5dd51732a7b381d9368e249a65c1b29b5",
+        "sourceSha256": "2fbd2ee6b4dc151eecf04fa6823cddf584b47423e190118b10fce8b6115e9d8a",
+        "extractSha256": "18fd3892f6d766387f2c3217d5d104e09a9319d3905a9172834b21c0064d6308",
+        "algorithm": "mld"
+      },
+      "MOTORBIKE": {
+        "regionId": "nvmr-hanoi-core",
+        "vehicleType": "MOTORBIKE",
+        "profile": "motorbike",
+        "profileSha256": "075ecdbc70a3e75c4338d2c6a41597c132a1837ec2d27f1c2fcdd824a788b209",
+        "graphManifestSha256": "fb97489d066397b11cb9178238cd56a5f52281bcf5711430bb7cf411496ca455",
+        "sourceSha256": "2fbd2ee6b4dc151eecf04fa6823cddf584b47423e190118b10fce8b6115e9d8a",
+        "extractSha256": "18fd3892f6d766387f2c3217d5d104e09a9319d3905a9172834b21c0064d6308",
+        "algorithm": "mld"
+      }
+    },
+    "assumptions": {
+      "demandVersion": "m3-demand/v1",
+      "dispatchVersion": "grid-fifo/v1",
+      "shortlist": {
+        "initial": 16,
+        "maximum": 128,
+        "cellDegrees": 0.005
+      },
+      "heuristic": "First feasible expansion; ETA minimum only within that expansion, not global optimum",
+      "sameTimestamp": "completion,schedule,arrival,pickup,FIFO dispatch,inclusive expiration",
+      "offlineSchedule": "Busy vehicles complete current service before going offline",
+      "travel": "OSRM static duration; constant distance progress; synthetic demand; no traffic observations"
+    },
+    "metrics": {
+      "eventsProcessed": 3765,
+      "peakEventQueue": 2501,
+      "peakPending": 1,
+      "tableCandidates": 20000,
+      "searchBudgetExhaustions": 0,
+      "dispatchAttempts": 1250,
+      "dispatchVersion": "grid-fifo/v1",
+      "preparationMilliseconds": 2409.645499996259,
+      "totalMilliseconds": 11079.53419999103,
+      "routing": {
+        "CAR": {
+          "requests": {
+            "nearest": 24,
+            "table": 142,
+            "route": 306,
+            "routeCacheHits": 170,
+            "tableCacheHits": 327
+          },
+          "requestFailures": 0,
+          "latencyMilliseconds": {
+            "count": 472,
+            "p50": 5.801199993584305,
+            "p95": 10.733999995863996,
+            "total": 3187.257599813165
+          },
+          "routeCacheSize": 306,
+          "tableCacheSize": 142
+        },
+        "MOTORBIKE": {
+          "requests": {
+            "nearest": 24,
+            "table": 180,
+            "route": 410,
+            "routeCacheHits": 379,
+            "tableCacheHits": 601
+          },
+          "requestFailures": 0,
+          "latencyMilliseconds": {
+            "count": 614,
+            "p50": 5.8240999933332205,
+            "p95": 9.052699999301694,
+            "total": 3885.884600094869
+          },
+          "routeCacheSize": 410,
+          "tableCacheSize": 180
+        }
+      }
+    }
+  },
+  "snapshotAt100": {
+    "schemaVersion": "gsm-simulation-snapshot/v1",
+    "runId": "088a063b0b0d46e1a8241fea277334a9",
+    "regionId": "nvmr-hanoi-core",
+    "sequenceNumber": 100000000,
+    "simulationTimeSeconds": 100,
+    "counts": {
+      "total": 5000,
+      "offline": 1000,
+      "online": 4000,
+      "idle": 3861,
+      "assigned": 1,
+      "onTrip": 138,
+      "moving": 139
+    },
+    "routingIdentities": {
+      "CAR": {
+        "regionId": "nvmr-hanoi-core",
+        "vehicleType": "CAR",
+        "profile": "car",
+        "profileSha256": "cb3df0546318665609606b746a1297f3d65ca3c2ff825f8a6f3c57247d86a2d3",
+        "graphManifestSha256": "a24d4957a01ceeb04a0de1ad680fe4c5dd51732a7b381d9368e249a65c1b29b5",
+        "sourceSha256": "2fbd2ee6b4dc151eecf04fa6823cddf584b47423e190118b10fce8b6115e9d8a",
+        "extractSha256": "18fd3892f6d766387f2c3217d5d104e09a9319d3905a9172834b21c0064d6308",
+        "algorithm": "mld"
+      },
+      "MOTORBIKE": {
+        "regionId": "nvmr-hanoi-core",
+        "vehicleType": "MOTORBIKE",
+        "profile": "motorbike",
+        "profileSha256": "075ecdbc70a3e75c4338d2c6a41597c132a1837ec2d27f1c2fcdd824a788b209",
+        "graphManifestSha256": "fb97489d066397b11cb9178238cd56a5f52281bcf5711430bb7cf411496ca455",
+        "sourceSha256": "2fbd2ee6b4dc151eecf04fa6823cddf584b47423e190118b10fce8b6115e9d8a",
+        "extractSha256": "18fd3892f6d766387f2c3217d5d104e09a9319d3905a9172834b21c0064d6308",
+        "algorithm": "mld"
+      }
+    }
+  },
+  "vehicleCount": 5000,
+  "mix": {
+    "CAR": 2000,
+    "MOTORBIKE": 3000
+  },
+  "selectedVehicles": [
+    {
+      "id": "GSM-00001",
+      "vehicleType": "CAR",
+      "serviceState": "ON_TRIP",
+      "position": [
+        105.83739643302322,
+        21.028564299942186
+      ],
+      "headingDegrees": 282.4795814504577,
+      "activeBookingId": "BK-001194",
+      "routeRef": "f3574e01d44cf80af44b7e31cfe96448943c37f8bfd5456d41049c7e52b05586"
+    },
+    {
+      "id": "GSM-02001",
+      "vehicleType": "MOTORBIKE",
+      "serviceState": "ON_TRIP",
+      "position": [
+        105.84466734581247,
+        21.027211049582007
+      ],
+      "headingDegrees": 334.50489134232157,
+      "activeBookingId": "BK-000549",
+      "routeRef": "a431e661192d5a2a53e3eddb77fab37d3f180237d013d5f0eb9e68cff34a5357"
+    }
+  ],
+  "selectedRoutes": [
+    {
+      "schemaVersion": "gsm-simulation-route/v1",
+      "runId": "088a063b0b0d46e1a8241fea277334a9",
+      "regionId": "nvmr-hanoi-core",
+      "routeRef": "f3574e01d44cf80af44b7e31cfe96448943c37f8bfd5456d41049c7e52b05586",
+      "routingIdentity": {
+        "regionId": "nvmr-hanoi-core",
+        "vehicleType": "CAR",
+        "profile": "car",
+        "profileSha256": "cb3df0546318665609606b746a1297f3d65ca3c2ff825f8a6f3c57247d86a2d3",
+        "graphManifestSha256": "a24d4957a01ceeb04a0de1ad680fe4c5dd51732a7b381d9368e249a65c1b29b5",
+        "sourceSha256": "2fbd2ee6b4dc151eecf04fa6823cddf584b47423e190118b10fce8b6115e9d8a",
+        "extractSha256": "18fd3892f6d766387f2c3217d5d104e09a9319d3905a9172834b21c0064d6308",
+        "algorithm": "mld"
+      },
+      "coordinates": [
+        [
+          105.8372,
+          21.023519
+        ],
+        [
+          105.837236,
+          21.023599
+        ],
+        [
+          105.837248,
+          21.023634
+        ],
+        [
+          105.837295,
+          21.023776
+        ],
+        [
+          105.837331,
+          21.023847
+        ],
+        [
+          105.8374,
+          21.024032
+        ],
+        [
+          105.837406,
+          21.024094
+        ],
+        [
+          105.83741,
+          21.024241
+        ],
+        [
+          105.837413,
+          21.02439
+        ],
+        [
+          105.837418,
+          21.024413
+        ],
+        [
+          105.837425,
+          21.02444
+        ],
+        [
+          105.83745,
+          21.02448
+        ],
+        [
+          105.837468,
+          21.024591
+        ],
+        [
+          105.83747,
+          21.02473
+        ],
+        [
+          105.837456,
+          21.024765
+        ],
+        [
+          105.837353,
+          21.024855
+        ],
+        [
+          105.837271,
+          21.024924
+        ],
+        [
+          105.837243,
+          21.024961
+        ],
+        [
+          105.83723,
+          21.025016
+        ],
+        [
+          105.837234,
+          21.0251
+        ],
+        [
+          105.837239,
+          21.025125
+        ],
+        [
+          105.837315,
+          21.025411
+        ],
+        [
+          105.837367,
+          21.025429
+        ],
+        [
+          105.837432,
+          21.025429
+        ],
+        [
+          105.83767,
+          21.02544
+        ],
+        [
+          105.837748,
+          21.02546
+        ],
+        [
+          105.837841,
+          21.025567
+        ],
+        [
+          105.837919,
+          21.025681
+        ],
+        [
+          105.838002,
+          21.025775
+        ],
+        [
+          105.8381,
+          21.025986
+        ],
+        [
+          105.838158,
+          21.02601
+        ],
+        [
+          105.838208,
+          21.02605
+        ],
+        [
+          105.838251,
+          21.02611
+        ],
+        [
+          105.838406,
+          21.026475
+        ],
+        [
+          105.838452,
+          21.026574
+        ],
+        [
+          105.838541,
+          21.026758
+        ],
+        [
+          105.838726,
+          21.027179
+        ],
+        [
+          105.838757,
+          21.02725
+        ],
+        [
+          105.838806,
+          21.027362
+        ],
+        [
+          105.838866,
+          21.027498
+        ],
+        [
+          105.838972,
+          21.027738
+        ],
+        [
+          105.839097,
+          21.027993
+        ],
+        [
+          105.839164,
+          21.028147
+        ],
+        [
+          105.838769,
+          21.028262
+        ],
+        [
+          105.838452,
+          21.028346
+        ],
+        [
+          105.838317,
+          21.02838
+        ],
+        [
+          105.838207,
+          21.0284
+        ],
+        [
+          105.837911,
+          21.028458
+        ],
+        [
+          105.837364,
+          21.028571
+        ],
+        [
+          105.837062,
+          21.028621
+        ],
+        [
+          105.837009,
+          21.028629
+        ],
+        [
+          105.83658,
+          21.028698
+        ],
+        [
+          105.836444,
+          21.028729
+        ],
+        [
+          105.836713,
+          21.029416
+        ],
+        [
+          105.836792,
+          21.029643
+        ],
+        [
+          105.836947,
+          21.03006
+        ],
+        [
+          105.836984,
+          21.030168
+        ],
+        [
+          105.83709,
+          21.030142
+        ],
+        [
+          105.838276,
+          21.029814
+        ],
+        [
+          105.838433,
+          21.029769
+        ],
+        [
+          105.83853,
+          21.029744
+        ],
+        [
+          105.838667,
+          21.029701
+        ],
+        [
+          105.839149,
+          21.029563
+        ],
+        [
+          105.839738,
+          21.029392
+        ],
+        [
+          105.839886,
+          21.02935
+        ],
+        [
+          105.840203,
+          21.029259
+        ],
+        [
+          105.840742,
+          21.029103
+        ],
+        [
+          105.84091,
+          21.029055
+        ],
+        [
+          105.841444,
+          21.028901
+        ],
+        [
+          105.841569,
+          21.028865
+        ],
+        [
+          105.841564,
+          21.028641
+        ],
+        [
+          105.84156,
+          21.02826
+        ],
+        [
+          105.841554,
+          21.02772
+        ],
+        [
+          105.841552,
+          21.027632
+        ],
+        [
+          105.841672,
+          21.027561
+        ],
+        [
+          105.841727,
+          21.027543
+        ],
+        [
+          105.841984,
+          21.027462
+        ],
+        [
+          105.842375,
+          21.027338
+        ],
+        [
+          105.842653,
+          21.027254
+        ],
+        [
+          105.843032,
+          21.027139
+        ],
+        [
+          105.843609,
+          21.026965
+        ],
+        [
+          105.843638,
+          21.026956
+        ],
+        [
+          105.843759,
+          21.026919
+        ],
+        [
+          105.843856,
+          21.02689
+        ],
+        [
+          105.843878,
+          21.026883
+        ],
+        [
+          105.844288,
+          21.026759
+        ],
+        [
+          105.844774,
+          21.026622
+        ],
+        [
+          105.845023,
+          21.026551
+        ],
+        [
+          105.845239,
+          21.026488
+        ],
+        [
+          105.845496,
+          21.026412
+        ]
+      ],
+      "distance": 2132.2,
+      "duration": 213.9
+    },
+    {
+      "schemaVersion": "gsm-simulation-route/v1",
+      "runId": "088a063b0b0d46e1a8241fea277334a9",
+      "regionId": "nvmr-hanoi-core",
+      "routeRef": "a431e661192d5a2a53e3eddb77fab37d3f180237d013d5f0eb9e68cff34a5357",
+      "routingIdentity": {
+        "regionId": "nvmr-hanoi-core",
+        "vehicleType": "MOTORBIKE",
+        "profile": "motorbike",
+        "profileSha256": "075ecdbc70a3e75c4338d2c6a41597c132a1837ec2d27f1c2fcdd824a788b209",
+        "graphManifestSha256": "fb97489d066397b11cb9178238cd56a5f52281bcf5711430bb7cf411496ca455",
+        "sourceSha256": "2fbd2ee6b4dc151eecf04fa6823cddf584b47423e190118b10fce8b6115e9d8a",
+        "extractSha256": "18fd3892f6d766387f2c3217d5d104e09a9319d3905a9172834b21c0064d6308",
+        "algorithm": "mld"
+      },
+      "coordinates": [
+        [
+          105.842424,
+          21.019597
+        ],
+        [
+          105.842511,
+          21.019843
+        ],
+        [
+          105.842635,
+          21.020198
+        ],
+        [
+          105.84267,
+          21.020298
+        ],
+        [
+          105.842715,
+          21.020428
+        ],
+        [
+          105.842814,
+          21.02072
+        ],
+        [
+          105.84304,
+          21.021391
+        ],
+        [
+          105.843097,
+          21.021558
+        ],
+        [
+          105.843189,
+          21.021839
+        ],
+        [
+          105.84328,
+          21.022111
+        ],
+        [
+          105.843463,
+          21.022671
+        ],
+        [
+          105.843501,
+          21.022786
+        ],
+        [
+          105.843548,
+          21.022926
+        ],
+        [
+          105.843675,
+          21.023304
+        ],
+        [
+          105.8437,
+          21.023375
+        ],
+        [
+          105.843729,
+          21.023461
+        ],
+        [
+          105.843735,
+          21.023489
+        ],
+        [
+          105.843735,
+          21.023517
+        ],
+        [
+          105.843717,
+          21.023545
+        ],
+        [
+          105.843691,
+          21.023552
+        ],
+        [
+          105.842747,
+          21.023804
+        ],
+        [
+          105.842794,
+          21.023972
+        ],
+        [
+          105.842823,
+          21.024065
+        ],
+        [
+          105.842991,
+          21.024607
+        ],
+        [
+          105.843231,
+          21.025322
+        ],
+        [
+          105.843272,
+          21.025444
+        ],
+        [
+          105.843306,
+          21.025552
+        ],
+        [
+          105.843315,
+          21.02558
+        ],
+        [
+          105.843583,
+          21.02642
+        ],
+        [
+          105.843604,
+          21.026484
+        ],
+        [
+          105.843626,
+          21.026547
+        ],
+        [
+          105.843704,
+          21.026762
+        ],
+        [
+          105.843712,
+          21.026784
+        ],
+        [
+          105.843759,
+          21.026919
+        ],
+        [
+          105.843856,
+          21.02689
+        ],
+        [
+          105.843878,
+          21.026883
+        ],
+        [
+          105.844288,
+          21.026759
+        ],
+        [
+          105.844774,
+          21.026622
+        ],
+        [
+          105.845023,
+          21.026551
+        ],
+        [
+          105.844908,
+          21.02674
+        ],
+        [
+          105.844345,
+          21.027842
+        ],
+        [
+          105.844203,
+          21.028067
+        ],
+        [
+          105.843957,
+          21.028171
+        ],
+        [
+          105.84378,
+          21.028235
+        ],
+        [
+          105.843716,
+          21.028256
+        ],
+        [
+          105.843653,
+          21.028277
+        ],
+        [
+          105.843551,
+          21.028313
+        ],
+        [
+          105.84347,
+          21.028345
+        ],
+        [
+          105.843394,
+          21.028379
+        ],
+        [
+          105.843329,
+          21.028427
+        ],
+        [
+          105.843009,
+          21.028754
+        ],
+        [
+          105.842949,
+          21.028815
+        ],
+        [
+          105.842666,
+          21.029103
+        ],
+        [
+          105.842571,
+          21.0292
+        ],
+        [
+          105.842298,
+          21.029478
+        ],
+        [
+          105.842229,
+          21.029549
+        ],
+        [
+          105.842064,
+          21.029717
+        ],
+        [
+          105.841889,
+          21.029895
+        ],
+        [
+          105.841815,
+          21.029934
+        ],
+        [
+          105.841599,
+          21.030152
+        ],
+        [
+          105.841386,
+          21.030368
+        ],
+        [
+          105.841258,
+          21.030496
+        ],
+        [
+          105.841049,
+          21.030708
+        ],
+        [
+          105.840926,
+          21.030832
+        ],
+        [
+          105.840905,
+          21.030905
+        ],
+        [
+          105.840716,
+          21.031106
+        ],
+        [
+          105.840611,
+          21.031161
+        ],
+        [
+          105.840432,
+          21.031337
+        ],
+        [
+          105.840445,
+          21.031414
+        ],
+        [
+          105.840456,
+          21.031484
+        ],
+        [
+          105.840591,
+          21.032294
+        ],
+        [
+          105.840616,
+          21.03245
+        ],
+        [
+          105.840618,
+          21.032462
+        ],
+        [
+          105.840646,
+          21.032631
+        ],
+        [
+          105.840682,
+          21.032847
+        ],
+        [
+          105.840905,
+          21.034191
+        ]
+      ],
+      "distance": 2112.5,
+      "duration": 184.5
+    }
+  ],
+  "advancedBasemapLifecycleSmoke": [
+    {
+      "kind": "browser-webgl-render-only",
+      "sampleCondition": "warm in-page; no page/process restart",
+      "pageAgeMs": 515736.39999999106,
+      "sourceUpdatesBefore": 9,
+      "fixture": false,
+      "fleetSize": 5000,
+      "simulationTimeSeconds": 5.713,
+      "zoom": 11,
+      "browser": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36",
+      "viewport": [
+        764,
+        543
+      ],
+      "devicePixelRatio": 1.0000000149011612,
+      "webglRenderer": "ANGLE (Intel, Intel(R) Iris(R) Xe Graphics (0x00009A49) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "durationMs": 5003,
+      "frames": 295,
+      "fps": 58.96462122726364,
+      "frameTimeP50Ms": 16.699999999953434,
+      "frameTimeP95Ms": 16.900000000023283,
+      "longTaskSupported": true,
+      "longTasks": 0,
+      "longTaskTotalMs": 0,
+      "heap": {
+        "usedJSHeapSize": 121194796,
+        "totalJSHeapSize": 185994864,
+        "jsHeapSizeLimit": 4395630592
+      },
+      "domMarkerCount": 0,
+      "sourceCount": 3,
+      "layerCount": 7,
+      "setDataSubmissionP50Ms": 0.4000000059604645,
+      "setDataSubmissionP95Ms": 0.7000000029802322,
+      "sourceLoadedLagP95Ms": 58.400000005960464,
+      "dataUpdates": 16,
+      "selectionToNextFrameMs": 16.899999991059303,
+      "snapshotAgeMs": 291.09999999403954,
+      "visibleClusterCount": 1,
+      "visibleVehicleCount": 0,
+      "visibleRepresentedVehicles": 5000,
+      "clusterOracle": {
+        "checked": 1,
+        "failures": [],
+        "representedLeafCount": 5000,
+        "uniqueLeafCount": 5000,
+        "scope": "all fleet represented in current viewport",
+        "passed": true,
+        "diagnostics": {
+          "center": [
+            105.83739643302323,
+            21.028564299942175
+          ],
+          "bounds": [
+            [
+              105.70624714102848,
+              20.941534579428748
+            ],
+            [
+              105.9685457250119,
+              21.115543229879265
+            ]
+          ],
+          "inputVehiclesInBounds": 5000,
+          "sourceFeatures": 5000,
+          "loaded": true
+        }
+      },
+      "clusterScope": "viewport; duplicates removed; not full-source coverage assertion",
+      "pan": "continuous small jumpTo pan during capture; zoom fixed",
+      "mapLifetime": "9a794e24-4594-43ea-b36d-8d433ab511f0",
+      "basemap": "OFF",
+      "mapHealth": {
+        "state": "blank",
+        "message": "Nền trống · chỉ dành cho benchmark",
+        "loaded": 2,
+        "milliseconds": 0.09999999403953552
+      }
+    },
+    {
+      "kind": "browser-webgl-render-only",
+      "sampleCondition": "warm in-page; no page/process restart",
+      "pageAgeMs": 540894.8999999911,
+      "sourceUpdatesBefore": 29,
+      "fixture": false,
+      "fleetSize": 5000,
+      "simulationTimeSeconds": 11.024,
+      "zoom": 11,
+      "browser": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36",
+      "viewport": [
+        764,
+        543
+      ],
+      "devicePixelRatio": 1.0000000149011612,
+      "webglRenderer": "ANGLE (Intel, Intel(R) Iris(R) Xe Graphics (0x00009A49) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "durationMs": 5006.100000008941,
+      "frames": 292,
+      "fps": 58.32883881653952,
+      "frameTimeP50Ms": 16.699999999953434,
+      "frameTimeP95Ms": 16.900000000023283,
+      "longTaskSupported": true,
+      "longTasks": 0,
+      "longTaskTotalMs": 0,
+      "heap": {
+        "usedJSHeapSize": 167729913,
+        "totalJSHeapSize": 229589053,
+        "jsHeapSizeLimit": 4395630592
+      },
+      "domMarkerCount": 0,
+      "sourceCount": 8,
+      "layerCount": 15,
+      "setDataSubmissionP50Ms": 0.4000000059604645,
+      "setDataSubmissionP95Ms": 0.7999999970197678,
+      "sourceLoadedLagP95Ms": 70.5,
+      "dataUpdates": 15,
+      "selectionToNextFrameMs": 0.7999999970197678,
+      "snapshotAgeMs": 253.69999998807907,
+      "visibleClusterCount": 1,
+      "visibleVehicleCount": 0,
+      "visibleRepresentedVehicles": 5000,
+      "clusterOracle": {
+        "checked": 1,
+        "failures": [],
+        "representedLeafCount": 5000,
+        "uniqueLeafCount": 5000,
+        "scope": "all fleet represented in current viewport",
+        "passed": true,
+        "diagnostics": {
+          "center": [
+            105.83739643302323,
+            21.028564299942175
+          ],
+          "bounds": [
+            [
+              105.70624714102848,
+              20.941534579428748
+            ],
+            [
+              105.9685457250119,
+              21.115543229879265
+            ]
+          ],
+          "inputVehiclesInBounds": 5000,
+          "sourceFeatures": 5000,
+          "loaded": true
+        }
+      },
+      "clusterScope": "viewport; duplicates removed; not full-source coverage assertion",
+      "pan": "continuous small jumpTo pan during capture; zoom fixed",
+      "mapLifetime": "9a794e24-4594-43ea-b36d-8d433ab511f0",
+      "basemap": "HANOI_LOCAL_ON",
+      "mapHealth": {
+        "state": "ready",
+        "message": "Bản đồ Hà Nội sẵn sàng · 5/5 lớp địa lý",
+        "loaded": 5,
+        "milliseconds": 1480.8999999910593
+      }
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+
+> gsm-map-sandbox-frontend@0.1.0 test
+> vitest run --maxWorkers=1
+
+
+ RUN  v5.0.3 D:/ThS/VinAI/Phase3_VRIC/gsm-map-sandbox/frontend
+
+
+ Test Files  23 passed (23)
+      Tests  189 passed (189)
+   Start at  14:08:35
+   Duration  33.24s (environment 42%, tests 35%, import 10%, setup 8%, transform 5%)
+
+Environment  jsdom was created 23 times · 12.90s total, 42% of tracked time
+             create it once per worker with pool: 'vmThreads' (keeps per-file isolation) or isolate: false (shares it across files)
+             learn more: https://vitest.dev/guide/improving-performance#test-environments
+

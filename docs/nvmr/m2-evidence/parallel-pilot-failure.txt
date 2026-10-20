@@ -1,0 +1,51 @@
+........................................................................ [ 44%]
+........................................................................ [ 88%]
+.......F...........                                                      [100%]
+================================== FAILURES ===================================
+____________ test_real_multimodal_repeatability_and_graph_identity ____________
+
+    @pytest.mark.skipif(os.environ.get('RUN_REAL_DATA')!='1',reason='opt-in local OSRM and verified artifacts')
+    def test_real_multimodal_repeatability_and_graph_identity():
+        from scripts.multimodal_pilot import run
+>       result=run(write=False)
+               ^^^^^^^^^^^^^^^^
+
+tests\test_m2.py:163: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+scripts\multimodal_pilot.py:56: in run
+    results=list(pool.map(concurrent,['CAR','MOTORBIKE']*4))
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\TIEN DAT\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\_base.py:619: in result_iterator
+    yield _result_or_cancel(fs.pop())
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\TIEN DAT\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\_base.py:317: in _result_or_cancel
+    return fut.result(timeout)
+           ^^^^^^^^^^^^^^^^^^^
+C:\Users\TIEN DAT\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\_base.py:456: in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+C:\Users\TIEN DAT\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\_base.py:401: in __get_result
+    raise self._exception
+C:\Users\TIEN DAT\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\thread.py:58: in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+mode = 'CAR'
+
+    def concurrent(mode):
+        r=client.post(prefix+f'/modes/{mode}/route',json={'start':[105.841,21.028],'end':[105.832,21.039]})
+>       assert r.status_code==200,(r.status_code,r.text)
+               ^^^^^^^^^^^^^^^^^^
+E       AssertionError: (503, '{"error":{"code":"ROUTER_UNAVAILABLE","message":"CAR: d\u1eef li\u1ec7u/profile/router ch\u01b0a s\u1eb5n s\xe0ng."}}')
+
+scripts\multimodal_pilot.py:53: AssertionError
+============================== warnings summary ===============================
+.venv\Lib\site-packages\fastapi\testclient.py:1
+  D:\ThS\VinAI\Phase3_VRIC\gsm-map-sandbox\.venv\Lib\site-packages\fastapi\testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
+    from starlette.testclient import TestClient as TestClient  # noqa
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ===========================
+FAILED tests/test_m2.py::test_real_multimodal_repeatability_and_graph_identity
+1 failed, 162 passed, 1 warning in 137.25s (0:02:17)

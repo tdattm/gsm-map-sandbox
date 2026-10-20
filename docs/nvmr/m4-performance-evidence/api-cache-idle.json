@@ -1,0 +1,28 @@
+{
+  "cacheAfter": {
+    "entries": 0,
+    "idleSeconds": 30.0
+  },
+  "before": {
+    "Id": 2852,
+    "WorkingSet64": 59801600,
+    "PrivateMemorySize64": 47566848,
+    "PeakWorkingSet64": 61747200
+  },
+  "loaded": {
+    "Id": 2852,
+    "WorkingSet64": 92041216,
+    "PrivateMemorySize64": 79695872,
+    "PeakWorkingSet64": 98664448
+  },
+  "released": {
+    "Id": 2852,
+    "WorkingSet64": 67911680,
+    "PrivateMemorySize64": 55492608,
+    "PeakWorkingSet64": 98664448
+  },
+  "cacheLoaded": {
+    "entries": 1,
+    "idleSeconds": 30.0
+  }
+}

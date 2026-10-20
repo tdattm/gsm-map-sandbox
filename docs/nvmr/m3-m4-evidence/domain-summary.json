@@ -1,0 +1,5794 @@
+{
+  "schemaVersion": "gsm-domain-benchmark/v1",
+  "kind": "domain-only-recorded-fixture",
+  "environment": {
+    "platform": "Windows-10-10.0.26300-SP0",
+    "python": "3.11.9",
+    "cpuCount": 8,
+    "processor": "Intel64 Family 6 Model 140 Stepping 2, GenuineIntel",
+    "memory": {
+      "totalPhysicalBytes": 16948453376,
+      "availablePhysicalBytes": 3960094720,
+      "processRssBytes": 44900352,
+      "processPeakRssBytes": 44974080,
+      "processPagefileBytes": 33046528
+    },
+    "dockerStats": [
+      "{\"BlockIO\":\"0B / 0B\",\"CPUPerc\":\"0.00%\",\"Container\":\"59fd1f3d6b543e795069290001fba11048a5004b0f57757a16305206bb5f0f27\",\"ID\":\"59fd1f3d6b54\",\"MemPerc\":\"2.52%\",\"MemUsage\":\"25.8MiB / 1GiB\",\"Name\":\"gsm-map-osrm\",\"NetIO\":\"856kB / 1.63MB\",\"PIDs\":\"10\"}",
+      "{\"BlockIO\":\"0B / 0B\",\"CPUPerc\":\"0.00%\",\"Container\":\"af5f68c19008785d15d820556a286d9814114cfb87449d940b126e9fefec3911\",\"ID\":\"af5f68c19008\",\"MemPerc\":\"5.69%\",\"MemUsage\":\"58.21MiB / 1GiB\",\"Name\":\"gsm-map-osrm-hanoi-motorbike\",\"NetIO\":\"1.23MB / 2.11MB\",\"PIDs\":\"10\"}",
+      "{\"BlockIO\":\"0B / 0B\",\"CPUPerc\":\"0.00%\",\"Container\":\"343e1ee656e4a30c2645352268b7c22bd9b57d76c9914d88aea767764b6dc1df\",\"ID\":\"343e1ee656e4\",\"MemPerc\":\"3.79%\",\"MemUsage\":\"38.8MiB / 1GiB\",\"Name\":\"gsm-map-osrm-hanoi-car\",\"NetIO\":\"2.66MB / 4.25MB\",\"PIDs\":\"10\"}"
+    ],
+    "hardware": "{\"Name\":\"11th Gen Intel(R) Core(TM) i5-11320H @ 3.20GHz\",\"NumberOfCores\":4,\"NumberOfLogicalProcessors\":8}\n[{\"Name\":\"NVIDIA GeForce RTX 3050 Laptop GPU\",\"AdapterRAM\":4293918720,\"DriverVersion\":\"32.0.15.7700\"},{\"Name\":\"Intel(R) Iris(R) Xe Graphics\",\"AdapterRAM\":1073741824,\"DriverVersion\":\"30.0.100.9864\"}]"
+  },
+  "fixtureIdentities": {
+    "CAR": {
+      "regionId": "nvmr-hanoi-core",
+      "vehicleType": "CAR",
+      "profile": "synthetic-directed-ring",
+      "profileSha256": "1c0d3a3a646a99cf5c25f7deec28d949a2c88a6a26e9ead82e7322477fb200fa",
+      "graphManifestSha256": "b92b087ae40c1d5dfad3ffad1b2126377e2f7304ee0f1850d141799628fcc6e1",
+      "sourceSha256": "b92b087ae40c1d5dfad3ffad1b2126377e2f7304ee0f1850d141799628fcc6e1",
+      "extractSha256": "b92b087ae40c1d5dfad3ffad1b2126377e2f7304ee0f1850d141799628fcc6e1",
+      "algorithm": "recorded-fixture"
+    },
+    "MOTORBIKE": {
+      "regionId": "nvmr-hanoi-core",
+      "vehicleType": "MOTORBIKE",
+      "profile": "synthetic-directed-ring",
+      "profileSha256": "202333ddf7c28bd55691a98d339fda9698e7d954240aa15419cf13029ebfd4ef",
+      "graphManifestSha256": "b92b087ae40c1d5dfad3ffad1b2126377e2f7304ee0f1850d141799628fcc6e1",
+      "sourceSha256": "b92b087ae40c1d5dfad3ffad1b2126377e2f7304ee0f1850d141799628fcc6e1",
+      "extractSha256": "b92b087ae40c1d5dfad3ffad1b2126377e2f7304ee0f1850d141799628fcc6e1",
+      "algorithm": "recorded-fixture"
+    }
+  },
+  "runs": [
+    {
+      "status": "PASS",
+      "config": {
+        "regionId": "nvmr-hanoi-core",
+        "seed": "m3-bench-0",
+        "fleetSize": 100,
+        "carCount": 40,
+        "bookingCount": 2,
+        "horizonSeconds": 900,
+        "maxWaitSeconds": 300,
+        "onlineFraction": 0.25,
+        "onlineSchedule": [],
+        "workload": "low",
+        "initialCandidates": 16,
+        "maxCandidates": 128,
+        "gridCellDegrees": 0.005
+      },
+      "counts": {
+        "requested": 2,
+        "assigned": 2,
+        "completed": 2,
+        "unserved": 0,
+        "pending": 0,
+        "activeTrips": 0
+      },
+      "metrics": {
+        "eventsProcessed": 8,
+        "peakEventQueue": 5,
+        "peakPending": 1,
+        "tableCandidates": 25,
+        "searchBudgetExhaustions": 0,
+        "dispatchAttempts": 2,
+        "dispatchVersion": "grid-fifo/v1"
+      },
+      "semanticSha256": "e39d257da830068d6043a8ec71adb67d354034d5218bea6838d86df721b294de",
+      "fixtureOperations": {
+        "CAR": {
+          "nearest": 0,
+          "table": 1,
+          "route": 2,
+          "routeCacheHits": 0,
+          "tableCacheHits": 0
+        },
+        "MOTORBIKE": {
+          "nearest": 0,
+          "table": 1,
+          "route": 2,
+          "routeCacheHits": 0,
+          "tableCacheHits": 0
+        }
+      },
+      "resources": {
+        "wallSeconds": 0.004942499988828786,
+        "cpuSeconds": 0.015625,
+        "cpuPercentOneCore": 316.13555964220905,
+        "peakRssBytesSampled": 46108672,
+        "processPeakRssBytes": 46129152,
+        "minimumAvailablePhysicalBytes": 3847421952,
+        "sampleIntervalSeconds": 0.05,
+        "sampleCount": 2
+      },
+      "headroomBefore": {
+        "totalPhysicalBytes": 16948453376,
+        "availablePhysicalBytes": 3848400896,
+        "processRssBytes": 45121536,
+        "processPeakRssBytes": 45162496,
+        "processPagefileBytes": 33099776
+      },
+      "bookingsPerSecond": 404.65351634202756,
+      "eventsPerSecond": 1618.6140653681102,
+      "simulationSecondsPerWallSecond": 182094.08235391238,
+      "correctness": "PASS linear independent lifecycle/provenance audit, 5 fleet checkpoints; final horizon drained"
+    },
+    {
+      "status": "PASS",
+      "config": {
+        "regionId": "nvmr-hanoi-core",
+        "seed": "m3-bench-1",
+        "fleetSize": 100,
+        "carCount": 40,
+        "bookingCount": 2,
+        "horizonSeconds": 900,
+        "maxWaitSeconds": 300,
+        "onlineFraction": 0.25,
+        "onlineSchedule": [],
+        "workload": "low",
+        "initialCandidates": 16,
+        "maxCandidates": 128,
+        "gridCellDegrees": 0.005
+      },
+      "counts": {
+        "requested": 2,
+        "assigned": 2,
+        "completed": 2,
+        "unserved": 0,
+        "pending": 0,
+        "activeTrips": 0
+      },
+      "metrics": {
+        "eventsProcessed": 7,
+        "peakEventQueue": 5,
+        "peakPending": 1,
+        "tableCandidates": 29,
+        "searchBudgetExhaustions": 0,
+        "dispatchAttempts": 2,
+        "dispatchVersion": "grid-fifo/v1"
+      },
+      "semanticSha256": "352d152fd6131c5efe639423a15cefe1c5cd76b2d735c703c7670d134036f895",
+      "fixtureOperations": {
+        "CAR": {
+          "nearest": 0,
+          "table": 0,
+          "route": 0,
+          "routeCacheHits": 0,
+          "tableCacheHits": 0
+        },
+        "MOTORBIKE": {
+          "nearest": 0,
+          "table": 2,
+          "route": 3,
+          "routeCacheHits": 0,
+          "tableCacheHits": 0
+        }
+      },
+      "resources": {
+        "wallSeconds": 0.009032100002514198,
+        "cpuSeconds": 0.0,
+        "cpuPercentOneCore": 0.0,
+        "peakRssBytesSampled": 46157824,
+        "processPeakRssBytes": 46170112,
+        "minimumAvailablePhysicalBytes": 3846643712,
+        "sampleIntervalSeconds": 0.05,
+        "sampleCount": 2
+      },
+      "headroomBefore": {
+        "totalPhysicalBytes": 16948453376,
+        "availablePhysicalBytes": 3846803456,
+        "processRssBytes": 46116864,
+        "processPeakRssBytes": 46129152,
+        "processPagefileBytes": 34320384
+      },
+      "bookingsPerSecond": 221.43244643474662,
+      "eventsPerSecond": 775.0135625216132,
+      "simulationSecondsPerWallSecond": 99644.60089563597,
+      "correctness": "PASS linear independent lifecycle/provenance audit, 5 fleet checkpoints; final horizon drained"
+    },
+    {
+      "status": "PASS",
+      "config": {
+        "regionId": "nvmr-hanoi-core",
+        "seed": "m3-bench-2",
+        "fleetSize": 100,
+        "carCount": 40,
+        "bookingCount": 2,
+        "horizonSeconds": 900,
+        "maxWaitSeconds": 300,
+        "onlineFraction": 0.25,
+        "onlineSchedule": [],
+        "workload": "low",
+        "initialCandidates": 16,
+        "maxCandidates": 128,
+        "gridCellDegrees": 0.005
+      },
+      "counts": {
+        "requested": 2,
+        "assigned": 2,
+        "completed": 2,
+        "unserved": 0,
+        "pending": 0,
+        "activeTrips": 0
+      },
+      "metrics": {
+        "eventsProcessed": 8,
+        "peakEventQueue": 5,
+        "peakPending": 1,
+        "tableCandidates": 20,
+        "searchBudgetExhaustions": 0,
+        "dispatchAttempts": 2,
+        "dispatchVersion": "grid-fifo/v1"
+      },
+      "semanticSha256": "7b904b2fe9f4537f484b3f5e9dd48ddbdcc61fea21fe9f5d060aa4b59d60bdcc",
+      "fixtureOperations": {
+        "CAR": {
+          "nearest": 0,
+          "table": 2,
+          "route": 4,
+          "routeCacheHits": 0,
+          "tableCacheHits": 0
+        },
+        "MOTORBIKE": {
+          "nearest": 0,
+          "table": 0,
+          "route": 0,
+          "routeCacheHits": 0,
+          "tableCacheHits": 0
+        }
+      },
+      "resources": {
+        "wallSeconds": 0.0043486000067787245,
+        "cpuSeconds": 0.015625,
+        "cpuPercentOneCore": 359.31104207430656,
+        "peakRssBytesSampled": 46190592,
+        "processPeakRssBytes": 46211072,
+        "minimumAvailablePhysicalBytes": 3846529024,
+        "sampleIntervalSeconds": 0.05,
+        "sampleCount": 2
+      },
+      "headroomBefore": {
+        "totalPhysicalBytes": 16948453376,
+        "availablePhysicalBytes": 3846713344,
+        "processRssBytes": 46153728,
+        "processPeakRssBytes": 46170112,
+        "processPagefileBytes": 34320384
+      },
+      "bookingsPerSecond": 459.9181338551124,
+      "eventsPerSecond": 1839.6725354204495,
+      "simulationSecondsPerWallSecond": 206963.16023480057,
+      "correctness": "PASS linear independent lifecycle/provenance audit, 5 fleet checkpoints; final horizon drained"
+    },
+    {
+      "status": "PASS",
+      "config": {
+        "regionId": "nvmr-hanoi-core",
+        "seed": "m3-bench-3",
+        "fleetSize": 100,
+        "carCount": 40,
+        "bookingCount": 2,
+        "horizonSeconds": 900,
+        "maxWaitSeconds": 300,
+        "onlineFraction": 0.25,
+        "onlineSchedule": [],
+        "workload": "low",
+        "initialCandidates": 16,
+        "maxCandidates": 128,
+        "gridCellDegrees": 0.005
+      },
+      "counts": {
+        "requested": 2,
+        "assigned": 2,
+        "completed": 2,
+        "unserved": 0,
+        "pending": 0,
+        "activeTrips": 0
+      },
+      "metrics": {
+        "eventsProcessed": 7,
+        "peakEventQueue": 4,
+        "peakPending": 1,
+        "tableCandidates": 30,
+        "searchBudgetExhaustions": 0,
+        "dispatchAttempts": 2,
+        "dispatchVersion": "grid-fifo/v1"
+      },
+      "semanticSha256": "426a82bcdca3013741598dff41fabca893f6ca6b3178ecfb788f3c2fcae4daf8",
+      "fixtureOperations": {
+        "CAR": {
+          "nearest": 0,
+          "table": 0,
+          "route": 0,
+          "routeCacheHits": 0,
+          "tableCacheHits": 0
+        },
+        "MOTORBIKE": {
+          "nearest": 0,
+          "table": 2,
+          "route": 3,
+          "routeCacheHits": 0,
+          "tableCacheHits": 0
+        }
+      },
+      "resources": {
+        "wallSeconds": 0.0043631000007735565,
+        "cpuSeconds": 0.0,
+        "cpuPercentOneCore": 0.0,
+        "peakRssBytesSampled": 46227456,
+        "processPeakRssBytes": 46247936,
+        "minimumAvailablePhysicalBytes": 3847016448,
+        "sampleIntervalSeconds": 0.05,
+        "sampleCount": 2
+      },
+      "headroomBefore": {
+        "totalPhysicalBytes": 16948453376,
+        "availablePhysicalBytes": 3847139328,
+        "processRssBytes": 46190592,
+        "processPeakRssBytes": 46211072,
+        "processPagefileBytes": 34353152
+      },
+      "bookingsPerSecond": 458.3896769832022,
+      "eventsPerSecond": 1604.3638694412077,
+      "simulationSecondsPerWallSecond": 215388.14142086706,
+      "correctness": "PASS linear independent lifecycle/provenance audit, 5 fleet checkpoints; final horizon drained"
+    },
+    {
+      "status": "PASS",
+      "config": {
+        "regionId": "nvmr-hanoi-core",
+        "seed": "m3-bench-4",
+        "fleetSize": 100,
+        "carCount": 40,
+        "bookingCount": 2,
+        "horizonSeconds": 900,
+        "maxWaitSeconds": 300,
+        "onlineFraction": 0.25,
+        "onlineSchedule": [],
+        "workload": "low",
+        "initialCandidates": 16,
+        "maxCandidates": 128,
+        "gridCellDegrees": 0.005
+      },
+      "counts": {
+        "requested": 2,
+        "assigned": 2,
+        "completed": 2,
+        "unserved": 0,
+        "pending": 0,
+        "activeTrips": 0
+      },
+      "metrics": {
+        "eventsProcessed": 8,
+        "peakEventQueue": 5,
+        "peakPending": 1,
+        "tableCandidates": 20,
+        "searchBudgetExhaustions": 0,
+        "dispatchAttempts": 2,
+        "dispatchVersion": "grid-fifo/v1"
+      },
+      "semanticSha256": "1c06835f14c1882e199d5ae3c8237d56f5111729135dd901d50bc62ce0c182d7",
+      "fixtureOperations": {
+        "CAR": {
+          "nearest": 0,
+          "table": 2,
+          "route": 4,
+          "routeCacheHits": 0,
+          "tableCacheHits": 0
+        },
+        "MOTORBIKE": {
+          "nearest": 0,
+          "table": 0,
+          "route": 0,
+          "routeCacheHits": 0,
+          "tableCacheHits": 0
+        }
+      },
+      "resources": {
+        "wallSeconds": 0.004602899993187748,
+        "cpuSeconds": 0.0,
+        "cpuPercentOneCore": 0.0,
+        "peakRssBytesSampled": 46309376,
+        "processPeakRssBytes": 46411776,
+        "minimumAvailablePhysicalBytes": 3846742016,
+        "sampleIntervalSeconds": 0.05,
+        "sampleCount": 2
+      },
+      "headroomBefore": {
+        "totalPhysicalBytes": 16948453376,
+        "availablePhysicalBytes": 3846742016,
+        "processRssBytes": 46309376,
+        "processPeakRssBytes": 46309376,
+        "processPagefileBytes": 34492416
+      },
+      "bookingsPerSecond": 434.5086799539383,
+      "eventsPerSecond": 1738.0347198157533,
+      "simulationSecondsPerWallSecond": 223456.73412897164,
+      "correctness": "PASS linear independent lifecycle/provenance audit, 5 fleet checkpoints; final horizon drained"
+    },
+    {
+      "status": "PASS",
+      "config": {
+        "regionId": "nvmr-hanoi-core",
+        "seed": "m3-bench-0",
+        "fleetSize": 100,
+        "carCount": 40,
+        "bookingCount": 25,
+        "horizonSeconds": 900,
+        "maxWaitSeconds": 300,
+        "onlineFraction": 0.8,
+        "onlineSchedule": [],
+        "workload": "typical",
+        "initialCandidates": 16,
+        "maxCandidates": 128,
+        "gridCellDegrees": 0.005
+      },
+      "counts": {
+        "requested": 25,
+        "assigned": 25,
+        "completed": 25,
+        "unserved": 0,
+        "pending": 0,
+        "activeTrips": 0
+      },
+      "metrics": {
+        "eventsProcessed": 82,
+        "peakEventQueue": 52,
+        "peakPending": 1,
+        "tableCandidates": 400,
+        "searchBudgetExhaustions": 0,
+        "dispatchAttempts": 25,
+        "dispatchVersion": "grid-fifo/v1"
+      },
+      "semanticSha256": "661dbd085cb60433af9e6af2b19444a5bf4dfa8e85c77b0459dae8e11a6bf352",
+      "fixtureOperations": {
+        "CAR": {
+          "nearest": 0,
+          "table": 12,
+          "route": 17,
+          "routeCacheHits": 0,
+          "tableCacheHits": 0
+        },
+        "MOTORBIKE": {
+          "nearest": 0,
+          "table": 13,
+          "route": 15,
+          "routeCacheHits": 0,
+          "tableCacheHits": 0
+        }
+      },
+      "resources": {
+        "wallSeconds": 0.008446600011666305,
+        "cpuSeconds": 0.015625,
+        "cpuPercentOneCore": 184.98567445385132,
+        "peakRssBytesSampled": 47034368,
+        "processPeakRssBytes": 47054848,
+        "minimumAvailablePhysicalBytes": 3848433664,
+        "sampleIntervalSeconds": 0.05,
+        "sampleCount": 2
+      },
+      "headroomBefore": {
+        "totalPhysicalBytes": 16948453376,
+        "availablePhysicalBytes": 3849359360,
+        "processRssBytes": 46055424,
+        "processPeakRssBytes": 46411776,
+        "processPagefileBytes": 34557952
+      },
+      "bookingsPerSecond": 2959.770791261621,
+      "eventsPerSecond": 9708.048195338119,
+      "simulationSecondsPerWallSecond": 128840.00645193488,
+      "correctness": "PASS linear independent lifecycle/provenance audit, 5 fleet checkpoints; final horizon drained"
+    },
+    {
+      "status": "PASS",
+      "config": {
+        "regionId": "nvmr-hanoi-core",
+        "seed": "m3-bench-1",
+        "fleetSize": 100,
+        "carCount": 40,
+        "bookingCount": 25,
+        "horizonSeconds": 900,
+        "maxWaitSeconds": 300,
+        "onlineFraction": 0.8,
+        "onlineSchedule": [],
+        "workload": "typical",
+        "initialCandidates": 16,
+        "maxCandidates": 128,
+        "gridCellDegrees": 0.005
+      },
+      "counts": {
+        "requested": 25,
+        "assigned": 25,
+        "completed": 25,
+        "unserved": 0,
+        "pending": 0,
+        "activeTrips": 0
+      },
+      "metrics": {
+        "eventsProcessed": 85,
+        "peakEventQueue": 50,
+        "peakPending": 1,
+        "tableCandidates": 400,
+        "searchBudgetExhaustions": 0,
+        "dispatchAttempts": 25,
+        "dispatchVersion": "grid-fifo/v1"
+      },
+      "semanticSha256": "9eeb85b0ab2cbc825e3756880e6fb928e730dc013e5b695896648c02371dd760",
+      "fixtureOperations": {
+        "CAR": {
+          "nearest": 0,
+          "table": 8,
+          "route": 13,
+          "routeCacheHits": 0,
+          "tableCacheHits": 0
+        },
+        "MOTORBIKE": {
+          "nearest": 0,
+          "table": 17,
+          "route": 22,
+          "routeCacheHits": 0,
+          "tableCacheHits": 0
+        }
+      },
+      "resources": {
+        "wallSeconds": 0.03602490000776015,
+        "cpuSeconds": 0.015625,
+        "cpuPercentOneCore": 43.37277826346279,
+        "peakRssBytesSampled": 47124480,
+        "processPeakRssBytes": 47214592,
+        "minimumAvailablePhysicalBytes": 3848126464,
+        "sampleIntervalSeconds": 0.05,
+        "sampleCount": 2
+      },
+      "headroomBefore": {
+        "totalPhysicalBytes": 16948453376,
+        "availablePhysicalBytes": 3848126464,
+        "processRssBytes": 47124480,
+        "processPeakRssBytes": 47124480,
+        "processPagefileBytes": 34693120
+      },
+      "bookingsPerSecond": 693.9644522154047,
+      "eventsPerSecond": 2359.4791375323757,
+      "simulationSecondsPerWallSecond": 32994.8174663623,
+      "correctness": "PASS linear independent lifecycle/provenance audit, 5 fleet checkpoints; final horizon drained"
+    },
+    {
+      "status": "PASS",
+      "config": {
+        "regionId": "nvmr-hanoi-core",
+        "seed": "m3-bench-2",
+        "fleetSize": 100,
+        "carCount": 40,
+        "bookingCount": 25,
+        "horizonSeconds": 900,
+        "maxWaitSeconds": 300,
+        "onlineFraction": 0.8,
+        "onlineSchedule": [],
+        "workload": "typical",
+        "initialCandidates": 16,
+        "maxCandidates": 128,
+        "gridCellDegrees": 0.005
+      },
+      "counts": {
+        "requested": 25,
+        "assigned": 25,
+        "completed": 25,
+        "unserved": 0,
+        "pending": 0,
+        "activeTrips": 0
+      },
+      "metrics": {
+        "eventsProcessed": 83,
+        "peakEventQueue": 51,
+        "peakPending": 1,
+        "tableCandidates": 400,
+        "searchBudgetExhaustions": 0,
+        "dispatchAttempts": 25,
+        "dispatchVersion": "grid-fifo/v1"
+      },
+      "semanticSha256": "59e32f0d655dd19c62d830cc8ba6b00bd03cf8e1fc269ebf557cfb97636bec8e",
+      "fixtureOperations": {
+        "CAR": {
+          "nearest": 0,
+          "table": 10,
+          "route": 12,
+          "routeCacheHits": 0,
+          "tableCacheHits": 0
+        },
+        "MOTORBIKE": {
+          "nearest": 0,
+          "table": 15,
+          "route": 21,
+          "routeCacheHits": 0,
+          "tableCacheHits": 0
+        }
+      },
+      "resources": {
+        "wallSeconds": 0.021580400003585964,
+        "cpuSeconds": 0.015625,
+        "cpuPercentOneCore": 72.4036625706828,
+        "peakRssBytesSampled": 47157248,
+        "processPeakRssBytes": 47214592,
+        "minimumAvailablePhysicalBytes": 3848167424,
+        "sampleIntervalSeconds": 0.05,
+        "sampleCount": 2
+      },
+      "headroomBefore": {
+        "totalPhysicalBytes": 16948453376,
+        "availablePhysicalBytes": 3848417280,
+        "processRssBytes": 46923776,
+        "processPeakRssBytes": 47214592,
+        "processPagefileBytes": 34693120
+      },
+      "bookingsPerSecond": 1158.4586011309248,
+      "eventsPerSecond": 3846.08255575467,
+      "simulationSecondsPerWallSecond": 50739.88433106192,
+      "correctness": "PASS linear independent lifecycle/provenance audit, 5 fleet checkpoints; final horizon drained"
+    },
+    {
+      "status": "PASS",
+      "config": {
+        "regionId": "nvmr-hanoi-core",
+        "seed": "m3-bench-3",
+        "fleetSize": 100,
+        "carCount": 40,
+        "bookingCount": 25,
+        "horizonSeconds": 900,
+        "maxWaitSeconds": 300,
+        "onlineFraction": 0.8,
+        "onlineSchedule": [],
+        "workload": "typical",
+        "initialCandidates": 16,
+        "maxCandidates": 128,
+        "gridCellDegrees": 0.005
+      },
+      "counts": {
+        "requested": 25,
+        "assigned": 25,
+        "completed": 25,
+        "unserved": 0,
+        "pending": 0,
+        "activeTrips": 0
+      },
+      "metrics": {
+        "eventsProcessed": 86,
+        "peakEventQueue": 51,
+        "peakPending": 1,
+        "tableCandidates": 400,
+        "searchBudgetExhaustions": 0,
+        "dispatchAttempts": 25,
+        "dispatchVersion": "grid-fifo/v1"
+      },
+      "semanticSha256": "d2ffadbd3792de3d17ded143415ae2827691ba73ae4b67a4b91c08c7d1eaeb16",
+      "fixtureOperations": {
+        "CAR": {
+          "nearest": 0,
+          "table": 10,
+          "route": 15,
+          "routeCacheHits": 0,
+          "tableCacheHits": 0
+        },
+        "MOTORBIKE": {
+          "nearest": 0,
+          "table": 15,
+          "route": 21,
+          "routeCacheHits": 0,
+          "tableCacheHits": 0
+        }
+      },
+      "resources": {
+        "wallSeconds": 0.009916700000758283,
+        "cpuSeconds": 0.0,
+        "cpuPercentOneCore": 0.0,
+        "peakRssBytesSampled": 47230976,
+        "processPeakRssBytes": 47251456,
+        "minimumAvailablePhysicalBytes": 3844243456,
+        "sampleIntervalSeconds": 0.05,
+        "sampleCount": 2
+      },
+      "headroomBefore": {
+        "totalPhysicalBytes": 16948453376,
+        "availablePhysicalBytes": 3845201920,
+        "processRssBytes": 47230976,
+        "processPeakRssBytes": 47230976,
+        "processPagefileBytes": 34693120
+      },
+      "bookingsPerSecond": 2520.9999292192333,
+      "eventsPerSecond": 8672.239756514162,
+      "simulationSecondsPerWallSecond": 109848.73999583567,
+      "correctness": "PASS linear independent lifecycle/provenance audit, 5 fleet checkpoints; final horizon drained"
+    },
+    {
+      "status": "PASS",
+      "config": {
+        "regionId": "nvmr-hanoi-core",
+        "seed": "m3-bench-4",
+        "fleetSize": 100,
+        "carCount": 40,
+        "bookingCount": 25,
+        "horizonSeconds": 900,
+        "maxWaitSeconds": 300,
+        "onlineFraction": 0.8,
+        "onlineSchedule": [],
+        "workload": "typical",
+        "initialCandidates": 16,
+        "maxCandidates": 128,
+        "gridCellDegrees": 0.005
+      },
+      "counts": {
+        "requested": 25,
+        "assigned": 25,
+        "completed": 25,
+        "unserved": 0,
+        "pending": 0,
+        "activeTrips": 0
+      },
+      "metrics": {
+        "eventsProcessed": 86,
+        "peakEventQueue": 50,
+        "peakPending": 1,
+        "tableCandidates": 400,
+        "searchBudgetExhaustions": 0,
+        "dispatchAttempts": 25,
+        "dispatchVersion": "grid-fifo/v1"
+      },
+      "semanticSha256": "8c957792dfd293e7194e3e46bf2c1df0f2ea5d3d7d3e1d8410acb17e6765e000",
+      "fixtureOperations": {
+        "CAR": {
+          "nearest": 0,
+          "table": 9,
+          "route": 15,
+          "routeCacheHits": 0,
+          "tableCacheHits": 0
+        },
+        "MOTORBIKE": {
+          "nearest": 0,
+          "table": 16,
+          "route": 21,
+          "routeCacheHits": 0,
+          "tableCacheHits": 0
+        }
+      },
+      "resources": {
+        "wallSeconds": 0.008092399992165156,
+        "cpuSeconds": 0.015625,
+        "cpuPercentOneCore": 193.08239848657635,
+        "peakRssBytesSampled": 47226880,
+        "processPeakRssBytes": 47251456,
+        "minimumAvailablePhysicalBytes": 3844042752,
+        "sampleIntervalSeconds": 0.05,
+        "sampleCount": 2
+      },
+      "headroomBefore": {
+        "totalPhysicalBytes": 16948453376,
+        "availablePhysicalBytes": 3844161536,
+        "processRssBytes": 46960640,
+        "processPeakRssBytes": 47251456,
+        "processPagefileBytes": 34693120
+      },
+      "bookingsPerSecond": 3089.3183757852216,
+      "eventsPerSecond": 10627.255212701162,
+      "simulationSecondsPerWallSecond": 133643.54221826358,
+      "correctness": "PASS linear independent lifecycle/provenance audit, 5 fleet checkpoints; final horizon drained"
+    },
+    {
+      "status": "PASS",
+      "config": {
+        "regionId": "nvmr-hanoi-core",
+        "seed": "m3-bench-0",
+        "fleetSize": 100,
+        "carCount": 40,
+        "bookingCount": 100,
+        "horizonSeconds": 900,
+        "maxWaitSeconds": 300,
+        "onlineFraction": 0.6,
+        "onlineSchedule": [],
+        "workload": "burst",
+        "initialCandidates": 16,
+        "maxCandidates": 128,
+        "gridCellDegrees": 0.005
+      },
+      "counts": {
+        "requested": 100,
+        "assigned": 100,
+        "completed": 100,
+        "unserved": 0,
+        "pending": 0,
+        "activeTrips": 0
+      },
+      "metrics": {
+        "eventsProcessed": 376,
+        "peakEventQueue": 225,
+        "peakPending": 39,
+        "tableCandidates": 797,
+        "searchBudgetExhaustions": 0,
+        "dispatchAttempts": 126,
+        "dispatchVersion": "grid-fifo/v1"
+      },
+      "semanticSha256": "509626290e5ec269aed83efed4979e7b512db6bba68a8cf17478edbf60eda9ed",
+      "fixtureOperations": {
+        "CAR": {
+          "nearest": 0,
+          "table": 51,
+          "route": 67,
+          "routeCacheHits": 0,
+          "tableCacheHits": 0
+        },
+        "MOTORBIKE": {
+          "nearest": 0,
+          "table": 75,
+          "route": 109,
+          "routeCacheHits": 0,
+          "tableCacheHits": 0
+        }
+      },
+      "resources": {
+        "wallSeconds": 0.03510560000722762,
+        "cpuSeconds": 0.03125,
+        "cpuPercentOneCore": 89.0171368487255,
+        "peakRssBytesSampled": 48803840,
+        "processPeakRssBytes": 49889280,
+        "minimumAvailablePhysicalBytes": 3844009984,
+        "sampleIntervalSeconds": 0.05,
+        "sampleCount": 2
+      },
+      "headroomBefore": {
+        "totalPhysicalBytes": 16948453376,
+        "availablePhysicalBytes": 3844009984,
+        "processRssBytes": 47288320,
+        "processPeakRssBytes": 47288320,
+        "processPagefileBytes": 34693120
+      },
+      "bookingsPerSecond": 2848.548379159216,
+      "eventsPerSecond": 10710.54190563865,
+      "simulationSecondsPerWallSecond": 25636.935412432944,
+      "correctness": "PASS linear independent lifecycle/provenance audit, 5 fleet checkpoints; final horizon drained"
+    },
+    {
+      "status": "PASS",
+      "config": {
+        "regionId": "nvmr-hanoi-core",
+        "seed": "m3-bench-1",
+        "fleetSize": 100,
+        "carCount": 40,
+        "bookingCount": 100,
+        "horizonSeconds": 900,
+        "maxWaitSeconds": 300,
+        "onlineFraction": 0.6,
+        "onlineSchedule": [],
+        "workload": "burst",
+        "initialCandidates": 16,
+        "maxCandidates": 128,
+        "gridCellDegrees": 0.005
+      },
+      "counts": {
+        "requested": 100,
+        "assigned": 97,
+        "completed": 97,
+        "unserved": 3,
+        "pending": 0,
+        "activeTrips": 0
+      },
+      "metrics": {
+        "eventsProcessed": 372,
+        "peakEventQueue": 231,
+        "peakPending": 35,
+        "tableCandidates": 1570,
+        "searchBudgetExhaustions": 0,
+        "dispatchAttempts": 248,
+        "dispatchVersion": "grid-fifo/v1"
+      },
+      "semanticSha256": "501808b99f08ba2353b6d70b222d819ba6cd88bea22fae874377fab4e3144925",
+      "fixtureOperations": {
+        "CAR": {
+          "nearest": 0,
+          "table": 173,
+          "route": 66,
+          "routeCacheHits": 0,
+          "tableCacheHits": 0
+        },
+        "MOTORBIKE": {
+          "nearest": 0,
+          "table": 75,
+          "route": 109,
+          "routeCacheHits": 0,
+          "tableCacheHits": 0
+        }
+      },
+      "resources": {
+        "wallSeconds": 0.02213129999290686,
+        "cpuSeconds": 0.015625,
+        "cpuPercentOneCore": 70.60136550951754,
+        "peakRssBytesSampled": 49016832,
+        "processPeakRssBytes": 50233344,
+        "minimumAvailablePhysicalBytes": 3843944448,
+        "sampleIntervalSeconds": 0.05,
+        "sampleCount": 2
+      },
+      "headroomBefore": {
+        "totalPhysicalBytes": 16948453376,
+        "availablePhysicalBytes": 3844182016,
+        "processRssBytes": 48926720,
+        "processPeakRssBytes": 49889280,
+        "processPagefileBytes": 36720640
+      },
+      "bookingsPerSecond": 4518.487392609122,
+      "eventsPerSecond": 16808.773100505932,
+      "simulationSecondsPerWallSecond": 40666.386533482095,
+      "correctness": "PASS linear independent lifecycle/provenance audit, 5 fleet checkpoints; final horizon drained"
+    },
+    {
+      "status": "PASS",
+      "config": {
+        "regionId": "nvmr-hanoi-core",
+        "seed": "m3-bench-2",
+        "fleetSize": 100,
+        "carCount": 40,
+        "bookingCount": 100,
+        "horizonSeconds": 900,
+        "maxWaitSeconds": 300,
+        "onlineFraction": 0.6,
+        "onlineSchedule": [],
+        "workload": "burst",
+        "initialCandidates": 16,
+        "maxCandidates": 128,
+        "gridCellDegrees": 0.005
+      },
+      "counts": {
+        "requested": 100,
+        "assigned": 99,
+        "completed": 99,
+        "unserved": 1,
+        "pending": 0,
+        "activeTrips": 0
+      },
+      "metrics": {
+        "eventsProcessed": 375,
+        "peakEventQueue": 233,
+        "peakPending": 39,
+        "tableCandidates": 1058,
+        "searchBudgetExhaustions": 0,
+        "dispatchAttempts": 179,
+        "dispatchVersion": "grid-fifo/v1"
+      },
+      "semanticSha256": "fa135914c5b5317d7b25eee39246a85cb0a45f32c31869fbf0f87e5ad0bc651d",
+      "fixtureOperations": {
+        "CAR": {
+          "nearest": 0,
+          "table": 111,
+          "route": 66,
+          "routeCacheHits": 0,
+          "tableCacheHits": 0
+        },
+        "MOTORBIKE": {
+          "nearest": 0,
+          "table": 68,
+          "route": 110,
+          "routeCacheHits": 0,
+          "tableCacheHits": 0
+        }
+      },
+      "resources": {
+        "wallSeconds": 0.045139099995139986,
+        "cpuSeconds": 0.046875,
+        "cpuPercentOneCore": 103.84566817913277,
+        "peakRssBytesSampled": 49053696,
+        "processPeakRssBytes": 50233344,
+        "minimumAvailablePhysicalBytes": 3843063808,
+        "sampleIntervalSeconds": 0.05,
+        "sampleCount": 2
+      },
+      "headroomBefore": {
+        "totalPhysicalBytes": 16948453376,
+        "availablePhysicalBytes": 3843063808,
+        "processRssBytes": 49053696,
+        "processPeakRssBytes": 50233344,
+        "processPagefileBytes": 36712448
+      },
+      "bookingsPerSecond": 2215.3742544881657,
+      "eventsPerSecond": 8307.65345433062,
+      "simulationSecondsPerWallSecond": 19938.36829039349,
+      "correctness": "PASS linear independent lifecycle/provenance audit, 5 fleet checkpoints; final horizon drained"
+    },
+    {
+      "status": "PASS",
+      "config": {
+        "regionId": "nvmr-hanoi-core",
+        "seed": "m3-bench-3",
+        "fleetSize": 100,
+        "carCount": 40,
+        "bookingCount": 100,
+        "horizonSeconds": 900,
+        "maxWaitSeconds": 300,
+        "onlineFraction": 0.6,
+        "onlineSchedule": [],
+        "workload": "burst",
+        "initialCandidates": 16,
+        "maxCandidates": 128,
+        "gridCellDegrees": 0.005
+      },
+      "counts": {
+        "requested": 100,
+        "assigned": 100,
+        "completed": 100,
+        "unserved": 0,
+        "pending": 0,
+        "activeTrips": 0
+      },
+      "metrics": {
+        "eventsProcessed": 384,
+        "peakEventQueue": 236,
+        "peakPending": 36,
+        "tableCandidates": 834,
+        "searchBudgetExhaustions": 0,
+        "dispatchAttempts": 134,
+        "dispatchVersion": "grid-fifo/v1"
+      },
+      "semanticSha256": "b6b7169d8d534886f4532c7e2dad1ff4afa10eaedd82a573cc6c3751cc84f169",
+      "fixtureOperations": {
+        "CAR": {
+          "nearest": 0,
+          "table": 54,
+          "route": 67,
+          "routeCacheHits": 0,
+          "tableCacheHits": 0
+        },
+        "MOTORBIKE": {
+          "nearest": 0,
+          "table": 80,
+          "route": 117,
+          "routeCacheHits": 0,
+          "tableCacheHits": 0
+        }
+      },
+      "resources": {
+        "wallSeconds": 0.04086979999556206,
+        "cpuSeconds": 0.046875,
+        "cpuPercentOneCore": 114.6934900711284,
+        "peakRssBytesSampled": 49029120,
+        "processPeakRssBytes": 50233344,
+        "minimumAvailablePhysicalBytes": 3867611136,
+        "sampleIntervalSeconds": 0.05,
+        "sampleCount": 2
+      },
+      "headroomBefore": {
+        "totalPhysicalBytes": 16948453376,
+        "availablePhysicalBytes": 3867611136,
+        "processRssBytes": 48680960,
+        "processPeakRssBytes": 50233344,
+        "processPagefileBytes": 37494784
+      },
+      "bookingsPerSecond": 2446.794454850739,
+      "eventsPerSecond": 9395.690706626838,
+      "simulationSecondsPerWallSecond": 22021.150093656648,
+      "correctness": "PASS linear independent lifecycle/provenance audit, 5 fleet checkpoints; final horizon drained"
+    },
+    {
+      "status": "PASS",
+      "config": {
+        "regionId": "nvmr-hanoi-core",
+        "seed": "m3-bench-4",
+        "fleetSize": 100,
+        "carCount": 40,
+        "bookingCount": 100,
+        "horizonSeconds": 900,
+        "maxWaitSeconds": 300,
+        "onlineFraction": 0.6,
+        "onlineSchedule": [],
+        "workload": "burst",
+        "initialCandidates": 16,
+        "maxCandidates": 128,
+        "gridCellDegrees": 0.005
+      },
+      "counts": {
+        "requested": 100,
+        "assigned": 99,
+        "completed": 99,
+        "unserved": 1,
+        "pending": 0,
+        "activeTrips": 0
+      },
+      "metrics": {
+        "eventsProcessed": 374,
+        "peakEventQueue": 229,
+        "peakPending": 34,
+        "tableCandidates": 1836,
+        "searchBudgetExhaustions": 0,
+        "dispatchAttempts": 223,
+        "dispatchVersion": "grid-fifo/v1"
+      },
+      "semanticSha256": "ed7b93695aa64f7e5a12ded102480846cc0a960f1e5b9bde999233eee1c30ddf",
+      "fixtureOperations": {
+        "CAR": {
+          "nearest": 0,
+          "table": 48,
+          "route": 56,
+          "routeCacheHits": 0,
+          "tableCacheHits": 0
+        },
+        "MOTORBIKE": {
+          "nearest": 0,
+          "table": 175,
+          "route": 119,
+          "routeCacheHits": 0,
+          "tableCacheHits": 0
+        }
+      },
+      "resources": {
+        "wallSeconds": 0.030171799997333437,
+        "cpuSeconds": 0.03125,
+        "cpuPercentOneCore": 103.57353556221986,
+        "peakRssBytesSampled": 49074176,
+        "processPeakRssBytes": 50233344,
+        "minimumAvailablePhysicalBytes": 3868180480,
+        "sampleIntervalSeconds": 0.05,
+        "sampleCount": 2
+      },
+      "headroomBefore": {
+        "totalPhysicalBytes": 16948453376,
+        "availablePhysicalBytes": 3868180480,
+        "processRssBytes": 49074176,
+        "processPeakRssBytes": 50233344,
+        "processPagefileBytes": 36712448
+      },
+      "bookingsPerSecond": 3314.3531379910355,
+      "eventsPerSecond": 12395.680736086473,
+      "simulationSecondsPerWallSecond": 29829.178241919322,
+      "correctness": "PASS linear independent lifecycle/provenance audit, 5 fleet checkpoints; final horizon drained"
+    },
+    {
+      "status": "PASS",
+      "config": {
+        "regionId": "nvmr-hanoi-core",
+        "seed": "m3-bench-0",
+        "fleetSize": 500,
+        "carCount": 200,
+        "bookingCount": 10,
+        "horizonSeconds": 900,
+        "maxWaitSeconds": 300,
+        "onlineFraction": 0.25,
+        "onlineSchedule": [],
+        "workload": "low",
+        "initialCandidates": 16,
+        "maxCandidates": 128,
+        "gridCellDegrees": 0.005
+      },
+      "counts": {
+        "requested": 10,
+        "assigned": 10,
+        "completed": 10,
+        "unserved": 0,
+        "pending": 0,
+        "activeTrips": 0
+      },
+      "metrics": {
+        "eventsProcessed": 33,
+        "peakEventQueue": 20,
+        "peakPending": 1,
+        "tableCandidates": 160,
+        "searchBudgetExhaustions": 0,
+        "dispatchAttempts": 10,
+        "dispatchVersion": "grid-fifo/v1"
+      },
+      "semanticSha256": "3a504919cd60ff47a1c2c5e054a6800d1749a2afbd6b3d9be3097246f5ef352a",
+      "fixtureOperations": {
+        "CAR": {
+          "nearest": 0,
+          "table": 6,
+          "route": 8,
+          "routeCacheHits": 0,
+          "tableCacheHits": 0
+        },
+        "MOTORBIKE": {
+          "nearest": 0,
+          "table": 4,
+          "route": 5,
+          "routeCacheHits": 0,
+          "tableCacheHits": 0
+        }
+      },
+      "resources": {
+        "wallSeconds": 0.015991899999789894,
+        "cpuSeconds": 0.015625,
+        "cpuPercentOneCore": 97.7057135187519,
+        "peakRssBytesSampled": 49057792,
+        "processPeakRssBytes": 50233344,
+        "minimumAvailablePhysicalBytes": 3871952896,
+        "sampleIntervalSeconds": 0.05,
+        "sampleCount": 2
+      },
+      "headroomBefore": {
+        "totalPhysicalBytes": 16948453376,
+        "availablePhysicalBytes": 3871952896,
+        "processRssBytes": 48590848,
+        "processPeakRssBytes": 50233344,
+        "processPagefileBytes": 36532224
+      },
+      "bookingsPerSecond": 625.3165665200122,
+      "eventsPerSecond": 2063.5446695160404,
+      "simulationSecondsPerWallSecond": 62300.10192741886,
+      "correctness": "PASS linear independent lifecycle/provenance audit, 5 fleet checkpoints; final horizon drained"
+    },
+    {
+      "status": "PASS",
+      "config": {
+        "regionId": "nvmr-hanoi-core",
+        "seed": "m3-bench-1",
+        "fleetSize": 500,
+        "carCount": 200,
+        "bookingCount": 10,
+        "horizonSeconds": 900,
+        "maxWaitSeconds": 300,
+        "onlineFraction": 0.25,
+        "onlineSchedule": [],
+        "workload": "low",
+        "initialCandidates": 16,
+        "maxCandidates": 128,
+        "gridCellDegrees": 0.005
+      },
+      "counts": {
+        "requested": 10,
+        "assigned": 10,
+        "completed": 10,
+        "unserved": 0,
+        "pending": 0,
+        "activeTrips": 0
+      },
+      "metrics": {
+        "eventsProcessed": 34,
+        "peakEventQueue": 20,
+        "peakPending": 1,
+        "tableCandidates": 160,
+        "searchBudgetExhaustions": 0,
+        "dispatchAttempts": 10,
+        "dispatchVersion": "grid-fifo/v1"
+      },
+      "semanticSha256": "6e8b1a90a4b91e59dad5224d4c12a402e941fdccd1af3aff54974d0c4a143402",
+      "fixtureOperations": {
+        "CAR": {
+          "nearest": 0,
+          "table": 3,
+          "route": 4,
+          "routeCacheHits": 0,
+          "tableCacheHits": 0
+        },
+        "MOTORBIKE": {
+          "nearest": 0,
+          "table": 7,
+          "route": 10,
+          "routeCacheHits": 0,
+          "tableCacheHits": 0
+        }
+      },
+      "resources": {
+        "wallSeconds": 0.013680599993676879,
+        "cpuSeconds": 0.0,
+        "cpuPercentOneCore": 0.0,
+        "peakRssBytesSampled": 49303552,
+        "processPeakRssBytes": 50233344,
+        "minimumAvailablePhysicalBytes": 3880099840,
+        "sampleIntervalSeconds": 0.05,
+        "sampleCount": 2
+      },
+      "headroomBefore": {
+        "totalPhysicalBytes": 16948453376,
+        "availablePhysicalBytes": 3880099840,
+        "processRssBytes": 49106944,
+        "processPeakRssBytes": 50233344,
+        "processPagefileBytes": 36749312
+      },
+      "bookingsPerSecond": 730.9620926437409,
+      "eventsPerSecond": 2485.271114988719,
+      "simulationSecondsPerWallSecond": 79150.47589290515,
+      "correctness": "PASS linear independent lifecycle/provenance audit, 5 fleet checkpoints; final horizon drained"
+    },
+    {
+      "status": "PASS",
+      "config": {
+        "regionId": "nvmr-hanoi-core",
+        "seed": "m3-bench-2",
+        "fleetSize": 500,
+        "carCount": 200,
+        "bookingCount": 10,
+        "horizonSeconds": 900,
+        "maxWaitSeconds": 300,
+        "onlineFraction": 0.25,
+        "onlineSchedule": [],
+        "workload": "low",
+        "initialCandidates": 16,
+        "maxCandidates": 128,
+        "gridCellDegrees": 0.005
+      },
+      "counts": {
+        "requested": 10,
+        "assigned": 10,
+        "completed": 10,
+        "unserved": 0,
+        "pending": 0,
+        "activeTrips": 0
+      },
+      "metrics": {
+        "eventsProcessed": 31,
+        "peakEventQueue": 20,
+        "peakPending": 1,
+        "tableCandidates": 160,
+        "searchBudgetExhaustions": 0,
+        "dispatchAttempts": 10,
+        "dispatchVersion": "grid-fifo/v1"
+      },
+      "semanticSha256": "410cd6cfcc7d60ba59befb06a11795a043b400eb2d83109471743219a7e8c68a",
+      "fixtureOperations": {
+        "CAR": {
+          "nearest": 0,
+          "table": 3,
+          "route": 4,
+          "routeCacheHits": 0,
+          "tableCacheHits": 0
+        },
+        "MOTORBIKE": {
+          "nearest": 0,
+          "table": 7,
+          "route": 7,
+          "routeCacheHits": 0,
+          "tableCacheHits": 0
+        }
+      },
+      "resources": {
+        "wallSeconds": 0.012595299995155074,
+        "cpuSeconds": 0.015625,
+        "cpuPercentOneCore": 124.05421074536005,
+        "peakRssBytesSampled": 49369088,
+        "processPeakRssBytes": 50233344,
+        "minimumAvailablePhysicalBytes": 3880124416,
+        "sampleIntervalSeconds": 0.05,
+        "sampleCount": 2
+      },
+      "headroomBefore": {
+        "totalPhysicalBytes": 16948453376,
+        "availablePhysicalBytes": 3880124416,
+        "processRssBytes": 49307648,
+        "processPeakRssBytes": 50233344,
+        "processPagefileBytes": 36970496
+      },
+      "bookingsPerSecond": 793.9469487703044,
+      "eventsPerSecond": 2461.2355411879435,
+      "simulationSecondsPerWallSecond": 71455.22538932739,
+      "correctness": "PASS linear independent lifecycle/provenance audit, 5 fleet checkpoints; final horizon drained"
+    },
+    {
+      "status": "PASS",
+      "config": {
+        "regionId": "nvmr-hanoi-core",
+        "seed": "m3-bench-3",
+        "fleetSize": 500,
+        "carCount": 200,
+        "bookingCount": 10,
+        "horizonSeconds": 900,
+        "maxWaitSeconds": 300,
+        "onlineFraction": 0.25,
+        "onlineSchedule": [],
+        "workload": "low",
+        "initialCandidates": 16,
+        "maxCandidates": 128,
+        "gridCellDegrees": 0.005
+      },
+      "counts": {
+        "requested": 10,
+        "assigned": 10,
+        "completed": 10,
+        "unserved": 0,
+        "pending": 0,
+        "activeTrips": 0
+      },
+      "metrics": {
+        "eventsProcessed": 32,
+        "peakEventQueue": 20,
+        "peakPending": 1,
+        "tableCandidates": 160,
+        "searchBudgetExhaustions": 0,
+        "dispatchAttempts": 10,
+        "dispatchVersion": "grid-fifo/v1"
+      },
+      "semanticSha256": "ee5d1d26ee32f50e4dd42ea2615d534b909cf00d97c9e857b4bc5ffae0db7f76",
+      "fixtureOperations": {
+        "CAR": {
+          "nearest": 0,
+          "table": 7,
+          "route": 7,
+          "routeCacheHits": 0,
+          "tableCacheHits": 0
+        },
+        "MOTORBIKE": {
+          "nearest": 0,
+          "table": 3,
+          "route": 5,
+          "routeCacheHits": 0,
+          "tableCacheHits": 0
+        }
+      },
+      "resources": {
+        "wallSeconds": 0.012974600002053194,
+        "cpuSeconds": 0.0,
+        "cpuPercentOneCore": 0.0,
+        "peakRssBytesSampled": 49975296,
+        "processPeakRssBytes": 50233344,
+        "minimumAvailablePhysicalBytes": 3879784448,
+        "sampleIntervalSeconds": 0.05,
+        "sampleCount": 2
+      },
+      "headroomBefore": {
+        "totalPhysicalBytes": 16948453376,
+        "availablePhysicalBytes": 3880153088,
+        "processRssBytes": 49373184,
+        "processPeakRssBytes": 50233344,
+        "processPagefileBytes": 36970496
+      },
+      "bookingsPerSecond": 770.7366699873236,
+      "eventsPerSecond": 2466.357343959435,
+      "simulationSecondsPerWallSecond": 80554.9303897311,
+      "correctness": "PASS linear independent lifecycle/provenance audit, 5 fleet checkpoints; final horizon drained"
+    },
+    {
+      "status": "PASS",
+      "config": {
+        "regionId": "nvmr-hanoi-core",
+        "seed": "m3-bench-4",
+        "fleetSize": 500,
+        "carCount": 200,
+        "bookingCount": 10,
+        "horizonSeconds": 900,
+        "maxWaitSeconds": 300,
+        "onlineFraction": 0.25,
+        "onlineSchedule": [],
+        "workload": "low",
+        "initialCandidates": 16,
+        "maxCandidates": 128,
+        "gridCellDegrees": 0.005
+      },
+      "counts": {
+        "requested": 10,
+        "assigned": 10,
+        "completed": 10,
+        "unserved": 0,
+        "pending": 0,
+        "activeTrips": 0
+      },
+      "metrics": {
+        "eventsProcessed": 32,
+        "peakEventQueue": 21,
+        "peakPending": 1,
+        "tableCandidates": 160,
+        "searchBudgetExhaustions": 0,
+        "dispatchAttempts": 10,
+        "dispatchVersion": "grid-fifo/v1"
+      },
+      "semanticSha256": "9008e5854101e306d099b4d13a50d79a8160125e1563ccd083b5a1e7d5a0b822",
+      "fixtureOperations": {
+        "CAR": {
+          "nearest": 0,
+          "table": 6,
+          "route": 8,
+          "routeCacheHits": 0,
+          "tableCacheHits": 0
+        },
+        "MOTORBIKE": {
+          "nearest": 0,
+          "table": 4,
+          "route": 4,
+          "routeCacheHits": 0,
+          "tableCacheHits": 0
+        }
+      },
+      "resources": {
+        "wallSeconds": 0.03478469999390654,
+        "cpuSeconds": 0.03125,
+        "cpuPercentOneCore": 89.83834848503584,
+        "peakRssBytesSampled": 49975296,
+        "processPeakRssBytes": 50233344,
+        "minimumAvailablePhysicalBytes": 3880046592,
+        "sampleIntervalSeconds": 0.05,
+        "sampleCount": 2
+      },
+      "headroomBefore": {
+        "totalPhysicalBytes": 16948453376,
+        "availablePhysicalBytes": 3880046592,
+        "processRssBytes": 49975296,
+        "processPeakRssBytes": 50233344,
+        "processPagefileBytes": 37564416
+      },
+      "bookingsPerSecond": 287.4827151521147,
+      "eventsPerSecond": 919.944688486767,
+      "simulationSecondsPerWallSecond": 33548.48540319239,
+      "correctness": "PASS linear independent lifecycle/provenance audit, 5 fleet checkpoints; final horizon drained"
+    },
+    {
+      "status": "PASS",
+      "config": {
+        "regionId": "nvmr-hanoi-core",
+        "seed": "m3-bench-0",
+        "fleetSize": 500,
+        "carCount": 200,
+        "bookingCount": 125,
+        "horizonSeconds": 900,
+        "maxWaitSeconds": 300,
+        "onlineFraction": 0.8,
+        "onlineSchedule": [],
+        "workload": "typical",
+        "initialCandidates": 16,
+        "maxCandidates": 128,
+        "gridCellDegrees": 0.005
+      },
+      "counts": {
+        "requested": 125,
+        "assigned": 125,
+        "completed": 125,
+        "unserved": 0,
+        "pending": 0,
+        "activeTrips": 0
+      },
+      "metrics": {
+        "eventsProcessed": 412,
+        "peakEventQueue": 251,
+        "peakPending": 1,
+        "tableCandidates": 2000,
+        "searchBudgetExhaustions": 0,
+        "dispatchAttempts": 125,
+        "dispatchVersion": "grid-fifo/v1"
+      },
+      "semanticSha256": "1fd7aecf57faac913b85a5f2bd27aef142b0a6b3e77a26805865bc1232539e0a",
+      "fixtureOperations": {
+        "CAR": {
+          "nearest": 0,
+          "table": 62,
+          "route": 83,
+          "routeCacheHits": 0,
+          "tableCacheHits": 0
+        },
+        "MOTORBIKE": {
+          "nearest": 0,
+          "table": 63,
+          "route": 79,
+          "routeCacheHits": 0,
+          "tableCacheHits": 0
+        }
+      },
+      "resources": {
+        "wallSeconds": 0.04206910000357311,
+        "cpuSeconds": 0.046875,
+        "cpuPercentOneCore": 111.42382412749193,
+        "peakRssBytesSampled": 50135040,
+        "processPeakRssBytes": 53297152,
+        "minimumAvailablePhysicalBytes": 3880210432,
+        "sampleIntervalSeconds": 0.05,
+        "sampleCount": 2
+      },
+      "headroomBefore": {
+        "totalPhysicalBytes": 16948453376,
+        "availablePhysicalBytes": 3880210432,
+        "processRssBytes": 49377280,
+        "processPeakRssBytes": 50233344,
+        "processPagefileBytes": 36990976
+      },
+      "bookingsPerSecond": 2971.301976733118,
+      "eventsPerSecond": 9793.411315312356,
+      "simulationSecondsPerWallSecond": 27046.21681717367,
+      "correctness": "PASS linear independent lifecycle/provenance audit, 5 fleet checkpoints; final horizon drained"
+    },
+    {
+      "status": "PASS",
+      "config": {
+        "regionId": "nvmr-hanoi-core",
+        "seed": "m3-bench-1",
+        "fleetSize": 500,
+        "carCount": 200,
+        "bookingCount": 125,
+        "horizonSeconds": 900,
+        "maxWaitSeconds": 300,
+        "onlineFraction": 0.8,
+        "onlineSchedule": [],
+        "workload": "typical",
+        "initialCandidates": 16,
+        "maxCandidates": 128,
+        "gridCellDegrees": 0.005
+      },
+      "counts": {
+        "requested": 125,
+        "assigned": 125,
+        "completed": 125,
+        "unserved": 0,
+        "pending": 0,
+        "activeTrips": 0
+      },
+      "metrics": {
+        "eventsProcessed": 400,
+        "peakEventQueue": 250,
+        "peakPending": 1,
+        "tableCandidates": 2000,
+        "searchBudgetExhaustions": 0,
+        "dispatchAttempts": 125,
+        "dispatchVersion": "grid-fifo/v1"
+      },
+      "semanticSha256": "9b7b72082b6c8c9a4af5162d87f8fe64e24be5390f66483c4445c4119e594454",
+      "fixtureOperations": {
+        "CAR": {
+          "nearest": 0,
+          "table": 46,
+          "route": 51,
+          "routeCacheHits": 0,
+          "tableCacheHits": 0
+        },
+        "MOTORBIKE": {
+          "nearest": 0,
+          "table": 79,
+          "route": 99,
+          "routeCacheHits": 0,
+          "tableCacheHits": 0
+        }
+      },
+      "resources": {
+        "wallSeconds": 0.040633800002979115,
+        "cpuSeconds": 0.03125,
+        "cpuPercentOneCore": 76.90641780416517,
+        "peakRssBytesSampled": 50200576,
+        "processPeakRssBytes": 53297152,
+        "minimumAvailablePhysicalBytes": 3880435712,
+        "sampleIntervalSeconds": 0.05,
+        "sampleCount": 2
+      },
+      "headroomBefore": {
+        "totalPhysicalBytes": 16948453376,
+        "availablePhysicalBytes": 3881594880,
+        "processRssBytes": 50200576,
+        "processPeakRssBytes": 53297152,
+        "processPagefileBytes": 37638144
+      },
+      "bookingsPerSecond": 3076.256712166607,
+      "eventsPerSecond": 9844.021478933142,
+      "simulationSecondsPerWallSecond": 30169.07106670119,
+      "correctness": "PASS linear independent lifecycle/provenance audit, 5 fleet checkpoints; final horizon drained"
+    },
+    {
+      "status": "PASS",
+      "config": {
+        "regionId": "nvmr-hanoi-core",
+        "seed": "m3-bench-2",
+        "fleetSize": 500,
+        "carCount": 200,
+        "bookingCount": 125,
+        "horizonSeconds": 900,
+        "maxWaitSeconds": 300,
+        "onlineFraction": 0.8,
+        "onlineSchedule": [],
+        "workload": "typical",
+        "initialCandidates": 16,
+        "maxCandidates": 128,
+        "gridCellDegrees": 0.005
+      },
+      "counts": {
+        "requested": 125,
+        "assigned": 125,
+        "completed": 125,
+        "unserved": 0,
+        "pending": 0,
+        "activeTrips": 0
+      },
+      "metrics": {
+        "eventsProcessed": 408,
+        "peakEventQueue": 250,
+        "peakPending": 1,
+        "tableCandidates": 2000,
+        "searchBudgetExhaustions": 0,
+        "dispatchAttempts": 125,
+        "dispatchVersion": "grid-fifo/v1"
+      },
+      "semanticSha256": "51843bda1f67fa14a0cec47cfbdc85f53cd9690797dce719723478333cc6bc4f",
+      "fixtureOperations": {
+        "CAR": {
+          "nearest": 0,
+          "table": 60,
+          "route": 71,
+          "routeCacheHits": 0,
+          "tableCacheHits": 0
+        },
+        "MOTORBIKE": {
+          "nearest": 0,
+          "table": 65,
+          "route": 87,
+          "routeCacheHits": 0,
+          "tableCacheHits": 0
+        }
+      },
+      "resources": {
+        "wallSeconds": 0.046741099999053404,
+        "cpuSeconds": 0.046875,
+        "cpuPercentOneCore": 100.28647165117917,
+        "peakRssBytesSampled": 50032640,
+        "processPeakRssBytes": 53297152,
+        "minimumAvailablePhysicalBytes": 3880214528,
+        "sampleIntervalSeconds": 0.05,
+        "sampleCount": 2
+      },
+      "headroomBefore": {
+        "totalPhysicalBytes": 16948453376,
+        "availablePhysicalBytes": 3880214528,
+        "processRssBytes": 50032640,
+        "processPeakRssBytes": 53297152,
+        "processPagefileBytes": 37597184
+      },
+      "bookingsPerSecond": 2674.3059106981113,
+      "eventsPerSecond": 8728.934492518636,
+      "simulationSecondsPerWallSecond": 23991.62621381847,
+      "correctness": "PASS linear independent lifecycle/provenance audit, 5 fleet checkpoints; final horizon drained"
+    },
+    {
+      "status": "PASS",
+      "config": {
+        "regionId": "nvmr-hanoi-core",
+        "seed": "m3-bench-3",
+        "fleetSize": 500,
+        "carCount": 200,
+        "bookingCount": 125,
+        "horizonSeconds": 900,
+        "maxWaitSeconds": 300,
+        "onlineFraction": 0.8,
+        "onlineSchedule": [],
+        "workload": "typical",
+        "initialCandidates": 16,
+        "maxCandidates": 128,
+        "gridCellDegrees": 0.005
+      },
+      "counts": {
+        "requested": 125,
+        "assigned": 125,
+        "completed": 125,
+        "unserved": 0,
+        "pending": 0,
+        "activeTrips": 0
+      },
+      "metrics": {
+        "eventsProcessed": 397,
+        "peakEventQueue": 251,
+        "peakPending": 1,
+        "tableCandidates": 2000,
+        "searchBudgetExhaustions": 0,
+        "dispatchAttempts": 125,
+        "dispatchVersion": "grid-fifo/v1"
+      },
+      "semanticSha256": "f6f4c64e4b4ffa908f9e5ea9d2f652ebb76d492b151a7619e529ae764b9681b3",
+      "fixtureOperations": {
+        "CAR": {
+          "nearest": 0,
+          "table": 61,
+          "route": 73,
+          "routeCacheHits": 0,
+          "tableCacheHits": 0
+        },
+        "MOTORBIKE": {
+          "nearest": 0,
+          "table": 64,
+          "route": 74,
+          "routeCacheHits": 0,
+          "tableCacheHits": 0
+        }
+      },
+      "resources": {
+        "wallSeconds": 0.04581260000122711,
+        "cpuSeconds": 0.046875,
+        "cpuPercentOneCore": 102.31901267062868,
+        "peakRssBytesSampled": 50024448,
+        "processPeakRssBytes": 53297152,
+        "minimumAvailablePhysicalBytes": 3881971712,
+        "sampleIntervalSeconds": 0.05,
+        "sampleCount": 2
+      },
+      "headroomBefore": {
+        "totalPhysicalBytes": 16948453376,
+        "availablePhysicalBytes": 3881971712,
+        "processRssBytes": 50016256,
+        "processPeakRssBytes": 53297152,
+        "processPagefileBytes": 39141376
+      },
+      "bookingsPerSecond": 2728.507004550098,
+      "eventsPerSecond": 8665.738246451112,
+      "simulationSecondsPerWallSecond": 24720.4044295601,
+      "correctness": "PASS linear independent lifecycle/provenance audit, 5 fleet checkpoints; final horizon drained"
+    },
+    {
+      "status": "PASS",
+      "config": {
+        "regionId": "nvmr-hanoi-core",
+        "seed": "m3-bench-4",
+        "fleetSize": 500,
+        "carCount": 200,
+        "bookingCount": 125,
+        "horizonSeconds": 900,
+        "maxWaitSeconds": 300,
+        "onlineFraction": 0.8,
+        "onlineSchedule": [],
+        "workload": "typical",
+        "initialCandidates": 16,
+        "maxCandidates": 128,
+        "gridCellDegrees": 0.005
+      },
+      "counts": {
+        "requested": 125,
+        "assigned": 125,
+        "completed": 125,
+        "unserved": 0,
+        "pending": 0,
+        "activeTrips": 0
+      },
+      "metrics": {
+        "eventsProcessed": 412,
+        "peakEventQueue": 252,
+        "peakPending": 1,
+        "tableCandidates": 2000,
+        "searchBudgetExhaustions": 0,
+        "dispatchAttempts": 125,
+        "dispatchVersion": "grid-fifo/v1"
+      },
+      "semanticSha256": "23cb8b09576c259485c512aee2952beb56ef7491beb6243507514ebf550ee150",
+      "fixtureOperations": {
+        "CAR": {
+          "nearest": 0,
+          "table": 46,
+          "route": 58,
+          "routeCacheHits": 0,
+          "tableCacheHits": 0
+        },
+        "MOTORBIKE": {
+          "nearest": 0,
+          "table": 79,
+          "route": 104,
+          "routeCacheHits": 0,
+          "tableCacheHits": 0
+        }
+      },
+      "resources": {
+        "wallSeconds": 0.046578599998611026,
+        "cpuSeconds": 0.046875,
+        "cpuPercentOneCore": 100.63634373166607,
+        "peakRssBytesSampled": 50786304,
+        "processPeakRssBytes": 53297152,
+        "minimumAvailablePhysicalBytes": 3881684992,
+        "sampleIntervalSeconds": 0.05,
+        "sampleCount": 2
+      },
+      "headroomBefore": {
+        "totalPhysicalBytes": 16948453376,
+        "availablePhysicalBytes": 3881684992,
+        "processRssBytes": 50176000,
+        "processPeakRssBytes": 53297152,
+        "processPagefileBytes": 37707776
+      },
+      "bookingsPerSecond": 2683.6358328444285,
+      "eventsPerSecond": 8845.263705055237,
+      "simulationSecondsPerWallSecond": 25796.631930453703,
+      "correctness": "PASS linear independent lifecycle/provenance audit, 5 fleet checkpoints; final horizon drained"
+    },
+    {
+      "status": "PASS",
+      "config": {
+        "regionId": "nvmr-hanoi-core",
+        "seed": "m3-bench-0",
+        "fleetSize": 500,
+        "carCount": 200,
+        "bookingCount": 500,
+        "horizonSeconds": 900,
+        "maxWaitSeconds": 300,
+        "onlineFraction": 0.6,
+        "onlineSchedule": [],
+        "workload": "burst",
+        "initialCandidates": 16,
+        "maxCandidates": 128,
+        "gridCellDegrees": 0.005
+      },
+      "counts": {
+        "requested": 500,
+        "assigned": 500,
+        "completed": 500,
+        "unserved": 0,
+        "pending": 0,
+        "activeTrips": 0
+      },
+      "metrics": {
+        "eventsProcessed": 1817,
+        "peakEventQueue": 1107,
+        "peakPending": 182,
+        "tableCandidates": 6543,
+        "searchBudgetExhaustions": 0,
+        "dispatchAttempts": 761,
+        "dispatchVersion": "grid-fifo/v1"
+      },
+      "semanticSha256": "87bfff79cfb0ad7eaab24bcadca44300b5df60cbbdd73f7a281fe79bd2ea4430",
+      "fixtureOperations": {
+        "CAR": {
+          "nearest": 0,
+          "table": 516,
+          "route": 349,
+          "routeCacheHits": 0,
+          "tableCacheHits": 0
+        },
+        "MOTORBIKE": {
+          "nearest": 0,
+          "table": 304,
+          "route": 468,
+          "routeCacheHits": 0,
+          "tableCacheHits": 0
+        }
+      },
+      "resources": {
+        "wallSeconds": 0.12177430000156164,
+        "cpuSeconds": 0.109375,
+        "cpuPercentOneCore": 89.81780227732565,
+        "peakRssBytesSampled": 54358016,
+        "processPeakRssBytes": 58970112,
+        "minimumAvailablePhysicalBytes": 3881168896,
+        "sampleIntervalSeconds": 0.05,
+        "sampleCount": 3
+      },
+      "headroomBefore": {
+        "totalPhysicalBytes": 16948453376,
+        "availablePhysicalBytes": 3883864064,
+        "processRssBytes": 50102272,
+        "processPeakRssBytes": 53297152,
+        "processPagefileBytes": 37629952
+      },
+      "bookingsPerSecond": 4105.956675534887,
+      "eventsPerSecond": 14921.046558893779,
+      "simulationSecondsPerWallSecond": 7390.722015962796,
+      "correctness": "PASS linear independent lifecycle/provenance audit, 5 fleet checkpoints; final horizon drained"
+    },
+    {
+      "status": "PASS",
+      "config": {
+        "regionId": "nvmr-hanoi-core",
+        "seed": "m3-bench-1",
+        "fleetSize": 500,
+        "carCount": 200,
+        "bookingCount": 500,
+        "horizonSeconds": 900,
+        "maxWaitSeconds": 300,
+        "onlineFraction": 0.6,
+        "onlineSchedule": [],
+        "workload": "burst",
+        "initialCandidates": 16,
+        "maxCandidates": 128,
+        "gridCellDegrees": 0.005
+      },
+      "counts": {
+        "requested": 500,
+        "assigned": 500,
+        "completed": 500,
+        "unserved": 0,
+        "pending": 0,
+        "activeTrips": 0
+      },
+      "metrics": {
+        "eventsProcessed": 1821,
+        "peakEventQueue": 1101,
+        "peakPending": 186,
+        "tableCandidates": 4972,
+        "searchBudgetExhaustions": 0,
+        "dispatchAttempts": 660,
+        "dispatchVersion": "grid-fifo/v1"
+      },
+      "semanticSha256": "2abdb796306528dcdde18dc411013f82e6a66d2577d050b7cea5a60b3fd70895",
+      "fixtureOperations": {
+        "CAR": {
+          "nearest": 0,
+          "table": 321,
+          "route": 306,
+          "routeCacheHits": 0,
+          "tableCacheHits": 0
+        },
+        "MOTORBIKE": {
+          "nearest": 0,
+          "table": 339,
+          "route": 515,
+          "routeCacheHits": 0,
+          "tableCacheHits": 0
+        }
+      },
+      "resources": {
+        "wallSeconds": 0.12620030000107363,
+        "cpuSeconds": 0.140625,
+        "cpuPercentOneCore": 111.43000452360545,
+        "peakRssBytesSampled": 54382592,
+        "processPeakRssBytes": 58970112,
+        "minimumAvailablePhysicalBytes": 3880796160,
+        "sampleIntervalSeconds": 0.05,
+        "sampleCount": 3
+      },
+      "headroomBefore": {
+        "totalPhysicalBytes": 16948453376,
+        "availablePhysicalBytes": 3880796160,
+        "processRssBytes": 54358016,
+        "processPeakRssBytes": 58970112,
+        "processPagefileBytes": 42037248
+      },
+      "bookingsPerSecond": 3961.9557163948607,
+      "eventsPerSecond": 14429.442719110082,
+      "simulationSecondsPerWallSecond": 7131.5202895107495,
+      "correctness": "PASS linear independent lifecycle/provenance audit, 5 fleet checkpoints; final horizon drained"
+    },
+    {
+      "status": "PASS",
+      "config": {
+        "regionId": "nvmr-hanoi-core",
+        "seed": "m3-bench-2",
+        "fleetSize": 500,
+        "carCount": 200,
+        "bookingCount": 500,
+        "horizonSeconds": 900,
+        "maxWaitSeconds": 300,
+        "onlineFraction": 0.6,
+        "onlineSchedule": [],
+        "workload": "burst",
+        "initialCandidates": 16,
+        "maxCandidates": 128,
+        "gridCellDegrees": 0.005
+      },
+      "counts": {
+        "requested": 500,
+        "assigned": 498,
+        "completed": 498,
+        "unserved": 2,
+        "pending": 0,
+        "activeTrips": 0
+      },
+      "metrics": {
+        "eventsProcessed": 1844,
+        "peakEventQueue": 1121,
+        "peakPending": 185,
+        "tableCandidates": 15708,
+        "searchBudgetExhaustions": 0,
+        "dispatchAttempts": 1267,
+        "dispatchVersion": "grid-fifo/v1"
+      },
+      "semanticSha256": "5ddd7b657bb3f69104f434f684b3ee5a63d43925a98f7d1f86a901c54bf5e8bf",
+      "fixtureOperations": {
+        "CAR": {
+          "nearest": 0,
+          "table": 1279,
+          "route": 349,
+          "routeCacheHits": 0,
+          "tableCacheHits": 0
+        },
+        "MOTORBIKE": {
+          "nearest": 0,
+          "table": 328,
+          "route": 497,
+          "routeCacheHits": 0,
+          "tableCacheHits": 0
+        }
+      },
+      "resources": {
+        "wallSeconds": 0.15044050000142306,
+        "cpuSeconds": 0.15625,
+        "cpuPercentOneCore": 103.86165959201278,
+        "peakRssBytesSampled": 54210560,
+        "processPeakRssBytes": 58970112,
+        "minimumAvailablePhysicalBytes": 3880853504,
+        "sampleIntervalSeconds": 0.05,
+        "sampleCount": 4
+      },
+      "headroomBefore": {
+        "totalPhysicalBytes": 16948453376,
+        "availablePhysicalBytes": 3881750528,
+        "processRssBytes": 54210560,
+        "processPeakRssBytes": 58970112,
+        "processPagefileBytes": 42029056
+      },
+      "bookingsPerSecond": 3323.573106944409,
+      "eventsPerSecond": 12257.33761841098,
+      "simulationSecondsPerWallSecond": 5982.431592499936,
+      "correctness": "PASS linear independent lifecycle/provenance audit, 5 fleet checkpoints; final horizon drained"
+    },
+    {
+      "status": "PASS",
+      "config": {
+        "regionId": "nvmr-hanoi-core",
+        "seed": "m3-bench-3",
+        "fleetSize": 500,
+        "carCount": 200,
+        "bookingCount": 500,
+        "horizonSeconds": 900,
+        "maxWaitSeconds": 300,
+        "onlineFraction": 0.6,
+        "onlineSchedule": [],
+        "workload": "burst",
+        "initialCandidates": 16,
+        "maxCandidates": 128,
+        "gridCellDegrees": 0.005
+      },
+      "counts": {
+        "requested": 500,
+        "assigned": 483,
+        "completed": 483,
+        "unserved": 17,
+        "pending": 0,
+        "activeTrips": 0
+      },
+      "metrics": {
+        "eventsProcessed": 1790,
+        "peakEventQueue": 1086,
+        "peakPending": 184,
+        "tableCandidates": 24370,
+        "searchBudgetExhaustions": 0,
+        "dispatchAttempts": 4509,
+        "dispatchVersion": "grid-fifo/v1"
+      },
+      "semanticSha256": "03a3b8a789f4c0b5cf0401d4ebfeea50e544046cbff0a96cc07ad4e52ee1a3a2",
+      "fixtureOperations": {
+        "CAR": {
+          "nearest": 0,
+          "table": 4231,
+          "route": 370,
+          "routeCacheHits": 0,
+          "tableCacheHits": 0
+        },
+        "MOTORBIKE": {
+          "nearest": 0,
+          "table": 278,
+          "route": 437,
+          "routeCacheHits": 0,
+          "tableCacheHits": 0
+        }
+      },
+      "resources": {
+        "wallSeconds": 0.223343500008923,
+        "cpuSeconds": 0.21875,
+        "cpuPercentOneCore": 97.94330257708889,
+        "peakRssBytesSampled": 54272000,
+        "processPeakRssBytes": 58970112,
+        "minimumAvailablePhysicalBytes": 3907309568,
+        "sampleIntervalSeconds": 0.05,
+        "sampleCount": 4
+      },
+      "headroomBefore": {
+        "totalPhysicalBytes": 16948453376,
+        "availablePhysicalBytes": 3912114176,
+        "processRssBytes": 54161408,
+        "processPeakRssBytes": 58970112,
+        "processPagefileBytes": 41963520
+      },
+      "bookingsPerSecond": 2238.704058904889,
+      "eventsPerSecond": 8014.560530879502,
+      "simulationSecondsPerWallSecond": 4029.6673060288,
+      "correctness": "PASS linear independent lifecycle/provenance audit, 5 fleet checkpoints; final horizon drained"
+    },
+    {
+      "status": "PASS",
+      "config": {
+        "regionId": "nvmr-hanoi-core",
+        "seed": "m3-bench-4",
+        "fleetSize": 500,
+        "carCount": 200,
+        "bookingCount": 500,
+        "horizonSeconds": 900,
+        "maxWaitSeconds": 300,
+        "onlineFraction": 0.6,
+        "onlineSchedule": [],
+        "workload": "burst",
+        "initialCandidates": 16,
+        "maxCandidates": 128,
+        "gridCellDegrees": 0.005
+      },
+      "counts": {
+        "requested": 500,
+        "assigned": 500,
+        "completed": 500,
+        "unserved": 0,
+        "pending": 0,
+        "activeTrips": 0
+      },
+      "metrics": {
+        "eventsProcessed": 1827,
+        "peakEventQueue": 1105,
+        "peakPending": 182,
+        "tableCandidates": 4992,
+        "searchBudgetExhaustions": 0,
+        "dispatchAttempts": 622,
+        "dispatchVersion": "grid-fifo/v1"
+      },
+      "semanticSha256": "71042187b18dd736924fb4e6d12a5801611c1df4fe33a2b6f1988af9b8f47852",
+      "fixtureOperations": {
+        "CAR": {
+          "nearest": 0,
+          "table": 249,
+          "route": 299,
+          "routeCacheHits": 0,
+          "tableCacheHits": 0
+        },
+        "MOTORBIKE": {
+          "nearest": 0,
+          "table": 373,
+          "route": 528,
+          "routeCacheHits": 0,
+          "tableCacheHits": 0
+        }
+      },
+      "resources": {
+        "wallSeconds": 0.11478459999489132,
+        "cpuSeconds": 0.109375,
+        "cpuPercentOneCore": 95.28717267374536,
+        "peakRssBytesSampled": 54149120,
+        "processPeakRssBytes": 58978304,
+        "minimumAvailablePhysicalBytes": 3906527232,
+        "sampleIntervalSeconds": 0.05,
+        "sampleCount": 3
+      },
+      "headroomBefore": {
+        "totalPhysicalBytes": 16948453376,
+        "availablePhysicalBytes": 3906527232,
+        "processRssBytes": 53940224,
+        "processPeakRssBytes": 58970112,
+        "processPagefileBytes": 41955328
+      },
+      "bookingsPerSecond": 4355.985036514074,
+      "eventsPerSecond": 15916.769323422424,
+      "simulationSecondsPerWallSecond": 7840.773065725332,
+      "correctness": "PASS linear independent lifecycle/provenance audit, 5 fleet checkpoints; final horizon drained"
+    },
+    {
+      "status": "PASS",
+      "config": {
+        "regionId": "nvmr-hanoi-core",
+        "seed": "m3-bench-0",
+        "fleetSize": 1000,
+        "carCount": 400,
+        "bookingCount": 20,
+        "horizonSeconds": 900,
+        "maxWaitSeconds": 300,
+        "onlineFraction": 0.25,
+        "onlineSchedule": [],
+        "workload": "low",
+        "initialCandidates": 16,
+        "maxCandidates": 128,
+        "gridCellDegrees": 0.005
+      },
+      "counts": {
+        "requested": 20,
+        "assigned": 20,
+        "completed": 20,
+        "unserved": 0,
+        "pending": 0,
+        "activeTrips": 0
+      },
+      "metrics": {
+        "eventsProcessed": 65,
+        "peakEventQueue": 41,
+        "peakPending": 1,
+        "tableCandidates": 320,
+        "searchBudgetExhaustions": 0,
+        "dispatchAttempts": 20,
+        "dispatchVersion": "grid-fifo/v1"
+      },
+      "semanticSha256": "8c1574d119f5e9e84bd338b879984c42a17f9aa46a9175ead7e5ba7a2f9a71b6",
+      "fixtureOperations": {
+        "CAR": {
+          "nearest": 0,
+          "table": 9,
+          "route": 11,
+          "routeCacheHits": 0,
+          "tableCacheHits": 0
+        },
+        "MOTORBIKE": {
+          "nearest": 0,
+          "table": 11,
+          "route": 14,
+          "routeCacheHits": 0,
+          "tableCacheHits": 0
+        }
+      },
+      "resources": {
+        "wallSeconds": 0.03988559999561403,
+        "cpuSeconds": 0.03125,
+        "cpuPercentOneCore": 78.34907837273694,
+        "peakRssBytesSampled": 55623680,
+        "processPeakRssBytes": 58978304,
+        "minimumAvailablePhysicalBytes": 3915313152,
+        "sampleIntervalSeconds": 0.05,
+        "sampleCount": 2
+      },
+      "headroomBefore": {
+        "totalPhysicalBytes": 16948453376,
+        "availablePhysicalBytes": 3915997184,
+        "processRssBytes": 54190080,
+        "processPeakRssBytes": 58978304,
+        "processPagefileBytes": 41963520
+      },
+      "bookingsPerSecond": 501.43410158551643,
+      "eventsPerSecond": 1629.6608301529284,
+      "simulationSecondsPerWallSecond": 26246.89111145672,
+      "correctness": "PASS linear independent lifecycle/provenance audit, 5 fleet checkpoints; final horizon drained"
+    },
+    {
+      "status": "PASS",
+      "config": {
+        "regionId": "nvmr-hanoi-core",
+        "seed": "m3-bench-1",
+        "fleetSize": 1000,
+        "carCount": 400,
+        "bookingCount": 20,
+        "horizonSeconds": 900,
+        "maxWaitSeconds": 300,
+        "onlineFraction": 0.25,
+        "onlineSchedule": [],
+        "workload": "low",
+        "initialCandidates": 16,
+        "maxCandidates": 128,
+        "gridCellDegrees": 0.005
+      },
+      "counts": {
+        "requested": 20,
+        "assigned": 20,
+        "completed": 20,
+        "unserved": 0,
+        "pending": 0,
+        "activeTrips": 0
+      },
+      "metrics": {
+        "eventsProcessed": 64,
+        "peakEventQueue": 41,
+        "peakPending": 1,
+        "tableCandidates": 320,
+        "searchBudgetExhaustions": 0,
+        "dispatchAttempts": 20,
+        "dispatchVersion": "grid-fifo/v1"
+      },
+      "semanticSha256": "8696abfd5b18d3c0416b7f32531ccd1b5ae450cf9b315ab5260e0485f3d94ead",
+      "fixtureOperations": {
+        "CAR": {
+          "nearest": 0,
+          "table": 11,
+          "route": 13,
+          "routeCacheHits": 0,
+          "tableCacheHits": 0
+        },
+        "MOTORBIKE": {
+          "nearest": 0,
+          "table": 9,
+          "route": 11,
+          "routeCacheHits": 0,
+          "tableCacheHits": 0
+        }
+      },
+      "resources": {
+        "wallSeconds": 0.025762600009329617,
+        "cpuSeconds": 0.03125,
+        "cpuPercentOneCore": 121.29986875813461,
+        "peakRssBytesSampled": 55652352,
+        "processPeakRssBytes": 58978304,
+        "minimumAvailablePhysicalBytes": 3915337728,
+        "sampleIntervalSeconds": 0.05,
+        "sampleCount": 2
+      },
+      "headroomBefore": {
+        "totalPhysicalBytes": 16948453376,
+        "availablePhysicalBytes": 3915337728,
+        "processRssBytes": 55652352,
+        "processPeakRssBytes": 58978304,
+        "processPagefileBytes": 43560960
+      },
+      "bookingsPerSecond": 776.3191600520615,
+      "eventsPerSecond": 2484.221312166597,
+      "simulationSecondsPerWallSecond": 39338.42079731811,
+      "correctness": "PASS linear independent lifecycle/provenance audit, 5 fleet checkpoints; final horizon drained"
+    },
+    {
+      "status": "PASS",
+      "config": {
+        "regionId": "nvmr-hanoi-core",
+        "seed": "m3-bench-2",
+        "fleetSize": 1000,
+        "carCount": 400,
+        "bookingCount": 20,
+        "horizonSeconds": 900,
+        "maxWaitSeconds": 300,
+        "onlineFraction": 0.25,
+        "onlineSchedule": [],
+        "workload": "low",
+        "initialCandidates": 16,
+        "maxCandidates": 128,
+        "gridCellDegrees": 0.005
+      },
+      "counts": {
+        "requested": 20,
+        "assigned": 20,
+        "completed": 20,
+        "unserved": 0,
+        "pending": 0,
+        "activeTrips": 0
+      },
+      "metrics": {
+        "eventsProcessed": 64,
+        "peakEventQueue": 40,
+        "peakPending": 1,
+        "tableCandidates": 320,
+        "searchBudgetExhaustions": 0,
+        "dispatchAttempts": 20,
+        "dispatchVersion": "grid-fifo/v1"
+      },
+      "semanticSha256": "ab2b6874ea71597ba82c2719af296121331ddb2ba17d1cf80b798c736d230e58",
+      "fixtureOperations": {
+        "CAR": {
+          "nearest": 0,
+          "table": 9,
+          "route": 10,
+          "routeCacheHits": 0,
+          "tableCacheHits": 0
+        },
+        "MOTORBIKE": {
+          "nearest": 0,
+          "table": 11,
+          "route": 14,
+          "routeCacheHits": 0,
+          "tableCacheHits": 0
+        }
+      },
+      "resources": {
+        "wallSeconds": 0.043994200008455664,
+        "cpuSeconds": 0.046875,
+        "cpuPercentOneCore": 106.54813587016163,
+        "peakRssBytesSampled": 55681024,
+        "processPeakRssBytes": 58978304,
+        "minimumAvailablePhysicalBytes": 3916840960,
+        "sampleIntervalSeconds": 0.05,
+        "sampleCount": 2
+      },
+      "headroomBefore": {
+        "totalPhysicalBytes": 16948453376,
+        "availablePhysicalBytes": 3916840960,
+        "processRssBytes": 54263808,
+        "processPeakRssBytes": 58978304,
+        "processPagefileBytes": 42463232
+      },
+      "bookingsPerSecond": 454.6053797126896,
+      "eventsPerSecond": 1454.7372150806068,
+      "simulationSecondsPerWallSecond": 23124.980106570023,
+      "correctness": "PASS linear independent lifecycle/provenance audit, 5 fleet checkpoints; final horizon drained"
+    },
+    {
+      "status": "PASS",
+      "config": {
+        "regionId": "nvmr-hanoi-core",
+        "seed": "m3-bench-3",
+        "fleetSize": 1000,
+        "carCount": 400,
+        "bookingCount": 20,
+        "horizonSeconds": 900,
+        "maxWaitSeconds": 300,
+        "onlineFraction": 0.25,
+        "onlineSchedule": [],
+        "workload": "low",
+        "initialCandidates": 16,
+        "maxCandidates": 128,
+        "gridCellDegrees": 0.005
+      },
+      "counts": {
+        "requested": 20,
+        "assigned": 20,
+        "completed": 20,
+        "unserved": 0,
+        "pending": 0,
+        "activeTrips": 0
+      },
+      "metrics": {
+        "eventsProcessed": 63,
+        "peakEventQueue": 40,
+        "peakPending": 1,
+        "tableCandidates": 320,
+        "searchBudgetExhaustions": 0,
+        "dispatchAttempts": 20,
+        "dispatchVersion": "grid-fifo/v1"
+      },
+      "semanticSha256": "6b438829e54e391cbfef41f548f909c836f10b0a92e3bc1200dcc589fe10b56a",
+      "fixtureOperations": {
+        "CAR": {
+          "nearest": 0,
+          "table": 4,
+          "route": 4,
+          "routeCacheHits": 0,
+          "tableCacheHits": 0
+        },
+        "MOTORBIKE": {
+          "nearest": 0,
+          "table": 16,
+          "route": 19,
+          "routeCacheHits": 0,
+          "tableCacheHits": 0
+        }
+      },
+      "resources": {
+        "wallSeconds": 0.03153750000637956,
+        "cpuSeconds": 0.03125,
+        "cpuPercentOneCore": 99.08838682101815,
+        "peakRssBytesSampled": 55685120,
+        "processPeakRssBytes": 58978304,
+        "minimumAvailablePhysicalBytes": 3916865536,
+        "sampleIntervalSeconds": 0.05,
+        "sampleCount": 2
+      },
+      "headroomBefore": {
+        "totalPhysicalBytes": 16948453376,
+        "availablePhysicalBytes": 3916865536,
+        "processRssBytes": 55685120,
+        "processPeakRssBytes": 58978304,
+        "processPagefileBytes": 43560960
+      },
+      "bookingsPerSecond": 634.1656756545161,
+      "eventsPerSecond": 1997.6218783117258,
+      "simulationSecondsPerWallSecond": 34293.58699266658,
+      "correctness": "PASS linear independent lifecycle/provenance audit, 5 fleet checkpoints; final horizon drained"
+    },
+    {
+      "status": "PASS",
+      "config": {
+        "regionId": "nvmr-hanoi-core",
+        "seed": "m3-bench-4",
+        "fleetSize": 1000,
+        "carCount": 400,
+        "bookingCount": 20,
+        "horizonSeconds": 900,
+        "maxWaitSeconds": 300,
+        "onlineFraction": 0.25,
+        "onlineSchedule": [],
+        "workload": "low",
+        "initialCandidates": 16,
+        "maxCandidates": 128,
+        "gridCellDegrees": 0.005
+      },
+      "counts": {
+        "requested": 20,
+        "assigned": 20,
+        "completed": 20,
+        "unserved": 0,
+        "pending": 0,
+        "activeTrips": 0
+      },
+      "metrics": {
+        "eventsProcessed": 65,
+        "peakEventQueue": 41,
+        "peakPending": 1,
+        "tableCandidates": 320,
+        "searchBudgetExhaustions": 0,
+        "dispatchAttempts": 20,
+        "dispatchVersion": "grid-fifo/v1"
+      },
+      "semanticSha256": "455f51a9605f64042989d5366bb38cee849535328f15bdda79d1944b37e8f165",
+      "fixtureOperations": {
+        "CAR": {
+          "nearest": 0,
+          "table": 8,
+          "route": 13,
+          "routeCacheHits": 0,
+          "tableCacheHits": 0
+        },
+        "MOTORBIKE": {
+          "nearest": 0,
+          "table": 12,
+          "route": 12,
+          "routeCacheHits": 0,
+          "tableCacheHits": 0
+        }
+      },
+      "resources": {
+        "wallSeconds": 0.02355649998935405,
+        "cpuSeconds": 0.03125,
+        "cpuPercentOneCore": 132.65977549348543,
+        "peakRssBytesSampled": 55689216,
+        "processPeakRssBytes": 58978304,
+        "minimumAvailablePhysicalBytes": 3918438400,
+        "sampleIntervalSeconds": 0.05,
+        "sampleCount": 2
+      },
+      "headroomBefore": {
+        "totalPhysicalBytes": 16948453376,
+        "availablePhysicalBytes": 3918438400,
+        "processRssBytes": 54280192,
+        "processPeakRssBytes": 58978304,
+        "processPagefileBytes": 42467328
+      },
+      "bookingsPerSecond": 849.0225631583066,
+      "eventsPerSecond": 2759.3233302644967,
+      "simulationSecondsPerWallSecond": 41797.380784283436,
+      "correctness": "PASS linear independent lifecycle/provenance audit, 5 fleet checkpoints; final horizon drained"
+    },
+    {
+      "status": "PASS",
+      "config": {
+        "regionId": "nvmr-hanoi-core",
+        "seed": "m3-bench-0",
+        "fleetSize": 1000,
+        "carCount": 400,
+        "bookingCount": 250,
+        "horizonSeconds": 900,
+        "maxWaitSeconds": 300,
+        "onlineFraction": 0.8,
+        "onlineSchedule": [],
+        "workload": "typical",
+        "initialCandidates": 16,
+        "maxCandidates": 128,
+        "gridCellDegrees": 0.005
+      },
+      "counts": {
+        "requested": 250,
+        "assigned": 250,
+        "completed": 250,
+        "unserved": 0,
+        "pending": 0,
+        "activeTrips": 0
+      },
+      "metrics": {
+        "eventsProcessed": 823,
+        "peakEventQueue": 503,
+        "peakPending": 1,
+        "tableCandidates": 4000,
+        "searchBudgetExhaustions": 0,
+        "dispatchAttempts": 250,
+        "dispatchVersion": "grid-fifo/v1"
+      },
+      "semanticSha256": "61669513271228d43c701096a8a0430e3ef5a261cd09eb95bf2062b3b234fc48",
+      "fixtureOperations": {
+        "CAR": {
+          "nearest": 0,
+          "table": 91,
+          "route": 119,
+          "routeCacheHits": 0,
+          "tableCacheHits": 0
+        },
+        "MOTORBIKE": {
+          "nearest": 0,
+          "table": 159,
+          "route": 204,
+          "routeCacheHits": 0,
+          "tableCacheHits": 0
+        }
+      },
+      "resources": {
+        "wallSeconds": 0.06833010000991635,
+        "cpuSeconds": 0.078125,
+        "cpuPercentOneCore": 114.33467825842808,
+        "peakRssBytesSampled": 55689216,
+        "processPeakRssBytes": 58978304,
+        "minimumAvailablePhysicalBytes": 3917385728,
+        "sampleIntervalSeconds": 0.05,
+        "sampleCount": 3
+      },
+      "headroomBefore": {
+        "totalPhysicalBytes": 16948453376,
+        "availablePhysicalBytes": 3918663680,
+        "processRssBytes": 55689216,
+        "processPeakRssBytes": 58978304,
+        "processPagefileBytes": 43565056
+      },
+      "bookingsPerSecond": 3658.7097042696987,
+      "eventsPerSecond": 12044.472346455848,
+      "simulationSecondsPerWallSecond": 20004.14165648275,
+      "correctness": "PASS linear independent lifecycle/provenance audit, 5 fleet checkpoints; final horizon drained"
+    },
+    {
+      "status": "PASS",
+      "config": {
+        "regionId": "nvmr-hanoi-core",
+        "seed": "m3-bench-1",
+        "fleetSize": 1000,
+        "carCount": 400,
+        "bookingCount": 250,
+        "horizonSeconds": 900,
+        "maxWaitSeconds": 300,
+        "onlineFraction": 0.8,
+        "onlineSchedule": [],
+        "workload": "typical",
+        "initialCandidates": 16,
+        "maxCandidates": 128,
+        "gridCellDegrees": 0.005
+      },
+      "counts": {
+        "requested": 250,
+        "assigned": 250,
+        "completed": 250,
+        "unserved": 0,
+        "pending": 0,
+        "activeTrips": 0
+      },
+      "metrics": {
+        "eventsProcessed": 812,
+        "peakEventQueue": 504,
+        "peakPending": 1,
+        "tableCandidates": 4000,
+        "searchBudgetExhaustions": 0,
+        "dispatchAttempts": 250,
+        "dispatchVersion": "grid-fifo/v1"
+      },
+      "semanticSha256": "95a3f3eaec63a08b026fcf8441ea9c3ace267a44738b9df641435a856f7f4238",
+      "fixtureOperations": {
+        "CAR": {
+          "nearest": 0,
+          "table": 120,
+          "route": 147,
+          "routeCacheHits": 0,
+          "tableCacheHits": 0
+        },
+        "MOTORBIKE": {
+          "nearest": 0,
+          "table": 130,
+          "route": 165,
+          "routeCacheHits": 0,
+          "tableCacheHits": 0
+        }
+      },
+      "resources": {
+        "wallSeconds": 0.10912879998795688,
+        "cpuSeconds": 0.109375,
+        "cpuPercentOneCore": 100.22560498426655,
+        "peakRssBytesSampled": 56590336,
+        "processPeakRssBytes": 58978304,
+        "minimumAvailablePhysicalBytes": 3916570624,
+        "sampleIntervalSeconds": 0.05,
+        "sampleCount": 3
+      },
+      "headroomBefore": {
+        "totalPhysicalBytes": 16948453376,
+        "availablePhysicalBytes": 3916570624,
+        "processRssBytes": 54427648,
+        "processPeakRssBytes": 58978304,
+        "processPagefileBytes": 42024960
+      },
+      "bookingsPerSecond": 2290.87097106895,
+      "eventsPerSecond": 7440.748914031949,
+      "simulationSecondsPerWallSecond": 10996.373094292529,
+      "correctness": "PASS linear independent lifecycle/provenance audit, 5 fleet checkpoints; final horizon drained"
+    },
+    {
+      "status": "PASS",
+      "config": {
+        "regionId": "nvmr-hanoi-core",
+        "seed": "m3-bench-2",
+        "fleetSize": 1000,
+        "carCount": 400,
+        "bookingCount": 250,
+        "horizonSeconds": 900,
+        "maxWaitSeconds": 300,
+        "onlineFraction": 0.8,
+        "onlineSchedule": [],
+        "workload": "typical",
+        "initialCandidates": 16,
+        "maxCandidates": 128,
+        "gridCellDegrees": 0.005
+      },
+      "counts": {
+        "requested": 250,
+        "assigned": 250,
+        "completed": 250,
+        "unserved": 0,
+        "pending": 0,
+        "activeTrips": 0
+      },
+      "metrics": {
+        "eventsProcessed": 825,
+        "peakEventQueue": 504,
+        "peakPending": 1,
+        "tableCandidates": 4000,
+        "searchBudgetExhaustions": 0,
+        "dispatchAttempts": 250,
+        "dispatchVersion": "grid-fifo/v1"
+      },
+      "semanticSha256": "8f09fd866335a861a283de8b6732b4de37890757f2cf2dcee8691dc152a8038a",
+      "fixtureOperations": {
+        "CAR": {
+          "nearest": 0,
+          "table": 104,
+          "route": 133,
+          "routeCacheHits": 0,
+          "tableCacheHits": 0
+        },
+        "MOTORBIKE": {
+          "nearest": 0,
+          "table": 146,
+          "route": 192,
+          "routeCacheHits": 0,
+          "tableCacheHits": 0
+        }
+      },
+      "resources": {
+        "wallSeconds": 0.08544230001280084,
+        "cpuSeconds": 0.078125,
+        "cpuPercentOneCore": 91.4359749073883,
+        "peakRssBytesSampled": 56545280,
+        "processPeakRssBytes": 58978304,
+        "minimumAvailablePhysicalBytes": 3916197888,
+        "sampleIntervalSeconds": 0.05,
+        "sampleCount": 3
+      },
+      "headroomBefore": {
+        "totalPhysicalBytes": 16948453376,
+        "availablePhysicalBytes": 3916873728,
+        "processRssBytes": 54353920,
+        "processPeakRssBytes": 58978304,
+        "processPagefileBytes": 41922560
+      },
+      "bookingsPerSecond": 2925.951197036425,
+      "eventsPerSecond": 9655.638950220204,
+      "simulationSecondsPerWallSecond": 14093.417426960561,
+      "correctness": "PASS linear independent lifecycle/provenance audit, 5 fleet checkpoints; final horizon drained"
+    },
+    {
+      "status": "PASS",
+      "config": {
+        "regionId": "nvmr-hanoi-core",
+        "seed": "m3-bench-3",
+        "fleetSize": 1000,
+        "carCount": 400,
+        "bookingCount": 250,
+        "horizonSeconds": 900,
+        "maxWaitSeconds": 300,
+        "onlineFraction": 0.8,
+        "onlineSchedule": [],
+        "workload": "typical",
+        "initialCandidates": 16,
+        "maxCandidates": 128,
+        "gridCellDegrees": 0.005
+      },
+      "counts": {
+        "requested": 250,
+        "assigned": 250,
+        "completed": 250,
+        "unserved": 0,
+        "pending": 0,
+        "activeTrips": 0
+      },
+      "metrics": {
+        "eventsProcessed": 835,
+        "peakEventQueue": 502,
+        "peakPending": 1,
+        "tableCandidates": 4000,
+        "searchBudgetExhaustions": 0,
+        "dispatchAttempts": 250,
+        "dispatchVersion": "grid-fifo/v1"
+      },
+      "semanticSha256": "70c28691c7818f0be081c18b16940028cef9767b07211af020941f5048504cef",
+      "fixtureOperations": {
+        "CAR": {
+          "nearest": 0,
+          "table": 93,
+          "route": 124,
+          "routeCacheHits": 0,
+          "tableCacheHits": 0
+        },
+        "MOTORBIKE": {
+          "nearest": 0,
+          "table": 157,
+          "route": 211,
+          "routeCacheHits": 0,
+          "tableCacheHits": 0
+        }
+      },
+      "resources": {
+        "wallSeconds": 0.10682460000680294,
+        "cpuSeconds": 0.109375,
+        "cpuPercentOneCore": 102.38746505302585,
+        "peakRssBytesSampled": 54476800,
+        "processPeakRssBytes": 58978304,
+        "minimumAvailablePhysicalBytes": 3899125760,
+        "sampleIntervalSeconds": 0.05,
+        "sampleCount": 3
+      },
+      "headroomBefore": {
+        "totalPhysicalBytes": 16948453376,
+        "availablePhysicalBytes": 3917828096,
+        "processRssBytes": 54157312,
+        "processPeakRssBytes": 58978304,
+        "processPagefileBytes": 41730048
+      },
+      "bookingsPerSecond": 2340.2849154977334,
+      "eventsPerSecond": 7816.55161776243,
+      "simulationSecondsPerWallSecond": 11630.29863833686,
+      "correctness": "PASS linear independent lifecycle/provenance audit, 5 fleet checkpoints; final horizon drained"
+    },
+    {
+      "status": "PASS",
+      "config": {
+        "regionId": "nvmr-hanoi-core",
+        "seed": "m3-bench-4",
+        "fleetSize": 1000,
+        "carCount": 400,
+        "bookingCount": 250,
+        "horizonSeconds": 900,
+        "maxWaitSeconds": 300,
+        "onlineFraction": 0.8,
+        "onlineSchedule": [],
+        "workload": "typical",
+        "initialCandidates": 16,
+        "maxCandidates": 128,
+        "gridCellDegrees": 0.005
+      },
+      "counts": {
+        "requested": 250,
+        "assigned": 250,
+        "completed": 250,
+        "unserved": 0,
+        "pending": 0,
+        "activeTrips": 0
+      },
+      "metrics": {
+        "eventsProcessed": 831,
+        "peakEventQueue": 502,
+        "peakPending": 1,
+        "tableCandidates": 4000,
+        "searchBudgetExhaustions": 0,
+        "dispatchAttempts": 250,
+        "dispatchVersion": "grid-fifo/v1"
+      },
+      "semanticSha256": "0d1fdcc4ded99cc5b2d8430b18a8fa3a2682b7778010fb8ed722a6590e0989b1",
+      "fixtureOperations": {
+        "CAR": {
+          "nearest": 0,
+          "table": 85,
+          "route": 115,
+          "routeCacheHits": 0,
+          "tableCacheHits": 0
+        },
+        "MOTORBIKE": {
+          "nearest": 0,
+          "table": 165,
+          "route": 216,
+          "routeCacheHits": 0,
+          "tableCacheHits": 0
+        }
+      },
+      "resources": {
+        "wallSeconds": 0.07407749998674262,
+        "cpuSeconds": 0.078125,
+        "cpuPercentOneCore": 105.4638723147808,
+        "peakRssBytesSampled": 55508992,
+        "processPeakRssBytes": 58978304,
+        "minimumAvailablePhysicalBytes": 3889545216,
+        "sampleIntervalSeconds": 0.05,
+        "sampleCount": 3
+      },
+      "headroomBefore": {
+        "totalPhysicalBytes": 16948453376,
+        "availablePhysicalBytes": 3889602560,
+        "processRssBytes": 54378496,
+        "processPeakRssBytes": 58978304,
+        "processPagefileBytes": 41996288
+      },
+      "bookingsPerSecond": 3374.8439140729856,
+      "eventsPerSecond": 11217.981170378604,
+      "simulationSecondsPerWallSecond": 16282.28544721218,
+      "correctness": "PASS linear independent lifecycle/provenance audit, 5 fleet checkpoints; final horizon drained"
+    },
+    {
+      "status": "PASS",
+      "config": {
+        "regionId": "nvmr-hanoi-core",
+        "seed": "m3-bench-0",
+        "fleetSize": 1000,
+        "carCount": 400,
+        "bookingCount": 1000,
+        "horizonSeconds": 900,
+        "maxWaitSeconds": 300,
+        "onlineFraction": 0.6,
+        "onlineSchedule": [],
+        "workload": "burst",
+        "initialCandidates": 16,
+        "maxCandidates": 128,
+        "gridCellDegrees": 0.005
+      },
+      "counts": {
+        "requested": 1000,
+        "assigned": 1000,
+        "completed": 1000,
+        "unserved": 0,
+        "pending": 0,
+        "activeTrips": 0
+      },
+      "metrics": {
+        "eventsProcessed": 3593,
+        "peakEventQueue": 2171,
+        "peakPending": 366,
+        "tableCandidates": 10517,
+        "searchBudgetExhaustions": 0,
+        "dispatchAttempts": 1348,
+        "dispatchVersion": "grid-fifo/v1"
+      },
+      "semanticSha256": "e11965bba8136624fe4a979bb7046210aef2b98ac94a9186b75cd33d24f4c729",
+      "fixtureOperations": {
+        "CAR": {
+          "nearest": 0,
+          "table": 686,
+          "route": 635,
+          "routeCacheHits": 0,
+          "tableCacheHits": 0
+        },
+        "MOTORBIKE": {
+          "nearest": 0,
+          "table": 662,
+          "route": 958,
+          "routeCacheHits": 0,
+          "tableCacheHits": 0
+        }
+      },
+      "resources": {
+        "wallSeconds": 0.3067713000054937,
+        "cpuSeconds": 0.3125,
+        "cpuPercentOneCore": 101.86741719137473,
+        "peakRssBytesSampled": 65630208,
+        "processPeakRssBytes": 69148672,
+        "minimumAvailablePhysicalBytes": 3887628288,
+        "sampleIntervalSeconds": 0.05,
+        "sampleCount": 5
+      },
+      "headroomBefore": {
+        "totalPhysicalBytes": 16948453376,
+        "availablePhysicalBytes": 3918561280,
+        "processRssBytes": 54128640,
+        "processPeakRssBytes": 58978304,
+        "processPagefileBytes": 41734144
+      },
+      "bookingsPerSecond": 3259.7573501239913,
+      "eventsPerSecond": 11712.3081589955,
+      "simulationSecondsPerWallSecond": 2933.781615111592,
+      "correctness": "PASS linear independent lifecycle/provenance audit, 5 fleet checkpoints; final horizon drained"
+    },
+    {
+      "status": "PASS",
+      "config": {
+        "regionId": "nvmr-hanoi-core",
+        "seed": "m3-bench-1",
+        "fleetSize": 1000,
+        "carCount": 400,
+        "bookingCount": 1000,
+        "horizonSeconds": 900,
+        "maxWaitSeconds": 300,
+        "onlineFraction": 0.6,
+        "onlineSchedule": [],
+        "workload": "burst",
+        "initialCandidates": 16,
+        "maxCandidates": 128,
+        "gridCellDegrees": 0.005
+      },
+      "counts": {
+        "requested": 1000,
+        "assigned": 1000,
+        "completed": 1000,
+        "unserved": 0,
+        "pending": 0,
+        "activeTrips": 0
+      },
+      "metrics": {
+        "eventsProcessed": 3643,
+        "peakEventQueue": 2188,
+        "peakPending": 370,
+        "tableCandidates": 10776,
+        "searchBudgetExhaustions": 0,
+        "dispatchAttempts": 1419,
+        "dispatchVersion": "grid-fifo/v1"
+      },
+      "semanticSha256": "9107c5033a78b1d4f4c08b9c43a2542582052b2801e17fd0aca6a1f7329bcdf7",
+      "fixtureOperations": {
+        "CAR": {
+          "nearest": 0,
+          "table": 765,
+          "route": 677,
+          "routeCacheHits": 0,
+          "tableCacheHits": 0
+        },
+        "MOTORBIKE": {
+          "nearest": 0,
+          "table": 658,
+          "route": 966,
+          "routeCacheHits": 0,
+          "tableCacheHits": 0
+        }
+      },
+      "resources": {
+        "wallSeconds": 0.2779657000064617,
+        "cpuSeconds": 0.265625,
+        "cpuPercentOneCore": 95.56035150877435,
+        "peakRssBytesSampled": 64675840,
+        "processPeakRssBytes": 69165056,
+        "minimumAvailablePhysicalBytes": 3900649472,
+        "sampleIntervalSeconds": 0.05,
+        "sampleCount": 5
+      },
+      "headroomBefore": {
+        "totalPhysicalBytes": 16948453376,
+        "availablePhysicalBytes": 3901353984,
+        "processRssBytes": 60891136,
+        "processPeakRssBytes": 69148672,
+        "processPagefileBytes": 48513024
+      },
+      "bookingsPerSecond": 3597.5661744479753,
+      "eventsPerSecond": 13105.933573513974,
+      "simulationSecondsPerWallSecond": 3237.809557003178,
+      "correctness": "PASS linear independent lifecycle/provenance audit, 5 fleet checkpoints; final horizon drained"
+    },
+    {
+      "status": "PASS",
+      "config": {
+        "regionId": "nvmr-hanoi-core",
+        "seed": "m3-bench-2",
+        "fleetSize": 1000,
+        "carCount": 400,
+        "bookingCount": 1000,
+        "horizonSeconds": 900,
+        "maxWaitSeconds": 300,
+        "onlineFraction": 0.6,
+        "onlineSchedule": [],
+        "workload": "burst",
+        "initialCandidates": 16,
+        "maxCandidates": 128,
+        "gridCellDegrees": 0.005
+      },
+      "counts": {
+        "requested": 1000,
+        "assigned": 1000,
+        "completed": 1000,
+        "unserved": 0,
+        "pending": 0,
+        "activeTrips": 0
+      },
+      "metrics": {
+        "eventsProcessed": 3644,
+        "peakEventQueue": 2190,
+        "peakPending": 368,
+        "tableCandidates": 11304,
+        "searchBudgetExhaustions": 0,
+        "dispatchAttempts": 1464,
+        "dispatchVersion": "grid-fifo/v1"
+      },
+      "semanticSha256": "cd47367e14cb5c02472d17090430611447298f716a6e31c11123ada6c39d0263",
+      "fixtureOperations": {
+        "CAR": {
+          "nearest": 0,
+          "table": 817,
+          "route": 711,
+          "routeCacheHits": 0,
+          "tableCacheHits": 0
+        },
+        "MOTORBIKE": {
+          "nearest": 0,
+          "table": 647,
+          "route": 933,
+          "routeCacheHits": 0,
+          "tableCacheHits": 0
+        }
+      },
+      "resources": {
+        "wallSeconds": 0.2512977000005776,
+        "cpuSeconds": 0.25,
+        "cpuPercentOneCore": 99.48360052615897,
+        "peakRssBytesSampled": 68890624,
+        "processPeakRssBytes": 69165056,
+        "minimumAvailablePhysicalBytes": 3916472320,
+        "sampleIntervalSeconds": 0.05,
+        "sampleCount": 5
+      },
+      "headroomBefore": {
+        "totalPhysicalBytes": 16948453376,
+        "availablePhysicalBytes": 3918327808,
+        "processRssBytes": 61149184,
+        "processPeakRssBytes": 69165056,
+        "processPagefileBytes": 48521216
+      },
+      "bookingsPerSecond": 3979.3440210463586,
+      "eventsPerSecond": 14500.72961269293,
+      "simulationSecondsPerWallSecond": 3581.409618941723,
+      "correctness": "PASS linear independent lifecycle/provenance audit, 5 fleet checkpoints; final horizon drained"
+    },
+    {
+      "status": "PASS",
+      "config": {
+        "regionId": "nvmr-hanoi-core",
+        "seed": "m3-bench-3",
+        "fleetSize": 1000,
+        "carCount": 400,
+        "bookingCount": 1000,
+        "horizonSeconds": 900,
+        "maxWaitSeconds": 300,
+        "onlineFraction": 0.6,
+        "onlineSchedule": [],
+        "workload": "burst",
+        "initialCandidates": 16,
+        "maxCandidates": 128,
+        "gridCellDegrees": 0.005
+      },
+      "counts": {
+        "requested": 1000,
+        "assigned": 1000,
+        "completed": 1000,
+        "unserved": 0,
+        "pending": 0,
+        "activeTrips": 0
+      },
+      "metrics": {
+        "eventsProcessed": 3644,
+        "peakEventQueue": 2200,
+        "peakPending": 374,
+        "tableCandidates": 10199,
+        "searchBudgetExhaustions": 0,
+        "dispatchAttempts": 1374,
+        "dispatchVersion": "grid-fifo/v1"
+      },
+      "semanticSha256": "c9d560a07160501b769fd379e49de94dce7db91c4ecc620c7f4abfbe01fc8036",
+      "fixtureOperations": {
+        "CAR": {
+          "nearest": 0,
+          "table": 684,
+          "route": 638,
+          "routeCacheHits": 0,
+          "tableCacheHits": 0
+        },
+        "MOTORBIKE": {
+          "nearest": 0,
+          "table": 690,
+          "route": 1006,
+          "routeCacheHits": 0,
+          "tableCacheHits": 0
+        }
+      },
+      "resources": {
+        "wallSeconds": 0.25976520001131576,
+        "cpuSeconds": 0.265625,
+        "cpuPercentOneCore": 102.2558063930153,
+        "peakRssBytesSampled": 65167360,
+        "processPeakRssBytes": 69165056,
+        "minimumAvailablePhysicalBytes": 3920154624,
+        "sampleIntervalSeconds": 0.05,
+        "sampleCount": 5
+      },
+      "headroomBefore": {
+        "totalPhysicalBytes": 16948453376,
+        "availablePhysicalBytes": 3920154624,
+        "processRssBytes": 60919808,
+        "processPeakRssBytes": 69165056,
+        "processPagefileBytes": 48394240
+      },
+      "bookingsPerSecond": 3849.630358325282,
+      "eventsPerSecond": 14028.053025737327,
+      "simulationSecondsPerWallSecond": 3464.6673224927536,
+      "correctness": "PASS linear independent lifecycle/provenance audit, 5 fleet checkpoints; final horizon drained"
+    },
+    {
+      "status": "PASS",
+      "config": {
+        "regionId": "nvmr-hanoi-core",
+        "seed": "m3-bench-4",
+        "fleetSize": 1000,
+        "carCount": 400,
+        "bookingCount": 1000,
+        "horizonSeconds": 900,
+        "maxWaitSeconds": 300,
+        "onlineFraction": 0.6,
+        "onlineSchedule": [],
+        "workload": "burst",
+        "initialCandidates": 16,
+        "maxCandidates": 128,
+        "gridCellDegrees": 0.005
+      },
+      "counts": {
+        "requested": 1000,
+        "assigned": 1000,
+        "completed": 1000,
+        "unserved": 0,
+        "pending": 0,
+        "activeTrips": 0
+      },
+      "metrics": {
+        "eventsProcessed": 3632,
+        "peakEventQueue": 2165,
+        "peakPending": 371,
+        "tableCandidates": 10138,
+        "searchBudgetExhaustions": 0,
+        "dispatchAttempts": 1228,
+        "dispatchVersion": "grid-fifo/v1"
+      },
+      "semanticSha256": "30fb0b9def51555ab5117b1fc453d919862eb92caa80deb72c4fa985c82f1544",
+      "fixtureOperations": {
+        "CAR": {
+          "nearest": 0,
+          "table": 530,
+          "route": 621,
+          "routeCacheHits": 0,
+          "tableCacheHits": 0
+        },
+        "MOTORBIKE": {
+          "nearest": 0,
+          "table": 698,
+          "route": 1011,
+          "routeCacheHits": 0,
+          "tableCacheHits": 0
+        }
+      },
+      "resources": {
+        "wallSeconds": 0.25581649999367073,
+        "cpuSeconds": 0.265625,
+        "cpuPercentOneCore": 103.83419365309585,
+        "peakRssBytesSampled": 64892928,
+        "processPeakRssBytes": 69873664,
+        "minimumAvailablePhysicalBytes": 3920535552,
+        "sampleIntervalSeconds": 0.05,
+        "sampleCount": 5
+      },
+      "headroomBefore": {
+        "totalPhysicalBytes": 16948453376,
+        "availablePhysicalBytes": 3922395136,
+        "processRssBytes": 61018112,
+        "processPeakRssBytes": 69165056,
+        "processPagefileBytes": 48627712
+      },
+      "bookingsPerSecond": 3909.0519963518436,
+      "eventsPerSecond": 14197.676850749896,
+      "simulationSecondsPerWallSecond": 3518.1467967166595,
+      "correctness": "PASS linear independent lifecycle/provenance audit, 5 fleet checkpoints; final horizon drained"
+    },
+    {
+      "status": "PASS",
+      "config": {
+        "regionId": "nvmr-hanoi-core",
+        "seed": "m3-bench-0",
+        "fleetSize": 3000,
+        "carCount": 1200,
+        "bookingCount": 60,
+        "horizonSeconds": 900,
+        "maxWaitSeconds": 300,
+        "onlineFraction": 0.25,
+        "onlineSchedule": [],
+        "workload": "low",
+        "initialCandidates": 16,
+        "maxCandidates": 128,
+        "gridCellDegrees": 0.005
+      },
+      "counts": {
+        "requested": 60,
+        "assigned": 60,
+        "completed": 60,
+        "unserved": 0,
+        "pending": 0,
+        "activeTrips": 0
+      },
+      "metrics": {
+        "eventsProcessed": 192,
+        "peakEventQueue": 120,
+        "peakPending": 1,
+        "tableCandidates": 960,
+        "searchBudgetExhaustions": 0,
+        "dispatchAttempts": 60,
+        "dispatchVersion": "grid-fifo/v1"
+      },
+      "semanticSha256": "4793671da4a2c61e0b94230e798d5cdcb3b3ac845a9af5f9ed7c4f9850d7faa9",
+      "fixtureOperations": {
+        "CAR": {
+          "nearest": 0,
+          "table": 26,
+          "route": 30,
+          "routeCacheHits": 0,
+          "tableCacheHits": 0
+        },
+        "MOTORBIKE": {
+          "nearest": 0,
+          "table": 34,
+          "route": 42,
+          "routeCacheHits": 0,
+          "tableCacheHits": 0
+        }
+      },
+      "resources": {
+        "wallSeconds": 0.06766390000120737,
+        "cpuSeconds": 0.078125,
+        "cpuPercentOneCore": 115.46038581667028,
+        "peakRssBytesSampled": 62636032,
+        "processPeakRssBytes": 69873664,
+        "minimumAvailablePhysicalBytes": 3922743296,
+        "sampleIntervalSeconds": 0.05,
+        "sampleCount": 3
+      },
+      "headroomBefore": {
+        "totalPhysicalBytes": 16948453376,
+        "availablePhysicalBytes": 3922743296,
+        "processRssBytes": 61370368,
+        "processPeakRssBytes": 69873664,
+        "processPagefileBytes": 48861184
+      },
+      "bookingsPerSecond": 886.7357630720278,
+      "eventsPerSecond": 2837.554441830489,
+      "simulationSecondsPerWallSecond": 17917.95920687939,
+      "correctness": "PASS linear independent lifecycle/provenance audit, 5 fleet checkpoints; final horizon drained"
+    },
+    {
+      "status": "PASS",
+      "config": {
+        "regionId": "nvmr-hanoi-core",
+        "seed": "m3-bench-1",
+        "fleetSize": 3000,
+        "carCount": 1200,
+        "bookingCount": 60,
+        "horizonSeconds": 900,
+        "maxWaitSeconds": 300,
+        "onlineFraction": 0.25,
+        "onlineSchedule": [],
+        "workload": "low",
+        "initialCandidates": 16,
+        "maxCandidates": 128,
+        "gridCellDegrees": 0.005
+      },
+      "counts": {
+        "requested": 60,
+        "assigned": 60,
+        "completed": 60,
+        "unserved": 0,
+        "pending": 0,
+        "activeTrips": 0
+      },
+      "metrics": {
+        "eventsProcessed": 196,
+        "peakEventQueue": 122,
+        "peakPending": 1,
+        "tableCandidates": 960,
+        "searchBudgetExhaustions": 0,
+        "dispatchAttempts": 60,
+        "dispatchVersion": "grid-fifo/v1"
+      },
+      "semanticSha256": "4254cb04316040f61a30f554d0b97013bb6affeecec97d8fc5ef700b72d69579",
+      "fixtureOperations": {
+        "CAR": {
+          "nearest": 0,
+          "table": 30,
+          "route": 37,
+          "routeCacheHits": 0,
+          "tableCacheHits": 0
+        },
+        "MOTORBIKE": {
+          "nearest": 0,
+          "table": 30,
+          "route": 39,
+          "routeCacheHits": 0,
+          "tableCacheHits": 0
+        }
+      },
+      "resources": {
+        "wallSeconds": 0.09013039999990724,
+        "cpuSeconds": 0.078125,
+        "cpuPercentOneCore": 86.67996591613974,
+        "peakRssBytesSampled": 63397888,
+        "processPeakRssBytes": 69873664,
+        "minimumAvailablePhysicalBytes": 3923337216,
+        "sampleIntervalSeconds": 0.05,
+        "sampleCount": 3
+      },
+      "headroomBefore": {
+        "totalPhysicalBytes": 16948453376,
+        "availablePhysicalBytes": 3924639744,
+        "processRssBytes": 61448192,
+        "processPeakRssBytes": 69873664,
+        "processPagefileBytes": 48996352
+      },
+      "bookingsPerSecond": 665.7021382359532,
+      "eventsPerSecond": 2174.6269849041137,
+      "simulationSecondsPerWallSecond": 13426.746136722408,
+      "correctness": "PASS linear independent lifecycle/provenance audit, 5 fleet checkpoints; final horizon drained"
+    },
+    {
+      "status": "PASS",
+      "config": {
+        "regionId": "nvmr-hanoi-core",
+        "seed": "m3-bench-2",
+        "fleetSize": 3000,
+        "carCount": 1200,
+        "bookingCount": 60,
+        "horizonSeconds": 900,
+        "maxWaitSeconds": 300,
+        "onlineFraction": 0.25,
+        "onlineSchedule": [],
+        "workload": "low",
+        "initialCandidates": 16,
+        "maxCandidates": 128,
+        "gridCellDegrees": 0.005
+      },
+      "counts": {
+        "requested": 60,
+        "assigned": 60,
+        "completed": 60,
+        "unserved": 0,
+        "pending": 0,
+        "activeTrips": 0
+      },
+      "metrics": {
+        "eventsProcessed": 197,
+        "peakEventQueue": 121,
+        "peakPending": 1,
+        "tableCandidates": 960,
+        "searchBudgetExhaustions": 0,
+        "dispatchAttempts": 60,
+        "dispatchVersion": "grid-fifo/v1"
+      },
+      "semanticSha256": "17cbd43c1c7eaf5b06248b1fc72cee58e65aa9d38de42e560c4a7d62dd1a90dd",
+      "fixtureOperations": {
+        "CAR": {
+          "nearest": 0,
+          "table": 23,
+          "route": 31,
+          "routeCacheHits": 0,
+          "tableCacheHits": 0
+        },
+        "MOTORBIKE": {
+          "nearest": 0,
+          "table": 37,
+          "route": 46,
+          "routeCacheHits": 0,
+          "tableCacheHits": 0
+        }
+      },
+      "resources": {
+        "wallSeconds": 0.09560770000098273,
+        "cpuSeconds": 0.09375,
+        "cpuPercentOneCore": 98.05695566260496,
+        "peakRssBytesSampled": 62541824,
+        "processPeakRssBytes": 69873664,
+        "minimumAvailablePhysicalBytes": 3914878976,
+        "sampleIntervalSeconds": 0.05,
+        "sampleCount": 3
+      },
+      "headroomBefore": {
+        "totalPhysicalBytes": 16948453376,
+        "availablePhysicalBytes": 3923333120,
+        "processRssBytes": 61329408,
+        "processPeakRssBytes": 69873664,
+        "processPagefileBytes": 49012736
+      },
+      "bookingsPerSecond": 627.5645162406718,
+      "eventsPerSecond": 2060.5034949902056,
+      "simulationSecondsPerWallSecond": 11554.676035388831,
+      "correctness": "PASS linear independent lifecycle/provenance audit, 5 fleet checkpoints; final horizon drained"
+    },
+    {
+      "status": "PASS",
+      "config": {
+        "regionId": "nvmr-hanoi-core",
+        "seed": "m3-bench-3",
+        "fleetSize": 3000,
+        "carCount": 1200,
+        "bookingCount": 60,
+        "horizonSeconds": 900,
+        "maxWaitSeconds": 300,
+        "onlineFraction": 0.25,
+        "onlineSchedule": [],
+        "workload": "low",
+        "initialCandidates": 16,
+        "maxCandidates": 128,
+        "gridCellDegrees": 0.005
+      },
+      "counts": {
+        "requested": 60,
+        "assigned": 60,
+        "completed": 60,
+        "unserved": 0,
+        "pending": 0,
+        "activeTrips": 0
+      },
+      "metrics": {
+        "eventsProcessed": 190,
+        "peakEventQueue": 121,
+        "peakPending": 1,
+        "tableCandidates": 960,
+        "searchBudgetExhaustions": 0,
+        "dispatchAttempts": 60,
+        "dispatchVersion": "grid-fifo/v1"
+      },
+      "semanticSha256": "b9e7d52ac170f798a5dd79f995d3a6364339069fbfdac6001d9945d798c3debf",
+      "fixtureOperations": {
+        "CAR": {
+          "nearest": 0,
+          "table": 22,
+          "route": 27,
+          "routeCacheHits": 0,
+          "tableCacheHits": 0
+        },
+        "MOTORBIKE": {
+          "nearest": 0,
+          "table": 38,
+          "route": 43,
+          "routeCacheHits": 0,
+          "tableCacheHits": 0
+        }
+      },
+      "resources": {
+        "wallSeconds": 0.0772343999997247,
+        "cpuSeconds": 0.078125,
+        "cpuPercentOneCore": 101.15311312093895,
+        "peakRssBytesSampled": 62550016,
+        "processPeakRssBytes": 69873664,
+        "minimumAvailablePhysicalBytes": 3916345344,
+        "sampleIntervalSeconds": 0.05,
+        "sampleCount": 3
+      },
+      "headroomBefore": {
+        "totalPhysicalBytes": 16948453376,
+        "availablePhysicalBytes": 3916345344,
+        "processRssBytes": 61317120,
+        "processPeakRssBytes": 69873664,
+        "processPagefileBytes": 49012736
+      },
+      "bookingsPerSecond": 776.8559087688111,
+      "eventsPerSecond": 2460.043711101235,
+      "simulationSecondsPerWallSecond": 15064.284826504087,
+      "correctness": "PASS linear independent lifecycle/provenance audit, 5 fleet checkpoints; final horizon drained"
+    },
+    {
+      "status": "PASS",
+      "config": {
+        "regionId": "nvmr-hanoi-core",
+        "seed": "m3-bench-4",
+        "fleetSize": 3000,
+        "carCount": 1200,
+        "bookingCount": 60,
+        "horizonSeconds": 900,
+        "maxWaitSeconds": 300,
+        "onlineFraction": 0.25,
+        "onlineSchedule": [],
+        "workload": "low",
+        "initialCandidates": 16,
+        "maxCandidates": 128,
+        "gridCellDegrees": 0.005
+      },
+      "counts": {
+        "requested": 60,
+        "assigned": 60,
+        "completed": 60,
+        "unserved": 0,
+        "pending": 0,
+        "activeTrips": 0
+      },
+      "metrics": {
+        "eventsProcessed": 194,
+        "peakEventQueue": 120,
+        "peakPending": 1,
+        "tableCandidates": 960,
+        "searchBudgetExhaustions": 0,
+        "dispatchAttempts": 60,
+        "dispatchVersion": "grid-fifo/v1"
+      },
+      "semanticSha256": "595152fa99f3d3f310aefe682201f992a8e2d97021888204b642a047c82e365c",
+      "fixtureOperations": {
+        "CAR": {
+          "nearest": 0,
+          "table": 24,
+          "route": 28,
+          "routeCacheHits": 0,
+          "tableCacheHits": 0
+        },
+        "MOTORBIKE": {
+          "nearest": 0,
+          "table": 36,
+          "route": 46,
+          "routeCacheHits": 0,
+          "tableCacheHits": 0
+        }
+      },
+      "resources": {
+        "wallSeconds": 0.10870799999975134,
+        "cpuSeconds": 0.109375,
+        "cpuPercentOneCore": 100.61357029864423,
+        "peakRssBytesSampled": 61657088,
+        "processPeakRssBytes": 69873664,
+        "minimumAvailablePhysicalBytes": 3926650880,
+        "sampleIntervalSeconds": 0.05,
+        "sampleCount": 3
+      },
+      "headroomBefore": {
+        "totalPhysicalBytes": 16948453376,
+        "availablePhysicalBytes": 3926650880,
+        "processRssBytes": 61325312,
+        "processPeakRssBytes": 69873664,
+        "processPagefileBytes": 49012736
+      },
+      "bookingsPerSecond": 551.9372999239913,
+      "eventsPerSecond": 1784.5972697542386,
+      "simulationSecondsPerWallSecond": 10651.957537648092,
+      "correctness": "PASS linear independent lifecycle/provenance audit, 5 fleet checkpoints; final horizon drained"
+    },
+    {
+      "status": "PASS",
+      "config": {
+        "regionId": "nvmr-hanoi-core",
+        "seed": "m3-bench-0",
+        "fleetSize": 3000,
+        "carCount": 1200,
+        "bookingCount": 750,
+        "horizonSeconds": 900,
+        "maxWaitSeconds": 300,
+        "onlineFraction": 0.8,
+        "onlineSchedule": [],
+        "workload": "typical",
+        "initialCandidates": 16,
+        "maxCandidates": 128,
+        "gridCellDegrees": 0.005
+      },
+      "counts": {
+        "requested": 750,
+        "assigned": 750,
+        "completed": 750,
+        "unserved": 0,
+        "pending": 0,
+        "activeTrips": 0
+      },
+      "metrics": {
+        "eventsProcessed": 2496,
+        "peakEventQueue": 1502,
+        "peakPending": 1,
+        "tableCandidates": 12000,
+        "searchBudgetExhaustions": 0,
+        "dispatchAttempts": 750,
+        "dispatchVersion": "grid-fifo/v1"
+      },
+      "semanticSha256": "18fe299a262b5f8b8ce24bd39165f6bcda4a475203f1f4ddde2822526b9e0cd2",
+      "fixtureOperations": {
+        "CAR": {
+          "nearest": 0,
+          "table": 306,
+          "route": 399,
+          "routeCacheHits": 0,
+          "tableCacheHits": 0
+        },
+        "MOTORBIKE": {
+          "nearest": 0,
+          "table": 444,
+          "route": 597,
+          "routeCacheHits": 0,
+          "tableCacheHits": 0
+        }
+      },
+      "resources": {
+        "wallSeconds": 0.26068179999128915,
+        "cpuSeconds": 0.265625,
+        "cpuPercentOneCore": 101.89625820017969,
+        "peakRssBytesSampled": 67571712,
+        "processPeakRssBytes": 72011776,
+        "minimumAvailablePhysicalBytes": 3925368832,
+        "sampleIntervalSeconds": 0.05,
+        "sampleCount": 5
+      },
+      "headroomBefore": {
+        "totalPhysicalBytes": 16948453376,
+        "availablePhysicalBytes": 3928707072,
+        "processRssBytes": 61411328,
+        "processPeakRssBytes": 69873664,
+        "processPagefileBytes": 48975872
+      },
+      "bookingsPerSecond": 2877.0708197697795,
+      "eventsPerSecond": 9574.891688193826,
+      "simulationSecondsPerWallSecond": 4788.144013282511,
+      "correctness": "PASS linear independent lifecycle/provenance audit, 5 fleet checkpoints; final horizon drained"
+    },
+    {
+      "status": "PASS",
+      "config": {
+        "regionId": "nvmr-hanoi-core",
+        "seed": "m3-bench-1",
+        "fleetSize": 3000,
+        "carCount": 1200,
+        "bookingCount": 750,
+        "horizonSeconds": 900,
+        "maxWaitSeconds": 300,
+        "onlineFraction": 0.8,
+        "onlineSchedule": [],
+        "workload": "typical",
+        "initialCandidates": 16,
+        "maxCandidates": 128,
+        "gridCellDegrees": 0.005
+      },
+      "counts": {
+        "requested": 750,
+        "assigned": 750,
+        "completed": 750,
+        "unserved": 0,
+        "pending": 0,
+        "activeTrips": 0
+      },
+      "metrics": {
+        "eventsProcessed": 2531,
+        "peakEventQueue": 1506,
+        "peakPending": 1,
+        "tableCandidates": 12000,
+        "searchBudgetExhaustions": 0,
+        "dispatchAttempts": 750,
+        "dispatchVersion": "grid-fifo/v1"
+      },
+      "semanticSha256": "35af2cd8cdfcaf2f3adcb649cb6c6810951c2b00ff7c7644c30ed968c3ecc7ab",
+      "fixtureOperations": {
+        "CAR": {
+          "nearest": 0,
+          "table": 321,
+          "route": 435,
+          "routeCacheHits": 0,
+          "tableCacheHits": 0
+        },
+        "MOTORBIKE": {
+          "nearest": 0,
+          "table": 429,
+          "route": 596,
+          "routeCacheHits": 0,
+          "tableCacheHits": 0
+        }
+      },
+      "resources": {
+        "wallSeconds": 0.23071459999482613,
+        "cpuSeconds": 0.234375,
+        "cpuPercentOneCore": 101.58654892462633,
+        "peakRssBytesSampled": 64933888,
+        "processPeakRssBytes": 72339456,
+        "minimumAvailablePhysicalBytes": 3925430272,
+        "sampleIntervalSeconds": 0.05,
+        "sampleCount": 4
+      },
+      "headroomBefore": {
+        "totalPhysicalBytes": 16948453376,
+        "availablePhysicalBytes": 3925450752,
+        "processRssBytes": 64245760,
+        "processPeakRssBytes": 72011776,
+        "processPagefileBytes": 52178944
+      },
+      "bookingsPerSecond": 3250.769565588043,
+      "eventsPerSecond": 10970.263694004449,
+      "simulationSecondsPerWallSecond": 5356.644096332501,
+      "correctness": "PASS linear independent lifecycle/provenance audit, 5 fleet checkpoints; final horizon drained"
+    },
+    {
+      "status": "PASS",
+      "config": {
+        "regionId": "nvmr-hanoi-core",
+        "seed": "m3-bench-2",
+        "fleetSize": 3000,
+        "carCount": 1200,
+        "bookingCount": 750,
+        "horizonSeconds": 900,
+        "maxWaitSeconds": 300,
+        "onlineFraction": 0.8,
+        "onlineSchedule": [],
+        "workload": "typical",
+        "initialCandidates": 16,
+        "maxCandidates": 128,
+        "gridCellDegrees": 0.005
+      },
+      "counts": {
+        "requested": 750,
+        "assigned": 750,
+        "completed": 750,
+        "unserved": 0,
+        "pending": 0,
+        "activeTrips": 0
+      },
+      "metrics": {
+        "eventsProcessed": 2509,
+        "peakEventQueue": 1508,
+        "peakPending": 1,
+        "tableCandidates": 12032,
+        "searchBudgetExhaustions": 0,
+        "dispatchAttempts": 750,
+        "dispatchVersion": "grid-fifo/v1"
+      },
+      "semanticSha256": "22ff42fc1dd20eadacce16ac1e5ecbe6118500297a9cf2791bccf5218beafd64",
+      "fixtureOperations": {
+        "CAR": {
+          "nearest": 0,
+          "table": 301,
+          "route": 394,
+          "routeCacheHits": 0,
+          "tableCacheHits": 0
+        },
+        "MOTORBIKE": {
+          "nearest": 0,
+          "table": 450,
+          "route": 615,
+          "routeCacheHits": 0,
+          "tableCacheHits": 0
+        }
+      },
+      "resources": {
+        "wallSeconds": 0.24861919999239035,
+        "cpuSeconds": 0.234375,
+        "cpuPercentOneCore": 94.27067579944496,
+        "peakRssBytesSampled": 65003520,
+        "processPeakRssBytes": 72339456,
+        "minimumAvailablePhysicalBytes": 3925508096,
+        "sampleIntervalSeconds": 0.05,
+        "sampleCount": 4
+      },
+      "headroomBefore": {
+        "totalPhysicalBytes": 16948453376,
+        "availablePhysicalBytes": 3925508096,
+        "processRssBytes": 64319488,
+        "processPeakRssBytes": 72339456,
+        "processPagefileBytes": 52215808
+      },
+      "bookingsPerSecond": 3016.6616255822387,
+      "eventsPerSecond": 10091.738691447783,
+      "simulationSecondsPerWallSecond": 5469.975770341247,
+      "correctness": "PASS linear independent lifecycle/provenance audit, 5 fleet checkpoints; final horizon drained"
+    },
+    {
+      "status": "PASS",
+      "config": {
+        "regionId": "nvmr-hanoi-core",
+        "seed": "m3-bench-3",
+        "fleetSize": 3000,
+        "carCount": 1200,
+        "bookingCount": 750,
+        "horizonSeconds": 900,
+        "maxWaitSeconds": 300,
+        "onlineFraction": 0.8,
+        "onlineSchedule": [],
+        "workload": "typical",
+        "initialCandidates": 16,
+        "maxCandidates": 128,
+        "gridCellDegrees": 0.005
+      },
+      "counts": {
+        "requested": 750,
+        "assigned": 750,
+        "completed": 750,
+        "unserved": 0,
+        "pending": 0,
+        "activeTrips": 0
+      },
+      "metrics": {
+        "eventsProcessed": 2506,
+        "peakEventQueue": 1506,
+        "peakPending": 2,
+        "tableCandidates": 12000,
+        "searchBudgetExhaustions": 0,
+        "dispatchAttempts": 750,
+        "dispatchVersion": "grid-fifo/v1"
+      },
+      "semanticSha256": "1082c4e60d3e7df3cb073719b963a56a70b8f11e85d5d85c29d1a49965cd4383",
+      "fixtureOperations": {
+        "CAR": {
+          "nearest": 0,
+          "table": 289,
+          "route": 387,
+          "routeCacheHits": 0,
+          "tableCacheHits": 0
+        },
+        "MOTORBIKE": {
+          "nearest": 0,
+          "table": 461,
+          "route": 619,
+          "routeCacheHits": 0,
+          "tableCacheHits": 0
+        }
+      },
+      "resources": {
+        "wallSeconds": 0.2826994999923045,
+        "cpuSeconds": 0.28125,
+        "cpuPercentOneCore": 99.4872647484895,
+        "peakRssBytesSampled": 65048576,
+        "processPeakRssBytes": 72339456,
+        "minimumAvailablePhysicalBytes": 3925630976,
+        "sampleIntervalSeconds": 0.05,
+        "sampleCount": 5
+      },
+      "headroomBefore": {
+        "totalPhysicalBytes": 16948453376,
+        "availablePhysicalBytes": 3925704704,
+        "processRssBytes": 64344064,
+        "processPeakRssBytes": 72339456,
+        "processPagefileBytes": 52817920
+      },
+      "bookingsPerSecond": 2652.9937266263864,
+      "eventsPerSecond": 8864.536371900966,
+      "simulationSecondsPerWallSecond": 4233.774732649265,
+      "correctness": "PASS linear independent lifecycle/provenance audit, 5 fleet checkpoints; final horizon drained"
+    },
+    {
+      "status": "PASS",
+      "config": {
+        "regionId": "nvmr-hanoi-core",
+        "seed": "m3-bench-4",
+        "fleetSize": 3000,
+        "carCount": 1200,
+        "bookingCount": 750,
+        "horizonSeconds": 900,
+        "maxWaitSeconds": 300,
+        "onlineFraction": 0.8,
+        "onlineSchedule": [],
+        "workload": "typical",
+        "initialCandidates": 16,
+        "maxCandidates": 128,
+        "gridCellDegrees": 0.005
+      },
+      "counts": {
+        "requested": 750,
+        "assigned": 750,
+        "completed": 750,
+        "unserved": 0,
+        "pending": 0,
+        "activeTrips": 0
+      },
+      "metrics": {
+        "eventsProcessed": 2495,
+        "peakEventQueue": 1503,
+        "peakPending": 2,
+        "tableCandidates": 12000,
+        "searchBudgetExhaustions": 0,
+        "dispatchAttempts": 750,
+        "dispatchVersion": "grid-fifo/v1"
+      },
+      "semanticSha256": "0b13d63d5c24ad68d296216214f7d04901c9cff0c8bc462256f93a1b3bea6b77",
+      "fixtureOperations": {
+        "CAR": {
+          "nearest": 0,
+          "table": 335,
+          "route": 434,
+          "routeCacheHits": 0,
+          "tableCacheHits": 0
+        },
+        "MOTORBIKE": {
+          "nearest": 0,
+          "table": 415,
+          "route": 561,
+          "routeCacheHits": 0,
+          "tableCacheHits": 0
+        }
+      },
+      "resources": {
+        "wallSeconds": 0.24444080000102986,
+        "cpuSeconds": 0.234375,
+        "cpuPercentOneCore": 95.88211133289228,
+        "peakRssBytesSampled": 65081344,
+        "processPeakRssBytes": 72339456,
+        "minimumAvailablePhysicalBytes": 3925544960,
+        "sampleIntervalSeconds": 0.05,
+        "sampleCount": 4
+      },
+      "headroomBefore": {
+        "totalPhysicalBytes": 16948453376,
+        "availablePhysicalBytes": 3925946368,
+        "processRssBytes": 64372736,
+        "processPeakRssBytes": 72339456,
+        "processPagefileBytes": 52174848
+      },
+      "bookingsPerSecond": 3068.227562652553,
+      "eventsPerSecond": 10206.97035842416,
+      "simulationSecondsPerWallSecond": 5120.254065584498,
+      "correctness": "PASS linear independent lifecycle/provenance audit, 5 fleet checkpoints; final horizon drained"
+    },
+    {
+      "status": "PASS",
+      "config": {
+        "regionId": "nvmr-hanoi-core",
+        "seed": "m3-bench-0",
+        "fleetSize": 3000,
+        "carCount": 1200,
+        "bookingCount": 3000,
+        "horizonSeconds": 900,
+        "maxWaitSeconds": 300,
+        "onlineFraction": 0.6,
+        "onlineSchedule": [],
+        "workload": "burst",
+        "initialCandidates": 16,
+        "maxCandidates": 128,
+        "gridCellDegrees": 0.005
+      },
+      "counts": {
+        "requested": 3000,
+        "assigned": 3000,
+        "completed": 3000,
+        "unserved": 0,
+        "pending": 0,
+        "activeTrips": 0
+      },
+      "metrics": {
+        "eventsProcessed": 10884,
+        "peakEventQueue": 6502,
+        "peakPending": 1104,
+        "tableCandidates": 32847,
+        "searchBudgetExhaustions": 0,
+        "dispatchAttempts": 4148,
+        "dispatchVersion": "grid-fifo/v1"
+      },
+      "semanticSha256": "c63666a26aceb76f5f9420b88a55d0fc9b1adaa07541691085e053d6e54202b4",
+      "fixtureOperations": {
+        "CAR": {
+          "nearest": 0,
+          "table": 2269,
+          "route": 1988,
+          "routeCacheHits": 0,
+          "tableCacheHits": 0
+        },
+        "MOTORBIKE": {
+          "nearest": 0,
+          "table": 1916,
+          "route": 2896,
+          "routeCacheHits": 0,
+          "tableCacheHits": 0
+        }
+      },
+      "resources": {
+        "wallSeconds": 0.8351736000040546,
+        "cpuSeconds": 0.84375,
+        "cpuPercentOneCore": 101.02690027509296,
+        "peakRssBytesSampled": 96690176,
+        "processPeakRssBytes": 107356160,
+        "minimumAvailablePhysicalBytes": 3903447040,
+        "sampleIntervalSeconds": 0.05,
+        "sampleCount": 11
+      },
+      "headroomBefore": {
+        "totalPhysicalBytes": 16948453376,
+        "availablePhysicalBytes": 3925569536,
+        "processRssBytes": 64401408,
+        "processPeakRssBytes": 72339456,
+        "processPagefileBytes": 52244480
+      },
+      "bookingsPerSecond": 3592.0675653366384,
+      "eventsPerSecond": 13032.021127041324,
+      "simulationSecondsPerWallSecond": 1077.6202696009916,
+      "correctness": "PASS linear independent lifecycle/provenance audit, 5 fleet checkpoints; final horizon drained"
+    },
+    {
+      "status": "PASS",
+      "config": {
+        "regionId": "nvmr-hanoi-core",
+        "seed": "m3-bench-1",
+        "fleetSize": 3000,
+        "carCount": 1200,
+        "bookingCount": 3000,
+        "horizonSeconds": 900,
+        "maxWaitSeconds": 300,
+        "onlineFraction": 0.6,
+        "onlineSchedule": [],
+        "workload": "burst",
+        "initialCandidates": 16,
+        "maxCandidates": 128,
+        "gridCellDegrees": 0.005
+      },
+      "counts": {
+        "requested": 3000,
+        "assigned": 3000,
+        "completed": 3000,
+        "unserved": 0,
+        "pending": 0,
+        "activeTrips": 0
+      },
+      "metrics": {
+        "eventsProcessed": 10888,
+        "peakEventQueue": 6547,
+        "peakPending": 1097,
+        "tableCandidates": 31732,
+        "searchBudgetExhaustions": 0,
+        "dispatchAttempts": 3949,
+        "dispatchVersion": "grid-fifo/v1"
+      },
+      "semanticSha256": "b32dc75589268a824a2dae4e00e12fba4805786a28bef3af3a5a0569a18df839",
+      "fixtureOperations": {
+        "CAR": {
+          "nearest": 0,
+          "table": 1911,
+          "route": 1875,
+          "routeCacheHits": 0,
+          "tableCacheHits": 0
+        },
+        "MOTORBIKE": {
+          "nearest": 0,
+          "table": 2038,
+          "route": 3013,
+          "routeCacheHits": 0,
+          "tableCacheHits": 0
+        }
+      },
+      "resources": {
+        "wallSeconds": 0.8549487999989651,
+        "cpuSeconds": 0.859375,
+        "cpuPercentOneCore": 100.51771521300927,
+        "peakRssBytesSampled": 96735232,
+        "processPeakRssBytes": 107356160,
+        "minimumAvailablePhysicalBytes": 3918893056,
+        "sampleIntervalSeconds": 0.05,
+        "sampleCount": 11
+      },
+      "headroomBefore": {
+        "totalPhysicalBytes": 16948453376,
+        "availablePhysicalBytes": 3918893056,
+        "processRssBytes": 76910592,
+        "processPeakRssBytes": 107356160,
+        "processPagefileBytes": 65409024
+      },
+      "bookingsPerSecond": 3508.982058345051,
+      "eventsPerSecond": 12735.265550420305,
+      "simulationSecondsPerWallSecond": 1052.6946175035152,
+      "correctness": "PASS linear independent lifecycle/provenance audit, 5 fleet checkpoints; final horizon drained"
+    },
+    {
+      "status": "PASS",
+      "config": {
+        "regionId": "nvmr-hanoi-core",
+        "seed": "m3-bench-2",
+        "fleetSize": 3000,
+        "carCount": 1200,
+        "bookingCount": 3000,
+        "horizonSeconds": 900,
+        "maxWaitSeconds": 300,
+        "onlineFraction": 0.6,
+        "onlineSchedule": [],
+        "workload": "burst",
+        "initialCandidates": 16,
+        "maxCandidates": 128,
+        "gridCellDegrees": 0.005
+      },
+      "counts": {
+        "requested": 3000,
+        "assigned": 3000,
+        "completed": 3000,
+        "unserved": 0,
+        "pending": 0,
+        "activeTrips": 0
+      },
+      "metrics": {
+        "eventsProcessed": 10912,
+        "peakEventQueue": 6583,
+        "peakPending": 1101,
+        "tableCandidates": 31044,
+        "searchBudgetExhaustions": 0,
+        "dispatchAttempts": 3903,
+        "dispatchVersion": "grid-fifo/v1"
+      },
+      "semanticSha256": "8f403210e79cc3d820f04befce7f067d0db779e49ae9271b21b993254d8edecd",
+      "fixtureOperations": {
+        "CAR": {
+          "nearest": 0,
+          "table": 1863,
+          "route": 1901,
+          "routeCacheHits": 0,
+          "tableCacheHits": 0
+        },
+        "MOTORBIKE": {
+          "nearest": 0,
+          "table": 2041,
+          "route": 3011,
+          "routeCacheHits": 0,
+          "tableCacheHits": 0
+        }
+      },
+      "resources": {
+        "wallSeconds": 0.7934898000094108,
+        "cpuSeconds": 0.796875,
+        "cpuPercentOneCore": 100.42662173988235,
+        "peakRssBytesSampled": 96808960,
+        "processPeakRssBytes": 107356160,
+        "minimumAvailablePhysicalBytes": 3926331392,
+        "sampleIntervalSeconds": 0.05,
+        "sampleCount": 10
+      },
+      "headroomBefore": {
+        "totalPhysicalBytes": 16948453376,
+        "availablePhysicalBytes": 3933966336,
+        "processRssBytes": 85344256,
+        "processPeakRssBytes": 107356160,
+        "processPagefileBytes": 73596928
+      },
+      "bookingsPerSecond": 3780.766936089689,
+      "eventsPerSecond": 13751.909602203561,
+      "simulationSecondsPerWallSecond": 1134.2300808269067,
+      "correctness": "PASS linear independent lifecycle/provenance audit, 5 fleet checkpoints; final horizon drained"
+    },
+    {
+      "status": "PASS",
+      "config": {
+        "regionId": "nvmr-hanoi-core",
+        "seed": "m3-bench-3",
+        "fleetSize": 3000,
+        "carCount": 1200,
+        "bookingCount": 3000,
+        "horizonSeconds": 900,
+        "maxWaitSeconds": 300,
+        "onlineFraction": 0.6,
+        "onlineSchedule": [],
+        "workload": "burst",
+        "initialCandidates": 16,
+        "maxCandidates": 128,
+        "gridCellDegrees": 0.005
+      },
+      "counts": {
+        "requested": 3000,
+        "assigned": 3000,
+        "completed": 3000,
+        "unserved": 0,
+        "pending": 0,
+        "activeTrips": 0
+      },
+      "metrics": {
+        "eventsProcessed": 10901,
+        "peakEventQueue": 6541,
+        "peakPending": 1098,
+        "tableCandidates": 31260,
+        "searchBudgetExhaustions": 0,
+        "dispatchAttempts": 3780,
+        "dispatchVersion": "grid-fifo/v1"
+      },
+      "semanticSha256": "423fc5f5ea03cc0ebc386a9a11a833ee8384da28a652f7b530892660a7ad139c",
+      "fixtureOperations": {
+        "CAR": {
+          "nearest": 0,
+          "table": 1653,
+          "route": 1804,
+          "routeCacheHits": 0,
+          "tableCacheHits": 0
+        },
+        "MOTORBIKE": {
+          "nearest": 0,
+          "table": 2130,
+          "route": 3097,
+          "routeCacheHits": 0,
+          "tableCacheHits": 0
+        }
+      },
+      "resources": {
+        "wallSeconds": 0.9129507000034209,
+        "cpuSeconds": 0.90625,
+        "cpuPercentOneCore": 99.26603922825232,
+        "peakRssBytesSampled": 96907264,
+        "processPeakRssBytes": 107356160,
+        "minimumAvailablePhysicalBytes": 3882479616,
+        "sampleIntervalSeconds": 0.05,
+        "sampleCount": 10
+      },
+      "headroomBefore": {
+        "totalPhysicalBytes": 16948453376,
+        "availablePhysicalBytes": 3935834112,
+        "processRssBytes": 86462464,
+        "processPeakRssBytes": 107356160,
+        "processPagefileBytes": 75419648
+      },
+      "bookingsPerSecond": 3286.0481951421457,
+      "eventsPerSecond": 11940.403791748176,
+      "simulationSecondsPerWallSecond": 985.8144585426437,
+      "correctness": "PASS linear independent lifecycle/provenance audit, 5 fleet checkpoints; final horizon drained"
+    },
+    {
+      "status": "PASS",
+      "config": {
+        "regionId": "nvmr-hanoi-core",
+        "seed": "m3-bench-4",
+        "fleetSize": 3000,
+        "carCount": 1200,
+        "bookingCount": 3000,
+        "horizonSeconds": 900,
+        "maxWaitSeconds": 300,
+        "onlineFraction": 0.6,
+        "onlineSchedule": [],
+        "workload": "burst",
+        "initialCandidates": 16,
+        "maxCandidates": 128,
+        "gridCellDegrees": 0.005
+      },
+      "counts": {
+        "requested": 3000,
+        "assigned": 3000,
+        "completed": 3000,
+        "unserved": 0,
+        "pending": 0,
+        "activeTrips": 0
+      },
+      "metrics": {
+        "eventsProcessed": 10904,
+        "peakEventQueue": 6586,
+        "peakPending": 1090,
+        "tableCandidates": 31504,
+        "searchBudgetExhaustions": 0,
+        "dispatchAttempts": 4059,
+        "dispatchVersion": "grid-fifo/v1"
+      },
+      "semanticSha256": "9c911046aca59eb05973d65205e93a0831fa865d444b2defadfdba48eaaae32d",
+      "fixtureOperations": {
+        "CAR": {
+          "nearest": 0,
+          "table": 2121,
+          "route": 1961,
+          "routeCacheHits": 0,
+          "tableCacheHits": 0
+        },
+        "MOTORBIKE": {
+          "nearest": 0,
+          "table": 1939,
+          "route": 2943,
+          "routeCacheHits": 0,
+          "tableCacheHits": 0
+        }
+      },
+      "resources": {
+        "wallSeconds": 0.8486742999957642,
+        "cpuSeconds": 0.84375,
+        "cpuPercentOneCore": 99.41976562789885,
+        "peakRssBytesSampled": 98828288,
+        "processPeakRssBytes": 108126208,
+        "minimumAvailablePhysicalBytes": 3890712576,
+        "sampleIntervalSeconds": 0.05,
+        "sampleCount": 10
+      },
+      "headroomBefore": {
+        "totalPhysicalBytes": 16948453376,
+        "availablePhysicalBytes": 3890712576,
+        "processRssBytes": 87334912,
+        "processPeakRssBytes": 107356160,
+        "processPagefileBytes": 75227136
+      },
+      "bookingsPerSecond": 3534.9250001030705,
+      "eventsPerSecond": 12848.274067041293,
+      "simulationSecondsPerWallSecond": 1060.4775000309212,
+      "correctness": "PASS linear independent lifecycle/provenance audit, 5 fleet checkpoints; final horizon drained"
+    },
+    {
+      "status": "PASS",
+      "config": {
+        "regionId": "nvmr-hanoi-core",
+        "seed": "m3-bench-0",
+        "fleetSize": 5000,
+        "carCount": 2000,
+        "bookingCount": 100,
+        "horizonSeconds": 900,
+        "maxWaitSeconds": 300,
+        "onlineFraction": 0.25,
+        "onlineSchedule": [],
+        "workload": "low",
+        "initialCandidates": 16,
+        "maxCandidates": 128,
+        "gridCellDegrees": 0.005
+      },
+      "counts": {
+        "requested": 100,
+        "assigned": 100,
+        "completed": 100,
+        "unserved": 0,
+        "pending": 0,
+        "activeTrips": 0
+      },
+      "metrics": {
+        "eventsProcessed": 337,
+        "peakEventQueue": 202,
+        "peakPending": 1,
+        "tableCandidates": 1600,
+        "searchBudgetExhaustions": 0,
+        "dispatchAttempts": 100,
+        "dispatchVersion": "grid-fifo/v1"
+      },
+      "semanticSha256": "f9e8c32da1fbe61f8fcc01c965c085934f9f01aad3c16b8b173cdf4eec7a7874",
+      "fixtureOperations": {
+        "CAR": {
+          "nearest": 0,
+          "table": 40,
+          "route": 60,
+          "routeCacheHits": 0,
+          "tableCacheHits": 0
+        },
+        "MOTORBIKE": {
+          "nearest": 0,
+          "table": 60,
+          "route": 77,
+          "routeCacheHits": 0,
+          "tableCacheHits": 0
+        }
+      },
+      "resources": {
+        "wallSeconds": 0.17120880000584293,
+        "cpuSeconds": 0.171875,
+        "cpuPercentOneCore": 100.38911550932798,
+        "peakRssBytesSampled": 91136000,
+        "processPeakRssBytes": 108126208,
+        "minimumAvailablePhysicalBytes": 3895091200,
+        "sampleIntervalSeconds": 0.05,
+        "sampleCount": 4
+      },
+      "headroomBefore": {
+        "totalPhysicalBytes": 16948453376,
+        "availablePhysicalBytes": 3896737792,
+        "processRssBytes": 88219648,
+        "processPeakRssBytes": 108126208,
+        "processPagefileBytes": 76533760
+      },
+      "bookingsPerSecond": 584.0821265997265,
+      "eventsPerSecond": 1968.3567666410781,
+      "simulationSecondsPerWallSecond": 7004.2252498649295,
+      "correctness": "PASS linear independent lifecycle/provenance audit, 5 fleet checkpoints; final horizon drained"
+    },
+    {
+      "status": "PASS",
+      "config": {
+        "regionId": "nvmr-hanoi-core",
+        "seed": "m3-bench-1",
+        "fleetSize": 5000,
+        "carCount": 2000,
+        "bookingCount": 100,
+        "horizonSeconds": 900,
+        "maxWaitSeconds": 300,
+        "onlineFraction": 0.25,
+        "onlineSchedule": [],
+        "workload": "low",
+        "initialCandidates": 16,
+        "maxCandidates": 128,
+        "gridCellDegrees": 0.005
+      },
+      "counts": {
+        "requested": 100,
+        "assigned": 100,
+        "completed": 100,
+        "unserved": 0,
+        "pending": 0,
+        "activeTrips": 0
+      },
+      "metrics": {
+        "eventsProcessed": 324,
+        "peakEventQueue": 202,
+        "peakPending": 1,
+        "tableCandidates": 1600,
+        "searchBudgetExhaustions": 0,
+        "dispatchAttempts": 100,
+        "dispatchVersion": "grid-fifo/v1"
+      },
+      "semanticSha256": "a27cfb216edec81a8c8eabd4bcb6f9d89f873a37653623172e1c10e01a7bcadb",
+      "fixtureOperations": {
+        "CAR": {
+          "nearest": 0,
+          "table": 45,
+          "route": 57,
+          "routeCacheHits": 0,
+          "tableCacheHits": 0
+        },
+        "MOTORBIKE": {
+          "nearest": 0,
+          "table": 55,
+          "route": 67,
+          "routeCacheHits": 0,
+          "tableCacheHits": 0
+        }
+      },
+      "resources": {
+        "wallSeconds": 0.1658154999895487,
+        "cpuSeconds": 0.171875,
+        "cpuPercentOneCore": 103.6543628375111,
+        "peakRssBytesSampled": 88702976,
+        "processPeakRssBytes": 108126208,
+        "minimumAvailablePhysicalBytes": 3896504320,
+        "sampleIntervalSeconds": 0.05,
+        "sampleCount": 4
+      },
+      "headroomBefore": {
+        "totalPhysicalBytes": 16948453376,
+        "availablePhysicalBytes": 3896803328,
+        "processRssBytes": 87908352,
+        "processPeakRssBytes": 108126208,
+        "processPagefileBytes": 75526144
+      },
+      "bookingsPerSecond": 603.0799292364283,
+      "eventsPerSecond": 1953.9789707260275,
+      "simulationSecondsPerWallSecond": 6612.644777292297,
+      "correctness": "PASS linear independent lifecycle/provenance audit, 5 fleet checkpoints; final horizon drained"
+    },
+    {
+      "status": "PASS",
+      "config": {
+        "regionId": "nvmr-hanoi-core",
+        "seed": "m3-bench-2",
+        "fleetSize": 5000,
+        "carCount": 2000,
+        "bookingCount": 100,
+        "horizonSeconds": 900,
+        "maxWaitSeconds": 300,
+        "onlineFraction": 0.25,
+        "onlineSchedule": [],
+        "workload": "low",
+        "initialCandidates": 16,
+        "maxCandidates": 128,
+        "gridCellDegrees": 0.005
+      },
+      "counts": {
+        "requested": 100,
+        "assigned": 100,
+        "completed": 100,
+        "unserved": 0,
+        "pending": 0,
+        "activeTrips": 0
+      },
+      "metrics": {
+        "eventsProcessed": 329,
+        "peakEventQueue": 202,
+        "peakPending": 1,
+        "tableCandidates": 1600,
+        "searchBudgetExhaustions": 0,
+        "dispatchAttempts": 100,
+        "dispatchVersion": "grid-fifo/v1"
+      },
+      "semanticSha256": "eea70a06355615459c3d09826a5a9251a0c79911bf6b1299f416531417872fcf",
+      "fixtureOperations": {
+        "CAR": {
+          "nearest": 0,
+          "table": 35,
+          "route": 43,
+          "routeCacheHits": 0,
+          "tableCacheHits": 0
+        },
+        "MOTORBIKE": {
+          "nearest": 0,
+          "table": 65,
+          "route": 86,
+          "routeCacheHits": 0,
+          "tableCacheHits": 0
+        }
+      },
+      "resources": {
+        "wallSeconds": 0.17099669999151956,
+        "cpuSeconds": 0.171875,
+        "cpuPercentOneCore": 100.51363564824585,
+        "peakRssBytesSampled": 90615808,
+        "processPeakRssBytes": 108126208,
+        "minimumAvailablePhysicalBytes": 3895959552,
+        "sampleIntervalSeconds": 0.05,
+        "sampleCount": 4
+      },
+      "headroomBefore": {
+        "totalPhysicalBytes": 16948453376,
+        "availablePhysicalBytes": 3896619008,
+        "processRssBytes": 87871488,
+        "processPeakRssBytes": 108126208,
+        "processPagefileBytes": 75612160
+      },
+      "bookingsPerSecond": 584.8066074079758,
+      "eventsPerSecond": 1924.0137383722404,
+      "simulationSecondsPerWallSecond": 6284.986786606405,
+      "correctness": "PASS linear independent lifecycle/provenance audit, 5 fleet checkpoints; final horizon drained"
+    },
+    {
+      "status": "PASS",
+      "config": {
+        "regionId": "nvmr-hanoi-core",
+        "seed": "m3-bench-3",
+        "fleetSize": 5000,
+        "carCount": 2000,
+        "bookingCount": 100,
+        "horizonSeconds": 900,
+        "maxWaitSeconds": 300,
+        "onlineFraction": 0.25,
+        "onlineSchedule": [],
+        "workload": "low",
+        "initialCandidates": 16,
+        "maxCandidates": 128,
+        "gridCellDegrees": 0.005
+      },
+      "counts": {
+        "requested": 100,
+        "assigned": 100,
+        "completed": 100,
+        "unserved": 0,
+        "pending": 0,
+        "activeTrips": 0
+      },
+      "metrics": {
+        "eventsProcessed": 317,
+        "peakEventQueue": 200,
+        "peakPending": 1,
+        "tableCandidates": 1600,
+        "searchBudgetExhaustions": 0,
+        "dispatchAttempts": 100,
+        "dispatchVersion": "grid-fifo/v1"
+      },
+      "semanticSha256": "0cf56494ecf095cfc01b13a59777179f68f07de9915f7cf70063958d4e55e284",
+      "fixtureOperations": {
+        "CAR": {
+          "nearest": 0,
+          "table": 40,
+          "route": 47,
+          "routeCacheHits": 0,
+          "tableCacheHits": 0
+        },
+        "MOTORBIKE": {
+          "nearest": 0,
+          "table": 60,
+          "route": 70,
+          "routeCacheHits": 0,
+          "tableCacheHits": 0
+        }
+      },
+      "resources": {
+        "wallSeconds": 0.15500179999799002,
+        "cpuSeconds": 0.15625,
+        "cpuPercentOneCore": 100.80528097223784,
+        "peakRssBytesSampled": 89546752,
+        "processPeakRssBytes": 108126208,
+        "minimumAvailablePhysicalBytes": 3896561664,
+        "sampleIntervalSeconds": 0.05,
+        "sampleCount": 4
+      },
+      "headroomBefore": {
+        "totalPhysicalBytes": 16948453376,
+        "availablePhysicalBytes": 3896954880,
+        "processRssBytes": 87855104,
+        "processPeakRssBytes": 108126208,
+        "processPagefileBytes": 75567104
+      },
+      "bookingsPerSecond": 645.1537982223223,
+      "eventsPerSecond": 2045.1375403647614,
+      "simulationSecondsPerWallSecond": 7415.5009813750885,
+      "correctness": "PASS linear independent lifecycle/provenance audit, 5 fleet checkpoints; final horizon drained"
+    },
+    {
+      "status": "PASS",
+      "config": {
+        "regionId": "nvmr-hanoi-core",
+        "seed": "m3-bench-4",
+        "fleetSize": 5000,
+        "carCount": 2000,
+        "bookingCount": 100,
+        "horizonSeconds": 900,
+        "maxWaitSeconds": 300,
+        "onlineFraction": 0.25,
+        "onlineSchedule": [],
+        "workload": "low",
+        "initialCandidates": 16,
+        "maxCandidates": 128,
+        "gridCellDegrees": 0.005
+      },
+      "counts": {
+        "requested": 100,
+        "assigned": 100,
+        "completed": 100,
+        "unserved": 0,
+        "pending": 0,
+        "activeTrips": 0
+      },
+      "metrics": {
+        "eventsProcessed": 324,
+        "peakEventQueue": 201,
+        "peakPending": 1,
+        "tableCandidates": 1600,
+        "searchBudgetExhaustions": 0,
+        "dispatchAttempts": 100,
+        "dispatchVersion": "grid-fifo/v1"
+      },
+      "semanticSha256": "9a84c9b8e223374b6e40015370fbf8eb0ba2c5bbec624767854b4b222030657b",
+      "fixtureOperations": {
+        "CAR": {
+          "nearest": 0,
+          "table": 36,
+          "route": 42,
+          "routeCacheHits": 0,
+          "tableCacheHits": 0
+        },
+        "MOTORBIKE": {
+          "nearest": 0,
+          "table": 64,
+          "route": 82,
+          "routeCacheHits": 0,
+          "tableCacheHits": 0
+        }
+      },
+      "resources": {
+        "wallSeconds": 0.1849210999935167,
+        "cpuSeconds": 0.1875,
+        "cpuPercentOneCore": 101.39459477938088,
+        "peakRssBytesSampled": 89743360,
+        "processPeakRssBytes": 108126208,
+        "minimumAvailablePhysicalBytes": 3896909824,
+        "sampleIntervalSeconds": 0.05,
+        "sampleCount": 4
+      },
+      "headroomBefore": {
+        "totalPhysicalBytes": 16948453376,
+        "availablePhysicalBytes": 3897061376,
+        "processRssBytes": 87883776,
+        "processPeakRssBytes": 108126208,
+        "processPagefileBytes": 75563008
+      },
+      "bookingsPerSecond": 540.7711721566981,
+      "eventsPerSecond": 1752.098597787702,
+      "simulationSecondsPerWallSecond": 6010.866256143676,
+      "correctness": "PASS linear independent lifecycle/provenance audit, 5 fleet checkpoints; final horizon drained"
+    },
+    {
+      "status": "PASS",
+      "config": {
+        "regionId": "nvmr-hanoi-core",
+        "seed": "m3-bench-0",
+        "fleetSize": 5000,
+        "carCount": 2000,
+        "bookingCount": 1250,
+        "horizonSeconds": 900,
+        "maxWaitSeconds": 300,
+        "onlineFraction": 0.8,
+        "onlineSchedule": [],
+        "workload": "typical",
+        "initialCandidates": 16,
+        "maxCandidates": 128,
+        "gridCellDegrees": 0.005
+      },
+      "counts": {
+        "requested": 1250,
+        "assigned": 1250,
+        "completed": 1250,
+        "unserved": 0,
+        "pending": 0,
+        "activeTrips": 0
+      },
+      "metrics": {
+        "eventsProcessed": 4196,
+        "peakEventQueue": 2510,
+        "peakPending": 1,
+        "tableCandidates": 20000,
+        "searchBudgetExhaustions": 0,
+        "dispatchAttempts": 1250,
+        "dispatchVersion": "grid-fifo/v1"
+      },
+      "semanticSha256": "bb662aee22949594f9844248d3c57dd14475be1bfaacea0cd04c06a8d157e9bd",
+      "fixtureOperations": {
+        "CAR": {
+          "nearest": 0,
+          "table": 516,
+          "route": 692,
+          "routeCacheHits": 0,
+          "tableCacheHits": 0
+        },
+        "MOTORBIKE": {
+          "nearest": 0,
+          "table": 734,
+          "route": 1004,
+          "routeCacheHits": 0,
+          "tableCacheHits": 0
+        }
+      },
+      "resources": {
+        "wallSeconds": 0.4838750000053551,
+        "cpuSeconds": 0.484375,
+        "cpuPercentOneCore": 100.10333247112153,
+        "peakRssBytesSampled": 93454336,
+        "processPeakRssBytes": 108126208,
+        "minimumAvailablePhysicalBytes": 3927101440,
+        "sampleIntervalSeconds": 0.05,
+        "sampleCount": 8
+      },
+      "headroomBefore": {
+        "totalPhysicalBytes": 16948453376,
+        "availablePhysicalBytes": 3928244224,
+        "processRssBytes": 88072192,
+        "processPeakRssBytes": 108126208,
+        "processPagefileBytes": 75587584
+      },
+      "bookingsPerSecond": 2583.3118057063625,
+      "eventsPerSecond": 8671.661069395117,
+      "simulationSecondsPerWallSecond": 2888.5290622258467,
+      "correctness": "PASS linear independent lifecycle/provenance audit, 5 fleet checkpoints; final horizon drained"
+    },
+    {
+      "status": "PASS",
+      "config": {
+        "regionId": "nvmr-hanoi-core",
+        "seed": "m3-bench-1",
+        "fleetSize": 5000,
+        "carCount": 2000,
+        "bookingCount": 1250,
+        "horizonSeconds": 900,
+        "maxWaitSeconds": 300,
+        "onlineFraction": 0.8,
+        "onlineSchedule": [],
+        "workload": "typical",
+        "initialCandidates": 16,
+        "maxCandidates": 128,
+        "gridCellDegrees": 0.005
+      },
+      "counts": {
+        "requested": 1250,
+        "assigned": 1250,
+        "completed": 1250,
+        "unserved": 0,
+        "pending": 0,
+        "activeTrips": 0
+      },
+      "metrics": {
+        "eventsProcessed": 4180,
+        "peakEventQueue": 2507,
+        "peakPending": 2,
+        "tableCandidates": 20000,
+        "searchBudgetExhaustions": 0,
+        "dispatchAttempts": 1250,
+        "dispatchVersion": "grid-fifo/v1"
+      },
+      "semanticSha256": "f47a93f18d711b177e3ab3804e9d8605041626d3498b09c30d9ff35d117a971c",
+      "fixtureOperations": {
+        "CAR": {
+          "nearest": 0,
+          "table": 524,
+          "route": 699,
+          "routeCacheHits": 0,
+          "tableCacheHits": 0
+        },
+        "MOTORBIKE": {
+          "nearest": 0,
+          "table": 726,
+          "route": 981,
+          "routeCacheHits": 0,
+          "tableCacheHits": 0
+        }
+      },
+      "resources": {
+        "wallSeconds": 0.49348259999533184,
+        "cpuSeconds": 0.5,
+        "cpuPercentOneCore": 101.32069499608087,
+        "peakRssBytesSampled": 94613504,
+        "processPeakRssBytes": 108126208,
+        "minimumAvailablePhysicalBytes": 3922124800,
+        "sampleIntervalSeconds": 0.05,
+        "sampleCount": 7
+      },
+      "headroomBefore": {
+        "totalPhysicalBytes": 16948453376,
+        "availablePhysicalBytes": 3936882688,
+        "processRssBytes": 88047616,
+        "processPeakRssBytes": 108126208,
+        "processPagefileBytes": 75558912
+      },
+      "bookingsPerSecond": 2533.017374902022,
+      "eventsPerSecond": 8470.410101672362,
+      "simulationSecondsPerWallSecond": 2790.221985563473,
+      "correctness": "PASS linear independent lifecycle/provenance audit, 5 fleet checkpoints; final horizon drained"
+    },
+    {
+      "status": "PASS",
+      "config": {
+        "regionId": "nvmr-hanoi-core",
+        "seed": "m3-bench-2",
+        "fleetSize": 5000,
+        "carCount": 2000,
+        "bookingCount": 1250,
+        "horizonSeconds": 900,
+        "maxWaitSeconds": 300,
+        "onlineFraction": 0.8,
+        "onlineSchedule": [],
+        "workload": "typical",
+        "initialCandidates": 16,
+        "maxCandidates": 128,
+        "gridCellDegrees": 0.005
+      },
+      "counts": {
+        "requested": 1250,
+        "assigned": 1250,
+        "completed": 1250,
+        "unserved": 0,
+        "pending": 0,
+        "activeTrips": 0
+      },
+      "metrics": {
+        "eventsProcessed": 4165,
+        "peakEventQueue": 2506,
+        "peakPending": 2,
+        "tableCandidates": 20000,
+        "searchBudgetExhaustions": 0,
+        "dispatchAttempts": 1250,
+        "dispatchVersion": "grid-fifo/v1"
+      },
+      "semanticSha256": "7c7125929776a5643b24a22dd814d561f3996b2f1b2c4fd4840e60c40d2f0d70",
+      "fixtureOperations": {
+        "CAR": {
+          "nearest": 0,
+          "table": 491,
+          "route": 646,
+          "routeCacheHits": 0,
+          "tableCacheHits": 0
+        },
+        "MOTORBIKE": {
+          "nearest": 0,
+          "table": 759,
+          "route": 1019,
+          "routeCacheHits": 0,
+          "tableCacheHits": 0
+        }
+      },
+      "resources": {
+        "wallSeconds": 0.50134010000329,
+        "cpuSeconds": 0.5,
+        "cpuPercentOneCore": 99.73269642638178,
+        "peakRssBytesSampled": 93487104,
+        "processPeakRssBytes": 108126208,
+        "minimumAvailablePhysicalBytes": 3921354752,
+        "sampleIntervalSeconds": 0.05,
+        "sampleCount": 7
+      },
+      "headroomBefore": {
+        "totalPhysicalBytes": 16948453376,
+        "availablePhysicalBytes": 3934834688,
+        "processRssBytes": 88064000,
+        "processPeakRssBytes": 108126208,
+        "processPagefileBytes": 75603968
+      },
+      "bookingsPerSecond": 2493.3174106595443,
+      "eventsPerSecond": 8307.733612317601,
+      "simulationSecondsPerWallSecond": 2492.541490281347,
+      "correctness": "PASS linear independent lifecycle/provenance audit, 5 fleet checkpoints; final horizon drained"
+    },
+    {
+      "status": "PASS",
+      "config": {
+        "regionId": "nvmr-hanoi-core",
+        "seed": "m3-bench-3",
+        "fleetSize": 5000,
+        "carCount": 2000,
+        "bookingCount": 1250,
+        "horizonSeconds": 900,
+        "maxWaitSeconds": 300,
+        "onlineFraction": 0.8,
+        "onlineSchedule": [],
+        "workload": "typical",
+        "initialCandidates": 16,
+        "maxCandidates": 128,
+        "gridCellDegrees": 0.005
+      },
+      "counts": {
+        "requested": 1250,
+        "assigned": 1250,
+        "completed": 1250,
+        "unserved": 0,
+        "pending": 0,
+        "activeTrips": 0
+      },
+      "metrics": {
+        "eventsProcessed": 4189,
+        "peakEventQueue": 2504,
+        "peakPending": 1,
+        "tableCandidates": 20000,
+        "searchBudgetExhaustions": 0,
+        "dispatchAttempts": 1250,
+        "dispatchVersion": "grid-fifo/v1"
+      },
+      "semanticSha256": "6efa5cf0f19235f423223fffffbda1a287bdb68945d7c09f910ce8231b1d9962",
+      "fixtureOperations": {
+        "CAR": {
+          "nearest": 0,
+          "table": 501,
+          "route": 656,
+          "routeCacheHits": 0,
+          "tableCacheHits": 0
+        },
+        "MOTORBIKE": {
+          "nearest": 0,
+          "table": 749,
+          "route": 1033,
+          "routeCacheHits": 0,
+          "tableCacheHits": 0
+        }
+      },
+      "resources": {
+        "wallSeconds": 0.45142339999438263,
+        "cpuSeconds": 0.453125,
+        "cpuPercentOneCore": 100.37694102823171,
+        "peakRssBytesSampled": 94593024,
+        "processPeakRssBytes": 108126208,
+        "minimumAvailablePhysicalBytes": 3934756864,
+        "sampleIntervalSeconds": 0.05,
+        "sampleCount": 7
+      },
+      "headroomBefore": {
+        "totalPhysicalBytes": 16948453376,
+        "availablePhysicalBytes": 3934875648,
+        "processRssBytes": 88117248,
+        "processPeakRssBytes": 108126208,
+        "processPagefileBytes": 75730944
+      },
+      "bookingsPerSecond": 2769.0190628477712,
+      "eventsPerSecond": 9279.536683415452,
+      "simulationSecondsPerWallSecond": 2922.8502554728416,
+      "correctness": "PASS linear independent lifecycle/provenance audit, 5 fleet checkpoints; final horizon drained"
+    },
+    {
+      "status": "PASS",
+      "config": {
+        "regionId": "nvmr-hanoi-core",
+        "seed": "m3-bench-4",
+        "fleetSize": 5000,
+        "carCount": 2000,
+        "bookingCount": 1250,
+        "horizonSeconds": 900,
+        "maxWaitSeconds": 300,
+        "onlineFraction": 0.8,
+        "onlineSchedule": [],
+        "workload": "typical",
+        "initialCandidates": 16,
+        "maxCandidates": 128,
+        "gridCellDegrees": 0.005
+      },
+      "counts": {
+        "requested": 1250,
+        "assigned": 1250,
+        "completed": 1250,
+        "unserved": 0,
+        "pending": 0,
+        "activeTrips": 0
+      },
+      "metrics": {
+        "eventsProcessed": 4180,
+        "peakEventQueue": 2508,
+        "peakPending": 2,
+        "tableCandidates": 20064,
+        "searchBudgetExhaustions": 0,
+        "dispatchAttempts": 1250,
+        "dispatchVersion": "grid-fifo/v1"
+      },
+      "semanticSha256": "4723c3369263ab049aa1d0befcf2a4b309a6263d4192d84fddf9398c45392956",
+      "fixtureOperations": {
+        "CAR": {
+          "nearest": 0,
+          "table": 491,
+          "route": 650,
+          "routeCacheHits": 0,
+          "tableCacheHits": 0
+        },
+        "MOTORBIKE": {
+          "nearest": 0,
+          "table": 761,
+          "route": 1030,
+          "routeCacheHits": 0,
+          "tableCacheHits": 0
+        }
+      },
+      "resources": {
+        "wallSeconds": 0.40334220000659116,
+        "cpuSeconds": 0.40625,
+        "cpuPercentOneCore": 100.72092629865195,
+        "peakRssBytesSampled": 94912512,
+        "processPeakRssBytes": 108126208,
+        "minimumAvailablePhysicalBytes": 3936710656,
+        "sampleIntervalSeconds": 0.05,
+        "sampleCount": 6
+      },
+      "headroomBefore": {
+        "totalPhysicalBytes": 16948453376,
+        "availablePhysicalBytes": 3937148928,
+        "processRssBytes": 88104960,
+        "processPeakRssBytes": 108126208,
+        "processPagefileBytes": 75628544
+      },
+      "bookingsPerSecond": 3099.105424573906,
+      "eventsPerSecond": 10363.408539775142,
+      "simulationSecondsPerWallSecond": 3290.441714202759,
+      "correctness": "PASS linear independent lifecycle/provenance audit, 5 fleet checkpoints; final horizon drained"
+    },
+    {
+      "status": "PASS",
+      "config": {
+        "regionId": "nvmr-hanoi-core",
+        "seed": "m3-bench-0",
+        "fleetSize": 5000,
+        "carCount": 2000,
+        "bookingCount": 5000,
+        "horizonSeconds": 900,
+        "maxWaitSeconds": 300,
+        "onlineFraction": 0.6,
+        "onlineSchedule": [],
+        "workload": "burst",
+        "initialCandidates": 16,
+        "maxCandidates": 128,
+        "gridCellDegrees": 0.005
+      },
+      "counts": {
+        "requested": 5000,
+        "assigned": 5000,
+        "completed": 5000,
+        "unserved": 0,
+        "pending": 0,
+        "activeTrips": 0
+      },
+      "metrics": {
+        "eventsProcessed": 18233,
+        "peakEventQueue": 10999,
+        "peakPending": 1841,
+        "tableCandidates": 55111,
+        "searchBudgetExhaustions": 0,
+        "dispatchAttempts": 7243,
+        "dispatchVersion": "grid-fifo/v1"
+      },
+      "semanticSha256": "52fe1b74710fe79d4dab82689a3313897a937892f2af228803aa05847b96a84d",
+      "fixtureOperations": {
+        "CAR": {
+          "nearest": 0,
+          "table": 3979,
+          "route": 3300,
+          "routeCacheHits": 0,
+          "tableCacheHits": 0
+        },
+        "MOTORBIKE": {
+          "nearest": 0,
+          "table": 3317,
+          "route": 4933,
+          "routeCacheHits": 0,
+          "tableCacheHits": 0
+        }
+      },
+      "resources": {
+        "wallSeconds": 1.495737499993993,
+        "cpuSeconds": 1.46875,
+        "cpuPercentOneCore": 98.19570613198498,
+        "peakRssBytesSampled": 128614400,
+        "processPeakRssBytes": 144982016,
+        "minimumAvailablePhysicalBytes": 3904438272,
+        "sampleIntervalSeconds": 0.05,
+        "sampleCount": 17
+      },
+      "headroomBefore": {
+        "totalPhysicalBytes": 16948453376,
+        "availablePhysicalBytes": 3936763904,
+        "processRssBytes": 88186880,
+        "processPeakRssBytes": 108126208,
+        "processPagefileBytes": 75542528
+      },
+      "bookingsPerSecond": 3342.8325491739565,
+      "eventsPerSecond": 12189.973173817749,
+      "simulationSecondsPerWallSecond": 601.7098588513121,
+      "correctness": "PASS linear independent lifecycle/provenance audit, 5 fleet checkpoints; final horizon drained"
+    },
+    {
+      "status": "PASS",
+      "config": {
+        "regionId": "nvmr-hanoi-core",
+        "seed": "m3-bench-1",
+        "fleetSize": 5000,
+        "carCount": 2000,
+        "bookingCount": 5000,
+        "horizonSeconds": 900,
+        "maxWaitSeconds": 300,
+        "onlineFraction": 0.6,
+        "onlineSchedule": [],
+        "workload": "burst",
+        "initialCandidates": 16,
+        "maxCandidates": 128,
+        "gridCellDegrees": 0.005
+      },
+      "counts": {
+        "requested": 5000,
+        "assigned": 5000,
+        "completed": 5000,
+        "unserved": 0,
+        "pending": 0,
+        "activeTrips": 0
+      },
+      "metrics": {
+        "eventsProcessed": 18122,
+        "peakEventQueue": 10926,
+        "peakPending": 1826,
+        "tableCandidates": 54038,
+        "searchBudgetExhaustions": 0,
+        "dispatchAttempts": 7057,
+        "dispatchVersion": "grid-fifo/v1"
+      },
+      "semanticSha256": "e7b6aca39233efbaf48fa34f56808169efa0ba8c47990c8f653e33cad3a2b832",
+      "fixtureOperations": {
+        "CAR": {
+          "nearest": 0,
+          "table": 3922,
+          "route": 3350,
+          "routeCacheHits": 0,
+          "tableCacheHits": 0
+        },
+        "MOTORBIKE": {
+          "nearest": 0,
+          "table": 3148,
+          "route": 4772,
+          "routeCacheHits": 0,
+          "tableCacheHits": 0
+        }
+      },
+      "resources": {
+        "wallSeconds": 1.6392595999932382,
+        "cpuSeconds": 1.640625,
+        "cpuPercentOneCore": 100.08329370203275,
+        "peakRssBytesSampled": 128647168,
+        "processPeakRssBytes": 145334272,
+        "minimumAvailablePhysicalBytes": 3887693824,
+        "sampleIntervalSeconds": 0.05,
+        "sampleCount": 17
+      },
+      "headroomBefore": {
+        "totalPhysicalBytes": 16948453376,
+        "availablePhysicalBytes": 3926429696,
+        "processRssBytes": 105107456,
+        "processPeakRssBytes": 144982016,
+        "processPagefileBytes": 93048832
+      },
+      "bookingsPerSecond": 3050.1575223476652,
+      "eventsPerSecond": 11054.990923996877,
+      "simulationSecondsPerWallSecond": 549.0283540225797,
+      "correctness": "PASS linear independent lifecycle/provenance audit, 5 fleet checkpoints; final horizon drained"
+    },
+    {
+      "status": "PASS",
+      "config": {
+        "regionId": "nvmr-hanoi-core",
+        "seed": "m3-bench-2",
+        "fleetSize": 5000,
+        "carCount": 2000,
+        "bookingCount": 5000,
+        "horizonSeconds": 900,
+        "maxWaitSeconds": 300,
+        "onlineFraction": 0.6,
+        "onlineSchedule": [],
+        "workload": "burst",
+        "initialCandidates": 16,
+        "maxCandidates": 128,
+        "gridCellDegrees": 0.005
+      },
+      "counts": {
+        "requested": 5000,
+        "assigned": 5000,
+        "completed": 5000,
+        "unserved": 0,
+        "pending": 0,
+        "activeTrips": 0
+      },
+      "metrics": {
+        "eventsProcessed": 18208,
+        "peakEventQueue": 10967,
+        "peakPending": 1851,
+        "tableCandidates": 52594,
+        "searchBudgetExhaustions": 0,
+        "dispatchAttempts": 6952,
+        "dispatchVersion": "grid-fifo/v1"
+      },
+      "semanticSha256": "170db9051079ce0f809dcfd8202a5285d8fc5b0c164308d374904a1730deae05",
+      "fixtureOperations": {
+        "CAR": {
+          "nearest": 0,
+          "table": 3802,
+          "route": 3319,
+          "routeCacheHits": 0,
+          "tableCacheHits": 0
+        },
+        "MOTORBIKE": {
+          "nearest": 0,
+          "table": 3151,
+          "route": 4889,
+          "routeCacheHits": 0,
+          "tableCacheHits": 0
+        }
+      },
+      "resources": {
+        "wallSeconds": 1.543843299994478,
+        "cpuSeconds": 1.53125,
+        "cpuPercentOneCore": 99.18428897579676,
+        "peakRssBytesSampled": 129941504,
+        "processPeakRssBytes": 145334272,
+        "minimumAvailablePhysicalBytes": 3904094208,
+        "sampleIntervalSeconds": 0.05,
+        "sampleCount": 17
+      },
+      "headroomBefore": {
+        "totalPhysicalBytes": 16948453376,
+        "availablePhysicalBytes": 3905003520,
+        "processRssBytes": 108294144,
+        "processPeakRssBytes": 145334272,
+        "processPagefileBytes": 96169984
+      },
+      "bookingsPerSecond": 3238.67066043418,
+      "eventsPerSecond": 11793.94307703711,
+      "simulationSecondsPerWallSecond": 582.9607188781524,
+      "correctness": "PASS linear independent lifecycle/provenance audit, 5 fleet checkpoints; final horizon drained"
+    },
+    {
+      "status": "PASS",
+      "config": {
+        "regionId": "nvmr-hanoi-core",
+        "seed": "m3-bench-3",
+        "fleetSize": 5000,
+        "carCount": 2000,
+        "bookingCount": 5000,
+        "horizonSeconds": 900,
+        "maxWaitSeconds": 300,
+        "onlineFraction": 0.6,
+        "onlineSchedule": [],
+        "workload": "burst",
+        "initialCandidates": 16,
+        "maxCandidates": 128,
+        "gridCellDegrees": 0.005
+      },
+      "counts": {
+        "requested": 5000,
+        "assigned": 5000,
+        "completed": 5000,
+        "unserved": 0,
+        "pending": 0,
+        "activeTrips": 0
+      },
+      "metrics": {
+        "eventsProcessed": 18171,
+        "peakEventQueue": 10958,
+        "peakPending": 1837,
+        "tableCandidates": 52259,
+        "searchBudgetExhaustions": 0,
+        "dispatchAttempts": 6802,
+        "dispatchVersion": "grid-fifo/v1"
+      },
+      "semanticSha256": "99160500d2061e2c905034aae3801484fe09143c14b598f20da2487041f11f6e",
+      "fixtureOperations": {
+        "CAR": {
+          "nearest": 0,
+          "table": 3431,
+          "route": 3246,
+          "routeCacheHits": 0,
+          "tableCacheHits": 0
+        },
+        "MOTORBIKE": {
+          "nearest": 0,
+          "table": 3371,
+          "route": 4925,
+          "routeCacheHits": 0,
+          "tableCacheHits": 0
+        }
+      },
+      "resources": {
+        "wallSeconds": 1.6741513000015402,
+        "cpuSeconds": 1.671875,
+        "cpuPercentOneCore": 99.86403259959012,
+        "peakRssBytesSampled": 129064960,
+        "processPeakRssBytes": 145334272,
+        "minimumAvailablePhysicalBytes": 3856388096,
+        "sampleIntervalSeconds": 0.05,
+        "sampleCount": 18
+      },
+      "headroomBefore": {
+        "totalPhysicalBytes": 16948453376,
+        "availablePhysicalBytes": 3919286272,
+        "processRssBytes": 108855296,
+        "processPeakRssBytes": 145334272,
+        "processPagefileBytes": 97091584
+      },
+      "bookingsPerSecond": 2986.5878908288637,
+      "eventsPerSecond": 10853.857712850257,
+      "simulationSecondsPerWallSecond": 537.5858203491954,
+      "correctness": "PASS linear independent lifecycle/provenance audit, 5 fleet checkpoints; final horizon drained"
+    },
+    {
+      "status": "PASS",
+      "config": {
+        "regionId": "nvmr-hanoi-core",
+        "seed": "m3-bench-4",
+        "fleetSize": 5000,
+        "carCount": 2000,
+        "bookingCount": 5000,
+        "horizonSeconds": 900,
+        "maxWaitSeconds": 300,
+        "onlineFraction": 0.6,
+        "onlineSchedule": [],
+        "workload": "burst",
+        "initialCandidates": 16,
+        "maxCandidates": 128,
+        "gridCellDegrees": 0.005
+      },
+      "counts": {
+        "requested": 5000,
+        "assigned": 5000,
+        "completed": 5000,
+        "unserved": 0,
+        "pending": 0,
+        "activeTrips": 0
+      },
+      "metrics": {
+        "eventsProcessed": 18202,
+        "peakEventQueue": 10950,
+        "peakPending": 1848,
+        "tableCandidates": 52693,
+        "searchBudgetExhaustions": 0,
+        "dispatchAttempts": 6618,
+        "dispatchVersion": "grid-fifo/v1"
+      },
+      "semanticSha256": "709067f16a611b8c5fd71782e9d8f99e5eddafc1c91f77e175b6cf160c30f66d",
+      "fixtureOperations": {
+        "CAR": {
+          "nearest": 0,
+          "table": 3333,
+          "route": 3308,
+          "routeCacheHits": 0,
+          "tableCacheHits": 0
+        },
+        "MOTORBIKE": {
+          "nearest": 0,
+          "table": 3290,
+          "route": 4894,
+          "routeCacheHits": 0,
+          "tableCacheHits": 0
+        }
+      },
+      "resources": {
+        "wallSeconds": 1.4933452999975998,
+        "cpuSeconds": 1.484375,
+        "cpuPercentOneCore": 99.39931508154115,
+        "peakRssBytesSampled": 128843776,
+        "processPeakRssBytes": 145334272,
+        "minimumAvailablePhysicalBytes": 3868102656,
+        "sampleIntervalSeconds": 0.05,
+        "sampleCount": 16
+      },
+      "headroomBefore": {
+        "totalPhysicalBytes": 16948453376,
+        "availablePhysicalBytes": 3869188096,
+        "processRssBytes": 112336896,
+        "processPeakRssBytes": 145334272,
+        "processPagefileBytes": 100438016
+      },
+      "bookingsPerSecond": 3348.1874553782277,
+      "eventsPerSecond": 12188.7416125589,
+      "simulationSecondsPerWallSecond": 602.673741968081,
+      "correctness": "PASS linear independent lifecycle/provenance audit, 5 fleet checkpoints; final horizon drained"
+    }
+  ],
+  "oracle": [
+    {
+      "seed": 0,
+      "policyConfig": {
+        "regionId": "nvmr-hanoi-core",
+        "seed": "oracle-0",
+        "fleetSize": 100,
+        "carCount": 40,
+        "bookingCount": 40,
+        "horizonSeconds": 180,
+        "maxWaitSeconds": 60,
+        "onlineFraction": 0.8,
+        "onlineSchedule": [],
+        "workload": "typical",
+        "initialCandidates": 16,
+        "maxCandidates": 128,
+        "gridCellDegrees": 0.005
+      },
+      "sampledStaticDispatches": 40,
+      "oracleFeasible": 40,
+      "winnerRecall": 0.95,
+      "feasibleCandidateMiss": 0,
+      "etaRegretSeconds": {
+        "mean": 0.25,
+        "max": 5
+      },
+      "shortlistTablePoints": 640,
+      "exhaustiveTablePoints": 1584,
+      "shortlistTableQueries": 40,
+      "exhaustiveTableQueries": 40,
+      "tableQuerySavingsFraction": 0.0,
+      "tablePointSavingsFraction": 0.595959595959596,
+      "serviceOutcomeDifferences": 0,
+      "shortlistCounts": {
+        "requested": 40,
+        "assigned": 39,
+        "completed": 39,
+        "unserved": 1,
+        "pending": 0,
+        "activeTrips": 0
+      },
+      "exhaustiveCounts": {
+        "requested": 40,
+        "assigned": 39,
+        "completed": 39,
+        "unserved": 1,
+        "pending": 0,
+        "activeTrips": 0
+      },
+      "scope": "Static sampled dispatch quality plus two full small runs; fixture ETA only, not live OSRM; different assignments may change subsequent outcomes"
+    },
+    {
+      "seed": 1,
+      "policyConfig": {
+        "regionId": "nvmr-hanoi-core",
+        "seed": "oracle-1",
+        "fleetSize": 100,
+        "carCount": 40,
+        "bookingCount": 40,
+        "horizonSeconds": 180,
+        "maxWaitSeconds": 60,
+        "onlineFraction": 0.8,
+        "onlineSchedule": [],
+        "workload": "typical",
+        "initialCandidates": 16,
+        "maxCandidates": 128,
+        "gridCellDegrees": 0.005
+      },
+      "sampledStaticDispatches": 40,
+      "oracleFeasible": 40,
+      "winnerRecall": 0.95,
+      "feasibleCandidateMiss": 0,
+      "etaRegretSeconds": {
+        "mean": 0.825,
+        "max": 28
+      },
+      "shortlistTablePoints": 640,
+      "exhaustiveTablePoints": 1648,
+      "shortlistTableQueries": 40,
+      "exhaustiveTableQueries": 40,
+      "tableQuerySavingsFraction": 0.0,
+      "tablePointSavingsFraction": 0.6116504854368932,
+      "serviceOutcomeDifferences": 0,
+      "shortlistCounts": {
+        "requested": 40,
+        "assigned": 40,
+        "completed": 40,
+        "unserved": 0,
+        "pending": 0,
+        "activeTrips": 0
+      },
+      "exhaustiveCounts": {
+        "requested": 40,
+        "assigned": 40,
+        "completed": 40,
+        "unserved": 0,
+        "pending": 0,
+        "activeTrips": 0
+      },
+      "scope": "Static sampled dispatch quality plus two full small runs; fixture ETA only, not live OSRM; different assignments may change subsequent outcomes"
+    },
+    {
+      "seed": 2,
+      "policyConfig": {
+        "regionId": "nvmr-hanoi-core",
+        "seed": "oracle-2",
+        "fleetSize": 100,
+        "carCount": 40,
+        "bookingCount": 40,
+        "horizonSeconds": 180,
+        "maxWaitSeconds": 60,
+        "onlineFraction": 0.8,
+        "onlineSchedule": [],
+        "workload": "typical",
+        "initialCandidates": 16,
+        "maxCandidates": 128,
+        "gridCellDegrees": 0.005
+      },
+      "sampledStaticDispatches": 40,
+      "oracleFeasible": 40,
+      "winnerRecall": 0.9,
+      "feasibleCandidateMiss": 0,
+      "etaRegretSeconds": {
+        "mean": 1.425,
+        "max": 15
+      },
+      "shortlistTablePoints": 640,
+      "exhaustiveTablePoints": 1712,
+      "shortlistTableQueries": 40,
+      "exhaustiveTableQueries": 40,
+      "tableQuerySavingsFraction": 0.0,
+      "tablePointSavingsFraction": 0.6261682242990654,
+      "serviceOutcomeDifferences": 0,
+      "shortlistCounts": {
+        "requested": 40,
+        "assigned": 40,
+        "completed": 40,
+        "unserved": 0,
+        "pending": 0,
+        "activeTrips": 0
+      },
+      "exhaustiveCounts": {
+        "requested": 40,
+        "assigned": 40,
+        "completed": 40,
+        "unserved": 0,
+        "pending": 0,
+        "activeTrips": 0
+      },
+      "scope": "Static sampled dispatch quality plus two full small runs; fixture ETA only, not live OSRM; different assignments may change subsequent outcomes"
+    },
+    {
+      "seed": 3,
+      "policyConfig": {
+        "regionId": "nvmr-hanoi-core",
+        "seed": "oracle-3",
+        "fleetSize": 100,
+        "carCount": 40,
+        "bookingCount": 40,
+        "horizonSeconds": 180,
+        "maxWaitSeconds": 60,
+        "onlineFraction": 0.8,
+        "onlineSchedule": [],
+        "workload": "typical",
+        "initialCandidates": 16,
+        "maxCandidates": 128,
+        "gridCellDegrees": 0.005
+      },
+      "sampledStaticDispatches": 40,
+      "oracleFeasible": 40,
+      "winnerRecall": 0.95,
+      "feasibleCandidateMiss": 0,
+      "etaRegretSeconds": {
+        "mean": 0.475,
+        "max": 14
+      },
+      "shortlistTablePoints": 656,
+      "exhaustiveTablePoints": 1600,
+      "shortlistTableQueries": 41,
+      "exhaustiveTableQueries": 40,
+      "tableQuerySavingsFraction": -0.02499999999999991,
+      "tablePointSavingsFraction": 0.5900000000000001,
+      "serviceOutcomeDifferences": 0,
+      "shortlistCounts": {
+        "requested": 40,
+        "assigned": 39,
+        "completed": 39,
+        "unserved": 1,
+        "pending": 0,
+        "activeTrips": 0
+      },
+      "exhaustiveCounts": {
+        "requested": 40,
+        "assigned": 39,
+        "completed": 39,
+        "unserved": 1,
+        "pending": 0,
+        "activeTrips": 0
+      },
+      "scope": "Static sampled dispatch quality plus two full small runs; fixture ETA only, not live OSRM; different assignments may change subsequent outcomes"
+    },
+    {
+      "seed": 4,
+      "policyConfig": {
+        "regionId": "nvmr-hanoi-core",
+        "seed": "oracle-4",
+        "fleetSize": 100,
+        "carCount": 40,
+        "bookingCount": 40,
+        "horizonSeconds": 180,
+        "maxWaitSeconds": 60,
+        "onlineFraction": 0.8,
+        "onlineSchedule": [],
+        "workload": "typical",
+        "initialCandidates": 16,
+        "maxCandidates": 128,
+        "gridCellDegrees": 0.005
+      },
+      "sampledStaticDispatches": 40,
+      "oracleFeasible": 40,
+      "winnerRecall": 0.9,
+      "feasibleCandidateMiss": 0,
+      "etaRegretSeconds": {
+        "mean": 2.025,
+        "max": 29
+      },
+      "shortlistTablePoints": 640,
+      "exhaustiveTablePoints": 1696,
+      "shortlistTableQueries": 40,
+      "exhaustiveTableQueries": 40,
+      "tableQuerySavingsFraction": 0.0,
+      "tablePointSavingsFraction": 0.6226415094339622,
+      "serviceOutcomeDifferences": 0,
+      "shortlistCounts": {
+        "requested": 40,
+        "assigned": 39,
+        "completed": 39,
+        "unserved": 1,
+        "pending": 0,
+        "activeTrips": 0
+      },
+      "exhaustiveCounts": {
+        "requested": 40,
+        "assigned": 39,
+        "completed": 39,
+        "unserved": 1,
+        "pending": 0,
+        "activeTrips": 0
+      },
+      "scope": "Static sampled dispatch quality plus two full small runs; fixture ETA only, not live OSRM; different assignments may change subsequent outcomes"
+    }
+  ],
+  "configuration": {
+    "scales": [
+      100,
+      500,
+      1000,
+      3000,
+      5000
+    ],
+    "seeds": 5,
+    "workloads": [
+      "low",
+      "typical",
+      "burst"
+    ],
+    "minimumFreeGiB": 2.0,
+    "horizonSeconds": 900,
+    "maxWaitSeconds": 300
+  },
+  "performanceCriteria": "No timing SLA asserted; correctness PASS requires lifecycle audit and accounting at 5 checkpoints; RAM guard >=2GiB",
+  "status": "PASS"
+}

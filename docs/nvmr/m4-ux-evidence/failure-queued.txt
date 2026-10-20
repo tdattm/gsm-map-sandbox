@@ -1,0 +1,105 @@
+- banner:
+  - button "Mở menu chính":
+  - heading "GSM Map Sandbox" [level=1]
+  - text: Mô phỏng quy mô lớn
+  - generic: Mô phỏng cục bộ
+  - generic: Hanoi Core · CAR + MOTORBIKE · phát lại mô hình
+- main:
+  - complementary "Menu chính":
+    - paragraph: CHẾ ĐỘ MÔ PHỎNG
+    - navigation "Menu chính":
+      - button "Một hành trình":
+        - generic: Một hành trình
+      - button "Mô phỏng đội xe":
+        - generic: Mô phỏng đội xe
+      - button "Đặt xe và điều phối":
+        - generic: Đặt xe và điều phối
+      - button "Phòng thí nghiệm voucher":
+        - generic: Phòng thí nghiệm voucher
+      - button "Mô phỏng quy mô lớn":
+        - generic: Mô phỏng quy mô lớn
+    - button "Thu gọn menu":
+    - button "Ẩn menu":
+    - text: Mô phỏng cục bộ
+    - text: OSM · OSRM
+  - complementary "Cấu hình mô phỏng quy mô lớn":
+    - generic: KỊCH BẢN MÔ HÌNH
+    - heading "Mô phỏng quy mô lớn" [level=2]
+    - paragraph: Hanoi Core · CAR + MOTORBIKE
+    - paragraph: Hiện chỉ hỗ trợ Hà Nội. Khu vực ở chế độ cũ (Trung tâm TP.HCM · Quận 1 cũ) được giữ lại khi quay về. Bản đồ dưới đây luôn là Hà Nội.
+    - paragraph: Tính toán trước, phát lại sau. Vị trí mô phỏng, không phải GPS trực tiếp.
+    - heading "Thiết lập mô phỏng" [level=2]
+    - text: Tổng đội xe
+    - spinbutton "Tổng đội xe": "100"
+    - text: Số xe CAR
+    - spinbutton "Số xe CAR": "40"
+    - paragraph: 40 CAR + 60 MOTORBIKE
+    - text: Số yêu cầu
+    - spinbutton "Số yêu cầu": "20"
+    - text: Tỷ lệ online
+    - spinbutton "Tỷ lệ online": "0.8"
+    - text: Seed
+    - textbox "Seed": m4-ux-pilot
+    - generic "Tham số nhu cầu"
+    - option "Thưa (low)"
+    - option "Thông thường (typical)" [selected]
+    - option "Dồn đầu kỳ (burst)"
+    - button "Tạo mô phỏng" [disabled]
+    - generic "Mở run đã có"
+    - heading "Tiến trình" [level=2]
+    - status: Đang chờ worker · QUEUED
+    - progressbar "Tiến trình tính toán"
+    - paragraph: 0% · ux-fault-injection
+    - paragraph: Chờ 12 giây. Worker có thể chưa chạy hoặc đang xử lý job khác. Kiểm tra terminal worker và cùng thư mục store. UI không có heartbeat để xác nhận worker đang hoạt động.
+    - button "Hủy job"
+    - button "Xóa phiên hiển thị"
+    - paragraph: Rời chế độ chỉ dừng phát lại và requests của màn hình; job đã gửi vẫn được worker xử lý. Hãy lưu mã run hoặc hủy job trước khi rời.
+    - heading "Đội xe tại thời điểm phát lại" [level=2]
+    - paragraph: Chưa có snapshot. Tạo hoặc mở run để xem đội xe.
+    - paragraph: Tổng = Offline + Online. Online = Rảnh + Đến đón + Chở khách. Đang di chuyển là tập con của xe đến đón/chở khách.
+    - heading "Xe được chọn" [level=2]
+    - text: Mã phương tiện
+    - combobox "Vehicle inspector"
+    - paragraph: Nhấp cụm để phóng to, chọn một xe để xem chi tiết và tuyến đã lưu.
+    - generic "Benchmark / Developer Tools"
+    - option "100" [selected]
+    - option "500"
+    - option "1000"
+    - option "3000"
+    - option "5000"
+    - option "5 giây"
+    - option "30 giây" [selected]
+    - option "60 giây"
+  - region "Bản đồ mô phỏng Hà Nội":
+    - generic: BẢN ĐỒ CỤC BỘ · OSM
+    - heading "Hà Nội · Hanoi Core" [level=2]
+    - status: Bản đồ Hà Nội sẵn sàng · 5/5 lớp địa lý
+    - button "Tải lại bản đồ"
+    - region "Map"
+    - generic: © OpenStreetMap contributors · Geofabrik · ODbL 1.0
+    - button "Phóng to":
+    - button "Thu nhỏ":
+    - button "Đưa hướng bản đồ về phía Bắc":
+    - generic: ● CAR
+    - generic: ◉ MOTORBIKE
+    - generic: "Vàng: đến đón · xanh lá: chở khách · mờ: offline · cam: xe chọn"
+    - paragraph: Bản đồ Hà Nội sẵn có trước khi tạo job · Nhấp cụm để phóng to, nhấp xe để xem tuyến.
+  - region "Điều khiển phát lại · Phát lại mô phỏng đã tính xong":
+    - button "Phát" [disabled]:
+      - text: Phát
+    - button "Tạm dừng" [disabled]:
+      - text: Tạm dừng
+    - button "Về đầu" [disabled]:
+    - strong: Phát lại mô phỏng đã tính xong
+    - generic: 0,0 / 0,0 giây · 0%
+    - group "Dòng thời gian mô phỏng":
+      - slider "Dòng thời gian mô phỏng" [disabled]: "0"
+    - spinbutton "Thời điểm mô phỏng (giây)" [disabled]: "0"
+    - button "Đến thời điểm" [disabled]
+    - button "1x" [disabled] [pressed]
+    - button "2x" [disabled]
+    - button "4x" [disabled]
+    - text: Tốc độ tùy chỉnh
+    - textbox "Tốc độ tùy chỉnh" [disabled]: "1"
+    - button "Áp dụng" [disabled]
+    - generic "Tốc độ đã áp dụng": 1x

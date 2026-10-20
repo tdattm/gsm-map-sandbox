@@ -3,6 +3,9 @@ import {readFile,writeFile} from 'node:fs/promises'
 import {resolve,dirname} from 'node:path'
 import {fileURLToPath,pathToFileURL} from 'node:url'
 const frontend=resolve(dirname(fileURLToPath(import.meta.url)),'..'),root=resolve(frontend,'..')
+// A clean CI checkout has no ignored .replay-tools from package:replay.
+// Compile the existing validator without regenerating any sealed replay assets.
+await build({configFile:false,logLevel:'warn',build:{lib:{entry:resolve(frontend,'src/lib/artifact.ts'),formats:['es'],fileName:()=> 'artifact.mjs'},outDir:resolve(frontend,'.replay-tools'),emptyOutDir:false}})
 await build({configFile:false,logLevel:'warn',build:{lib:{entry:resolve(frontend,'src/lib/voucher.ts'),formats:['es'],fileName:()=> 'voucher.mjs'},outDir:resolve(frontend,'.replay-tools'),emptyOutDir:false}})
 const artifacts=await import(pathToFileURL(resolve(frontend,'.replay-tools/artifact.mjs')).href)
 const voucher=await import(pathToFileURL(resolve(frontend,'.replay-tools/voucher.mjs')).href)

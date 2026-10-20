@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "regionId": "nvmr-connected",
+  "manifest_sha256": "be9140840ce9293ddd747344e6b9d899d02d347ad0b1321143d5bc77eb5677f0",
+  "validator_sha256": "41f730a3193d0aa25a7b48fbdfb01294a339bdff76ad3791fc50b35e76e775df",
+  "evidence_sha256": {
+    "routing-validation.json": "31feab161aaf2c81af87937f4b3b5db7597b201e5b327227c40c083bca5a62fb",
+    "synthetic-validation.json": "e8ffb93803a7bc888abd2efb48b68f3713b47439f452af808c8ba12ad4efb73a"
+  }
+}

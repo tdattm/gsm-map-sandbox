@@ -1,0 +1,3671 @@
+[
+  {
+    "rawFile": "build\\m4-performance\\baseline-processes.json",
+    "label": "baseline-live",
+    "samples": 2,
+    "firstAt": "2026-10-17T15:50:33.3653420Z",
+    "lastAt": "2026-10-17T15:50:35.4397605Z",
+    "sampleSpanSeconds": 2.074418,
+    "requestedSeconds": null,
+    "totalPhysicalGiB": 15.784477233886719,
+    "minimumAvailableGiB": 2.25042724609375,
+    "maximumCommittedGiB": 21.10045623779297,
+    "minimumCommitHeadroomGiB": 3.9139480590820312,
+    "firstCommitLimitGiB": 25.014404296875,
+    "maximumCpuPercent": 37,
+    "maximumPageReadsPerSecond": 498,
+    "maximumPagesInputPerSecond": 9738,
+    "firstPagefiles": [
+      {
+        "AllocatedBaseSize": 9451,
+        "CurrentUsage": 1105,
+        "PeakUsage": 2793
+      }
+    ],
+    "processPeaks": [
+      {
+        "name": "chrome.exe",
+        "pid": 23852,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 281305088,
+        "maximumPrivateBytes": 246710272,
+        "maximumPeakWorkingSetBytes": 546447360
+      },
+      {
+        "name": "chrome.exe",
+        "pid": 25648,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 10219520,
+        "maximumPrivateBytes": 2732032,
+        "maximumPeakWorkingSetBytes": 10551296
+      },
+      {
+        "name": "ChatGPT.exe",
+        "pid": 5624,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 288423936,
+        "maximumPrivateBytes": 400920576,
+        "maximumPeakWorkingSetBytes": 1386303488
+      },
+      {
+        "name": "ChatGPT.exe",
+        "pid": 25828,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 9396224,
+        "maximumPrivateBytes": 2408448,
+        "maximumPeakWorkingSetBytes": 9928704
+      },
+      {
+        "name": "chrome.exe",
+        "pid": 3104,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 177397760,
+        "maximumPrivateBytes": 935124992,
+        "maximumPeakWorkingSetBytes": 789856256
+      },
+      {
+        "name": "chrome.exe",
+        "pid": 23260,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 56287232,
+        "maximumPrivateBytes": 32698368,
+        "maximumPeakWorkingSetBytes": 97308672
+      },
+      {
+        "name": "chrome.exe",
+        "pid": 14780,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 21757952,
+        "maximumPrivateBytes": 12935168,
+        "maximumPeakWorkingSetBytes": 39276544
+      },
+      {
+        "name": "ChatGPT.exe",
+        "pid": 16644,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 204107776,
+        "maximumPrivateBytes": 279805952,
+        "maximumPeakWorkingSetBytes": 528773120
+      },
+      {
+        "name": "ChatGPT.exe",
+        "pid": 12712,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 42082304,
+        "maximumPrivateBytes": 30744576,
+        "maximumPeakWorkingSetBytes": 88449024
+      },
+      {
+        "name": "ChatGPT.exe",
+        "pid": 17300,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 21487616,
+        "maximumPrivateBytes": 9846784,
+        "maximumPeakWorkingSetBytes": 23814144
+      },
+      {
+        "name": "chrome.exe",
+        "pid": 22744,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 33476608,
+        "maximumPrivateBytes": 41132032,
+        "maximumPeakWorkingSetBytes": 71843840
+      },
+      {
+        "name": "chrome.exe",
+        "pid": 29324,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 49651712,
+        "maximumPrivateBytes": 59674624,
+        "maximumPeakWorkingSetBytes": 112697344
+      },
+      {
+        "name": "chrome.exe",
+        "pid": 17880,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 649875456,
+        "maximumPrivateBytes": 648908800,
+        "maximumPeakWorkingSetBytes": 1490739200
+      },
+      {
+        "name": "chrome.exe",
+        "pid": 16208,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 334524416,
+        "maximumPrivateBytes": 491773952,
+        "maximumPeakWorkingSetBytes": 1226870784
+      },
+      {
+        "name": "ChatGPT.exe",
+        "pid": 24980,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 600305664,
+        "maximumPrivateBytes": 685559808,
+        "maximumPeakWorkingSetBytes": 978530304
+      },
+      {
+        "name": "ChatGPT.exe",
+        "pid": 20256,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 132812800,
+        "maximumPrivateBytes": 149106688,
+        "maximumPeakWorkingSetBytes": 177225728
+      },
+      {
+        "name": "chrome.exe",
+        "pid": 20880,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 36667392,
+        "maximumPrivateBytes": 114806784,
+        "maximumPeakWorkingSetBytes": 215887872
+      },
+      {
+        "name": "ChatGPT.exe",
+        "pid": 9240,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 14024704,
+        "maximumPrivateBytes": 9064448,
+        "maximumPeakWorkingSetBytes": 23633920
+      },
+      {
+        "name": "chrome.exe",
+        "pid": 13684,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 24764416,
+        "maximumPrivateBytes": 10055680,
+        "maximumPeakWorkingSetBytes": 26333184
+      },
+      {
+        "name": "chrome.exe",
+        "pid": 15456,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 19615744,
+        "maximumPrivateBytes": 182882304,
+        "maximumPeakWorkingSetBytes": 253042688
+      },
+      {
+        "name": "ChatGPT.exe",
+        "pid": 17628,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 21983232,
+        "maximumPrivateBytes": 34705408,
+        "maximumPeakWorkingSetBytes": 69795840
+      },
+      {
+        "name": "ChatGPT.exe",
+        "pid": 16580,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 73699328,
+        "maximumPrivateBytes": 306130944,
+        "maximumPeakWorkingSetBytes": 568209408
+      },
+      {
+        "name": "chrome.exe",
+        "pid": 24376,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 166068224,
+        "maximumPrivateBytes": 450732032,
+        "maximumPeakWorkingSetBytes": 802758656
+      },
+      {
+        "name": "ChatGPT.exe",
+        "pid": 6024,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 72876032,
+        "maximumPrivateBytes": 219201536,
+        "maximumPeakWorkingSetBytes": 332296192
+      },
+      {
+        "name": "ChatGPT.exe",
+        "pid": 3124,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 34308096,
+        "maximumPrivateBytes": 27758592,
+        "maximumPeakWorkingSetBytes": 74850304
+      },
+      {
+        "name": "chrome.exe",
+        "pid": 9432,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 31944704,
+        "maximumPrivateBytes": 73592832,
+        "maximumPeakWorkingSetBytes": 153915392
+      },
+      {
+        "name": "ChatGPT.exe",
+        "pid": 13980,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 20897792,
+        "maximumPrivateBytes": 28897280,
+        "maximumPeakWorkingSetBytes": 66060288
+      },
+      {
+        "name": "chrome.exe",
+        "pid": 25268,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 106201088,
+        "maximumPrivateBytes": 90497024,
+        "maximumPeakWorkingSetBytes": 145870848
+      },
+      {
+        "name": "ChatGPT.exe",
+        "pid": 6032,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 437669888,
+        "maximumPrivateBytes": 394866688,
+        "maximumPeakWorkingSetBytes": 1643540480
+      },
+      {
+        "name": "node.exe",
+        "pid": 19804,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 13049856,
+        "maximumPrivateBytes": 21549056,
+        "maximumPeakWorkingSetBytes": 54603776
+      },
+      {
+        "name": "node.exe",
+        "pid": 28160,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 15863808,
+        "maximumPrivateBytes": 117108736,
+        "maximumPeakWorkingSetBytes": 139243520
+      },
+      {
+        "name": "node.exe",
+        "pid": 14724,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 14159872,
+        "maximumPrivateBytes": 30703616,
+        "maximumPeakWorkingSetBytes": 63217664
+      },
+      {
+        "name": "node.exe",
+        "pid": 19228,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 19238912,
+        "maximumPrivateBytes": 97054720,
+        "maximumPeakWorkingSetBytes": 170840064
+      },
+      {
+        "name": "node.exe",
+        "pid": 14316,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 10723328,
+        "maximumPrivateBytes": 89436160,
+        "maximumPeakWorkingSetBytes": 111439872
+      },
+      {
+        "name": "python.exe",
+        "pid": 28940,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 4231168,
+        "maximumPrivateBytes": 794624,
+        "maximumPeakWorkingSetBytes": 4530176
+      },
+      {
+        "name": "python.exe",
+        "pid": 4928,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 43855872,
+        "maximumPrivateBytes": 87699456,
+        "maximumPeakWorkingSetBytes": 129953792
+      },
+      {
+        "name": "python.exe",
+        "pid": 22764,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 4235264,
+        "maximumPrivateBytes": 794624,
+        "maximumPeakWorkingSetBytes": 4530176
+      },
+      {
+        "name": "python.exe",
+        "pid": 11236,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 28012544,
+        "maximumPrivateBytes": 42467328,
+        "maximumPeakWorkingSetBytes": 51441664
+      },
+      {
+        "name": "node.exe",
+        "pid": 27928,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 565477376,
+        "maximumPrivateBytes": 1207369728,
+        "maximumPeakWorkingSetBytes": 647274496
+      },
+      {
+        "name": "node.exe",
+        "pid": 28464,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 33497088,
+        "maximumPrivateBytes": 75554816,
+        "maximumPeakWorkingSetBytes": 75984896
+      },
+      {
+        "name": "node.exe",
+        "pid": 26200,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 102125568,
+        "maximumPrivateBytes": 184930304,
+        "maximumPeakWorkingSetBytes": 284356608
+      },
+      {
+        "name": "ChatGPT.exe",
+        "pid": 12756,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 18812928,
+        "maximumPrivateBytes": 15872000,
+        "maximumPeakWorkingSetBytes": 34832384
+      },
+      {
+        "name": "chrome.exe",
+        "pid": 19428,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 686944256,
+        "maximumPrivateBytes": 738127872,
+        "maximumPeakWorkingSetBytes": 1177956352
+      },
+      {
+        "name": "chrome.exe",
+        "pid": 20204,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 61468672,
+        "maximumPrivateBytes": 36597760,
+        "maximumPeakWorkingSetBytes": 79613952
+      },
+      {
+        "name": "chrome.exe",
+        "pid": 19128,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 166154240,
+        "maximumPrivateBytes": 164077568,
+        "maximumPeakWorkingSetBytes": 412631040
+      },
+      {
+        "name": "chrome.exe",
+        "pid": 23236,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 519634944,
+        "maximumPrivateBytes": 546488320,
+        "maximumPeakWorkingSetBytes": 1025056768
+      },
+      {
+        "name": "node.exe",
+        "pid": 22912,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 38477824,
+        "maximumPrivateBytes": 21504000,
+        "maximumPeakWorkingSetBytes": 63766528
+      },
+      {
+        "name": "node.exe",
+        "pid": 30060,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 48222208,
+        "maximumPrivateBytes": 30285824,
+        "maximumPeakWorkingSetBytes": 79597568
+      },
+      {
+        "name": "node.exe",
+        "pid": 23240,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 49631232,
+        "maximumPrivateBytes": 119103488,
+        "maximumPeakWorkingSetBytes": 156147712
+      },
+      {
+        "name": "node.exe",
+        "pid": 11908,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 48279552,
+        "maximumPrivateBytes": 98402304,
+        "maximumPeakWorkingSetBytes": 179036160
+      },
+      {
+        "name": "node.exe",
+        "pid": 7456,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 45916160,
+        "maximumPrivateBytes": 89096192,
+        "maximumPeakWorkingSetBytes": 116355072
+      },
+      {
+        "name": "node.exe",
+        "pid": 24100,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 47898624,
+        "maximumPrivateBytes": 21356544,
+        "maximumPeakWorkingSetBytes": 63856640
+      },
+      {
+        "name": "node.exe",
+        "pid": 20648,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 44544000,
+        "maximumPrivateBytes": 119164928,
+        "maximumPeakWorkingSetBytes": 156229632
+      },
+      {
+        "name": "node.exe",
+        "pid": 23108,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 47640576,
+        "maximumPrivateBytes": 30638080,
+        "maximumPeakWorkingSetBytes": 79306752
+      },
+      {
+        "name": "node.exe",
+        "pid": 20864,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 50794496,
+        "maximumPrivateBytes": 97017856,
+        "maximumPeakWorkingSetBytes": 170434560
+      },
+      {
+        "name": "node.exe",
+        "pid": 5020,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 47874048,
+        "maximumPrivateBytes": 89075712,
+        "maximumPeakWorkingSetBytes": 117014528
+      },
+      {
+        "name": "Docker Desktop.exe",
+        "pid": 17596,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 14102528,
+        "maximumPrivateBytes": 50307072,
+        "maximumPeakWorkingSetBytes": 15757312
+      },
+      {
+        "name": "com.docker.backend.exe",
+        "pid": 4584,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 62799872,
+        "maximumPrivateBytes": 88739840,
+        "maximumPeakWorkingSetBytes": 69173248
+      },
+      {
+        "name": "com.docker.backend.exe",
+        "pid": 11364,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 152596480,
+        "maximumPrivateBytes": 156921856,
+        "maximumPeakWorkingSetBytes": 164757504
+      },
+      {
+        "name": "Docker Desktop.exe",
+        "pid": 16228,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 131563520,
+        "maximumPrivateBytes": 121434112,
+        "maximumPeakWorkingSetBytes": 180781056
+      },
+      {
+        "name": "Docker Desktop.exe",
+        "pid": 30132,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 22175744,
+        "maximumPrivateBytes": 9990144,
+        "maximumPeakWorkingSetBytes": 35618816
+      },
+      {
+        "name": "Docker Desktop.exe",
+        "pid": 19924,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 101052416,
+        "maximumPrivateBytes": 101572608,
+        "maximumPeakWorkingSetBytes": 245035008
+      },
+      {
+        "name": "Docker Desktop.exe",
+        "pid": 25364,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 40529920,
+        "maximumPrivateBytes": 12632064,
+        "maximumPeakWorkingSetBytes": 56864768
+      },
+      {
+        "name": "Docker Desktop.exe",
+        "pid": 29492,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 153223168,
+        "maximumPrivateBytes": 107786240,
+        "maximumPeakWorkingSetBytes": 282251264
+      },
+      {
+        "name": "vmmemWSL",
+        "pid": 22120,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 877821952,
+        "maximumPrivateBytes": 1578012672,
+        "maximumPeakWorkingSetBytes": 2140336128
+      },
+      {
+        "name": "node.exe",
+        "pid": 17228,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 34504704,
+        "maximumPrivateBytes": 21491712,
+        "maximumPeakWorkingSetBytes": 62574592
+      },
+      {
+        "name": "node.exe",
+        "pid": 19364,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 81383424,
+        "maximumPrivateBytes": 119672832,
+        "maximumPeakWorkingSetBytes": 153108480
+      },
+      {
+        "name": "node.exe",
+        "pid": 5732,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 42774528,
+        "maximumPrivateBytes": 30703616,
+        "maximumPeakWorkingSetBytes": 78876672
+      },
+      {
+        "name": "node.exe",
+        "pid": 24284,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 81268736,
+        "maximumPrivateBytes": 96116736,
+        "maximumPeakWorkingSetBytes": 160518144
+      },
+      {
+        "name": "node.exe",
+        "pid": 15856,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 76300288,
+        "maximumPrivateBytes": 89489408,
+        "maximumPeakWorkingSetBytes": 107003904
+      },
+      {
+        "name": "node.exe",
+        "pid": 23688,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 61427712,
+        "maximumPrivateBytes": 21594112,
+        "maximumPeakWorkingSetBytes": 63725568
+      },
+      {
+        "name": "node.exe",
+        "pid": 28744,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 122241024,
+        "maximumPrivateBytes": 119463936,
+        "maximumPeakWorkingSetBytes": 157011968
+      },
+      {
+        "name": "node.exe",
+        "pid": 8468,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 69349376,
+        "maximumPrivateBytes": 30666752,
+        "maximumPeakWorkingSetBytes": 79450112
+      },
+      {
+        "name": "node.exe",
+        "pid": 12092,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 98238464,
+        "maximumPrivateBytes": 96858112,
+        "maximumPeakWorkingSetBytes": 164655104
+      },
+      {
+        "name": "node.exe",
+        "pid": 13088,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 91348992,
+        "maximumPrivateBytes": 90320896,
+        "maximumPeakWorkingSetBytes": 115404800
+      },
+      {
+        "name": "node.exe",
+        "pid": 12548,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 61345792,
+        "maximumPrivateBytes": 21213184,
+        "maximumPeakWorkingSetBytes": 63750144
+      },
+      {
+        "name": "node.exe",
+        "pid": 11000,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 69091328,
+        "maximumPrivateBytes": 30658560,
+        "maximumPeakWorkingSetBytes": 79593472
+      },
+      {
+        "name": "node.exe",
+        "pid": 1268,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 123265024,
+        "maximumPrivateBytes": 119894016,
+        "maximumPeakWorkingSetBytes": 157200384
+      },
+      {
+        "name": "node.exe",
+        "pid": 28192,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 98353152,
+        "maximumPrivateBytes": 98734080,
+        "maximumPeakWorkingSetBytes": 174104576
+      },
+      {
+        "name": "node.exe",
+        "pid": 19172,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 91746304,
+        "maximumPrivateBytes": 91521024,
+        "maximumPeakWorkingSetBytes": 116817920
+      },
+      {
+        "name": "chrome.exe",
+        "pid": 21884,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 36417536,
+        "maximumPrivateBytes": 18440192,
+        "maximumPeakWorkingSetBytes": 36818944
+      },
+      {
+        "name": "chrome.exe",
+        "pid": 16624,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 61329408,
+        "maximumPrivateBytes": 34222080,
+        "maximumPeakWorkingSetBytes": 62226432
+      },
+      {
+        "name": "python.exe",
+        "pid": 17448,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 4440064,
+        "maximumPrivateBytes": 856064,
+        "maximumPeakWorkingSetBytes": 4440064
+      },
+      {
+        "name": "python.exe",
+        "pid": 15800,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 74178560,
+        "maximumPrivateBytes": 62062592,
+        "maximumPeakWorkingSetBytes": 119136256
+      }
+    ],
+    "dockerStatsAtEnd": [
+      "{\"BlockIO\":\"0B / 0B\",\"CPUPerc\":\"0.01%\",\"Container\":\"af5f68c19008785d15d820556a286d9814114cfb87449d940b126e9fefec3911\",\"ID\":\"af5f68c19008\",\"MemPerc\":\"4.62%\",\"MemUsage\":\"47.31MiB / 1GiB\",\"Name\":\"gsm-map-osrm-hanoi-motorbike\",\"NetIO\":\"78.7kB / 124kB\",\"PIDs\":\"10\"}",
+      "{\"BlockIO\":\"0B / 0B\",\"CPUPerc\":\"0.00%\",\"Container\":\"343e1ee656e4a30c2645352268b7c22bd9b57d76c9914d88aea767764b6dc1df\",\"ID\":\"343e1ee656e4\",\"MemPerc\":\"3.53%\",\"MemUsage\":\"36.11MiB / 1GiB\",\"Name\":\"gsm-map-osrm-hanoi-car\",\"NetIO\":\"81kB / 130kB\",\"PIDs\":\"10\"}"
+    ],
+    "dockerProbe": null
+  },
+  {
+    "rawFile": "build\\m4-performance\\isolation-production-processes.json",
+    "label": "isolation-production",
+    "samples": 26,
+    "firstAt": "2026-10-17T16:00:07.2913074Z",
+    "lastAt": "2026-10-17T16:00:56.4282315Z",
+    "sampleSpanSeconds": 49.136924,
+    "requestedSeconds": null,
+    "totalPhysicalGiB": 15.784477233886719,
+    "minimumAvailableGiB": 1.8166007995605469,
+    "maximumCommittedGiB": 21.195960998535156,
+    "minimumCommitHeadroomGiB": 3.7532615661621094,
+    "firstCommitLimitGiB": 24.949222564697266,
+    "maximumCpuPercent": 70,
+    "maximumPageReadsPerSecond": 1358,
+    "maximumPagesInputPerSecond": 9406,
+    "firstPagefiles": [
+      {
+        "AllocatedBaseSize": 9384,
+        "CurrentUsage": 1097,
+        "PeakUsage": 2793
+      }
+    ],
+    "processPeaks": [
+      {
+        "name": "chrome.exe",
+        "pid": 23852,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 299405312,
+        "maximumPrivateBytes": 261984256,
+        "maximumPeakWorkingSetBytes": 546447360
+      },
+      {
+        "name": "chrome.exe",
+        "pid": 25648,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 10215424,
+        "maximumPrivateBytes": 2732032,
+        "maximumPeakWorkingSetBytes": 10551296
+      },
+      {
+        "name": "ChatGPT.exe",
+        "pid": 5624,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 326316032,
+        "maximumPrivateBytes": 414089216,
+        "maximumPeakWorkingSetBytes": 1386303488
+      },
+      {
+        "name": "ChatGPT.exe",
+        "pid": 25828,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 9498624,
+        "maximumPrivateBytes": 2412544,
+        "maximumPeakWorkingSetBytes": 9928704
+      },
+      {
+        "name": "chrome.exe",
+        "pid": 3104,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 175570944,
+        "maximumPrivateBytes": 938033152,
+        "maximumPeakWorkingSetBytes": 789856256
+      },
+      {
+        "name": "chrome.exe",
+        "pid": 23260,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 55476224,
+        "maximumPrivateBytes": 33026048,
+        "maximumPeakWorkingSetBytes": 97308672
+      },
+      {
+        "name": "chrome.exe",
+        "pid": 14780,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 21757952,
+        "maximumPrivateBytes": 12939264,
+        "maximumPeakWorkingSetBytes": 39276544
+      },
+      {
+        "name": "ChatGPT.exe",
+        "pid": 16644,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 284434432,
+        "maximumPrivateBytes": 353624064,
+        "maximumPeakWorkingSetBytes": 528773120
+      },
+      {
+        "name": "ChatGPT.exe",
+        "pid": 12712,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 43958272,
+        "maximumPrivateBytes": 33087488,
+        "maximumPeakWorkingSetBytes": 88449024
+      },
+      {
+        "name": "ChatGPT.exe",
+        "pid": 17300,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 21708800,
+        "maximumPrivateBytes": 9879552,
+        "maximumPeakWorkingSetBytes": 23814144
+      },
+      {
+        "name": "chrome.exe",
+        "pid": 22744,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 34426880,
+        "maximumPrivateBytes": 42196992,
+        "maximumPeakWorkingSetBytes": 71843840
+      },
+      {
+        "name": "chrome.exe",
+        "pid": 29324,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 49643520,
+        "maximumPrivateBytes": 59674624,
+        "maximumPeakWorkingSetBytes": 112697344
+      },
+      {
+        "name": "chrome.exe",
+        "pid": 17880,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 595664896,
+        "maximumPrivateBytes": 650571776,
+        "maximumPeakWorkingSetBytes": 1490739200
+      },
+      {
+        "name": "chrome.exe",
+        "pid": 16208,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 327004160,
+        "maximumPrivateBytes": 490725376,
+        "maximumPeakWorkingSetBytes": 1226870784
+      },
+      {
+        "name": "ChatGPT.exe",
+        "pid": 24980,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 659738624,
+        "maximumPrivateBytes": 751718400,
+        "maximumPeakWorkingSetBytes": 978530304
+      },
+      {
+        "name": "ChatGPT.exe",
+        "pid": 20256,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 134742016,
+        "maximumPrivateBytes": 152539136,
+        "maximumPeakWorkingSetBytes": 177225728
+      },
+      {
+        "name": "chrome.exe",
+        "pid": 20880,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 36687872,
+        "maximumPrivateBytes": 114806784,
+        "maximumPeakWorkingSetBytes": 215887872
+      },
+      {
+        "name": "ChatGPT.exe",
+        "pid": 9240,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 14020608,
+        "maximumPrivateBytes": 9064448,
+        "maximumPeakWorkingSetBytes": 23633920
+      },
+      {
+        "name": "chrome.exe",
+        "pid": 13684,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 24727552,
+        "maximumPrivateBytes": 9961472,
+        "maximumPeakWorkingSetBytes": 26333184
+      },
+      {
+        "name": "chrome.exe",
+        "pid": 15456,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 19595264,
+        "maximumPrivateBytes": 182882304,
+        "maximumPeakWorkingSetBytes": 253042688
+      },
+      {
+        "name": "ChatGPT.exe",
+        "pid": 17628,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 22454272,
+        "maximumPrivateBytes": 34705408,
+        "maximumPeakWorkingSetBytes": 69795840
+      },
+      {
+        "name": "ChatGPT.exe",
+        "pid": 16580,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 77574144,
+        "maximumPrivateBytes": 306401280,
+        "maximumPeakWorkingSetBytes": 568209408
+      },
+      {
+        "name": "chrome.exe",
+        "pid": 24376,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 313892864,
+        "maximumPrivateBytes": 449277952,
+        "maximumPeakWorkingSetBytes": 802758656
+      },
+      {
+        "name": "ChatGPT.exe",
+        "pid": 6024,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 72466432,
+        "maximumPrivateBytes": 219627520,
+        "maximumPeakWorkingSetBytes": 332296192
+      },
+      {
+        "name": "ChatGPT.exe",
+        "pid": 3124,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 33742848,
+        "maximumPrivateBytes": 28061696,
+        "maximumPeakWorkingSetBytes": 74850304
+      },
+      {
+        "name": "chrome.exe",
+        "pid": 9432,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 31936512,
+        "maximumPrivateBytes": 73592832,
+        "maximumPeakWorkingSetBytes": 153915392
+      },
+      {
+        "name": "ChatGPT.exe",
+        "pid": 13980,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 20865024,
+        "maximumPrivateBytes": 28897280,
+        "maximumPeakWorkingSetBytes": 66060288
+      },
+      {
+        "name": "chrome.exe",
+        "pid": 25268,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 104615936,
+        "maximumPrivateBytes": 90497024,
+        "maximumPeakWorkingSetBytes": 145870848
+      },
+      {
+        "name": "node.exe",
+        "pid": 19804,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 13049856,
+        "maximumPrivateBytes": 21549056,
+        "maximumPeakWorkingSetBytes": 54603776
+      },
+      {
+        "name": "node.exe",
+        "pid": 28160,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 15781888,
+        "maximumPrivateBytes": 117108736,
+        "maximumPeakWorkingSetBytes": 139243520
+      },
+      {
+        "name": "node.exe",
+        "pid": 14724,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 14094336,
+        "maximumPrivateBytes": 30703616,
+        "maximumPeakWorkingSetBytes": 63217664
+      },
+      {
+        "name": "node.exe",
+        "pid": 19228,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 18923520,
+        "maximumPrivateBytes": 97054720,
+        "maximumPeakWorkingSetBytes": 170840064
+      },
+      {
+        "name": "node.exe",
+        "pid": 14316,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 10600448,
+        "maximumPrivateBytes": 89436160,
+        "maximumPeakWorkingSetBytes": 111439872
+      },
+      {
+        "name": "python.exe",
+        "pid": 28940,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 4231168,
+        "maximumPrivateBytes": 794624,
+        "maximumPeakWorkingSetBytes": 4530176
+      },
+      {
+        "name": "python.exe",
+        "pid": 4928,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 46493696,
+        "maximumPrivateBytes": 91201536,
+        "maximumPeakWorkingSetBytes": 129953792
+      },
+      {
+        "name": "python.exe",
+        "pid": 22764,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 4231168,
+        "maximumPrivateBytes": 794624,
+        "maximumPeakWorkingSetBytes": 4530176
+      },
+      {
+        "name": "python.exe",
+        "pid": 11236,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 27926528,
+        "maximumPrivateBytes": 42471424,
+        "maximumPeakWorkingSetBytes": 51441664
+      },
+      {
+        "name": "node.exe",
+        "pid": 27928,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 516399104,
+        "maximumPrivateBytes": 1135071232,
+        "maximumPeakWorkingSetBytes": 647274496
+      },
+      {
+        "name": "node.exe",
+        "pid": 28464,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 36585472,
+        "maximumPrivateBytes": 76152832,
+        "maximumPeakWorkingSetBytes": 75984896
+      },
+      {
+        "name": "node.exe",
+        "pid": 26200,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 207478784,
+        "maximumPrivateBytes": 339611648,
+        "maximumPeakWorkingSetBytes": 284356608
+      },
+      {
+        "name": "chrome.exe",
+        "pid": 19428,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 684990464,
+        "maximumPrivateBytes": 741056512,
+        "maximumPeakWorkingSetBytes": 1177956352
+      },
+      {
+        "name": "chrome.exe",
+        "pid": 20204,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 64118784,
+        "maximumPrivateBytes": 40017920,
+        "maximumPeakWorkingSetBytes": 79613952
+      },
+      {
+        "name": "chrome.exe",
+        "pid": 19128,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 333144064,
+        "maximumPrivateBytes": 328798208,
+        "maximumPeakWorkingSetBytes": 412631040
+      },
+      {
+        "name": "chrome.exe",
+        "pid": 23236,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 514998272,
+        "maximumPrivateBytes": 550084608,
+        "maximumPeakWorkingSetBytes": 1025056768
+      },
+      {
+        "name": "Docker Desktop.exe",
+        "pid": 17596,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 13983744,
+        "maximumPrivateBytes": 50307072,
+        "maximumPeakWorkingSetBytes": 15757312
+      },
+      {
+        "name": "com.docker.backend.exe",
+        "pid": 4584,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 62812160,
+        "maximumPrivateBytes": 88739840,
+        "maximumPeakWorkingSetBytes": 69173248
+      },
+      {
+        "name": "com.docker.backend.exe",
+        "pid": 11364,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 149659648,
+        "maximumPrivateBytes": 155336704,
+        "maximumPeakWorkingSetBytes": 164757504
+      },
+      {
+        "name": "Docker Desktop.exe",
+        "pid": 16228,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 131657728,
+        "maximumPrivateBytes": 121581568,
+        "maximumPeakWorkingSetBytes": 180781056
+      },
+      {
+        "name": "Docker Desktop.exe",
+        "pid": 30132,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 22171648,
+        "maximumPrivateBytes": 9990144,
+        "maximumPeakWorkingSetBytes": 35618816
+      },
+      {
+        "name": "Docker Desktop.exe",
+        "pid": 19924,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 98873344,
+        "maximumPrivateBytes": 101572608,
+        "maximumPeakWorkingSetBytes": 245035008
+      },
+      {
+        "name": "Docker Desktop.exe",
+        "pid": 25364,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 40501248,
+        "maximumPrivateBytes": 12632064,
+        "maximumPeakWorkingSetBytes": 56864768
+      },
+      {
+        "name": "Docker Desktop.exe",
+        "pid": 29492,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 149262336,
+        "maximumPrivateBytes": 107315200,
+        "maximumPeakWorkingSetBytes": 282251264
+      },
+      {
+        "name": "vmmemWSL",
+        "pid": 22120,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 834338816,
+        "maximumPrivateBytes": 1580847104,
+        "maximumPeakWorkingSetBytes": 2140336128
+      },
+      {
+        "name": "node.exe",
+        "pid": 17228,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 33959936,
+        "maximumPrivateBytes": 21491712,
+        "maximumPeakWorkingSetBytes": 62574592
+      },
+      {
+        "name": "node.exe",
+        "pid": 19364,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 69386240,
+        "maximumPrivateBytes": 119672832,
+        "maximumPeakWorkingSetBytes": 153108480
+      },
+      {
+        "name": "node.exe",
+        "pid": 5732,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 38088704,
+        "maximumPrivateBytes": 30703616,
+        "maximumPeakWorkingSetBytes": 78876672
+      },
+      {
+        "name": "node.exe",
+        "pid": 24284,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 70901760,
+        "maximumPrivateBytes": 96116736,
+        "maximumPeakWorkingSetBytes": 160518144
+      },
+      {
+        "name": "node.exe",
+        "pid": 15856,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 69705728,
+        "maximumPrivateBytes": 89489408,
+        "maximumPeakWorkingSetBytes": 107003904
+      },
+      {
+        "name": "node.exe",
+        "pid": 23688,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 60944384,
+        "maximumPrivateBytes": 21594112,
+        "maximumPeakWorkingSetBytes": 63725568
+      },
+      {
+        "name": "node.exe",
+        "pid": 28744,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 122241024,
+        "maximumPrivateBytes": 119463936,
+        "maximumPeakWorkingSetBytes": 157011968
+      },
+      {
+        "name": "node.exe",
+        "pid": 8468,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 68698112,
+        "maximumPrivateBytes": 30666752,
+        "maximumPeakWorkingSetBytes": 79450112
+      },
+      {
+        "name": "node.exe",
+        "pid": 12092,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 97185792,
+        "maximumPrivateBytes": 96858112,
+        "maximumPeakWorkingSetBytes": 164655104
+      },
+      {
+        "name": "node.exe",
+        "pid": 13088,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 90685440,
+        "maximumPrivateBytes": 90320896,
+        "maximumPeakWorkingSetBytes": 115404800
+      },
+      {
+        "name": "node.exe",
+        "pid": 12548,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 60878848,
+        "maximumPrivateBytes": 21213184,
+        "maximumPeakWorkingSetBytes": 63750144
+      },
+      {
+        "name": "node.exe",
+        "pid": 11000,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 68435968,
+        "maximumPrivateBytes": 30658560,
+        "maximumPeakWorkingSetBytes": 79593472
+      },
+      {
+        "name": "node.exe",
+        "pid": 1268,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 122241024,
+        "maximumPrivateBytes": 119894016,
+        "maximumPeakWorkingSetBytes": 157200384
+      },
+      {
+        "name": "node.exe",
+        "pid": 28192,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 98353152,
+        "maximumPrivateBytes": 98734080,
+        "maximumPeakWorkingSetBytes": 174104576
+      },
+      {
+        "name": "node.exe",
+        "pid": 19172,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 90976256,
+        "maximumPrivateBytes": 91521024,
+        "maximumPeakWorkingSetBytes": 116817920
+      },
+      {
+        "name": "chrome.exe",
+        "pid": 21884,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 35516416,
+        "maximumPrivateBytes": 18493440,
+        "maximumPeakWorkingSetBytes": 36818944
+      },
+      {
+        "name": "ChatGPT.exe",
+        "pid": 6548,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 78102528,
+        "maximumPrivateBytes": 27672576,
+        "maximumPeakWorkingSetBytes": 82419712
+      },
+      {
+        "name": "ChatGPT.exe",
+        "pid": 16496,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 77701120,
+        "maximumPrivateBytes": 27320320,
+        "maximumPeakWorkingSetBytes": 82444288
+      },
+      {
+        "name": "ChatGPT.exe",
+        "pid": 17324,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 1136943104,
+        "maximumPrivateBytes": 1091383296,
+        "maximumPeakWorkingSetBytes": 1136943104
+      },
+      {
+        "name": "python.exe",
+        "pid": 7720,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 4411392,
+        "maximumPrivateBytes": 798720,
+        "maximumPeakWorkingSetBytes": 4440064
+      },
+      {
+        "name": "python.exe",
+        "pid": 2852,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 59879424,
+        "maximumPrivateBytes": 47722496,
+        "maximumPeakWorkingSetBytes": 61747200
+      },
+      {
+        "name": "python.exe",
+        "pid": 14968,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 4411392,
+        "maximumPrivateBytes": 802816,
+        "maximumPeakWorkingSetBytes": 4440064
+      },
+      {
+        "name": "python.exe",
+        "pid": 16168,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 48664576,
+        "maximumPrivateBytes": 37654528,
+        "maximumPeakWorkingSetBytes": 48726016
+      },
+      {
+        "name": "node.exe",
+        "pid": 16160,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 98152448,
+        "maximumPrivateBytes": 122191872,
+        "maximumPeakWorkingSetBytes": 112689152
+      },
+      {
+        "name": "ChatGPT.exe",
+        "pid": 23988,
+        "service": "unclassified",
+        "maximumWorkingSetBytes": 35250176,
+        "maximumPrivateBytes": 18083840,
+        "maximumPeakWorkingSetBytes": 35303424
+      }
+    ],
+    "dockerStatsAtEnd": [
+      "{\"BlockIO\":\"0B / 0B\",\"CPUPerc\":\"0.00%\",\"Container\":\"af5f68c19008785d15d820556a286d9814114cfb87449d940b126e9fefec3911\",\"ID\":\"af5f68c19008\",\"MemPerc\":\"4.59%\",\"MemUsage\":\"46.96MiB / 1GiB\",\"Name\":\"gsm-map-osrm-hanoi-motorbike\",\"NetIO\":\"81.6kB / 128kB\",\"PIDs\":\"10\"}",
+      "{\"BlockIO\":\"0B / 0B\",\"CPUPerc\":\"0.00%\",\"Container\":\"343e1ee656e4a30c2645352268b7c22bd9b57d76c9914d88aea767764b6dc1df\",\"ID\":\"343e1ee656e4\",\"MemPerc\":\"3.57%\",\"MemUsage\":\"36.57MiB / 1GiB\",\"Name\":\"gsm-map-osrm-hanoi-car\",\"NetIO\":\"95.5kB / 149kB\",\"PIDs\":\"10\"}"
+    ],
+    "dockerProbe": null
+  },
+  {
+    "rawFile": "build\\m4-performance\\meeting-processes.json",
+    "label": "meeting-synthetic-video",
+    "samples": 59,
+    "firstAt": "2026-10-17T16:11:54.8548833Z",
+    "lastAt": "2026-10-17T16:13:47.1953503Z",
+    "sampleSpanSeconds": 112.340467,
+    "requestedSeconds": null,
+    "totalPhysicalGiB": 15.784477233886719,
+    "minimumAvailableGiB": 1.8434982299804688,
+    "maximumCommittedGiB": 20.797836303710938,
+    "minimumCommitHeadroomGiB": 3.469940185546875,
+    "firstCommitLimitGiB": 24.267776489257812,
+    "maximumCpuPercent": 79,
+    "maximumPageReadsPerSecond": 2432,
+    "maximumPagesInputPerSecond": 5631,
+    "firstPagefiles": [
+      {
+        "AllocatedBaseSize": 8686,
+        "CurrentUsage": 1078,
+        "PeakUsage": 2793
+      }
+    ],
+    "processPeaks": [
+      {
+        "name": "chrome.exe",
+        "pid": 23852,
+        "service": "other",
+        "maximumWorkingSetBytes": 288980992,
+        "maximumPrivateBytes": 251219968,
+        "maximumPeakWorkingSetBytes": 546447360
+      },
+      {
+        "name": "chrome.exe",
+        "pid": 25648,
+        "service": "other",
+        "maximumWorkingSetBytes": 10215424,
+        "maximumPrivateBytes": 2732032,
+        "maximumPeakWorkingSetBytes": 10551296
+      },
+      {
+        "name": "ChatGPT.exe",
+        "pid": 5624,
+        "service": "other",
+        "maximumWorkingSetBytes": 331694080,
+        "maximumPrivateBytes": 415612928,
+        "maximumPeakWorkingSetBytes": 1386303488
+      },
+      {
+        "name": "ChatGPT.exe",
+        "pid": 25828,
+        "service": "other",
+        "maximumWorkingSetBytes": 9510912,
+        "maximumPrivateBytes": 2416640,
+        "maximumPeakWorkingSetBytes": 9928704
+      },
+      {
+        "name": "chrome.exe",
+        "pid": 3104,
+        "service": "other",
+        "maximumWorkingSetBytes": 184524800,
+        "maximumPrivateBytes": 948932608,
+        "maximumPeakWorkingSetBytes": 789856256
+      },
+      {
+        "name": "chrome.exe",
+        "pid": 23260,
+        "service": "other",
+        "maximumWorkingSetBytes": 56836096,
+        "maximumPrivateBytes": 32952320,
+        "maximumPeakWorkingSetBytes": 97308672
+      },
+      {
+        "name": "chrome.exe",
+        "pid": 14780,
+        "service": "other",
+        "maximumWorkingSetBytes": 21770240,
+        "maximumPrivateBytes": 12951552,
+        "maximumPeakWorkingSetBytes": 39276544
+      },
+      {
+        "name": "ChatGPT.exe",
+        "pid": 16644,
+        "service": "other",
+        "maximumWorkingSetBytes": 330842112,
+        "maximumPrivateBytes": 401092608,
+        "maximumPeakWorkingSetBytes": 528773120
+      },
+      {
+        "name": "ChatGPT.exe",
+        "pid": 12712,
+        "service": "other",
+        "maximumWorkingSetBytes": 43991040,
+        "maximumPrivateBytes": 31895552,
+        "maximumPeakWorkingSetBytes": 88449024
+      },
+      {
+        "name": "ChatGPT.exe",
+        "pid": 17300,
+        "service": "other",
+        "maximumWorkingSetBytes": 21733376,
+        "maximumPrivateBytes": 9883648,
+        "maximumPeakWorkingSetBytes": 23814144
+      },
+      {
+        "name": "chrome.exe",
+        "pid": 22744,
+        "service": "other",
+        "maximumWorkingSetBytes": 40230912,
+        "maximumPrivateBytes": 39612416,
+        "maximumPeakWorkingSetBytes": 71843840
+      },
+      {
+        "name": "chrome.exe",
+        "pid": 29324,
+        "service": "other",
+        "maximumWorkingSetBytes": 49651712,
+        "maximumPrivateBytes": 59674624,
+        "maximumPeakWorkingSetBytes": 112697344
+      },
+      {
+        "name": "chrome.exe",
+        "pid": 17880,
+        "service": "other",
+        "maximumWorkingSetBytes": 680488960,
+        "maximumPrivateBytes": 720109568,
+        "maximumPeakWorkingSetBytes": 1490739200
+      },
+      {
+        "name": "chrome.exe",
+        "pid": 16208,
+        "service": "other",
+        "maximumWorkingSetBytes": 327127040,
+        "maximumPrivateBytes": 490135552,
+        "maximumPeakWorkingSetBytes": 1226870784
+      },
+      {
+        "name": "ChatGPT.exe",
+        "pid": 24980,
+        "service": "other",
+        "maximumWorkingSetBytes": 658558976,
+        "maximumPrivateBytes": 750362624,
+        "maximumPeakWorkingSetBytes": 978530304
+      },
+      {
+        "name": "ChatGPT.exe",
+        "pid": 20256,
+        "service": "other",
+        "maximumWorkingSetBytes": 138510336,
+        "maximumPrivateBytes": 156282880,
+        "maximumPeakWorkingSetBytes": 177225728
+      },
+      {
+        "name": "chrome.exe",
+        "pid": 20880,
+        "service": "other",
+        "maximumWorkingSetBytes": 37265408,
+        "maximumPrivateBytes": 114806784,
+        "maximumPeakWorkingSetBytes": 215887872
+      },
+      {
+        "name": "ChatGPT.exe",
+        "pid": 9240,
+        "service": "other",
+        "maximumWorkingSetBytes": 14032896,
+        "maximumPrivateBytes": 9072640,
+        "maximumPeakWorkingSetBytes": 23633920
+      },
+      {
+        "name": "chrome.exe",
+        "pid": 13684,
+        "service": "other",
+        "maximumWorkingSetBytes": 24788992,
+        "maximumPrivateBytes": 10059776,
+        "maximumPeakWorkingSetBytes": 26333184
+      },
+      {
+        "name": "chrome.exe",
+        "pid": 15456,
+        "service": "other",
+        "maximumWorkingSetBytes": 19599360,
+        "maximumPrivateBytes": 182882304,
+        "maximumPeakWorkingSetBytes": 253042688
+      },
+      {
+        "name": "ChatGPT.exe",
+        "pid": 17628,
+        "service": "other",
+        "maximumWorkingSetBytes": 22478848,
+        "maximumPrivateBytes": 34705408,
+        "maximumPeakWorkingSetBytes": 69795840
+      },
+      {
+        "name": "ChatGPT.exe",
+        "pid": 16580,
+        "service": "other",
+        "maximumWorkingSetBytes": 81772544,
+        "maximumPrivateBytes": 307126272,
+        "maximumPeakWorkingSetBytes": 568209408
+      },
+      {
+        "name": "chrome.exe",
+        "pid": 24376,
+        "service": "other",
+        "maximumWorkingSetBytes": 330358784,
+        "maximumPrivateBytes": 450433024,
+        "maximumPeakWorkingSetBytes": 802758656
+      },
+      {
+        "name": "ChatGPT.exe",
+        "pid": 6024,
+        "service": "other",
+        "maximumWorkingSetBytes": 77393920,
+        "maximumPrivateBytes": 219926528,
+        "maximumPeakWorkingSetBytes": 332296192
+      },
+      {
+        "name": "ChatGPT.exe",
+        "pid": 3124,
+        "service": "other",
+        "maximumWorkingSetBytes": 33751040,
+        "maximumPrivateBytes": 28061696,
+        "maximumPeakWorkingSetBytes": 74850304
+      },
+      {
+        "name": "chrome.exe",
+        "pid": 9432,
+        "service": "other",
+        "maximumWorkingSetBytes": 31940608,
+        "maximumPrivateBytes": 73592832,
+        "maximumPeakWorkingSetBytes": 153915392
+      },
+      {
+        "name": "ChatGPT.exe",
+        "pid": 13980,
+        "service": "other",
+        "maximumWorkingSetBytes": 20869120,
+        "maximumPrivateBytes": 28897280,
+        "maximumPeakWorkingSetBytes": 66060288
+      },
+      {
+        "name": "chrome.exe",
+        "pid": 25268,
+        "service": "other",
+        "maximumWorkingSetBytes": 104230912,
+        "maximumPrivateBytes": 89563136,
+        "maximumPeakWorkingSetBytes": 145870848
+      },
+      {
+        "name": "node.exe",
+        "pid": 19804,
+        "service": "other",
+        "maximumWorkingSetBytes": 13049856,
+        "maximumPrivateBytes": 21549056,
+        "maximumPeakWorkingSetBytes": 54603776
+      },
+      {
+        "name": "node.exe",
+        "pid": 28160,
+        "service": "other",
+        "maximumWorkingSetBytes": 15818752,
+        "maximumPrivateBytes": 117108736,
+        "maximumPeakWorkingSetBytes": 139243520
+      },
+      {
+        "name": "node.exe",
+        "pid": 14724,
+        "service": "other",
+        "maximumWorkingSetBytes": 14094336,
+        "maximumPrivateBytes": 30703616,
+        "maximumPeakWorkingSetBytes": 63217664
+      },
+      {
+        "name": "node.exe",
+        "pid": 19228,
+        "service": "other",
+        "maximumWorkingSetBytes": 18980864,
+        "maximumPrivateBytes": 97054720,
+        "maximumPeakWorkingSetBytes": 170840064
+      },
+      {
+        "name": "node.exe",
+        "pid": 14316,
+        "service": "other",
+        "maximumWorkingSetBytes": 10641408,
+        "maximumPrivateBytes": 89436160,
+        "maximumPeakWorkingSetBytes": 111439872
+      },
+      {
+        "name": "python.exe",
+        "pid": 28940,
+        "service": "api",
+        "maximumWorkingSetBytes": 4231168,
+        "maximumPrivateBytes": 794624,
+        "maximumPeakWorkingSetBytes": 4530176
+      },
+      {
+        "name": "python.exe",
+        "pid": 4928,
+        "service": "api",
+        "maximumWorkingSetBytes": 43737088,
+        "maximumPrivateBytes": 89202688,
+        "maximumPeakWorkingSetBytes": 129953792
+      },
+      {
+        "name": "python.exe",
+        "pid": 22764,
+        "service": "worker",
+        "maximumWorkingSetBytes": 4231168,
+        "maximumPrivateBytes": 794624,
+        "maximumPeakWorkingSetBytes": 4530176
+      },
+      {
+        "name": "python.exe",
+        "pid": 11236,
+        "service": "worker",
+        "maximumWorkingSetBytes": 27926528,
+        "maximumPrivateBytes": 42475520,
+        "maximumPeakWorkingSetBytes": 51441664
+      },
+      {
+        "name": "node.exe",
+        "pid": 27928,
+        "service": "frontend",
+        "maximumWorkingSetBytes": 537985024,
+        "maximumPrivateBytes": 1162117120,
+        "maximumPeakWorkingSetBytes": 647274496
+      },
+      {
+        "name": "node.exe",
+        "pid": 28464,
+        "service": "other",
+        "maximumWorkingSetBytes": 41521152,
+        "maximumPrivateBytes": 77414400,
+        "maximumPeakWorkingSetBytes": 75984896
+      },
+      {
+        "name": "node.exe",
+        "pid": 26200,
+        "service": "other",
+        "maximumWorkingSetBytes": 125394944,
+        "maximumPrivateBytes": 201060352,
+        "maximumPeakWorkingSetBytes": 284356608
+      },
+      {
+        "name": "chrome.exe",
+        "pid": 19428,
+        "service": "other",
+        "maximumWorkingSetBytes": 719142912,
+        "maximumPrivateBytes": 763076608,
+        "maximumPeakWorkingSetBytes": 1177956352
+      },
+      {
+        "name": "chrome.exe",
+        "pid": 20204,
+        "service": "other",
+        "maximumWorkingSetBytes": 61300736,
+        "maximumPrivateBytes": 36614144,
+        "maximumPeakWorkingSetBytes": 79613952
+      },
+      {
+        "name": "chrome.exe",
+        "pid": 19128,
+        "service": "other",
+        "maximumWorkingSetBytes": 170323968,
+        "maximumPrivateBytes": 154734592,
+        "maximumPeakWorkingSetBytes": 412631040
+      },
+      {
+        "name": "chrome.exe",
+        "pid": 23236,
+        "service": "other",
+        "maximumWorkingSetBytes": 516759552,
+        "maximumPrivateBytes": 551866368,
+        "maximumPeakWorkingSetBytes": 1025056768
+      },
+      {
+        "name": "Docker Desktop.exe",
+        "pid": 17596,
+        "service": "other",
+        "maximumWorkingSetBytes": 13983744,
+        "maximumPrivateBytes": 50307072,
+        "maximumPeakWorkingSetBytes": 15757312
+      },
+      {
+        "name": "com.docker.backend.exe",
+        "pid": 4584,
+        "service": "other",
+        "maximumWorkingSetBytes": 62824448,
+        "maximumPrivateBytes": 88739840,
+        "maximumPeakWorkingSetBytes": 69173248
+      },
+      {
+        "name": "com.docker.backend.exe",
+        "pid": 11364,
+        "service": "other",
+        "maximumWorkingSetBytes": 149778432,
+        "maximumPrivateBytes": 154107904,
+        "maximumPeakWorkingSetBytes": 164757504
+      },
+      {
+        "name": "Docker Desktop.exe",
+        "pid": 16228,
+        "service": "other",
+        "maximumWorkingSetBytes": 132894720,
+        "maximumPrivateBytes": 122384384,
+        "maximumPeakWorkingSetBytes": 180781056
+      },
+      {
+        "name": "Docker Desktop.exe",
+        "pid": 30132,
+        "service": "other",
+        "maximumWorkingSetBytes": 22171648,
+        "maximumPrivateBytes": 9990144,
+        "maximumPeakWorkingSetBytes": 35618816
+      },
+      {
+        "name": "Docker Desktop.exe",
+        "pid": 19924,
+        "service": "other",
+        "maximumWorkingSetBytes": 98893824,
+        "maximumPrivateBytes": 101572608,
+        "maximumPeakWorkingSetBytes": 245035008
+      },
+      {
+        "name": "Docker Desktop.exe",
+        "pid": 25364,
+        "service": "other",
+        "maximumWorkingSetBytes": 40505344,
+        "maximumPrivateBytes": 12632064,
+        "maximumPeakWorkingSetBytes": 56864768
+      },
+      {
+        "name": "Docker Desktop.exe",
+        "pid": 29492,
+        "service": "other",
+        "maximumWorkingSetBytes": 157749248,
+        "maximumPrivateBytes": 115806208,
+        "maximumPeakWorkingSetBytes": 282251264
+      },
+      {
+        "name": "vmmemWSL",
+        "pid": 22120,
+        "service": "other",
+        "maximumWorkingSetBytes": 859308032,
+        "maximumPrivateBytes": 1587294208,
+        "maximumPeakWorkingSetBytes": 2140336128
+      },
+      {
+        "name": "node.exe",
+        "pid": 23688,
+        "service": "other",
+        "maximumWorkingSetBytes": 60944384,
+        "maximumPrivateBytes": 21594112,
+        "maximumPeakWorkingSetBytes": 63725568
+      },
+      {
+        "name": "node.exe",
+        "pid": 28744,
+        "service": "other",
+        "maximumWorkingSetBytes": 122241024,
+        "maximumPrivateBytes": 119463936,
+        "maximumPeakWorkingSetBytes": 157011968
+      },
+      {
+        "name": "node.exe",
+        "pid": 8468,
+        "service": "other",
+        "maximumWorkingSetBytes": 68698112,
+        "maximumPrivateBytes": 30666752,
+        "maximumPeakWorkingSetBytes": 79450112
+      },
+      {
+        "name": "node.exe",
+        "pid": 12092,
+        "service": "other",
+        "maximumWorkingSetBytes": 97185792,
+        "maximumPrivateBytes": 96858112,
+        "maximumPeakWorkingSetBytes": 164655104
+      },
+      {
+        "name": "node.exe",
+        "pid": 13088,
+        "service": "other",
+        "maximumWorkingSetBytes": 90685440,
+        "maximumPrivateBytes": 90320896,
+        "maximumPeakWorkingSetBytes": 115404800
+      },
+      {
+        "name": "node.exe",
+        "pid": 12548,
+        "service": "other",
+        "maximumWorkingSetBytes": 60878848,
+        "maximumPrivateBytes": 21213184,
+        "maximumPeakWorkingSetBytes": 63750144
+      },
+      {
+        "name": "node.exe",
+        "pid": 11000,
+        "service": "other",
+        "maximumWorkingSetBytes": 68435968,
+        "maximumPrivateBytes": 30658560,
+        "maximumPeakWorkingSetBytes": 79593472
+      },
+      {
+        "name": "node.exe",
+        "pid": 1268,
+        "service": "other",
+        "maximumWorkingSetBytes": 122241024,
+        "maximumPrivateBytes": 119894016,
+        "maximumPeakWorkingSetBytes": 157200384
+      },
+      {
+        "name": "node.exe",
+        "pid": 28192,
+        "service": "other",
+        "maximumWorkingSetBytes": 98353152,
+        "maximumPrivateBytes": 98734080,
+        "maximumPeakWorkingSetBytes": 174104576
+      },
+      {
+        "name": "node.exe",
+        "pid": 19172,
+        "service": "other",
+        "maximumWorkingSetBytes": 90976256,
+        "maximumPrivateBytes": 91521024,
+        "maximumPeakWorkingSetBytes": 116817920
+      },
+      {
+        "name": "chrome.exe",
+        "pid": 21884,
+        "service": "other",
+        "maximumWorkingSetBytes": 35516416,
+        "maximumPrivateBytes": 18493440,
+        "maximumPeakWorkingSetBytes": 36818944
+      },
+      {
+        "name": "ChatGPT.exe",
+        "pid": 6548,
+        "service": "other",
+        "maximumWorkingSetBytes": 80465920,
+        "maximumPrivateBytes": 29642752,
+        "maximumPeakWorkingSetBytes": 82419712
+      },
+      {
+        "name": "ChatGPT.exe",
+        "pid": 16496,
+        "service": "other",
+        "maximumWorkingSetBytes": 79421440,
+        "maximumPrivateBytes": 28934144,
+        "maximumPeakWorkingSetBytes": 82444288
+      },
+      {
+        "name": "ChatGPT.exe",
+        "pid": 6216,
+        "service": "other",
+        "maximumWorkingSetBytes": 101900288,
+        "maximumPrivateBytes": 42336256,
+        "maximumPeakWorkingSetBytes": 103981056
+      },
+      {
+        "name": "python.exe",
+        "pid": 6664,
+        "service": "api",
+        "maximumWorkingSetBytes": 4411392,
+        "maximumPrivateBytes": 798720,
+        "maximumPeakWorkingSetBytes": 4440064
+      },
+      {
+        "name": "python.exe",
+        "pid": 23092,
+        "service": "api",
+        "maximumWorkingSetBytes": 61644800,
+        "maximumPrivateBytes": 49283072,
+        "maximumPeakWorkingSetBytes": 61644800
+      },
+      {
+        "name": "python.exe",
+        "pid": 3752,
+        "service": "worker",
+        "maximumWorkingSetBytes": 4411392,
+        "maximumPrivateBytes": 802816,
+        "maximumPeakWorkingSetBytes": 4440064
+      },
+      {
+        "name": "python.exe",
+        "pid": 26880,
+        "service": "worker",
+        "maximumWorkingSetBytes": 48381952,
+        "maximumPrivateBytes": 37457920,
+        "maximumPeakWorkingSetBytes": 48447488
+      },
+      {
+        "name": "node.exe",
+        "pid": 2228,
+        "service": "frontend",
+        "maximumWorkingSetBytes": 95260672,
+        "maximumPrivateBytes": 119775232,
+        "maximumPeakWorkingSetBytes": 103256064
+      },
+      {
+        "name": "ChatGPT.exe",
+        "pid": 1700,
+        "service": "other",
+        "maximumWorkingSetBytes": 633511936,
+        "maximumPrivateBytes": 579817472,
+        "maximumPeakWorkingSetBytes": 635752448
+      },
+      {
+        "name": "ChatGPT.exe",
+        "pid": 2700,
+        "service": "other",
+        "maximumWorkingSetBytes": 34209792,
+        "maximumPrivateBytes": 15872000,
+        "maximumPeakWorkingSetBytes": 34254848
+      },
+      {
+        "name": "python.exe",
+        "pid": 13912,
+        "service": "profiler",
+        "maximumWorkingSetBytes": 4435968,
+        "maximumPrivateBytes": 851968,
+        "maximumPeakWorkingSetBytes": 4435968
+      },
+      {
+        "name": "python.exe",
+        "pid": 6532,
+        "service": "profiler",
+        "maximumWorkingSetBytes": 176910336,
+        "maximumPrivateBytes": 164065280,
+        "maximumPeakWorkingSetBytes": 220409856
+      }
+    ],
+    "dockerStatsAtEnd": [
+      "{\"BlockIO\":\"0B / 0B\",\"CPUPerc\":\"0.00%\",\"Container\":\"af5f68c19008785d15d820556a286d9814114cfb87449d940b126e9fefec3911\",\"ID\":\"af5f68c19008\",\"MemPerc\":\"4.71%\",\"MemUsage\":\"48.22MiB / 1GiB\",\"Name\":\"gsm-map-osrm-hanoi-motorbike\",\"NetIO\":\"297kB / 480kB\",\"PIDs\":\"10\"}",
+      "{\"BlockIO\":\"0B / 0B\",\"CPUPerc\":\"0.00%\",\"Container\":\"343e1ee656e4a30c2645352268b7c22bd9b57d76c9914d88aea767764b6dc1df\",\"ID\":\"343e1ee656e4\",\"MemPerc\":\"3.60%\",\"MemUsage\":\"36.82MiB / 1GiB\",\"Name\":\"gsm-map-osrm-hanoi-car\",\"NetIO\":\"298kB / 490kB\",\"PIDs\":\"10\"}"
+    ],
+    "dockerProbe": null
+  },
+  {
+    "rawFile": "build\\m4-performance\\meeting-ui-processes.json",
+    "label": "meeting-ui-100-persisted5000",
+    "samples": 46,
+    "firstAt": "2026-10-17T16:17:44.2146088Z",
+    "lastAt": "2026-10-17T16:19:11.5869337Z",
+    "sampleSpanSeconds": 87.372325,
+    "requestedSeconds": null,
+    "totalPhysicalGiB": 15.784477233886719,
+    "minimumAvailableGiB": 1.9874458312988281,
+    "maximumCommittedGiB": 20.468055725097656,
+    "minimumCommitHeadroomGiB": 3.7997207641601562,
+    "firstCommitLimitGiB": 24.267776489257812,
+    "maximumCpuPercent": 34,
+    "maximumPageReadsPerSecond": 23,
+    "maximumPagesInputPerSecond": 373,
+    "firstPagefiles": [
+      {
+        "AllocatedBaseSize": 8686,
+        "CurrentUsage": 1075,
+        "PeakUsage": 2793
+      }
+    ],
+    "processPeaks": [
+      {
+        "name": "chrome.exe",
+        "pid": 23852,
+        "service": "other",
+        "maximumWorkingSetBytes": 290029568,
+        "maximumPrivateBytes": 251990016,
+        "maximumPeakWorkingSetBytes": 546447360
+      },
+      {
+        "name": "chrome.exe",
+        "pid": 25648,
+        "service": "other",
+        "maximumWorkingSetBytes": 10215424,
+        "maximumPrivateBytes": 2732032,
+        "maximumPeakWorkingSetBytes": 10551296
+      },
+      {
+        "name": "ChatGPT.exe",
+        "pid": 5624,
+        "service": "other",
+        "maximumWorkingSetBytes": 329875456,
+        "maximumPrivateBytes": 416153600,
+        "maximumPeakWorkingSetBytes": 1386303488
+      },
+      {
+        "name": "ChatGPT.exe",
+        "pid": 25828,
+        "service": "other",
+        "maximumWorkingSetBytes": 9506816,
+        "maximumPrivateBytes": 2412544,
+        "maximumPeakWorkingSetBytes": 9928704
+      },
+      {
+        "name": "chrome.exe",
+        "pid": 3104,
+        "service": "other",
+        "maximumWorkingSetBytes": 165699584,
+        "maximumPrivateBytes": 929374208,
+        "maximumPeakWorkingSetBytes": 789856256
+      },
+      {
+        "name": "chrome.exe",
+        "pid": 23260,
+        "service": "other",
+        "maximumWorkingSetBytes": 56705024,
+        "maximumPrivateBytes": 33099776,
+        "maximumPeakWorkingSetBytes": 97308672
+      },
+      {
+        "name": "chrome.exe",
+        "pid": 14780,
+        "service": "other",
+        "maximumWorkingSetBytes": 21778432,
+        "maximumPrivateBytes": 12959744,
+        "maximumPeakWorkingSetBytes": 39276544
+      },
+      {
+        "name": "ChatGPT.exe",
+        "pid": 16644,
+        "service": "other",
+        "maximumWorkingSetBytes": 426213376,
+        "maximumPrivateBytes": 414126080,
+        "maximumPeakWorkingSetBytes": 528773120
+      },
+      {
+        "name": "ChatGPT.exe",
+        "pid": 12712,
+        "service": "other",
+        "maximumWorkingSetBytes": 43450368,
+        "maximumPrivateBytes": 30957568,
+        "maximumPeakWorkingSetBytes": 88449024
+      },
+      {
+        "name": "ChatGPT.exe",
+        "pid": 17300,
+        "service": "other",
+        "maximumWorkingSetBytes": 21733376,
+        "maximumPrivateBytes": 9883648,
+        "maximumPeakWorkingSetBytes": 23814144
+      },
+      {
+        "name": "chrome.exe",
+        "pid": 22744,
+        "service": "other",
+        "maximumWorkingSetBytes": 40415232,
+        "maximumPrivateBytes": 39612416,
+        "maximumPeakWorkingSetBytes": 71843840
+      },
+      {
+        "name": "chrome.exe",
+        "pid": 29324,
+        "service": "other",
+        "maximumWorkingSetBytes": 49651712,
+        "maximumPrivateBytes": 59674624,
+        "maximumPeakWorkingSetBytes": 112697344
+      },
+      {
+        "name": "chrome.exe",
+        "pid": 17880,
+        "service": "other",
+        "maximumWorkingSetBytes": 674762752,
+        "maximumPrivateBytes": 714121216,
+        "maximumPeakWorkingSetBytes": 1490739200
+      },
+      {
+        "name": "chrome.exe",
+        "pid": 16208,
+        "service": "other",
+        "maximumWorkingSetBytes": 352772096,
+        "maximumPrivateBytes": 512552960,
+        "maximumPeakWorkingSetBytes": 1226870784
+      },
+      {
+        "name": "ChatGPT.exe",
+        "pid": 24980,
+        "service": "other",
+        "maximumWorkingSetBytes": 692760576,
+        "maximumPrivateBytes": 781881344,
+        "maximumPeakWorkingSetBytes": 978530304
+      },
+      {
+        "name": "ChatGPT.exe",
+        "pid": 20256,
+        "service": "other",
+        "maximumWorkingSetBytes": 145494016,
+        "maximumPrivateBytes": 163532800,
+        "maximumPeakWorkingSetBytes": 177225728
+      },
+      {
+        "name": "chrome.exe",
+        "pid": 20880,
+        "service": "other",
+        "maximumWorkingSetBytes": 37335040,
+        "maximumPrivateBytes": 114806784,
+        "maximumPeakWorkingSetBytes": 215887872
+      },
+      {
+        "name": "ChatGPT.exe",
+        "pid": 9240,
+        "service": "other",
+        "maximumWorkingSetBytes": 14024704,
+        "maximumPrivateBytes": 9064448,
+        "maximumPeakWorkingSetBytes": 23633920
+      },
+      {
+        "name": "chrome.exe",
+        "pid": 13684,
+        "service": "other",
+        "maximumWorkingSetBytes": 24752128,
+        "maximumPrivateBytes": 9973760,
+        "maximumPeakWorkingSetBytes": 26333184
+      },
+      {
+        "name": "chrome.exe",
+        "pid": 15456,
+        "service": "other",
+        "maximumWorkingSetBytes": 19611648,
+        "maximumPrivateBytes": 182886400,
+        "maximumPeakWorkingSetBytes": 253042688
+      },
+      {
+        "name": "ChatGPT.exe",
+        "pid": 17628,
+        "service": "other",
+        "maximumWorkingSetBytes": 22478848,
+        "maximumPrivateBytes": 34705408,
+        "maximumPeakWorkingSetBytes": 69795840
+      },
+      {
+        "name": "ChatGPT.exe",
+        "pid": 16580,
+        "service": "other",
+        "maximumWorkingSetBytes": 84041728,
+        "maximumPrivateBytes": 306081792,
+        "maximumPeakWorkingSetBytes": 568209408
+      },
+      {
+        "name": "chrome.exe",
+        "pid": 24376,
+        "service": "other",
+        "maximumWorkingSetBytes": 327524352,
+        "maximumPrivateBytes": 446148608,
+        "maximumPeakWorkingSetBytes": 802758656
+      },
+      {
+        "name": "ChatGPT.exe",
+        "pid": 6024,
+        "service": "other",
+        "maximumWorkingSetBytes": 78118912,
+        "maximumPrivateBytes": 219402240,
+        "maximumPeakWorkingSetBytes": 332296192
+      },
+      {
+        "name": "ChatGPT.exe",
+        "pid": 3124,
+        "service": "other",
+        "maximumWorkingSetBytes": 33751040,
+        "maximumPrivateBytes": 28061696,
+        "maximumPeakWorkingSetBytes": 74850304
+      },
+      {
+        "name": "chrome.exe",
+        "pid": 9432,
+        "service": "other",
+        "maximumWorkingSetBytes": 31944704,
+        "maximumPrivateBytes": 73592832,
+        "maximumPeakWorkingSetBytes": 153915392
+      },
+      {
+        "name": "ChatGPT.exe",
+        "pid": 13980,
+        "service": "other",
+        "maximumWorkingSetBytes": 20914176,
+        "maximumPrivateBytes": 31055872,
+        "maximumPeakWorkingSetBytes": 66060288
+      },
+      {
+        "name": "chrome.exe",
+        "pid": 25268,
+        "service": "other",
+        "maximumWorkingSetBytes": 104230912,
+        "maximumPrivateBytes": 89563136,
+        "maximumPeakWorkingSetBytes": 145870848
+      },
+      {
+        "name": "node.exe",
+        "pid": 19804,
+        "service": "other",
+        "maximumWorkingSetBytes": 13049856,
+        "maximumPrivateBytes": 21549056,
+        "maximumPeakWorkingSetBytes": 54603776
+      },
+      {
+        "name": "node.exe",
+        "pid": 28160,
+        "service": "other",
+        "maximumWorkingSetBytes": 15818752,
+        "maximumPrivateBytes": 117108736,
+        "maximumPeakWorkingSetBytes": 139243520
+      },
+      {
+        "name": "node.exe",
+        "pid": 14724,
+        "service": "other",
+        "maximumWorkingSetBytes": 14094336,
+        "maximumPrivateBytes": 30703616,
+        "maximumPeakWorkingSetBytes": 63217664
+      },
+      {
+        "name": "node.exe",
+        "pid": 19228,
+        "service": "other",
+        "maximumWorkingSetBytes": 18980864,
+        "maximumPrivateBytes": 97054720,
+        "maximumPeakWorkingSetBytes": 170840064
+      },
+      {
+        "name": "node.exe",
+        "pid": 14316,
+        "service": "other",
+        "maximumWorkingSetBytes": 10641408,
+        "maximumPrivateBytes": 89436160,
+        "maximumPeakWorkingSetBytes": 111439872
+      },
+      {
+        "name": "python.exe",
+        "pid": 28940,
+        "service": "api",
+        "maximumWorkingSetBytes": 4231168,
+        "maximumPrivateBytes": 794624,
+        "maximumPeakWorkingSetBytes": 4530176
+      },
+      {
+        "name": "python.exe",
+        "pid": 4928,
+        "service": "api",
+        "maximumWorkingSetBytes": 42885120,
+        "maximumPrivateBytes": 87265280,
+        "maximumPeakWorkingSetBytes": 129953792
+      },
+      {
+        "name": "python.exe",
+        "pid": 22764,
+        "service": "worker",
+        "maximumWorkingSetBytes": 4231168,
+        "maximumPrivateBytes": 794624,
+        "maximumPeakWorkingSetBytes": 4530176
+      },
+      {
+        "name": "python.exe",
+        "pid": 11236,
+        "service": "worker",
+        "maximumWorkingSetBytes": 27926528,
+        "maximumPrivateBytes": 42467328,
+        "maximumPeakWorkingSetBytes": 51441664
+      },
+      {
+        "name": "node.exe",
+        "pid": 27928,
+        "service": "frontend",
+        "maximumWorkingSetBytes": 538132480,
+        "maximumPrivateBytes": 1162117120,
+        "maximumPeakWorkingSetBytes": 647274496
+      },
+      {
+        "name": "node.exe",
+        "pid": 28464,
+        "service": "other",
+        "maximumWorkingSetBytes": 43819008,
+        "maximumPrivateBytes": 78626816,
+        "maximumPeakWorkingSetBytes": 75984896
+      },
+      {
+        "name": "node.exe",
+        "pid": 26200,
+        "service": "other",
+        "maximumWorkingSetBytes": 131190784,
+        "maximumPrivateBytes": 207187968,
+        "maximumPeakWorkingSetBytes": 284356608
+      },
+      {
+        "name": "chrome.exe",
+        "pid": 19428,
+        "service": "other",
+        "maximumWorkingSetBytes": 717815808,
+        "maximumPrivateBytes": 762540032,
+        "maximumPeakWorkingSetBytes": 1177956352
+      },
+      {
+        "name": "chrome.exe",
+        "pid": 20204,
+        "service": "other",
+        "maximumWorkingSetBytes": 64204800,
+        "maximumPrivateBytes": 39739392,
+        "maximumPeakWorkingSetBytes": 79613952
+      },
+      {
+        "name": "chrome.exe",
+        "pid": 19128,
+        "service": "other",
+        "maximumWorkingSetBytes": 173817856,
+        "maximumPrivateBytes": 158433280,
+        "maximumPeakWorkingSetBytes": 412631040
+      },
+      {
+        "name": "chrome.exe",
+        "pid": 23236,
+        "service": "other",
+        "maximumWorkingSetBytes": 517283840,
+        "maximumPrivateBytes": 554651648,
+        "maximumPeakWorkingSetBytes": 1025056768
+      },
+      {
+        "name": "Docker Desktop.exe",
+        "pid": 17596,
+        "service": "other",
+        "maximumWorkingSetBytes": 13983744,
+        "maximumPrivateBytes": 50307072,
+        "maximumPeakWorkingSetBytes": 15757312
+      },
+      {
+        "name": "com.docker.backend.exe",
+        "pid": 4584,
+        "service": "other",
+        "maximumWorkingSetBytes": 62832640,
+        "maximumPrivateBytes": 88739840,
+        "maximumPeakWorkingSetBytes": 69173248
+      },
+      {
+        "name": "com.docker.backend.exe",
+        "pid": 11364,
+        "service": "other",
+        "maximumWorkingSetBytes": 152936448,
+        "maximumPrivateBytes": 157208576,
+        "maximumPeakWorkingSetBytes": 164757504
+      },
+      {
+        "name": "Docker Desktop.exe",
+        "pid": 16228,
+        "service": "other",
+        "maximumWorkingSetBytes": 133181440,
+        "maximumPrivateBytes": 122388480,
+        "maximumPeakWorkingSetBytes": 180781056
+      },
+      {
+        "name": "Docker Desktop.exe",
+        "pid": 30132,
+        "service": "other",
+        "maximumWorkingSetBytes": 22171648,
+        "maximumPrivateBytes": 9990144,
+        "maximumPeakWorkingSetBytes": 35618816
+      },
+      {
+        "name": "Docker Desktop.exe",
+        "pid": 19924,
+        "service": "other",
+        "maximumWorkingSetBytes": 98893824,
+        "maximumPrivateBytes": 101572608,
+        "maximumPeakWorkingSetBytes": 245035008
+      },
+      {
+        "name": "Docker Desktop.exe",
+        "pid": 25364,
+        "service": "other",
+        "maximumWorkingSetBytes": 40505344,
+        "maximumPrivateBytes": 12632064,
+        "maximumPeakWorkingSetBytes": 56864768
+      },
+      {
+        "name": "Docker Desktop.exe",
+        "pid": 29492,
+        "service": "other",
+        "maximumWorkingSetBytes": 157937664,
+        "maximumPrivateBytes": 116146176,
+        "maximumPeakWorkingSetBytes": 282251264
+      },
+      {
+        "name": "vmmemWSL",
+        "pid": 22120,
+        "service": "other",
+        "maximumWorkingSetBytes": 866369536,
+        "maximumPrivateBytes": 1597804544,
+        "maximumPeakWorkingSetBytes": 2140336128
+      },
+      {
+        "name": "node.exe",
+        "pid": 12548,
+        "service": "other",
+        "maximumWorkingSetBytes": 60878848,
+        "maximumPrivateBytes": 21213184,
+        "maximumPeakWorkingSetBytes": 63750144
+      },
+      {
+        "name": "node.exe",
+        "pid": 11000,
+        "service": "other",
+        "maximumWorkingSetBytes": 68435968,
+        "maximumPrivateBytes": 30658560,
+        "maximumPeakWorkingSetBytes": 79593472
+      },
+      {
+        "name": "node.exe",
+        "pid": 1268,
+        "service": "other",
+        "maximumWorkingSetBytes": 122241024,
+        "maximumPrivateBytes": 119894016,
+        "maximumPeakWorkingSetBytes": 157200384
+      },
+      {
+        "name": "node.exe",
+        "pid": 28192,
+        "service": "other",
+        "maximumWorkingSetBytes": 98353152,
+        "maximumPrivateBytes": 98734080,
+        "maximumPeakWorkingSetBytes": 174104576
+      },
+      {
+        "name": "node.exe",
+        "pid": 19172,
+        "service": "other",
+        "maximumWorkingSetBytes": 90976256,
+        "maximumPrivateBytes": 91521024,
+        "maximumPeakWorkingSetBytes": 116817920
+      },
+      {
+        "name": "chrome.exe",
+        "pid": 21884,
+        "service": "other",
+        "maximumWorkingSetBytes": 35524608,
+        "maximumPrivateBytes": 18493440,
+        "maximumPeakWorkingSetBytes": 36818944
+      },
+      {
+        "name": "ChatGPT.exe",
+        "pid": 6548,
+        "service": "other",
+        "maximumWorkingSetBytes": 81600512,
+        "maximumPrivateBytes": 30298112,
+        "maximumPeakWorkingSetBytes": 82419712
+      },
+      {
+        "name": "ChatGPT.exe",
+        "pid": 16496,
+        "service": "other",
+        "maximumWorkingSetBytes": 80924672,
+        "maximumPrivateBytes": 30027776,
+        "maximumPeakWorkingSetBytes": 82444288
+      },
+      {
+        "name": "ChatGPT.exe",
+        "pid": 2700,
+        "service": "other",
+        "maximumWorkingSetBytes": 179089408,
+        "maximumPrivateBytes": 35794944,
+        "maximumPeakWorkingSetBytes": 244727808
+      },
+      {
+        "name": "python.exe",
+        "pid": 13848,
+        "service": "api",
+        "maximumWorkingSetBytes": 4411392,
+        "maximumPrivateBytes": 790528,
+        "maximumPeakWorkingSetBytes": 4440064
+      },
+      {
+        "name": "python.exe",
+        "pid": 16488,
+        "service": "api",
+        "maximumWorkingSetBytes": 62193664,
+        "maximumPrivateBytes": 51105792,
+        "maximumPeakWorkingSetBytes": 63205376
+      },
+      {
+        "name": "python.exe",
+        "pid": 3736,
+        "service": "worker",
+        "maximumWorkingSetBytes": 4411392,
+        "maximumPrivateBytes": 798720,
+        "maximumPeakWorkingSetBytes": 4440064
+      },
+      {
+        "name": "python.exe",
+        "pid": 26736,
+        "service": "worker",
+        "maximumWorkingSetBytes": 73682944,
+        "maximumPrivateBytes": 61784064,
+        "maximumPeakWorkingSetBytes": 118341632
+      },
+      {
+        "name": "node.exe",
+        "pid": 24472,
+        "service": "frontend",
+        "maximumWorkingSetBytes": 98635776,
+        "maximumPrivateBytes": 118984704,
+        "maximumPeakWorkingSetBytes": 102764544
+      },
+      {
+        "name": "ChatGPT.exe",
+        "pid": 24832,
+        "service": "other",
+        "maximumWorkingSetBytes": 648839168,
+        "maximumPrivateBytes": 571768832,
+        "maximumPeakWorkingSetBytes": 650375168
+      },
+      {
+        "name": "ChatGPT.exe",
+        "pid": 328,
+        "service": "other",
+        "maximumWorkingSetBytes": 35487744,
+        "maximumPrivateBytes": 15949824,
+        "maximumPeakWorkingSetBytes": 35495936
+      },
+      {
+        "name": "chrome.exe",
+        "pid": 13424,
+        "service": "other",
+        "maximumWorkingSetBytes": 61890560,
+        "maximumPrivateBytes": 36651008,
+        "maximumPeakWorkingSetBytes": 61968384
+      }
+    ],
+    "dockerStatsAtEnd": [
+      "{\"BlockIO\":\"0B / 0B\",\"CPUPerc\":\"0.00%\",\"Container\":\"af5f68c19008785d15d820556a286d9814114cfb87449d940b126e9fefec3911\",\"ID\":\"af5f68c19008\",\"MemPerc\":\"4.73%\",\"MemUsage\":\"48.4MiB / 1GiB\",\"Name\":\"gsm-map-osrm-hanoi-motorbike\",\"NetIO\":\"371kB / 600kB\",\"PIDs\":\"10\"}",
+      "{\"BlockIO\":\"0B / 0B\",\"CPUPerc\":\"0.00%\",\"Container\":\"343e1ee656e4a30c2645352268b7c22bd9b57d76c9914d88aea767764b6dc1df\",\"ID\":\"343e1ee656e4\",\"MemPerc\":\"3.61%\",\"MemUsage\":\"36.92MiB / 1GiB\",\"Name\":\"gsm-map-osrm-hanoi-car\",\"NetIO\":\"370kB / 609kB\",\"PIDs\":\"10\"}"
+    ],
+    "dockerProbe": null
+  },
+  {
+    "rawFile": "build\\m4-performance\\resume-processes.json",
+    "label": "resume-offline",
+    "samples": 4,
+    "firstAt": "2026-10-18T01:34:09.4926418Z",
+    "lastAt": "2026-10-18T01:34:15.1707906Z",
+    "sampleSpanSeconds": 5.678149,
+    "requestedSeconds": 5,
+    "totalPhysicalGiB": 15.784477233886719,
+    "minimumAvailableGiB": 7.7357635498046875,
+    "maximumCommittedGiB": 8.879070281982422,
+    "minimumCommitHeadroomGiB": 15.129249572753906,
+    "firstCommitLimitGiB": 24.008319854736328,
+    "maximumCpuPercent": 40,
+    "maximumPageReadsPerSecond": 7,
+    "maximumPagesInputPerSecond": 7,
+    "firstPagefiles": [
+      {
+        "AllocatedBaseSize": 8421,
+        "CurrentUsage": 100,
+        "PeakUsage": 2793
+      }
+    ],
+    "processPeaks": [
+      {
+        "name": "ChatGPT.exe",
+        "pid": 9728,
+        "service": "other",
+        "maximumWorkingSetBytes": 479170560,
+        "maximumPrivateBytes": 386621440,
+        "maximumPeakWorkingSetBytes": 1454510080
+      },
+      {
+        "name": "ChatGPT.exe",
+        "pid": 17772,
+        "service": "other",
+        "maximumWorkingSetBytes": 12079104,
+        "maximumPrivateBytes": 2666496,
+        "maximumPeakWorkingSetBytes": 12173312
+      },
+      {
+        "name": "ChatGPT.exe",
+        "pid": 17592,
+        "service": "other",
+        "maximumWorkingSetBytes": 9560064,
+        "maximumPrivateBytes": 2220032,
+        "maximumPeakWorkingSetBytes": 9662464
+      },
+      {
+        "name": "ChatGPT.exe",
+        "pid": 4484,
+        "service": "other",
+        "maximumWorkingSetBytes": 226906112,
+        "maximumPrivateBytes": 201932800,
+        "maximumPeakWorkingSetBytes": 371429376
+      },
+      {
+        "name": "ChatGPT.exe",
+        "pid": 17348,
+        "service": "other",
+        "maximumWorkingSetBytes": 68665344,
+        "maximumPrivateBytes": 35758080,
+        "maximumPeakWorkingSetBytes": 83689472
+      },
+      {
+        "name": "ChatGPT.exe",
+        "pid": 27224,
+        "service": "other",
+        "maximumWorkingSetBytes": 22917120,
+        "maximumPrivateBytes": 9539584,
+        "maximumPeakWorkingSetBytes": 23674880
+      },
+      {
+        "name": "ChatGPT.exe",
+        "pid": 24260,
+        "service": "other",
+        "maximumWorkingSetBytes": 656265216,
+        "maximumPrivateBytes": 593932288,
+        "maximumPeakWorkingSetBytes": 833224704
+      },
+      {
+        "name": "ChatGPT.exe",
+        "pid": 13732,
+        "service": "other",
+        "maximumWorkingSetBytes": 131911680,
+        "maximumPrivateBytes": 84365312,
+        "maximumPeakWorkingSetBytes": 156516352
+      },
+      {
+        "name": "ChatGPT.exe",
+        "pid": 27248,
+        "service": "other",
+        "maximumWorkingSetBytes": 23351296,
+        "maximumPrivateBytes": 8835072,
+        "maximumPeakWorkingSetBytes": 23425024
+      },
+      {
+        "name": "ChatGPT.exe",
+        "pid": 23948,
+        "service": "other",
+        "maximumWorkingSetBytes": 67690496,
+        "maximumPrivateBytes": 30572544,
+        "maximumPeakWorkingSetBytes": 68485120
+      },
+      {
+        "name": "ChatGPT.exe",
+        "pid": 20944,
+        "service": "other",
+        "maximumWorkingSetBytes": 73367552,
+        "maximumPrivateBytes": 28585984,
+        "maximumPeakWorkingSetBytes": 76800000
+      },
+      {
+        "name": "ChatGPT.exe",
+        "pid": 11288,
+        "service": "other",
+        "maximumWorkingSetBytes": 351571968,
+        "maximumPrivateBytes": 296054784,
+        "maximumPeakWorkingSetBytes": 551424000
+      },
+      {
+        "name": "ChatGPT.exe",
+        "pid": 24288,
+        "service": "other",
+        "maximumWorkingSetBytes": 260608000,
+        "maximumPrivateBytes": 190025728,
+        "maximumPeakWorkingSetBytes": 304320512
+      },
+      {
+        "name": "ChatGPT.exe",
+        "pid": 20868,
+        "service": "other",
+        "maximumWorkingSetBytes": 66768896,
+        "maximumPrivateBytes": 25743360,
+        "maximumPeakWorkingSetBytes": 73940992
+      },
+      {
+        "name": "node.exe",
+        "pid": 19100,
+        "service": "other",
+        "maximumWorkingSetBytes": 44802048,
+        "maximumPrivateBytes": 21577728,
+        "maximumPeakWorkingSetBytes": 47501312
+      },
+      {
+        "name": "node.exe",
+        "pid": 9876,
+        "service": "other",
+        "maximumWorkingSetBytes": 51642368,
+        "maximumPrivateBytes": 29913088,
+        "maximumPeakWorkingSetBytes": 62763008
+      },
+      {
+        "name": "node.exe",
+        "pid": 21488,
+        "service": "other",
+        "maximumWorkingSetBytes": 104980480,
+        "maximumPrivateBytes": 118673408,
+        "maximumPeakWorkingSetBytes": 139886592
+      },
+      {
+        "name": "node.exe",
+        "pid": 15884,
+        "service": "other",
+        "maximumWorkingSetBytes": 90533888,
+        "maximumPrivateBytes": 96743424,
+        "maximumPeakWorkingSetBytes": 166498304
+      },
+      {
+        "name": "node.exe",
+        "pid": 22164,
+        "service": "other",
+        "maximumWorkingSetBytes": 87027712,
+        "maximumPrivateBytes": 90218496,
+        "maximumPeakWorkingSetBytes": 111050752
+      },
+      {
+        "name": "ChatGPT.exe",
+        "pid": 30524,
+        "service": "other",
+        "maximumWorkingSetBytes": 61227008,
+        "maximumPrivateBytes": 24920064,
+        "maximumPeakWorkingSetBytes": 61976576
+      },
+      {
+        "name": "ChatGPT.exe",
+        "pid": 26452,
+        "service": "other",
+        "maximumWorkingSetBytes": 33427456,
+        "maximumPrivateBytes": 16060416,
+        "maximumPeakWorkingSetBytes": 35749888
+      },
+      {
+        "name": "node.exe",
+        "pid": 28572,
+        "service": "other",
+        "maximumWorkingSetBytes": 45346816,
+        "maximumPrivateBytes": 21663744,
+        "maximumPeakWorkingSetBytes": 47554560
+      },
+      {
+        "name": "node.exe",
+        "pid": 20144,
+        "service": "other",
+        "maximumWorkingSetBytes": 52899840,
+        "maximumPrivateBytes": 30224384,
+        "maximumPeakWorkingSetBytes": 63299584
+      },
+      {
+        "name": "node.exe",
+        "pid": 21664,
+        "service": "other",
+        "maximumWorkingSetBytes": 105385984,
+        "maximumPrivateBytes": 118587392,
+        "maximumPeakWorkingSetBytes": 140546048
+      },
+      {
+        "name": "node.exe",
+        "pid": 1820,
+        "service": "other",
+        "maximumWorkingSetBytes": 94621696,
+        "maximumPrivateBytes": 96837632,
+        "maximumPeakWorkingSetBytes": 160153600
+      },
+      {
+        "name": "node.exe",
+        "pid": 10928,
+        "service": "other",
+        "maximumWorkingSetBytes": 87433216,
+        "maximumPrivateBytes": 90828800,
+        "maximumPeakWorkingSetBytes": 112054272
+      }
+    ],
+    "dockerStatsAtEnd": [],
+    "dockerProbe": null
+  },
+  {
+    "rawFile": "build\\m4-performance\\docker-failure-processes.json",
+    "label": "docker-startup-failed",
+    "samples": 1,
+    "firstAt": "2026-10-18T01:46:40.1838630Z",
+    "lastAt": "2026-10-18T01:46:40.1838630Z",
+    "sampleSpanSeconds": 0.0,
+    "requestedSeconds": 1,
+    "totalPhysicalGiB": 15.784477233886719,
+    "minimumAvailableGiB": 6.727928161621094,
+    "maximumCommittedGiB": 10.555793762207031,
+    "minimumCommitHeadroomGiB": 13.452526092529297,
+    "firstCommitLimitGiB": 24.008319854736328,
+    "maximumCpuPercent": 8,
+    "maximumPageReadsPerSecond": 0,
+    "maximumPagesInputPerSecond": 0,
+    "firstPagefiles": [
+      {
+        "AllocatedBaseSize": 8421,
+        "CurrentUsage": 134,
+        "PeakUsage": 2793
+      }
+    ],
+    "processPeaks": [
+      {
+        "name": "ChatGPT.exe",
+        "pid": 9728,
+        "service": "other",
+        "maximumWorkingSetBytes": 474079232,
+        "maximumPrivateBytes": 382042112,
+        "maximumPeakWorkingSetBytes": 1454510080
+      },
+      {
+        "name": "ChatGPT.exe",
+        "pid": 17772,
+        "service": "other",
+        "maximumWorkingSetBytes": 12255232,
+        "maximumPrivateBytes": 2670592,
+        "maximumPeakWorkingSetBytes": 12419072
+      },
+      {
+        "name": "ChatGPT.exe",
+        "pid": 17592,
+        "service": "other",
+        "maximumWorkingSetBytes": 9748480,
+        "maximumPrivateBytes": 2260992,
+        "maximumPeakWorkingSetBytes": 9814016
+      },
+      {
+        "name": "ChatGPT.exe",
+        "pid": 4484,
+        "service": "other",
+        "maximumWorkingSetBytes": 290230272,
+        "maximumPrivateBytes": 264306688,
+        "maximumPeakWorkingSetBytes": 371429376
+      },
+      {
+        "name": "ChatGPT.exe",
+        "pid": 17348,
+        "service": "other",
+        "maximumWorkingSetBytes": 69431296,
+        "maximumPrivateBytes": 35532800,
+        "maximumPeakWorkingSetBytes": 83689472
+      },
+      {
+        "name": "ChatGPT.exe",
+        "pid": 27224,
+        "service": "other",
+        "maximumWorkingSetBytes": 23638016,
+        "maximumPrivateBytes": 9707520,
+        "maximumPeakWorkingSetBytes": 23814144
+      },
+      {
+        "name": "ChatGPT.exe",
+        "pid": 24260,
+        "service": "other",
+        "maximumWorkingSetBytes": 738877440,
+        "maximumPrivateBytes": 672059392,
+        "maximumPeakWorkingSetBytes": 833224704
+      },
+      {
+        "name": "ChatGPT.exe",
+        "pid": 13732,
+        "service": "other",
+        "maximumWorkingSetBytes": 133763072,
+        "maximumPrivateBytes": 85991424,
+        "maximumPeakWorkingSetBytes": 156516352
+      },
+      {
+        "name": "ChatGPT.exe",
+        "pid": 27248,
+        "service": "other",
+        "maximumWorkingSetBytes": 23842816,
+        "maximumPrivateBytes": 8916992,
+        "maximumPeakWorkingSetBytes": 23945216
+      },
+      {
+        "name": "ChatGPT.exe",
+        "pid": 23948,
+        "service": "other",
+        "maximumWorkingSetBytes": 66748416,
+        "maximumPrivateBytes": 31055872,
+        "maximumPeakWorkingSetBytes": 68485120
+      },
+      {
+        "name": "ChatGPT.exe",
+        "pid": 20944,
+        "service": "other",
+        "maximumWorkingSetBytes": 73273344,
+        "maximumPrivateBytes": 27693056,
+        "maximumPeakWorkingSetBytes": 76800000
+      },
+      {
+        "name": "ChatGPT.exe",
+        "pid": 11288,
+        "service": "other",
+        "maximumWorkingSetBytes": 360439808,
+        "maximumPrivateBytes": 305819648,
+        "maximumPeakWorkingSetBytes": 551424000
+      },
+      {
+        "name": "ChatGPT.exe",
+        "pid": 24288,
+        "service": "other",
+        "maximumWorkingSetBytes": 262443008,
+        "maximumPrivateBytes": 193683456,
+        "maximumPeakWorkingSetBytes": 304320512
+      },
+      {
+        "name": "ChatGPT.exe",
+        "pid": 20868,
+        "service": "other",
+        "maximumWorkingSetBytes": 66379776,
+        "maximumPrivateBytes": 25661440,
+        "maximumPeakWorkingSetBytes": 73940992
+      },
+      {
+        "name": "node.exe",
+        "pid": 19100,
+        "service": "other",
+        "maximumWorkingSetBytes": 44892160,
+        "maximumPrivateBytes": 21577728,
+        "maximumPeakWorkingSetBytes": 47501312
+      },
+      {
+        "name": "node.exe",
+        "pid": 9876,
+        "service": "other",
+        "maximumWorkingSetBytes": 51732480,
+        "maximumPrivateBytes": 29913088,
+        "maximumPeakWorkingSetBytes": 62763008
+      },
+      {
+        "name": "node.exe",
+        "pid": 21488,
+        "service": "other",
+        "maximumWorkingSetBytes": 104873984,
+        "maximumPrivateBytes": 118673408,
+        "maximumPeakWorkingSetBytes": 139886592
+      },
+      {
+        "name": "node.exe",
+        "pid": 15884,
+        "service": "other",
+        "maximumWorkingSetBytes": 90390528,
+        "maximumPrivateBytes": 96870400,
+        "maximumPeakWorkingSetBytes": 166498304
+      },
+      {
+        "name": "node.exe",
+        "pid": 22164,
+        "service": "other",
+        "maximumWorkingSetBytes": 86933504,
+        "maximumPrivateBytes": 90218496,
+        "maximumPeakWorkingSetBytes": 111050752
+      },
+      {
+        "name": "ChatGPT.exe",
+        "pid": 30524,
+        "service": "other",
+        "maximumWorkingSetBytes": 60628992,
+        "maximumPrivateBytes": 25341952,
+        "maximumPeakWorkingSetBytes": 61976576
+      },
+      {
+        "name": "node.exe",
+        "pid": 28572,
+        "service": "other",
+        "maximumWorkingSetBytes": 44965888,
+        "maximumPrivateBytes": 21663744,
+        "maximumPeakWorkingSetBytes": 47554560
+      },
+      {
+        "name": "node.exe",
+        "pid": 20144,
+        "service": "other",
+        "maximumWorkingSetBytes": 52301824,
+        "maximumPrivateBytes": 30224384,
+        "maximumPeakWorkingSetBytes": 63299584
+      },
+      {
+        "name": "node.exe",
+        "pid": 21664,
+        "service": "other",
+        "maximumWorkingSetBytes": 104603648,
+        "maximumPrivateBytes": 118587392,
+        "maximumPeakWorkingSetBytes": 140546048
+      },
+      {
+        "name": "node.exe",
+        "pid": 1820,
+        "service": "other",
+        "maximumWorkingSetBytes": 93761536,
+        "maximumPrivateBytes": 96837632,
+        "maximumPeakWorkingSetBytes": 160153600
+      },
+      {
+        "name": "node.exe",
+        "pid": 10928,
+        "service": "other",
+        "maximumWorkingSetBytes": 86802432,
+        "maximumPrivateBytes": 90828800,
+        "maximumPeakWorkingSetBytes": 112054272
+      },
+      {
+        "name": "node.exe",
+        "pid": 7124,
+        "service": "other",
+        "maximumWorkingSetBytes": 60264448,
+        "maximumPrivateBytes": 66768896,
+        "maximumPeakWorkingSetBytes": 64708608
+      },
+      {
+        "name": "node.exe",
+        "pid": 21464,
+        "service": "other",
+        "maximumWorkingSetBytes": 176222208,
+        "maximumPrivateBytes": 183922688,
+        "maximumPeakWorkingSetBytes": 311726080
+      },
+      {
+        "name": "ChatGPT.exe",
+        "pid": 26784,
+        "service": "other",
+        "maximumWorkingSetBytes": 364793856,
+        "maximumPrivateBytes": 290164736,
+        "maximumPeakWorkingSetBytes": 627965952
+      },
+      {
+        "name": "ChatGPT.exe",
+        "pid": 10988,
+        "service": "other",
+        "maximumWorkingSetBytes": 34828288,
+        "maximumPrivateBytes": 15892480,
+        "maximumPeakWorkingSetBytes": 34881536
+      },
+      {
+        "name": "python.exe",
+        "pid": 15824,
+        "service": "api",
+        "maximumWorkingSetBytes": 4538368,
+        "maximumPrivateBytes": 860160,
+        "maximumPeakWorkingSetBytes": 4575232
+      },
+      {
+        "name": "python.exe",
+        "pid": 20328,
+        "service": "api",
+        "maximumWorkingSetBytes": 59371520,
+        "maximumPrivateBytes": 47165440,
+        "maximumPeakWorkingSetBytes": 60170240
+      },
+      {
+        "name": "python.exe",
+        "pid": 29656,
+        "service": "worker",
+        "maximumWorkingSetBytes": 4489216,
+        "maximumPrivateBytes": 786432,
+        "maximumPeakWorkingSetBytes": 4526080
+      },
+      {
+        "name": "python.exe",
+        "pid": 27028,
+        "service": "worker",
+        "maximumWorkingSetBytes": 48590848,
+        "maximumPrivateBytes": 37572608,
+        "maximumPeakWorkingSetBytes": 48623616
+      },
+      {
+        "name": "node.exe",
+        "pid": 13956,
+        "service": "frontend",
+        "maximumWorkingSetBytes": 92078080,
+        "maximumPrivateBytes": 114524160,
+        "maximumPeakWorkingSetBytes": 100167680
+      },
+      {
+        "name": "Docker Desktop.exe",
+        "pid": 11860,
+        "service": "other",
+        "maximumWorkingSetBytes": 17883136,
+        "maximumPrivateBytes": 52527104,
+        "maximumPeakWorkingSetBytes": 17883136
+      },
+      {
+        "name": "com.docker.backend.exe",
+        "pid": 16224,
+        "service": "other",
+        "maximumWorkingSetBytes": 67825664,
+        "maximumPrivateBytes": 89464832,
+        "maximumPeakWorkingSetBytes": 67891200
+      },
+      {
+        "name": "com.docker.backend.exe",
+        "pid": 11204,
+        "service": "other",
+        "maximumWorkingSetBytes": 102477824,
+        "maximumPrivateBytes": 110571520,
+        "maximumPeakWorkingSetBytes": 108978176
+      },
+      {
+        "name": "Docker Desktop.exe",
+        "pid": 9236,
+        "service": "other",
+        "maximumWorkingSetBytes": 124112896,
+        "maximumPrivateBytes": 90337280,
+        "maximumPeakWorkingSetBytes": 144855040
+      },
+      {
+        "name": "Docker Desktop.exe",
+        "pid": 26356,
+        "service": "other",
+        "maximumWorkingSetBytes": 35405824,
+        "maximumPrivateBytes": 9859072,
+        "maximumPeakWorkingSetBytes": 35442688
+      },
+      {
+        "name": "Docker Desktop.exe",
+        "pid": 3164,
+        "service": "other",
+        "maximumWorkingSetBytes": 129056768,
+        "maximumPrivateBytes": 83574784,
+        "maximumPeakWorkingSetBytes": 241594368
+      },
+      {
+        "name": "Docker Desktop.exe",
+        "pid": 7532,
+        "service": "other",
+        "maximumWorkingSetBytes": 50786304,
+        "maximumPrivateBytes": 12627968,
+        "maximumPeakWorkingSetBytes": 51023872
+      },
+      {
+        "name": "Docker Desktop.exe",
+        "pid": 29792,
+        "service": "other",
+        "maximumWorkingSetBytes": 122204160,
+        "maximumPrivateBytes": 60514304,
+        "maximumPeakWorkingSetBytes": 139935744
+      }
+    ],
+    "dockerStatsAtEnd": [],
+    "dockerProbe": {
+      "stdout": "",
+      "timedOut": true,
+      "stderr": "Docker stats probe exceeded 8000 ms; inspect Docker Desktop startup.",
+      "exitCode": -1
+    }
+  },
+  {
+    "rawFile": "build\\m4-performance\\resume-large-processes.json",
+    "label": "resume-live-large",
+    "samples": 50,
+    "firstAt": "2026-10-18T01:49:02.9970465Z",
+    "lastAt": "2026-10-18T01:50:43.3417565Z",
+    "sampleSpanSeconds": 100.34471,
+    "requestedSeconds": 100,
+    "totalPhysicalGiB": 15.784477233886719,
+    "minimumAvailableGiB": 3.5946273803710938,
+    "maximumCommittedGiB": 14.105907440185547,
+    "minimumCommitHeadroomGiB": 9.902412414550781,
+    "firstCommitLimitGiB": 24.008319854736328,
+    "maximumCpuPercent": 65,
+    "maximumPageReadsPerSecond": 117,
+    "maximumPagesInputPerSecond": 760,
+    "firstPagefiles": [
+      {
+        "AllocatedBaseSize": 8421,
+        "CurrentUsage": 139,
+        "PeakUsage": 2793
+      }
+    ],
+    "processPeaks": [
+      {
+        "name": "ChatGPT.exe",
+        "pid": 9728,
+        "service": "other",
+        "maximumWorkingSetBytes": 507052032,
+        "maximumPrivateBytes": 409370624,
+        "maximumPeakWorkingSetBytes": 1454510080
+      },
+      {
+        "name": "ChatGPT.exe",
+        "pid": 17772,
+        "service": "other",
+        "maximumWorkingSetBytes": 12242944,
+        "maximumPrivateBytes": 2670592,
+        "maximumPeakWorkingSetBytes": 12419072
+      },
+      {
+        "name": "ChatGPT.exe",
+        "pid": 17592,
+        "service": "other",
+        "maximumWorkingSetBytes": 9740288,
+        "maximumPrivateBytes": 2265088,
+        "maximumPeakWorkingSetBytes": 9814016
+      },
+      {
+        "name": "ChatGPT.exe",
+        "pid": 4484,
+        "service": "other",
+        "maximumWorkingSetBytes": 434634752,
+        "maximumPrivateBytes": 399990784,
+        "maximumPeakWorkingSetBytes": 434634752
+      },
+      {
+        "name": "ChatGPT.exe",
+        "pid": 17348,
+        "service": "other",
+        "maximumWorkingSetBytes": 69890048,
+        "maximumPrivateBytes": 35880960,
+        "maximumPeakWorkingSetBytes": 83689472
+      },
+      {
+        "name": "ChatGPT.exe",
+        "pid": 27224,
+        "service": "other",
+        "maximumWorkingSetBytes": 23601152,
+        "maximumPrivateBytes": 9707520,
+        "maximumPeakWorkingSetBytes": 23814144
+      },
+      {
+        "name": "ChatGPT.exe",
+        "pid": 24260,
+        "service": "other",
+        "maximumWorkingSetBytes": 775127040,
+        "maximumPrivateBytes": 709898240,
+        "maximumPeakWorkingSetBytes": 833224704
+      },
+      {
+        "name": "ChatGPT.exe",
+        "pid": 13732,
+        "service": "other",
+        "maximumWorkingSetBytes": 152539136,
+        "maximumPrivateBytes": 105050112,
+        "maximumPeakWorkingSetBytes": 159936512
+      },
+      {
+        "name": "ChatGPT.exe",
+        "pid": 27248,
+        "service": "other",
+        "maximumWorkingSetBytes": 23826432,
+        "maximumPrivateBytes": 8921088,
+        "maximumPeakWorkingSetBytes": 23945216
+      },
+      {
+        "name": "ChatGPT.exe",
+        "pid": 23948,
+        "service": "other",
+        "maximumWorkingSetBytes": 66674688,
+        "maximumPrivateBytes": 31350784,
+        "maximumPeakWorkingSetBytes": 68485120
+      },
+      {
+        "name": "ChatGPT.exe",
+        "pid": 20944,
+        "service": "other",
+        "maximumWorkingSetBytes": 73203712,
+        "maximumPrivateBytes": 27959296,
+        "maximumPeakWorkingSetBytes": 76800000
+      },
+      {
+        "name": "ChatGPT.exe",
+        "pid": 11288,
+        "service": "other",
+        "maximumWorkingSetBytes": 362303488,
+        "maximumPrivateBytes": 307544064,
+        "maximumPeakWorkingSetBytes": 551424000
+      },
+      {
+        "name": "ChatGPT.exe",
+        "pid": 24288,
+        "service": "other",
+        "maximumWorkingSetBytes": 266031104,
+        "maximumPrivateBytes": 195452928,
+        "maximumPeakWorkingSetBytes": 304320512
+      },
+      {
+        "name": "ChatGPT.exe",
+        "pid": 20868,
+        "service": "other",
+        "maximumWorkingSetBytes": 65490944,
+        "maximumPrivateBytes": 25047040,
+        "maximumPeakWorkingSetBytes": 73940992
+      },
+      {
+        "name": "node.exe",
+        "pid": 19100,
+        "service": "other",
+        "maximumWorkingSetBytes": 44826624,
+        "maximumPrivateBytes": 21577728,
+        "maximumPeakWorkingSetBytes": 47501312
+      },
+      {
+        "name": "node.exe",
+        "pid": 9876,
+        "service": "other",
+        "maximumWorkingSetBytes": 51666944,
+        "maximumPrivateBytes": 29913088,
+        "maximumPeakWorkingSetBytes": 62763008
+      },
+      {
+        "name": "node.exe",
+        "pid": 21488,
+        "service": "other",
+        "maximumWorkingSetBytes": 104808448,
+        "maximumPrivateBytes": 118673408,
+        "maximumPeakWorkingSetBytes": 139886592
+      },
+      {
+        "name": "node.exe",
+        "pid": 15884,
+        "service": "other",
+        "maximumWorkingSetBytes": 90333184,
+        "maximumPrivateBytes": 96870400,
+        "maximumPeakWorkingSetBytes": 166498304
+      },
+      {
+        "name": "node.exe",
+        "pid": 22164,
+        "service": "other",
+        "maximumWorkingSetBytes": 86872064,
+        "maximumPrivateBytes": 90218496,
+        "maximumPeakWorkingSetBytes": 111050752
+      },
+      {
+        "name": "ChatGPT.exe",
+        "pid": 30524,
+        "service": "other",
+        "maximumWorkingSetBytes": 60592128,
+        "maximumPrivateBytes": 25341952,
+        "maximumPeakWorkingSetBytes": 61976576
+      },
+      {
+        "name": "node.exe",
+        "pid": 28572,
+        "service": "other",
+        "maximumWorkingSetBytes": 44900352,
+        "maximumPrivateBytes": 21663744,
+        "maximumPeakWorkingSetBytes": 47554560
+      },
+      {
+        "name": "node.exe",
+        "pid": 20144,
+        "service": "other",
+        "maximumWorkingSetBytes": 52236288,
+        "maximumPrivateBytes": 30224384,
+        "maximumPeakWorkingSetBytes": 63299584
+      },
+      {
+        "name": "node.exe",
+        "pid": 21664,
+        "service": "other",
+        "maximumWorkingSetBytes": 104538112,
+        "maximumPrivateBytes": 118587392,
+        "maximumPeakWorkingSetBytes": 140546048
+      },
+      {
+        "name": "node.exe",
+        "pid": 1820,
+        "service": "other",
+        "maximumWorkingSetBytes": 93700096,
+        "maximumPrivateBytes": 96837632,
+        "maximumPeakWorkingSetBytes": 160153600
+      },
+      {
+        "name": "node.exe",
+        "pid": 10928,
+        "service": "other",
+        "maximumWorkingSetBytes": 86740992,
+        "maximumPrivateBytes": 90828800,
+        "maximumPeakWorkingSetBytes": 112054272
+      },
+      {
+        "name": "node.exe",
+        "pid": 7124,
+        "service": "other",
+        "maximumWorkingSetBytes": 60198912,
+        "maximumPrivateBytes": 66768896,
+        "maximumPeakWorkingSetBytes": 64708608
+      },
+      {
+        "name": "node.exe",
+        "pid": 21464,
+        "service": "other",
+        "maximumWorkingSetBytes": 176152576,
+        "maximumPrivateBytes": 183922688,
+        "maximumPeakWorkingSetBytes": 311726080
+      },
+      {
+        "name": "ChatGPT.exe",
+        "pid": 26784,
+        "service": "other",
+        "maximumWorkingSetBytes": 582701056,
+        "maximumPrivateBytes": 535883776,
+        "maximumPeakWorkingSetBytes": 627965952
+      },
+      {
+        "name": "ChatGPT.exe",
+        "pid": 10988,
+        "service": "other",
+        "maximumWorkingSetBytes": 34705408,
+        "maximumPrivateBytes": 15863808,
+        "maximumPeakWorkingSetBytes": 34881536
+      },
+      {
+        "name": "python.exe",
+        "pid": 15824,
+        "service": "api",
+        "maximumWorkingSetBytes": 4538368,
+        "maximumPrivateBytes": 860160,
+        "maximumPeakWorkingSetBytes": 4575232
+      },
+      {
+        "name": "python.exe",
+        "pid": 20328,
+        "service": "api",
+        "maximumWorkingSetBytes": 63565824,
+        "maximumPrivateBytes": 50712576,
+        "maximumPeakWorkingSetBytes": 63565824
+      },
+      {
+        "name": "python.exe",
+        "pid": 29656,
+        "service": "worker",
+        "maximumWorkingSetBytes": 4489216,
+        "maximumPrivateBytes": 786432,
+        "maximumPeakWorkingSetBytes": 4526080
+      },
+      {
+        "name": "python.exe",
+        "pid": 27028,
+        "service": "worker",
+        "maximumWorkingSetBytes": 48594944,
+        "maximumPrivateBytes": 37601280,
+        "maximumPeakWorkingSetBytes": 48623616
+      },
+      {
+        "name": "node.exe",
+        "pid": 13956,
+        "service": "frontend",
+        "maximumWorkingSetBytes": 92561408,
+        "maximumPrivateBytes": 115068928,
+        "maximumPeakWorkingSetBytes": 100167680
+      },
+      {
+        "name": "node.exe",
+        "pid": 10192,
+        "service": "other",
+        "maximumWorkingSetBytes": 53403648,
+        "maximumPrivateBytes": 21520384,
+        "maximumPeakWorkingSetBytes": 55537664
+      },
+      {
+        "name": "node.exe",
+        "pid": 15832,
+        "service": "other",
+        "maximumWorkingSetBytes": 114032640,
+        "maximumPrivateBytes": 119078912,
+        "maximumPeakWorkingSetBytes": 147755008
+      },
+      {
+        "name": "node.exe",
+        "pid": 18952,
+        "service": "other",
+        "maximumWorkingSetBytes": 60850176,
+        "maximumPrivateBytes": 30269440,
+        "maximumPeakWorkingSetBytes": 71266304
+      },
+      {
+        "name": "node.exe",
+        "pid": 27896,
+        "service": "other",
+        "maximumWorkingSetBytes": 95145984,
+        "maximumPrivateBytes": 96501760,
+        "maximumPeakWorkingSetBytes": 160866304
+      },
+      {
+        "name": "node.exe",
+        "pid": 18040,
+        "service": "other",
+        "maximumWorkingSetBytes": 88133632,
+        "maximumPrivateBytes": 89280512,
+        "maximumPeakWorkingSetBytes": 112676864
+      },
+      {
+        "name": "Docker Desktop.exe",
+        "pid": 20640,
+        "service": "other",
+        "maximumWorkingSetBytes": 15888384,
+        "maximumPrivateBytes": 50982912,
+        "maximumPeakWorkingSetBytes": 15900672
+      },
+      {
+        "name": "com.docker.backend.exe",
+        "pid": 29020,
+        "service": "other",
+        "maximumWorkingSetBytes": 68501504,
+        "maximumPrivateBytes": 90296320,
+        "maximumPeakWorkingSetBytes": 68501504
+      },
+      {
+        "name": "com.docker.backend.exe",
+        "pid": 19396,
+        "service": "other",
+        "maximumWorkingSetBytes": 154312704,
+        "maximumPrivateBytes": 149065728,
+        "maximumPeakWorkingSetBytes": 155287552
+      },
+      {
+        "name": "Docker Desktop.exe",
+        "pid": 6916,
+        "service": "other",
+        "maximumWorkingSetBytes": 152465408,
+        "maximumPrivateBytes": 115044352,
+        "maximumPeakWorkingSetBytes": 179625984
+      },
+      {
+        "name": "Docker Desktop.exe",
+        "pid": 26888,
+        "service": "other",
+        "maximumWorkingSetBytes": 35385344,
+        "maximumPrivateBytes": 9830400,
+        "maximumPeakWorkingSetBytes": 35483648
+      },
+      {
+        "name": "Docker Desktop.exe",
+        "pid": 23320,
+        "service": "other",
+        "maximumWorkingSetBytes": 159764480,
+        "maximumPrivateBytes": 110661632,
+        "maximumPeakWorkingSetBytes": 244969472
+      },
+      {
+        "name": "Docker Desktop.exe",
+        "pid": 5564,
+        "service": "other",
+        "maximumWorkingSetBytes": 57679872,
+        "maximumPrivateBytes": 12578816,
+        "maximumPeakWorkingSetBytes": 57876480
+      },
+      {
+        "name": "Docker Desktop.exe",
+        "pid": 26412,
+        "service": "other",
+        "maximumWorkingSetBytes": 183332864,
+        "maximumPrivateBytes": 112496640,
+        "maximumPeakWorkingSetBytes": 266383360
+      },
+      {
+        "name": "vmmemWSL",
+        "pid": 11632,
+        "service": "other",
+        "maximumWorkingSetBytes": 2051031040,
+        "maximumPrivateBytes": 2089512960,
+        "maximumPeakWorkingSetBytes": 2051489792
+      },
+      {
+        "name": "python.exe",
+        "pid": 25436,
+        "service": "profiler",
+        "maximumWorkingSetBytes": 4435968,
+        "maximumPrivateBytes": 851968,
+        "maximumPeakWorkingSetBytes": 4435968
+      },
+      {
+        "name": "python.exe",
+        "pid": 12716,
+        "service": "profiler",
+        "maximumWorkingSetBytes": 75268096,
+        "maximumPrivateBytes": 62558208,
+        "maximumPeakWorkingSetBytes": 119652352
+      },
+      {
+        "name": "python.exe",
+        "pid": 12716,
+        "service": "other",
+        "maximumWorkingSetBytes": 72355840,
+        "maximumPrivateBytes": 58867712,
+        "maximumPeakWorkingSetBytes": 119652352
+      },
+      {
+        "name": "python.exe",
+        "pid": 16640,
+        "service": "other",
+        "maximumWorkingSetBytes": 4431872,
+        "maximumPrivateBytes": 847872,
+        "maximumPeakWorkingSetBytes": 4431872
+      },
+      {
+        "name": "python.exe",
+        "pid": 13684,
+        "service": "other",
+        "maximumWorkingSetBytes": 68583424,
+        "maximumPrivateBytes": 57163776,
+        "maximumPeakWorkingSetBytes": 75833344
+      },
+      {
+        "name": "python.exe",
+        "pid": 25704,
+        "service": "other",
+        "maximumWorkingSetBytes": 4435968,
+        "maximumPrivateBytes": 851968,
+        "maximumPeakWorkingSetBytes": 4435968
+      },
+      {
+        "name": "python.exe",
+        "pid": 18872,
+        "service": "other",
+        "maximumWorkingSetBytes": 71733248,
+        "maximumPrivateBytes": 60338176,
+        "maximumPeakWorkingSetBytes": 74891264
+      }
+    ],
+    "dockerStatsAtEnd": [
+      "{\"BlockIO\":\"0B / 0B\",\"CPUPerc\":\"0.00%\",\"Container\":\"af5f68c19008785d15d820556a286d9814114cfb87449d940b126e9fefec3911\",\"ID\":\"af5f68c19008\",\"MemPerc\":\"4.54%\",\"MemUsage\":\"46.5MiB / 1GiB\",\"Name\":\"gsm-map-osrm-hanoi-motorbike\",\"NetIO\":\"226kB / 361kB\",\"PIDs\":\"10\"}",
+      "{\"BlockIO\":\"0B / 0B\",\"CPUPerc\":\"0.00%\",\"Container\":\"343e1ee656e4a30c2645352268b7c22bd9b57d76c9914d88aea767764b6dc1df\",\"ID\":\"343e1ee656e4\",\"MemPerc\":\"3.58%\",\"MemUsage\":\"36.71MiB / 1GiB\",\"Name\":\"gsm-map-osrm-hanoi-car\",\"NetIO\":\"166kB / 266kB\",\"PIDs\":\"10\"}"
+    ],
+    "dockerProbe": {
+      "exitCode": 0,
+      "stdout": "{\"BlockIO\":\"0B / 0B\",\"CPUPerc\":\"0.00%\",\"Container\":\"af5f68c19008785d15d820556a286d9814114cfb87449d940b126e9fefec3911\",\"ID\":\"af5f68c19008\",\"MemPerc\":\"4.54%\",\"MemUsage\":\"46.5MiB / 1GiB\",\"Name\":\"gsm-map-osrm-hanoi-motorbike\",\"NetIO\":\"226kB / 361kB\",\"PIDs\":\"10\"}\n{\"BlockIO\":\"0B / 0B\",\"CPUPerc\":\"0.00%\",\"Container\":\"343e1ee656e4a30c2645352268b7c22bd9b57d76c9914d88aea767764b6dc1df\",\"ID\":\"343e1ee656e4\",\"MemPerc\":\"3.58%\",\"MemUsage\":\"36.71MiB / 1GiB\",\"Name\":\"gsm-map-osrm-hanoi-car\",\"NetIO\":\"166kB / 266kB\",\"PIDs\":\"10\"}\n",
+      "stderr": "",
+      "timedOut": false
+    }
+  }
+]

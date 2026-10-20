@@ -1,0 +1,7 @@
+{
+  "after": 134,
+  "snapshotRequests": 0,
+  "before": 134,
+  "windowSeconds": 5,
+  "scope": "Task API access log while real browser paused; no other test client snapshot traffic"
+}

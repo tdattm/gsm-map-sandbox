@@ -1,0 +1,25 @@
+{
+  "id": "088a063b0b0d46e1a8241fea277334a9",
+  "runId": "088a063b0b0d46e1a8241fea277334a9",
+  "status": "RUNNING",
+  "progress": 0.2048,
+  "createdAt": "2026-10-17T15:44:40.232993+07:00",
+  "updatedAt": "2026-10-17T15:44:46.937056+07:00",
+  "config": {
+    "regionId": "nvmr-hanoi-core",
+    "seed": "m4-ux-5000",
+    "fleetSize": 5000,
+    "carCount": 2000,
+    "bookingCount": 1250,
+    "horizonSeconds": 900,
+    "maxWaitSeconds": 300,
+    "onlineFraction": 0.8,
+    "onlineSchedule": [],
+    "workload": "typical",
+    "initialCandidates": 16,
+    "maxCandidates": 128,
+    "gridCellDegrees": 0.005
+  },
+  "inputHash": "d6b0523c8aa34136d64031077db9bdb7645f66f8c1884f79920e9b4bde26f193",
+  "workerPid": 24676
+}

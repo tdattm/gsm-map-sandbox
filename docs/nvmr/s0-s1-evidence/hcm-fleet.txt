@@ -1,0 +1,147 @@
+- banner:
+  - button "Mở menu chính":
+  - heading "GSM Map Sandbox" [level=1]
+  - text: Mô phỏng đội xe
+  - button "Mở hoặc ẩn bảng chi tiết" [expanded]: Chi tiết
+  - generic: Mô phỏng cục bộ
+  - generic: Bản đồ cục bộ
+  - generic: OSRM kết nối
+- main:
+  - complementary "Menu chính":
+    - paragraph: CHẾ ĐỘ MÔ PHỎNG
+    - navigation "Menu chính":
+      - button "Một hành trình":
+        - generic: Một hành trình
+      - button "Mô phỏng đội xe":
+        - generic: Mô phỏng đội xe
+      - button "Đặt xe và điều phối":
+        - generic: Đặt xe và điều phối
+      - button "Phòng thí nghiệm voucher":
+        - generic: Phòng thí nghiệm voucher
+      - button "Mô phỏng quy mô lớn":
+        - generic: Mô phỏng quy mô lớn
+    - button "Thu gọn menu":
+    - button "Ẩn menu":
+    - text: Mô phỏng cục bộ
+    - text: OSM · OSRM
+  - complementary "Cấu hình mô phỏng":
+    - strong: Cấu hình và chi tiết
+    - button "Đóng bảng chi tiết": ×
+    - button "Khu vực mô phỏng" [expanded]:
+      - text: Khu vực mô phỏng
+    - text: Khu vực mô phỏng
+    - combobox "Khu vực mô phỏng":
+      - option "Trung tâm TP.HCM · Quận 1 cũ" [selected]
+      - option "Hà Nội · vùng lõi NVMR"
+    - paragraph: Khu vực đã sẵn sàng cho mô phỏng trực tiếp.
+    - button "Loại phương tiện" [expanded]:
+      - text: Loại phương tiện
+    - text: Loại dịch vụ
+    - combobox "Loại dịch vụ":
+      - option "CAR · Ô tô điện" [selected]
+      - option "MOTORBIKE · Mô tô điện" [disabled]
+      - option "Hỗn hợp CAR + MOTORBIKE" [disabled]
+    - paragraph: CAR · định tuyến ô tô hiện có.
+    - button "Dữ liệu bản đồ":
+      - text: Dữ liệu bản đồ
+    - button "Cấu hình đội xe":
+      - text: Cấu hình đội xe
+    - button "Tổng quan đội xe" [expanded]:
+      - text: Tổng quan đội xe
+    - heading "Tổng quan đội xe" [level=2]
+    - generic "Tổng quan đội xe":
+      - generic: Tổng số
+      - strong: "5"
+      - generic: Chưa bắt đầu
+      - strong: "0"
+      - generic: Đang di chuyển
+      - strong: "5"
+      - generic: Hoàn tất
+      - strong: "0"
+    - paragraph: "Kế hoạch: 13,59 km · Đã đi mô phỏng: 2,14 km"
+    - generic "Hiệu năng phiên phát lại"
+    - button "Danh sách xe" [expanded]:
+      - text: Danh sách xe
+    - heading "Danh sách xe" [level=2]
+    - button "Chọn GSM-01" [pressed]:
+      - strong: GSM-01
+      - generic: Đang di chuyển
+      - generic: 1,33 km · 129,1 giây · xuất phát +0 giây
+      - generic: 46%
+    - button "Quan sát GSM-01":
+    - button "Chọn GSM-02":
+      - strong: GSM-02
+      - generic: Đang di chuyển
+      - generic: 3,12 km · 275,4 giây · xuất phát +32 giây
+      - generic: 10%
+    - button "Quan sát GSM-02":
+    - button "Chọn GSM-03":
+      - strong: GSM-03
+      - generic: Đang di chuyển
+      - generic: 0,96 km · 67,8 giây · xuất phát +38 giây
+      - generic: 32%
+    - button "Quan sát GSM-03":
+    - button "Chọn GSM-04":
+      - strong: GSM-04
+      - generic: Đang di chuyển
+      - generic: 3,35 km · 283,7 giây · xuất phát +14 giây
+      - generic: 16%
+    - button "Quan sát GSM-04":
+    - button "Chọn GSM-05":
+      - strong: GSM-05
+      - generic: Đang di chuyển
+      - generic: 4,82 km · 384,1 giây · xuất phát +32 giây
+      - generic: 7%
+    - button "Quan sát GSM-05":
+    - button "Chi tiết phương tiện" [expanded]:
+      - text: Chi tiết phương tiện
+    - heading "GSM-01 · Đang di chuyển" [level=2]
+    - paragraph: 106.691690, 10.763883
+    - paragraph: Tiến độ 46,5% · còn 69,1 giây
+    - paragraph: "Độ lệch điểm A/B trên đường: 0,0 m / 0,0 m"
+    - button "Quan sát xe"
+    - button "Xem toàn tuyến"
+    - text: Chỉ chạy cục bộ
+    - generic: WGS84 · [lon, lat]
+  - region "Bản đồ Trung tâm TP.HCM · Quận 1 cũ":
+    - generic: KHU VỰC NGHIÊN CỨU
+    - heading "Trung tâm TP.HCM · Quận 1 cũ" [level=2]
+    - button "Kiểm tra lại":
+      - text: Kiểm tra lại
+    - region "Bản đồ"
+    - button "Xe GSM-01" [pressed]:
+      - generic: "01"
+    - button "Xe GSM-02":
+      - generic: "02"
+    - button "Xe GSM-03":
+      - generic: "03"
+    - button "Xe GSM-04":
+      - generic: "04"
+    - button "Xe GSM-05":
+      - generic: "05"
+    - generic: © OpenStreetMap contributors
+    - button "Phóng to":
+    - button "Thu nhỏ":
+    - button "Đưa hướng bản đồ về phía Bắc":
+    - text: GeoJSON cục bộ · OSM Dữ liệu đường phố
+    - generic: Đội xe mô phỏng · không phải GPS thực tế · chọn xe để quan sát
+    - generic: © OpenStreetMap contributors · Geofabrik
+- region "Điều khiển phát lại · Mô phỏng đội xe":
+  - button "Tiếp tục":
+    - text: Tiếp tục
+  - button "Tạm dừng" [disabled]:
+    - text: Tạm dừng
+  - button "Về đầu":
+  - strong: Mô phỏng đội xe
+  - generic: 60,0 / 416,1 giây · 14%
+  - group "Dòng thời gian mô phỏng":
+    - slider "Dòng thời gian mô phỏng": "60"
+  - spinbutton "Thời điểm mô phỏng (giây)": "60"
+  - button "Đến thời điểm" [active]
+  - button "1x" [pressed]
+  - button "2x"
+  - button "4x"
+  - text: Tốc độ tùy chỉnh
+  - textbox "Tốc độ tùy chỉnh": "1"
+  - button "Áp dụng"
+  - generic "Tốc độ đã áp dụng": 1x

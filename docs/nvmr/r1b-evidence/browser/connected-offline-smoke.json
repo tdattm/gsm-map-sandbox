@@ -1,0 +1,33 @@
+{
+  "recordedAt": "2026-10-19T08:44:28.926Z",
+  "status": "PARTIAL_PENDING_LOWZOOM_FIX",
+  "browser": "Codex IAB",
+  "runId": "271d116d28f64d75a7a49b3f300d7b24",
+  "fleetSize": 100,
+  "routers": "All OSRM containers offline",
+  "checks": {
+    "completedRunReopen": "PASS",
+    "vehicleConservation": "PASS100/100",
+    "filters": "PASS BacNinh+CAR2visible whileglobal100",
+    "globalSearch": "PASS Hanoi selection clearsfilters",
+    "seek": "PASS400and800s",
+    "carJourney": "PASS ASSIGNED at400s;pickup3720.8m350.5s/trip55351.7m3004.5s;ON_TRIP at800s",
+    "motorbikeJourney": "PASS ASSIGNED at800s;pickup6137.1m825.1s/trip28910.6m2285.2s",
+    "nativeMapClick": "PASS selected MOTORBIKE by visible icon after selectingCAR",
+    "playPause": "PASS800.2→801.1s thenpaused",
+    "localDetailedMap": "PASS streets/water/green/localplacenames visible aftertripfocus",
+    "lowZoomClusters": "PASS purple clusters attripfit",
+    "highZoomIcon": "PASS MOTORBIKE icon withselectedring",
+    "canvasCount": 1,
+    "domVehicleMarkers": 0,
+    "fullRegionDefaultFit": "BUG_FOUND mapfit5.46<sourceMin6; separateoverview0–5 fixinprogress"
+  },
+  "screenshots": [
+    "connected-offline-car-route.jpg",
+    "connected-offline-motorbike.jpg"
+  ],
+  "limitations": [
+    "100vehicle completedrun only;5000 live acceptance missing",
+    "Early connected-offline-overview.jpg records blank underzoom regression, notsuccessfulbasemap"
+  ]
+}

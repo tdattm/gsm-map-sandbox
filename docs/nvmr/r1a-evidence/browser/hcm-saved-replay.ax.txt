@@ -1,0 +1,108 @@
+Browser tab: 1, Title: "GSM Map Sandbox", URL: "http://127.0.0.1:5191/?scenario=regional&runtime=saved".
+1 AXWebArea GSM Map Sandbox, URL: 127.0.0.1:5191/?scenario=regional&runtime=saved
+	2 container root
+		3 container
+			4 button Mở menu chính
+			5 heading GSM Map Sandbox, Value: 1
+				6 text GSM Map Sandbox
+			7 button (expanded) Description: Mở hoặc ẩn bảng chi tiết, Secondary Actions: Collapse
+			8 container Chế độ hiển thị
+				9 button Bản đồ
+				10 button Phân tích
+		11 container
+			12 container Cấu hình mô phỏng
+				13 container
+					14 text Cấu hình và chi tiết
+					15 button Đóng bảng chi tiết
+				16 container
+					17 button (expanded) Khu vực mô phỏng, Secondary Actions: Collapse
+					18 container
+						19 text Khu vực mô phỏng
+						20 pop up button (disabled, collapsed, settable) Description: Khu vực mô phỏng, Value: Trung tâm TP.HCM · Quận 1 cũ, Secondary Actions: Expand
+							21 menu
+								22 (selected) Trung tâm TP.HCM · Quận 1 cũ
+								23 Hà Nội · vùng lõi NVMR
+								24 Bắc Ninh Core · technical pilot
+					25 text Khu vực và bản đồ do gói phát lại HCM v1 quyết định; không cần backend.
+				27 button (collapsed) Dữ liệu bản đồ, Secondary Actions: Expand
+				28 container
+					29 button (expanded) Chế độ thí nghiệm, Secondary Actions: Collapse
+					30 container Chế độ thí nghiệm
+						31 checkbox Thí nghiệm trực tiếp (Live), Value: 0
+						32 checkbox Phát lại đã lưu (Saved Replay), Value: 1
+					142 text Phát lại đã lưu · không cần tính tuyến trực tiếp
+					143 container
+						144 text Nhập thí nghiệm đã lưu
+						145 button Nhập thí nghiệm đã lưu
+					146 button Chọn file JSON
+					147 text Chưa chọn file
+					148 button Tải kịch bản mẫu
+					149 container
+						150 text Seed:  hcm-voucher-2026
+						151 text Thời điểm chuẩn bị:  11:47:47 12/10/26  (giờ Việt Nam)
+						152 text Bộ dữ liệu:  9193a3a34bd10f14a21da7121552503971f85419d7241aeb71bc7193eaac3341
+						153 text Phiên bản mô hình:  {"fare":"fare-v1","behavior":"price-response-v1","voucher":"ledger-v1","orchestrator":"paired-v1","dispatch":"dispatch-v1"}
+						154 text SHA-256 đã kiểm chứng · dữ liệu mô phỏng, không GPS thực tế
+				95 container
+					96 button (expanded) Kịch bản và ngân sách, Secondary Actions: Collapse
+					97 heading Kịch bản thí nghiệm, Value: 2
+						98 text Kịch bản thí nghiệm
+					99 text Baseline: kịch bản không voucher. Treatment: kịch bản áp dụng voucher.
+					100 container Kịch bản thí nghiệm
+						101 checkbox Baseline, Value: 0
+						102 checkbox Treatment, Value: 1
+					103 button Xem toàn vùng thí nghiệm
+					155 container
+						156 text Ngân sách ·  Treatment  · tới thời điểm hiện tại
+					157 container
+						158 text Ngân sách đang giữ trước  0 ₫
+						159 text Chi phí voucher đã sử dụng  0 ₫
+						160 text Ngân sách còn khả dụng  200.000 ₫
+					161 text Đã đề xuất  1  · đang giữ trước  0  · đã sử dụng  0  · đã giải phóng  0
+				162 button (collapsed) Chi tiết xe và yêu cầu đặt xe, Secondary Actions: Expand
+				104 text Chỉ chạy cục bộ WGS84 · [lon, lat]
+			105 container Bản đồ HCM phát lại
+				106 text KHU VỰC NGHIÊN CỨU
+				107 heading TP.HCM · phát lại đã lưu, Value: 2
+					108 text TP.HCM · phát lại đã lưu
+				109 button Kiểm tra lại
+				110 container
+					163 container
+						164 container Bản đồ
+						165 button Description: Xe điều phối GSM-01, Help: GSM-01 · CAR
+						166 button Description: Xe điều phối GSM-02, Help: GSM-02 · CAR
+						167 button Description: Xe điều phối GSM-03, Help: GSM-03 · CAR
+						168 button Description: Xe điều phối GSM-04, Help: GSM-04 · CAR
+						169 button Description: Xe điều phối GSM-05, Help: GSM-05 · CAR
+					112 container
+						113 text © OpenStreetMap contributors
+					114 container
+						115 button Phóng to
+						116 button Thu nhỏ
+						117 button Đưa hướng bản đồ về phía Bắc
+							118 image
+					119 text GeoJSON cục bộ · OSM Dữ liệu đường phố Thí nghiệm voucher · Treatment · giả định PoC
+				120 text © OpenStreetMap contributors · Geofabrik
+		121 container Điều khiển phát lại · Thí nghiệm voucher
+			122 button Phát
+			123 button (disabled) Tạm dừng
+			124 button Về đầu
+			125 text Thí nghiệm voucher
+			126 text 0,0  /  2.115,2  giây ·  0 %
+			127 container Description: Dòng thời gian mô phỏng, ID: base-ui-_r_24_
+				128 container
+					129 slider (settable, integer) Description: Dòng thời gian mô phỏng, Value: 0, ID: base-ui-_r_27_
+			130 container
+				131 stepper (settable, integer) Description: Thời điểm mô phỏng (giây), Value: 0
+				132 button Đến thời điểm
+			133 checkbox 1x, Value: 1
+			134 checkbox 2x, Value: 0
+			135 checkbox 4x, Value: 0
+			136 container
+				137 text Tốc độ tùy chỉnh
+				138 text field (settable) Description: Tốc độ tùy chỉnh, Value: 1
+				139 button Áp dụng
+			140 container Tốc độ đã áp dụng
+				141 text 1 x
+
+The focused UI element is 1 AXWebArea GSM Map Sandbox, URL: 127.0.0.1:5191/?scenario=regional&runtime=saved

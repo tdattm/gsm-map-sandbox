@@ -1,0 +1,14 @@
+{
+  "python": "3.11.9",
+  "packages": {
+    "osmium": "4.2.0",
+    "shapely": "2.1.2",
+    "mapbox-vector-tile": "2.2.0",
+    "protobuf": "6.33.6"
+  },
+  "geos": "3.13.1",
+  "rendererSha256": "bc591c8e3b367a9f7f51a005b9d5b27adbce782ddea524187b42c3bb79426263",
+  "requirementsSha256": "6f11a292772b63b54f4a0c7f9aa21f9600d4eb6786ede927f82e04b2aca5a0c9",
+  "renderManifestSha256": "09b696b9b8204d70be912147290b37432110970faa12f77d4547f904a222deff",
+  "note": "Captured after successful native stage; renderer source remained unchanged during that stage. Artifact checksum is the exact-output identity; rebuilding with different libraries may change encoded bytes."
+}

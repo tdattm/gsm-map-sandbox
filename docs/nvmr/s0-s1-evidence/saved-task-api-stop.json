@@ -1,0 +1,5 @@
+{
+  "ProcessId": 1712,
+  "ParentProcessId": 1960,
+  "CommandLine": "\"C:\\Users\\TIEN DAT\\AppData\\Local\\Programs\\Python\\Python311\\python.exe\" -m uvicorn backend.app.main:app --host 127.0.0.1 --port 8015 "
+}

@@ -1,6 +1,6 @@
 import { stateText } from '@/lib/vi'
 import { memo, useEffect, useRef } from 'react'
-import { Car } from 'lucide-react'
+import { MobilityIcon } from './mobility-icon'
 import { MapRoute, MapMarker, MarkerContent, RouteProgress, useMap } from './ui/map'
 import { useFleetClock, type FleetSession } from '@/lib/use-fleet'
 import { vehicleAt } from '@/lib/fleet'
@@ -42,6 +42,6 @@ function FleetMarkers({ fleet }: { fleet: FleetSession }) {
   const clock = useFleetClock(fleet.clock)
   return <>{fleet.scenario?.vehicles.map(base => {
     const v = vehicleAt(base, clock.simulationTimeSeconds), selected = v.id === fleet.selectedVehicleId
-    return <MapMarker key={v.id} longitude={v.currentPosition[0]} latitude={v.currentPosition[1]}><MarkerContent><button aria-label={`Xe ${v.id}`} aria-pressed={selected} className={`fleet-marker ${selected ? 'selected' : ''} ${v.status}`} data-fleet-vehicle={v.id} data-progress={v.progress} data-status={v.status} data-coordinate={JSON.stringify(v.currentPosition)} onClick={event => { event.stopPropagation(); fleet.setSelectedVehicleId(v.id) }} title={`${v.id} · ${stateText(v.status)} · ${Math.round(v.progress*100)}%`}><Car size={16} /><span>{v.id.slice(-2)}</span></button></MarkerContent></MapMarker>
+    return <MapMarker key={v.id} longitude={v.currentPosition[0]} latitude={v.currentPosition[1]}><MarkerContent><button aria-label={`Xe ${v.id}`} aria-pressed={selected} data-vehicle-type={v.vehicleType ?? 'CAR'} className={`fleet-marker ${selected ? 'selected' : ''} ${v.status}`} data-fleet-vehicle={v.id} data-progress={v.progress} data-status={v.status} data-coordinate={JSON.stringify(v.currentPosition)} onClick={event => { event.stopPropagation(); fleet.setSelectedVehicleId(v.id) }} title={`${v.id} · ${stateText(v.status)} · ${Math.round(v.progress*100)}%`}><MobilityIcon kind={v.vehicleType==='MOTORBIKE'?'motorbike':'car'} size={26}/><span>{v.id.slice(-2)}</span></button></MarkerContent></MapMarker>
   })}</>
 }

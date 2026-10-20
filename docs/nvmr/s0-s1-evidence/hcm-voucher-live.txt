@@ -1,0 +1,173 @@
+- banner:
+  - button "Mở menu chính":
+  - heading "GSM Map Sandbox" [level=1]
+  - text: Phòng thí nghiệm voucher
+  - button "Mở hoặc ẩn bảng chi tiết" [expanded]: Chi tiết
+  - generic: Mô phỏng cục bộ
+  - generic: Bản đồ cục bộ
+  - generic: OSRM kết nối
+- main:
+  - complementary "Menu chính":
+    - paragraph: CHẾ ĐỘ MÔ PHỎNG
+    - navigation "Menu chính":
+      - button "Một hành trình":
+        - generic: Một hành trình
+      - button "Mô phỏng đội xe":
+        - generic: Mô phỏng đội xe
+      - button "Đặt xe và điều phối":
+        - generic: Đặt xe và điều phối
+      - button "Phòng thí nghiệm voucher":
+        - generic: Phòng thí nghiệm voucher
+      - button "Mô phỏng quy mô lớn":
+        - generic: Mô phỏng quy mô lớn
+    - button "Thu gọn menu":
+    - button "Ẩn menu":
+    - text: Mô phỏng cục bộ
+    - text: OSM · OSRM
+  - complementary "Cấu hình mô phỏng":
+    - strong: Cấu hình và chi tiết
+    - button "Đóng bảng chi tiết": ×
+    - button "Khu vực mô phỏng" [expanded]:
+      - text: Khu vực mô phỏng
+    - text: Khu vực mô phỏng
+    - combobox "Khu vực mô phỏng":
+      - option "Trung tâm TP.HCM · Quận 1 cũ" [selected]
+      - option "Hà Nội · vùng lõi NVMR"
+    - paragraph: Khu vực đã sẵn sàng cho mô phỏng trực tiếp.
+    - paragraph: Voucher CAR v1 · thí nghiệm ô tô ghép cặp. Chưa hỗ trợ lựa chọn MOTORBIKE hoặc hành vi đổi loại xe.
+    - button "Dữ liệu bản đồ":
+      - text: Dữ liệu bản đồ
+    - button "Chế độ thí nghiệm" [expanded]:
+      - text: Chế độ thí nghiệm
+    - group "Chế độ thí nghiệm":
+      - button "Thí nghiệm trực tiếp (Live)" [pressed]
+      - button "Phát lại đã lưu (Saved Replay)"
+    - button "Cấu hình thí nghiệm":
+      - text: Cấu hình thí nghiệm
+    - button "Kịch bản và ngân sách" [expanded]:
+      - text: Kịch bản và ngân sách
+    - heading "Kịch bản thí nghiệm" [level=2]
+    - paragraph: "Baseline: kịch bản không voucher. Treatment: kịch bản áp dụng voucher."
+    - group "Kịch bản thí nghiệm":
+      - button "Baseline"
+      - button "Treatment" [pressed]
+    - button "Xem toàn vùng thí nghiệm"
+    - strong: Ngân sách · Treatment · tới thời điểm hiện tại
+    - paragraph:
+      - text: Ngân sách đang giữ trước 32.412 ₫
+      - text: Chi phí voucher đã sử dụng 60.000 ₫
+      - text: Ngân sách còn khả dụng 107.588 ₫
+    - generic: Đã đề xuất 6 · đang giữ trước 5 · đã sử dụng 3 · đã giải phóng 0
+    - button "Chi tiết xe và yêu cầu đặt xe":
+      - text: Chi tiết xe và yêu cầu đặt xe
+    - text: Chỉ chạy cục bộ
+    - generic: WGS84 · [lon, lat]
+  - region "Bản đồ Trung tâm TP.HCM · Quận 1 cũ":
+    - generic: KHU VỰC NGHIÊN CỨU
+    - heading "Trung tâm TP.HCM · Quận 1 cũ" [level=2]
+    - button "Kiểm tra lại":
+      - text: Kiểm tra lại
+    - region "Bản đồ"
+    - button "Xe điều phối GSM-01":
+      - text: "01"
+    - button "Xe điều phối GSM-02":
+      - text: "02"
+    - button "Xe điều phối GSM-03":
+      - text: "03"
+    - button "Xe điều phối GSM-04":
+      - text: "04"
+    - button "Xe điều phối GSM-05":
+      - text: "05"
+    - generic: © OpenStreetMap contributors
+    - button "Phóng to":
+    - button "Thu nhỏ":
+    - button "Đưa hướng bản đồ về phía Bắc":
+    - text: GeoJSON cục bộ · OSM Dữ liệu đường phố
+    - generic: Thí nghiệm voucher · Treatment · giả định PoC
+    - generic: © OpenStreetMap contributors · Geofabrik
+  - complementary "Phân tích chỉ số kinh doanh":
+    - heading "Phòng thí nghiệm voucher" [level=2]
+    - paragraph: Tại thời điểm 500,0 giây · giả định PoC
+    - button "Tại thời điểm hiện tại"
+    - button "Kết quả cuối kịch bản"
+    - button "Phân tích kinh doanh nâng cao"
+    - article:
+      - heading "Baseline" [level=3]
+      - strong: 3 hoàn tất / 5 chấp nhận
+      - paragraph:
+        - text: Tỷ lệ đặt xe 83,3% · hoàn tất 60,0%
+        - text: GFV 89.530 ₫
+        - text: Tiền hành khách thanh toán 89.530 ₫
+        - text: Chi phí voucher đã sử dụng 0 ₫
+    - article:
+      - heading "Treatment" [level=3]
+      - strong: 3 hoàn tất / 5 chấp nhận
+      - paragraph:
+        - text: Tỷ lệ đặt xe 83,3% · hoàn tất 60,0%
+        - text: GFV 89.530 ₫
+        - text: Tiền hành khách thanh toán 29.530 ₫
+        - text: Chi phí voucher đã sử dụng 60.000 ₫
+    - article:
+      - heading "Treatment − Baseline" [level=3]
+      - strong: +0 chấp nhận
+      - paragraph:
+        - text: +0 hoàn tất
+        - text: "Chi phí voucher mỗi chuyến hoàn tất tăng thêm (CPIC):"
+        - text: Không áp dụng — không có số chuyến hoàn tất tăng thêm
+    - generic "So sánh tài chính và vận hành"
+    - table:
+      - rowgroup:
+        - row "Chỉ số mô phỏng Baseline Treatment Chênh lệch":
+          - columnheader "Chỉ số mô phỏng"
+          - columnheader "Baseline"
+          - columnheader "Treatment"
+          - columnheader "Chênh lệch"
+      - rowgroup:
+        - row "Tổng giá trị cước trước ưu đãi (GFV) 89.530 ₫ 89.530 ₫ 0 ₫":
+          - rowheader "Tổng giá trị cước trước ưu đãi (GFV)"
+          - cell "89.530 ₫"
+          - cell "89.530 ₫"
+          - cell "0 ₫"
+        - row "Tổng tiền hành khách thanh toán 89.530 ₫ 29.530 ₫ −60.000 ₫":
+          - rowheader "Tổng tiền hành khách thanh toán"
+          - cell "89.530 ₫"
+          - cell "29.530 ₫"
+          - cell "−60.000 ₫"
+        - row "Chi phí voucher đã sử dụng 0 ₫ 60.000 ₫ +60.000 ₫":
+          - rowheader "Chi phí voucher đã sử dụng"
+          - cell "0 ₫"
+          - cell "60.000 ₫"
+          - cell "+60.000 ₫"
+        - row "Số chuyến hoàn tất 3 3 0":
+          - rowheader "Số chuyến hoàn tất"
+          - cell "3"
+          - cell "3"
+          - cell "0"
+    - paragraph: Chênh lệch = Treatment − Baseline · GFV = tiền hành khách thanh toán + chi phí voucher đã sử dụng · chỉ số mô phỏng
+    - paragraph: Tỷ lệ đặt xe = số chấp nhận / số tiềm năng hợp lệ; tỷ lệ hoàn tất = số hoàn tất / số chấp nhận. GFV = tiền hành khách thanh toán + chi phí voucher đã sử dụng. Voucher đã đề xuất và ngân sách đang giữ trước chưa phải chi phí đã sử dụng. KPI cập nhật mỗi giây; vị trí xe dùng đồng hồ mô phỏng chung.
+    - heading "Các bước chuyển đổi đặt xe" [level=3]
+    - paragraph: Biểu đồ hiển thị khi cuộn tới vùng này.
+    - heading "Số chuyến hoàn tất lũy kế" [level=3]
+    - paragraph: Biểu đồ hiển thị khi cuộn tới vùng này.
+    - button "Xuất thí nghiệm Portable v1"
+    - button "Xuất JSON · toàn bộ kế hoạch"
+    - generic "Xuất CSV · kết quả cuối và toàn bộ lịch sử"
+- region "Điều khiển phát lại · Thí nghiệm voucher":
+  - button "Tiếp tục":
+    - text: Tiếp tục
+  - button "Tạm dừng" [disabled]:
+    - text: Tạm dừng
+  - button "Về đầu":
+  - strong: Thí nghiệm voucher
+  - generic: 500,0 / 1.800,0 giây · 28%
+  - group "Dòng thời gian mô phỏng":
+    - slider "Dòng thời gian mô phỏng": "500"
+  - spinbutton "Thời điểm mô phỏng (giây)": "500"
+  - button "Đến thời điểm" [active]
+  - button "1x" [pressed]
+  - button "2x"
+  - button "4x"
+  - text: Tốc độ tùy chỉnh
+  - textbox "Tốc độ tùy chỉnh": "1"
+  - button "Áp dụng"
+  - generic "Tốc độ đã áp dụng": 1x

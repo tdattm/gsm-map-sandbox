@@ -1,0 +1,32 @@
+{
+  "environment": {
+    "platform": "Windows-10-10.0.26300-SP0",
+    "python": "3.11.9",
+    "cpuCount": 8,
+    "processor": "Intel64 Family 6 Model 140 Stepping 2, GenuineIntel",
+    "memory": {
+      "totalPhysicalBytes": 16948453376,
+      "availablePhysicalBytes": 5763563520,
+      "processRssBytes": 17682432,
+      "processPeakRssBytes": 17797120,
+      "processPagefileBytes": 9838592
+    },
+    "dockerStats": [
+      "{\"BlockIO\":\"0B / 0B\",\"CPUPerc\":\"0.00%\",\"Container\":\"59fd1f3d6b543e795069290001fba11048a5004b0f57757a16305206bb5f0f27\",\"ID\":\"59fd1f3d6b54\",\"MemPerc\":\"2.51%\",\"MemUsage\":\"25.69MiB / 1GiB\",\"Name\":\"gsm-map-osrm\",\"NetIO\":\"1.23MB / 2.33MB\",\"PIDs\":\"10\"}",
+      "{\"BlockIO\":\"0B / 0B\",\"CPUPerc\":\"0.00%\",\"Container\":\"af5f68c19008785d15d820556a286d9814114cfb87449d940b126e9fefec3911\",\"ID\":\"af5f68c19008\",\"MemPerc\":\"5.96%\",\"MemUsage\":\"61.06MiB / 1GiB\",\"Name\":\"gsm-map-osrm-hanoi-motorbike\",\"NetIO\":\"9.87MB / 16.4MB\",\"PIDs\":\"10\"}",
+      "{\"BlockIO\":\"0B / 0B\",\"CPUPerc\":\"0.00%\",\"Container\":\"343e1ee656e4a30c2645352268b7c22bd9b57d76c9914d88aea767764b6dc1df\",\"ID\":\"343e1ee656e4\",\"MemPerc\":\"4.02%\",\"MemUsage\":\"41.12MiB / 1GiB\",\"Name\":\"gsm-map-osrm-hanoi-car\",\"NetIO\":\"11.8MB / 19MB\",\"PIDs\":\"10\"}"
+    ],
+    "hardware": "{\"Name\":\"11th Gen Intel(R) Core(TM) i5-11320H @ 3.20GHz\",\"NumberOfCores\":4,\"NumberOfLogicalProcessors\":8}\n[{\"Name\":\"NVIDIA GeForce RTX 3050 Laptop GPU\",\"AdapterRAM\":4293918720,\"DriverVersion\":\"32.0.15.7700\"},{\"Name\":\"Intel(R) Iris(R) Xe Graphics\",\"AdapterRAM\":1073741824,\"DriverVersion\":\"30.0.100.9864\"}]"
+  },
+  "measurement": {
+    "wallSeconds": 80.00034440000309,
+    "cpuSeconds": 0.109375,
+    "cpuPercentOneCore": 0.13671816142830978,
+    "peakRssBytesSampled": 18186240,
+    "processPeakRssBytes": 18186240,
+    "minimumAvailablePhysicalBytes": 4589051904,
+    "sampleIntervalSeconds": 0.2,
+    "sampleCount": 386
+  },
+  "note": "Sampler CPU/RSS are not browser CPU/RSS; system available RAM sampled every 200ms"
+}
